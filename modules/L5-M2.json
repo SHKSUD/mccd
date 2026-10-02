@@ -1,0 +1,138 @@
+{
+  "moduleId": "L5-M2",
+  "title": "Assessment & Evaluation Design",
+  "level": "L5",
+  "moduleNumber": 2,
+  "duration": "16 hrs",
+  "nextModule": "L5-M3",
+  "previousModule": "L5-M1",
+  "prerequisite": "L5-M1 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in SOW Bucket 3 'evaluation rubrics for instructor certification.' Draws on the curriculum's own assessment framework (two-part written+practical, 60% threshold) as a worked example.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 5 · Module 2 · Section 01",
+      "title": "Why Master Instructors Need Assessment Design Skill",
+      "learningObjectives": [
+        "Understand why this skill matters beyond simply administering existing assessments",
+        "Recognize the role of a Master Instructor in evaluating other instructors"
+      ],
+      "content": "A Master Instructor doesn't just deliver existing assessments - they evaluate whether assessments are actually measuring what they're meant to measure, and may need to adapt or create assessment components for new content or new instructor candidates. This module builds that evaluative skill directly."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 5 · Module 2 · Section 02",
+      "title": "What Makes an Assessment Valid",
+      "learningObjectives": [
+        "Understand the concept of assessment validity",
+        "Recognize common ways an assessment can fail to measure what it intends to"
+      ],
+      "content": "A valid assessment actually measures the competency it claims to measure - a common failure mode is an assessment that tests recall of facts when the real goal is practical competency, or vice versa. This curriculum's own two-part structure (written plus practical, from L2 onward) exists specifically to address this: written alone can't validate hands-on skill, and practical alone doesn't confirm conceptual understanding.",
+      "keyTerms": [
+        {"term": "assessment validity", "note": "Whether an assessment actually measures the competency it's intended to measure, rather than a proxy for it."}
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 5 · Module 2 · Section 03",
+      "title": "Setting an Appropriate Passing Threshold",
+      "learningObjectives": [
+        "Understand the considerations behind setting a passing threshold",
+        "Recognize this curriculum's own threshold as a worked example"
+      ],
+      "content": "A passing threshold should reflect genuine minimum competency for the role, not be set arbitrarily high (creating unnecessary failure and frustration) or low (certifying people who aren't actually ready). This curriculum's 60% threshold reflects DiFacto's judgment of realistic first-pass competency expectations - a concrete example of this principle being applied, worth understanding rather than just replicating by default."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 5 · Module 2 · Section 04",
+      "title": "Designing Rubrics for Practical Assessment",
+      "learningObjectives": [
+        "Understand the purpose of a rubric in practical/performance assessment",
+        "Recognize what makes a rubric usable and consistent across evaluators"
+      ],
+      "content": "A rubric breaks a practical assessment into specific, observable criteria - rather than relying on an evaluator's unstructured overall impression. This matters especially when multiple instructors evaluate different candidates: a well-designed rubric produces consistent results regardless of which qualified instructor is doing the evaluating."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 5 · Module 2 · Section 05",
+      "title": "Writing Effective Assessment Questions",
+      "learningObjectives": [
+        "Understand principles for writing clear, fair assessment questions",
+        "Recognize common pitfalls in question design"
+      ],
+      "content": "Effective questions test one concept clearly, avoid ambiguous wording that could support multiple correct interpretations, and include plausible wrong answers rather than obviously incorrect ones that make the right answer trivial to guess. This mirrors the quiz design used throughout this curriculum - each question tied directly to something actually taught, with feedback explaining why the correct answer is correct."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 5 · Module 2 · Section 06",
+      "title": "Reviewing and Revising Assessments Over Time",
+      "learningObjectives": [
+        "Understand why assessments need periodic review",
+        "Recognize signals that an assessment needs revision"
+      ],
+      "content": "An assessment that was well-designed initially can drift out of alignment with content over time, especially as modules get revised (as this curriculum itself has experienced). Signals worth watching for include unusually high failure rates on a specific question (possibly indicating unclear wording rather than genuine difficulty) or feedback from learners pointing to ambiguity."
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does a Master Instructor's assessment-related responsibility go beyond?",
+        "options": [
+          "Nothing - they only administer existing assessments unchanged",
+          "Evaluating whether assessments actually measure intended competency, and adapting them as needed",
+          "Assessment design is not part of the Master Instructor role"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Master Instructors evaluate and may need to adapt assessment design, not just deliver it."
+      },
+      {
+        "id": 2,
+        "question": "What is assessment validity?",
+        "options": [
+          "Whether an assessment has an expiration date",
+          "Whether an assessment actually measures the competency it claims to measure",
+          "The length of time an assessment takes to complete"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Validity concerns whether the assessment genuinely measures the intended competency."
+      },
+      {
+        "id": 3,
+        "question": "Why does this curriculum use a two-part (written + practical) assessment structure from L2 onward?",
+        "options": [
+          "To make certification harder for no reason",
+          "Because written alone can't validate hands-on skill, and practical alone doesn't confirm conceptual understanding",
+          "This curriculum only uses written assessments"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Combining both assessment types addresses the limitation of relying on either alone."
+      },
+      {
+        "id": 4,
+        "question": "What is the purpose of a rubric in practical assessment?",
+        "options": [
+          "To make evaluation entirely subjective",
+          "To break assessment into specific, observable criteria for consistent evaluation across evaluators",
+          "Rubrics are only used for written tests"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Rubrics support consistent evaluation regardless of which instructor conducts it."
+      },
+      {
+        "id": 5,
+        "question": "What might an unusually high failure rate on one specific question indicate?",
+        "options": [
+          "Nothing worth investigating",
+          "Possibly unclear question wording rather than genuine learner difficulty",
+          "The question is definitely too easy"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Unusual failure patterns are a signal worth investigating for assessment quality issues."
+      }
+    ]
+  }
+}

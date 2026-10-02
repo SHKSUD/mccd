@@ -1,0 +1,139 @@
+{
+  "moduleId": "L3A-M6",
+  "title": "Troubleshooting Decision Trees",
+  "level": "L3A",
+  "moduleNumber": 6,
+  "duration": "6 hrs",
+  "nextModule": "L3A-M7",
+  "previousModule": "L3A-M5",
+  "prerequisite": "L3A-M5 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in SOW Bucket 2 'troubleshooting curriculum: decision trees and troubleshooting procedures for L3A technicians.' Specific decision tree content pending DiFacto engineering documentation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 01",
+      "title": "From Methodology to Structured Tools",
+      "learningObjectives": [
+        "Understand how this module builds on the root cause methodology from Module 5",
+        "Recognize the purpose of a decision tree as a diagnostic aid"
+      ],
+      "content": "L3A-M5 established the general methodology for root cause diagnosis. This module formalizes that into decision trees - structured, repeatable diagnostic paths for common fault categories. A decision tree doesn't replace judgment, but it ensures a consistent, efficient diagnostic sequence rather than reinventing the approach each time a similar issue appears.",
+      "keyTerms": [
+        {
+          "term": "decision tree",
+          "note": "A structured diagnostic sequence of yes/no or condition-based questions leading systematically toward identifying a root cause."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 02",
+      "title": "How a Decision Tree Is Structured",
+      "learningObjectives": [
+        "Understand the general format of a troubleshooting decision tree",
+        "Recognize how branching works within the structure"
+      ],
+      "content": "A decision tree starts with a broad symptom category and branches based on answers to diagnostic questions, narrowing toward a specific likely cause at each step. The key discipline is answering each branch point honestly based on what's actually observed, rather than skipping ahead to a cause that seems likely without confirming the branch conditions."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 03",
+      "title": "Navigation-Related Decision Trees",
+      "learningObjectives": [
+        "Understand the general branch logic for navigation-related symptoms",
+        "Recognize how this connects to sensor and mapping knowledge from earlier training"
+      ],
+      "content": "Navigation-related troubleshooting typically branches on questions like: is the issue isolated to one area of the map or does it occur everywhere, has anything physically changed in that area, does the issue correlate with specific lighting or surface conditions. Specific decision tree content for MoRo's navigation troubleshooting is being developed with DiFacto's engineering team."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 04",
+      "title": "Mechanical and Power Decision Trees",
+      "learningObjectives": [
+        "Understand the general branch logic for mechanical and power-related symptoms",
+        "Recognize how this connects to maintenance knowledge from earlier modules"
+      ],
+      "content": "Mechanical and power troubleshooting branches on different questions: is the symptom constant or intermittent, does it correlate with battery charge level, has recent maintenance or a recent incident preceded the symptom's appearance. These decision trees draw directly on the preventive and predictive maintenance knowledge built in Modules 2-4."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 05",
+      "title": "When a Decision Tree Doesn't Resolve the Issue",
+      "learningObjectives": [
+        "Understand what to do when following a decision tree doesn't lead to a clear cause",
+        "Recognize this as a signal for escalation, not a failure of the technician"
+      ],
+      "content": "Decision trees cover common, well-understood fault patterns - they won't cover every possible issue. If following a tree to its end doesn't produce a confident root cause, that's the signal to escalate per the criteria covered in L3A-M5, rather than guessing beyond what the structured process supports."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 06",
+      "title": "Contributing to Decision Tree Improvement",
+      "learningObjectives": [
+        "Understand how field experience feeds back into improving decision trees over time",
+        "Recognize the technician's role in this improvement process"
+      ],
+      "content": "Decision trees aren't static - as technicians encounter new fault patterns in the field, that experience can inform updates to the decision trees used across the fleet. Documenting unusual diagnoses thoroughly, the same habit covered in Module 1, is what makes this feedback loop possible."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the purpose of a troubleshooting decision tree?",
+        "options": [
+          "To replace diagnostic judgment entirely",
+          "To provide a structured, repeatable diagnostic path for common fault categories",
+          "To document completed repairs"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Decision trees structure diagnosis without replacing the judgment that guides them."
+      },
+      {
+        "id": 2,
+        "question": "What's the key discipline when working through a decision tree?",
+        "options": [
+          "Skip ahead to the most likely cause immediately",
+          "Answer each branch point honestly based on what's actually observed",
+          "Always start from the most complex branch"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Honest, observed answers at each branch point are what make the tree reliable."
+      },
+      {
+        "id": 3,
+        "question": "What kind of question typically starts a navigation-related decision tree branch?",
+        "options": [
+          "Battery charge percentage only",
+          "Whether the issue is isolated to one map area or occurs everywhere",
+          "The time of day the robot was purchased"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Isolating whether an issue is localized or widespread is a typical early branch point."
+      },
+      {
+        "id": 4,
+        "question": "What should happen if following a decision tree doesn't produce a confident root cause?",
+        "options": [
+          "Keep guessing randomly until something works",
+          "Escalate, per the criteria covered in root cause methodology",
+          "Ignore the issue since the tree didn't resolve it"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. An inconclusive decision tree result is a signal to escalate, not a technician failure."
+      },
+      {
+        "id": 5,
+        "question": "How do decision trees improve over time?",
+        "options": [
+          "They never change once created",
+          "Field experience and thorough documentation feed back into updating them",
+          "Only DiFacto engineering updates them, with no field input"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Technician field experience, well-documented, feeds the improvement of decision trees."
+      }
+    ]
+  }
+}

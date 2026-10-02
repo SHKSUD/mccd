@@ -1,0 +1,155 @@
+{
+  "moduleId": "L2-M6",
+  "title": "Advanced Missions & Optimization",
+  "level": "L2",
+  "moduleNumber": 6,
+  "duration": "2 hrs",
+  "nextModule": "L3A-M1",
+  "previousModule": "L2-M5",
+  "prerequisite": "L2-M5 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Final module of L2 - completes L1-L2 pilot cohort curriculum.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 6 - Section 01",
+      "title": "Beyond Basic Missions",
+      "learningObjectives": [
+        "Understand how mission complexity can extend beyond simple point-to-point tasks",
+        "Recognize this module's place as the capstone of L2"
+      ],
+      "content": "Everything in L2 so far has built toward operating MoRo reliably day-to-day. This final L2 module looks at more complex mission patterns and introduces thinking about performance - not just whether a mission completes, but how efficiently. This is the bridge between operating MoRo and starting to optimize how it's used.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 6 - Section 02",
+      "title": "Complex Mission Patterns",
+      "learningObjectives": [
+        "Understand the concept of missions with conditional logic",
+        "Recognize how loops and branches differ from simple linear missions"
+      ],
+      "content": "Beyond simple point-to-point tasks, missions can include conditional logic (if a condition is met, take one path; otherwise, another) and repeating patterns (a loop that continues until a defined end state). These patterns let a single mission definition handle situations that would otherwise require many separate simple missions. Exact configuration of conditional logic within ANT will be confirmed against the live system.",
+      "keyTerms": [
+        {
+          "term": "conditional logic",
+          "note": "Mission logic where the next action depends on whether a specified condition is met."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 6 - Section 03",
+      "title": "Thinking About Performance",
+      "learningObjectives": [
+        "Understand basic performance metrics relevant to mission execution",
+        "Recognize why performance awareness matters at the operator level"
+      ],
+      "content": "Performance in this context means cycle time (how long a mission takes) and throughput (how much gets moved over a given period). You're not expected to optimize these yourself at L2, but recognizing that a mission is taking noticeably longer than usual - even if it still completes successfully - is useful information worth mentioning, since it can signal something worth investigating.",
+      "keyTerms": [
+        {
+          "term": "cycle time",
+          "note": "The time it takes for a mission to complete from start to finish."
+        },
+        {
+          "term": "throughput",
+          "note": "The total amount of material or work moved over a given period."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 6 - Section 04",
+      "title": "Route and Speed Considerations",
+      "learningObjectives": [
+        "Understand at a conceptual level how routing choices affect efficiency",
+        "Recognize this as an area that deepens significantly at L3B"
+      ],
+      "content": "Route planning and speed tuning affect how efficiently a fleet operates, but detailed optimization of these is L3B (Programmer) territory. At L2, the relevant awareness is simply that routes and speeds aren't arbitrary - they're chosen deliberately, and a route that looks inefficient to you may reflect constraints (safety zones, other unit traffic) not immediately visible."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 6 - Section 05",
+      "title": "Data Logging",
+      "learningObjectives": [
+        "Understand that MoRo records operational data automatically",
+        "Recognize the general purpose of this data"
+      ],
+      "content": "MoRo logs data during operation - mission timing, completion status, and related metrics - automatically, without requiring operator action. This data supports the kind of performance analysis and troubleshooting covered at higher levels. At L2, you don't need to access or interpret this data directly; just be aware that it exists and that unusual events are generally captured."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 6 - Section 06",
+      "title": "Completing L1-L2",
+      "learningObjectives": [
+        "Recognize the full scope of what L1-L2 has covered",
+        "Understand the path forward into specialist tracks"
+      ],
+      "content": "This module closes the L1-L2 curriculum. Together, these eleven modules have covered coexistence, interface operation, mission handling, payload coordination, battery management, fleet awareness, troubleshooting fundamentals, and now optimization awareness. From here, the curriculum branches into specialist tracks - L3A for technicians, L3B for programmers - each building on this operational foundation toward deeper, role-specific expertise."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does conditional logic in a mission allow for?",
+        "options": [
+          "Nothing - missions are always linear",
+          "Different actions depending on whether a specified condition is met",
+          "Only faster movement speed"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Conditional logic lets a mission branch based on conditions, rather than following one fixed path."
+      },
+      {
+        "id": 2,
+        "question": "What does 'cycle time' refer to?",
+        "options": [
+          "The battery charging duration",
+          "The time for a mission to complete from start to finish",
+          "The number of units in a fleet"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Cycle time measures mission duration, start to finish."
+      },
+      {
+        "id": 3,
+        "question": "At L2, are you expected to actively optimize routes and speeds yourself?",
+        "options": [
+          "Yes, this is a core L2 responsibility",
+          "No - that level of optimization belongs to L3B; L2 requires awareness only",
+          "Only on weekends"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Detailed route and speed optimization is L3B (Programmer) territory."
+      },
+      {
+        "id": 4,
+        "question": "Does MoRo require operator action to log operational data?",
+        "options": [
+          "Yes, data must be manually recorded",
+          "No - it logs data automatically during operation",
+          "Data logging doesn't exist"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. MoRo logs mission timing and status automatically, without operator input."
+      },
+      {
+        "id": 5,
+        "question": "What comes after completing L1-L2 in the curriculum?",
+        "options": [
+          "The curriculum ends here",
+          "It branches into specialist tracks: L3A for technicians, L3B for programmers",
+          "Automatic certification with no further levels"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. L1-L2 is the operational foundation before branching into role-specific specialist tracks."
+      }
+    ]
+  }
+}

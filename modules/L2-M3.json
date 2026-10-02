@@ -1,0 +1,118 @@
+{
+  "moduleId": "L2-M3",
+  "title": "Battery Management & Charging",
+  "level": "L2",
+  "moduleNumber": 3,
+  "duration": "1 hr",
+  "nextModule": "L2-M4",
+  "previousModule": "L2-M2",
+  "prerequisite": "L2-M2 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Specs confirmed per CDD - no SME dependency for this module.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 3 - Section 01",
+      "title": "MoRo's Power System",
+      "learningObjectives": [
+        "Identify MoRo's battery chemistry",
+        "Understand why this chemistry was chosen"
+      ],
+      "content": "All MoRo variants use LFP (Lithium Iron Phosphate) batteries, confirmed across the A-250, A-500, and A-1200. LFP chemistry is chosen for industrial applications because it's thermally stable, has a long cycle life, and tolerates frequent partial charging well - all relevant for a robot that charges opportunistically throughout a shift rather than on a single overnight cycle.",
+      "keyTerms": [
+        {"term": "LFP (Lithium Iron Phosphate)", "note": "A lithium battery chemistry known for thermal stability and long cycle life, commonly used in industrial and automotive applications."}
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 3 - Section 02",
+      "title": "Runtime and Charging",
+      "learningObjectives": [
+        "State MoRo's confirmed runtime and charging specifications",
+        "Understand the wireless charging approach"
+      ],
+      "content": "MoRo is rated for 8 hours of runtime and charges wirelessly in under 1 hour, consistent across all three variants. Wireless charging means MoRo docks at a charging station without a physical plug connection - it aligns with the dock and charging begins automatically. This supports opportunistic charging: a unit can top up during natural gaps in its schedule rather than requiring a dedicated, lengthy charging window."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 3 - Section 03",
+      "title": "Charging Dock Placement and Alignment",
+      "learningObjectives": [
+        "Understand the general requirement for successful wireless charging",
+        "Recognize signs of a failed or incomplete docking"
+      ],
+      "content": "Wireless charging requires MoRo to align correctly with the charging dock - the alignment tolerance and exact docking procedure will be confirmed against DiFacto's facility guidance. Operationally, if a unit appears docked but isn't visibly charging (per its status indicator), that's worth flagging rather than assuming charging is underway."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 3 - Section 04",
+      "title": "Extending Battery Life",
+      "learningObjectives": [
+        "Understand general principles for maintaining battery health over time",
+        "Recognize operator-level habits that support battery longevity"
+      ],
+      "content": "Like most industrial battery systems, MoRo's battery life benefits from consistent, moderate charging habits rather than repeatedly running to full depletion before charging. Taking advantage of opportunistic charging windows during a shift, rather than waiting until a unit is critically low, supports longer battery health over the unit's operational life."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 3 - Section 05",
+      "title": "Monitoring Battery Health",
+      "learningObjectives": [
+        "Understand what battery health monitoring involves at the operator level",
+        "Know the general signs worth flagging"
+      ],
+      "content": "At this level, battery health monitoring is largely passive - watching for units that seem to deplete faster than expected, take longer than usual to charge, or show charging-related status indicators inconsistent with normal operation. Detailed diagnostic procedures for battery health belong to the technician-level curriculum (L3A); your role here is awareness and reporting."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 3 - Section 06",
+      "title": "Low Battery Procedures",
+      "learningObjectives": [
+        "Understand MoRo's general behavior when battery runs low",
+        "Know the appropriate operator response"
+      ],
+      "content": "MoRo is designed to manage its own low-battery state - prioritizing a return to charging before depletion becomes operationally disruptive. If you notice a unit behaving unusually and a low-battery indicator is present, treat it as context for what you're observing rather than an emergency requiring intervention beyond normal reporting."
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What battery chemistry does MoRo use?",
+        "options": ["Lead-acid", "LFP (Lithium Iron Phosphate)", "Nickel-cadmium"],
+        "correctAnswer": 1,
+        "feedback": "Correct. All MoRo variants use LFP batteries, confirmed across the product line."
+      },
+      {
+        "id": 2,
+        "question": "What is MoRo's confirmed runtime and charging time?",
+        "options": ["4 hours runtime, 2 hours charging", "8 hours runtime, under 1 hour wireless charging", "12 hours runtime, 30 minutes charging"],
+        "correctAnswer": 1,
+        "feedback": "Correct. 8 hours runtime and under 1 hour wireless charging, confirmed across all variants."
+      },
+      {
+        "id": 3,
+        "question": "What does wireless charging mean for MoRo?",
+        "options": ["It charges via solar panels", "It docks and charges without a physical plug connection", "It never needs to be charged"],
+        "correctAnswer": 1,
+        "feedback": "Correct. MoRo aligns with the dock and charges automatically, no plug required."
+      },
+      {
+        "id": 4,
+        "question": "What charging habit supports longer battery life?",
+        "options": ["Always running to full depletion before charging", "Consistent, moderate charging using opportunistic windows", "Never charging above 50%"],
+        "correctAnswer": 1,
+        "feedback": "Correct. Opportunistic, moderate charging supports battery longevity over repeated full-depletion cycles."
+      },
+      {
+        "id": 5,
+        "question": "What is the appropriate operator-level response to a low-battery indicator with unusual behavior?",
+        "options": ["Immediately disassemble the unit", "Treat it as context for what you're observing and report normally", "Ignore it entirely"],
+        "correctAnswer": 1,
+        "feedback": "Correct. Low battery is useful context, not an emergency requiring intervention beyond standard reporting."
+      }
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "moduleId": "L1-M1",
+  "title": "What is MoRo?",
+  "level": "L1",
+  "moduleNumber": 1,
+  "duration": "1.5 hrs",
+  "nextModule": "L1-M2",
+  "previousModule": null,
+  "prerequisite": "None",
+  "contentStatus": "REVISED per Content Principles (60% pass, terminology + notes). Zone model consolidated to single 2m interactive zone, replacing prior three-tier (5m/2-5m/0-2m) draft \u2014 reconciled with L1-M4.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 01",
+      "title": "Meeting MoRo",
+      "learningObjectives": [
+        "Understand what an Intelligent Mobile Robot (IMR) is",
+        "Understand the operational problem MoRo is designed to solve"
+      ],
+      "content": "MoRo is an Intelligent Mobile Robot (IMR) \u2014 a wheeled robot that moves autonomously through a factory, without following a fixed path like a conveyor or a taped route like older automated systems. Before robots like MoRo, moving materials between stations meant either manual labor (slow, physically demanding, a production bottleneck) or fixed automation like conveyors and AGVs (inflexible, expensive to reconfigure, space-intensive). MoRo solves this differently: it navigates using the factory's existing layout, adapts routes without infrastructure changes, and scales by adding more units rather than rebuilding systems. The practical effect on your role: work shifts from manual transport toward supervision.",
+      "keyTerms": [
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings, rather than a fixed physical path."
+        },
+        {
+          "term": "AGV (Automated Guided Vehicle)",
+          "note": "An older category of automated vehicle that follows a fixed path, typically magnetic tape or a buried wire \u2014 requires floor modification and is slow to reconfigure."
+        },
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 02",
+      "title": "What MoRo Is \u2014 Capabilities and Limits",
+      "learningObjectives": [
+        "State MoRo's official definition and what each part of it means",
+        "Identify what MoRo can and cannot do"
+      ],
+      "content": "MoRo is an Autonomous Mobile Robot developed by DiFacto: it independently navigates a factory floor, picks up materials, transports them, and delivers them to their destination without human intervention. Three words define it precisely \u2014 autonomous (it makes its own routing decisions, without a human driver), mobile (it travels between locations, unlike a fixed robotic arm), and robot (it follows programmed instructions within defined rules \u2014 it does not reason the way a person does). MoRo can navigate independently, coordinate with machines, operate continuously, avoid obstacles, report faults, and charge itself. It cannot reason creatively beyond its programming, handle genuinely unplanned situations without human input, exceed its rated payload, or operate in extreme environmental conditions.",
+      "keyTerms": [
+        {
+          "term": "autonomous",
+          "note": "Operating and making routing decisions independently, without requiring a human operator to direct each action."
+        },
+        {
+          "term": "payload",
+          "note": "The maximum weight a unit is rated to carry safely."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 03",
+      "title": "The Three MoRo Variants",
+      "learningObjectives": [
+        "Identify the three MoRo variants and their typical applications",
+        "Understand that operating principles are consistent across all three"
+      ],
+      "content": "DiFacto produces three MoRo variants, differentiated by payload capacity and typical use case. The A-250 (250kg payload, faster movement) suits light assembly and small-item transport. The A-500 (500kg payload, the most commonly deployed variant) suits machine tending and general part transfer \u2014 for example, loading and unloading CNC machines. The A-1200 (1200kg payload, slower movement) suits heavy material transfer and forklift-replacement applications. Regardless of variant, the operating principles taught in this curriculum are the same \u2014 skills learned on one model transfer directly to the others.",
+      "keyTerms": [
+        {
+          "term": "variant",
+          "note": "One of the three MoRo models (A-250, A-500, A-1200), differing primarily in payload capacity and speed."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 04",
+      "title": "How MoRo Navigates",
+      "learningObjectives": [
+        "Understand how MoRo determines its position without floor markers",
+        "Understand the basic mission execution process"
+      ],
+      "content": "MoRo navigates using LiDAR \u2014 a sensor that emits laser light in all directions and measures distance to surrounding objects (walls, machines, pillars) to build a real-time map. As MoRo moves, it continuously compares new LiDAR readings against its stored map to determine its position \u2014 a process called SLAM (Simultaneous Localization and Mapping): determining where it is and what's around it, at the same time. When assigned a mission, MoRo calculates a route across its map, then executes it \u2014 recalculating automatically if an obstacle (a person, a relocated object) appears along the way.",
+      "keyTerms": [
+        {
+          "term": "LiDAR",
+          "note": "Light Detection and Ranging \u2014 a sensor that uses laser light to measure distance and build a spatial map."
+        },
+        {
+          "term": "SLAM (Simultaneous Localization and Mapping)",
+          "note": "The process of determining one's own position while simultaneously mapping the surrounding environment."
+        },
+        {
+          "term": "mission",
+          "note": "A defined task assigned to MoRo \u2014 for example, moving a part from one station to another."
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 05",
+      "title": "Safety Overview",
+      "learningObjectives": [
+        "Know MoRo's confirmed interactive zone distance",
+        "Understand the basic safe-behavior rules around an active MoRo unit"
+      ],
+      "content": "MoRo maintains a 2-meter interactive zone, monitored continuously by onboard sensors. Within this zone, MoRo's behavior adjusts automatically based on proximity \u2014 slowing or stopping as needed \u2014 without requiring human intervention. If you're in MoRo's path, it will detect you and stop; wait for it to clear or move aside, and never attempt to push or manually reposition it. If MoRo stops unexpectedly, don't touch it \u2014 it may resume moving \u2014 instead, alert the operator or supervisor. If you hear an alarm, move clear and notify the operator. This 2-meter figure reflects DiFacto's current guidance and may be revised as the specification is finalized.",
+      "keyTerms": [
+        {
+          "term": "interactive zone",
+          "note": "The sensor-monitored distance (currently 2m) around MoRo within which its behavior automatically adjusts based on proximity."
+        }
+      ]
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 1 \u00b7 Module 1 \u00b7 Section 06",
+      "title": "Why This Matters to Your Role",
+      "learningObjectives": [
+        "Understand how MoRo changes the nature of floor work",
+        "Recognize the shift from manual labor to supervision"
+      ],
+      "content": "The practical shift MoRo introduces is straightforward: tasks that took several minutes of manual walking and handling now complete in a fraction of the time, consistently, without fatigue. Your role shifts from performing the transport itself to supervising it \u2014 watching for exceptions, confirming handoffs, and stepping in when something needs human judgment. This module covered what MoRo is and why it matters. The next module covers how it navigates in more depth; the modules after that cover actually operating it."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is an IMR (Intelligent Mobile Robot)?",
+        "options": [
+          "A robot that follows a fixed path like a conveyor",
+          "A robot that navigates autonomously without a fixed physical path",
+          "A robotic arm fixed to one location"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. An IMR navigates autonomously, unlike conveyors or AGVs that follow fixed paths."
+      },
+      {
+        "id": 2,
+        "question": "How does MoRo determine its position without floor tape or markers?",
+        "options": [
+          "GPS satellite tracking",
+          "LiDAR sensors combined with SLAM",
+          "Magnetic floor sensors"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. LiDAR provides distance measurements; SLAM uses them to determine position and build a map simultaneously."
+      },
+      {
+        "id": 3,
+        "question": "Which MoRo variant is rated for a 500kg payload?",
+        "options": [
+          "A-250",
+          "A-500",
+          "A-1200"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The A-500 is rated for 500kg and is the most commonly deployed variant."
+      },
+      {
+        "id": 4,
+        "question": "What is MoRo's confirmed interactive zone distance?",
+        "options": [
+          "5 meters",
+          "2 meters",
+          "10 meters"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The interactive zone is currently confirmed at 2 meters, per DiFacto guidance."
+      },
+      {
+        "id": 5,
+        "question": "If MoRo stops unexpectedly in front of you, what should you do?",
+        "options": [
+          "Push it out of the way",
+          "Alert the operator or supervisor and wait",
+          "Touch its sensors to check what's wrong"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Don't attempt to move or touch a stopped unit \u2014 alert the operator."
+      }
+    ]
+  }
+}

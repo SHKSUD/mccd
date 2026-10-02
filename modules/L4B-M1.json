@@ -1,0 +1,143 @@
+{
+  "moduleId": "L4B-M1",
+  "title": "CNC Machine Tending Integration",
+  "level": "L4B",
+  "moduleNumber": 1,
+  "duration": "10 hrs",
+  "nextModule": "L4B-M2",
+  "previousModule": "L4A-M6",
+  "prerequisite": "L4A certification complete (Advanced Programming requires Systems Engineer foundation)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Topic area directly confirmed per CDD as DiFacto's strongest use case (most MoRo installations are in CNC environments). Specific procedures pending DiFacto engineering documentation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 01",
+      "title": "Why CNC Integration Is Central to This Track",
+      "learningObjectives": [
+        "Understand why CNC machine tending is emphasized in the Advanced Programming track",
+        "Recognize the real-world prevalence of this use case"
+      ],
+      "content": "CNC machine tending represents MoRo's single most common use case, based on DiFacto's own deployment data. Most installations involve MoRo loading and unloading CNC machines in some form. This module treats that reality directly, with deep, practical competency in CNC integration rather than treating it as just one example among many.",
+      "keyTerms": [
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in a machine tending configuration."
+        },
+        {
+          "term": "machine tending",
+          "note": "The task of loading raw material into and unloading finished parts from a machine, automated here by MoRo."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 02",
+      "title": "The Machine Tending Cycle",
+      "learningObjectives": [
+        "Understand the general cycle of a CNC machine tending operation",
+        "Recognize the handshake points within this cycle"
+      ],
+      "content": "A typical machine tending cycle works like this: MoRo delivers raw material to the CNC machine. The handshake sequence, covered in L3B-M4, confirms readiness. The CNC completes its machining operation. Then MoRo retrieves the finished part and delivers the next raw material. This cycle repeats continuously during production, which makes reliability at each handshake point operationally critical."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 03",
+      "title": "Payload Considerations for Machine Tending",
+      "learningObjectives": [
+        "Understand payload configuration choices specific to machine tending",
+        "Recognize how part geometry affects configuration decisions"
+      ],
+      "content": "Machine tending payload configuration depends heavily on the parts being handled - their geometry, weight, and whether they require specific orientation for loading. Building on the payload concepts from L2-M2, Advanced Programmers select and configure the appropriate payload approach for the specific CNC application - gripper-style handling, tray-based transfer, or another method."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 04",
+      "title": "Timing and Cycle Optimization",
+      "learningObjectives": [
+        "Understand how cycle timing affects overall production throughput",
+        "Recognize the relationship between MoRo's cycle time and CNC processing time"
+      ],
+      "content": "MoRo's tending cycle repeats continuously alongside the CNC's own processing cycle, so timing matters significantly. If MoRo's cycle is slower than the CNC's processing time, MoRo becomes the bottleneck. If it's much faster, MoRo sits idle waiting. Optimizing this relationship, connecting to the cycle time concepts introduced in L2-M6, is central to getting real throughput value from the integration."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 05",
+      "title": "Handling Exceptions in a Continuous Cycle",
+      "learningObjectives": [
+        "Understand common exception scenarios in machine tending",
+        "Recognize appropriate exception handling design"
+      ],
+      "content": "A continuous tending cycle needs explicit handling for exceptions - a part that fails quality inspection, a CNC fault mid-cycle, a material shortage. Well-designed exception handling keeps these scenarios from cascading into larger production disruptions. It pauses cleanly and alerts appropriately, rather than leaving the cell in an ambiguous state."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 06",
+      "title": "Validating a Machine Tending Integration",
+      "learningObjectives": [
+        "Apply testing principles specifically to a continuous-cycle machine tending setup",
+        "Understand what extended validation looks like for this use case"
+      ],
+      "content": "Given how central this use case is, validation should extend beyond a handful of test cycles. Run an extended continuous test period instead - one that surfaces issues only visible after many repetitions. This is similar in principle to the repeated-cycle testing emphasized for handshake configuration in L3B-M4, but applied to the full tending cycle over a longer duration."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why does this module treat CNC integration with particular depth?",
+        "options": [
+          "It's an arbitrary example with no special significance",
+          "CNC machine tending is DiFacto's most common real-world MoRo use case",
+          "CNC is the least common deployment scenario"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. CNC machine tending represents MoRo's most frequent real-world application."
+      },
+      {
+        "id": 2,
+        "question": "What does a typical machine tending cycle involve?",
+        "options": [
+          "MoRo operates independently with no CNC interaction",
+          "Delivering material, handshake confirmation, CNC processing, and retrieving the finished part",
+          "Only software updates, no physical material handling"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The cycle repeats continuously through delivery, handshake, processing, and retrieval."
+      },
+      {
+        "id": 3,
+        "question": "What happens if MoRo's cycle time is slower than the CNC's processing time?",
+        "options": [
+          "Nothing - timing never matters",
+          "MoRo becomes the throughput bottleneck for the cell",
+          "The CNC automatically speeds up to compensate"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Mismatched cycle timing between MoRo and the CNC directly affects overall throughput."
+      },
+      {
+        "id": 4,
+        "question": "Why does exception handling matter in a continuous tending cycle?",
+        "options": [
+          "Exceptions never occur in practice",
+          "To prevent issues like quality failures or CNC faults from cascading into larger disruptions",
+          "Exception handling is only relevant for software bugs"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Well-designed exception handling keeps isolated issues from becoming larger production problems."
+      },
+      {
+        "id": 5,
+        "question": "Why should validation extend beyond a handful of test cycles for this use case?",
+        "options": [
+          "A few cycles are always sufficient",
+          "Issues may only surface after many repetitions, given the continuous nature of the cycle",
+          "Extended testing is never necessary for CNC integration"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Extended testing surfaces issues that wouldn't appear in a brief validation run."
+      }
+    ]
+  }
+}

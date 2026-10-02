@@ -1,0 +1,284 @@
+{
+  "modules": [
+    {
+      "id": "L1-M1",
+      "title": "What is MoRo?",
+      "level": "L1",
+      "duration": "1.5 hrs",
+      "file": "modules/L1-M1.json"
+    },
+    {
+      "id": "L1-M2",
+      "title": "How Does MoRo Navigate?",
+      "level": "L1",
+      "duration": "1.5 hrs",
+      "file": "modules/L1-M2.json"
+    },
+    {
+      "id": "L1-M3",
+      "title": "Control Interfaces & Operations",
+      "level": "L1",
+      "duration": "2 hrs",
+      "file": "modules/L1-M3.json"
+    },
+    {
+      "id": "L1-M4",
+      "title": "Safety Protocols & E-Stop",
+      "level": "L1",
+      "duration": "1.5 hrs",
+      "file": "modules/L1-M4.json"
+    },
+    {
+      "id": "L1-M5",
+      "title": "Teamwork & Coexistence",
+      "level": "L1",
+      "duration": "1 hr",
+      "file": "modules/L1-M5.json"
+    },
+    {
+      "id": "L2-M1",
+      "title": "Missions & Task Programming",
+      "level": "L2",
+      "duration": "2 hrs",
+      "file": "modules/L2-M1.json"
+    },
+    {
+      "id": "L2-M2",
+      "title": "Payload Handling & Coordination",
+      "level": "L2",
+      "duration": "1.5 hrs",
+      "file": "modules/L2-M2.json"
+    },
+    {
+      "id": "L2-M3",
+      "title": "Battery Management & Charging",
+      "level": "L2",
+      "duration": "1 hr",
+      "file": "modules/L2-M3.json"
+    },
+    {
+      "id": "L2-M4",
+      "title": "Fleet Management (Multi-Robot)",
+      "level": "L2",
+      "duration": "1 hr",
+      "file": "modules/L2-M4.json"
+    },
+    {
+      "id": "L2-M5",
+      "title": "Troubleshooting & Error Codes",
+      "level": "L2",
+      "duration": "2 hrs",
+      "file": "modules/L2-M5.json"
+    },
+    {
+      "id": "L2-M6",
+      "title": "Advanced Missions & Optimization",
+      "level": "L2",
+      "duration": "2 hrs",
+      "file": "modules/L2-M6.json"
+    },
+    {
+      "id": "L3A-M1",
+      "title": "Technician Role & Maintenance Fundamentals",
+      "level": "L3A",
+      "duration": "5 hrs",
+      "file": "modules/L3A-M1.json"
+    },
+    {
+      "id": "L3A-M2",
+      "title": "Preventive Maintenance Procedures",
+      "level": "L3A",
+      "duration": "6 hrs",
+      "file": "modules/L3A-M2.json"
+    },
+    {
+      "id": "L3A-M3",
+      "title": "Predictive Maintenance & Inspection Checklists",
+      "level": "L3A",
+      "duration": "5 hrs",
+      "file": "modules/L3A-M3.json"
+    },
+    {
+      "id": "L3A-M4",
+      "title": "Battery Health Diagnostics & Replacement",
+      "level": "L3A",
+      "duration": "6 hrs",
+      "file": "modules/L3A-M4.json"
+    },
+    {
+      "id": "L3A-M5",
+      "title": "Diagnostic Procedures",
+      "level": "L3A",
+      "duration": "6 hrs",
+      "file": "modules/L3A-M5.json"
+    },
+    {
+      "id": "L3A-M6",
+      "title": "Troubleshooting Decision Trees",
+      "level": "L3A",
+      "duration": "6 hrs",
+      "file": "modules/L3A-M6.json"
+    },
+    {
+      "id": "L3A-M7",
+      "title": "Maintenance Simulation & Field Drill",
+      "level": "L3A",
+      "duration": "6 hrs",
+      "file": "modules/L3A-M7.json"
+    },
+    {
+      "id": "L3B-M1",
+      "title": "Mission Programming Fundamentals",
+      "level": "L3B",
+      "duration": "6 hrs",
+      "file": "modules/L3B-M1.json"
+    },
+    {
+      "id": "L3B-M2",
+      "title": "Map Building & SLAM Configuration",
+      "level": "L3B",
+      "duration": "7 hrs",
+      "file": "modules/L3B-M2.json"
+    },
+    {
+      "id": "L3B-M3",
+      "title": "Zone & Traffic Management",
+      "level": "L3B",
+      "duration": "7 hrs",
+      "file": "modules/L3B-M3.json"
+    },
+    {
+      "id": "L3B-M4",
+      "title": "FANUC I/O Handshake Integration",
+      "level": "L3B",
+      "duration": "7 hrs",
+      "file": "modules/L3B-M4.json"
+    },
+    {
+      "id": "L3B-M5",
+      "title": "API & Custom Integration",
+      "level": "L3B",
+      "duration": "7 hrs",
+      "file": "modules/L3B-M5.json"
+    },
+    {
+      "id": "L3B-M6",
+      "title": "Commissioning a New Site",
+      "level": "L3B",
+      "duration": "6 hrs",
+      "file": "modules/L3B-M6.json"
+    },
+    {
+      "id": "L4A-M1",
+      "title": "System Architecture Fundamentals",
+      "level": "L4A",
+      "duration": "7 hrs",
+      "file": "modules/L4A-M1.json"
+    },
+    {
+      "id": "L4A-M2",
+      "title": "MES/WMS API Integration",
+      "level": "L4A",
+      "duration": "7 hrs",
+      "file": "modules/L4A-M2.json"
+    },
+    {
+      "id": "L4A-M3",
+      "title": "OPC-UA & SCADA Connectivity",
+      "level": "L4A",
+      "duration": "7 hrs",
+      "file": "modules/L4A-M3.json"
+    },
+    {
+      "id": "L4A-M4",
+      "title": "Safety PLC Design (EN ISO 13849)",
+      "level": "L4A",
+      "duration": "8 hrs",
+      "file": "modules/L4A-M4.json"
+    },
+    {
+      "id": "L4A-M5",
+      "title": "Multi-Robot Cell Design",
+      "level": "L4A",
+      "duration": "7 hrs",
+      "file": "modules/L4A-M5.json"
+    },
+    {
+      "id": "L4A-M6",
+      "title": "System Architecture & Scalability",
+      "level": "L4A",
+      "duration": "8 hrs",
+      "file": "modules/L4A-M6.json"
+    },
+    {
+      "id": "L4B-M1",
+      "title": "CNC Machine Tending Integration",
+      "level": "L4B",
+      "duration": "10 hrs",
+      "file": "modules/L4B-M1.json"
+    },
+    {
+      "id": "L4B-M2",
+      "title": "PLC Integration for Advanced Workflows",
+      "level": "L4B",
+      "duration": "10 hrs",
+      "file": "modules/L4B-M2.json"
+    },
+    {
+      "id": "L4B-M3",
+      "title": "Lift & Rotate Complex Configurations",
+      "level": "L4B",
+      "duration": "10 hrs",
+      "file": "modules/L4B-M3.json"
+    },
+    {
+      "id": "L4B-M4",
+      "title": "Advanced Fleet Optimization",
+      "level": "L4B",
+      "duration": "10 hrs",
+      "file": "modules/L4B-M4.json"
+    },
+    {
+      "id": "L4B-M5",
+      "title": "Capstone Project (Peer Reviewed)",
+      "level": "L4B",
+      "duration": "10 hrs",
+      "file": "modules/L4B-M5.json"
+    },
+    {
+      "id": "L5-M1",
+      "title": "Instructor Pedagogy Fundamentals",
+      "level": "L5",
+      "duration": "16 hrs",
+      "file": "modules/L5-M1.json"
+    },
+    {
+      "id": "L5-M2",
+      "title": "Assessment & Evaluation Design",
+      "level": "L5",
+      "duration": "16 hrs",
+      "file": "modules/L5-M2.json"
+    },
+    {
+      "id": "L5-M3",
+      "title": "FANUC Co-Training Module",
+      "level": "L5",
+      "duration": "16 hrs",
+      "file": "modules/L5-M3.json"
+    },
+    {
+      "id": "L5-M4",
+      "title": "Lab Infrastructure & Setup",
+      "level": "L5",
+      "duration": "16 hrs",
+      "file": "modules/L5-M4.json"
+    },
+    {
+      "id": "L5-M5",
+      "title": "Observed Delivery & Certification",
+      "level": "L5",
+      "duration": "16 hrs",
+      "file": "modules/L5-M5.json"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "moduleId": "L4B-M4",
+  "title": "Advanced Fleet Optimization",
+  "level": "L4B",
+  "moduleNumber": 4,
+  "duration": "10 hrs",
+  "nextModule": "L4B-M5",
+  "previousModule": "L4B-M3",
+  "prerequisite": "L4B-M3 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on fleet concepts (L2-M4), performance metrics (L2-M6), and cell design (L4A-M5) toward deep optimization competency ahead of the L4B capstone.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 01",
+      "title": "From Awareness to Active Optimization",
+      "learningObjectives": [
+        "Recall performance metrics introduced in L2-M6",
+        "Understand this module's shift from awareness to active optimization work"
+      ],
+      "content": "L2-M6 introduced cycle time and throughput as concepts worth being aware of. L4A-M5 addressed designing cells with appropriate fleet size. This module goes further: actively optimizing an existing, operational fleet's performance - tuning routes, timing, and task distribution to extract more throughput from the same physical fleet.",
+      "keyTerms": [
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
+        },
+        {
+          "term": "PLC (Programmable Logic Controller)",
+          "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 02",
+      "title": "Identifying Optimization Opportunities",
+      "learningObjectives": [
+        "Understand how to identify where optimization effort is worthwhile",
+        "Recognize the role of data logging (from L2-M6) in this process"
+      ],
+      "content": "Optimization starts with data - the logging introduced conceptually in L2-M6 becomes the actual working material here. Analyzing mission timing, route patterns, and congestion points across a fleet's operational history reveals where genuine inefficiency exists, rather than optimizing based on intuition about where problems might be."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 03",
+      "title": "Route Optimization",
+      "learningObjectives": [
+        "Understand general approaches to improving route efficiency",
+        "Recognize trade-offs involved in route optimization decisions"
+      ],
+      "content": "Route optimization might involve adjusting waypoint placement, reconsidering zone configuration (building on L3B-M3), or restructuring mission sequencing to reduce unnecessary travel. Changes here often involve trade-offs - a route optimized for one scenario may perform worse under different operational conditions, so optimization should be validated against realistic operational variation, not just the ideal case."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 04",
+      "title": "Task Distribution Optimization",
+      "learningObjectives": [
+        "Understand optimization considerations for how tasks are distributed across a fleet",
+        "Recognize the goal of balanced utilization"
+      ],
+      "content": "Beyond individual routes, fleet-level optimization considers how tasks are distributed across available units - aiming for balanced utilization rather than some units sitting idle while others are consistently overloaded. This connects to the automatic task assignment introduced in L2-M4, but at this level involves actively tuning the distribution logic rather than relying entirely on default behavior."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 05",
+      "title": "Measuring Optimization Impact",
+      "learningObjectives": [
+        "Understand how to validate that an optimization change actually improved performance",
+        "Recognize the risk of assuming improvement without measurement"
+      ],
+      "content": "Any optimization change should be measured against the same metrics used to identify the original opportunity - confirming throughput or cycle time genuinely improved, not just assuming it did because the change seemed logical. Before-and-after comparison using consistent data is what separates genuine optimization from well-intentioned guessing."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 06",
+      "title": "Preparing for the Capstone",
+      "learningObjectives": [
+        "Understand how this module's skills integrate with the L4B capstone project",
+        "Recognize optimization as one component of the broader Advanced Programming competency"
+      ],
+      "content": "This module completes the technical skill-building portion of L4B, alongside CNC integration, PLC work, and complex payload configuration. The capstone project (L4B-M5) draws on all of these together - optimization skill specifically supports demonstrating that a capstone solution doesn't just work, but performs well."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does this module add beyond the performance awareness introduced in L2-M6?",
+        "options": [
+          "Nothing - it repeats the same content",
+          "Active optimization work, tuning an operational fleet's actual performance",
+          "It removes performance topics entirely"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This module moves from awareness to active, hands-on optimization."
+      },
+      {
+        "id": 2,
+        "question": "What should optimization efforts be based on?",
+        "options": [
+          "Intuition about where problems might be",
+          "Data from mission timing, route patterns, and congestion analysis",
+          "Optimization should not be data-driven"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Data-driven analysis reveals genuine inefficiency, rather than guessing."
+      },
+      {
+        "id": 3,
+        "question": "Why should route optimization be validated against realistic operational variation?",
+        "options": [
+          "Validation isn't necessary",
+          "A route optimized for one scenario may perform worse under different conditions",
+          "Routes never need adjustment once set"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Optimization that only suits an ideal case risks underperforming in real conditions."
+      },
+      {
+        "id": 4,
+        "question": "What is the goal of task distribution optimization across a fleet?",
+        "options": [
+          "Concentrating all tasks on one unit",
+          "Balanced utilization, avoiding idle units while others are overloaded",
+          "Task distribution cannot be optimized"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Balanced utilization across available units is the goal of this optimization."
+      },
+      {
+        "id": 5,
+        "question": "Why measure optimization impact rather than assuming a change helped?",
+        "options": [
+          "Measurement is unnecessary if the change seems logical",
+          "Before-and-after comparison confirms genuine improvement rather than assumption",
+          "Impact can never be measured"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Consistent measurement distinguishes genuine optimization from well-intentioned guessing."
+      }
+    ]
+  }
+}

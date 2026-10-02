@@ -1,0 +1,145 @@
+{
+  "moduleId": "L2-M1",
+  "title": "Missions & Task Programming",
+  "level": "L2",
+  "moduleNumber": 1,
+  "duration": "2 hrs",
+  "nextModule": "L2-M2",
+  "previousModule": "L1-M5",
+  "prerequisite": "L1-M5 (60%), L1 certification complete",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Mission interface specifics pending SME confirmation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 1 - Section 01",
+      "title": "From Awareness to Operation",
+      "learningObjectives": [
+        "Understand the shift in responsibility from L1 to L2",
+        "Recognize what operating MoRo actually involves day to day"
+      ],
+      "content": "L1 built coexistence and interface awareness. L2 is where you begin operating MoRo directly - assigning work, monitoring execution, and maintaining throughput. The fundamental unit of that work is the mission. Every task MoRo performs in a shift is structured as one mission after another.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 1 - Section 02",
+      "title": "What Is a Mission?",
+      "learningObjectives": [
+        "Define a mission in operational terms",
+        "Understand the basic components of mission structure"
+      ],
+      "content": "A mission is a defined task with a clear origin, destination, and completion condition - move from point A to point B, execute a handoff, follow a multi-stop route. The exact taxonomy of mission types available in ANT, and how they're categorized in the interface, is being confirmed with DiFacto's engineering team. The underlying principle holds regardless: every mission has a defined start, a defined objective, and a defined end state.",
+      "keyTerms": [
+        {
+          "term": "mission",
+          "note": "A defined task assigned to MoRo, with a clear start, objective, and completion condition."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 1 - Section 03",
+      "title": "Assigning and Starting a Mission",
+      "learningObjectives": [
+        "Understand the sequence for assigning a mission",
+        "Know the pre-checks required before assignment"
+      ],
+      "content": "Before assigning a mission, confirm MoRo is in ready state (covered in L1-M3) and that the intended path is genuinely clear. Once assigned, MoRo executes independently - your role shifts from direct action to supervision. The specific screens and steps for mission assignment within ANT will be confirmed against the live system."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 1 - Section 04",
+      "title": "Monitoring Execution",
+      "learningObjectives": [
+        "Understand what effective monitoring involves",
+        "Recognize indicators of normal versus abnormal progress"
+      ],
+      "content": "Monitoring isn't continuous observation - it's knowing what normal execution looks like well enough to notice deviation. A mission progressing normally moves steadily and completes within an expected window. A stall, an unexpected pause, or a status that doesn't update as anticipated is the signal to check in. Most L2 operation is this kind of light supervision, not constant hands-on control."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 1 - Section 05",
+      "title": "Validating New or Modified Missions",
+      "learningObjectives": [
+        "Understand why new missions require validation before routine use",
+        "Know the general principle of supervised first-run testing"
+      ],
+      "content": "Any new or modified mission should be validated before being treated as routine - run it once under direct supervision, ideally during a lower-activity period, and confirm it behaves end-to-end as expected. This is standard practice for any new automated process, not something specific to MoRo."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 1 - Section 06",
+      "title": "When Missions Fail",
+      "learningObjectives": [
+        "Recognize general categories of mission failure",
+        "Know the appropriate first response"
+      ],
+      "content": "Missions can fail to complete for various reasons - a blocked path, an unmet condition, a system fault. Diagnosis isn't required at the operator level. The standard response: note what happened, assess whether it's safe to reassign or retry, and escalate if the cause isn't immediately clear. Detailed error code reference is covered in L2-M5."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What defines a mission?",
+        "options": [
+          "A software update",
+          "A defined task with a clear start, objective, and completion condition",
+          "A scheduled maintenance check"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A mission is the basic structured unit of work MoRo executes."
+      },
+      {
+        "id": 2,
+        "question": "What must be confirmed before assigning a new mission?",
+        "options": [
+          "Nothing - missions can be assigned anytime",
+          "That MoRo is in ready state and its path is genuinely clear",
+          "Written supervisor approval"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Readiness and a clear path are the standard pre-checks."
+      },
+      {
+        "id": 3,
+        "question": "What does effective monitoring primarily involve?",
+        "options": [
+          "Watching the screen without interruption",
+          "Knowing what normal progress looks like to notice deviations",
+          "Manually controlling MoRo throughout"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Monitoring means recognizing departure from expected progress."
+      },
+      {
+        "id": 4,
+        "question": "Why should new missions be validated under supervision first?",
+        "options": [
+          "It's not necessary",
+          "To confirm expected end-to-end behavior before routine use",
+          "Only required for missions over 10 steps"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Supervised validation is standard practice for any new process."
+      },
+      {
+        "id": 5,
+        "question": "What's the appropriate first response to a failed mission?",
+        "options": [
+          "Diagnose the exact technical cause yourself",
+          "Note what happened, assess safety, and escalate if unclear",
+          "Ignore it and reassign immediately"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Operator-level response doesn't require diagnosis - note, assess, escalate."
+      }
+    ]
+  }
+}

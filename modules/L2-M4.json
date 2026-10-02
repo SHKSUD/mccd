@@ -1,0 +1,155 @@
+{
+  "moduleId": "L2-M4",
+  "title": "Fleet Management (Multi-Robot)",
+  "level": "L2",
+  "moduleNumber": 4,
+  "duration": "1 hr",
+  "nextModule": "L2-M5",
+  "previousModule": "L2-M3",
+  "prerequisite": "L2-M3 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Fleet-wide dashboard view specifics pending SME confirmation (overlaps Module 3's dashboard question).",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 4 - Section 01",
+      "title": "From One Unit to a Fleet",
+      "learningObjectives": [
+        "Understand why multiple MoRo units are deployed together",
+        "Recognize the operational shift from single-unit to fleet thinking"
+      ],
+      "content": "Everything so far has addressed operating a single MoRo unit. Many deployments run multiple units simultaneously - for throughput (more units moving more material) or redundancy (coverage continues if one unit is down for maintenance). Fleet management is about thinking at the level of the whole operation, not just one robot.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 4 - Section 02",
+      "title": "Collision Avoidance Across Units",
+      "learningObjectives": [
+        "Understand the general principle of multi-robot collision avoidance",
+        "Recognize that this is handled automatically, not by the operator"
+      ],
+      "content": "When multiple MoRo units share a floor, each is aware of the others' positions and coordinates paths to avoid collisions - this is handled by the fleet management system automatically, not something an operator manages manually. Your role is awareness that this coordination is happening, not active involvement in it."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 4 - Section 03",
+      "title": "Task Assignment Across a Fleet",
+      "learningObjectives": [
+        "Understand the general principle of how work gets distributed across units",
+        "Recognize the operator's role in fleet-level task assignment"
+      ],
+      "content": "With multiple units available, the fleet system distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. The exact fleet-wide dashboard view and assignment interface will be confirmed against DiFacto's ANT documentation."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 4 - Section 04",
+      "title": "Zone Management",
+      "learningObjectives": [
+        "Understand the concept of reserved routes and shared paths",
+        "Recognize why zone management matters at fleet scale"
+      ],
+      "content": "As unit count increases, some areas of the floor may be designated as shared paths (multiple units can pass through, coordinated automatically) versus reserved routes (prioritized for specific traffic patterns). This zone structure exists to keep throughput efficient as fleet size grows - understanding that it exists helps you interpret fleet behavior that might otherwise look unusual.",
+      "keyTerms": [
+        {
+          "term": "shared path",
+          "note": "A floor route multiple MoRo units can use, with automatic coordination to avoid conflicts."
+        },
+        {
+          "term": "reserved route",
+          "note": "A floor route prioritized or dedicated for specific traffic patterns within the fleet."
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 4 - Section 05",
+      "title": "Deadlock Situations",
+      "learningObjectives": [
+        "Understand what a deadlock is in a multi-robot context",
+        "Know that the system is designed to resolve deadlocks automatically"
+      ],
+      "content": "A deadlock occurs when two or more units reach a situation where each is waiting on the other to move first, with neither able to proceed. The fleet system is designed to detect and resolve this automatically - typically by directing one unit to reroute. If you observe units that appear mutually stalled for longer than expected, that's worth flagging rather than assuming it will always self-resolve.",
+      "keyTerms": [
+        {
+          "term": "deadlock",
+          "note": "A situation where two or more units are each waiting on the other, with neither able to proceed without intervention."
+        }
+      ]
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 4 - Section 06",
+      "title": "Monitoring Multiple Units",
+      "learningObjectives": [
+        "Understand the general concept of a fleet-wide dashboard view",
+        "Recognize the shift in monitoring approach at fleet scale"
+      ],
+      "content": "Monitoring a fleet means watching for patterns across units rather than tracking any single unit continuously - a unit that deviates from the fleet's normal behavior stands out precisely because you understand what normal looks like across the group. The specific fleet-wide view in ANT will be confirmed and detailed once verified against the live system."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why might multiple MoRo units be deployed together?",
+        "options": [
+          "Only for backup purposes",
+          "For throughput and redundancy",
+          "It's never done - one unit per facility"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Multiple units support both higher throughput and redundant coverage."
+      },
+      {
+        "id": 2,
+        "question": "Who manages collision avoidance between multiple MoRo units?",
+        "options": [
+          "The operator, manually",
+          "The fleet management system, automatically",
+          "Each unit independently, with no coordination"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Collision avoidance across units is handled automatically by the fleet system."
+      },
+      {
+        "id": 3,
+        "question": "What is a deadlock in a multi-robot context?",
+        "options": [
+          "A locked charging dock",
+          "A situation where units are each waiting on the other, with neither proceeding",
+          "A software update failure"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A deadlock is a mutual-wait situation between units, typically resolved automatically."
+      },
+      {
+        "id": 4,
+        "question": "What's the difference between a shared path and a reserved route?",
+        "options": [
+          "There is no difference",
+          "Shared paths allow multiple coordinated units; reserved routes are prioritized for specific traffic",
+          "Reserved routes are only for maintenance"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Shared paths coordinate multiple units; reserved routes prioritize specific traffic patterns."
+      },
+      {
+        "id": 5,
+        "question": "What does monitoring a fleet primarily involve?",
+        "options": [
+          "Tracking one unit continuously and ignoring the rest",
+          "Watching for patterns and deviations across units",
+          "Manually assigning every mission"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Fleet monitoring is about recognizing deviation from normal group behavior."
+      }
+    ]
+  }
+}

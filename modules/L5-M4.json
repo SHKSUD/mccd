@@ -1,0 +1,149 @@
+{
+  "moduleId": "L5-M4",
+  "title": "Lab Infrastructure & Setup",
+  "level": "L5",
+  "moduleNumber": 4,
+  "duration": "16 hrs",
+  "nextModule": "L5-M5",
+  "previousModule": "L5-M3",
+  "prerequisite": "L5-M3 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in CDD's three-capability L5 structure (pedagogy, infrastructure, quality assurance) and CDD's documented minimum lab specification for L2+.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 01",
+      "title": "Infrastructure as an Instructor Responsibility",
+      "learningObjectives": [
+        "Understand why lab infrastructure knowledge is part of Master Instructor competency",
+        "Recognize the distinction between delivering training and enabling the facility it happens in"
+      ],
+      "content": "Good instruction depends on an adequately equipped training environment. A Master Instructor who can set up and validate a proper lab setup is far more valuable to DiFacto's scaling efforts than one who can only teach in a pre-built environment someone else configured. This module builds that infrastructure capability directly.",
+      "keyTerms": [
+        {
+          "term": "FANUC",
+          "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
+        },
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 02",
+      "title": "Minimum Lab Requirements by Level",
+      "learningObjectives": [
+        "Understand the general minimum lab specification confirmed in the CDD for L2 and above",
+        "Recognize how lab requirements scale with the level being taught"
+      ],
+      "content": "Delivering L2 and above requires, at minimum: a MoRo unit (the A-500 is specified as the primary training unit), ANT Server installation, Wi-Fi configured for fleet communication, adequate clear floor space for mission demonstration, a payload fixture, and safety barriers or pedestrian markings. L3A and above add further requirements - maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated) for integration modules.",
+      "keyTerms": [
+        {
+          "term": "VLAN (Virtual Local Area Network)",
+          "note": "A method of segmenting network traffic, relevant to L3A+ training that covers network configuration."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 03",
+      "title": "Setting Up a Training Lab",
+      "learningObjectives": [
+        "Understand the general process of establishing a new training lab",
+        "Recognize validation steps before the lab is used for actual training"
+      ],
+      "content": "Setting up a lab means more than just acquiring the required equipment. It means validating it works as an integrated environment - confirming network connectivity, testing the mapped floor space, and running through representative training scenarios before learners arrive. A lab that technically has all required components but hasn't been validated end-to-end risks disrupting an actual training session."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 04",
+      "title": "Maintaining Lab Equipment Over Time",
+      "learningObjectives": [
+        "Understand why training lab equipment needs its own maintenance attention",
+        "Recognize the connection to the preventive maintenance principles from L3A"
+      ],
+      "content": "Training lab equipment, including the MoRo unit used for instruction, needs the same preventive maintenance attention covered in L3A - arguably more so. Lab equipment often sees heavier and more varied use than a typical production deployment, with multiple learners practicing the same procedures repeatedly."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 05",
+      "title": "Scaling to Multiple Lab Locations",
+      "learningObjectives": [
+        "Understand considerations when DiFacto's instructor network operates multiple labs",
+        "Recognize the value of consistency across lab locations"
+      ],
+      "content": "As DiFacto's training program scales across multiple sites or partner locations, consistency across labs matters. A learner certified at one lab should have had a comparable training experience to one certified at another. Master Instructors play a role in maintaining this consistency, whether setting up a new lab location or auditing an existing one against the confirmed minimum specification."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 06",
+      "title": "Troubleshooting Lab Environment Issues",
+      "learningObjectives": [
+        "Understand common categories of lab-specific technical issues",
+        "Recognize the added pressure of troubleshooting with learners present"
+      ],
+      "content": "Lab environment issues - network connectivity problems, a demonstration unit behaving unexpectedly - need quick resolution, since they directly disrupt a live training session. A production issue might tolerate a slower diagnostic pace; a live session can't. Having backup plans - alternate demonstration approaches, a secondary unit - for common failure points is part of being prepared to deliver training reliably."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why is lab infrastructure knowledge part of Master Instructor competency?",
+        "options": [
+          "It isn't relevant to instructors",
+          "A Master Instructor who can set up and validate training environments scales DiFacto's training efforts more effectively",
+          "Infrastructure is entirely someone else's responsibility"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Infrastructure capability extends an instructor's value beyond just teaching in a pre-built space."
+      },
+      {
+        "id": 2,
+        "question": "What is confirmed as the primary training unit variant per the CDD?",
+        "options": [
+          "A-250",
+          "A-500",
+          "A-1200"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The A-500 is specified as the primary training unit in the minimum lab requirements."
+      },
+      {
+        "id": 3,
+        "question": "What does validating a new training lab involve, beyond acquiring equipment?",
+        "options": [
+          "Nothing further is needed once equipment is acquired",
+          "Confirming the environment works end-to-end through representative training scenarios",
+          "Only checking that the MoRo unit powers on"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. End-to-end validation prevents disruption during actual training delivery."
+      },
+      {
+        "id": 4,
+        "question": "Why does lab equipment need preventive maintenance attention, connecting to L3A principles?",
+        "options": [
+          "Lab equipment never needs maintenance",
+          "Lab equipment often sees heavier, more varied use than typical production deployment",
+          "Only production units require maintenance"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Repeated practice use across multiple learners creates significant wear requiring attention."
+      },
+      {
+        "id": 5,
+        "question": "Why is quick resolution particularly important for lab environment issues during a live session?",
+        "options": [
+          "It isn't more urgent than production issues",
+          "Issues directly disrupt a live training session with learners present, unlike a production issue",
+          "Lab issues are never urgent"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The presence of learners creates added pressure for quick, reliable resolution."
+      }
+    ]
+  }
+}

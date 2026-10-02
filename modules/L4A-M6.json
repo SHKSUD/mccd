@@ -1,0 +1,138 @@
+{
+  "moduleId": "L4A-M6",
+  "title": "System Architecture & Scalability",
+  "level": "L4A",
+  "moduleNumber": 6,
+  "duration": "8 hrs",
+  "nextModule": "L4A Certification Assessment",
+  "previousModule": "L4A-M5",
+  "prerequisite": "L4A-M5 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). New module per CDD, added to address multi-plant/enterprise deployment scale - relevant to DiFacto's US/European OEM conversations. ROI modeling directly relevant to the Industrial Leadership Blueprint's 'Certainty Audit' positioning. Multi-plant case data pending DiFacto input.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4A · Module 6 · Section 01",
+      "title": "From Single Cell to Enterprise Scale",
+      "learningObjectives": [
+        "Understand the shift in thinking from single-cell to multi-plant deployment",
+        "Recognize why this module sits at the top of the Systems Engineer track"
+      ],
+      "content": "Earlier L4A modules addressed designing and integrating a MoRo cell within one facility. This module addresses what changes when that thinking scales to multiple plants, larger fleets, and enterprise-level infrastructure decisions - the kind of conversation a Systems Engineer has with leadership when a single successful deployment becomes a multi-site rollout."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4A · Module 6 · Section 02",
+      "title": "Architecture Patterns for Scale",
+      "learningObjectives": [
+        "Understand general architectural considerations that change at multi-plant scale",
+        "Recognize the difference between a pattern that works for one cell and one that scales"
+      ],
+      "content": "An architecture decision that works cleanly for a single cell - a specific network topology, a particular integration approach - doesn't automatically scale to ten plants. Multi-site architecture needs to account for consistency (so each site doesn't become a bespoke system requiring separate expertise), while still allowing for genuine site-specific variation where it's actually necessary. This module covers the thinking behind that balance, not a fixed template, since every enterprise rollout differs."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4A · Module 6 · Section 03",
+      "title": "Network and Infrastructure at Scale",
+      "learningObjectives": [
+        "Understand how network and infrastructure considerations change across multiple sites",
+        "Recognize centralized versus distributed infrastructure trade-offs"
+      ],
+      "content": "At multi-plant scale, questions arise that don't exist at single-site scale: should fleet data be centralized (one system monitoring all sites) or distributed (each site largely independent, with centralized reporting only)? Each approach has trade-offs in reliability, latency, and administrative overhead. Specific recommendations depend heavily on DiFacto's actual infrastructure and client context, which this module will reference once multi-plant case examples are available."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4A · Module 6 · Section 04",
+      "title": "Standardization Versus Customization",
+      "learningObjectives": [
+        "Understand the trade-off between standardized rollout and site-specific customization",
+        "Recognize how this decision affects long-term maintainability"
+      ],
+      "content": "A fully standardized rollout (identical configuration everywhere) is easier to maintain and train for, but may not fit every site's specific layout or workflow. Full customization fits each site better initially, but creates long-term maintenance burden as each site diverges. The Systems Engineer's role in a multi-plant rollout often involves finding where standardization genuinely serves the business versus where site-specific accommodation is worth the added complexity."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4A · Module 6 · Section 05",
+      "title": "ROI Modeling for Scale Decisions",
+      "learningObjectives": [
+        "Understand the basic components of an ROI case for multi-plant deployment",
+        "Recognize how this connects to the throughput and efficiency claims made during the sales process"
+      ],
+      "content": "Scaling decisions need an economic case, not just a technical one - factoring in deployment cost per site, expected throughput improvement, reduced labor dependency, and payback timeline. This directly relates to the kind of certainty and ROI case DiFacto makes during the sales process (the 'Certainty Audit' concept) - as a Systems Engineer, you may be the person validating that those projected numbers hold up against actual deployment data once a rollout is underway.",
+      "keyTerms": [
+        {"term": "ROI modeling", "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision."}
+      ]
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4A · Module 6 · Section 06",
+      "title": "Completing the Systems Engineer Track",
+      "learningObjectives": [
+        "Understand how this module completes L4A certification",
+        "Recognize the path forward into L4B or L5"
+      ],
+      "content": "This module completes the L4A Systems Engineer curriculum, building on cell-level design and integration (earlier modules) with the enterprise-scale thinking needed for larger rollouts. From here, certified Systems Engineers may progress toward L4B (Advanced Programming) for deeper technical implementation work, or toward L5 (Master Instructor) if their path moves toward training other MoRo users."
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What shift in thinking does this module address compared to earlier L4A modules?",
+        "options": [
+          "No shift - it covers the same single-cell topics in more depth",
+          "The shift from single-cell design to multi-plant, enterprise-scale deployment",
+          "A shift away from technical topics entirely"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This module addresses what changes when deployment scales beyond a single facility."
+      },
+      {
+        "id": 2,
+        "question": "Does an architecture pattern that works for one cell automatically scale to ten plants?",
+        "options": [
+          "Yes, always",
+          "No - multi-site architecture requires balancing consistency with necessary site-specific variation",
+          "Scale has no effect on architecture decisions"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. What works at single-cell scale doesn't automatically transfer to enterprise scale."
+      },
+      {
+        "id": 3,
+        "question": "What is a key trade-off between centralized and distributed infrastructure?",
+        "options": [
+          "There is no trade-off - centralized is always better",
+          "Reliability, latency, and administrative overhead differ between the two approaches",
+          "Only cost differs between them"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Each approach carries different trade-offs depending on context."
+      },
+      {
+        "id": 4,
+        "question": "What's the risk of full site-specific customization across a multi-plant rollout?",
+        "options": [
+          "There is no risk",
+          "Long-term maintenance burden as each site diverges",
+          "It's always cheaper than standardization"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Full customization fits each site better initially but creates maintenance burden over time."
+      },
+      {
+        "id": 5,
+        "question": "What role might a Systems Engineer play regarding ROI claims made during sales?",
+        "options": [
+          "No role - ROI is purely a sales function",
+          "Validating that projected ROI numbers hold up against actual deployment data",
+          "Setting the initial sales price"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Systems Engineers may validate real-world performance against the economic case made during sales."
+      }
+    ]
+  }
+}

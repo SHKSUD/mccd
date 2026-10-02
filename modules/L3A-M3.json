@@ -1,0 +1,135 @@
+{
+  "moduleId": "L3A-M3",
+  "title": "Predictive Maintenance & Inspection Checklists",
+  "level": "L3A",
+  "moduleNumber": 3,
+  "duration": "5 hrs",
+  "nextModule": "L3A-M4",
+  "previousModule": "L3A-M2",
+  "prerequisite": "L3A-M2 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific inspection checklist items pending DiFacto engineering documentation.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A · Module 3 · Section 01",
+      "title": "Predictive Versus Preventive",
+      "learningObjectives": [
+        "Distinguish predictive maintenance from the preventive maintenance covered in Module 2",
+        "Understand why predictive maintenance requires closer observation, not just scheduling"
+      ],
+      "content": "Where preventive maintenance follows a fixed schedule regardless of condition, predictive maintenance is triggered by actual signs of degradation - a component wearing faster than typical, a performance metric drifting from its normal range. This requires closer, ongoing observation rather than just following a calendar."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A · Module 3 · Section 02",
+      "title": "Signs Worth Watching For",
+      "learningObjectives": [
+        "Understand general categories of early warning signs",
+        "Recognize that predictive indicators are often subtle, not dramatic"
+      ],
+      "content": "Predictive signs tend to be gradual rather than sudden: slightly increased noise or vibration from a drive component, a battery charging cycle that takes marginally longer than it used to, a sensor reading that's technically within range but trending in one direction over time. None of these individually demand immediate action - but tracked over time, they indicate when proactive attention is worthwhile."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A · Module 3 · Section 03",
+      "title": "Using Inspection Checklists Effectively",
+      "learningObjectives": [
+        "Understand the purpose of a structured inspection checklist",
+        "Recognize how to use a checklist as a tool for comparison over time, not just a one-time pass/fail"
+      ],
+      "content": "An inspection checklist's real value comes from consistency over time - recording actual values (not just pass/fail) where possible, so this inspection can be compared against the last one. A checklist that only records 'OK' or 'not OK' misses the gradual trends that predictive maintenance depends on noticing. Specific checklist items for MoRo's inspection points will be confirmed against DiFacto documentation."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A · Module 3 · Section 04",
+      "title": "Interpreting Trend Data",
+      "learningObjectives": [
+        "Understand the general approach to reading a trend across multiple inspections",
+        "Recognize the difference between normal variation and a meaningful trend"
+      ],
+      "content": "A single reading rarely tells you much; a series of readings over several inspections can reveal whether something is stable (normal variation) or trending in a concerning direction. Technicians need to distinguish ordinary fluctuation from a genuine trend - this comes with experience and with having consistent, comparable data to work from, which is exactly why consistent checklist use matters."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A · Module 3 · Section 05",
+      "title": "Deciding When to Act",
+      "learningObjectives": [
+        "Understand the general threshold for acting on a predictive signal",
+        "Recognize the trade-off between acting too early and too late"
+      ],
+      "content": "Acting too early on every minor fluctuation wastes maintenance resources on components that would have continued performing fine; acting too late risks the failure predictive maintenance was meant to prevent. The judgment call sits between these - informed by trend data, component-specific knowledge, and operational context (how critical is this unit right now, how soon can it be scheduled for attention)."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A · Module 3 · Section 06",
+      "title": "Connecting to Diagnostic Work",
+      "learningObjectives": [
+        "Understand how predictive observation connects to the diagnostic methodology in later modules",
+        "Recognize this module's place in building toward full diagnostic competency"
+      ],
+      "content": "Predictive maintenance and diagnostic troubleshooting (covered later in this track) share a common foundation: both depend on recognizing what's normal well enough to notice deviation. The difference is timing - predictive work catches issues before they become operational problems; diagnostics (Module 5) responds once something has already gone wrong. Both skills reinforce each other."
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What triggers predictive maintenance, as opposed to preventive maintenance?",
+        "options": [
+          "A fixed calendar schedule, same as preventive",
+          "Actual observed signs of degradation, rather than a fixed schedule",
+          "Predictive maintenance doesn't exist as a separate category"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Predictive maintenance responds to observed signs, not a fixed interval."
+      },
+      {
+        "id": 2,
+        "question": "Are predictive warning signs typically dramatic and obvious?",
+        "options": [
+          "Yes, always sudden and severe",
+          "No - they tend to be gradual and subtle, visible mainly over time",
+          "Predictive signs don't exist"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Predictive indicators are usually subtle trends, not dramatic single events."
+      },
+      {
+        "id": 3,
+        "question": "Why is recording actual values better than just pass/fail on a checklist?",
+        "options": [
+          "There's no difference in value",
+          "Actual values allow comparison over time to spot gradual trends",
+          "Pass/fail is always more accurate"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Trend detection requires comparable data across inspections, not just binary results."
+      },
+      {
+        "id": 4,
+        "question": "What's the risk of acting on every minor fluctuation in inspection readings?",
+        "options": [
+          "There is no risk",
+          "Wasting maintenance resources on components that would have continued performing fine",
+          "It always improves equipment lifespan"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Over-reacting to normal variation wastes resources; the skill is distinguishing real trends."
+      },
+      {
+        "id": 5,
+        "question": "How does predictive maintenance relate to diagnostic troubleshooting covered later in this track?",
+        "options": [
+          "They are unrelated skills",
+          "Both depend on recognizing what's normal to notice deviation, differing mainly in timing",
+          "Diagnostics replaces the need for predictive maintenance"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Both skills share the same foundation of recognizing normal versus abnormal."
+      }
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "moduleId": "L4A-M4",
+  "title": "Safety PLC Design (EN ISO 13849)",
+  "level": "L4A",
+  "moduleNumber": 4,
+  "duration": "8 hrs",
+  "nextModule": "L4A-M5",
+  "previousModule": "L4A-M3",
+  "prerequisite": "L4A-M3 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Standard name confirmed per CDD (EN ISO 13849, covered at L4A per CDD safety standards section). Specific DiFacto safety PLC implementation pending engineering documentation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 01",
+      "title": "Safety at the Systems Design Level",
+      "learningObjectives": [
+        "Understand how safety design at L4A differs from operational safety covered at L1",
+        "Recognize EN ISO 13849 as the governing standard for this work"
+      ],
+      "content": "L1-M4 covered operational safety - understanding MoRo's interactive zone and E-stop behavior as a user. This module covers safety from the design side: how safety-related control functions are engineered into a MoRo-integrated cell in the first place, governed by EN ISO 13849, the standard for safety of machinery and control systems.",
+      "keyTerms": [
+        {
+          "term": "EN ISO 13849",
+          "note": "The international standard governing the safety of machinery and control systems, relevant to designing safety-related functions in an automated cell."
+        },
+        {
+          "term": "PLC (Programmable Logic Controller)",
+          "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 02",
+      "title": "Safety-Related Control Functions",
+      "learningObjectives": [
+        "Understand the concept of a safety-related control function",
+        "Recognize examples relevant to a MoRo-integrated cell"
+      ],
+      "content": "A safety-related control function is any part of a control system specifically responsible for preventing or mitigating hazards - E-stop circuits, safety-rated sensors, interlocks that prevent equipment operation under unsafe conditions. In a MoRo-integrated cell, this includes both MoRo's own safety systems and how they interface with the cell's broader safety PLC architecture.",
+      "keyTerms": [
+        {
+          "term": "safety-related control function",
+          "note": "Any part of a control system specifically responsible for preventing or mitigating hazards, such as E-stop circuits or safety interlocks."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 03",
+      "title": "Performance Levels and Risk Assessment",
+      "learningObjectives": [
+        "Understand the general concept of performance level under EN ISO 13849",
+        "Recognize that safety design requirements scale with assessed risk"
+      ],
+      "content": "EN ISO 13849 defines performance levels that quantify how reliably a safety function must perform, based on a risk assessment of the hazard it addresses. Higher-risk scenarios require higher performance levels, meaning more robust (often redundant) safety design. Specific performance level requirements for MoRo-integrated cells will be confirmed against DiFacto's engineering and compliance documentation.",
+      "keyTerms": [
+        {
+          "term": "performance level",
+          "note": "A measure defined by EN ISO 13849 quantifying how reliably a safety function must perform, scaled to the assessed risk."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 04",
+      "title": "Integrating MoRo's Safety Systems with Cell-Level Safety PLCs",
+      "learningObjectives": [
+        "Understand the general approach to connecting MoRo's safety behavior with a cell's safety PLC",
+        "Recognize why this integration needs careful design, not just functional connection"
+      ],
+      "content": "When MoRo operates within a larger cell containing other equipment, its E-stop and interactive zone behavior often needs to interface with the cell's own safety PLC - for example, ensuring a cell-wide E-stop also halts MoRo, not just the fixed equipment. This integration must be designed deliberately, confirming the combined system genuinely meets its required performance level, not just that each component independently functions."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 05",
+      "title": "Documentation and Compliance",
+      "learningObjectives": [
+        "Understand what safety design documentation typically requires",
+        "Recognize why this documentation matters for compliance and audit purposes"
+      ],
+      "content": "Safety PLC design work requires documentation demonstrating the risk assessment performed, the performance level targeted, and how the design meets it - this isn't optional paperwork but the evidence base for compliance under EN ISO 13849. This documentation also matters practically: it's what a future engineer or auditor needs to verify the safety design remains valid if the cell is later modified."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 06",
+      "title": "When to Involve Safety Specialists",
+      "learningObjectives": [
+        "Understand the boundary of Systems Engineer competency in safety design",
+        "Recognize when formal safety engineering expertise should be brought in"
+      ],
+      "content": "This module builds working literacy in safety PLC design principles - enough to collaborate effectively and recognize what's required. For novel or high-risk cell configurations, involving a dedicated functional safety specialist for formal risk assessment and performance level verification is appropriate, rather than relying solely on this curriculum's coverage for genuinely complex safety-critical design."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What standard governs the safety design work covered in this module?",
+        "options": [
+          "ISO 9001",
+          "EN ISO 13849",
+          "ANSI B56.5"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. EN ISO 13849 is the governing standard for machinery and control system safety design."
+      },
+      {
+        "id": 2,
+        "question": "What is a safety-related control function?",
+        "options": [
+          "Any software feature regardless of purpose",
+          "A part of a control system specifically responsible for preventing or mitigating hazards",
+          "A mission programming function"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Safety-related control functions specifically address hazard prevention or mitigation."
+      },
+      {
+        "id": 3,
+        "question": "What determines the required performance level for a safety function?",
+        "options": [
+          "It's the same fixed level for every scenario",
+          "A risk assessment of the hazard the function addresses",
+          "The cost of implementation"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Performance level requirements scale with assessed risk, per EN ISO 13849."
+      },
+      {
+        "id": 4,
+        "question": "Why does integrating MoRo's safety behavior with a cell's safety PLC require careful design?",
+        "options": [
+          "It doesn't - any functional connection is sufficient",
+          "To confirm the combined system genuinely meets its required performance level",
+          "Integration is automatic and needs no design work"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Combined safety systems need deliberate design validation, not just functional connection."
+      },
+      {
+        "id": 5,
+        "question": "When should a dedicated functional safety specialist be involved?",
+        "options": [
+          "Never - this curriculum covers everything needed",
+          "For novel or high-risk cell configurations requiring formal risk assessment",
+          "Only for routine, well-understood configurations"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This module builds working literacy, but complex cases warrant specialist involvement."
+      }
+    ]
+  }
+}

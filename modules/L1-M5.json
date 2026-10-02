@@ -1,0 +1,109 @@
+{
+  "moduleId": "L1-M5",
+  "title": "Teamwork & Coexistence",
+  "level": "L1",
+  "moduleNumber": 5,
+  "duration": "1 hr",
+  "nextModule": "L2-M1",
+  "previousModule": "L1-M4",
+  "prerequisite": "L1-M4 (60%)",
+  "contentStatus": "REVISED per Content Principles (60% pass threshold). Fully conceptual content — no unconfirmed specs involved.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 1 · Module 5 · Section 01",
+      "title": "Working Alongside MoRo",
+      "learningObjectives": [
+        "Understand the basic ground rules of sharing floor space with MoRo",
+        "Recognize that coexistence is a shared responsibility, not just MoRo's"
+      ],
+      "content": "By now you understand what MoRo is, how it navigates, how to operate it, and how its safety systems work. This module covers the everyday habits of sharing a workspace with MoRo without friction. The ground rules: give MoRo room to complete its path, don't assume its route stays fixed day to day, and treat it with the same predictable attention you'd give any moving industrial equipment."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 1 · Module 5 · Section 02",
+      "title": "What MoRo Is — and Isn't",
+      "learningObjectives": [
+        "Understand MoRo as a reliable automated system, not a decision-maker in the human sense",
+        "Avoid common misconceptions about MoRo's operation"
+      ],
+      "content": "It's easy to anthropomorphize a robot moving independently through a factory — to describe MoRo as 'deciding' or 'noticing' the way a person would. Precision matters here: MoRo executes programmed logic based on sensor input. It doesn't exercise judgment the way a coworker would. Don't expect it to infer intent or make exceptions. Judgment calls remain a human responsibility — MoRo's value is consistent, reliable execution, not adaptive reasoning.",
+      "keyTerms": [
+        {"term": "programmed logic", "note": "Predefined rules and responses MoRo follows based on what its sensors detect — not independent judgment."}
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 1 · Module 5 · Section 03",
+      "title": "Signaling Your Intentions",
+      "learningObjectives": [
+        "Understand how predictable human movement supports smooth MoRo operation",
+        "Know simple habits that reduce unnecessary slowdowns"
+      ],
+      "content": "MoRo responds to what its sensors detect, not what you intend. Hesitating near its path, starting to cross and stopping, or moving erratically can cause MoRo to slow or pause more than necessary — not due to malfunction, but because the movement pattern looked unpredictable. Moving with clear, steady intent — walking through a space decisively rather than hovering at its edge — reduces these avoidable interruptions."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 1 · Module 5 · Section 04",
+      "title": "Everyday Etiquette",
+      "learningObjectives": [
+        "Identify simple workplace habits that support safe, efficient coexistence",
+        "Recognize behaviors to avoid around active MoRo units"
+      ],
+      "content": "A few habits matter: don't squeeze past MoRo through a tight space as a shortcut. Don't rest items on it, even briefly. Don't treat a paused MoRo as an invitation to test its sensors out of curiosity. This is the same basic respect shown to any piece of industrial equipment doing its job — and it becomes automatic with familiarity, the same way safe behavior around forklifts or conveyor lines does."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 1 · Module 5 · Section 05",
+      "title": "When to Escalate",
+      "learningObjectives": [
+        "Know what kinds of observations are worth reporting",
+        "Understand that early escalation is standard practice, not overreaction"
+      ],
+      "content": "If something about MoRo's behavior, path, or condition seems worth flagging — even something minor — raise it with your supervisor or designated point of contact for MoRo operations at your site. You're not expected to diagnose or resolve it yourself at this level. Surfacing small observations early, before they compound into larger issues, closes the loop on everything covered across L1: awareness, navigation, operation, safety, and coexistence.",
+      "keyTerms": [
+        {"term": "escalation", "note": "Reporting an issue to the appropriate point of contact rather than resolving it yourself."}
+      ]
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Does MoRo exercise judgment the way a human coworker would?",
+        "options": [
+          "Yes, it can infer intent and make exceptions",
+          "No — it executes programmed logic based on sensor input, reliably and consistently",
+          "Only during certain missions"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. MoRo's value is consistent, programmed execution — not human-like judgment."
+      },
+      {
+        "id": 2,
+        "question": "Why might MoRo slow or pause even without real danger present?",
+        "options": [
+          "Random malfunction",
+          "It responds to unpredictable or hesitant human movement near its path",
+          "It stops automatically every few minutes regardless of surroundings"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Clear, steady movement near MoRo reduces unnecessary slowdowns."
+      },
+      {
+        "id": 3,
+        "question": "If you notice something worth flagging about MoRo, what should you do?",
+        "options": [
+          "Ignore it unless it becomes serious",
+          "Try to resolve it yourself before telling anyone",
+          "Escalate it to your supervisor or designated contact early, even if minor"
+        ],
+        "correctAnswer": 2,
+        "feedback": "Correct. Early escalation, even for minor observations, is standard practice."
+      }
+    ]
+  }
+}

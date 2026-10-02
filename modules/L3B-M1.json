@@ -1,0 +1,145 @@
+{
+  "moduleId": "L3B-M1",
+  "title": "Mission Programming Fundamentals",
+  "level": "L3B",
+  "moduleNumber": 1,
+  "duration": "6 hrs",
+  "nextModule": "L3B-M2",
+  "previousModule": "L2-M6",
+  "prerequisite": "L2-M6 (60%), L2 certification complete",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on conceptual mission mechanics from L2-M1/L2-M6, going deeper into actual programming. Specific ANT programming interface pending SME confirmation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 01",
+      "title": "From Operating Missions to Building Them",
+      "learningObjectives": [
+        "Understand how the Programmer role differs from the Operator role",
+        "Recognize the scope of this track relative to L2's mission coverage"
+      ],
+      "content": "L2 taught you to assign, monitor, and work with missions that already existed. The Programmer track teaches you to build them - defining new missions, mapping new spaces, and commissioning MoRo for use at new sites. This is a creation and configuration role, not just an operational one.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming \u2014 introduced in L1-M3."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 02",
+      "title": "Mission Programming Concepts",
+      "learningObjectives": [
+        "Understand the building blocks of a programmed mission",
+        "Recognize how waypoints and conditions combine into a complete mission"
+      ],
+      "content": "A programmed mission is built from waypoints (specific locations on the map) connected by a defined sequence, optionally combined with conditional logic (covered conceptually in L2-M6) for more complex behavior. Programming a mission means defining this structure explicitly, rather than working with missions someone else has already built.",
+      "keyTerms": [
+        {
+          "term": "waypoint",
+          "note": "A specific, defined location on MoRo's map used as a reference point within a programmed mission."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 03",
+      "title": "Setting Waypoints",
+      "learningObjectives": [
+        "Understand the general process of defining a waypoint",
+        "Recognize considerations for reliable waypoint placement"
+      ],
+      "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Exact waypoint-setting procedure within ANT will be confirmed against the live system."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 04",
+      "title": "Sequencing a Mission",
+      "learningObjectives": [
+        "Understand how waypoints are combined into a sequenced mission",
+        "Recognize the difference between a simple linear sequence and a more complex structure"
+      ],
+      "content": "The simplest mission structure is linear - visit waypoints in a fixed order. More complex missions may involve conditional branching (introduced conceptually in L2-M6) or repeating loops. Programming starts with getting the linear case right and reliable before introducing additional complexity."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 05",
+      "title": "Testing a Programmed Mission",
+      "learningObjectives": [
+        "Apply the mission validation principle from L2-M1 to newly programmed missions",
+        "Understand what additional scrutiny a newly programmed mission needs compared to a pre-existing one"
+      ],
+      "content": "Testing a newly programmed mission carries more uncertainty than testing a minor modification to an existing one, since nothing about the mission's behavior has been validated yet. Programmers should expect to iterate - testing, identifying issues, adjusting waypoints or sequencing, and retesting - before a new mission is considered reliable enough for routine operational use."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3B \u00b7 Module 1 \u00b7 Section 06",
+      "title": "Documenting a Programmed Mission",
+      "learningObjectives": [
+        "Understand what documentation a programmed mission requires",
+        "Recognize why this matters for future maintenance or modification"
+      ],
+      "content": "A programmed mission should be documented with its intended purpose, waypoint logic, and any conditional behavior - not just left as a working but unexplained configuration. This matters because missions get modified over time, and whoever modifies it later (possibly not the original programmer) needs to understand the original intent to avoid breaking it."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "How does the Programmer role differ from the Operator role covered at L2?",
+        "options": [
+          "There is no difference",
+          "Programmers build and configure missions, rather than just operating existing ones",
+          "Programmers only work with hardware, never software"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The Programmer track is a creation/configuration role, building on L2's operational foundation."
+      },
+      {
+        "id": 2,
+        "question": "What is a waypoint?",
+        "options": [
+          "A type of error code",
+          "A specific, defined location on MoRo's map used as a reference point in a mission",
+          "A battery charging setting"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Waypoints are the basic location-based building blocks of a programmed mission."
+      },
+      {
+        "id": 3,
+        "question": "What should be considered when placing a waypoint?",
+        "options": [
+          "Nothing - any location works equally well",
+          "Reachability and clearance for the intended operation at that point",
+          "Only the distance from the charging dock"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Reliable waypoint placement accounts for whether MoRo can actually navigate to and operate at that location."
+      },
+      {
+        "id": 4,
+        "question": "What structure should mission programming start with before adding complexity?",
+        "options": [
+          "Complex branching logic immediately",
+          "A simple, reliable linear sequence",
+          "Programming should start with the most complex case"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Getting the simple linear case right first is the recommended starting point."
+      },
+      {
+        "id": 5,
+        "question": "Why does a newly programmed mission need more testing scrutiny than a minor modification?",
+        "options": [
+          "It doesn't - both need the same level of testing",
+          "Nothing about a new mission's behavior has been validated yet",
+          "New missions are always simpler and need less testing"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A newly programmed mission carries more uncertainty, requiring more thorough validation."
+      }
+    ]
+  }
+}

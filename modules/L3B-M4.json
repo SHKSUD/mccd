@@ -1,0 +1,145 @@
+{
+  "moduleId": "L3B-M4",
+  "title": "FANUC I/O Handshake Integration",
+  "level": "L3B",
+  "moduleNumber": 4,
+  "duration": "7 hrs",
+  "nextModule": "L3B-M5",
+  "previousModule": "L3B-M3",
+  "prerequisite": "L3B-M3 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on handshake concept introduced conceptually in L2-M2. Directly referenced in CDD Integration Ecosystem section (FANUC I/O - request/ready/complete signal handshake). Specific I/O signal configuration pending DiFacto/FANUC engineering documentation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 01",
+      "title": "From Understanding Handshakes to Configuring Them",
+      "learningObjectives": [
+        "Recall the handshake concept introduced in L2-M2",
+        "Understand the Programmer's role in configuring FANUC integration"
+      ],
+      "content": "L2-M2 introduced the handshake concept at an operator level - recognizing when a signal exchange has stalled. As a Programmer, you configure the handshake itself, specifically for FANUC robotic systems MoRo commonly integrates with. This is one of DiFacto's signature integration capabilities, reflecting the company's position as an integrator of both systems.",
+      "keyTerms": [
+        {
+          "term": "FANUC",
+          "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 02",
+      "title": "The Request/Ready/Complete Sequence",
+      "learningObjectives": [
+        "Understand the general structure of the FANUC I/O handshake",
+        "Recognize the purpose of each signal in the sequence"
+      ],
+      "content": "The FANUC I/O handshake follows a request/ready/complete signal sequence: MoRo signals a request (it has arrived and is ready to interact), the FANUC controller signals ready (confirming it can proceed), and a complete signal closes out the exchange once the interaction finishes. This sequence prevents either system from acting before the other is genuinely prepared. Exact signal timing and configuration will be confirmed against DiFacto/FANUC joint documentation.",
+      "keyTerms": [
+        {
+          "term": "request/ready/complete sequence",
+          "note": "The three-stage signal exchange confirming readiness before, during, and after a MoRo-FANUC interaction."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 03",
+      "title": "Configuring Digital I/O Points",
+      "learningObjectives": [
+        "Understand the general concept of digital I/O configuration for this integration",
+        "Recognize why correct I/O mapping matters for reliable handshake behavior"
+      ],
+      "content": "The handshake signals are carried over digital I/O points that must be correctly mapped between MoRo's system and the FANUC controller. Incorrect mapping - a signal wired to the wrong I/O point - produces unreliable or failed handshakes even when both systems are otherwise functioning correctly. Specific I/O mapping procedures are being finalized with DiFacto engineering."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 04",
+      "title": "Testing the Handshake Sequence",
+      "learningObjectives": [
+        "Understand the testing approach for a newly configured handshake",
+        "Recognize the importance of testing under realistic, repeated conditions"
+      ],
+      "content": "A handshake configuration should be tested through multiple complete cycles, not just once - a sequence that works correctly on a single test but fails intermittently on repetition indicates a timing or configuration issue that a single successful test would miss. This connects directly to the validation approach covered in the commissioning capstone (L3B-M6)."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 05",
+      "title": "Troubleshooting a Stalled Handshake",
+      "learningObjectives": [
+        "Apply troubleshooting methodology (familiar from the Technician track) to handshake issues",
+        "Understand common categories of handshake failure"
+      ],
+      "content": "When a handshake stalls, troubleshooting generally starts by identifying which side of the exchange failed to signal - is MoRo not sending its request, is FANUC not responding with ready, or is the complete signal not registering. Isolating which stage failed narrows the investigation significantly before looking deeper into wiring, configuration, or timing causes."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 06",
+      "title": "This Module's Place in the Commissioning Process",
+      "learningObjectives": [
+        "Understand how FANUC integration fits into the broader commissioning workflow",
+        "Recognize this as preparation for the L3B capstone"
+      ],
+      "content": "FANUC I/O integration is typically one component of a broader site commissioning process, alongside map building (L3B-M2) and mission programming (L3B-M1). The capstone module (L3B-M6) brings these together into a complete end-to-end commissioning scenario, which is why solid handshake configuration skill matters specifically for sites where FANUC integration is part of the deployment."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does this module cover, building on the handshake concept from L2-M2?",
+        "options": [
+          "Only operator-level recognition of stalled handshakes",
+          "Actually configuring the FANUC I/O handshake, a signature DiFacto integration capability",
+          "A completely unrelated topic"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Programmers configure the handshake itself, going beyond L2's operator-level awareness."
+      },
+      {
+        "id": 2,
+        "question": "What is the confirmed sequence structure for the FANUC I/O handshake?",
+        "options": [
+          "Start/stop/reset",
+          "Request/ready/complete",
+          "Open/close/lock"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Request/ready/complete is the confirmed signal sequence per DiFacto's integration framework."
+      },
+      {
+        "id": 3,
+        "question": "What happens if digital I/O points are incorrectly mapped?",
+        "options": [
+          "Nothing - mapping doesn't affect handshake reliability",
+          "The handshake becomes unreliable or fails, even if both systems otherwise function correctly",
+          "Only MoRo's navigation is affected, not the handshake"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Correct I/O mapping is essential for reliable handshake behavior."
+      },
+      {
+        "id": 4,
+        "question": "Why test a handshake sequence through multiple cycles, not just once?",
+        "options": [
+          "One successful test is always sufficient",
+          "Intermittent failures on repetition can reveal timing issues a single test would miss",
+          "Multiple tests are only needed for safety compliance, not reliability"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Repeated testing surfaces intermittent issues that a single test cycle wouldn't catch."
+      },
+      {
+        "id": 5,
+        "question": "What's the first step when troubleshooting a stalled handshake?",
+        "options": [
+          "Immediately replace hardware components",
+          "Identify which side of the exchange failed to signal",
+          "Restart the entire facility network"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Isolating which stage of the sequence failed narrows the investigation significantly."
+      }
+    ]
+  }
+}

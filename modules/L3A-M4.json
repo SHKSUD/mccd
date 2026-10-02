@@ -1,0 +1,143 @@
+{
+  "moduleId": "L3A-M4",
+  "title": "Battery Health Diagnostics & Replacement",
+  "level": "L3A",
+  "moduleNumber": 4,
+  "duration": "6 hrs",
+  "nextModule": "L3A-M5",
+  "previousModule": "L3A-M3",
+  "prerequisite": "L3A-M3 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on confirmed LFP battery specs from L2-M3 (CDD-sourced). Specific diagnostic thresholds and replacement procedures pending DiFacto engineering documentation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 01",
+      "title": "From Awareness to Diagnosis",
+      "learningObjectives": [
+        "Recall the battery fundamentals covered at L2",
+        "Understand the deeper diagnostic responsibility at Technician level"
+      ],
+      "content": "L2-M3 covered battery awareness - LFP chemistry, confirmed runtime and charging specs, and recognizing when something seems off. This module goes deeper: actually diagnosing battery health issues and determining when a battery needs replacement rather than continued monitoring."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 02",
+      "title": "How Battery Health Degrades Over Time",
+      "learningObjectives": [
+        "Understand the general concept of battery capacity degradation",
+        "Recognize this as a normal, expected process rather than a fault"
+      ],
+      "content": "All rechargeable batteries, including MoRo's LFP batteries, lose some capacity over repeated charge cycles - this is normal degradation, not a defect. The practical question for a Technician isn't whether degradation is happening (it always is, gradually) but whether it's progressing at an expected rate or faster than normal, and at what point remaining capacity no longer meets operational needs.",
+      "keyTerms": [
+        {
+          "term": "LFP (Lithium Iron Phosphate)",
+          "note": "MoRo's battery chemistry, chosen for thermal stability and long cycle life \u2014 covered in detail in L2-M3."
+        },
+        {
+          "term": "capacity degradation",
+          "note": "The gradual, expected loss of a battery's maximum charge capacity over repeated use cycles."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 03",
+      "title": "Diagnostic Indicators of Battery Issues",
+      "learningObjectives": [
+        "Understand general categories of battery-related diagnostic signals",
+        "Distinguish normal aging from an abnormal issue"
+      ],
+      "content": "Diagnostic signals worth tracking include charge time (taking meaningfully longer than expected), runtime per charge (shorter than the unit's typical pattern), and charging behavior (failing to reach full charge, or charging unevenly). A gradual, consistent decline across these metrics usually reflects normal aging; a sudden change is more likely to indicate an actual fault."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 04",
+      "title": "Using the Diagnostic Interface for Battery Data",
+      "learningObjectives": [
+        "Understand how the diagnostic interface (from L3A-M5) applies specifically to battery health",
+        "Know the general type of data available for battery diagnosis"
+      ],
+      "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Specific screens and data points for battery diagnostics will be confirmed against DiFacto's technician documentation."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 05",
+      "title": "Deciding on Replacement",
+      "learningObjectives": [
+        "Understand the general criteria for recommending battery replacement",
+        "Recognize this as a judgment call informed by data, not a fixed rule alone"
+      ],
+      "content": "Replacement decisions generally weigh remaining capacity against operational need - a battery that's degraded but still comfortably covers a unit's actual daily runtime requirement may not need replacement yet, even if it's below its original rated capacity. Specific replacement thresholds will be confirmed against DiFacto's guidance, but the underlying principle is assessing fitness for actual use, not just comparing against original spec."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 06",
+      "title": "Safe Battery Handling",
+      "learningObjectives": [
+        "Understand general safety considerations specific to battery handling",
+        "Recognize when battery work falls within Technician scope versus requiring escalation"
+      ],
+      "content": "LFP batteries are generally considered safer than many other lithium chemistries, but battery handling still requires care - following proper lockout/tagout before any physical battery work, and recognizing signs (physical damage, unusual heat, swelling) that indicate a situation beyond routine replacement and requiring immediate escalation rather than continued handling."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Is battery capacity degradation over time a sign of a defect?",
+        "options": [
+          "Yes, any degradation indicates a faulty battery",
+          "No - gradual degradation over charge cycles is normal and expected",
+          "Only LFP batteries degrade"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Gradual capacity loss is a normal, expected characteristic of rechargeable batteries."
+      },
+      {
+        "id": 2,
+        "question": "What pattern of change is more likely to indicate an actual fault versus normal aging?",
+        "options": [
+          "Gradual, consistent decline across metrics",
+          "A sudden change in charging or runtime behavior",
+          "There is no meaningful distinction"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Sudden changes are more indicative of an actual issue than gradual, expected aging."
+      },
+      {
+        "id": 3,
+        "question": "What does the diagnostic interface provide for battery health beyond the operator dashboard?",
+        "options": [
+          "Nothing additional",
+          "Detailed charge cycle history, temperature behavior, and cell-level data where available",
+          "Only the current charge percentage"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The diagnostic interface exposes deeper battery data for technician-level assessment."
+      },
+      {
+        "id": 4,
+        "question": "What should a replacement decision primarily weigh?",
+        "options": [
+          "Only the battery's age in months",
+          "Remaining capacity against the unit's actual operational runtime need",
+          "Replacement should happen on a fixed schedule regardless of condition"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Fitness for actual operational use matters more than comparison to original spec alone."
+      },
+      {
+        "id": 5,
+        "question": "What should prompt immediate escalation rather than routine battery handling?",
+        "options": [
+          "Normal gradual capacity decline",
+          "Signs like physical damage, unusual heat, or swelling",
+          "A battery reaching exactly 50% charge"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Physical damage, unusual heat, or swelling indicate a situation requiring escalation, not routine handling."
+      }
+    ]
+  }
+}

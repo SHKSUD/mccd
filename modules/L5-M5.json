@@ -1,0 +1,143 @@
+{
+  "moduleId": "L5-M5",
+  "title": "Observed Delivery & Certification",
+  "level": "L5",
+  "moduleNumber": 5,
+  "duration": "16 hrs",
+  "nextModule": "DiFacto Master IMR Instructor Certification Complete",
+  "previousModule": "L5-M4",
+  "prerequisite": "L5-M4 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Assessment type (Observed Delivery) directly confirmed per CDD assessment framework table for L5. Capstone module completing the Master Instructor track.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 01",
+      "title": "The Capstone of the Master Instructor Track",
+      "learningObjectives": [
+        "Understand how this module synthesizes the full L5 skill set",
+        "Recognize why observed delivery, not a written test, is the final assessment"
+      ],
+      "content": "Every prior L5 module built toward one outcome: actually delivering training effectively. L5 certification is validated through observed live delivery, not a written exam. That's consistent with this curriculum's broader principle that practical competency requires practical demonstration, not just knowledge recall.",
+      "keyTerms": [
+        {
+          "term": "CDD (Curriculum Design Document)",
+          "note": "The internal document defining this curriculum's structure, design philosophy, and module specifications."
+        },
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 02",
+      "title": "What Observed Delivery Involves",
+      "learningObjectives": [
+        "Understand the general format of an observed delivery assessment",
+        "Recognize what's being evaluated during the observation"
+      ],
+      "content": "An observed delivery assessment means an experienced evaluator - senior faculty, working alongside DiFacto - watches the candidate actually teach a real or representative session. What's being evaluated isn't just technical accuracy, but the pedagogical skills built throughout L5: structuring the session, checking for understanding, giving effective feedback, and managing the training environment."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 03",
+      "title": "Preparing for Observed Delivery",
+      "learningObjectives": [
+        "Understand how to prepare for this assessment format",
+        "Recognize the value of practice delivery before the formal assessment"
+      ],
+      "content": "Preparation benefits from practice delivery - teaching the planned session to colleagues or in a low-stakes setting before the formal observed assessment, applying the feedback principles from L5-M1 to one's own developing instructional technique. Treating the first live delivery as the observed assessment itself, with no prior practice, raises unnecessary risk."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 04",
+      "title": "The Evaluation Rubric",
+      "learningObjectives": [
+        "Understand the general structure of the observed delivery evaluation",
+        "Recognize this as an application of the rubric design principles from L5-M2"
+      ],
+      "content": "Observed delivery is evaluated against defined teaching competencies - a direct application of the rubric design principles covered in L5-M2, ensuring consistent evaluation regardless of which senior faculty member conducts the observation. Specific competency criteria will be confirmed as DiFacto's instructor certification process is finalized."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 05",
+      "title": "Handling an Unsuccessful Observation",
+      "learningObjectives": [
+        "Understand the general process if an observed delivery doesn't meet the certification bar",
+        "Recognize this as a developmental step, consistent with the re-sit policy used throughout the curriculum"
+      ],
+      "content": "Consistent with the re-sit policy applied across other certification levels in this curriculum, an unsuccessful observed delivery isn't a final outcome - it's feedback, using the same principles from L5-M1, on specific areas to develop before a subsequent attempt. This mirrors the curriculum's broader philosophy that certification reflects genuine competency, worth the time to develop properly rather than rushing through."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 06",
+      "title": "Becoming Part of DiFacto's Instructor Network",
+      "learningObjectives": [
+        "Understand what DiFacto Master IMR Instructor certification enables",
+        "Recognize the ongoing role within DiFacto's training ecosystem"
+      ],
+      "content": "Successfully completing observed delivery, alongside the preceding L5 modules, confers DiFacto Master IMR Instructor certification - jointly issued by DiFacto and senior faculty, keeping quality consistent across the instructor network. This certification enables training and certifying other MoRo users independently, making the certified instructor part of DiFacto's scaling mechanism for reaching customers and partners DiFacto's own team can't be present at every site to train directly."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "How is L5 certification validated, per the curriculum's assessment framework?",
+        "options": [
+          "A written exam only",
+          "Observed live delivery, not a written test",
+          "No formal assessment is required"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. L5 certification is confirmed through observed delivery, consistent with practical competency requiring practical demonstration."
+      },
+      {
+        "id": 2,
+        "question": "What does an observed delivery assessment evaluate?",
+        "options": [
+          "Only technical accuracy of content",
+          "Both technical accuracy and pedagogical skills like structuring, understanding checks, and feedback",
+          "Only how long the session lasted"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Observed delivery evaluates the full range of teaching skills built throughout L5."
+      },
+      {
+        "id": 3,
+        "question": "Why is practice delivery recommended before the formal observed assessment?",
+        "options": [
+          "Practice is unnecessary",
+          "It applies feedback principles to one's own technique, reducing risk in the first live delivery",
+          "Practice sessions count as the formal assessment"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Practicing beforehand reduces the risk of treating the formal assessment as the first attempt."
+      },
+      {
+        "id": 4,
+        "question": "What happens if an observed delivery doesn't meet the certification bar?",
+        "options": [
+          "It's a final, unappealable failure with no path forward",
+          "It's treated as developmental feedback, consistent with the re-sit policy used elsewhere in the curriculum",
+          "The candidate is automatically certified anyway"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. An unsuccessful observation is feedback for development, not a final outcome."
+      },
+      {
+        "id": 5,
+        "question": "What does DiFacto Master IMR Instructor certification enable?",
+        "options": [
+          "Nothing beyond personal recognition",
+          "Training and certifying other MoRo users, extending DiFacto's training reach",
+          "Only teaching L1 content"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Certified Master Instructors become part of DiFacto's scaling mechanism for training delivery."
+      }
+    ]
+  }
+}

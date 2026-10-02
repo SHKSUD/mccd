@@ -1,0 +1,143 @@
+{
+  "moduleId": "L5-M1",
+  "title": "Instructor Pedagogy Fundamentals",
+  "level": "L5",
+  "moduleNumber": 1,
+  "duration": "16 hrs",
+  "nextModule": "L5-M2",
+  "previousModule": "L4A or L4B certification",
+  "prerequisite": "L4A or L4B certification complete (senior practitioner status required)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in SOW Bucket 3 'L5 Instructor framework: train-the-trainer outline' and CDD's three-capability structure (pedagogy, infrastructure, quality assurance).",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 01",
+      "title": "From Practitioner to Instructor",
+      "learningObjectives": [
+        "Understand the distinct skill set required to teach, separate from technical competency",
+        "Recognize why L5 requires senior practitioner status as a prerequisite"
+      ],
+      "content": "Being highly skilled at MoRo operation, maintenance, or programming doesn't automatically make someone a good instructor. Teaching is a distinct skill. L5 exists to build that skill deliberately in people who already have deep technical competency - hence the L4A/L4B prerequisite - rather than assuming expertise transfers automatically to teaching ability.",
+      "keyTerms": [
+        {
+          "term": "FANUC",
+          "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
+        },
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 02",
+      "title": "How Adults Learn Technical Skills",
+      "learningObjectives": [
+        "Understand general principles of adult learning relevant to technical training",
+        "Recognize how this differs from how the instructor themselves may have learned"
+      ],
+      "content": "Adult learners generally engage best with material connected to practical relevance. Why does this matter for their actual job? That question matters more than abstract theory for its own sake. This curriculum has consistently used this principle - real-world comparisons, role-specific content. Understanding why that approach works is foundational to teaching it effectively to others, not just following the pattern without understanding it."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 03",
+      "title": "Structuring a Teaching Session",
+      "learningObjectives": [
+        "Understand general principles for structuring an effective training session",
+        "Recognize the balance between instruction and hands-on practice"
+      ],
+      "content": "Effective technical training sessions generally balance explanation with hands-on practice. Learners retain procedural knowledge - how to actually do something - far better through guided practice than through explanation alone. Structuring sessions to include genuine hands-on time, not just a demonstration followed by passive observation, matters significantly for retention."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 04",
+      "title": "Recognizing and Addressing Learner Struggle",
+      "learningObjectives": [
+        "Understand common signs that a learner is struggling with material",
+        "Recognize instructional strategies for addressing this"
+      ],
+      "content": "Learner struggle often shows up as hesitation, repeated questions on the same point, or avoidance of hands-on practice. These are signals worth addressing directly, rather than moving on and hoping understanding catches up. Effective instructors check for understanding actively - asking learners to explain back, not just asking 'any questions?' - rather than assuming silence means comprehension."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 05",
+      "title": "Giving Effective Feedback",
+      "learningObjectives": [
+        "Understand principles of effective feedback during skills training",
+        "Recognize the difference between corrective feedback and discouragement"
+      ],
+      "content": "Effective feedback is specific, pointing to exactly what to adjust rather than vague encouragement or criticism. It's also timely, given close to the action rather than saved for a general summary later. The goal is helping a learner improve their next attempt, not just evaluating their last one. Feedback framed this way tends to be received better and acted on more effectively."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 06",
+      "title": "What This Track Builds Toward",
+      "learningObjectives": [
+        "Understand the progression through the remaining L5 modules",
+        "Recognize the certification this track leads to"
+      ],
+      "content": "This module establishes pedagogical foundation. Subsequent L5 modules build assessment design skill, FANUC co-training capability, lab infrastructure knowledge, and observed delivery practice. Together they culminate in DiFacto Master IMR Instructor certification, which enables training and certifying other MoRo users."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Does strong technical competency automatically make someone a good instructor?",
+        "options": [
+          "Yes, technical skill and teaching skill are the same thing",
+          "No - teaching is a distinct skill that L5 builds deliberately",
+          "Instructor ability has no relationship to technical skill at all"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. L5 deliberately builds teaching skill in already technically competent practitioners."
+      },
+      {
+        "id": 2,
+        "question": "What do adult learners generally engage best with?",
+        "options": [
+          "Abstract theory disconnected from practical application",
+          "Material connected to practical relevance for their actual job",
+          "Adult learners have no particular learning preferences"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Practical relevance tends to drive stronger engagement for adult technical learners."
+      },
+      {
+        "id": 3,
+        "question": "Why does hands-on practice matter in training session structure?",
+        "options": [
+          "It doesn't matter - explanation alone is sufficient",
+          "Learners retain procedural knowledge far better through guided practice than explanation alone",
+          "Hands-on practice should always replace explanation entirely"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A balance of explanation and genuine hands-on practice supports better retention."
+      },
+      {
+        "id": 4,
+        "question": "How should instructors check for learner understanding?",
+        "options": [
+          "Assume silence means full comprehension",
+          "Actively check, such as asking learners to explain back, not just asking if there are questions",
+          "Understanding never needs checking"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Active checking is more reliable than assuming silence indicates comprehension."
+      },
+      {
+        "id": 5,
+        "question": "What makes feedback effective during skills training?",
+        "options": [
+          "Vague encouragement given at the end of the session",
+          "Specific and timely feedback given close to the action",
+          "Feedback should be avoided entirely"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Specific, timely feedback helps learners improve their next attempt."
+      }
+    ]
+  }
+}

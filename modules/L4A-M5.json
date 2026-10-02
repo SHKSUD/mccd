@@ -1,0 +1,139 @@
+{
+  "moduleId": "L4A-M5",
+  "title": "Multi-Robot Cell Design",
+  "level": "L4A",
+  "moduleNumber": 5,
+  "duration": "7 hrs",
+  "nextModule": "L4A-M6",
+  "previousModule": "L4A-M4",
+  "prerequisite": "L4A-M4 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on fleet coordination concepts from L2-M4, applied at cell design level. Grounded in CDD Integration Ecosystem (multi-robot coordination).",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 01",
+      "title": "From Operating a Fleet to Designing a Cell",
+      "learningObjectives": [
+        "Recall multi-robot fleet concepts from L2-M4",
+        "Understand the Systems Engineer's role in designing, rather than just operating, multi-robot cells"
+      ],
+      "content": "L2-M4 taught fleet coordination from an operator's perspective. You learned that collision avoidance, task assignment, and deadlock resolution happen automatically. This module addresses the design side instead: how a Systems Engineer architects a cell containing multiple MoRo units working alongside fixed equipment. The goal is making sure that automatic coordination actually has what it needs to work well.",
+      "keyTerms": [
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 02",
+      "title": "Determining Fleet Size",
+      "learningObjectives": [
+        "Understand general factors influencing how many units a cell requires",
+        "Recognize the trade-offs involved in fleet sizing decisions"
+      ],
+      "content": "Fleet size for a cell depends on three things. Throughput requirements - how much material needs to move, and how quickly. Physical space - more units need more room to operate without excessive congestion. And redundancy needs - whether the cell can tolerate a unit being temporarily out of service. Oversizing wastes capital. Undersizing creates a throughput bottleneck. Getting this right requires modeling actual operational demand, not guessing."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 03",
+      "title": "Spatial Design for Multi-Unit Operation",
+      "learningObjectives": [
+        "Understand spatial design considerations specific to multiple coordinated units",
+        "Recognize how this connects to the zone management covered in L3B-M3"
+      ],
+      "content": "Spatial design for a multi-robot cell builds directly on the zone management principles from L3B-M3. That means identifying where shared paths and reserved routes make sense given the physical layout. It also means ensuring adequate clearance for multiple units operating simultaneously, without creating chronic congestion points."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 04",
+      "title": "Coordinating Multiple Units with Fixed Equipment",
+      "learningObjectives": [
+        "Understand the added complexity when multiple units interact with the same fixed equipment",
+        "Recognize queuing and sequencing considerations"
+      ],
+      "content": "When multiple MoRo units need to interact with the same fixed machine - the same CNC station, for example - the cell design needs to handle queuing. Units need to wait their turn appropriately rather than conflicting. This builds on the handshake integration covered in L3B-M4, now applied where multiple units compete for the same resource."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 05",
+      "title": "Designing for Graceful Degradation",
+      "learningObjectives": [
+        "Understand the principle of graceful degradation in multi-robot cell design",
+        "Recognize why this matters for operational resilience"
+      ],
+      "content": "A well-designed multi-robot cell continues operating at reduced capacity if one unit goes offline for maintenance or a fault. The entire cell's throughput shouldn't collapse just because one unit is down. Designing for this means avoiding single points of failure, where the whole cell's function depends on every unit being simultaneously available."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 06",
+      "title": "Validating a Multi-Robot Cell Design",
+      "learningObjectives": [
+        "Understand how to validate a cell design before full deployment",
+        "Recognize the value of phased rollout for multi-unit deployments"
+      ],
+      "content": "Validating a multi-robot cell design benefits from a phased approach. Start with fewer units than the final target. Confirm coordination behaves as expected. Then scale up incrementally, rather than deploying the full fleet size at once. This mirrors the broader principle of validating incrementally, consistent with testing practices covered throughout this curriculum."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does this module address, building on L2-M4's fleet concepts?",
+        "options": [
+          "Only operator-level fleet monitoring",
+          "The Systems Engineer's role in designing, not just operating, multi-robot cells",
+          "Unrelated single-unit topics"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This module covers the design side of multi-robot cells, building on L2-M4's operational foundation."
+      },
+      {
+        "id": 2,
+        "question": "What factors influence fleet sizing for a cell?",
+        "options": [
+          "Only the cost of each unit",
+          "Throughput requirements, physical space, and redundancy needs",
+          "Fleet size is always fixed at one unit"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Fleet sizing balances throughput demand, space, and redundancy considerations."
+      },
+      {
+        "id": 3,
+        "question": "How does spatial design for multi-robot cells connect to earlier curriculum content?",
+        "options": [
+          "It's unrelated to anything covered before",
+          "It builds directly on zone management principles from L3B-M3",
+          "It only relates to battery charging"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Multi-robot spatial design extends the zone management concepts from L3B-M3."
+      },
+      {
+        "id": 4,
+        "question": "What does 'graceful degradation' mean in cell design?",
+        "options": [
+          "The cell stops entirely if any unit goes offline",
+          "The cell continues operating at reduced capacity if one unit is unavailable",
+          "Equipment physically wears down over time"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Graceful degradation avoids single points of failure that would collapse the whole cell's function."
+      },
+      {
+        "id": 5,
+        "question": "What's a recommended approach to validating a new multi-robot cell design?",
+        "options": [
+          "Deploy the full target fleet size immediately",
+          "Start with fewer units, confirm coordination works, then scale up incrementally",
+          "Validation isn't necessary for multi-robot cells"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Phased, incremental validation reduces risk compared to full deployment at once."
+      }
+    ]
+  }
+}

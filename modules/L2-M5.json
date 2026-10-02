@@ -1,0 +1,139 @@
+{
+  "moduleId": "L2-M5",
+  "title": "Troubleshooting & Error Codes",
+  "level": "L2",
+  "moduleNumber": 5,
+  "duration": "2 hrs",
+  "nextModule": "L2-M6",
+  "previousModule": "L2-M4",
+  "prerequisite": "L2-M4 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Specific error code reference table pending SME/engineering input - no existing source found.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 5 - Section 01",
+      "title": "Why Troubleshooting Matters at This Level",
+      "learningObjectives": [
+        "Understand the scope of operator-level troubleshooting",
+        "Recognize the boundary between operator response and technician diagnosis"
+      ],
+      "content": "This module covers recognizing and responding to common issues, not fixing them. Deep diagnostic work belongs to L3A (Technician level) - your job at L2 is to recognize when something's wrong, categorize it well enough to communicate clearly, and know when to escalate rather than attempt a fix.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 5 - Section 02",
+      "title": "A Structured Approach to Diagnosis",
+      "learningObjectives": [
+        "Understand a basic diagnostic workflow appropriate for operator level",
+        "Know what information to gather before escalating"
+      ],
+      "content": "When something goes wrong, a simple structured approach helps: what was MoRo doing right before the issue appeared, what does its current status show, and has anything changed in the environment (new obstruction, relocated equipment)? Gathering these details before escalating makes the technician's diagnosis faster once it's handed off."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 5 - Section 03",
+      "title": "Sensor-Related Issues",
+      "learningObjectives": [
+        "Recognize general symptoms of a sensor-related issue",
+        "Understand the appropriate operator response"
+      ],
+      "content": "Sensor issues (LiDAR obstruction, unexpected stops in areas that should be clear) often present as MoRo behaving overly cautious or stopping where it shouldn't need to. Check for obvious causes first - something physically blocking a sensor - but don't attempt sensor cleaning or adjustment yourself unless specifically trained and authorized to do so; escalate instead."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 5 - Section 04",
+      "title": "Communication Errors",
+      "learningObjectives": [
+        "Recognize general symptoms of a connectivity-related issue",
+        "Understand the appropriate operator response"
+      ],
+      "content": "MoRo depends on network connectivity to communicate with the fleet system and ANT server. A unit that becomes unresponsive on the dashboard, or that stops accepting new mission assignments, may indicate a connectivity issue rather than a hardware fault. Note when this started and escalate - connectivity troubleshooting generally falls outside operator-level response."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 5 - Section 05",
+      "title": "Mission Failures Revisited",
+      "learningObjectives": [
+        "Recall the categories of mission failure introduced in L2-M1",
+        "Apply the structured diagnostic approach to mission failures specifically"
+      ],
+      "content": "L2-M1 introduced the basic response to a failed mission: note, assess safety, escalate. Applying this module's structured approach, a mission failure diagnosis benefits from noting whether it failed at the start, mid-route, or at the destination - that detail alone significantly narrows down likely causes for whoever picks up the diagnosis."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 5 - Section 06",
+      "title": "When to Escalate",
+      "learningObjectives": [
+        "Understand the general threshold for escalation versus self-resolution",
+        "Know what information to include when escalating"
+      ],
+      "content": "As a general rule: if an issue resolves on its own within a normal operational pattern (a brief pause that clears, a single retry that succeeds), no escalation is needed. If it recurs, persists, or falls outside anything covered in this curriculum, escalate with what you observed - timing, symptoms, anything unusual in the environment. A specific error code reference table is being developed with DiFacto's engineering team and will be added to this module once available."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the scope of troubleshooting covered at the L2 level?",
+        "options": [
+          "Full technical diagnosis and repair",
+          "Recognizing and responding to issues, not fixing them",
+          "Only software-related issues"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Deep diagnosis belongs to L3A; L2 focuses on recognition and appropriate response."
+      },
+      {
+        "id": 2,
+        "question": "What information is useful to gather before escalating an issue?",
+        "options": [
+          "Nothing - just escalate immediately with no details",
+          "What MoRo was doing, its current status, and any environmental changes",
+          "Only the time of day"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This context speeds up the technician's eventual diagnosis."
+      },
+      {
+        "id": 3,
+        "question": "What might cause MoRo to stop in an area that should be clear?",
+        "options": [
+          "Random malfunction with no possible cause",
+          "A possible sensor obstruction worth checking for obvious causes",
+          "Always a software bug"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Checking for an obvious sensor obstruction is a reasonable first step, though not fixing it yourself."
+      },
+      {
+        "id": 4,
+        "question": "If MoRo becomes unresponsive on the dashboard, what might this indicate?",
+        "options": [
+          "A connectivity issue rather than necessarily a hardware fault",
+          "The unit is definitely destroyed",
+          "Nothing - it's always normal"
+        ],
+        "correctAnswer": 0,
+        "feedback": "Correct. Dashboard unresponsiveness often points to connectivity rather than hardware failure."
+      },
+      {
+        "id": 5,
+        "question": "What detail about a mission failure is useful to note for diagnosis?",
+        "options": [
+          "Nothing specific needed",
+          "Whether it failed at the start, mid-route, or at the destination",
+          "The color of the robot"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Where in the mission it failed significantly narrows down likely causes."
+      }
+    ]
+  }
+}

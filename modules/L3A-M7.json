@@ -1,0 +1,139 @@
+{
+  "moduleId": "L3A-M7",
+  "title": "Maintenance Simulation & Field Drill",
+  "level": "L3A",
+  "moduleNumber": 7,
+  "duration": "6 hrs",
+  "nextModule": "L3A Certification Assessment",
+  "previousModule": "L3A-M6",
+  "prerequisite": "L3A-M6 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). This is the capstone module for L3A - a new module per CDD (does not exist in DiFacto's original slide deck), designed as performance-under-time-pressure assessment, the Technician-track equivalent of ITA's 'Applied' certification tier. Lab/drill logistics pending DiFacto facility confirmation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 01",
+      "title": "Why This Module Exists",
+      "learningObjectives": [
+        "Understand the purpose of a timed field drill as a capstone assessment",
+        "Recognize the difference between knowing procedures and performing them under pressure"
+      ],
+      "content": "Modules 1 through 6 built the knowledge base - diagnostic methodology, maintenance procedures, battery health, root cause analysis. This module tests whether that knowledge holds up under realistic conditions: time pressure, an unfamiliar fault presentation, and the expectation of working independently. This is what distinguishes a certified Technician from someone who has only studied the material.",
+      "keyTerms": [
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 02",
+      "title": "Drill Structure",
+      "learningObjectives": [
+        "Understand the general format of the field drill",
+        "Know what's being assessed beyond the final fix"
+      ],
+      "content": "The drill presents a realistic fault scenario on an actual or simulated MoRo unit, with a defined time window to diagnose and resolve it. Assessment isn't limited to whether the fix is correct - the approach matters too: did you follow structured diagnostic methodology (from L3A-M5), did you document appropriately, did you make the correct call on whether the issue was within field-serviceable scope or required escalation. Exact drill scenarios and facility requirements are being finalized with DiFacto's operations team."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 03",
+      "title": "Working Under Time Pressure",
+      "learningObjectives": [
+        "Understand how time pressure affects diagnostic work",
+        "Know strategies for maintaining structured methodology under a deadline"
+      ],
+      "content": "Time pressure tends to push people toward guessing rather than systematic diagnosis - jumping to a likely-looking cause instead of confirming the category first. The discipline this drill reinforces: even under a clock, start broad and narrow systematically. A fast wrong diagnosis costs more time than a methodical correct one, since a wrong fix often means starting over."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 04",
+      "title": "Working Independently",
+      "learningObjectives": [
+        "Understand the shift from guided learning to independent performance",
+        "Recognize when independent judgment calls for escalation versus continued attempt"
+      ],
+      "content": "Unlike earlier modules, this drill is performed without step-by-step guidance - reflecting what actual field conditions require. Part of what's being assessed is judgment: knowing when to keep working a diagnosis versus recognizing it's outside field-serviceable scope and should be escalated, per the criteria covered in L3A-M5."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 05",
+      "title": "Safety Under Pressure",
+      "learningObjectives": [
+        "Understand that safety protocols don't relax under time pressure",
+        "Recognize this as part of the assessment criteria, not a separate concern"
+      ],
+      "content": "Time pressure is never a justification for skipping safety procedures - lockout/tagout before physical maintenance work, proper E-stop usage during testing, careful handling around powered systems. This is assessed as part of the drill, not treated separately: a technically correct fix achieved by bypassing safety procedure does not pass."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A \u00b7 Module 7 \u00b7 Section 06",
+      "title": "Completing L3A Certification",
+      "learningObjectives": [
+        "Understand how this module completes the L3A certification requirement",
+        "Recognize what DiFacto Certified IMR Technician status represents"
+      ],
+      "content": "Successfully completing this drill, alongside the written and practical components of Modules 1 through 6, completes the requirements for DiFacto Certified IMR Technician status. This certification represents verified competency, not just completed coursework - the field drill exists specifically to make that distinction real."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What does this module primarily assess, beyond whether the final fix is correct?",
+        "options": [
+          "Nothing else matters besides the final fix",
+          "Whether structured methodology, documentation, and escalation judgment were applied",
+          "How fast the technician can work regardless of approach"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Approach and judgment are assessed alongside the outcome, not just the final result."
+      },
+      {
+        "id": 2,
+        "question": "How does time pressure typically affect diagnostic work if not managed deliberately?",
+        "options": [
+          "It has no effect on diagnostic approach",
+          "It tends to push toward guessing rather than systematic diagnosis",
+          "It always improves diagnostic accuracy"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Time pressure can push toward shortcuts; maintaining structured methodology under pressure is the skill being tested."
+      },
+      {
+        "id": 3,
+        "question": "Is this drill performed with step-by-step guidance?",
+        "options": [
+          "Yes, guidance is provided throughout",
+          "No - it's performed independently, reflecting real field conditions",
+          "Only the first attempt is unguided"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Independent performance is central to what this module assesses."
+      },
+      {
+        "id": 4,
+        "question": "Does time pressure justify skipping safety procedures during the drill?",
+        "options": [
+          "Yes, if it saves significant time",
+          "No - safety procedures are assessed as part of the drill, not relaxed under pressure",
+          "Only lockout/tagout can be skipped"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A technically correct fix that bypasses safety procedure does not pass."
+      },
+      {
+        "id": 5,
+        "question": "What does completing this module alongside Modules 1-6 achieve?",
+        "options": [
+          "Nothing formal - it's an optional exercise",
+          "Completion of the requirements for DiFacto Certified IMR Technician status",
+          "Automatic promotion to L4A"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. This drill is the capstone requirement completing L3A Technician certification."
+      }
+    ]
+  }
+}

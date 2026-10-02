@@ -1,0 +1,157 @@
+{
+  "moduleId": "L3A-M5",
+  "title": "Diagnostic Procedures",
+  "level": "L3A",
+  "moduleNumber": 5,
+  "duration": "6 hrs",
+  "nextModule": "L3A-M6",
+  "previousModule": "L3A-M4",
+  "prerequisite": "L3A-M4 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). This module's topics were corrected per CDD gap analysis - the original DiFacto source material had Module 5 topics duplicated from Module 3; content here is written fresh, around the corrected topic area: diagnostic tool interface, fault code tree, root cause methodology, escalation decision. Diagnostic tool interface specifics pending SME confirmation.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 01",
+      "title": "From Operator Awareness to Technician Diagnosis",
+      "learningObjectives": [
+        "Understand the shift in diagnostic responsibility from L2 to L3A",
+        "Recognize this module's role in the Technician track"
+      ],
+      "content": "L2 operators are trained to recognize an issue and escalate it, not diagnose it. As a Technician, that boundary moves - you're now the person issues get escalated to. This module covers the diagnostic tool interface, how fault information is structured, and the methodology for moving from a symptom to a root cause.",
+      "keyTerms": [
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 02",
+      "title": "The Diagnostic Tool Interface",
+      "learningObjectives": [
+        "Understand the general purpose of the diagnostic interface, distinct from the operator-level ANT dashboard",
+        "Know what kind of information the diagnostic view exposes"
+      ],
+      "content": "Where the operator-level ANT dashboard (covered in L1-M3) shows status and mission information, the diagnostic interface exposes deeper system state - sensor readings, subsystem health, and fault history - intended for technician-level troubleshooting rather than daily operation. The exact layout and navigation of this interface will be confirmed against DiFacto's technician documentation and added here once verified.",
+      "keyTerms": [
+        {
+          "term": "diagnostic interface",
+          "note": "A technician-level view exposing deeper system state (sensor readings, subsystem health, fault history) beyond what the operator-level dashboard shows."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 03",
+      "title": "Reading a Fault Code Tree",
+      "learningObjectives": [
+        "Understand the general structure of a fault code hierarchy",
+        "Know how to navigate from a general fault category to a specific cause"
+      ],
+      "content": "Fault codes are typically organized hierarchically - a broad category (navigation, power, communication, mechanical) narrowing down to a specific code identifying the precise issue. Working a fault code tree means starting broad and narrowing systematically, rather than guessing at a specific cause before confirming the general category. The specific fault code reference for MoRo will be confirmed with DiFacto engineering and added to this module once available.",
+      "keyTerms": [
+        {
+          "term": "fault code tree",
+          "note": "A hierarchical structure organizing fault codes from broad category down to specific identified cause."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 04",
+      "title": "Root Cause Methodology",
+      "learningObjectives": [
+        "Understand the difference between a symptom and a root cause",
+        "Apply a structured approach to isolating root cause"
+      ],
+      "content": "A symptom (MoRo stops repeatedly in one area) and a root cause (a specific sensor degrading, a map inconsistency, a mechanical issue) aren't the same thing - treating the symptom without identifying the cause means the issue recurs. Structured root cause work means ruling out categories systematically: confirm the symptom is reproducible, isolate which subsystem is implicated, then narrow within that subsystem using the fault code tree and diagnostic interface together.",
+      "keyTerms": [
+        {
+          "term": "root cause",
+          "note": "The underlying issue producing an observed symptom, as distinct from the symptom itself."
+        }
+      ]
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 05",
+      "title": "Documenting a Diagnosis",
+      "learningObjectives": [
+        "Understand why diagnostic documentation matters beyond the immediate fix",
+        "Know what information a complete diagnostic record includes"
+      ],
+      "content": "A diagnosis isn't complete until it's documented - the symptom observed, the diagnostic steps taken, the root cause identified, and the resolution applied. This record matters beyond the individual repair: it builds a pattern history that helps identify recurring issues across units, and it's what makes escalation to DiFacto's engineering team (when needed) efficient rather than starting from scratch."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 06",
+      "title": "The Escalation Decision",
+      "learningObjectives": [
+        "Know the criteria for escalating beyond technician-level repair",
+        "Understand that escalation is a normal part of the diagnostic process, not a failure"
+      ],
+      "content": "Not every diagnosis resolves at the technician level. Escalation to DiFacto engineering is appropriate when a fault code indicates a hardware issue beyond field-serviceable scope, when a root cause can't be confidently isolated after structured diagnosis, or when a pattern suggests a design or manufacturing issue rather than a unit-specific fault. Escalating appropriately, with complete documentation, is a sign of good diagnostic judgment, not a gap in skill."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "How does the diagnostic interface differ from the operator-level ANT dashboard?",
+        "options": [
+          "There is no difference",
+          "It exposes deeper system state (sensor readings, subsystem health, fault history) for technician-level work",
+          "It only shows the time and date"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The diagnostic interface is a technician-level view, distinct from the operator-level dashboard."
+      },
+      {
+        "id": 2,
+        "question": "How should a fault code tree generally be navigated?",
+        "options": [
+          "Guess at a specific code first, then check the category",
+          "Start with the broad category and narrow systematically to the specific cause",
+          "Fault codes aren't organized hierarchically"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Fault code trees are navigated from broad category to specific cause, not the reverse."
+      },
+      {
+        "id": 3,
+        "question": "What is the difference between a symptom and a root cause?",
+        "options": [
+          "They are the same thing",
+          "A symptom is the observed effect; a root cause is the underlying issue producing it",
+          "A root cause only applies to software issues"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Treating a symptom without finding the root cause means the issue tends to recur."
+      },
+      {
+        "id": 4,
+        "question": "Why does diagnostic documentation matter beyond the immediate repair?",
+        "options": [
+          "It doesn't matter once the issue is fixed",
+          "It builds pattern history and makes future escalation more efficient",
+          "It's only required for warranty claims"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Documentation supports pattern recognition across units and efficient escalation."
+      },
+      {
+        "id": 5,
+        "question": "Is escalating a diagnosis to DiFacto engineering a sign of inadequate technician skill?",
+        "options": [
+          "Yes, a skilled technician should never need to escalate",
+          "No - appropriate escalation with complete documentation reflects good diagnostic judgment",
+          "Only if it happens more than once"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Escalation is a normal, appropriate part of the diagnostic process in the right circumstances."
+      }
+    ]
+  }
+}

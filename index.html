@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoRo IMR Training Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #0A1D44;
+            --orange: #D4651A;
+            --white: #FFFFFF;
+            --cream: #FAFAF8;
+            --dark: #1A1A1A;
+            --text: #3F3F3F;
+            --muted: #777777;
+            --divider: #E8E4DE;
+            --hover: rgba(212,101,26,0.05);
+            --transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--divider);
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 20px; }
+
+        .learner-name-box input {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            padding: 7px 12px;
+            border: 1px solid var(--line, #DCD8D0);
+            border-radius: 4px;
+            background: #FAF9F6;
+            color: var(--text, #1A1A1A);
+            width: 150px;
+            transition: border-color 0.15s ease, width 0.15s ease;
+        }
+
+        .learner-name-box input::placeholder {
+            color: var(--muted, #8A8478);
+        }
+
+        .learner-name-box input:focus {
+            outline: none;
+            border-color: var(--orange, #D4651A);
+            width: 180px;
+            background: #FFFFFF;
+        }
+
+        .separator {
+            width: 1px;
+            height: 20px;
+            background: var(--divider);
+        }
+
+        .course-name { font-size: 14px; font-weight: 500; color: var(--text); }
+        .course-level { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+        .header-right { display: flex; align-items: center; gap: 24px; }
+
+        .progress-wrap { text-align: right; }
+        .progress-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); margin-bottom: 6px; }
+        .progress-bar { width: 140px; height: 2px; background: var(--divider); border-radius: 1px; }
+        .progress-fill { height: 100%; background: var(--orange); transition: var(--transition); }
+
+        /* ── LAYOUT ── */
+        .layout { display: flex; min-height: calc(100vh - 65px); }
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            width: 256px;
+            background: var(--white);
+            border-right: 1px solid var(--divider);
+            padding: 32px 0;
+            position: sticky;
+            top: 65px;
+            height: calc(100vh - 65px);
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .sidebar-module { padding: 0 20px; margin-bottom: 32px; }
+
+        .module-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-left: 12px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2px solid transparent;
+            margin-bottom: 2px;
+        }
+
+        .nav-item:hover { background: var(--hover); color: var(--dark); }
+
+        .nav-item.active {
+            background: var(--hover);
+            border-left-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .nav-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--muted);
+            width: 16px;
+            flex-shrink: 0;
+            font-family: 'Merriweather', serif;
+        }
+
+        .nav-item.active .nav-num { color: var(--orange); }
+
+        .nav-text { font-size: 13px; font-weight: 500; color: var(--text); }
+        .nav-item.active .nav-text { color: var(--orange); }
+        .nav-item:hover .nav-text { color: var(--dark); }
+
+        .module-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .status-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--muted);
+            flex-shrink: 0;
+        }
+        .status-dot.active { background: var(--orange); animation: pulse 2s infinite; }
+        .status-dot.done { background: #2E7D32; }
+
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* ── MAIN ── */
+        .main {
+            flex: 1;
+            padding: 56px 64px;
+            max-width: 780px;
+        }
+
+        /* ── SECTION VIEWS ── */
+        .view { display: none; animation: fadeIn 0.3s ease; }
+        .view.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ── SECTION HEADING ── */
+        .section-eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.25;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .section-meta {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        /* ── BODY COPY ── */
+        .body-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .body-text strong { font-weight: 600; color: var(--navy); }
+        .body-text em { font-style: italic; color: var(--muted); }
+
+        /* ── HEADINGS ── */
+        .h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        .h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-top: 28px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── LISTS ── */
+        .content-list { list-style: none; margin: 0 0 24px 0; }
+        .content-list li {
+            font-size: 15px;
+            color: var(--text);
+            padding: 10px 0 10px 24px;
+            border-bottom: 1px solid var(--divider);
+            position: relative;
+            line-height: 1.7;
+        }
+        .content-list li:last-child { border-bottom: none; }
+        .content-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-size: 14px;
+        }
+
+        /* ── INSIGHT BOX ── */
+        .insight {
+            background: var(--white);
+            border: 1px solid var(--divider);
+            border-left: 3px solid var(--orange);
+            border-radius: 0 4px 4px 0;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .insight-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+        .insight p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .insight p:last-child { margin-bottom: 0; }
+        .insight strong { color: var(--navy); font-weight: 600; }
+
+        /* ── PULL QUOTE ── */
+        .pull-quote {
+            font-family: 'Merriweather', serif;
+            font-size: 17px;
+            font-style: italic;
+            color: var(--navy);
+            line-height: 1.65;
+            border-left: 2px solid var(--orange);
+            padding-left: 24px;
+            margin: 36px 0;
+            opacity: 0.85;
+        }
+
+        /* ── TABLE ── */
+        .table-wrap { margin: 28px 0; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: var(--navy); color: var(--white); padding: 14px 16px; text-align: left; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+        td { padding: 13px 16px; border-bottom: 1px solid var(--divider); color: var(--text); font-size: 14px; line-height: 1.5; }
+        tbody tr:hover { background: var(--hover); }
+
+        /* ── ASSESSMENT ── */
+        .assessment-intro {
+            background: var(--white);
+            border: 1px solid var(--divider);
+            border-radius: 4px;
+            padding: 28px;
+            margin-bottom: 36px;
+        }
+
+        .question-block {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+        .question-block:last-of-type { border-bottom: none; }
+
+        .question-num {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-family: 'Merriweather', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .options-list { list-style: none; }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 6px;
+        }
+        .option:hover { background: var(--hover); }
+
+        .option input[type="radio"] {
+            margin-top: 3px;
+            cursor: pointer;
+            accent-color: var(--orange);
+            width: 16px; height: 16px;
+            flex-shrink: 0;
+        }
+
+        .option-text { font-size: 14px; line-height: 1.6; color: var(--text); }
+
+        .feedback {
+            font-size: 13px;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid;
+            margin-top: 12px;
+            display: none;
+        }
+        .feedback.show { display: block; }
+        .feedback.correct { background: rgba(46,125,50,0.08); color: #2E7D32; border-left-color: #2E7D32; }
+        .feedback.incorrect { background: rgba(215,43,43,0.08); color: #D72B2B; border-left-color: #D72B2B; }
+
+        /* ── SCORE ── */
+        .score-card {
+            background: var(--white);
+            border: 1px solid var(--divider);
+            border-radius: 4px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 40px;
+            display: none;
+        }
+        .score-card.show { display: block; animation: fadeIn 0.4s ease; }
+
+        .score-num {
+            font-family: 'Merriweather', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .score-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+
+        .score-badge {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .score-badge.pass { background: rgba(46,125,50,0.1); color: #2E7D32; }
+        .score-badge.fail { background: rgba(215,43,43,0.1); color: #D72B2B; }
+
+        /* ── BUTTONS ── */
+        .btn-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid var(--divider);
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid;
+        }
+
+        .btn-primary { background: var(--orange); color: var(--white); border-color: var(--orange); }
+        .btn-primary:hover { background: #BE5810; border-color: #BE5810; box-shadow: 0 6px 16px rgba(212,101,26,0.2); }
+
+        .btn-secondary { background: var(--white); color: var(--navy); border-color: var(--divider); }
+        .btn-secondary:hover { border-color: var(--navy); }
+
+        .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn:disabled:hover { transform: none; box-shadow: none; }
+
+        /* ── FOOTER ── */
+        .section-footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--divider);
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* ── DRAFT BANNER ── */
+        .draft-banner {
+            background: rgba(212,101,26,0.08);
+            border: 1px solid rgba(212,101,26,0.2);
+            border-radius: 4px;
+            padding: 12px 16px;
+            font-size: 12px;
+            color: var(--orange);
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── HOME VIEW ── */
+        #homeView { padding: 56px 64px; max-width: 1100px; }
+
+        .home-eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .home-title {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .home-subtitle {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 56px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--divider);
+            max-width: 600px;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .level-card {
+            background: var(--white);
+            border: 1px solid var(--divider);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .level-card-header {
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .level-badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--navy);
+            padding: 4px 10px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .level-name {
+            font-family: 'Merriweather', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .level-desc {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .module-list { padding: 8px 0; }
+
+        .module-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2px solid transparent;
+            text-decoration: none;
+        }
+
+        .module-link:hover {
+            background: var(--hover);
+            border-left-color: var(--orange);
+        }
+
+        .module-link-pending {
+            cursor: default;
+            opacity: 0.45;
+        }
+
+        .module-link-pending:hover {
+            background: none;
+            border-left-color: transparent;
+        }
+
+        .module-link-pending .module-link-title {
+            font-style: italic;
+        }
+
+        .module-link-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--muted);
+            font-family: 'Merriweather', serif;
+            width: 18px;
+            flex-shrink: 0;
+        }
+
+        .module-link-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .module-link:hover .module-link-title { color: var(--orange); }
+        .module-link:hover .module-link-num { color: var(--orange); }
+
+        /* ── LOADING STATE ── */
+        .loading-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            gap: 12px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .loading-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--orange);
+            animation: pulse 1.2s infinite;
+        }
+        .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+        .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .layout { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: static; padding: 20px; }
+            .main { padding: 32px 24px; }
+            .section-title { font-size: 26px; }
+            #homeView { padding: 32px 24px; }
+            .home-title { font-size: 28px; }
+        }
+
+        @media (max-width: 480px) {
+            .header { flex-wrap: wrap; gap: 12px; padding: 16px; }
+            .main { padding: 24px 16px; }
+            .btn-row { flex-direction: column; gap: 12px; }
+            .score-num { font-size: 48px; }
+            #homeView { padding: 24px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+        <img src="./Difactoreallogo.jpg" alt="DiFacto Logo" style="width: 100px; height: auto;">
+        <div class="separator"></div>
+        <div>
+            <div class="course-name">MoRo IMR Training Academy</div>
+            <div class="course-level" id="headerLevel">Level 1 — Awareness Training</div>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="learner-name-box" id="learnerNameBox">
+            <input type="text" id="learnerNameInput" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)">
+        </div>
+        <div class="progress-wrap" id="progressWrap" style="display:none">
+            <div class="progress-label">Module Progress</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width:0%"></div>
+            </div>
+        </div>
+        <button class="btn btn-secondary" id="homeBtn" onclick="goHome()" style="display:none; padding:8px 16px; font-size:12px;">
+            &#8592; All Modules
+        </button>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- HOME VIEW                                      -->
+<!-- ═══════════════════════════════════════════════ -->
+<div id="homeView">
+    <div class="home-eyebrow">MoRo IMR Training Academy</div>
+    <div class="home-title">Select a Module to Begin</div>
+    <p class="home-subtitle">Seven learning levels covering awareness, operations, fleet management, integration, supervision, and technical certification.</p>
+
+    <div class="levels-grid" id="levelsGrid">
+        <!-- Populated by JS -->
+    </div>
+
+    <div class="section-footer" style="margin-top:48px;">
+        <p>MoRo IMR Training Academy &copy; 2026 DiFacto Robotics &amp; Automation</p>
+        <p>Designed to meet Industry Training Academy (ITA) standards. Safety content aligned with ISO 13849-1.</p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- MODULE VIEW                                    -->
+<!-- ═══════════════════════════════════════════════ -->
+<div id="moduleView" style="display:none;">
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-module">
+                <div class="module-label" id="sidebarModuleLabel">Loading...</div>
+                <div id="sidebarNav"></div>
+                <div class="module-status">
+                    <div class="status-dot active" id="statusDot"></div>
+                    <span id="statusLabel">In Progress</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN -->
+        <div class="main" id="mainContent">
+            <div class="loading-wrap">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <span>Loading module...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// CURRICULUM MAP
+// ═══════════════════════════════════════════════════
+// Source of truth: Curriculum_Structure_Source_of_Truth.xlsx (per CDD & SOW)
+const LEVELS = [
+    { id: 'L1',  name: 'IMR Awareness',                        desc: 'Foundation knowledge for any factory floor personnel.',              color: '#0A1D44' },
+    { id: 'L2',  name: 'IMR Operator Certification',            desc: 'Hands-on operation and daily management of MoRo units.',             color: '#1A5276' },
+    { id: 'L3A', name: 'Technician',                            desc: 'Maintenance, diagnostics and field repair for MoRo units.',           color: '#1A7A4A' },
+    { id: 'L3B', name: 'Programmer',                            desc: 'Mission programming, mapping and site commissioning.',                color: '#7D6608' },
+    { id: 'L4A', name: 'Systems Engineer',                      desc: 'PLC, OPC-UA, MES integration and multi-robot cell design.',           color: '#922B21' },
+    { id: 'L4B', name: 'Advanced Programming',                  desc: 'Full CNC/PLC/IMR integrated workflows; capstone project.',            color: '#76448A' },
+    { id: 'L5',  name: 'Master Instructor / Train-the-Trainer', desc: 'Certifying DiFacto and partner staff to train other MoRo users.',     color: '#17202A' }
+];
+
+// title: null  ->  module slot confirmed to exist (per CDD) but exact title not yet sourced.
+// Rendered as "Coming Soon" — never filled with an invented/guessed title.
+const MODULE_TITLES = {
+    'L1':  [
+        'What is MoRo?',
+        'How Does MoRo Navigate?',
+        'Control Interfaces & Operations',
+        'Safety Protocols & E-Stop',
+        'Teamwork & Coexistence'
+    ],
+    'L2':  [
+        'Missions & Task Programming',
+        'Payload Handling & Coordination',
+        'Battery Management & Charging',
+        'Fleet Management (Multi-Robot)',
+        'Troubleshooting & Error Codes',
+        'Advanced Missions & Optimization'
+    ],
+    'L3A': [
+        'Technician Role & Maintenance Fundamentals',
+        'Preventive Maintenance Procedures',
+        'Predictive Maintenance & Inspection Checklists',
+        'Battery Health Diagnostics & Replacement',
+        'Diagnostic Procedures',
+        'Troubleshooting Decision Trees',
+        'Maintenance Simulation & Field Drill'
+    ],
+    'L3B': [
+        'Mission Programming Fundamentals',
+        'Map Building & SLAM Configuration',
+        'Zone & Traffic Management',
+        'FANUC I/O Handshake Integration',
+        'API & Custom Integration',
+        'Commissioning a New Site'
+    ],
+    'L4A': [
+        'System Architecture Fundamentals',
+        'MES/WMS API Integration',
+        'OPC-UA & SCADA Connectivity',
+        'Safety PLC Design (EN ISO 13849)',
+        'Multi-Robot Cell Design',
+        'System Architecture & Scalability'
+    ],
+    'L4B': [
+        'CNC Machine Tending Integration',
+        'PLC Integration for Advanced Workflows',
+        'Lift & Rotate Complex Configurations',
+        'Advanced Fleet Optimization',
+        'Capstone Project (Peer Reviewed)'
+    ],
+    'L5': [
+        'Instructor Pedagogy Fundamentals',
+        'Assessment & Evaluation Design',
+        'FANUC Co-Training Module',
+        'Lab Infrastructure & Setup',
+        'Observed Delivery & Certification'
+    ]
+};
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let currentModule = null;
+let currentSectionIndex = 0;
+let quizAnswers = {};
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+function init() {
+    initLearnerNameBox();
+    buildHomeView();
+    const params = new URLSearchParams(window.location.search);
+    const mid = params.get('module');
+    if (mid) {
+        loadModule(mid);
+    } else {
+        showHome();
+    }
+}
+
+// ═══════════════════════════════════════════════════
+// HOME VIEW
+// ═══════════════════════════════════════════════════
+function buildHomeView() {
+    const grid = document.getElementById('levelsGrid');
+    grid.innerHTML = '';
+
+    LEVELS.forEach(level => {
+        const titles = MODULE_TITLES[level.id];
+        const moduleLinksHTML = titles.map((title, i) => {
+            const mid = `${level.id}-M${i + 1}`;
+            if (title === null) {
+                return `
+                    <div class="module-link module-link-pending" aria-disabled="true">
+                        <span class="module-link-num">${String(i + 1).padStart(2, '0')}</span>
+                        <span class="module-link-title">Coming Soon</span>
+                    </div>`;
+            }
+            return `
+                <div class="module-link" onclick="loadModule('${mid}')">
+                    <span class="module-link-num">${String(i + 1).padStart(2, '0')}</span>
+                    <span class="module-link-title">${title}</span>
+                </div>`;
+        }).join('');
+
+        grid.innerHTML += `
+            <div class="level-card">
+                <div class="level-card-header">
+                    <div class="level-badge" style="background:${level.color}">${level.id}</div>
+                    <div class="level-name">${level.name}</div>
+                    <div class="level-desc">${level.desc}</div>
+                </div>
+                <div class="module-list">${moduleLinksHTML}</div>
+            </div>`;
+    });
+}
+
+function showHome() {
+    document.getElementById('homeView').style.display = 'block';
+    document.getElementById('moduleView').style.display = 'none';
+    document.getElementById('progressWrap').style.display = 'none';
+    document.getElementById('homeBtn').style.display = 'none';
+    document.getElementById('headerLevel').textContent = 'Level 1 — Awareness Training';
+    history.pushState({}, '', window.location.pathname);
+}
+
+function goHome() {
+    showHome();
+}
+
+// ═══════════════════════════════════════════════════
+// MODULE LOADER
+// ═══════════════════════════════════════════════════
+async function loadModule(moduleId) {
+    document.getElementById('homeView').style.display = 'none';
+    document.getElementById('moduleView').style.display = 'block';
+    document.getElementById('progressWrap').style.display = 'block';
+    document.getElementById('homeBtn').style.display = 'block';
+
+    // Show loading
+    document.getElementById('mainContent').innerHTML = `
+        <div class="loading-wrap">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <span>Loading module...</span>
+        </div>`;
+    document.getElementById('sidebarNav').innerHTML = '';
+    document.getElementById('sidebarModuleLabel').textContent = 'Loading...';
+
+    // Update URL
+    history.pushState({}, '', `?module=${moduleId}`);
+
+    try {
+        const response = await fetch(`./modules/${moduleId}.json`);
+        if (!response.ok) throw new Error(`Module not found: ${moduleId}`);
+        const data = await response.json();
+        currentModule = data;
+        currentSectionIndex = 0;
+        quizAnswers = {};
+        renderModule(data);
+    } catch (err) {
+        document.getElementById('mainContent').innerHTML = `
+            <div class="section-eyebrow">Error</div>
+            <div class="section-title">Module Not Found</div>
+            <p class="body-text">Could not load <strong>${moduleId}</strong>. Please check the module ID or try again.</p>
+            <p class="body-text" style="color:var(--muted); font-size:13px;">${err.message}</p>
+            <div class="btn-row">
+                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to All Modules</button>
+            </div>`;
+    }
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER MODULE
+// ═══════════════════════════════════════════════════
+function renderModule(data) {
+    const level = LEVELS.find(l => l.id === data.level) || {};
+
+    // Header
+    document.getElementById('headerLevel').textContent = `${data.level} — ${data.levelName || level.name || ''}`;
+
+    // Sidebar
+    document.getElementById('sidebarModuleLabel').textContent = `${data.level} — ${data.title}`;
+    const sidebarSections = data.sections.map((sec, i) => `
+        <div class="nav-item${i === 0 ? ' active' : ''}" id="nav-${i}" onclick="goSection(${i})">
+            <div class="nav-num">${String(i + 1).padStart(2, '0')}</div>
+            <div class="nav-text">${sec.title}</div>
+        </div>`).join('');
+    const quizNavItem = `
+        <div class="nav-item" id="nav-quiz" onclick="goSection('quiz')">
+            <div class="nav-num">${String(data.sections.length + 1).padStart(2, '0')}</div>
+            <div class="nav-text">Knowledge Check</div>
+        </div>`;
+    document.getElementById('sidebarNav').innerHTML = sidebarSections + quizNavItem;
+
+    // Status
+    document.getElementById('statusDot').className = 'status-dot active';
+    document.getElementById('statusLabel').textContent = 'In Progress';
+
+    // Progress
+    updateProgress(0, data.sections.length + 1);
+
+    // Render first section
+    renderSection(0);
+}
+
+// ═══════════════════════════════════════════════════
+// SECTION RENDERER
+// ═══════════════════════════════════════════════════
+function goSection(index) {
+    currentSectionIndex = index;
+    if (index === 'quiz') {
+        renderQuiz();
+    } else {
+        renderSection(index);
+    }
+
+    // Update sidebar active state
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+    const activeNav = index === 'quiz'
+        ? document.getElementById('nav-quiz')
+        : document.getElementById(`nav-${index}`);
+    if (activeNav) activeNav.classList.add('active');
+
+    // Update progress
+    const total = currentModule.sections.length + 1;
+    const done = index === 'quiz' ? total : index + 1;
+    updateProgress(done, total);
+
+    window.scrollTo(0, 0);
+}
+
+function renderSection(index) {
+    const data = currentModule;
+    const sec = data.sections[index];
+    const isFirst = index === 0;
+    const isLast = index === data.sections.length - 1;
+    const isDraft = (data.contentStatus || '').toUpperCase().includes('DRAFT');
+
+    const prevBtn = isFirst
+        ? `<button class="btn btn-secondary" disabled>&#8592; Previous</button>`
+        : `<button class="btn btn-secondary" onclick="goSection(${index - 1})">&#8592; Previous</button>`;
+
+    const nextBtn = isLast
+        ? `<button class="btn btn-primary" onclick="goSection('quiz')">Take the Assessment &#8594;</button>`
+        : `<button class="btn btn-primary" onclick="goSection(${index + 1})">Next: ${data.sections[index + 1].title} &#8594;</button>`;
+
+    const objectivesHTML = sec.learningObjectives && sec.learningObjectives.length
+        ? `<div class="h2">Learning Objectives</div>
+           <ul class="content-list">${sec.learningObjectives.map(o => `<li>${o}</li>`).join('')}</ul>`
+        : '';
+
+    const keyTermsHTML = sec.keyTerms && sec.keyTerms.length
+        ? `<div class="insight">
+               <div class="insight-label">Key Terms</div>
+               <p>${sec.keyTerms.join(' &nbsp;|&nbsp; ')}</p>
+           </div>`
+        : '';
+
+    document.getElementById('mainContent').innerHTML = `
+        ${isDraft ? `<div class="draft-banner">&#9888; DRAFT MODULE — Placeholder content. Final script pending.</div>` : ''}
+        <div class="view active">
+            <div class="section-eyebrow">${sec.eyebrow || `${data.level} · Module ${data.moduleNumber} · Section ${String(index + 1).padStart(2, '0')}`}</div>
+            <div class="section-title">${sec.title}</div>
+            <div class="section-meta">${data.duration || 'TBD'} &nbsp;·&nbsp; ${data.levelName || data.level}</div>
+            ${objectivesHTML}
+            <p class="body-text">${sec.content}</p>
+            ${keyTermsHTML}
+            <div class="btn-row">
+                ${prevBtn}
+                ${nextBtn}
+            </div>
+        </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// QUIZ RENDERER
+// ═══════════════════════════════════════════════════
+function renderQuiz() {
+    const data = currentModule;
+    const quiz = data.quiz;
+    const total = quiz.questions.length;
+    const pass = quiz.passingScore || 80;
+    const needed = Math.ceil(total * pass / 100);
+
+    const questionsHTML = quiz.questions.map((q, i) => {
+        const optionsHTML = q.options.map((opt, oi) => `
+            <li class="option">
+                <input type="radio" name="q${i}" value="${oi}" id="q${i}o${oi}">
+                <span class="option-text">${opt}</span>
+            </li>`).join('');
+        return `
+            <div class="question-block">
+                <div class="question-num">Question ${String(i + 1).padStart(2, '0')} of ${String(total).padStart(2, '0')}</div>
+                <div class="question-text">${q.question}</div>
+                <ul class="options-list">${optionsHTML}</ul>
+                <div class="feedback" id="f${i}"></div>
+            </div>`;
+    }).join('');
+
+    document.getElementById('mainContent').innerHTML = `
+        <div class="view active">
+            <div class="section-eyebrow">${data.level} · Module ${data.moduleNumber} · Knowledge Check</div>
+            <div class="section-title">Knowledge Check</div>
+            <div class="section-meta">${total} questions &nbsp;·&nbsp; Pass mark: ${pass}% &nbsp;·&nbsp; Retakes: unlimited</div>
+
+            <div class="assessment-intro">
+                <p class="body-text" style="margin-bottom:0;">
+                    Answer all questions carefully. You need <strong>${needed} out of ${total} correct</strong> to complete this module.
+                </p>
+            </div>
+
+            ${questionsHTML}
+
+            <div class="btn-row">
+                <button class="btn btn-secondary" onclick="resetQuiz()">Clear Answers</button>
+                <button class="btn btn-primary" onclick="submitQuiz()">Submit Assessment</button>
+            </div>
+
+            <div class="score-card" id="scoreCard">
+                <div class="score-num" id="scoreNum">0</div>
+                <div class="score-sub">out of ${total} correct</div>
+                <div class="score-badge" id="scoreBadge">—</div>
+                <div id="passActions" style="display:none; margin-top:28px;">
+                    <button class="btn btn-primary" onclick="alert('Certificate generated. In production this downloads a PDF.')">Download Certificate</button>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <p>MoRo IMR Training Academy — ${data.level}, Module ${data.moduleNumber}: ${data.title}</p>
+                <p>Designed to meet Industry Training Academy (ITA) standards. Safety content aligned with ISO 13849-1 and ILO occupational safety guidelines.</p>
+                <p>&copy; 2026 DiFacto Robotics &amp; Automation</p>
+            </div>
+        </div>`;
+}
+
+// ---- Learner name personalization ----
+function saveLearnerName(name) {
+    try {
+        localStorage.setItem('moroLearnerName', name.trim());
+    } catch (e) {
+        // localStorage unavailable (e.g. private browsing) — personalization simply won't persist
+    }
+}
+
+function loadLearnerName() {
+    try {
+        return (localStorage.getItem('moroLearnerName') || '').trim();
+    } catch (e) {
+        return '';
+    }
+}
+
+function initLearnerNameBox() {
+    const input = document.getElementById('learnerNameInput');
+    if (!input) return;
+    const saved = loadLearnerName();
+    if (saved) input.value = saved;
+}
+
+function submitQuiz() {
+    const data = currentModule;
+    const quiz = data.quiz;
+    const total = quiz.questions.length;
+    const pass = quiz.passingScore || 80;
+    const needed = Math.ceil(total * pass / 100);
+    let score = 0;
+
+    quiz.questions.forEach((q, i) => {
+        const sel = document.querySelector(`input[name="q${i}"]:checked`);
+        const fb = document.getElementById(`f${i}`);
+        fb.className = 'feedback';
+        if (!sel) {
+            fb.classList.add('show', 'incorrect');
+            fb.textContent = 'Please select an answer.';
+        } else {
+            const ok = parseInt(sel.value) === q.correctAnswer;
+            fb.classList.add('show', ok ? 'correct' : 'incorrect');
+            fb.textContent = ok
+                ? '\u2713 Correct. ' + (q.feedback || '')
+                : '\u2717 Incorrect \u2014 review the relevant section and try again. ' + (q.feedback || '');
+            if (ok) score++;
+        }
+    });
+
+    const card = document.getElementById('scoreCard');
+    const passed = score >= needed;
+    const learnerName = loadLearnerName();
+    const namePrefix = learnerName ? `${learnerName}, ` : '';
+
+    document.getElementById('scoreNum').textContent = score;
+    document.getElementById('scoreBadge').textContent = `${score} / ${total} \u2014 ${passed ? 'PASS' : 'Not Yet'}`;
+    document.getElementById('scoreBadge').className = `score-badge ${passed ? 'pass' : 'fail'}`;
+
+    const scoreSub = card.querySelector('.score-sub');
+    if (scoreSub) {
+        scoreSub.textContent = passed
+            ? `${namePrefix}well done \u2014 ${score} out of ${total} correct.`
+            : `${namePrefix}${score} out of ${total} correct \u2014 review the sections above and try again.`;
+    }
+
+    card.classList.add('show');
+
+    if (passed) {
+        document.getElementById('passActions').style.display = 'block';
+        document.getElementById('progressFill').style.width = '100%';
+        document.getElementById('statusDot').className = 'status-dot done';
+        document.getElementById('statusLabel').textContent = 'Completed \u2713';
+    }
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetQuiz() {
+    document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+    document.querySelectorAll('.feedback').forEach(el => el.className = 'feedback');
+    const card = document.getElementById('scoreCard');
+    if (card) card.classList.remove('show');
+}
+
+// ═══════════════════════════════════════════════════
+// PROGRESS BAR
+// ═══════════════════════════════════════════════════
+function updateProgress(done, total) {
+    const pct = Math.round((done / total) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+}
+
+// ═══════════════════════════════════════════════════
+// BROWSER BACK BUTTON SUPPORT
+// ═══════════════════════════════════════════════════
+window.addEventListener('popstate', () => {
+    const params = new URLSearchParams(window.location.search);
+    const mid = params.get('module');
+    if (mid) {
+        loadModule(mid);
+    } else {
+        showHome();
+    }
+});
+
+// ═══════════════════════════════════════════════════
+// START
+// ═══════════════════════════════════════════════════
+init();
+</script>
+</body>
+</html>

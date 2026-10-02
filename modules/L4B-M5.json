@@ -1,0 +1,151 @@
+{
+  "moduleId": "L4B-M5",
+  "title": "Capstone Project (Peer Reviewed)",
+  "level": "L4B",
+  "moduleNumber": 5,
+  "duration": "10 hrs",
+  "nextModule": "L4B Certification Complete",
+  "previousModule": "L4B-M4",
+  "prerequisite": "L4B-M4 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass concept - capstone itself is Pass/Fail via panel review per CDD). New module, built from scratch per CDD - adapted from engineering degree capstone practice, analogous to ITA's 'Applied' certification tier. Specific project brief pending DiFacto SME co-authorship.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 01",
+      "title": "The Capstone Model",
+      "learningObjectives": [
+        "Understand why L4B's final assessment takes a capstone project format rather than a standard written/practical test",
+        "Recognize how this differs from assessment structures earlier in the curriculum"
+      ],
+      "content": "Every level before L4B used a written-plus-practical assessment structure. L4B's capstone is different by design, borrowed from engineering degree practice: a real, substantial project demonstrating integrated competency across everything the Advanced Programming track has covered, evaluated by peer review rather than a standard pass/fail quiz. Competency is demonstrated through actual work, not exam answers.",
+      "keyTerms": [
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
+        },
+        {
+          "term": "PLC (Programmable Logic Controller)",
+          "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo."
+        },
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+        },
+        {
+          "term": "SME (Subject Matter Expert)",
+          "note": "A person with deep specialized knowledge, consulted or co-authoring content for highly technical modules."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 02",
+      "title": "What the Capstone Involves",
+      "learningObjectives": [
+        "Understand the general scope of a capstone project",
+        "Recognize how it draws on the full L4B module sequence"
+      ],
+      "content": "The capstone project synthesizes the preceding L4B modules - CNC machine tending integration, PLC integration, complex payload configuration (lift and rotate), and fleet optimization - into a single substantial project brief, rather than testing each skill in isolation. The specific project brief is being developed with DiFacto SME input, reflecting real integration scenarios the role actually encounters."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 03",
+      "title": "Project Documentation",
+      "learningObjectives": [
+        "Understand what documentation a capstone submission requires",
+        "Recognize why documentation quality is itself part of the assessment"
+      ],
+      "content": "A capstone submission isn't just a working solution - it includes documentation of the design decisions made, the integration approach taken, and the testing performed to validate it. This mirrors what's actually expected of an Advanced Programmer in the field: a working system that nobody else can understand or maintain isn't considered complete work."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 04",
+      "title": "Peer Review Process",
+      "learningObjectives": [
+        "Understand the general structure of peer review for this capstone",
+        "Recognize the value of peer review beyond pass/fail determination"
+      ],
+      "content": "Peer review means the capstone is evaluated by others who've completed or are completing the same track, not solely by an instructor - reflecting how real engineering work gets reviewed in practice. Specific panel composition and review process will be confirmed with DiFacto as the pilot cohort structure is finalized. Beyond determining pass/fail, peer review exposes candidates to different approaches other participants took to similar problems."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 05",
+      "title": "Evaluation Criteria",
+      "learningObjectives": [
+        "Understand the general categories a capstone is evaluated against",
+        "Recognize that evaluation covers design, build, test, and documentation together"
+      ],
+      "content": "Capstone evaluation uses a structured rubric covering design quality, build/implementation, testing rigor, and documentation - not a single pass/fail criterion on whether the system technically works. A technically functional solution with poor documentation or inadequate testing does not meet the bar this capstone sets."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 06",
+      "title": "Completing Advanced Programming Certification",
+      "learningObjectives": [
+        "Understand what DiFacto Certified Advanced IMR Programmer status represents",
+        "Recognize the path forward into L5"
+      ],
+      "content": "Successfully completing the capstone, evaluated by panel review, completes the requirements for DiFacto Certified Advanced IMR Programmer status - the highest technical certification level before L5 (Master Instructor). This status reflects genuine integration competency demonstrated through real work, consistent with how the capstone model was designed from the outset."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "How does L4B's final assessment differ from earlier levels?",
+        "options": [
+          "It doesn't differ - same written/practical format throughout",
+          "It uses a capstone project evaluated by peer review, rather than a standard written/practical test",
+          "L4B has no final assessment"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The capstone model is deliberately different, borrowed from engineering degree practice."
+      },
+      {
+        "id": 2,
+        "question": "What does the capstone project synthesize?",
+        "options": [
+          "Only one isolated skill from L4B",
+          "The preceding L4B modules (CNC integration, PLC integration, complex payload, fleet optimization) into one project",
+          "Content unrelated to the L4B curriculum"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The capstone draws together the full L4B module sequence into one integrated project."
+      },
+      {
+        "id": 3,
+        "question": "Is documentation part of what's being assessed, or just the working solution?",
+        "options": [
+          "Only the working solution matters",
+          "Documentation quality is itself part of the assessment",
+          "Documentation is optional"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A working system without adequate documentation is not considered complete work."
+      },
+      {
+        "id": 4,
+        "question": "Who evaluates the capstone project?",
+        "options": [
+          "Only an instructor, with no peer involvement",
+          "Peer review by others who've completed or are completing the same track",
+          "An automated grading system"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Peer review reflects how real engineering work is typically reviewed in practice."
+      },
+      {
+        "id": 5,
+        "question": "What does completing the capstone achieve?",
+        "options": [
+          "Nothing formal",
+          "DiFacto Certified Advanced IMR Programmer status",
+          "Automatic enrollment in L5 with no application needed"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Successful capstone completion confers DiFacto Certified Advanced IMR Programmer status."
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "moduleId": "L2-M2",
+  "title": "Payload Handling & Coordination",
+  "level": "L2",
+  "moduleNumber": 2,
+  "duration": "1.5 hrs",
+  "nextModule": "L2-M3",
+  "previousModule": "L2-M1",
+  "prerequisite": "L2-M1 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Handshake signal specifics pending SME confirmation (L2 operator-level detail).",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 2 - Module 2 - Section 01",
+      "title": "Why Payload Handling Matters",
+      "learningObjectives": [
+        "Understand the range of payload configurations MoRo supports",
+        "Recognize that payload type affects operational procedure"
+      ],
+      "content": "MoRo isn't a single fixed tool - it supports multiple payload configurations (conveyor, cobot interface, towing, lifting, and lift-and-rotate), each suited to different material handling needs. The configuration in use directly affects what you need to check and how you interact with a unit during operation.",
+      "keyTerms": [
+        {
+          "term": "payload configuration",
+          "note": "The specific attachment or module fitted to MoRo for handling a given type of material transfer."
+        },
+        {
+          "term": "CNC (Computer Numerical Control)",
+          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 2 - Module 2 - Section 02",
+      "title": "Attachment and Setup",
+      "learningObjectives": [
+        "Understand the general process of confirming a payload attachment",
+        "Know why attachment verification matters before mission assignment"
+      ],
+      "content": "Before a mission involving material transfer begins, the payload attachment must be confirmed secure and correctly configured for the task. An improperly seated or mismatched attachment risks dropped material or a failed handoff mid-mission. The specific verification steps per attachment type will be confirmed and added once validated against DiFacto's equipment documentation."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 2 - Module 2 - Section 03",
+      "title": "Handshake Signals",
+      "learningObjectives": [
+        "Understand the concept of a handshake in machine coordination",
+        "Recognize the operator-level implication of handshake states"
+      ],
+      "content": "When MoRo coordinates with another machine - loading from or delivering to a CNC station, for example - the two systems exchange a handshake: a sequence of signals confirming readiness, completion, and any error state, so neither system acts before the other is genuinely ready. At the operator level, you don't need to manage this sequence directly, but you should recognize when a handshake has stalled (the exchange pauses and doesn't progress) as a signal worth flagging. Exact signal states and sequence detail are being confirmed with DiFacto's engineering team.",
+      "keyTerms": [
+        {
+          "term": "handshake",
+          "note": "A signal exchange between two coordinating systems confirming readiness, completion, or error state before an action proceeds."
+        }
+      ]
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 2 - Module 2 - Section 04",
+      "title": "Safety With Loaded Payloads",
+      "learningObjectives": [
+        "Understand how a loaded payload changes MoRo's operating behavior",
+        "Know the additional awareness required around a loaded unit"
+      ],
+      "content": "A loaded MoRo behaves differently from an empty one - weight distribution shifts its center of gravity, which affects stopping behavior and stability, particularly with the lift or lift-and-rotate configurations. Give loaded units additional clearance, and never attempt to adjust or steady a load manually while MoRo is in motion."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 2 - Module 2 - Section 05",
+      "title": "Coordinating With Fixed Machines",
+      "learningObjectives": [
+        "Understand the general principle of timing in machine-to-machine handoffs",
+        "Recognize the operator's role during a coordinated handoff"
+      ],
+      "content": "When MoRo interacts with a fixed machine - loading a CNC, receiving from a conveyor - timing matters. The systems are designed to coordinate automatically via handshake signals, but an operator present during a handoff should confirm both systems show a ready or completing state before assuming the exchange succeeded, rather than walking away as soon as MoRo appears to stop."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 2 - Module 2 - Section 06",
+      "title": "Troubleshooting Payload Issues",
+      "learningObjectives": [
+        "Recognize common categories of payload-related issues",
+        "Know the appropriate operator-level response"
+      ],
+      "content": "Common payload issues include misalignment during attachment, a handshake that doesn't progress, or a load that appears unstable. As with mission failures, diagnosis at this level isn't expected - note the issue, don't attempt to force a misaligned attachment into place, and escalate to your supervisor or the point of contact for MoRo operations."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Does MoRo support a single fixed payload type?",
+        "options": [
+          "Yes, one configuration for all tasks",
+          "No - it supports multiple configurations (conveyor, cobot, towing, lift, lift-and-rotate)",
+          "Only conveyor handling"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. MoRo supports multiple payload configurations suited to different handling needs."
+      },
+      {
+        "id": 2,
+        "question": "What is a handshake in the context of machine coordination?",
+        "options": [
+          "A physical greeting gesture",
+          "A signal exchange confirming readiness, completion, or error state between systems",
+          "A type of payload attachment"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A handshake is a coordination signal exchange, not a physical action."
+      },
+      {
+        "id": 3,
+        "question": "How does a loaded payload affect MoRo's operating behavior?",
+        "options": [
+          "It has no effect",
+          "It shifts center of gravity, affecting stopping behavior and stability",
+          "It only affects navigation speed"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Weight distribution from a loaded payload affects stability and stopping behavior."
+      },
+      {
+        "id": 4,
+        "question": "During a coordinated handoff with a fixed machine, what should an operator confirm?",
+        "options": [
+          "Nothing - the systems handle it automatically with no verification needed",
+          "That both systems show a ready or completing state before assuming success",
+          "That the machine is turned off"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Confirming state before assuming success avoids incomplete handoffs going unnoticed."
+      },
+      {
+        "id": 5,
+        "question": "If a payload attachment seems misaligned, what should you do?",
+        "options": [
+          "Force it into place manually",
+          "Note the issue and escalate rather than forcing it",
+          "Ignore it and proceed with the mission"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Forcing a misaligned attachment risks damage; escalation is the correct response."
+      }
+    ]
+  }
+}

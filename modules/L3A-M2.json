@@ -1,0 +1,135 @@
+{
+  "moduleId": "L3A-M2",
+  "title": "Preventive Maintenance Procedures",
+  "level": "L3A",
+  "moduleNumber": 2,
+  "duration": "6 hrs",
+  "nextModule": "L3A-M3",
+  "previousModule": "L3A-M1",
+  "prerequisite": "L3A-M1 (60%)",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific maintenance schedules and procedures pending DiFacto engineering documentation.",
+
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A · Module 2 · Section 01",
+      "title": "Why Preventive Maintenance Matters",
+      "learningObjectives": [
+        "Understand the economic logic of preventive maintenance",
+        "Recognize the relationship between scheduled maintenance and uptime"
+      ],
+      "content": "Preventive maintenance exists because waiting for a failure to occur before acting is more expensive than preventing it - both in unplanned downtime and often in repair cost, since a caught-early issue is usually cheaper to fix than a failure that's cascaded. The goal isn't zero maintenance activity; it's predictable, scheduled activity that keeps unplanned downtime low."
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A · Module 2 · Section 02",
+      "title": "Building a Maintenance Schedule",
+      "learningObjectives": [
+        "Understand the general principle behind maintenance scheduling intervals",
+        "Recognize that schedules are typically based on usage, not just calendar time"
+      ],
+      "content": "Preventive maintenance intervals are generally set based on a combination of time elapsed and actual usage (operating hours, cycles completed) - a heavily used unit may need attention sooner than a lightly used one on the same calendar schedule. Specific interval recommendations for MoRo components will be confirmed against DiFacto's maintenance documentation and added here."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A · Module 2 · Section 03",
+      "title": "Mechanical Component Checks",
+      "learningObjectives": [
+        "Understand the general categories of mechanical inspection",
+        "Recognize common wear patterns worth checking for"
+      ],
+      "content": "Mechanical preventive checks generally cover wheel condition and wear, structural fasteners (confirming nothing has loosened from vibration over time), and drive component function. Specific inspection procedures and acceptable wear tolerances will be confirmed against DiFacto's technical documentation."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A · Module 2 · Section 04",
+      "title": "Sensor and Software Checks",
+      "learningObjectives": [
+        "Understand the general scope of sensor maintenance",
+        "Recognize why software/firmware checks are part of preventive maintenance"
+      ],
+      "content": "LiDAR and other sensors benefit from periodic cleaning and calibration verification, since even minor obstruction or drift affects navigation accuracy over time. Software and firmware checks confirm MoRo is running current, supported versions - this is preventive in the sense that staying current avoids accumulating technical debt that becomes harder to address later."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A · Module 2 · Section 05",
+      "title": "Performing and Recording a Maintenance Visit",
+      "learningObjectives": [
+        "Understand the general workflow of a preventive maintenance visit",
+        "Know what documentation a completed visit should produce"
+      ],
+      "content": "A preventive maintenance visit follows a checklist appropriate to the schedule point (e.g., a 500-hour check covers different items than a 2000-hour check), with each item confirmed and any deviation noted - not just checked off without genuine inspection. The visit concludes with a documented record, consistent with the documentation practice covered in Module 1."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A · Module 2 · Section 06",
+      "title": "When Preventive Maintenance Reveals a Problem",
+      "learningObjectives": [
+        "Understand how a preventive check can surface a predictive or corrective need",
+        "Recognize the appropriate response when this happens"
+      ],
+      "content": "Sometimes a routine preventive check reveals something beyond normal wear - early signs of a developing issue. When this happens, the response shifts from the preventive checklist to the predictive and diagnostic methodology covered in later modules. Catching this during scheduled preventive work, rather than waiting for a failure, is exactly the value preventive maintenance is meant to provide."
+    }
+  ],
+
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why is preventive maintenance generally more economical than waiting for failure?",
+        "options": [
+          "It isn't - corrective maintenance is always cheaper",
+          "Unplanned downtime and cascaded failures tend to cost more than scheduled prevention",
+          "Preventive maintenance has no cost at all"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Preventing failure is generally less costly than unplanned downtime and cascaded damage."
+      },
+      {
+        "id": 2,
+        "question": "What are maintenance intervals typically based on?",
+        "options": [
+          "Calendar time only, regardless of usage",
+          "A combination of elapsed time and actual usage (hours, cycles)",
+          "Random scheduling"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Usage-based scheduling accounts for units that work harder needing attention sooner."
+      },
+      {
+        "id": 3,
+        "question": "Why do sensors benefit from periodic cleaning and calibration checks?",
+        "options": [
+          "They don't need maintenance",
+          "Minor obstruction or drift affects navigation accuracy over time",
+          "Only to improve their appearance"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Sensor performance can degrade gradually, affecting navigation if not checked."
+      },
+      {
+        "id": 4,
+        "question": "What should happen during a preventive maintenance checklist item - just checking it off, or genuine inspection?",
+        "options": [
+          "Checking it off is sufficient regardless of actual condition",
+          "Genuine inspection, with any deviation noted",
+          "Checklists are optional"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A checklist only has value if items are genuinely inspected, not just marked complete."
+      },
+      {
+        "id": 5,
+        "question": "What should happen if a preventive check reveals signs of a developing issue?",
+        "options": [
+          "Ignore it since it's outside the preventive checklist scope",
+          "Shift to predictive/diagnostic methodology to address what was found",
+          "Wait until the next scheduled visit"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Catching developing issues during preventive work is exactly the value it provides."
+      }
+    ]
+  }
+}

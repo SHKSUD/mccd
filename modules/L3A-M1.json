@@ -1,0 +1,159 @@
+{
+  "moduleId": "L3A-M1",
+  "title": "Technician Role & Maintenance Fundamentals",
+  "level": "L3A",
+  "moduleNumber": 1,
+  "duration": "5 hrs",
+  "nextModule": "L3A-M2",
+  "previousModule": "L2-M6",
+  "prerequisite": "L2-M6 (60%), L2 certification complete",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Drafted from CDD role mapping (L3A = Maintenance Technician track) and general industrial maintenance practice. Specific DiFacto procedures pending SME input.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 01",
+      "title": "From Operator to Technician",
+      "learningObjectives": [
+        "Understand how the Technician role differs from the Operator role",
+        "Recognize the scope of responsibility this track covers"
+      ],
+      "content": "L1-L2 built operational competence - running MoRo day to day, recognizing issues, escalating appropriately. The Technician track goes further: you're now the person issues get escalated to. This track covers maintaining MoRo's physical and operational health over its working life, not just operating it reliably day to day.",
+      "keyTerms": [
+        {
+          "term": "IMR (Intelligent Mobile Robot)",
+          "note": "A robot that navigates autonomously using sensor-based awareness \u2014 the category MoRo belongs to."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 02",
+      "title": "Categories of Maintenance Work",
+      "learningObjectives": [
+        "Distinguish between preventive, predictive, and corrective maintenance",
+        "Understand why a mix of approaches is used rather than one alone"
+      ],
+      "content": "Maintenance work generally falls into three categories: preventive (scheduled work done regardless of current condition, to prevent failure), predictive (work triggered by signs of degradation before failure occurs), and corrective (fixing something after it's already failed). A mature maintenance program relies primarily on preventive and predictive work, with corrective maintenance treated as the exception rather than the norm.",
+      "keyTerms": [
+        {
+          "term": "preventive maintenance",
+          "note": "Scheduled maintenance performed regardless of current condition, to prevent future failure."
+        },
+        {
+          "term": "predictive maintenance",
+          "note": "Maintenance triggered by observed signs of degradation, performed before failure occurs."
+        },
+        {
+          "term": "corrective maintenance",
+          "note": "Maintenance performed after a failure has already occurred."
+        }
+      ]
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 03",
+      "title": "MoRo's Maintainable Components",
+      "learningObjectives": [
+        "Identify the general categories of components a Technician maintains",
+        "Understand why each category requires different maintenance approaches"
+      ],
+      "content": "MoRo's maintainable scope spans several categories: mechanical (wheels, drive components, physical structure), sensing (LiDAR and related sensors), power (battery and charging systems), and software/firmware (periodic updates). Each category has different failure patterns and different maintenance cadences - mechanical wear is gradual and often predictable, while software issues tend to be more binary (working or not)."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 04",
+      "title": "Reading Maintenance Documentation",
+      "learningObjectives": [
+        "Understand the role of maintenance records in technician work",
+        "Know what a complete maintenance record typically includes"
+      ],
+      "content": "Every maintenance action - preventive, predictive, or corrective - should be documented: what was done, when, and why. This record is what makes future maintenance smarter over time, since patterns across a unit's history (or across the fleet) often reveal issues that a single maintenance event wouldn't show on its own."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 05",
+      "title": "Safety During Maintenance Work",
+      "learningObjectives": [
+        "Understand how safety procedures during maintenance differ from operational safety",
+        "Recognize lockout/tagout as a foundational maintenance safety practice"
+      ],
+      "content": "Maintenance work often requires MoRo to be powered down or placed in a state where it won't move unexpectedly while being worked on - lockout/tagout (LOTO) procedures exist specifically for this. Unlike operational safety (staying clear of an active unit), maintenance safety is about confirming a unit is genuinely de-energized and locked out before physical work begins. Specific LOTO procedures for MoRo will be confirmed against DiFacto's safety documentation.",
+      "keyTerms": [
+        {
+          "term": "LOTO (lockout/tagout)",
+          "note": "A safety procedure confirming equipment is de-energized and physically secured before maintenance work begins."
+        }
+      ]
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 06",
+      "title": "What This Track Builds Toward",
+      "learningObjectives": [
+        "Understand the progression through the remaining L3A modules",
+        "Recognize the certification this track leads to"
+      ],
+      "content": "This module establishes the foundation; subsequent L3A modules build specific competency in preventive procedures, predictive inspection, battery diagnostics, diagnostic methodology, and troubleshooting - culminating in the field drill capstone. Together, these complete the requirements for DiFacto Certified IMR Technician status."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "What distinguishes the Technician role from the Operator role?",
+        "options": [
+          "There is no meaningful difference",
+          "Technicians maintain MoRo's physical and operational health over time, beyond day-to-day operation",
+          "Technicians only work night shifts"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. The Technician track covers maintenance responsibility beyond operational competence."
+      },
+      {
+        "id": 2,
+        "question": "What are the three general categories of maintenance work?",
+        "options": [
+          "Fast, medium, and slow",
+          "Preventive, predictive, and corrective",
+          "Mechanical, electrical, and software only"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. These three categories describe different triggers for maintenance action."
+      },
+      {
+        "id": 3,
+        "question": "Should a mature maintenance program rely primarily on corrective maintenance?",
+        "options": [
+          "Yes, fixing things after they fail is most efficient",
+          "No - preventive and predictive work should be primary, with corrective as the exception",
+          "Maintenance type doesn't matter"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Relying mainly on preventive and predictive maintenance reduces unplanned failures."
+      },
+      {
+        "id": 4,
+        "question": "Why does documentation matter for maintenance work?",
+        "options": [
+          "It's just a formality with no real value",
+          "Patterns across maintenance history reveal issues a single event wouldn't show",
+          "It's only needed for warranty claims"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Documentation builds a pattern history that improves future maintenance decisions."
+      },
+      {
+        "id": 5,
+        "question": "What is lockout/tagout (LOTO) primarily for?",
+        "options": [
+          "Locking the charging dock",
+          "Confirming a unit is de-energized and secured before physical maintenance work begins",
+          "Preventing unauthorized mission assignment"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. LOTO ensures a unit won't move unexpectedly while being physically worked on."
+      }
+    ]
+  }
+}

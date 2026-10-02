@@ -1,0 +1,147 @@
+{
+  "moduleId": "L3B-M6",
+  "title": "Commissioning a New Site",
+  "level": "L3B",
+  "moduleNumber": 6,
+  "duration": "6 hrs",
+  "nextModule": "L3B Certification Assessment",
+  "previousModule": "L3B-M5",
+  "prerequisite": "L3B-M5 (60%)",
+  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Capstone module for L3B, synthesizing map building, mission programming, and FANUC integration (per CDD). New module - does not exist in DiFacto's original slide deck. Facility-specific commissioning checklist pending DiFacto operations input.",
+  "sections": [
+    {
+      "sectionId": 1,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 01",
+      "title": "The Capstone of the Programmer Track",
+      "learningObjectives": [
+        "Understand how this module synthesizes the full L3B skill set",
+        "Recognize commissioning as the real-world task L3B-certified programmers perform most often"
+      ],
+      "content": "Every module in L3B built toward a single real-world capability: bringing a new MoRo deployment online at a facility that has never run it before. This module is that task in full - map building, mission programming, and machine integration, combined into one end-to-end process. It's the most common task a certified Programmer actually performs, which is why it serves as the track's capstone.",
+      "keyTerms": [
+        {
+          "term": "FANUC",
+          "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
+        },
+        {
+          "term": "ANT",
+          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+        },
+        {
+          "term": "SLAM (Simultaneous Localization and Mapping)",
+          "note": "The process of determining position while simultaneously building a map of the surrounding environment."
+        }
+      ]
+    },
+    {
+      "sectionId": 2,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 02",
+      "title": "Pre-Commissioning Assessment",
+      "learningObjectives": [
+        "Understand what needs evaluating before beginning a commissioning process",
+        "Recognize site-specific factors that affect commissioning approach"
+      ],
+      "content": "Before mapping begins, a new site needs assessment: floor layout and clearances, existing machine positions, network infrastructure for ANT connectivity, and any site-specific safety considerations. This assessment shapes everything that follows - a facility with tight clearances or heavy machine density needs a different commissioning approach than an open floor plan."
+    },
+    {
+      "sectionId": 3,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 03",
+      "title": "Building the Initial Map",
+      "learningObjectives": [
+        "Apply the map-building process (from L3B-M2) to a full new-site context",
+        "Understand sequencing considerations for a complete facility map"
+      ],
+      "content": "Map building at commissioning scale applies the same SLAM-based process covered earlier in the track, but across an entire operational area rather than a test zone. Sequencing matters: mapping during lower-activity periods reduces the chance of transient obstacles (parked equipment, temporary clutter) becoming permanently embedded in the baseline map."
+    },
+    {
+      "sectionId": 4,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 04",
+      "title": "Programming the Initial Mission Set",
+      "learningObjectives": [
+        "Understand how to translate facility workflow into an initial set of missions",
+        "Recognize the value of starting with core use cases before adding complexity"
+      ],
+      "content": "Once the map exists, initial missions should cover the facility's core, highest-value use cases first - not every conceivable task. Starting narrow and validated, then expanding mission complexity once the basics are proven reliable, reduces risk during the most vulnerable phase of a new deployment: the first weeks of live operation."
+    },
+    {
+      "sectionId": 5,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 05",
+      "title": "Integrating With Existing Machines",
+      "learningObjectives": [
+        "Apply machine integration principles (from L3B-M4) in a commissioning context",
+        "Understand validation steps before go-live for each integration point"
+      ],
+      "content": "Where MoRo interfaces with existing equipment (per L3B-M4's FANUC I/O handshake coverage), each integration point needs individual validation before go-live - confirming the handshake sequence works reliably, not just once under ideal conditions, but repeatedly and under realistic operational variation."
+    },
+    {
+      "sectionId": 6,
+      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 06",
+      "title": "Go-Live and Handoff",
+      "learningObjectives": [
+        "Understand the transition from commissioning to live operation",
+        "Know what documentation and training the operating site needs at handoff"
+      ],
+      "content": "Commissioning isn't complete at technical go-live - it includes ensuring the site's operators (L1-L2 certified) understand the specific mission set and configuration now live at their facility, and that documentation of the commissioning decisions (map version, mission logic, integration points) exists for future reference. A commissioning that works technically but leaves the operating team unprepared hasn't actually succeeded."
+    }
+  ],
+  "quiz": {
+    "passingScore": 60,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Why does this module serve as the L3B capstone?",
+        "options": [
+          "It's simply the last module numerically",
+          "It synthesizes map building, mission programming, and integration into the most common real-world Programmer task",
+          "It covers unrelated advanced topics"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Commissioning combines the full L3B skill set into the task Programmers perform most often."
+      },
+      {
+        "id": 2,
+        "question": "What should be assessed before mapping begins at a new site?",
+        "options": [
+          "Nothing - mapping can start immediately",
+          "Floor layout, machine positions, network infrastructure, and safety considerations",
+          "Only the facility's operating hours"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Pre-commissioning assessment shapes the entire approach that follows."
+      },
+      {
+        "id": 3,
+        "question": "Why is timing (e.g., mapping during lower-activity periods) a consideration?",
+        "options": [
+          "It isn't a real consideration",
+          "To reduce transient obstacles becoming permanently embedded in the baseline map",
+          "Mapping can only occur at night by regulation"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Mapping timing affects whether temporary clutter gets baked into the permanent map."
+      },
+      {
+        "id": 4,
+        "question": "What's the recommended approach to the initial mission set?",
+        "options": [
+          "Program every conceivable mission immediately",
+          "Start with core, highest-value use cases, then expand once proven reliable",
+          "Skip mission programming and rely on manual control only"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. Starting narrow and validated reduces risk during the most vulnerable early operational period."
+      },
+      {
+        "id": 5,
+        "question": "Is commissioning complete at technical go-live?",
+        "options": [
+          "Yes, once the technical setup works",
+          "No - it includes operator preparation and documentation handoff",
+          "Only if the client specifically requests documentation"
+        ],
+        "correctAnswer": 1,
+        "feedback": "Correct. A technically working commissioning that leaves the operating team unprepared hasn't fully succeeded."
+      }
+    ]
+  }
+}
