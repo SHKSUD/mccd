@@ -89,22 +89,22 @@
         "id": 1,
         "question": "What defines a mission?",
         "options": [
+          "A scheduled maintenance check",
           "A software update",
-          "A defined task with a clear start, objective, and completion condition",
-          "A scheduled maintenance check"
+          "A defined task with a clear start, objective, and completion condition"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. A mission is the basic structured unit of work MoRo executes."
       },
       {
         "id": 2,
         "question": "What must be confirmed before assigning a new mission?",
         "options": [
-          "Nothing - missions can be assigned anytime",
           "That MoRo is in ready state and its path is genuinely clear",
-          "Written supervisor approval"
+          "Written supervisor approval",
+          "Nothing - missions can be assigned anytime"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Readiness and a clear path are the standard pre-checks."
       },
       {
@@ -122,11 +122,11 @@
         "id": 4,
         "question": "Why should new missions be validated under supervision first?",
         "options": [
-          "It's not necessary",
           "To confirm expected end-to-end behavior before routine use",
-          "Only required for missions over 10 steps"
+          "Only required for missions over 10 steps",
+          "It's not necessary"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Supervised validation is standard practice for any new process."
       },
       {
@@ -134,10 +134,10 @@
         "question": "What's the appropriate first response to a failed mission?",
         "options": [
           "Diagnose the exact technical cause yourself",
-          "Note what happened, assess safety, and escalate if unclear",
-          "Ignore it and reassign immediately"
+          "Ignore it and reassign immediately",
+          "Note what happened, assess safety, and escalate if unclear"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Operator-level response doesn't require diagnosis - note, assess, escalate."
       }
     ]

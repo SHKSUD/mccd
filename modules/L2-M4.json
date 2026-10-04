@@ -99,9 +99,9 @@
         "id": 1,
         "question": "Why might multiple MoRo units be deployed together?",
         "options": [
-          "Only for backup purposes",
+          "It's never done - one unit per facility",
           "For throughput and redundancy",
-          "It's never done - one unit per facility"
+          "Only for backup purposes"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Multiple units support both higher throughput and redundant coverage."
@@ -110,44 +110,44 @@
         "id": 2,
         "question": "Who manages collision avoidance between multiple MoRo units?",
         "options": [
+          "Each unit independently, with no coordination",
           "The operator, manually",
-          "The fleet management system, automatically",
-          "Each unit independently, with no coordination"
+          "The fleet management system, automatically"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Collision avoidance across units is handled automatically by the fleet system."
       },
       {
         "id": 3,
         "question": "What is a deadlock in a multi-robot context?",
         "options": [
-          "A locked charging dock",
           "A situation where units are each waiting on the other, with neither proceeding",
+          "A locked charging dock",
           "A software update failure"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. A deadlock is a mutual-wait situation between units, typically resolved automatically."
       },
       {
         "id": 4,
         "question": "What's the difference between a shared path and a reserved route?",
         "options": [
+          "Reserved routes are only for maintenance",
           "There is no difference",
-          "Shared paths allow multiple coordinated units; reserved routes are prioritized for specific traffic",
-          "Reserved routes are only for maintenance"
+          "Shared paths allow multiple coordinated units; reserved routes are prioritized for specific traffic"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Shared paths coordinate multiple units; reserved routes prioritize specific traffic patterns."
       },
       {
         "id": 5,
         "question": "What does monitoring a fleet primarily involve?",
         "options": [
-          "Tracking one unit continuously and ignoring the rest",
           "Watching for patterns and deviations across units",
+          "Tracking one unit continuously and ignoring the rest",
           "Manually assigning every mission"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Fleet monitoring is about recognizing deviation from normal group behavior."
       }
     ]

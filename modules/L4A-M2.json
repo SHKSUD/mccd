@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 01",
+      "eyebrow": "Level 4A · Module 2 · Section 01",
       "title": "Connecting MoRo to Production Systems",
       "learningObjectives": [
         "Understand why MES/WMS integration matters at the Systems Engineer level",
@@ -29,13 +29,13 @@
         },
         {
           "term": "MES/WMS",
-          "note": "Manufacturing Execution System and Warehouse Management System \u2014 the production and inventory tracking software MoRo commonly integrates with."
+          "note": "Manufacturing Execution System and Warehouse Management System — the production and inventory tracking software MoRo commonly integrates with."
         }
       ]
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 02",
+      "eyebrow": "Level 4A · Module 2 · Section 02",
       "title": "Triggering Missions from Production Events",
       "learningObjectives": [
         "Understand the general pattern of event-triggered mission assignment",
@@ -45,7 +45,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 03",
+      "eyebrow": "Level 4A · Module 2 · Section 03",
       "title": "Reporting Status Back",
       "learningObjectives": [
         "Understand the reverse direction of integration - MoRo reporting into MES/WMS",
@@ -55,7 +55,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 04",
+      "eyebrow": "Level 4A · Module 2 · Section 04",
       "title": "Data Mapping Between Systems",
       "learningObjectives": [
         "Understand the concept of data mapping between MoRo and MES/WMS",
@@ -65,7 +65,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 05",
+      "eyebrow": "Level 4A · Module 2 · Section 05",
       "title": "Handling Integration Failures Gracefully",
       "learningObjectives": [
         "Understand why integration failure handling needs explicit design",
@@ -75,7 +75,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4A \u00b7 Module 2 \u00b7 Section 06",
+      "eyebrow": "Level 4A · Module 2 · Section 06",
       "title": "Testing MES/WMS Integration",
       "learningObjectives": [
         "Apply integration testing principles (from L3B-M5) specifically to MES/WMS connections",
@@ -91,31 +91,31 @@
         "id": 1,
         "question": "What does this module specifically address, building on L3B-M5's general API coverage?",
         "options": [
+          "Only MoRo's internal software updates",
           "Unrelated networking topics",
-          "Connecting MoRo specifically to MES/WMS production and inventory systems",
-          "Only MoRo's internal software updates"
+          "Connecting MoRo specifically to MES/WMS production and inventory systems"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. This module focuses on the common MES/WMS integration case specifically."
       },
       {
         "id": 2,
         "question": "What is a common pattern for triggering a MoRo mission from production systems?",
         "options": [
-          "Missions can never be triggered automatically",
           "A production event (order placed, run completed) automatically triggers a mission",
+          "Missions can never be triggered automatically",
           "Only manual operator assignment is possible"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Event-triggered mission assignment is a core integration pattern."
       },
       {
         "id": 3,
         "question": "Why does MoRo reporting status back into MES/WMS matter?",
         "options": [
-          "It doesn't matter - one-way integration is sufficient",
+          "Reporting is only needed for billing purposes",
           "It keeps production records accurate without manual data entry",
-          "Reporting is only needed for billing purposes"
+          "It doesn't matter - one-way integration is sufficient"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Two-way integration keeps the system of record accurate to actual floor activity."
@@ -124,9 +124,9 @@
         "id": 4,
         "question": "What is data mapping in this context?",
         "options": [
-          "A physical floor map",
+          "A type of mission route",
           "Defining how MoRo's data fields correspond to MES/WMS fields",
-          "A type of mission route"
+          "A physical floor map"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Data mapping aligns field definitions across the two systems."
@@ -136,10 +136,10 @@
         "question": "Why does integration failure handling need explicit design?",
         "options": [
           "Failures never occur in practice",
-          "To avoid silently losing data or blocking physical operation when a reporting call fails",
-          "Failure handling is automatically provided by all systems"
+          "Failure handling is automatically provided by all systems",
+          "To avoid silently losing data or blocking physical operation when a reporting call fails"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Explicit failure handling prevents silent data loss or operational disruption."
       }
     ]

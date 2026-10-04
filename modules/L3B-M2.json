@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 01",
+      "eyebrow": "Level 3B · Module 2 · Section 01",
       "title": "From Understanding SLAM to Configuring It",
       "learningObjectives": [
         "Recall SLAM fundamentals from L1-M2",
@@ -21,13 +21,13 @@
       "keyTerms": [
         {
           "term": "SLAM (Simultaneous Localization and Mapping)",
-          "note": "The process of determining position while building a map of the surrounding environment \u2014 covered in L1-M2."
+          "note": "The process of determining position while building a map of the surrounding environment — covered in L1-M2."
         }
       ]
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 02",
+      "eyebrow": "Level 3B · Module 2 · Section 02",
       "title": "Preparing for a Mapping Pass",
       "learningObjectives": [
         "Understand what preparation improves map quality",
@@ -37,7 +37,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 03",
+      "eyebrow": "Level 3B · Module 2 · Section 03",
       "title": "Performing the Mapping Pass",
       "learningObjectives": [
         "Understand the general process of guiding MoRo through a mapping pass",
@@ -53,7 +53,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 04",
+      "eyebrow": "Level 3B · Module 2 · Section 04",
       "title": "Reviewing and Validating a Map",
       "learningObjectives": [
         "Understand what reviewing a completed map involves",
@@ -63,7 +63,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 05",
+      "eyebrow": "Level 3B · Module 2 · Section 05",
       "title": "Updating an Existing Map",
       "learningObjectives": [
         "Understand when and how an existing map needs updating",
@@ -73,7 +73,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3B \u00b7 Module 2 \u00b7 Section 06",
+      "eyebrow": "Level 3B · Module 2 · Section 06",
       "title": "Multi-Floor and Multi-Zone Considerations",
       "learningObjectives": [
         "Understand the general concept of managing multiple distinct map areas",
@@ -89,20 +89,20 @@
         "id": 1,
         "question": "Why should a space be in a representative state before mapping?",
         "options": [
+          "Representative state only matters for safety, not mapping",
           "It doesn't matter what state the space is in",
-          "So the resulting map reflects actual operational reality, not an atypical snapshot",
-          "Representative state only matters for safety, not mapping"
+          "So the resulting map reflects actual operational reality, not an atypical snapshot"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Mapping during typical conditions produces a map that matches real operational use."
       },
       {
         "id": 2,
         "question": "What pacing is recommended during a mapping pass?",
         "options": [
-          "As fast as possible to save time",
+          "Pacing doesn't affect map quality",
           "A deliberate, methodical pace allowing accurate LiDAR coverage",
-          "Pacing doesn't affect map quality"
+          "As fast as possible to save time"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Deliberate pacing supports accurate map-building as MoRo moves through the space."
@@ -111,31 +111,31 @@
         "id": 3,
         "question": "Why review a map before putting it into operational use?",
         "options": [
+          "Only to check file size",
           "Review isn't necessary",
-          "To catch gaps or artifacts before they cause operational problems",
-          "Only to check file size"
+          "To catch gaps or artifacts before they cause operational problems"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Catching mapping issues before operational use is easier than discovering them later."
       },
       {
         "id": 4,
         "question": "When a facility layout changes, is a full remapping always required?",
         "options": [
-          "Yes, always required regardless of change scope",
           "Not necessarily - a targeted update may suffice depending on the scope of change",
-          "Maps never need updating once created"
+          "Maps never need updating once created",
+          "Yes, always required regardless of change scope"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. The appropriate update approach depends on how much actually changed."
       },
       {
         "id": 5,
         "question": "What might a larger facility require regarding maps?",
         "options": [
-          "Always exactly one map regardless of facility size",
+          "No mapping is needed for larger facilities",
           "Potentially separate maps for different floors or distinct operational zones",
-          "No mapping is needed for larger facilities"
+          "Always exactly one map regardless of facility size"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Larger or more complex facilities may require multi-zone or multi-floor map management."

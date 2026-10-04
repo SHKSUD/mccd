@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 01",
+      "eyebrow": "Level 4B · Module 4 · Section 01",
       "title": "From Awareness to Active Optimization",
       "learningObjectives": [
         "Recall performance metrics introduced in L2-M6",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 02",
+      "eyebrow": "Level 4B · Module 4 · Section 02",
       "title": "Identifying Optimization Opportunities",
       "learningObjectives": [
         "Understand how to identify where optimization effort is worthwhile",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 03",
+      "eyebrow": "Level 4B · Module 4 · Section 03",
       "title": "Route Optimization",
       "learningObjectives": [
         "Understand general approaches to improving route efficiency",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 04",
+      "eyebrow": "Level 4B · Module 4 · Section 04",
       "title": "Task Distribution Optimization",
       "learningObjectives": [
         "Understand optimization considerations for how tasks are distributed across a fleet",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 05",
+      "eyebrow": "Level 4B · Module 4 · Section 05",
       "title": "Measuring Optimization Impact",
       "learningObjectives": [
         "Understand how to validate that an optimization change actually improved performance",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4B \u00b7 Module 4 \u00b7 Section 06",
+      "eyebrow": "Level 4B · Module 4 · Section 06",
       "title": "Preparing for the Capstone",
       "learningObjectives": [
         "Understand how this module's skills integrate with the L4B capstone project",
@@ -87,22 +87,22 @@
         "id": 1,
         "question": "What does this module add beyond the performance awareness introduced in L2-M6?",
         "options": [
-          "Nothing - it repeats the same content",
           "Active optimization work, tuning an operational fleet's actual performance",
+          "Nothing - it repeats the same content",
           "It removes performance topics entirely"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. This module moves from awareness to active, hands-on optimization."
       },
       {
         "id": 2,
         "question": "What should optimization efforts be based on?",
         "options": [
-          "Intuition about where problems might be",
           "Data from mission timing, route patterns, and congestion analysis",
-          "Optimization should not be data-driven"
+          "Optimization should not be data-driven",
+          "Intuition about where problems might be"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Data-driven analysis reveals genuine inefficiency, rather than guessing."
       },
       {
@@ -121,10 +121,10 @@
         "question": "What is the goal of task distribution optimization across a fleet?",
         "options": [
           "Concentrating all tasks on one unit",
-          "Balanced utilization, avoiding idle units while others are overloaded",
-          "Task distribution cannot be optimized"
+          "Task distribution cannot be optimized",
+          "Balanced utilization, avoiding idle units while others are overloaded"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Balanced utilization across available units is the goal of this optimization."
       },
       {

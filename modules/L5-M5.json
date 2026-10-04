@@ -1,83 +1,73 @@
 {
   "moduleId": "L5-M5",
-  "title": "Observed Delivery & Certification",
+  "title": "Mentorship & Coaching for New Instructors",
   "level": "L5",
   "moduleNumber": 5,
-  "duration": "16 hrs",
-  "nextModule": "DiFacto Master IMR Instructor Certification Complete",
+  "duration": "12 hrs",
+  "nextModule": "L5-M6",
   "previousModule": "L5-M4",
   "prerequisite": "L5-M4 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Assessment type (Observed Delivery) directly confirmed per CDD assessment framework table for L5. Capstone module completing the Master Instructor track.",
+  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Resolves the L5 module-count ambiguity (5 vs 6): SOW Bucket 3 names 'mentorship structure' as a distinct deliverable from the train-the-trainer outline and evaluation rubrics, which this module directly addresses. Specific mentorship program logistics pending DiFacto confirmation.",
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 01",
-      "title": "The Capstone of the Master Instructor Track",
+      "eyebrow": "Level 5 - Module 5 - Section 01",
+      "title": "Why Mentorship Is Separate from Teaching Skill",
       "learningObjectives": [
-        "Understand how this module synthesizes the full L5 skill set",
-        "Recognize why observed delivery, not a written test, is the final assessment"
+        "Understand the distinction between delivering training and mentoring a new instructor",
+        "Recognize why this is treated as its own competency area"
       ],
-      "content": "Every prior L5 module built toward one outcome: actually delivering training effectively. L5 certification is validated through observed live delivery, not a written exam. That's consistent with this curriculum's broader principle that practical competency requires practical demonstration, not just knowledge recall.",
-      "keyTerms": [
-        {
-          "term": "CDD (Curriculum Design Document)",
-          "note": "The internal document defining this curriculum's structure, design philosophy, and module specifications."
-        },
-        {
-          "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
-        }
-      ]
+      "content": "L5-M1 built the skill of teaching a session well. This module addresses something different: supporting another person as they become an instructor themselves. A Master Instructor who teaches excellently doesn't automatically know how to mentor someone else through that same development - mentorship is an ongoing, relational skill, not a one-time delivery skill."
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 02",
-      "title": "What Observed Delivery Involves",
+      "eyebrow": "Level 5 - Module 5 - Section 02",
+      "title": "What New Instructors Actually Struggle With",
       "learningObjectives": [
-        "Understand the general format of an observed delivery assessment",
-        "Recognize what's being evaluated during the observation"
+        "Understand common early struggles for newly certified instructors",
+        "Recognize how this differs from struggles a learner has with technical content"
       ],
-      "content": "An observed delivery assessment means an experienced evaluator - senior faculty, working alongside DiFacto - watches the candidate actually teach a real or representative session. What's being evaluated isn't just technical accuracy, but the pedagogical skills built throughout L5: structuring the session, checking for understanding, giving effective feedback, and managing the training environment."
+      "content": "New instructors often know the technical material well - they passed their own certification - but struggle with the instructional side: managing a room, adjusting pace in real time, or handling a question they didn't anticipate. These are confidence and experience gaps, not knowledge gaps, and they need a different kind of support than reteaching content."
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 03",
-      "title": "Preparing for Observed Delivery",
+      "eyebrow": "Level 5 - Module 5 - Section 03",
+      "title": "Structuring an Ongoing Mentorship Relationship",
       "learningObjectives": [
-        "Understand how to prepare for this assessment format",
-        "Recognize the value of practice delivery before the formal assessment"
+        "Understand the general shape of a mentorship relationship over time",
+        "Recognize why a single observed session isn't the same as mentorship"
       ],
-      "content": "Preparation benefits from practice delivery - teaching the planned session to colleagues or in a low-stakes setting before the formal observed assessment, applying the feedback principles from L5-M1 to one's own developing instructional technique. Treating the first live delivery as the observed assessment itself, with no prior practice, raises unnecessary risk."
+      "content": "Mentorship extends beyond the observed delivery assessment (L5-M6) into an ongoing relationship - periodic check-ins, availability for questions as a new instructor gains experience, and gradually reduced oversight as confidence builds. Specific program structure and cadence will be confirmed as DiFacto's instructor network scales, but the underlying shape is consistent: support that fades as competence grows, not support that ends at certification."
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 04",
-      "title": "The Evaluation Rubric",
+      "eyebrow": "Level 5 - Module 5 - Section 04",
+      "title": "Observing Without Taking Over",
       "learningObjectives": [
-        "Understand the general structure of the observed delivery evaluation",
-        "Recognize this as an application of the rubric design principles from L5-M2"
+        "Understand the discipline of observing a mentee's session without interrupting",
+        "Recognize when intervention during a live session is genuinely necessary"
       ],
-      "content": "Observed delivery is evaluated against defined teaching competencies - a direct application of the rubric design principles covered in L5-M2, ensuring consistent evaluation regardless of which senior faculty member conducts the observation. Specific competency criteria will be confirmed as DiFacto's instructor certification process is finalized."
+      "content": "When a mentor sits in on a new instructor's session, the instinct to jump in and fix a stumble can undermine the new instructor's confidence and the learners' sense of who's actually teaching. Mentors generally hold back unless something genuinely incorrect is being taught or a safety issue arises - saving feedback for afterward, applying the same specific, timely feedback principles from L5-M1."
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 05",
-      "title": "Handling an Unsuccessful Observation",
+      "eyebrow": "Level 5 - Module 5 - Section 05",
+      "title": "Debriefing After a Session",
       "learningObjectives": [
-        "Understand the general process if an observed delivery doesn't meet the certification bar",
-        "Recognize this as a developmental step, consistent with the re-sit policy used throughout the curriculum"
+        "Understand how to structure a post-session debrief with a mentee",
+        "Recognize the value of the mentee self-assessing before receiving mentor feedback"
       ],
-      "content": "Consistent with the re-sit policy applied across other certification levels in this curriculum, an unsuccessful observed delivery isn't a final outcome - it's feedback, using the same principles from L5-M1, on specific areas to develop before a subsequent attempt. This mirrors the curriculum's broader philosophy that certification reflects genuine competency, worth the time to develop properly rather than rushing through."
+      "content": "An effective debrief starts by asking the new instructor what they thought went well and what they'd adjust - self-assessment first, mentor feedback second. This builds the new instructor's own evaluative judgment over time, rather than creating dependence on external feedback for every session. The mentor's feedback then fills gaps or confirms what the new instructor already noticed."
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 5 \u00b7 Module 5 \u00b7 Section 06",
-      "title": "Becoming Part of DiFacto's Instructor Network",
+      "eyebrow": "Level 5 - Module 5 - Section 06",
+      "title": "Knowing When Mentorship Is Complete",
       "learningObjectives": [
-        "Understand what DiFacto Master IMR Instructor certification enables",
-        "Recognize the ongoing role within DiFacto's training ecosystem"
+        "Understand general signals that a new instructor is ready for independent delivery",
+        "Recognize this module's place leading into the observed delivery assessment"
       ],
-      "content": "Successfully completing observed delivery, alongside the preceding L5 modules, confers DiFacto Master IMR Instructor certification - jointly issued by DiFacto and senior faculty, keeping quality consistent across the instructor network. This certification enables training and certifying other MoRo users independently, making the certified instructor part of DiFacto's scaling mechanism for reaching customers and partners DiFacto's own team can't be present at every site to train directly."
+      "content": "Mentorship isn't indefinite - it tapers off as a new instructor demonstrates consistent, independent competence across multiple sessions. Recognizing this point is itself a mentorship skill, distinct from the formal observed delivery assessment that follows in L5-M6, which validates certification-level competency through a single structured observation."
     }
   ],
   "quiz": {
@@ -85,58 +75,58 @@
     "questions": [
       {
         "id": 1,
-        "question": "How is L5 certification validated, per the curriculum's assessment framework?",
+        "question": "Why is mentorship treated as a distinct skill from teaching ability?",
         "options": [
-          "A written exam only",
-          "Observed live delivery, not a written test",
-          "No formal assessment is required"
+          "Mentorship is an ongoing, relational skill distinct from the one-time skill of delivering a session well",
+          "Mentorship is not actually part of the Master Instructor role",
+          "They are identical skills with no meaningful difference"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. L5 certification is confirmed through observed delivery, consistent with practical competency requiring practical demonstration."
+        "correctAnswer": 0,
+        "feedback": "Correct. Teaching well and mentoring someone else through their own development are different skills."
       },
       {
         "id": 2,
-        "question": "What does an observed delivery assessment evaluate?",
+        "question": "What do new instructors typically struggle with most?",
         "options": [
-          "Only technical accuracy of content",
-          "Both technical accuracy and pedagogical skills like structuring, understanding checks, and feedback",
-          "Only how long the session lasted"
+          "Instructional execution - managing a room, pacing, unexpected questions - rather than knowledge gaps",
+          "New instructors rarely struggle with anything",
+          "Technical content knowledge, since they haven't learned the material"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Observed delivery evaluates the full range of teaching skills built throughout L5."
+        "correctAnswer": 0,
+        "feedback": "Correct. New instructors typically know the material but need support with instructional execution."
       },
       {
         "id": 3,
-        "question": "Why is practice delivery recommended before the formal observed assessment?",
+        "question": "What should a mentor generally do during a mentee's live session?",
         "options": [
-          "Practice is unnecessary",
-          "It applies feedback principles to one's own technique, reducing risk in the first live delivery",
-          "Practice sessions count as the formal assessment"
+          "Leave the room entirely during the session",
+          "Take over whenever the new instructor stumbles",
+          "Hold back unless something genuinely incorrect or unsafe is being taught, saving feedback for afterward"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Practicing beforehand reduces the risk of treating the formal assessment as the first attempt."
+        "correctAnswer": 2,
+        "feedback": "Correct. Interrupting unnecessarily can undermine the new instructor's confidence and authority."
       },
       {
         "id": 4,
-        "question": "What happens if an observed delivery doesn't meet the certification bar?",
+        "question": "What should a post-session debrief start with?",
         "options": [
-          "It's a final, unappealable failure with no path forward",
-          "It's treated as developmental feedback, consistent with the re-sit policy used elsewhere in the curriculum",
-          "The candidate is automatically certified anyway"
+          "Debriefs are not necessary after a mentee's session",
+          "The mentee's self-assessment, before the mentor adds feedback",
+          "The mentor's complete evaluation, before asking the mentee anything"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. An unsuccessful observation is feedback for development, not a final outcome."
+        "feedback": "Correct. Starting with self-assessment builds the new instructor's own evaluative judgment."
       },
       {
         "id": 5,
-        "question": "What does DiFacto Master IMR Instructor certification enable?",
+        "question": "Is mentorship meant to continue indefinitely?",
         "options": [
-          "Nothing beyond personal recognition",
-          "Training and certifying other MoRo users, extending DiFacto's training reach",
-          "Only teaching L1 content"
+          "Mentorship lasts exactly one session",
+          "No - it tapers off as the new instructor demonstrates consistent, independent competence",
+          "Yes, mentorship never ends for a certified instructor"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Certified Master Instructors become part of DiFacto's scaling mechanism for training delivery."
+        "feedback": "Correct. Mentorship support fades as competence and confidence build, rather than continuing indefinitely."
       }
     ]
   }

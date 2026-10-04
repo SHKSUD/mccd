@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 01",
+      "eyebrow": "Level 5 · Module 1 · Section 01",
       "title": "From Practitioner to Instructor",
       "learningObjectives": [
         "Understand the distinct skill set required to teach, separate from technical competency",
@@ -25,13 +25,13 @@
         },
         {
           "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings — the category MoRo belongs to."
         }
       ]
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 02",
+      "eyebrow": "Level 5 · Module 1 · Section 02",
       "title": "How Adults Learn Technical Skills",
       "learningObjectives": [
         "Understand general principles of adult learning relevant to technical training",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 03",
+      "eyebrow": "Level 5 · Module 1 · Section 03",
       "title": "Structuring a Teaching Session",
       "learningObjectives": [
         "Understand general principles for structuring an effective training session",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 04",
+      "eyebrow": "Level 5 · Module 1 · Section 04",
       "title": "Recognizing and Addressing Learner Struggle",
       "learningObjectives": [
         "Understand common signs that a learner is struggling with material",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 05",
+      "eyebrow": "Level 5 · Module 1 · Section 05",
       "title": "Giving Effective Feedback",
       "learningObjectives": [
         "Understand principles of effective feedback during skills training",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 5 \u00b7 Module 1 \u00b7 Section 06",
+      "eyebrow": "Level 5 · Module 1 · Section 06",
       "title": "What This Track Builds Toward",
       "learningObjectives": [
         "Understand the progression through the remaining L5 modules",
@@ -87,9 +87,9 @@
         "id": 1,
         "question": "Does strong technical competency automatically make someone a good instructor?",
         "options": [
-          "Yes, technical skill and teaching skill are the same thing",
+          "Instructor ability has no relationship to technical skill at all",
           "No - teaching is a distinct skill that L5 builds deliberately",
-          "Instructor ability has no relationship to technical skill at all"
+          "Yes, technical skill and teaching skill are the same thing"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. L5 deliberately builds teaching skill in already technically competent practitioners."
@@ -99,43 +99,43 @@
         "question": "What do adult learners generally engage best with?",
         "options": [
           "Abstract theory disconnected from practical application",
-          "Material connected to practical relevance for their actual job",
-          "Adult learners have no particular learning preferences"
+          "Adult learners have no particular learning preferences",
+          "Material connected to practical relevance for their actual job"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Practical relevance tends to drive stronger engagement for adult technical learners."
       },
       {
         "id": 3,
         "question": "Why does hands-on practice matter in training session structure?",
         "options": [
-          "It doesn't matter - explanation alone is sufficient",
           "Learners retain procedural knowledge far better through guided practice than explanation alone",
+          "It doesn't matter - explanation alone is sufficient",
           "Hands-on practice should always replace explanation entirely"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. A balance of explanation and genuine hands-on practice supports better retention."
       },
       {
         "id": 4,
         "question": "How should instructors check for learner understanding?",
         "options": [
-          "Assume silence means full comprehension",
           "Actively check, such as asking learners to explain back, not just asking if there are questions",
+          "Assume silence means full comprehension",
           "Understanding never needs checking"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Active checking is more reliable than assuming silence indicates comprehension."
       },
       {
         "id": 5,
         "question": "What makes feedback effective during skills training?",
         "options": [
+          "Feedback should be avoided entirely",
           "Vague encouragement given at the end of the session",
-          "Specific and timely feedback given close to the action",
-          "Feedback should be avoided entirely"
+          "Specific and timely feedback given close to the action"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Specific, timely feedback helps learners improve their next attempt."
       }
     ]

@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 01",
+      "eyebrow": "Level 4B · Module 5 · Section 01",
       "title": "The Capstone Model",
       "learningObjectives": [
         "Understand why L4B's final assessment takes a capstone project format rather than a standard written/practical test",
@@ -29,7 +29,7 @@
         },
         {
           "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings \u2014 the category MoRo belongs to."
+          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings — the category MoRo belongs to."
         },
         {
           "term": "SME (Subject Matter Expert)",
@@ -39,7 +39,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 02",
+      "eyebrow": "Level 4B · Module 5 · Section 02",
       "title": "What the Capstone Involves",
       "learningObjectives": [
         "Understand the general scope of a capstone project",
@@ -49,7 +49,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 03",
+      "eyebrow": "Level 4B · Module 5 · Section 03",
       "title": "Project Documentation",
       "learningObjectives": [
         "Understand what documentation a capstone submission requires",
@@ -59,7 +59,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 04",
+      "eyebrow": "Level 4B · Module 5 · Section 04",
       "title": "Peer Review Process",
       "learningObjectives": [
         "Understand the general structure of peer review for this capstone",
@@ -69,7 +69,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 05",
+      "eyebrow": "Level 4B · Module 5 · Section 05",
       "title": "Evaluation Criteria",
       "learningObjectives": [
         "Understand the general categories a capstone is evaluated against",
@@ -79,7 +79,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4B \u00b7 Module 5 \u00b7 Section 06",
+      "eyebrow": "Level 4B · Module 5 · Section 06",
       "title": "Completing Advanced Programming Certification",
       "learningObjectives": [
         "Understand what DiFacto Certified Advanced IMR Programmer status represents",
@@ -95,22 +95,22 @@
         "id": 1,
         "question": "How does L4B's final assessment differ from earlier levels?",
         "options": [
+          "L4B has no final assessment",
           "It doesn't differ - same written/practical format throughout",
-          "It uses a capstone project evaluated by peer review, rather than a standard written/practical test",
-          "L4B has no final assessment"
+          "It uses a capstone project evaluated by peer review, rather than a standard written/practical test"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The capstone model is deliberately different, borrowed from engineering degree practice."
       },
       {
         "id": 2,
         "question": "What does the capstone project synthesize?",
         "options": [
-          "Only one isolated skill from L4B",
           "The preceding L4B modules (CNC integration, PLC integration, complex payload, fleet optimization) into one project",
-          "Content unrelated to the L4B curriculum"
+          "Content unrelated to the L4B curriculum",
+          "Only one isolated skill from L4B"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. The capstone draws together the full L4B module sequence into one integrated project."
       },
       {
@@ -129,10 +129,10 @@
         "question": "Who evaluates the capstone project?",
         "options": [
           "Only an instructor, with no peer involvement",
-          "Peer review by others who've completed or are completing the same track",
-          "An automated grading system"
+          "An automated grading system",
+          "Peer review by others who've completed or are completing the same track"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Peer review reflects how real engineering work is typically reviewed in practice."
       },
       {

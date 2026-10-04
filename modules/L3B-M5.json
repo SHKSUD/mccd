@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 01",
+      "eyebrow": "Level 3B · Module 5 · Section 01",
       "title": "Why Custom Integration Matters",
       "learningObjectives": [
         "Understand why REST API access exists beyond the standard ANT interface",
@@ -35,7 +35,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 02",
+      "eyebrow": "Level 3B · Module 5 · Section 02",
       "title": "What the API Exposes",
       "learningObjectives": [
         "Understand the general categories of functionality available via the API",
@@ -45,7 +45,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 03",
+      "eyebrow": "Level 3B · Module 5 · Section 03",
       "title": "Authentication and Access Control",
       "learningObjectives": [
         "Understand the general principle of API authentication",
@@ -55,7 +55,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 04",
+      "eyebrow": "Level 3B · Module 5 · Section 04",
       "title": "Common Integration Patterns",
       "learningObjectives": [
         "Understand typical use cases for custom API integration",
@@ -65,7 +65,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 05",
+      "eyebrow": "Level 3B · Module 5 · Section 05",
       "title": "Testing an Integration Safely",
       "learningObjectives": [
         "Understand the principle of testing API-triggered actions before production use",
@@ -75,7 +75,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3B \u00b7 Module 5 \u00b7 Section 06",
+      "eyebrow": "Level 3B · Module 5 · Section 06",
       "title": "Maintaining an Integration Over Time",
       "learningObjectives": [
         "Understand that an integration isn't a one-time build",
@@ -91,9 +91,9 @@
         "id": 1,
         "question": "Why does MoRo's REST API exist alongside the ANT interface?",
         "options": [
-          "It's a redundant backup system",
+          "It replaces ANT entirely",
           "To allow programmatic integration with systems ANT doesn't natively cover",
-          "It replaces ANT entirely"
+          "It's a redundant backup system"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The API extends integration capability beyond what the standard interface provides."
@@ -103,30 +103,30 @@
         "question": "What are the two broad categories of API functionality?",
         "options": [
           "Fast access and slow access",
-          "Read access (pulling data out) and control access (pushing commands in)",
-          "Public access and private access"
+          "Public access and private access",
+          "Read access (pulling data out) and control access (pushing commands in)"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Read access and control access are the two fundamental categories."
       },
       {
         "id": 3,
         "question": "Why does API access control matter particularly for MoRo?",
         "options": [
-          "It doesn't matter for this system",
           "Because control-access requests can move physical equipment",
+          "It doesn't matter for this system",
           "Only for data privacy reasons"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Physical-world control capability raises the stakes of unauthorized or careless access."
       },
       {
         "id": 4,
         "question": "Should every facility pursue custom API integration?",
         "options": [
-          "Yes, it's always beneficial",
+          "Only facilities with more than 10 units",
           "No - only where a genuine integration gap exists beyond standard tools",
-          "Only facilities with more than 10 units"
+          "Yes, it's always beneficial"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Custom integration adds complexity and is only worthwhile when a real gap exists."
@@ -136,10 +136,10 @@
         "question": "Why does control-access integration testing carry more risk than read-access testing?",
         "options": [
           "There is no difference in risk",
-          "Control-access testing can trigger real physical actions if something behaves unexpectedly",
-          "Read-access testing is always more complex"
+          "Read-access testing is always more complex",
+          "Control-access testing can trigger real physical actions if something behaves unexpectedly"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Control-access testing requires added caution since it can move physical equipment."
       }
     ]

@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 01",
+      "eyebrow": "Level 4B · Module 3 · Section 01",
       "title": "The Most Complex Payload Configuration",
       "learningObjectives": [
         "Understand why lift-and-rotate is treated as the most complex payload configuration",
@@ -21,7 +21,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 02",
+      "eyebrow": "Level 4B · Module 3 · Section 02",
       "title": "Mechanics of Combined Lift and Rotation",
       "learningObjectives": [
         "Understand the general mechanical principles of combined lift-and-rotate operation",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 03",
+      "eyebrow": "Level 4B · Module 3 · Section 03",
       "title": "Configuring Lift and Rotation Parameters",
       "learningObjectives": [
         "Understand the general parameters involved in configuring this payload type",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 04",
+      "eyebrow": "Level 4B · Module 3 · Section 04",
       "title": "Safety Considerations Specific to This Configuration",
       "learningObjectives": [
         "Understand safety considerations unique to lift-and-rotate operation",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 05",
+      "eyebrow": "Level 4B · Module 3 · Section 05",
       "title": "Integration With Fixed Equipment",
       "learningObjectives": [
         "Understand how lift-and-rotate configurations typically interact with fixed equipment",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4B \u00b7 Module 3 \u00b7 Section 06",
+      "eyebrow": "Level 4B · Module 3 · Section 06",
       "title": "Testing and Validating This Configuration",
       "learningObjectives": [
         "Apply testing principles specifically to the complexity of this payload type",
@@ -88,11 +88,11 @@
         "id": 2,
         "question": "How does combined lift-and-rotate affect load stability considerations?",
         "options": [
-          "Stability is unaffected by combining these movements",
           "The stability profile changes continuously as both lift height and rotation angle shift",
+          "Stability is unaffected by combining these movements",
           "Only rotation affects stability, not lift height"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Two simultaneous degrees of freedom compound center-of-gravity considerations."
       },
       {
@@ -100,21 +100,21 @@
         "question": "What clearance consideration is specific to lift-and-rotate configurations?",
         "options": [
           "No special clearance is needed",
-          "The swept area during rotation at various lift heights, beyond the resting footprint",
-          "Only floor-level clearance matters"
+          "Only floor-level clearance matters",
+          "The swept area during rotation at various lift heights, beyond the resting footprint"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The full range of motion, not just resting footprint, must be accounted for in workspace design."
       },
       {
         "id": 4,
         "question": "Why does handshake timing need adjustment for this payload type?",
         "options": [
-          "Handshake timing is identical regardless of payload type",
           "Combined lift-and-rotate movements take more time than a simple delivery, requiring adjusted timing",
-          "This payload type doesn't use handshakes"
+          "This payload type doesn't use handshakes",
+          "Handshake timing is identical regardless of payload type"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Timing must account for the additional time these combined movements require."
       },
       {
@@ -122,10 +122,10 @@
         "question": "What should validation testing cover for this configuration?",
         "options": [
           "A single representative test position is always sufficient",
-          "The full range of lift heights and rotation angles the application requires",
-          "Testing isn't necessary for this configuration"
+          "Testing isn't necessary for this configuration",
+          "The full range of lift heights and rotation angles the application requires"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Full operational envelope testing is needed given the compounded complexity."
       }
     ]

@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 01",
+      "eyebrow": "Level 3A · Module 4 · Section 01",
       "title": "From Awareness to Diagnosis",
       "learningObjectives": [
         "Recall the battery fundamentals covered at L2",
@@ -21,7 +21,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 02",
+      "eyebrow": "Level 3A · Module 4 · Section 02",
       "title": "How Battery Health Degrades Over Time",
       "learningObjectives": [
         "Understand the general concept of battery capacity degradation",
@@ -31,7 +31,7 @@
       "keyTerms": [
         {
           "term": "LFP (Lithium Iron Phosphate)",
-          "note": "MoRo's battery chemistry, chosen for thermal stability and long cycle life \u2014 covered in detail in L2-M3."
+          "note": "MoRo's battery chemistry, chosen for thermal stability and long cycle life — covered in detail in L2-M3."
         },
         {
           "term": "capacity degradation",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 03",
+      "eyebrow": "Level 3A · Module 4 · Section 03",
       "title": "Diagnostic Indicators of Battery Issues",
       "learningObjectives": [
         "Understand general categories of battery-related diagnostic signals",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 04",
+      "eyebrow": "Level 3A · Module 4 · Section 04",
       "title": "Using the Diagnostic Interface for Battery Data",
       "learningObjectives": [
         "Understand how the diagnostic interface (from L3A-M5) applies specifically to battery health",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 05",
+      "eyebrow": "Level 3A · Module 4 · Section 05",
       "title": "Deciding on Replacement",
       "learningObjectives": [
         "Understand the general criteria for recommending battery replacement",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3A \u00b7 Module 4 \u00b7 Section 06",
+      "eyebrow": "Level 3A · Module 4 · Section 06",
       "title": "Safe Battery Handling",
       "learningObjectives": [
         "Understand general safety considerations specific to battery handling",
@@ -98,44 +98,44 @@
         "id": 2,
         "question": "What pattern of change is more likely to indicate an actual fault versus normal aging?",
         "options": [
-          "Gradual, consistent decline across metrics",
           "A sudden change in charging or runtime behavior",
+          "Gradual, consistent decline across metrics",
           "There is no meaningful distinction"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Sudden changes are more indicative of an actual issue than gradual, expected aging."
       },
       {
         "id": 3,
         "question": "What does the diagnostic interface provide for battery health beyond the operator dashboard?",
         "options": [
+          "Only the current charge percentage",
           "Nothing additional",
-          "Detailed charge cycle history, temperature behavior, and cell-level data where available",
-          "Only the current charge percentage"
+          "Detailed charge cycle history, temperature behavior, and cell-level data where available"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The diagnostic interface exposes deeper battery data for technician-level assessment."
       },
       {
         "id": 4,
         "question": "What should a replacement decision primarily weigh?",
         "options": [
+          "Replacement should happen on a fixed schedule regardless of condition",
           "Only the battery's age in months",
-          "Remaining capacity against the unit's actual operational runtime need",
-          "Replacement should happen on a fixed schedule regardless of condition"
+          "Remaining capacity against the unit's actual operational runtime need"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Fitness for actual operational use matters more than comparison to original spec alone."
       },
       {
         "id": 5,
         "question": "What should prompt immediate escalation rather than routine battery handling?",
         "options": [
-          "Normal gradual capacity decline",
           "Signs like physical damage, unusual heat, or swelling",
-          "A battery reaching exactly 50% charge"
+          "A battery reaching exactly 50% charge",
+          "Normal gradual capacity decline"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Physical damage, unusual heat, or swelling indicate a situation requiring escalation, not routine handling."
       }
     ]

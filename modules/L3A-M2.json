@@ -8,7 +8,6 @@
   "previousModule": "L3A-M1",
   "prerequisite": "L3A-M1 (60%)",
   "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific maintenance schedules and procedures pending DiFacto engineering documentation.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -71,7 +70,6 @@
       "content": "Sometimes a routine preventive check reveals something beyond normal wear - early signs of a developing issue. When this happens, the response shifts from the preventive checklist to the predictive and diagnostic methodology covered in later modules. Catching this during scheduled preventive work, rather than waiting for a failure, is exactly the value preventive maintenance is meant to provide."
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
@@ -90,22 +88,22 @@
         "id": 2,
         "question": "What are maintenance intervals typically based on?",
         "options": [
-          "Calendar time only, regardless of usage",
           "A combination of elapsed time and actual usage (hours, cycles)",
+          "Calendar time only, regardless of usage",
           "Random scheduling"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Usage-based scheduling accounts for units that work harder needing attention sooner."
       },
       {
         "id": 3,
         "question": "Why do sensors benefit from periodic cleaning and calibration checks?",
         "options": [
-          "They don't need maintenance",
           "Minor obstruction or drift affects navigation accuracy over time",
+          "They don't need maintenance",
           "Only to improve their appearance"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Sensor performance can degrade gradually, affecting navigation if not checked."
       },
       {
@@ -124,10 +122,10 @@
         "question": "What should happen if a preventive check reveals signs of a developing issue?",
         "options": [
           "Ignore it since it's outside the preventive checklist scope",
-          "Shift to predictive/diagnostic methodology to address what was found",
-          "Wait until the next scheduled visit"
+          "Wait until the next scheduled visit",
+          "Shift to predictive/diagnostic methodology to address what was found"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Catching developing issues during preventive work is exactly the value it provides."
       }
     ]

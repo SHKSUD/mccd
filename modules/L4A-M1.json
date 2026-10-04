@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 01",
+      "eyebrow": "Level 4A · Module 1 · Section 01",
       "title": "From Technician to Systems Engineer",
       "learningObjectives": [
         "Understand how the Systems Engineer track differs from the Technician track",
@@ -33,7 +33,7 @@
         },
         {
           "term": "MES/WMS",
-          "note": "Manufacturing Execution System and Warehouse Management System \u2014 the production and inventory tracking software MoRo commonly integrates with."
+          "note": "Manufacturing Execution System and Warehouse Management System — the production and inventory tracking software MoRo commonly integrates with."
         },
         {
           "term": "ERP (Enterprise Resource Planning)",
@@ -43,7 +43,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 02",
+      "eyebrow": "Level 4A · Module 1 · Section 02",
       "title": "What Is a System Architecture?",
       "learningObjectives": [
         "Understand the concept of system architecture in this context",
@@ -59,7 +59,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 03",
+      "eyebrow": "Level 4A · Module 1 · Section 03",
       "title": "Layers of Integration",
       "learningObjectives": [
         "Understand the general layering of industrial automation systems",
@@ -69,7 +69,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 04",
+      "eyebrow": "Level 4A · Module 1 · Section 04",
       "title": "Design Principles for Reliable Integration",
       "learningObjectives": [
         "Understand general principles that support reliable system integration",
@@ -79,7 +79,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 05",
+      "eyebrow": "Level 4A · Module 1 · Section 05",
       "title": "Documenting an Architecture",
       "learningObjectives": [
         "Understand what architecture documentation typically includes",
@@ -89,7 +89,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4A \u00b7 Module 1 \u00b7 Section 06",
+      "eyebrow": "Level 4A · Module 1 · Section 06",
       "title": "What This Track Builds Toward",
       "learningObjectives": [
         "Understand the progression through the remaining L4A modules",
@@ -99,11 +99,11 @@
       "keyTerms": [
         {
           "term": "OPC-UA",
-          "note": "A standardized, vendor-neutral communication protocol used in industrial automation \u2014 covered in depth in L4A-M3."
+          "note": "A standardized, vendor-neutral communication protocol used in industrial automation — covered in depth in L4A-M3."
         },
         {
           "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness \u2014 the category MoRo belongs to."
+          "note": "A robot that navigates autonomously using sensor-based awareness — the category MoRo belongs to."
         }
       ]
     }
@@ -115,9 +115,9 @@
         "id": 1,
         "question": "How does the Systems Engineer role differ from the Technician role?",
         "options": [
-          "There is no difference",
+          "Systems Engineers only perform physical repairs",
           "Systems Engineers design how MoRo integrates into a larger cell with other equipment and systems",
-          "Systems Engineers only perform physical repairs"
+          "There is no difference"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The Systems Engineer track addresses integration and design, building on the Technician foundation."
@@ -127,19 +127,19 @@
         "question": "What does a system architecture describe?",
         "options": [
           "Only MoRo's physical dimensions",
-          "How different components connect and communicate as a whole system",
-          "The building's physical layout"
+          "The building's physical layout",
+          "How different components connect and communicate as a whole system"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. System architecture is about the complete picture of connections and data flow."
       },
       {
         "id": 3,
         "question": "At what level does MoRo primarily interact within the typical automation layering?",
         "options": [
-          "Only the enterprise level",
+          "MoRo has no defined layer",
           "Primarily the floor level, with data surfacing upward through other layers",
-          "MoRo has no defined layer"
+          "Only the enterprise level"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. MoRo operates at the floor level, with integration extending its visibility upward."
@@ -148,22 +148,22 @@
         "id": 4,
         "question": "What does 'loose coupling' mean in integration design?",
         "options": [
-          "Physical bolts that are not fully tightened",
           "Components that depend on each other minimally, making them easier to maintain independently",
+          "Physical bolts that are not fully tightened",
           "A type of network cable"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Loose coupling supports easier troubleshooting and maintenance across components."
       },
       {
         "id": 5,
         "question": "Why does architecture documentation matter for long-term maintainability?",
         "options": [
-          "It doesn't matter once the system works",
           "Integrated systems often outlive the original engineer's direct involvement",
+          "It doesn't matter once the system works",
           "Documentation is only required for legal compliance"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Good documentation lets future engineers maintain the system without reverse-engineering it."
       }
     ]

@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 01",
+      "eyebrow": "Level 4A · Module 5 · Section 01",
       "title": "From Operating a Fleet to Designing a Cell",
       "learningObjectives": [
         "Recall multi-robot fleet concepts from L2-M4",
@@ -27,7 +27,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 02",
+      "eyebrow": "Level 4A · Module 5 · Section 02",
       "title": "Determining Fleet Size",
       "learningObjectives": [
         "Understand general factors influencing how many units a cell requires",
@@ -37,7 +37,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 03",
+      "eyebrow": "Level 4A · Module 5 · Section 03",
       "title": "Spatial Design for Multi-Unit Operation",
       "learningObjectives": [
         "Understand spatial design considerations specific to multiple coordinated units",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 04",
+      "eyebrow": "Level 4A · Module 5 · Section 04",
       "title": "Coordinating Multiple Units with Fixed Equipment",
       "learningObjectives": [
         "Understand the added complexity when multiple units interact with the same fixed equipment",
@@ -57,7 +57,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 05",
+      "eyebrow": "Level 4A · Module 5 · Section 05",
       "title": "Designing for Graceful Degradation",
       "learningObjectives": [
         "Understand the principle of graceful degradation in multi-robot cell design",
@@ -67,7 +67,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4A \u00b7 Module 5 \u00b7 Section 06",
+      "eyebrow": "Level 4A · Module 5 · Section 06",
       "title": "Validating a Multi-Robot Cell Design",
       "learningObjectives": [
         "Understand how to validate a cell design before full deployment",
@@ -83,9 +83,9 @@
         "id": 1,
         "question": "What does this module address, building on L2-M4's fleet concepts?",
         "options": [
-          "Only operator-level fleet monitoring",
+          "Unrelated single-unit topics",
           "The Systems Engineer's role in designing, not just operating, multi-robot cells",
-          "Unrelated single-unit topics"
+          "Only operator-level fleet monitoring"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. This module covers the design side of multi-robot cells, building on L2-M4's operational foundation."
@@ -95,21 +95,21 @@
         "question": "What factors influence fleet sizing for a cell?",
         "options": [
           "Only the cost of each unit",
-          "Throughput requirements, physical space, and redundancy needs",
-          "Fleet size is always fixed at one unit"
+          "Fleet size is always fixed at one unit",
+          "Throughput requirements, physical space, and redundancy needs"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Fleet sizing balances throughput demand, space, and redundancy considerations."
       },
       {
         "id": 3,
         "question": "How does spatial design for multi-robot cells connect to earlier curriculum content?",
         "options": [
-          "It's unrelated to anything covered before",
           "It builds directly on zone management principles from L3B-M3",
+          "It's unrelated to anything covered before",
           "It only relates to battery charging"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Multi-robot spatial design extends the zone management concepts from L3B-M3."
       },
       {
@@ -117,10 +117,10 @@
         "question": "What does 'graceful degradation' mean in cell design?",
         "options": [
           "The cell stops entirely if any unit goes offline",
-          "The cell continues operating at reduced capacity if one unit is unavailable",
-          "Equipment physically wears down over time"
+          "Equipment physically wears down over time",
+          "The cell continues operating at reduced capacity if one unit is unavailable"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Graceful degradation avoids single points of failure that would collapse the whole cell's function."
       },
       {

@@ -110,9 +110,9 @@
         "id": 2,
         "question": "What does 'cycle time' refer to?",
         "options": [
-          "The battery charging duration",
+          "The number of units in a fleet",
           "The time for a mission to complete from start to finish",
-          "The number of units in a fleet"
+          "The battery charging duration"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Cycle time measures mission duration, start to finish."
@@ -121,22 +121,22 @@
         "id": 3,
         "question": "At L2, are you expected to actively optimize routes and speeds yourself?",
         "options": [
-          "Yes, this is a core L2 responsibility",
           "No - that level of optimization belongs to L3B; L2 requires awareness only",
-          "Only on weekends"
+          "Only on weekends",
+          "Yes, this is a core L2 responsibility"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Detailed route and speed optimization is L3B (Programmer) territory."
       },
       {
         "id": 4,
         "question": "Does MoRo require operator action to log operational data?",
         "options": [
+          "Data logging doesn't exist",
           "Yes, data must be manually recorded",
-          "No - it logs data automatically during operation",
-          "Data logging doesn't exist"
+          "No - it logs data automatically during operation"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. MoRo logs mission timing and status automatically, without operator input."
       },
       {
@@ -144,10 +144,10 @@
         "question": "What comes after completing L1-L2 in the curriculum?",
         "options": [
           "The curriculum ends here",
-          "It branches into specialist tracks: L3A for technicians, L3B for programmers",
-          "Automatic certification with no further levels"
+          "Automatic certification with no further levels",
+          "It branches into specialist tracks: L3A for technicians, L3B for programmers"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. L1-L2 is the operational foundation before branching into role-specific specialist tracks."
       }
     ]

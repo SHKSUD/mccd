@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 01",
+      "eyebrow": "Level 4A · Module 3 · Section 01",
       "title": "Why OPC-UA Matters for Industrial Integration",
       "learningObjectives": [
         "Understand what OPC-UA is and why it's widely used in industrial settings",
@@ -39,7 +39,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 02",
+      "eyebrow": "Level 4A · Module 3 · Section 02",
       "title": "How OPC-UA Exposes Data",
       "learningObjectives": [
         "Understand the general concept of data exposure via OPC-UA",
@@ -49,7 +49,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 03",
+      "eyebrow": "Level 4A · Module 3 · Section 03",
       "title": "Configuring an OPC-UA Server Connection",
       "learningObjectives": [
         "Understand the general setup process for OPC-UA connectivity",
@@ -59,7 +59,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 04",
+      "eyebrow": "Level 4A · Module 3 · Section 04",
       "title": "SCADA Visibility and Monitoring",
       "learningObjectives": [
         "Understand what SCADA-level visibility into MoRo operations provides",
@@ -69,7 +69,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 05",
+      "eyebrow": "Level 4A · Module 3 · Section 05",
       "title": "Troubleshooting OPC-UA Connectivity",
       "learningObjectives": [
         "Understand common categories of OPC-UA connection issues",
@@ -79,7 +79,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4A \u00b7 Module 3 \u00b7 Section 06",
+      "eyebrow": "Level 4A · Module 3 · Section 06",
       "title": "When OPC-UA Versus Custom API Makes Sense",
       "learningObjectives": [
         "Understand the decision criteria between OPC-UA and REST API integration approaches",
@@ -95,20 +95,20 @@
         "id": 1,
         "question": "Why is OPC-UA widely used in industrial automation?",
         "options": [
-          "It's required by law in all facilities",
           "It's a standardized, vendor-neutral protocol enabling consistent data exchange across different equipment brands",
+          "It's required by law in all facilities",
           "It only works with MoRo specifically"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. OPC-UA's standardization avoids needing custom connections for every vendor pairing."
       },
       {
         "id": 2,
         "question": "How does OPC-UA integration differ from the REST API integration covered in L3B-M5?",
         "options": [
-          "They are identical with no meaningful difference",
+          "OPC-UA only works for battery data",
           "OPC-UA is the industry-standard path for SCADA systems; REST API suits more custom, bespoke integration",
-          "OPC-UA only works for battery data"
+          "They are identical with no meaningful difference"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Each approach suits different integration contexts and receiving systems."
@@ -117,11 +117,11 @@
         "id": 3,
         "question": "Is security configuration optional when setting up OPC-UA connectivity?",
         "options": [
-          "Yes, it can be skipped for convenience",
           "No - an improperly secured connection exposes operational data broadly",
-          "Security only matters for REST API, not OPC-UA"
+          "Security only matters for REST API, not OPC-UA",
+          "Yes, it can be skipped for convenience"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Security configuration is never optional for OPC-UA connectivity."
       },
       {
@@ -129,21 +129,21 @@
         "question": "What does SCADA-level visibility into MoRo provide?",
         "options": [
           "Nothing useful",
-          "MoRo status visible alongside other equipment in the facility's existing monitoring view",
-          "Only maintenance history, no live status"
+          "Only maintenance history, no live status",
+          "MoRo status visible alongside other equipment in the facility's existing monitoring view"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. OPC-UA connectivity integrates MoRo into existing facility-wide SCADA monitoring."
       },
       {
         "id": 5,
         "question": "How should a Systems Engineer decide between OPC-UA and custom REST API integration?",
         "options": [
+          "The choice doesn't matter - they're interchangeable",
           "Always default to REST API regardless of context",
-          "Based on what the receiving system actually expects",
-          "The choice doesn't matter - they're interchangeable"
+          "Based on what the receiving system actually expects"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The decision depends on what the target system natively expects, not a fixed preference."
       }
     ]

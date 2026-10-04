@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 01",
+      "eyebrow": "Level 3A · Module 5 · Section 01",
       "title": "From Operator Awareness to Technician Diagnosis",
       "learningObjectives": [
         "Understand the shift in diagnostic responsibility from L2 to L3A",
@@ -27,7 +27,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 02",
+      "eyebrow": "Level 3A · Module 5 · Section 02",
       "title": "The Diagnostic Tool Interface",
       "learningObjectives": [
         "Understand the general purpose of the diagnostic interface, distinct from the operator-level ANT dashboard",
@@ -43,7 +43,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 03",
+      "eyebrow": "Level 3A · Module 5 · Section 03",
       "title": "Reading a Fault Code Tree",
       "learningObjectives": [
         "Understand the general structure of a fault code hierarchy",
@@ -59,7 +59,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 04",
+      "eyebrow": "Level 3A · Module 5 · Section 04",
       "title": "Root Cause Methodology",
       "learningObjectives": [
         "Understand the difference between a symptom and a root cause",
@@ -75,7 +75,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 05",
+      "eyebrow": "Level 3A · Module 5 · Section 05",
       "title": "Documenting a Diagnosis",
       "learningObjectives": [
         "Understand why diagnostic documentation matters beyond the immediate fix",
@@ -85,7 +85,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3A \u00b7 Module 5 \u00b7 Section 06",
+      "eyebrow": "Level 3A · Module 5 · Section 06",
       "title": "The Escalation Decision",
       "learningObjectives": [
         "Know the criteria for escalating beyond technician-level repair",
@@ -112,11 +112,11 @@
         "id": 2,
         "question": "How should a fault code tree generally be navigated?",
         "options": [
-          "Guess at a specific code first, then check the category",
           "Start with the broad category and narrow systematically to the specific cause",
+          "Guess at a specific code first, then check the category",
           "Fault codes aren't organized hierarchically"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Fault code trees are navigated from broad category to specific cause, not the reverse."
       },
       {
@@ -134,22 +134,22 @@
         "id": 4,
         "question": "Why does diagnostic documentation matter beyond the immediate repair?",
         "options": [
+          "It's only required for warranty claims",
           "It doesn't matter once the issue is fixed",
-          "It builds pattern history and makes future escalation more efficient",
-          "It's only required for warranty claims"
+          "It builds pattern history and makes future escalation more efficient"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Documentation supports pattern recognition across units and efficient escalation."
       },
       {
         "id": 5,
         "question": "Is escalating a diagnosis to DiFacto engineering a sign of inadequate technician skill?",
         "options": [
-          "Yes, a skilled technician should never need to escalate",
           "No - appropriate escalation with complete documentation reflects good diagnostic judgment",
+          "Yes, a skilled technician should never need to escalate",
           "Only if it happens more than once"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Escalation is a normal, appropriate part of the diagnostic process in the right circumstances."
       }
     ]

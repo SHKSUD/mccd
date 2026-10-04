@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 01",
+      "eyebrow": "Level 3B · Module 4 · Section 01",
       "title": "From Understanding Handshakes to Configuring Them",
       "learningObjectives": [
         "Recall the handshake concept introduced in L2-M2",
@@ -27,7 +27,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 02",
+      "eyebrow": "Level 3B · Module 4 · Section 02",
       "title": "The Request/Ready/Complete Sequence",
       "learningObjectives": [
         "Understand the general structure of the FANUC I/O handshake",
@@ -43,7 +43,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 03",
+      "eyebrow": "Level 3B · Module 4 · Section 03",
       "title": "Configuring Digital I/O Points",
       "learningObjectives": [
         "Understand the general concept of digital I/O configuration for this integration",
@@ -53,7 +53,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 04",
+      "eyebrow": "Level 3B · Module 4 · Section 04",
       "title": "Testing the Handshake Sequence",
       "learningObjectives": [
         "Understand the testing approach for a newly configured handshake",
@@ -63,7 +63,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 05",
+      "eyebrow": "Level 3B · Module 4 · Section 05",
       "title": "Troubleshooting a Stalled Handshake",
       "learningObjectives": [
         "Apply troubleshooting methodology (familiar from the Technician track) to handshake issues",
@@ -73,7 +73,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3B \u00b7 Module 4 \u00b7 Section 06",
+      "eyebrow": "Level 3B · Module 4 · Section 06",
       "title": "This Module's Place in the Commissioning Process",
       "learningObjectives": [
         "Understand how FANUC integration fits into the broader commissioning workflow",
@@ -89,22 +89,22 @@
         "id": 1,
         "question": "What does this module cover, building on the handshake concept from L2-M2?",
         "options": [
-          "Only operator-level recognition of stalled handshakes",
           "Actually configuring the FANUC I/O handshake, a signature DiFacto integration capability",
-          "A completely unrelated topic"
+          "A completely unrelated topic",
+          "Only operator-level recognition of stalled handshakes"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Programmers configure the handshake itself, going beyond L2's operator-level awareness."
       },
       {
         "id": 2,
         "question": "What is the confirmed sequence structure for the FANUC I/O handshake?",
         "options": [
-          "Start/stop/reset",
           "Request/ready/complete",
-          "Open/close/lock"
+          "Open/close/lock",
+          "Start/stop/reset"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Request/ready/complete is the confirmed signal sequence per DiFacto's integration framework."
       },
       {
@@ -112,19 +112,19 @@
         "question": "What happens if digital I/O points are incorrectly mapped?",
         "options": [
           "Nothing - mapping doesn't affect handshake reliability",
-          "The handshake becomes unreliable or fails, even if both systems otherwise function correctly",
-          "Only MoRo's navigation is affected, not the handshake"
+          "Only MoRo's navigation is affected, not the handshake",
+          "The handshake becomes unreliable or fails, even if both systems otherwise function correctly"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Correct I/O mapping is essential for reliable handshake behavior."
       },
       {
         "id": 4,
         "question": "Why test a handshake sequence through multiple cycles, not just once?",
         "options": [
-          "One successful test is always sufficient",
+          "Multiple tests are only needed for safety compliance, not reliability",
           "Intermittent failures on repetition can reveal timing issues a single test would miss",
-          "Multiple tests are only needed for safety compliance, not reliability"
+          "One successful test is always sufficient"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Repeated testing surfaces intermittent issues that a single test cycle wouldn't catch."

@@ -263,22 +263,29 @@
       "id": "L5-M3",
       "title": "FANUC Co-Training Module",
       "level": "L5",
-      "duration": "16 hrs",
+      "duration": "12 hrs",
       "file": "modules/L5-M3.json"
     },
     {
       "id": "L5-M4",
       "title": "Lab Infrastructure & Setup",
       "level": "L5",
-      "duration": "16 hrs",
+      "duration": "12 hrs",
       "file": "modules/L5-M4.json"
     },
     {
       "id": "L5-M5",
+      "title": "Mentorship & Coaching for New Instructors",
+      "level": "L5",
+      "duration": "12 hrs",
+      "file": "modules/L5-M5.json"
+    },
+    {
+      "id": "L5-M6",
       "title": "Observed Delivery & Certification",
       "level": "L5",
-      "duration": "16 hrs",
-      "file": "modules/L5-M5.json"
+      "duration": "12 hrs",
+      "file": "modules/L5-M6.json"
     }
   ]
 }

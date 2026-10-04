@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 01",
+      "eyebrow": "Level 4B · Module 1 · Section 01",
       "title": "Why CNC Integration Is Central to This Track",
       "learningObjectives": [
         "Understand why CNC machine tending is emphasized in the Advanced Programming track",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 02",
+      "eyebrow": "Level 4B · Module 1 · Section 02",
       "title": "The Machine Tending Cycle",
       "learningObjectives": [
         "Understand the general cycle of a CNC machine tending operation",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 03",
+      "eyebrow": "Level 4B · Module 1 · Section 03",
       "title": "Payload Considerations for Machine Tending",
       "learningObjectives": [
         "Understand payload configuration choices specific to machine tending",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 04",
+      "eyebrow": "Level 4B · Module 1 · Section 04",
       "title": "Timing and Cycle Optimization",
       "learningObjectives": [
         "Understand how cycle timing affects overall production throughput",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 05",
+      "eyebrow": "Level 4B · Module 1 · Section 05",
       "title": "Handling Exceptions in a Continuous Cycle",
       "learningObjectives": [
         "Understand common exception scenarios in machine tending",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4B \u00b7 Module 1 \u00b7 Section 06",
+      "eyebrow": "Level 4B · Module 1 · Section 06",
       "title": "Validating a Machine Tending Integration",
       "learningObjectives": [
         "Apply testing principles specifically to a continuous-cycle machine tending setup",
@@ -98,9 +98,9 @@
         "id": 2,
         "question": "What does a typical machine tending cycle involve?",
         "options": [
-          "MoRo operates independently with no CNC interaction",
+          "Only software updates, no physical material handling",
           "Delivering material, handshake confirmation, CNC processing, and retrieving the finished part",
-          "Only software updates, no physical material handling"
+          "MoRo operates independently with no CNC interaction"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The cycle repeats continuously through delivery, handshake, processing, and retrieval."
@@ -110,32 +110,32 @@
         "question": "What happens if MoRo's cycle time is slower than the CNC's processing time?",
         "options": [
           "Nothing - timing never matters",
-          "MoRo becomes the throughput bottleneck for the cell",
-          "The CNC automatically speeds up to compensate"
+          "The CNC automatically speeds up to compensate",
+          "MoRo becomes the throughput bottleneck for the cell"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Mismatched cycle timing between MoRo and the CNC directly affects overall throughput."
       },
       {
         "id": 4,
         "question": "Why does exception handling matter in a continuous tending cycle?",
         "options": [
-          "Exceptions never occur in practice",
           "To prevent issues like quality failures or CNC faults from cascading into larger disruptions",
-          "Exception handling is only relevant for software bugs"
+          "Exception handling is only relevant for software bugs",
+          "Exceptions never occur in practice"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Well-designed exception handling keeps isolated issues from becoming larger production problems."
       },
       {
         "id": 5,
         "question": "Why should validation extend beyond a handful of test cycles for this use case?",
         "options": [
-          "A few cycles are always sufficient",
           "Issues may only surface after many repetitions, given the continuous nature of the cycle",
-          "Extended testing is never necessary for CNC integration"
+          "Extended testing is never necessary for CNC integration",
+          "A few cycles are always sufficient"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Extended testing surfaces issues that wouldn't appear in a brief validation run."
       }
     ]

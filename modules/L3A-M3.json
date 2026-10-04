@@ -8,7 +8,6 @@
   "previousModule": "L3A-M2",
   "prerequisite": "L3A-M2 (60%)",
   "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific inspection checklist items pending DiFacto engineering documentation.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -71,7 +70,6 @@
       "content": "Predictive maintenance and diagnostic troubleshooting (covered later in this track) share a common foundation: both depend on recognizing what's normal well enough to notice deviation. The difference is timing - predictive work catches issues before they become operational problems; diagnostics (Module 5) responds once something has already gone wrong. Both skills reinforce each other."
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
@@ -80,19 +78,19 @@
         "question": "What triggers predictive maintenance, as opposed to preventive maintenance?",
         "options": [
           "A fixed calendar schedule, same as preventive",
-          "Actual observed signs of degradation, rather than a fixed schedule",
-          "Predictive maintenance doesn't exist as a separate category"
+          "Predictive maintenance doesn't exist as a separate category",
+          "Actual observed signs of degradation, rather than a fixed schedule"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Predictive maintenance responds to observed signs, not a fixed interval."
       },
       {
         "id": 2,
         "question": "Are predictive warning signs typically dramatic and obvious?",
         "options": [
-          "Yes, always sudden and severe",
+          "Predictive signs don't exist",
           "No - they tend to be gradual and subtle, visible mainly over time",
-          "Predictive signs don't exist"
+          "Yes, always sudden and severe"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Predictive indicators are usually subtle trends, not dramatic single events."
@@ -102,30 +100,30 @@
         "question": "Why is recording actual values better than just pass/fail on a checklist?",
         "options": [
           "There's no difference in value",
-          "Actual values allow comparison over time to spot gradual trends",
-          "Pass/fail is always more accurate"
+          "Pass/fail is always more accurate",
+          "Actual values allow comparison over time to spot gradual trends"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Trend detection requires comparable data across inspections, not just binary results."
       },
       {
         "id": 4,
         "question": "What's the risk of acting on every minor fluctuation in inspection readings?",
         "options": [
-          "There is no risk",
           "Wasting maintenance resources on components that would have continued performing fine",
-          "It always improves equipment lifespan"
+          "It always improves equipment lifespan",
+          "There is no risk"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Over-reacting to normal variation wastes resources; the skill is distinguishing real trends."
       },
       {
         "id": 5,
         "question": "How does predictive maintenance relate to diagnostic troubleshooting covered later in this track?",
         "options": [
-          "They are unrelated skills",
+          "Diagnostics replaces the need for predictive maintenance",
           "Both depend on recognizing what's normal to notice deviation, differing mainly in timing",
-          "Diagnostics replaces the need for predictive maintenance"
+          "They are unrelated skills"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Both skills share the same foundation of recognizing normal versus abnormal."

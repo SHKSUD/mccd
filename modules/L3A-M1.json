@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 01",
+      "eyebrow": "Level 3A · Module 1 · Section 01",
       "title": "From Operator to Technician",
       "learningObjectives": [
         "Understand how the Technician role differs from the Operator role",
@@ -21,13 +21,13 @@
       "keyTerms": [
         {
           "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness \u2014 the category MoRo belongs to."
+          "note": "A robot that navigates autonomously using sensor-based awareness — the category MoRo belongs to."
         }
       ]
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 02",
+      "eyebrow": "Level 3A · Module 1 · Section 02",
       "title": "Categories of Maintenance Work",
       "learningObjectives": [
         "Distinguish between preventive, predictive, and corrective maintenance",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 03",
+      "eyebrow": "Level 3A · Module 1 · Section 03",
       "title": "MoRo's Maintainable Components",
       "learningObjectives": [
         "Identify the general categories of components a Technician maintains",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 04",
+      "eyebrow": "Level 3A · Module 1 · Section 04",
       "title": "Reading Maintenance Documentation",
       "learningObjectives": [
         "Understand the role of maintenance records in technician work",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 05",
+      "eyebrow": "Level 3A · Module 1 · Section 05",
       "title": "Safety During Maintenance Work",
       "learningObjectives": [
         "Understand how safety procedures during maintenance differ from operational safety",
@@ -87,7 +87,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3A \u00b7 Module 1 \u00b7 Section 06",
+      "eyebrow": "Level 3A · Module 1 · Section 06",
       "title": "What This Track Builds Toward",
       "learningObjectives": [
         "Understand the progression through the remaining L3A modules",
@@ -104,43 +104,43 @@
         "question": "What distinguishes the Technician role from the Operator role?",
         "options": [
           "There is no meaningful difference",
-          "Technicians maintain MoRo's physical and operational health over time, beyond day-to-day operation",
-          "Technicians only work night shifts"
+          "Technicians only work night shifts",
+          "Technicians maintain MoRo's physical and operational health over time, beyond day-to-day operation"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The Technician track covers maintenance responsibility beyond operational competence."
       },
       {
         "id": 2,
         "question": "What are the three general categories of maintenance work?",
         "options": [
-          "Fast, medium, and slow",
           "Preventive, predictive, and corrective",
+          "Fast, medium, and slow",
           "Mechanical, electrical, and software only"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. These three categories describe different triggers for maintenance action."
       },
       {
         "id": 3,
         "question": "Should a mature maintenance program rely primarily on corrective maintenance?",
         "options": [
+          "Maintenance type doesn't matter",
           "Yes, fixing things after they fail is most efficient",
-          "No - preventive and predictive work should be primary, with corrective as the exception",
-          "Maintenance type doesn't matter"
+          "No - preventive and predictive work should be primary, with corrective as the exception"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Relying mainly on preventive and predictive maintenance reduces unplanned failures."
       },
       {
         "id": 4,
         "question": "Why does documentation matter for maintenance work?",
         "options": [
-          "It's just a formality with no real value",
           "Patterns across maintenance history reveal issues a single event wouldn't show",
-          "It's only needed for warranty claims"
+          "It's only needed for warranty claims",
+          "It's just a formality with no real value"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Documentation builds a pattern history that improves future maintenance decisions."
       },
       {

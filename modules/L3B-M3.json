@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 01",
+      "eyebrow": "Level 3B · Module 3 · Section 01",
       "title": "From Understanding Zones to Configuring Them",
       "learningObjectives": [
         "Recall the zone concepts introduced in L2-M4",
@@ -21,13 +21,13 @@
       "keyTerms": [
         {
           "term": "ANT",
-          "note": "MoRo's Human-Machine Interface (HMI) platform \u2014 introduced in L1-M3."
+          "note": "MoRo's Human-Machine Interface (HMI) platform — introduced in L1-M3."
         }
       ]
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 02",
+      "eyebrow": "Level 3B · Module 3 · Section 02",
       "title": "Identifying Zone Requirements",
       "learningObjectives": [
         "Understand how to assess a facility for zone configuration needs",
@@ -37,7 +37,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 03",
+      "eyebrow": "Level 3B · Module 3 · Section 03",
       "title": "Configuring Shared Paths",
       "learningObjectives": [
         "Understand the general configuration approach for a shared path",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 04",
+      "eyebrow": "Level 3B · Module 3 · Section 04",
       "title": "Configuring Reserved Routes",
       "learningObjectives": [
         "Understand the general configuration approach for a reserved route",
@@ -57,7 +57,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 05",
+      "eyebrow": "Level 3B · Module 3 · Section 05",
       "title": "Testing Zone Configuration",
       "learningObjectives": [
         "Understand how to validate zone configuration before full operational reliance",
@@ -67,7 +67,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3B \u00b7 Module 3 \u00b7 Section 06",
+      "eyebrow": "Level 3B · Module 3 · Section 06",
       "title": "Adjusting Zones Over Time",
       "learningObjectives": [
         "Understand that zone configuration often needs adjustment as fleet size or layout changes",
@@ -83,20 +83,20 @@
         "id": 1,
         "question": "What does zone configuration involve, building on the concepts from L2-M4?",
         "options": [
+          "Only applies to single-robot deployments",
           "Nothing active - zones configure themselves automatically",
-          "Actively defining where traffic should be prioritized, shared, or restricted",
-          "Only applies to single-robot deployments"
+          "Actively defining where traffic should be prioritized, shared, or restricted"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Programmers actively configure zone behavior based on facility traffic patterns."
       },
       {
         "id": 2,
         "question": "Does every facility need extensive zone configuration?",
         "options": [
-          "Yes, always required regardless of fleet size",
+          "Zone configuration is never necessary",
           "No - simpler layouts with light fleet traffic may need minimal zoning",
-          "Zone configuration is never necessary"
+          "Yes, always required regardless of fleet size"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Zone configuration needs scale with actual traffic complexity, not a fixed requirement."
@@ -105,33 +105,33 @@
         "id": 3,
         "question": "When is a reserved route more appropriate than a shared path?",
         "options": [
-          "Reserved routes should always be used instead of shared paths",
           "When a route is time-sensitive or a bottleneck genuinely needs single-unit access",
-          "Reserved routes are never appropriate"
+          "Reserved routes are never appropriate",
+          "Reserved routes should always be used instead of shared paths"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Reserved routes suit specific time-sensitive or bottleneck scenarios, not general use."
       },
       {
         "id": 4,
         "question": "Why test zone configuration with realistic traffic volume?",
         "options": [
-          "Testing with light traffic is always sufficient",
           "Congestion or deadlock tendencies may only appear under realistic load",
+          "Testing with light traffic is always sufficient",
           "Zone configuration doesn't require testing"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Issues that don't appear with one or two units may surface under realistic fleet volume."
       },
       {
         "id": 5,
         "question": "Should zone configuration be treated as a one-time setup?",
         "options": [
+          "Zone configuration is irrelevant after initial deployment",
           "Yes, once configured it never needs revisiting",
-          "No - it often needs adjustment as fleet size or layout changes",
-          "Zone configuration is irrelevant after initial deployment"
+          "No - it often needs adjustment as fleet size or layout changes"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Growing congestion or deadlock frequency signals a need to revisit zone configuration."
       }
     ]

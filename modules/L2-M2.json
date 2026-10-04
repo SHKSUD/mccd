@@ -93,9 +93,9 @@
         "id": 1,
         "question": "Does MoRo support a single fixed payload type?",
         "options": [
-          "Yes, one configuration for all tasks",
+          "Only conveyor handling",
           "No - it supports multiple configurations (conveyor, cobot, towing, lift, lift-and-rotate)",
-          "Only conveyor handling"
+          "Yes, one configuration for all tasks"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. MoRo supports multiple payload configurations suited to different handling needs."
@@ -115,22 +115,22 @@
         "id": 3,
         "question": "How does a loaded payload affect MoRo's operating behavior?",
         "options": [
-          "It has no effect",
           "It shifts center of gravity, affecting stopping behavior and stability",
+          "It has no effect",
           "It only affects navigation speed"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Weight distribution from a loaded payload affects stability and stopping behavior."
       },
       {
         "id": 4,
         "question": "During a coordinated handoff with a fixed machine, what should an operator confirm?",
         "options": [
-          "Nothing - the systems handle it automatically with no verification needed",
           "That both systems show a ready or completing state before assuming success",
+          "Nothing - the systems handle it automatically with no verification needed",
           "That the machine is turned off"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Confirming state before assuming success avoids incomplete handoffs going unnoticed."
       },
       {
@@ -138,10 +138,10 @@
         "question": "If a payload attachment seems misaligned, what should you do?",
         "options": [
           "Force it into place manually",
-          "Note the issue and escalate rather than forcing it",
-          "Ignore it and proceed with the mission"
+          "Ignore it and proceed with the mission",
+          "Note the issue and escalate rather than forcing it"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Forcing a misaligned attachment risks damage; escalation is the correct response."
       }
     ]

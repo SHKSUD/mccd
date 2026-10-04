@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 01",
+      "eyebrow": "Level 4B · Module 2 · Section 01",
       "title": "Beyond Basic PLC Awareness",
       "learningObjectives": [
         "Recall PLC concepts introduced in L4A-M1",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 02",
+      "eyebrow": "Level 4B · Module 2 · Section 02",
       "title": "PLC Programming Concepts Relevant to MoRo Integration",
       "learningObjectives": [
         "Understand general PLC programming concepts relevant to this integration work",
@@ -41,7 +41,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 03",
+      "eyebrow": "Level 4B · Module 2 · Section 03",
       "title": "Complex Workflow Patterns",
       "learningObjectives": [
         "Understand workflow patterns beyond simple point-to-point handoffs",
@@ -51,7 +51,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 04",
+      "eyebrow": "Level 4B · Module 2 · Section 04",
       "title": "Debugging Combined MoRo-PLC Logic",
       "learningObjectives": [
         "Understand the added complexity of debugging across two systems with independent logic",
@@ -61,7 +61,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 05",
+      "eyebrow": "Level 4B · Module 2 · Section 05",
       "title": "Version Control and Change Management",
       "learningObjectives": [
         "Understand why version control matters for PLC logic changes",
@@ -71,7 +71,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4B \u00b7 Module 2 \u00b7 Section 06",
+      "eyebrow": "Level 4B · Module 2 · Section 06",
       "title": "Working With Facility PLC Teams",
       "learningObjectives": [
         "Understand the collaborative aspect of advanced PLC integration work",
@@ -87,11 +87,11 @@
         "id": 1,
         "question": "How does this module go beyond the PLC awareness covered in L4A-M1?",
         "options": [
-          "It doesn't - it repeats the same content",
           "It covers actually programming and configuring deeper PLC integration for advanced workflows",
+          "It doesn't - it repeats the same content",
           "It removes PLC topics entirely"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. This module builds deeper, hands-on PLC integration competency beyond conceptual awareness."
       },
       {
@@ -99,10 +99,10 @@
         "question": "What might advanced PLC integration require beyond reading PLC status?",
         "options": [
           "Nothing additional is ever required",
-          "Understanding or writing PLC-side logic that accommodates MoRo's behavior",
-          "Only physical hardware installation"
+          "Only physical hardware installation",
+          "Understanding or writing PLC-side logic that accommodates MoRo's behavior"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Advanced integration often requires engaging with PLC-side logic directly."
       },
       {
@@ -120,9 +120,9 @@
         "id": 4,
         "question": "Why does version control matter for PLC logic changes in this context?",
         "options": [
-          "It doesn't matter for PLC logic",
+          "Version control is only relevant for MoRo's own software",
           "Uncoordinated changes to one interdependent system can break integration unexpectedly",
-          "Version control is only relevant for MoRo's own software"
+          "It doesn't matter for PLC logic"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Interdependent logic requires coordinated change tracking across both systems."
@@ -132,10 +132,10 @@
         "question": "What's the recommended approach to working with a facility's own PLC team?",
         "options": [
           "Work entirely independently and avoid their involvement",
-          "Collaborate, combining facility PLC expertise with MoRo-specific knowledge",
-          "Facility PLC teams are never relevant to this work"
+          "Facility PLC teams are never relevant to this work",
+          "Collaborate, combining facility PLC expertise with MoRo-specific knowledge"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Collaboration with facility PLC teams tends to produce more maintainable integrated systems."
       }
     ]

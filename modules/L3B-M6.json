@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 01",
+      "eyebrow": "Level 3B · Module 6 · Section 01",
       "title": "The Capstone of the Programmer Track",
       "learningObjectives": [
         "Understand how this module synthesizes the full L3B skill set",
@@ -35,7 +35,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 02",
+      "eyebrow": "Level 3B · Module 6 · Section 02",
       "title": "Pre-Commissioning Assessment",
       "learningObjectives": [
         "Understand what needs evaluating before beginning a commissioning process",
@@ -45,7 +45,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 03",
+      "eyebrow": "Level 3B · Module 6 · Section 03",
       "title": "Building the Initial Map",
       "learningObjectives": [
         "Apply the map-building process (from L3B-M2) to a full new-site context",
@@ -55,7 +55,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 04",
+      "eyebrow": "Level 3B · Module 6 · Section 04",
       "title": "Programming the Initial Mission Set",
       "learningObjectives": [
         "Understand how to translate facility workflow into an initial set of missions",
@@ -65,7 +65,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 05",
+      "eyebrow": "Level 3B · Module 6 · Section 05",
       "title": "Integrating With Existing Machines",
       "learningObjectives": [
         "Apply machine integration principles (from L3B-M4) in a commissioning context",
@@ -75,7 +75,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3B \u00b7 Module 6 \u00b7 Section 06",
+      "eyebrow": "Level 3B · Module 6 · Section 06",
       "title": "Go-Live and Handoff",
       "learningObjectives": [
         "Understand the transition from commissioning to live operation",
@@ -102,33 +102,33 @@
         "id": 2,
         "question": "What should be assessed before mapping begins at a new site?",
         "options": [
+          "Only the facility's operating hours",
           "Nothing - mapping can start immediately",
-          "Floor layout, machine positions, network infrastructure, and safety considerations",
-          "Only the facility's operating hours"
+          "Floor layout, machine positions, network infrastructure, and safety considerations"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Pre-commissioning assessment shapes the entire approach that follows."
       },
       {
         "id": 3,
         "question": "Why is timing (e.g., mapping during lower-activity periods) a consideration?",
         "options": [
-          "It isn't a real consideration",
           "To reduce transient obstacles becoming permanently embedded in the baseline map",
-          "Mapping can only occur at night by regulation"
+          "Mapping can only occur at night by regulation",
+          "It isn't a real consideration"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Mapping timing affects whether temporary clutter gets baked into the permanent map."
       },
       {
         "id": 4,
         "question": "What's the recommended approach to the initial mission set?",
         "options": [
-          "Program every conceivable mission immediately",
           "Start with core, highest-value use cases, then expand once proven reliable",
-          "Skip mission programming and rely on manual control only"
+          "Skip mission programming and rely on manual control only",
+          "Program every conceivable mission immediately"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Starting narrow and validated reduces risk during the most vulnerable early operational period."
       },
       {
@@ -136,10 +136,10 @@
         "question": "Is commissioning complete at technical go-live?",
         "options": [
           "Yes, once the technical setup works",
-          "No - it includes operator preparation and documentation handoff",
-          "Only if the client specifically requests documentation"
+          "Only if the client specifically requests documentation",
+          "No - it includes operator preparation and documentation handoff"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. A technically working commissioning that leaves the operating team unprepared hasn't fully succeeded."
       }
     ]

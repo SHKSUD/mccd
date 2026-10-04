@@ -8,7 +8,6 @@
   "previousModule": "L2-M2",
   "prerequisite": "L2-M2 (60%)",
   "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Specs confirmed per CDD - no SME dependency for this module.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -20,7 +19,10 @@
       ],
       "content": "All MoRo variants use LFP (Lithium Iron Phosphate) batteries, confirmed across the A-250, A-500, and A-1200. LFP chemistry is chosen for industrial applications because it's thermally stable, has a long cycle life, and tolerates frequent partial charging well - all relevant for a robot that charges opportunistically throughout a shift rather than on a single overnight cycle.",
       "keyTerms": [
-        {"term": "LFP (Lithium Iron Phosphate)", "note": "A lithium battery chemistry known for thermal stability and long cycle life, commonly used in industrial and automotive applications."}
+        {
+          "term": "LFP (Lithium Iron Phosphate)",
+          "note": "A lithium battery chemistry known for thermal stability and long cycle life, commonly used in industrial and automotive applications."
+        }
       ]
     },
     {
@@ -74,42 +76,61 @@
       "content": "MoRo is designed to manage its own low-battery state - prioritizing a return to charging before depletion becomes operationally disruptive. If you notice a unit behaving unusually and a low-battery indicator is present, treat it as context for what you're observing rather than an emergency requiring intervention beyond normal reporting."
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
       {
         "id": 1,
         "question": "What battery chemistry does MoRo use?",
-        "options": ["Lead-acid", "LFP (Lithium Iron Phosphate)", "Nickel-cadmium"],
-        "correctAnswer": 1,
+        "options": [
+          "LFP (Lithium Iron Phosphate)",
+          "Nickel-cadmium",
+          "Lead-acid"
+        ],
+        "correctAnswer": 0,
         "feedback": "Correct. All MoRo variants use LFP batteries, confirmed across the product line."
       },
       {
         "id": 2,
         "question": "What is MoRo's confirmed runtime and charging time?",
-        "options": ["4 hours runtime, 2 hours charging", "8 hours runtime, under 1 hour wireless charging", "12 hours runtime, 30 minutes charging"],
-        "correctAnswer": 1,
+        "options": [
+          "12 hours runtime, 30 minutes charging",
+          "4 hours runtime, 2 hours charging",
+          "8 hours runtime, under 1 hour wireless charging"
+        ],
+        "correctAnswer": 2,
         "feedback": "Correct. 8 hours runtime and under 1 hour wireless charging, confirmed across all variants."
       },
       {
         "id": 3,
         "question": "What does wireless charging mean for MoRo?",
-        "options": ["It charges via solar panels", "It docks and charges without a physical plug connection", "It never needs to be charged"],
+        "options": [
+          "It never needs to be charged",
+          "It docks and charges without a physical plug connection",
+          "It charges via solar panels"
+        ],
         "correctAnswer": 1,
         "feedback": "Correct. MoRo aligns with the dock and charges automatically, no plug required."
       },
       {
         "id": 4,
         "question": "What charging habit supports longer battery life?",
-        "options": ["Always running to full depletion before charging", "Consistent, moderate charging using opportunistic windows", "Never charging above 50%"],
-        "correctAnswer": 1,
+        "options": [
+          "Never charging above 50%",
+          "Always running to full depletion before charging",
+          "Consistent, moderate charging using opportunistic windows"
+        ],
+        "correctAnswer": 2,
         "feedback": "Correct. Opportunistic, moderate charging supports battery longevity over repeated full-depletion cycles."
       },
       {
         "id": 5,
         "question": "What is the appropriate operator-level response to a low-battery indicator with unusual behavior?",
-        "options": ["Immediately disassemble the unit", "Treat it as context for what you're observing and report normally", "Ignore it entirely"],
+        "options": [
+          "Ignore it entirely",
+          "Treat it as context for what you're observing and report normally",
+          "Immediately disassemble the unit"
+        ],
         "correctAnswer": 1,
         "feedback": "Correct. Low battery is useful context, not an emergency requiring intervention beyond standard reporting."
       }

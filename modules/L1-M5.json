@@ -8,7 +8,6 @@
   "previousModule": "L1-M4",
   "prerequisite": "L1-M4 (60%)",
   "contentStatus": "REVISED per Content Principles (60% pass threshold). Fully conceptual content — no unconfirmed specs involved.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -30,7 +29,10 @@
       ],
       "content": "It's easy to anthropomorphize a robot moving independently through a factory — to describe MoRo as 'deciding' or 'noticing' the way a person would. Precision matters here: MoRo executes programmed logic based on sensor input. It doesn't exercise judgment the way a coworker would. Don't expect it to infer intent or make exceptions. Judgment calls remain a human responsibility — MoRo's value is consistent, reliable execution, not adaptive reasoning.",
       "keyTerms": [
-        {"term": "programmed logic", "note": "Predefined rules and responses MoRo follows based on what its sensors detect — not independent judgment."}
+        {
+          "term": "programmed logic",
+          "note": "Predefined rules and responses MoRo follows based on what its sensors detect — not independent judgment."
+        }
       ]
     },
     {
@@ -63,11 +65,13 @@
       ],
       "content": "If something about MoRo's behavior, path, or condition seems worth flagging — even something minor — raise it with your supervisor or designated point of contact for MoRo operations at your site. You're not expected to diagnose or resolve it yourself at this level. Surfacing small observations early, before they compound into larger issues, closes the loop on everything covered across L1: awareness, navigation, operation, safety, and coexistence.",
       "keyTerms": [
-        {"term": "escalation", "note": "Reporting an issue to the appropriate point of contact rather than resolving it yourself."}
+        {
+          "term": "escalation",
+          "note": "Reporting an issue to the appropriate point of contact rather than resolving it yourself."
+        }
       ]
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
@@ -75,20 +79,20 @@
         "id": 1,
         "question": "Does MoRo exercise judgment the way a human coworker would?",
         "options": [
-          "Yes, it can infer intent and make exceptions",
           "No — it executes programmed logic based on sensor input, reliably and consistently",
+          "Yes, it can infer intent and make exceptions",
           "Only during certain missions"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. MoRo's value is consistent, programmed execution — not human-like judgment."
       },
       {
         "id": 2,
         "question": "Why might MoRo slow or pause even without real danger present?",
         "options": [
-          "Random malfunction",
+          "It stops automatically every few minutes regardless of surroundings",
           "It responds to unpredictable or hesitant human movement near its path",
-          "It stops automatically every few minutes regardless of surroundings"
+          "Random malfunction"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Clear, steady movement near MoRo reduces unnecessary slowdowns."

@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 01",
+      "eyebrow": "Level 4A · Module 4 · Section 01",
       "title": "Safety at the Systems Design Level",
       "learningObjectives": [
         "Understand how safety design at L4A differs from operational safety covered at L1",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 02",
+      "eyebrow": "Level 4A · Module 4 · Section 02",
       "title": "Safety-Related Control Functions",
       "learningObjectives": [
         "Understand the concept of a safety-related control function",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 03",
+      "eyebrow": "Level 4A · Module 4 · Section 03",
       "title": "Performance Levels and Risk Assessment",
       "learningObjectives": [
         "Understand the general concept of performance level under EN ISO 13849",
@@ -63,7 +63,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 04",
+      "eyebrow": "Level 4A · Module 4 · Section 04",
       "title": "Integrating MoRo's Safety Systems with Cell-Level Safety PLCs",
       "learningObjectives": [
         "Understand the general approach to connecting MoRo's safety behavior with a cell's safety PLC",
@@ -73,7 +73,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 05",
+      "eyebrow": "Level 4A · Module 4 · Section 05",
       "title": "Documentation and Compliance",
       "learningObjectives": [
         "Understand what safety design documentation typically requires",
@@ -83,7 +83,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 4A \u00b7 Module 4 \u00b7 Section 06",
+      "eyebrow": "Level 4A · Module 4 · Section 06",
       "title": "When to Involve Safety Specialists",
       "learningObjectives": [
         "Understand the boundary of Systems Engineer competency in safety design",
@@ -99,20 +99,20 @@
         "id": 1,
         "question": "What standard governs the safety design work covered in this module?",
         "options": [
+          "ANSI B56.5",
           "ISO 9001",
-          "EN ISO 13849",
-          "ANSI B56.5"
+          "EN ISO 13849"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. EN ISO 13849 is the governing standard for machinery and control system safety design."
       },
       {
         "id": 2,
         "question": "What is a safety-related control function?",
         "options": [
-          "Any software feature regardless of purpose",
+          "A mission programming function",
           "A part of a control system specifically responsible for preventing or mitigating hazards",
-          "A mission programming function"
+          "Any software feature regardless of purpose"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Safety-related control functions specifically address hazard prevention or mitigation."
@@ -121,20 +121,20 @@
         "id": 3,
         "question": "What determines the required performance level for a safety function?",
         "options": [
-          "It's the same fixed level for every scenario",
           "A risk assessment of the hazard the function addresses",
+          "It's the same fixed level for every scenario",
           "The cost of implementation"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Performance level requirements scale with assessed risk, per EN ISO 13849."
       },
       {
         "id": 4,
         "question": "Why does integrating MoRo's safety behavior with a cell's safety PLC require careful design?",
         "options": [
-          "It doesn't - any functional connection is sufficient",
+          "Integration is automatic and needs no design work",
           "To confirm the combined system genuinely meets its required performance level",
-          "Integration is automatic and needs no design work"
+          "It doesn't - any functional connection is sufficient"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Combined safety systems need deliberate design validation, not just functional connection."
@@ -143,11 +143,11 @@
         "id": 5,
         "question": "When should a dedicated functional safety specialist be involved?",
         "options": [
-          "Never - this curriculum covers everything needed",
           "For novel or high-risk cell configurations requiring formal risk assessment",
+          "Never - this curriculum covers everything needed",
           "Only for routine, well-understood configurations"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. This module builds working literacy, but complex cases warrant specialist involvement."
       }
     ]

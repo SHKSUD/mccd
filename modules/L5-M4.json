@@ -3,7 +3,7 @@
   "title": "Lab Infrastructure & Setup",
   "level": "L5",
   "moduleNumber": 4,
-  "duration": "16 hrs",
+  "duration": "12 hrs",
   "nextModule": "L5-M5",
   "previousModule": "L5-M3",
   "prerequisite": "L5-M3 (60%)",
@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 01",
+      "eyebrow": "Level 5 · Module 4 · Section 01",
       "title": "Infrastructure as an Instructor Responsibility",
       "learningObjectives": [
         "Understand why lab infrastructure knowledge is part of Master Instructor competency",
@@ -31,7 +31,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 02",
+      "eyebrow": "Level 5 · Module 4 · Section 02",
       "title": "Minimum Lab Requirements by Level",
       "learningObjectives": [
         "Understand the general minimum lab specification confirmed in the CDD for L2 and above",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 03",
+      "eyebrow": "Level 5 · Module 4 · Section 03",
       "title": "Setting Up a Training Lab",
       "learningObjectives": [
         "Understand the general process of establishing a new training lab",
@@ -57,7 +57,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 04",
+      "eyebrow": "Level 5 · Module 4 · Section 04",
       "title": "Maintaining Lab Equipment Over Time",
       "learningObjectives": [
         "Understand why training lab equipment needs its own maintenance attention",
@@ -67,7 +67,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 05",
+      "eyebrow": "Level 5 · Module 4 · Section 05",
       "title": "Scaling to Multiple Lab Locations",
       "learningObjectives": [
         "Understand considerations when DiFacto's instructor network operates multiple labs",
@@ -77,7 +77,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 5 \u00b7 Module 4 \u00b7 Section 06",
+      "eyebrow": "Level 5 · Module 4 · Section 06",
       "title": "Troubleshooting Lab Environment Issues",
       "learningObjectives": [
         "Understand common categories of lab-specific technical issues",
@@ -93,9 +93,9 @@
         "id": 1,
         "question": "Why is lab infrastructure knowledge part of Master Instructor competency?",
         "options": [
-          "It isn't relevant to instructors",
+          "Infrastructure is entirely someone else's responsibility",
           "A Master Instructor who can set up and validate training environments scales DiFacto's training efforts more effectively",
-          "Infrastructure is entirely someone else's responsibility"
+          "It isn't relevant to instructors"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Infrastructure capability extends an instructor's value beyond just teaching in a pre-built space."
@@ -105,43 +105,43 @@
         "question": "What is confirmed as the primary training unit variant per the CDD?",
         "options": [
           "A-250",
-          "A-500",
-          "A-1200"
+          "A-1200",
+          "A-500"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The A-500 is specified as the primary training unit in the minimum lab requirements."
       },
       {
         "id": 3,
         "question": "What does validating a new training lab involve, beyond acquiring equipment?",
         "options": [
-          "Nothing further is needed once equipment is acquired",
           "Confirming the environment works end-to-end through representative training scenarios",
+          "Nothing further is needed once equipment is acquired",
           "Only checking that the MoRo unit powers on"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. End-to-end validation prevents disruption during actual training delivery."
       },
       {
         "id": 4,
         "question": "Why does lab equipment need preventive maintenance attention, connecting to L3A principles?",
         "options": [
-          "Lab equipment never needs maintenance",
           "Lab equipment often sees heavier, more varied use than typical production deployment",
-          "Only production units require maintenance"
+          "Only production units require maintenance",
+          "Lab equipment never needs maintenance"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Repeated practice use across multiple learners creates significant wear requiring attention."
       },
       {
         "id": 5,
         "question": "Why is quick resolution particularly important for lab environment issues during a live session?",
         "options": [
+          "Lab issues are never urgent",
           "It isn't more urgent than production issues",
-          "Issues directly disrupt a live training session with learners present, unlike a production issue",
-          "Lab issues are never urgent"
+          "Issues directly disrupt a live training session with learners present, unlike a production issue"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. The presence of learners creates added pressure for quick, reliable resolution."
       }
     ]

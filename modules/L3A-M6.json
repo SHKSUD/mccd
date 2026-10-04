@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 01",
+      "eyebrow": "Level 3A · Module 6 · Section 01",
       "title": "From Methodology to Structured Tools",
       "learningObjectives": [
         "Understand how this module builds on the root cause methodology from Module 5",
@@ -27,7 +27,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 02",
+      "eyebrow": "Level 3A · Module 6 · Section 02",
       "title": "How a Decision Tree Is Structured",
       "learningObjectives": [
         "Understand the general format of a troubleshooting decision tree",
@@ -37,7 +37,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 03",
+      "eyebrow": "Level 3A · Module 6 · Section 03",
       "title": "Navigation-Related Decision Trees",
       "learningObjectives": [
         "Understand the general branch logic for navigation-related symptoms",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 04",
+      "eyebrow": "Level 3A · Module 6 · Section 04",
       "title": "Mechanical and Power Decision Trees",
       "learningObjectives": [
         "Understand the general branch logic for mechanical and power-related symptoms",
@@ -57,7 +57,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 05",
+      "eyebrow": "Level 3A · Module 6 · Section 05",
       "title": "When a Decision Tree Doesn't Resolve the Issue",
       "learningObjectives": [
         "Understand what to do when following a decision tree doesn't lead to a clear cause",
@@ -67,7 +67,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 3A \u00b7 Module 6 \u00b7 Section 06",
+      "eyebrow": "Level 3A · Module 6 · Section 06",
       "title": "Contributing to Decision Tree Improvement",
       "learningObjectives": [
         "Understand how field experience feeds back into improving decision trees over time",
@@ -83,9 +83,9 @@
         "id": 1,
         "question": "What is the purpose of a troubleshooting decision tree?",
         "options": [
-          "To replace diagnostic judgment entirely",
+          "To document completed repairs",
           "To provide a structured, repeatable diagnostic path for common fault categories",
-          "To document completed repairs"
+          "To replace diagnostic judgment entirely"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Decision trees structure diagnosis without replacing the judgment that guides them."
@@ -94,11 +94,11 @@
         "id": 2,
         "question": "What's the key discipline when working through a decision tree?",
         "options": [
+          "Always start from the most complex branch",
           "Skip ahead to the most likely cause immediately",
-          "Answer each branch point honestly based on what's actually observed",
-          "Always start from the most complex branch"
+          "Answer each branch point honestly based on what's actually observed"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Honest, observed answers at each branch point are what make the tree reliable."
       },
       {
@@ -106,19 +106,19 @@
         "question": "What kind of question typically starts a navigation-related decision tree branch?",
         "options": [
           "Battery charge percentage only",
-          "Whether the issue is isolated to one map area or occurs everywhere",
-          "The time of day the robot was purchased"
+          "The time of day the robot was purchased",
+          "Whether the issue is isolated to one map area or occurs everywhere"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Isolating whether an issue is localized or widespread is a typical early branch point."
       },
       {
         "id": 4,
         "question": "What should happen if following a decision tree doesn't produce a confident root cause?",
         "options": [
-          "Keep guessing randomly until something works",
+          "Ignore the issue since the tree didn't resolve it",
           "Escalate, per the criteria covered in root cause methodology",
-          "Ignore the issue since the tree didn't resolve it"
+          "Keep guessing randomly until something works"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. An inconclusive decision tree result is a signal to escalate, not a technician failure."
@@ -127,11 +127,11 @@
         "id": 5,
         "question": "How do decision trees improve over time?",
         "options": [
-          "They never change once created",
           "Field experience and thorough documentation feed back into updating them",
-          "Only DiFacto engineering updates them, with no field input"
+          "Only DiFacto engineering updates them, with no field input",
+          "They never change once created"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Technician field experience, well-documented, feeds the improvement of decision trees."
       }
     ]

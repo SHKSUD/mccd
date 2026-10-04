@@ -8,7 +8,6 @@
   "previousModule": "L1-M3",
   "prerequisite": "L1-M3 (60%)",
   "contentStatus": "REVISED per Content Principles (60% pass, terminology + notes). Interactive zone confirmed at 2m per DiFacto guidance — treated as current, subject to revision. Alarm pattern reference still pending SME confirmation.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -20,8 +19,14 @@
       ],
       "content": "MoRo's safety systems are engineered against recognized industrial standards, not ad-hoc caution. Two apply directly at this level: ISO 3691-4, governing safety requirements for industrial trucks, and ANSI B56.5, the safety standard for guided industrial vehicles. You're not expected to memorize the standards themselves — what matters is that MoRo's behavior around people is engineered against requirements designed to prevent workplace incidents, not manufacturer promises.",
       "keyTerms": [
-        {"term": "ISO 3691-4", "note": "An international standard specifying safety requirements for industrial trucks, including AMRs like MoRo."},
-        {"term": "ANSI B56.5", "note": "A North American safety standard specifically for guided industrial vehicles."}
+        {
+          "term": "ISO 3691-4",
+          "note": "An international standard specifying safety requirements for industrial trucks, including AMRs like MoRo."
+        },
+        {
+          "term": "ANSI B56.5",
+          "note": "A North American safety standard specifically for guided industrial vehicles."
+        }
       ]
     },
     {
@@ -34,7 +39,10 @@
       ],
       "content": "MoRo maintains an interactive zone of 2 meters around itself, detected continuously through onboard sensors. Within this zone, MoRo's behavior shifts automatically — reducing speed or stopping, depending on proximity — without requiring a human to intervene. This figure reflects DiFacto's current guidance and may be revised as the specification is finalized; it is accurate as of this module's current version, not a permanent fixed value.",
       "keyTerms": [
-        {"term": "interactive zone", "note": "The sensor-monitored distance (currently 2m) around MoRo within which its behavior automatically adjusts based on proximity."}
+        {
+          "term": "interactive zone",
+          "note": "The sensor-monitored distance (currently 2m) around MoRo within which its behavior automatically adjusts based on proximity."
+        }
       ]
     },
     {
@@ -47,7 +55,10 @@
       ],
       "content": "Emergency stop (E-stop) halts MoRo immediately, overriding any current operation regardless of mode or mission. It exists for situations where waiting for MoRo's own sensors to respond isn't acceptable — a person in immediate danger, unexpected equipment failure, any scenario where seconds matter. E-stop is not a substitute for a routine mission pause, which is a separate, lower-severity action. Reserve E-stop for genuine safety concerns.",
       "keyTerms": [
-        {"term": "E-stop", "note": "An immediate, unconditional halt that takes priority over all other operations."}
+        {
+          "term": "E-stop",
+          "note": "An immediate, unconditional halt that takes priority over all other operations."
+        }
       ]
     },
     {
@@ -60,7 +71,10 @@
       ],
       "content": "MoRo's engineering handles the bulk of the safety burden, but floor safety is shared. Stay aware of MoRo's general path when active. A stationary MoRo may be paused, not finished — don't assume otherwise. Avoid interfering with sensors, even briefly. This is the same situational awareness applied around any moving industrial equipment, adapted to how MoRo specifically signals its state.",
       "keyTerms": [
-        {"term": "situational awareness", "note": "Ongoing attentiveness to your surroundings and how they may change, particularly around active equipment."}
+        {
+          "term": "situational awareness",
+          "note": "Ongoing attentiveness to your surroundings and how they may change, particularly around active equipment."
+        }
       ]
     },
     {
@@ -83,11 +97,13 @@
       ],
       "content": "In addition to visual status indicators (covered in Module 3), MoRo uses audible alarms for situations requiring faster attention than a screen check allows. Different patterns correspond to different states — routine notifications are distinguishable from urgent ones. The specific alarm-to-meaning reference will be added once confirmed against current MoRo hardware documentation.",
       "keyTerms": [
-        {"term": "audible alarm", "note": "A sound-based signal MoRo uses to communicate states requiring faster attention than a visual check allows."}
+        {
+          "term": "audible alarm",
+          "note": "A sound-based signal MoRo uses to communicate states requiring faster attention than a visual check allows."
+        }
       ]
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
@@ -95,9 +111,9 @@
         "id": 1,
         "question": "What are the two safety standards referenced for MoRo?",
         "options": [
-          "ISO 9001 and ANSI Z10",
+          "CE Mark and UL Listed",
           "ISO 3691-4 and ANSI B56.5",
-          "CE Mark and UL Listed"
+          "ISO 9001 and ANSI Z10"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. ISO 3691-4 covers industrial truck safety; ANSI B56.5 covers guided industrial vehicles."
@@ -106,9 +122,9 @@
         "id": 2,
         "question": "What is the confirmed distance of MoRo's interactive zone?",
         "options": [
-          "5 meters",
+          "10 meters",
           "2 meters",
-          "10 meters"
+          "5 meters"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The interactive zone is currently confirmed at 2 meters, per DiFacto guidance."
@@ -117,11 +133,11 @@
         "id": 3,
         "question": "When should you use emergency stop rather than a routine mission pause?",
         "options": [
-          "Any time you want MoRo to stop briefly",
           "When there's a genuine safety concern requiring immediate action",
+          "Any time you want MoRo to stop briefly",
           "At the end of every shift"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. E-stop is reserved for genuine concerns, not routine pausing."
       },
       {
@@ -129,21 +145,21 @@
         "question": "If MoRo is stationary, is it safe to assume it has finished its task?",
         "options": [
           "Yes, always",
-          "No — it may be paused rather than finished",
-          "Only during night shifts"
+          "Only during night shifts",
+          "No — it may be paused rather than finished"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. A stationary MoRo may simply be paused — situational awareness still applies."
       },
       {
         "id": 5,
         "question": "What should you do if MoRo behaves unexpectedly?",
         "options": [
-          "Ignore it unless it recurs",
           "Use E-stop if there's any immediate concern, then report it",
+          "Ignore it unless it recurs",
           "Diagnose the technical cause yourself before reporting"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Diagnosis isn't expected at this level — stop if needed, and report early."
       }
     ]

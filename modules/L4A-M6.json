@@ -8,7 +8,6 @@
   "previousModule": "L4A-M5",
   "prerequisite": "L4A-M5 (60%)",
   "contentStatus": "Built per Content Principles (60% pass, terminology + notes). New module per CDD, added to address multi-plant/enterprise deployment scale - relevant to DiFacto's US/European OEM conversations. ROI modeling directly relevant to the Industrial Leadership Blueprint's 'Certainty Audit' positioning. Multi-plant case data pending DiFacto input.",
-
   "sections": [
     {
       "sectionId": 1,
@@ -60,7 +59,10 @@
       ],
       "content": "Scaling decisions need an economic case, not just a technical one - factoring in deployment cost per site, expected throughput improvement, reduced labor dependency, and payback timeline. This directly relates to the kind of certainty and ROI case DiFacto makes during the sales process (the 'Certainty Audit' concept) - as a Systems Engineer, you may be the person validating that those projected numbers hold up against actual deployment data once a rollout is underway.",
       "keyTerms": [
-        {"term": "ROI modeling", "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision."}
+        {
+          "term": "ROI modeling",
+          "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision."
+        }
       ]
     },
     {
@@ -74,7 +76,6 @@
       "content": "This module completes the L4A Systems Engineer curriculum, building on cell-level design and integration (earlier modules) with the enterprise-scale thinking needed for larger rollouts. From here, certified Systems Engineers may progress toward L4B (Advanced Programming) for deeper technical implementation work, or toward L5 (Master Instructor) if their path moves toward training other MoRo users."
     }
   ],
-
   "quiz": {
     "passingScore": 60,
     "questions": [
@@ -82,11 +83,11 @@
         "id": 1,
         "question": "What shift in thinking does this module address compared to earlier L4A modules?",
         "options": [
-          "No shift - it covers the same single-cell topics in more depth",
           "The shift from single-cell design to multi-plant, enterprise-scale deployment",
-          "A shift away from technical topics entirely"
+          "A shift away from technical topics entirely",
+          "No shift - it covers the same single-cell topics in more depth"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. This module addresses what changes when deployment scales beyond a single facility."
       },
       {
@@ -94,10 +95,10 @@
         "question": "Does an architecture pattern that works for one cell automatically scale to ten plants?",
         "options": [
           "Yes, always",
-          "No - multi-site architecture requires balancing consistency with necessary site-specific variation",
-          "Scale has no effect on architecture decisions"
+          "Scale has no effect on architecture decisions",
+          "No - multi-site architecture requires balancing consistency with necessary site-specific variation"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. What works at single-cell scale doesn't automatically transfer to enterprise scale."
       },
       {
@@ -105,10 +106,10 @@
         "question": "What is a key trade-off between centralized and distributed infrastructure?",
         "options": [
           "There is no trade-off - centralized is always better",
-          "Reliability, latency, and administrative overhead differ between the two approaches",
-          "Only cost differs between them"
+          "Only cost differs between them",
+          "Reliability, latency, and administrative overhead differ between the two approaches"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Each approach carries different trade-offs depending on context."
       },
       {
@@ -126,11 +127,11 @@
         "id": 5,
         "question": "What role might a Systems Engineer play regarding ROI claims made during sales?",
         "options": [
-          "No role - ROI is purely a sales function",
           "Validating that projected ROI numbers hold up against actual deployment data",
+          "No role - ROI is purely a sales function",
           "Setting the initial sales price"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Systems Engineers may validate real-world performance against the economic case made during sales."
       }
     ]

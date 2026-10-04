@@ -3,7 +3,7 @@
   "title": "FANUC Co-Training Module",
   "level": "L5",
   "moduleNumber": 3,
-  "duration": "16 hrs",
+  "duration": "12 hrs",
   "nextModule": "L5-M4",
   "previousModule": "L5-M2",
   "prerequisite": "L5-M2 (60%)",
@@ -11,7 +11,7 @@
   "sections": [
     {
       "sectionId": 1,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 01",
+      "eyebrow": "Level 5 · Module 3 · Section 01",
       "title": "Why FANUC Co-Training Exists",
       "learningObjectives": [
         "Understand DiFacto's position as an integrator of both MoRo and FANUC systems",
@@ -27,7 +27,7 @@
     },
     {
       "sectionId": 2,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 02",
+      "eyebrow": "Level 5 · Module 3 · Section 02",
       "title": "What This Module Covers",
       "learningObjectives": [
         "Understand the general scope of FANUC-side knowledge relevant to MoRo instructors",
@@ -37,7 +37,7 @@
     },
     {
       "sectionId": 3,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 03",
+      "eyebrow": "Level 5 · Module 3 · Section 03",
       "title": "Teaching an Integrated System",
       "learningObjectives": [
         "Understand the pedagogical challenge of teaching a system with two distinct origins",
@@ -47,7 +47,7 @@
     },
     {
       "sectionId": 4,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 04",
+      "eyebrow": "Level 5 · Module 3 · Section 04",
       "title": "Common Points of Learner Confusion",
       "learningObjectives": [
         "Recognize typical areas where learners struggle with integrated systems",
@@ -57,7 +57,7 @@
     },
     {
       "sectionId": 5,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 05",
+      "eyebrow": "Level 5 · Module 3 · Section 05",
       "title": "Co-Delivery Considerations",
       "learningObjectives": [
         "Understand what co-delivery with a FANUC-side trainer might involve",
@@ -67,7 +67,7 @@
     },
     {
       "sectionId": 6,
-      "eyebrow": "Level 5 \u00b7 Module 3 \u00b7 Section 06",
+      "eyebrow": "Level 5 · Module 3 · Section 06",
       "title": "Certification Implications",
       "learningObjectives": [
         "Understand how this module factors into overall Master Instructor certification",
@@ -84,41 +84,41 @@
         "question": "Why does FANUC co-training matter for DiFacto's Master Instructors?",
         "options": [
           "It doesn't - FANUC and MoRo are unrelated",
-          "Many deployments involve MoRo integrated with FANUC systems, making dual-system instructors more valuable",
-          "FANUC training is required by law"
+          "FANUC training is required by law",
+          "Many deployments involve MoRo integrated with FANUC systems, making dual-system instructors more valuable"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Real deployments often combine both systems, making dual-system instructor capability valuable."
       },
       {
         "id": 2,
         "question": "Is this module a substitute for standalone FANUC certification?",
         "options": [
+          "FANUC certification is not relevant here",
           "Yes, it fully replaces FANUC certification",
-          "No - it covers FANUC-side knowledge specifically relevant to MoRo integration training",
-          "FANUC certification is not relevant here"
+          "No - it covers FANUC-side knowledge specifically relevant to MoRo integration training"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. This module is integration-focused, not a substitute for full FANUC certification."
       },
       {
         "id": 3,
         "question": "What makes teaching an integrated system pedagogically harder than teaching one system alone?",
         "options": [
-          "It isn't actually harder",
           "Learners need a coherent mental model spanning both systems, not two disconnected sets of knowledge",
+          "It isn't actually harder",
           "Integrated systems have no additional teaching complexity"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Building a coherent cross-system mental model is the core instructional challenge."
       },
       {
         "id": 4,
         "question": "What is a common point of learner confusion with integrated systems?",
         "options": [
-          "Battery charging procedures",
+          "The color of the robot",
           "Handshake timing - understanding that both systems wait on signals from each other",
-          "The color of the robot"
+          "Battery charging procedures"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Handshake timing between the two systems is a frequent source of learner confusion."

@@ -84,21 +84,21 @@
         "question": "What is the scope of troubleshooting covered at the L2 level?",
         "options": [
           "Full technical diagnosis and repair",
-          "Recognizing and responding to issues, not fixing them",
-          "Only software-related issues"
+          "Only software-related issues",
+          "Recognizing and responding to issues, not fixing them"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Deep diagnosis belongs to L3A; L2 focuses on recognition and appropriate response."
       },
       {
         "id": 2,
         "question": "What information is useful to gather before escalating an issue?",
         "options": [
-          "Nothing - just escalate immediately with no details",
           "What MoRo was doing, its current status, and any environmental changes",
+          "Nothing - just escalate immediately with no details",
           "Only the time of day"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. This context speeds up the technician's eventual diagnosis."
       },
       {
@@ -117,8 +117,8 @@
         "question": "If MoRo becomes unresponsive on the dashboard, what might this indicate?",
         "options": [
           "A connectivity issue rather than necessarily a hardware fault",
-          "The unit is definitely destroyed",
-          "Nothing - it's always normal"
+          "Nothing - it's always normal",
+          "The unit is definitely destroyed"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Dashboard unresponsiveness often points to connectivity rather than hardware failure."
@@ -127,9 +127,9 @@
         "id": 5,
         "question": "What detail about a mission failure is useful to note for diagnosis?",
         "options": [
-          "Nothing specific needed",
+          "The color of the robot",
           "Whether it failed at the start, mid-route, or at the destination",
-          "The color of the robot"
+          "Nothing specific needed"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Where in the mission it failed significantly narrows down likely causes."
