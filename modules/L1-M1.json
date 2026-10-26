@@ -7,7 +7,7 @@
   "nextModule": "L1-M2",
   "previousModule": null,
   "prerequisite": "None",
-  "contentStatus": "REVISED per Content Principles (60% pass, terminology + notes). Zone model consolidated to single 2m interactive zone, replacing prior three-tier (5m/2-5m/0-2m) draft — reconciled with L1-M4.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -127,7 +127,7 @@
         "id": 1,
         "question": "What is an IMR (Intelligent Mobile Robot)?",
         "options": [
-          "A robotic arm fixed to one location",
+          "A robotic arm that is bolted to one location and repeats the same motion",
           "A robot that navigates autonomously without a fixed physical path",
           "A robot that follows a fixed path like a conveyor"
         ],
@@ -138,8 +138,8 @@
         "id": 2,
         "question": "How does MoRo determine its position without floor tape or markers?",
         "options": [
-          "Magnetic floor sensors",
-          "GPS satellite tracking",
+          "Magnetic sensors embedded in the factory floor",
+          "GPS satellite tracking, like a car's navigation",
           "LiDAR sensors combined with SLAM"
         ],
         "correctAnswer": 2,
@@ -158,21 +158,21 @@
       },
       {
         "id": 4,
-        "question": "What is MoRo's confirmed interactive zone distance?",
+        "question": "What interactive zone distance does this course teach for MoRo?",
         "options": [
           "2 meters",
           "10 meters",
           "5 meters"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. The interactive zone is currently confirmed at 2 meters, per DiFacto guidance."
+        "feedback": "Correct. This course currently uses 2 meters, per DiFacto guidance; the final figure will be confirmed."
       },
       {
         "id": 5,
         "question": "If MoRo stops unexpectedly in front of you, what should you do?",
         "options": [
           "Alert the operator or supervisor and wait",
-          "Touch its sensors to check what's wrong",
+          "Touch its sensors and bumper to check what is wrong with it",
           "Push it out of the way"
         ],
         "correctAnswer": 0,

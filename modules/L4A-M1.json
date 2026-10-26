@@ -5,9 +5,9 @@
   "moduleNumber": 1,
   "duration": "7 hrs",
   "nextModule": "L4A-M2",
-  "previousModule": "L3B-M6",
+  "previousModule": "L3A-M7",
   "prerequisite": "L3A certification complete (Systems Engineer track requires Technician foundation)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in CDD's Systems Engineer role definition and SOW Bucket 2 integration topic mapping.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -30,14 +30,6 @@
         {
           "term": "MES (Manufacturing Execution System)",
           "note": "Software that tracks and manages production on the factory floor, often triggering or receiving data from MoRo missions."
-        },
-        {
-          "term": "MES/WMS",
-          "note": "Manufacturing Execution System and Warehouse Management System — the production and inventory tracking software MoRo commonly integrates with."
-        },
-        {
-          "term": "ERP (Enterprise Resource Planning)",
-          "note": "Business-wide software managing resources and operations at the enterprise level, sitting above MES in the typical automation layering."
         }
       ]
     },
@@ -65,7 +57,13 @@
         "Understand the general layering of industrial automation systems",
         "Recognize where MoRo typically sits within this layering"
       ],
-      "content": "Industrial automation is often conceptually layered: the floor level (MoRo, PLCs, physical machines), the supervisory level (SCADA, monitoring the floor), and the enterprise level (MES, ERP, business systems). MoRo primarily interacts at the floor level directly, but its data and status often need to surface upward through these layers for full visibility - which is what later modules in this track (MES/WMS integration, OPC-UA connectivity) specifically address."
+      "content": "Industrial automation is often conceptually layered: the floor level (MoRo, PLCs, physical machines), the supervisory level (SCADA, monitoring the floor), and the enterprise level (MES, ERP, business systems). MoRo primarily interacts at the floor level directly, but its data and status often need to surface upward through these layers for full visibility - which is what later modules in this track (MES/WMS integration, OPC-UA connectivity) specifically address.",
+      "keyTerms": [
+        {
+          "term": "ERP (Enterprise Resource Planning)",
+          "note": "Business-wide software managing resources and operations at the enterprise level, sitting above MES in the typical automation layering."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -75,7 +73,8 @@
         "Understand general principles that support reliable system integration",
         "Recognize common pitfalls in integration design"
       ],
-      "content": "Reliable integration design favors clear failure modes (if one component fails, the rest of the system should degrade predictably, not catastrophically) and loose coupling where possible (components that depend on each other minimally are easier to maintain and troubleshoot independently). A tightly interconnected system where every component depends on every other is harder to diagnose when something goes wrong."
+      "content": "Reliable integration design favors clear failure modes (if one component fails, the rest of the system should degrade predictably, not catastrophically) and loose coupling where possible (components that depend on each other minimally are easier to maintain and troubleshoot independently). A tightly interconnected system where every component depends on every other is harder to diagnose when something goes wrong.",
+      "keyTerms": []
     },
     {
       "sectionId": 5,
@@ -85,7 +84,8 @@
         "Understand what architecture documentation typically includes",
         "Recognize why this documentation matters for long-term maintainability"
       ],
-      "content": "A documented architecture includes a diagram or description of components and their connections, the data flows between them, and the rationale behind key design decisions. This matters because integrated systems often outlive the original engineer's direct involvement - good documentation is what lets someone else maintain or extend the system without having to reverse-engineer the original design intent."
+      "content": "A documented architecture includes a diagram or description of components and their connections, the data flows between them, and the rationale behind key design decisions. This matters because integrated systems often outlive the original engineer's direct involvement - good documentation is what lets someone else maintain or extend the system without having to reverse-engineer the original design intent.",
+      "keyTerms": []
     },
     {
       "sectionId": 6,
@@ -95,17 +95,8 @@
         "Understand the progression through the remaining L4A modules",
         "Recognize the certification this track leads to"
       ],
-      "content": "This module establishes the conceptual foundation; subsequent modules build specific integration competency - MES/WMS connectivity, OPC-UA communication, safety PLC design, and multi-robot cell design - culminating in the enterprise-scale thinking covered in the final module. Together these complete the requirements for DiFacto Certified IMR Systems Engineer status.",
-      "keyTerms": [
-        {
-          "term": "OPC-UA",
-          "note": "A standardized, vendor-neutral communication protocol used in industrial automation — covered in depth in L4A-M3."
-        },
-        {
-          "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness — the category MoRo belongs to."
-        }
-      ]
+      "content": "This module establishes the conceptual foundation; subsequent modules build specific integration competency - MES/WMS connectivity, OPC-UA communication, safety PLC design, and multi-robot cell design - culminating in the enterprise-scale thinking covered in the final module. Together they prepare you for the L4A assessment on the way to DiFacto Certified IMR Systems Engineer status.",
+      "keyTerms": []
     }
   ],
   "quiz": {
@@ -115,9 +106,9 @@
         "id": 1,
         "question": "How does the Systems Engineer role differ from the Technician role?",
         "options": [
-          "Systems Engineers only perform physical repairs",
-          "Systems Engineers design how MoRo integrates into a larger cell with other equipment and systems",
-          "There is no difference"
+          "It focuses on repairing and servicing MoRo hardware faster than a Technician can",
+          "It designs how MoRo fits into a larger cell with other equipment and systems",
+          "It covers only operating MoRo units that are already installed"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The Systems Engineer track addresses integration and design, building on the Technician foundation."
@@ -126,9 +117,9 @@
         "id": 2,
         "question": "What does a system architecture describe?",
         "options": [
-          "Only MoRo's physical dimensions",
-          "The building's physical layout",
-          "How different components connect and communicate as a whole system"
+          "The physical dimensions, weight, and payload limits of every MoRo unit in the cell",
+          "The order in which operators are trained on each module of the curriculum",
+          "How the components of a cell connect and communicate as a whole"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. System architecture is about the complete picture of connections and data flow."
@@ -137,31 +128,31 @@
         "id": 3,
         "question": "At what level does MoRo primarily interact within the typical automation layering?",
         "options": [
-          "MoRo has no defined layer",
-          "Primarily the floor level, with data surfacing upward through other layers",
-          "Only the enterprise level"
+          "The floor level, with its data surfacing upward through other layers",
+          "The enterprise level, where business systems manage it directly",
+          "The supervisory level only, because MoRo cannot operate without SCADA present"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. MoRo operates at the floor level, with integration extending its visibility upward."
       },
       {
         "id": 4,
         "question": "What does 'loose coupling' mean in integration design?",
         "options": [
-          "Components that depend on each other minimally, making them easier to maintain independently",
-          "Physical bolts that are not fully tightened",
-          "A type of network cable"
+          "Cables between components are left slack so they can be moved",
+          "Components are connected through one shared controller that everything relies on",
+          "Components depend on each other as little as possible, so each is easier to maintain"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "feedback": "Correct. Loose coupling supports easier troubleshooting and maintenance across components."
       },
       {
         "id": 5,
         "question": "Why does architecture documentation matter for long-term maintainability?",
         "options": [
-          "Integrated systems often outlive the original engineer's direct involvement",
-          "It doesn't matter once the system works",
-          "Documentation is only required for legal compliance"
+          "Integrated systems often outlive the engineer who built them",
+          "It proves to operators and auditors that the cell has passed its safety check",
+          "It lets the cell run for long periods without anyone monitoring its status"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Good documentation lets future engineers maintain the system without reverse-engineering it."

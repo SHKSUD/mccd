@@ -7,7 +7,7 @@
   "nextModule": "L3B-M3",
   "previousModule": "L3B-M1",
   "prerequisite": "L3B-M1 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on SLAM concepts confirmed in L1-M2 (CDD-sourced). Map building configuration specifics pending ANT Server documentation from DiFacto.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -48,6 +48,10 @@
         {
           "term": "ANT Server",
           "note": "The server-side component of MoRo's ANT platform, used here for guided mapping procedures."
+        },
+        {
+          "term": "LiDAR",
+          "note": "A sensor that measures distance by timing reflected laser light, used by MoRo to see its surroundings."
         }
       ]
     },
@@ -59,7 +63,13 @@
         "Understand what reviewing a completed map involves",
         "Know what issues to look for before considering a map finalized"
       ],
-      "content": "After a mapping pass, the resulting map should be reviewed before being put into operational use - checking for gaps in coverage, unexpected artifacts, or areas that look inconsistent with the actual space. Catching mapping issues at this stage is far easier than discovering them later through operational problems once missions are already running against a flawed map."
+      "content": "After a mapping pass, the resulting map should be reviewed before being put into operational use - checking for gaps in coverage, unexpected artifacts, or areas that look inconsistent with the actual space. Catching mapping issues at this stage is far easier than discovering them later through operational problems once missions are already running against a flawed map.",
+      "keyTerms": [
+        {
+          "term": "Map artifact",
+          "note": "An unexpected or false feature in a map that does not match the real space."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -89,7 +99,7 @@
         "id": 1,
         "question": "Why should a space be in a representative state before mapping?",
         "options": [
-          "Representative state only matters for safety, not mapping",
+          "Representative state only matters for safety certification, not for the quality of the map",
           "It doesn't matter what state the space is in",
           "So the resulting map reflects actual operational reality, not an atypical snapshot"
         ],
@@ -100,9 +110,9 @@
         "id": 2,
         "question": "What pacing is recommended during a mapping pass?",
         "options": [
-          "Pacing doesn't affect map quality",
-          "A deliberate, methodical pace allowing accurate LiDAR coverage",
-          "As fast as possible to save time"
+          "Pacing doesn't affect map quality as long as the whole space is covered",
+          "A deliberate, methodical pace for accurate LiDAR coverage",
+          "As fast as possible, to keep the space free of other traffic"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Deliberate pacing supports accurate map-building as MoRo moves through the space."
@@ -111,7 +121,7 @@
         "id": 3,
         "question": "Why review a map before putting it into operational use?",
         "options": [
-          "Only to check file size",
+          "Only to check that the file size is within the storage limit of the unit",
           "Review isn't necessary",
           "To catch gaps or artifacts before they cause operational problems"
         ],
@@ -124,7 +134,7 @@
         "options": [
           "Not necessarily - a targeted update may suffice depending on the scope of change",
           "Maps never need updating once created",
-          "Yes, always required regardless of change scope"
+          "Yes, a full remap is always required, regardless of how small the layout change is"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. The appropriate update approach depends on how much actually changed."

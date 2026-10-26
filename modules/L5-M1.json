@@ -7,7 +7,7 @@
   "nextModule": "L5-M2",
   "previousModule": "L4A or L4B certification",
   "prerequisite": "L4A or L4B certification complete (senior practitioner status required)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in SOW Bucket 3 'L5 Instructor framework: train-the-trainer outline' and CDD's three-capability structure (pedagogy, infrastructure, quality assurance).",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -18,16 +18,7 @@
         "Recognize why L5 requires senior practitioner status as a prerequisite"
       ],
       "content": "Being highly skilled at MoRo operation, maintenance, or programming doesn't automatically make someone a good instructor. Teaching is a distinct skill. L5 exists to build that skill deliberately in people who already have deep technical competency - hence the L4A/L4B prerequisite - rather than assuming expertise transfers automatically to teaching ability.",
-      "keyTerms": [
-        {
-          "term": "FANUC",
-          "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
-        },
-        {
-          "term": "IMR (Intelligent Mobile Robot)",
-          "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings — the category MoRo belongs to."
-        }
-      ]
+      "keyTerms": []
     },
     {
       "sectionId": 2,
@@ -37,7 +28,13 @@
         "Understand general principles of adult learning relevant to technical training",
         "Recognize how this differs from how the instructor themselves may have learned"
       ],
-      "content": "Adult learners generally engage best with material connected to practical relevance. Why does this matter for their actual job? That question matters more than abstract theory for its own sake. This curriculum has consistently used this principle - real-world comparisons, role-specific content. Understanding why that approach works is foundational to teaching it effectively to others, not just following the pattern without understanding it."
+      "content": "Adult learners generally engage best with material connected to practical relevance. Why does this matter for their actual job? That question matters more than abstract theory for its own sake. This curriculum has consistently used this principle - real-world comparisons, role-specific content. Understanding why that approach works is foundational to teaching it effectively to others, not just following the pattern without understanding it.",
+      "keyTerms": [
+        {
+          "term": "adult learning",
+          "note": "The idea that adults learn best when material is clearly relevant to their own work and experience."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -47,7 +44,13 @@
         "Understand general principles for structuring an effective training session",
         "Recognize the balance between instruction and hands-on practice"
       ],
-      "content": "Effective technical training sessions generally balance explanation with hands-on practice. Learners retain procedural knowledge - how to actually do something - far better through guided practice than through explanation alone. Structuring sessions to include genuine hands-on time, not just a demonstration followed by passive observation, matters significantly for retention."
+      "content": "Effective technical training sessions generally balance explanation with hands-on practice. Learners retain procedural knowledge - how to actually do something - far better through guided practice than through explanation alone. Structuring sessions to include genuine hands-on time, not just a demonstration followed by passive observation, matters significantly for retention.",
+      "keyTerms": [
+        {
+          "term": "procedural knowledge",
+          "note": "Knowing how to do something, as opposed to knowing facts about it."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -57,7 +60,13 @@
         "Understand common signs that a learner is struggling with material",
         "Recognize instructional strategies for addressing this"
       ],
-      "content": "Learner struggle often shows up as hesitation, repeated questions on the same point, or avoidance of hands-on practice. These are signals worth addressing directly, rather than moving on and hoping understanding catches up. Effective instructors check for understanding actively - asking learners to explain back, not just asking 'any questions?' - rather than assuming silence means comprehension."
+      "content": "Learner struggle often shows up as hesitation, repeated questions on the same point, or avoidance of hands-on practice. These are signals worth addressing directly, rather than moving on and hoping understanding catches up. Effective instructors check for understanding actively - asking learners to explain back, not just asking 'any questions?' - rather than assuming silence means comprehension.",
+      "keyTerms": [
+        {
+          "term": "checking for understanding",
+          "note": "Asking learners to show or explain what they have understood, instead of assuming silence means comprehension."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -67,7 +76,13 @@
         "Understand principles of effective feedback during skills training",
         "Recognize the difference between corrective feedback and discouragement"
       ],
-      "content": "Effective feedback is specific, pointing to exactly what to adjust rather than vague encouragement or criticism. It's also timely, given close to the action rather than saved for a general summary later. The goal is helping a learner improve their next attempt, not just evaluating their last one. Feedback framed this way tends to be received better and acted on more effectively."
+      "content": "Effective feedback is specific, pointing to exactly what to adjust rather than vague encouragement or criticism. It's also timely, given close to the action rather than saved for a general summary later. The goal is helping a learner improve their next attempt, not just evaluating their last one. Feedback framed this way tends to be received better and acted on more effectively.",
+      "keyTerms": [
+        {
+          "term": "corrective feedback",
+          "note": "Specific guidance on what to adjust in the next attempt."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -77,7 +92,8 @@
         "Understand the progression through the remaining L5 modules",
         "Recognize the certification this track leads to"
       ],
-      "content": "This module establishes pedagogical foundation. Subsequent L5 modules build assessment design skill, FANUC co-training capability, lab infrastructure knowledge, and observed delivery practice. Together they culminate in DiFacto Master IMR Instructor certification, which enables training and certifying other MoRo users."
+      "content": "This module establishes pedagogical foundation. Subsequent L5 modules build assessment design skill, FANUC co-training capability, lab infrastructure knowledge, and observed delivery practice. Together they culminate in DiFacto Master IMR Instructor certification, which enables training and certifying other MoRo users.",
+      "keyTerms": []
     }
   ],
   "quiz": {
@@ -87,20 +103,20 @@
         "id": 1,
         "question": "Does strong technical competency automatically make someone a good instructor?",
         "options": [
-          "Instructor ability has no relationship to technical skill at all",
-          "No - teaching is a distinct skill that L5 builds deliberately",
-          "Yes, technical skill and teaching skill are the same thing"
+          "No, teaching is a separate skill that L5 builds on purpose",
+          "Yes, because the best technicians explain things most clearly",
+          "Only for MoRo programming, not for operation or maintenance"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. L5 deliberately builds teaching skill in already technically competent practitioners."
       },
       {
         "id": 2,
         "question": "What do adult learners generally engage best with?",
         "options": [
-          "Abstract theory disconnected from practical application",
-          "Adult learners have no particular learning preferences",
-          "Material connected to practical relevance for their actual job"
+          "Theory presented in full before any practical example is introduced",
+          "Short facts to memorize, with the reasons left for much later",
+          "Material connected to why it matters for their actual job"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Practical relevance tends to drive stronger engagement for adult technical learners."
@@ -109,20 +125,20 @@
         "id": 3,
         "question": "Why does hands-on practice matter in training session structure?",
         "options": [
-          "Learners retain procedural knowledge far better through guided practice than explanation alone",
-          "It doesn't matter - explanation alone is sufficient",
-          "Hands-on practice should always replace explanation entirely"
+          "It keeps learners busy while the instructor prepares the next explanation in the session",
+          "Guided practice helps people retain procedures better than explanation alone",
+          "It replaces explanation, so sessions can be shortened to practice alone"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. A balance of explanation and genuine hands-on practice supports better retention."
       },
       {
         "id": 4,
         "question": "How should instructors check for learner understanding?",
         "options": [
-          "Actively check, such as asking learners to explain back, not just asking if there are questions",
-          "Assume silence means full comprehension",
-          "Understanding never needs checking"
+          "Ask learners to explain it back, instead of only asking for questions",
+          "Treat a silent room as a sign that everyone has understood",
+          "Wait for the end-of-module quiz to see who struggled with it"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Active checking is more reliable than assuming silence indicates comprehension."
@@ -131,9 +147,9 @@
         "id": 5,
         "question": "What makes feedback effective during skills training?",
         "options": [
-          "Feedback should be avoided entirely",
-          "Vague encouragement given at the end of the session",
-          "Specific and timely feedback given close to the action"
+          "It is general encouragement saved for the end of the whole course",
+          "It focuses on grading the last attempt rather than the next one",
+          "It is specific and given close to the moment of the action"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Specific, timely feedback helps learners improve their next attempt."

@@ -7,7 +7,7 @@
   "nextModule": "L3B Certification Assessment",
   "previousModule": "L3B-M5",
   "prerequisite": "L3B-M5 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Capstone module for L3B, synthesizing map building, mission programming, and FANUC integration (per CDD). New module - does not exist in DiFacto's original slide deck. Facility-specific commissioning checklist pending DiFacto operations input.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -51,7 +51,13 @@
         "Apply the map-building process (from L3B-M2) to a full new-site context",
         "Understand sequencing considerations for a complete facility map"
       ],
-      "content": "Map building at commissioning scale applies the same SLAM-based process covered earlier in the track, but across an entire operational area rather than a test zone. Sequencing matters: mapping during lower-activity periods reduces the chance of transient obstacles (parked equipment, temporary clutter) becoming permanently embedded in the baseline map."
+      "content": "Map building at commissioning scale applies the same SLAM-based process covered earlier in the track, but across an entire operational area rather than a test zone. Sequencing matters: mapping during lower-activity periods reduces the chance of transient obstacles (parked equipment, temporary clutter) becoming permanently embedded in the baseline map.",
+      "keyTerms": [
+        {
+          "term": "Baseline map",
+          "note": "The first complete map of a site, which later missions are built on."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -71,7 +77,13 @@
         "Apply machine integration principles (from L3B-M4) in a commissioning context",
         "Understand validation steps before go-live for each integration point"
       ],
-      "content": "Where MoRo interfaces with existing equipment (per L3B-M4's FANUC I/O handshake coverage), each integration point needs individual validation before go-live - confirming the handshake sequence works reliably, not just once under ideal conditions, but repeatedly and under realistic operational variation."
+      "content": "Where MoRo interfaces with existing equipment (per L3B-M4's FANUC I/O handshake coverage), each integration point needs individual validation before go-live - confirming the handshake sequence works reliably, not just once under ideal conditions, but repeatedly and under realistic operational variation.",
+      "keyTerms": [
+        {
+          "term": "Go-live",
+          "note": "The moment a deployment starts running for real operations."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -91,9 +103,9 @@
         "id": 1,
         "question": "Why does this module serve as the L3B capstone?",
         "options": [
-          "It's simply the last module numerically",
-          "It synthesizes map building, mission programming, and integration into the most common real-world Programmer task",
-          "It covers unrelated advanced topics"
+          "It's simply the last module numerically, so it ends the track by default",
+          "It brings mapping, programming, and integration together in a real Programmer task",
+          "It covers unrelated advanced topics that are normally taught at the Systems Engineer level"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Commissioning combines the full L3B skill set into the task Programmers perform most often."
@@ -102,9 +114,9 @@
         "id": 2,
         "question": "What should be assessed before mapping begins at a new site?",
         "options": [
-          "Only the facility's operating hours",
-          "Nothing - mapping can start immediately",
-          "Floor layout, machine positions, network infrastructure, and safety considerations"
+          "Only the facility's operating hours and the number of staff on each shift",
+          "Nothing - mapping can start immediately on the first day of the visit",
+          "Floor layout, machine positions, network, and safety considerations"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Pre-commissioning assessment shapes the entire approach that follows."
@@ -114,7 +126,7 @@
         "question": "Why is timing (e.g., mapping during lower-activity periods) a consideration?",
         "options": [
           "To reduce transient obstacles becoming permanently embedded in the baseline map",
-          "Mapping can only occur at night by regulation",
+          "Mapping can only occur at night, because regulations prohibit mapping during working shifts",
           "It isn't a real consideration"
         ],
         "correctAnswer": 0,
@@ -136,7 +148,7 @@
         "question": "Is commissioning complete at technical go-live?",
         "options": [
           "Yes, once the technical setup works",
-          "Only if the client specifically requests documentation",
+          "Only if the client specifically requests documentation and operator training",
           "No - it includes operator preparation and documentation handoff"
         ],
         "correctAnswer": 2,

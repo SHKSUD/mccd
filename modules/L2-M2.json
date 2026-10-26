@@ -7,7 +7,7 @@
   "nextModule": "L2-M3",
   "previousModule": "L2-M1",
   "prerequisite": "L2-M1 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Handshake signal specifics pending SME confirmation (L2 operator-level detail).",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -93,9 +93,9 @@
         "id": 1,
         "question": "Does MoRo support a single fixed payload type?",
         "options": [
-          "Only conveyor handling",
-          "No - it supports multiple configurations (conveyor, cobot, towing, lift, lift-and-rotate)",
-          "Yes, one configuration for all tasks"
+          "Only conveyor handling, because other payload types are added by third parties",
+          "No - it supports several configurations, such as conveyor and towing",
+          "Yes, one fixed configuration that is used for every task at every site"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. MoRo supports multiple payload configurations suited to different handling needs."
@@ -104,9 +104,9 @@
         "id": 2,
         "question": "What is a handshake in the context of machine coordination?",
         "options": [
-          "A physical greeting gesture",
-          "A signal exchange confirming readiness, completion, or error state between systems",
-          "A type of payload attachment"
+          "A physical greeting gesture the operator makes at the station",
+          "A signal exchange confirming readiness or completion",
+          "A type of payload attachment that locks onto the fixed machine"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. A handshake is a coordination signal exchange, not a physical action."
@@ -117,7 +117,7 @@
         "options": [
           "It shifts center of gravity, affecting stopping behavior and stability",
           "It has no effect",
-          "It only affects navigation speed"
+          "It only affects navigation speed, and only on the long straight sections of a route"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Weight distribution from a loaded payload affects stability and stopping behavior."
@@ -127,7 +127,7 @@
         "question": "During a coordinated handoff with a fixed machine, what should an operator confirm?",
         "options": [
           "That both systems show a ready or completing state before assuming success",
-          "Nothing - the systems handle it automatically with no verification needed",
+          "Nothing - the systems handle the handoff automatically with no verification needed at all",
           "That the machine is turned off"
         ],
         "correctAnswer": 0,
@@ -137,8 +137,8 @@
         "id": 5,
         "question": "If a payload attachment seems misaligned, what should you do?",
         "options": [
-          "Force it into place manually",
-          "Ignore it and proceed with the mission",
+          "Force it into place manually so the mission can continue",
+          "Ignore it and proceed with the mission as originally planned",
           "Note the issue and escalate rather than forcing it"
         ],
         "correctAnswer": 2,

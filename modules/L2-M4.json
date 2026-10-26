@@ -7,7 +7,7 @@
   "nextModule": "L2-M5",
   "previousModule": "L2-M3",
   "prerequisite": "L2-M3 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Fleet-wide dashboard view specifics pending SME confirmation (overlaps Module 3's dashboard question).",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -122,7 +122,7 @@
         "question": "What is a deadlock in a multi-robot context?",
         "options": [
           "A situation where units are each waiting on the other, with neither proceeding",
-          "A locked charging dock",
+          "A charging dock that has locked, which prevents any unit from charging overnight",
           "A software update failure"
         ],
         "correctAnswer": 0,
@@ -132,9 +132,9 @@
         "id": 4,
         "question": "What's the difference between a shared path and a reserved route?",
         "options": [
-          "Reserved routes are only for maintenance",
-          "There is no difference",
-          "Shared paths allow multiple coordinated units; reserved routes are prioritized for specific traffic"
+          "Reserved routes are only for maintenance work and are blocked for all missions",
+          "There is no difference; the two names describe exactly the same route setting",
+          "Shared paths serve many units; reserved routes are kept for specific traffic"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Shared paths coordinate multiple units; reserved routes prioritize specific traffic patterns."

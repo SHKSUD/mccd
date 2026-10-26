@@ -7,7 +7,7 @@
   "nextModule": "L3B-M6",
   "previousModule": "L3B-M4",
   "prerequisite": "L3B-M4 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). New module per CDD - does not exist in DiFacto's original slide deck. API documentation and specific endpoint details pending confirmation from DiFacto engineering.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -26,10 +26,6 @@
         {
           "term": "WMS (Warehouse Management System)",
           "note": "Software that tracks inventory and manages warehouse operations, often integrated with MoRo for triggering and reporting."
-        },
-        {
-          "term": "ANT",
-          "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
         }
       ]
     },
@@ -41,7 +37,21 @@
         "Understand the general categories of functionality available via the API",
         "Recognize the distinction between read access and control access"
       ],
-      "content": "At a conceptual level, MoRo's API exposes two broad categories: read access (fleet status, mission history, unit health - pulling data out) and control access (assigning missions, triggering actions - pushing commands in). Specific endpoint documentation, authentication requirements, and rate limits are being finalized with DiFacto's engineering team and will be added to this module once confirmed."
+      "content": "At a conceptual level, MoRo's API exposes two broad categories: read access (fleet status, mission history, unit health - pulling data out) and control access (assigning missions, triggering actions - pushing commands in). Specific endpoint documentation, authentication requirements, and rate limits are being finalized with DiFacto's engineering team and will be added to this module once confirmed.",
+      "keyTerms": [
+        {
+          "term": "Read access",
+          "note": "Permission to pull data out, such as fleet status, mission history and unit health."
+        },
+        {
+          "term": "Control access",
+          "note": "Permission to send commands in, such as assigning missions or triggering actions."
+        },
+        {
+          "term": "Endpoint",
+          "note": "A specific address a program calls to request data or an action."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -51,7 +61,13 @@
         "Understand the general principle of API authentication",
         "Recognize why access control matters for a system with physical-world control capability"
       ],
-      "content": "Because API control access means a request can move physical equipment, authentication and access control are not optional considerations - they're central to safe integration design. The specific authentication mechanism (API keys, tokens, or another method) will be detailed here once confirmed, but the underlying principle holds regardless of mechanism: only authorized systems should have control-level API access, and that access should be scoped as narrowly as the integration actually requires."
+      "content": "Because API control access means a request can move physical equipment, authentication and access control are not optional considerations - they're central to safe integration design. The specific authentication mechanism (API keys, tokens, or another method) will be detailed here once confirmed, but the underlying principle holds regardless of mechanism: only authorized systems should have control-level API access, and that access should be scoped as narrowly as the integration actually requires.",
+      "keyTerms": [
+        {
+          "term": "Authentication",
+          "note": "Proving that a system or user is who it claims to be before it is allowed access."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -93,7 +109,7 @@
         "options": [
           "It replaces ANT entirely",
           "To allow programmatic integration with systems ANT doesn't natively cover",
-          "It's a redundant backup system"
+          "It's a redundant backup system that takes over whenever the ANT interface goes down"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The API extends integration capability beyond what the standard interface provides."
@@ -102,9 +118,9 @@
         "id": 2,
         "question": "What are the two broad categories of API functionality?",
         "options": [
-          "Fast access and slow access",
-          "Public access and private access",
-          "Read access (pulling data out) and control access (pushing commands in)"
+          "Fast access for live data and slow access for historical reports",
+          "Public access for customers and private access for DiFacto staff",
+          "Read access (data out) and control access (commands in)"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Read access and control access are the two fundamental categories."
@@ -114,7 +130,7 @@
         "question": "Why does API access control matter particularly for MoRo?",
         "options": [
           "Because control-access requests can move physical equipment",
-          "It doesn't matter for this system",
+          "It doesn't matter for this system, since the API only reads data",
           "Only for data privacy reasons"
         ],
         "correctAnswer": 0,
@@ -124,9 +140,9 @@
         "id": 4,
         "question": "Should every facility pursue custom API integration?",
         "options": [
-          "Only facilities with more than 10 units",
-          "No - only where a genuine integration gap exists beyond standard tools",
-          "Yes, it's always beneficial"
+          "Only facilities with more than 10 units, since smaller ones gain too little",
+          "No - only where a real gap exists beyond standard tools",
+          "Yes, it is always beneficial, because every facility has gaps"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Custom integration adds complexity and is only worthwhile when a real gap exists."

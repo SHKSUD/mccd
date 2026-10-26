@@ -7,7 +7,7 @@
   "nextModule": "L3A-M4",
   "previousModule": "L3A-M2",
   "prerequisite": "L3A-M2 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific inspection checklist items pending DiFacto engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -17,7 +17,17 @@
         "Distinguish predictive maintenance from the preventive maintenance covered in Module 2",
         "Understand why predictive maintenance requires closer observation, not just scheduling"
       ],
-      "content": "Where preventive maintenance follows a fixed schedule regardless of condition, predictive maintenance is triggered by actual signs of degradation - a component wearing faster than typical, a performance metric drifting from its normal range. This requires closer, ongoing observation rather than just following a calendar."
+      "content": "Where preventive maintenance follows a fixed schedule regardless of condition, predictive maintenance is triggered by actual signs of degradation - a component wearing faster than typical, a performance metric drifting from its normal range. This requires closer, ongoing observation rather than just following a calendar.",
+      "keyTerms": [
+        {
+          "term": "Predictive maintenance",
+          "note": "Maintenance triggered by actual signs of wear or drift, rather than by the calendar."
+        },
+        {
+          "term": "Degradation",
+          "note": "The gradual loss of performance or condition in a component over time."
+        }
+      ]
     },
     {
       "sectionId": 2,
@@ -27,7 +37,17 @@
         "Understand general categories of early warning signs",
         "Recognize that predictive indicators are often subtle, not dramatic"
       ],
-      "content": "Predictive signs tend to be gradual rather than sudden: slightly increased noise or vibration from a drive component, a battery charging cycle that takes marginally longer than it used to, a sensor reading that's technically within range but trending in one direction over time. None of these individually demand immediate action - but tracked over time, they indicate when proactive attention is worthwhile."
+      "content": "Predictive signs tend to be gradual rather than sudden: slightly increased noise or vibration from a drive component, a battery charging cycle that takes marginally longer than it used to, a sensor reading that's technically within range but trending in one direction over time. None of these individually demand immediate action - but tracked over time, they indicate when proactive attention is worthwhile.",
+      "keyTerms": [
+        {
+          "term": "Vibration",
+          "note": "Rapid back-and-forth movement; a change in a drive component's vibration can signal wear."
+        },
+        {
+          "term": "Trend",
+          "note": "A pattern of readings moving steadily in one direction over time."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -37,7 +57,13 @@
         "Understand the purpose of a structured inspection checklist",
         "Recognize how to use a checklist as a tool for comparison over time, not just a one-time pass/fail"
       ],
-      "content": "An inspection checklist's real value comes from consistency over time - recording actual values (not just pass/fail) where possible, so this inspection can be compared against the last one. A checklist that only records 'OK' or 'not OK' misses the gradual trends that predictive maintenance depends on noticing. Specific checklist items for MoRo's inspection points will be confirmed against DiFacto documentation."
+      "content": "An inspection checklist's real value comes from consistency over time - recording actual values (not just pass/fail) where possible, so this inspection can be compared against the last one. A checklist that only records 'OK' or 'not OK' misses the gradual trends that predictive maintenance depends on noticing. Specific checklist items for MoRo's inspection points will be confirmed against DiFacto documentation.",
+      "keyTerms": [
+        {
+          "term": "Inspection checklist",
+          "note": "A list of inspection points a technician checks and records at each visit."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -78,7 +104,7 @@
         "question": "What triggers predictive maintenance, as opposed to preventive maintenance?",
         "options": [
           "A fixed calendar schedule, same as preventive",
-          "Predictive maintenance doesn't exist as a separate category",
+          "Predictive maintenance doesn't exist as a separate category from preventive work",
           "Actual observed signs of degradation, rather than a fixed schedule"
         ],
         "correctAnswer": 2,
@@ -88,9 +114,9 @@
         "id": 2,
         "question": "Are predictive warning signs typically dramatic and obvious?",
         "options": [
-          "Predictive signs don't exist",
-          "No - they tend to be gradual and subtle, visible mainly over time",
-          "Yes, always sudden and severe"
+          "Predictive signs don't exist until a component has already failed",
+          "No - they tend to be gradual and subtle",
+          "Yes, they are always sudden and severe, so they are hard to miss"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Predictive indicators are usually subtle trends, not dramatic single events."
@@ -99,7 +125,7 @@
         "id": 3,
         "question": "Why is recording actual values better than just pass/fail on a checklist?",
         "options": [
-          "There's no difference in value",
+          "There's no difference in value, since a pass already means the reading was fine",
           "Pass/fail is always more accurate",
           "Actual values allow comparison over time to spot gradual trends"
         ],
@@ -121,7 +147,7 @@
         "id": 5,
         "question": "How does predictive maintenance relate to diagnostic troubleshooting covered later in this track?",
         "options": [
-          "Diagnostics replaces the need for predictive maintenance",
+          "Diagnostics replaces the need for predictive maintenance as soon as any fault code appears",
           "Both depend on recognizing what's normal to notice deviation, differing mainly in timing",
           "They are unrelated skills"
         ],

@@ -1,0 +1,252 @@
+{
+  "levelId": "L1",
+  "title": "Level 1 Exam",
+  "levelName": "IMR Awareness",
+  "certification": "DiFacto Certified IMR Awareness Practitioner",
+  "passMark": 70,
+  "practical": null,
+  "maxAttempts": 2,
+  "questionCount": 20,
+  "questions": [
+    {
+      "id": 1,
+      "sourceModule": "L1-M1",
+      "question": "Why does MoRo not need floor tape or magnetic strips to find its way?",
+      "options": [
+        "It builds a LiDAR map and locates itself against it using SLAM",
+        "It follows a wire buried beneath the factory floor along each route",
+        "An operator steers it remotely through every move from a control desk"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. LiDAR plus SLAM replaces the fixed infrastructure that older AGV systems relied on."
+    },
+    {
+      "id": 2,
+      "sourceModule": "L1-M1",
+      "question": "Which MoRo variant has a 500 kg payload rating, typically used for machine tending and part transfer?",
+      "options": [
+        "A-250",
+        "A-500",
+        "A-1200"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. The A-500 carries 500 kg and is typically used for machine tending and part transfer."
+    },
+    {
+      "id": 3,
+      "sourceModule": "L1-M1",
+      "question": "Which of these is a limit of what MoRo can do?",
+      "options": [
+        "Handle a genuinely unplanned situation without human input",
+        "Avoid an obstacle that appears in its path, using its sensors",
+        "Return to charge itself when needed"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. MoRo follows programmed logic; unplanned situations still need human judgment."
+    },
+    {
+      "id": 4,
+      "sourceModule": "L1-M1",
+      "question": "How does MoRo change the nature of a floor operator's work?",
+      "options": [
+        "Operators are no longer needed on the floor",
+        "Work shifts from performing manual transport toward supervising it",
+        "Operators must steer each individual move manually"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. The operator's role moves toward supervision, watching for exceptions and confirming handoffs."
+    },
+    {
+      "id": 5,
+      "sourceModule": "L1-M2",
+      "question": "What does a LiDAR sensor measure to work out distance?",
+      "options": [
+        "The temperature of nearby objects, read through the sensor window",
+        "The sound of nearby machinery, picked up by the sensor head",
+        "The time laser light takes to reflect back"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. LiDAR calculates distance from the return time of reflected laser light."
+    },
+    {
+      "id": 6,
+      "sourceModule": "L1-M2",
+      "question": "Which of these is LiDAR least reliable at detecting?",
+      "options": [
+        "A concrete pillar",
+        "A glass panel",
+        "A steel machine housing"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Transparent materials like glass do not reflect the laser predictably."
+    },
+    {
+      "id": 7,
+      "sourceModule": "L1-M2",
+      "question": "A factory relocates several machines to new positions. What should happen to MoRo's map?",
+      "options": [
+        "Nothing, because the map is permanent once built",
+        "MoRo should keep using the old map and ignore the change",
+        "It should be updated to reflect the new layout"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Maps are not permanent and need updating when the layout changes."
+    },
+    {
+      "id": 8,
+      "sourceModule": "L1-M2",
+      "question": "Which MoRo variant is rated for ±20mm positioning accuracy?",
+      "options": [
+        "The A-250, the lightest of the three variants",
+        "The A-1200",
+        "The A-500, the mid-range variant"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. The A-250 and A-500 are rated at ±10mm; the A-1200 is rated at ±20mm."
+    },
+    {
+      "id": 9,
+      "sourceModule": "L1-M3",
+      "question": "What is the name of MoRo's Human-Machine Interface?",
+      "options": [
+        "SLAM",
+        "ANT",
+        "LiDAR"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. ANT is the HMI used for fleet monitoring and mission control."
+    },
+    {
+      "id": 10,
+      "sourceModule": "L1-M3",
+      "question": "After power-on, what should an operator wait for before assigning a mission?",
+      "options": [
+        "Approval from the maintenance team that the unit has been serviced this week",
+        "A ready state, confirmed after MoRo's internal diagnostic completes",
+        "A message from the DiFacto office"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Assigning work before diagnostics complete is a common, avoidable cause of interrupted starts."
+    },
+    {
+      "id": 11,
+      "sourceModule": "L1-M3",
+      "question": "While MoRo is under manual override, what is the status of its safety systems?",
+      "options": [
+        "They stay active; override does not disable them",
+        "They are switched off until the override has ended",
+        "Only the interactive zone is disabled during override"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Manual override never bypasses safety systems."
+    },
+    {
+      "id": 12,
+      "sourceModule": "L1-M3",
+      "question": "What is the difference between pausing a mission and cancelling it?",
+      "options": [
+        "Pausing holds position and resumes from the same point; cancelling does not",
+        "There is no difference between them",
+        "Pausing sends MoRo straight back to its charger"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. A paused mission keeps its state and resumes where it stopped."
+    },
+    {
+      "id": 13,
+      "sourceModule": "L1-M4",
+      "question": "Which two safety standards is MoRo's safety engineered against, at this level?",
+      "options": [
+        "ISO 9001 and ANSI Z10, the quality and safety management standards",
+        "IEC 61131 and ISO 14001",
+        "ISO 3691-4 and ANSI B56.5"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. ISO 3691-4 covers industrial trucks; ANSI B56.5 covers guided industrial vehicles."
+    },
+    {
+      "id": 14,
+      "sourceModule": "L1-M4",
+      "question": "What is MoRo's current interactive zone distance, per DiFacto's guidance?",
+      "options": [
+        "5 meters",
+        "2 meters",
+        "10 meters"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. The interactive zone is currently 2 meters, and may be revised as the specification is finalized."
+    },
+    {
+      "id": 15,
+      "sourceModule": "L1-M4",
+      "question": "When is E-stop the right tool to use?",
+      "options": [
+        "A genuine safety concern needing immediate action",
+        "To pause a mission for a short break during a shift",
+        "At the end of every shift, to shut the unit down safely"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. E-stop is reserved for genuine safety concerns, not routine pausing."
+    },
+    {
+      "id": 16,
+      "sourceModule": "L1-M4",
+      "question": "MoRo is stationary in an aisle. What is the safest assumption?",
+      "options": [
+        "It has finished and will stay put",
+        "It has failed, so it is safe to push by hand",
+        "It may only be paused and could move again"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. A stationary MoRo may simply be paused, so situational awareness still applies."
+    },
+    {
+      "id": 17,
+      "sourceModule": "L1-M5",
+      "question": "Why might MoRo slow down when someone hesitates near its path?",
+      "options": [
+        "It is signalling a malfunction",
+        "It is waiting for the person to give it a clear hand signal first",
+        "Its sensors read the unpredictable movement and respond to it"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. MoRo responds to what its sensors detect, not to what a person intends."
+    },
+    {
+      "id": 18,
+      "sourceModule": "L1-M5",
+      "question": "A situation arises that calls for a judgment call or an exception. Who is responsible for making it?",
+      "options": [
+        "MoRo, because it is autonomous",
+        "The nearest MoRo unit in the fleet, through the fleet system",
+        "A human, because MoRo only executes programmed logic"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Judgment calls remain a human responsibility."
+    },
+    {
+      "id": 19,
+      "sourceModule": "L1-M5",
+      "question": "You notice something minor but unusual about MoRo's path. What is the expected response?",
+      "options": [
+        "Raise it early with your supervisor or designated contact",
+        "Wait to see whether it happens again",
+        "Diagnose and fix it yourself first"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Early escalation, even of minor observations, is standard practice."
+    },
+    {
+      "id": 20,
+      "sourceModule": "L1-M5",
+      "question": "Which habit is appropriate around an active MoRo?",
+      "options": [
+        "Give it room to complete its path",
+        "Squeeze past it in tight spaces to save time",
+        "Rest a small item on it briefly"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Treat MoRo with the same predictable attention as any moving industrial equipment."
+    }
+  ]
+}

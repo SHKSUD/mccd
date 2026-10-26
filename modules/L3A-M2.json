@@ -7,7 +7,7 @@
   "nextModule": "L3A-M3",
   "previousModule": "L3A-M1",
   "prerequisite": "L3A-M1 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Specific maintenance schedules and procedures pending DiFacto engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -27,7 +27,17 @@
         "Understand the general principle behind maintenance scheduling intervals",
         "Recognize that schedules are typically based on usage, not just calendar time"
       ],
-      "content": "Preventive maintenance intervals are generally set based on a combination of time elapsed and actual usage (operating hours, cycles completed) - a heavily used unit may need attention sooner than a lightly used one on the same calendar schedule. Specific interval recommendations for MoRo components will be confirmed against DiFacto's maintenance documentation and added here."
+      "content": "Preventive maintenance intervals are generally set based on a combination of time elapsed and actual usage (operating hours, cycles completed) - a heavily used unit may need attention sooner than a lightly used one on the same calendar schedule. Specific interval recommendations for MoRo components will be confirmed against DiFacto's maintenance documentation and added here.",
+      "keyTerms": [
+        {
+          "term": "Maintenance interval",
+          "note": "The time or usage between one scheduled maintenance task and the next."
+        },
+        {
+          "term": "Operating hours",
+          "note": "The total time a unit has actually been running, used to schedule maintenance by usage rather than by calendar."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -47,7 +57,17 @@
         "Understand the general scope of sensor maintenance",
         "Recognize why software/firmware checks are part of preventive maintenance"
       ],
-      "content": "LiDAR and other sensors benefit from periodic cleaning and calibration verification, since even minor obstruction or drift affects navigation accuracy over time. Software and firmware checks confirm MoRo is running current, supported versions - this is preventive in the sense that staying current avoids accumulating technical debt that becomes harder to address later."
+      "content": "LiDAR and other sensors benefit from periodic cleaning and calibration verification, since even minor obstruction or drift affects navigation accuracy over time. Software and firmware checks confirm MoRo is running current, supported versions - this is preventive in the sense that staying current avoids accumulating technical debt that becomes harder to address later.",
+      "keyTerms": [
+        {
+          "term": "Calibration",
+          "note": "Checking and adjusting a sensor so its readings stay accurate."
+        },
+        {
+          "term": "Firmware",
+          "note": "The low-level software built into a device that controls how its hardware works."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -57,7 +77,13 @@
         "Understand the general workflow of a preventive maintenance visit",
         "Know what documentation a completed visit should produce"
       ],
-      "content": "A preventive maintenance visit follows a checklist appropriate to the schedule point (e.g., a 500-hour check covers different items than a 2000-hour check), with each item confirmed and any deviation noted - not just checked off without genuine inspection. The visit concludes with a documented record, consistent with the documentation practice covered in Module 1."
+      "content": "A preventive maintenance visit follows a checklist appropriate to the schedule point (e.g., an early-life check covers different items than a check at much higher operating hours), with each item confirmed and any deviation noted - not just checked off without genuine inspection. The visit concludes with a documented record, consistent with the documentation practice covered in Module 1.",
+      "keyTerms": [
+        {
+          "term": "Maintenance checklist",
+          "note": "A list of items to inspect at a given point in the schedule, each one confirmed and recorded."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -77,7 +103,7 @@
         "id": 1,
         "question": "Why is preventive maintenance generally more economical than waiting for failure?",
         "options": [
-          "It isn't - corrective maintenance is always cheaper",
+          "It isn't - corrective maintenance is always cheaper because nothing is spent until a failure",
           "Unplanned downtime and cascaded failures tend to cost more than scheduled prevention",
           "Preventive maintenance has no cost at all"
         ],
@@ -89,7 +115,7 @@
         "question": "What are maintenance intervals typically based on?",
         "options": [
           "A combination of elapsed time and actual usage (hours, cycles)",
-          "Calendar time only, regardless of usage",
+          "Calendar time only, regardless of how much the unit is actually used",
           "Random scheduling"
         ],
         "correctAnswer": 0,
@@ -99,9 +125,9 @@
         "id": 3,
         "question": "Why do sensors benefit from periodic cleaning and calibration checks?",
         "options": [
-          "Minor obstruction or drift affects navigation accuracy over time",
-          "They don't need maintenance",
-          "Only to improve their appearance"
+          "Small obstructions or drift erode navigation accuracy",
+          "They don't need maintenance because they have no moving parts to wear",
+          "Only to keep the housing looking clean for visiting customers"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Sensor performance can degrade gradually, affecting navigation if not checked."

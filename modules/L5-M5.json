@@ -7,7 +7,7 @@
   "nextModule": "L5-M6",
   "previousModule": "L5-M4",
   "prerequisite": "L5-M4 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Resolves the L5 module-count ambiguity (5 vs 6): SOW Bucket 3 names 'mentorship structure' as a distinct deliverable from the train-the-trainer outline and evaluation rubrics, which this module directly addresses. Specific mentorship program logistics pending DiFacto confirmation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -17,7 +17,13 @@
         "Understand the distinction between delivering training and mentoring a new instructor",
         "Recognize why this is treated as its own competency area"
       ],
-      "content": "L5-M1 built the skill of teaching a session well. This module addresses something different: supporting another person as they become an instructor themselves. A Master Instructor who teaches excellently doesn't automatically know how to mentor someone else through that same development - mentorship is an ongoing, relational skill, not a one-time delivery skill."
+      "content": "L5-M1 built the skill of teaching a session well. This module addresses something different: supporting another person as they become an instructor themselves. A Master Instructor who teaches excellently doesn't automatically know how to mentor someone else through that same development - mentorship is an ongoing, relational skill, not a one-time delivery skill.",
+      "keyTerms": [
+        {
+          "term": "mentorship",
+          "note": "An ongoing supportive relationship in which an experienced instructor helps a newer one develop."
+        }
+      ]
     },
     {
       "sectionId": 2,
@@ -27,7 +33,8 @@
         "Understand common early struggles for newly certified instructors",
         "Recognize how this differs from struggles a learner has with technical content"
       ],
-      "content": "New instructors often know the technical material well - they passed their own certification - but struggle with the instructional side: managing a room, adjusting pace in real time, or handling a question they didn't anticipate. These are confidence and experience gaps, not knowledge gaps, and they need a different kind of support than reteaching content."
+      "content": "New instructors often know the technical material well - they passed their own certification - but struggle with the instructional side: managing a room, adjusting pace in real time, or handling a question they didn't anticipate. These are confidence and experience gaps, not knowledge gaps, and they need a different kind of support than reteaching content.",
+      "keyTerms": []
     },
     {
       "sectionId": 3,
@@ -37,7 +44,8 @@
         "Understand the general shape of a mentorship relationship over time",
         "Recognize why a single observed session isn't the same as mentorship"
       ],
-      "content": "Mentorship extends beyond the observed delivery assessment (L5-M6) into an ongoing relationship - periodic check-ins, availability for questions as a new instructor gains experience, and gradually reduced oversight as confidence builds. Specific program structure and cadence will be confirmed as DiFacto's instructor network scales, but the underlying shape is consistent: support that fades as competence grows, not support that ends at certification."
+      "content": "Mentorship extends beyond the observed delivery assessment (L5-M6) into an ongoing relationship - periodic check-ins, availability for questions as a new instructor gains experience, and gradually reduced oversight as confidence builds. Specific program structure and cadence will be confirmed as DiFacto's instructor network scales, but the underlying shape is consistent: support that fades as competence grows, not support that ends at certification.",
+      "keyTerms": []
     },
     {
       "sectionId": 4,
@@ -47,7 +55,8 @@
         "Understand the discipline of observing a mentee's session without interrupting",
         "Recognize when intervention during a live session is genuinely necessary"
       ],
-      "content": "When a mentor sits in on a new instructor's session, the instinct to jump in and fix a stumble can undermine the new instructor's confidence and the learners' sense of who's actually teaching. Mentors generally hold back unless something genuinely incorrect is being taught or a safety issue arises - saving feedback for afterward, applying the same specific, timely feedback principles from L5-M1."
+      "content": "When a mentor sits in on a new instructor's session, the instinct to jump in and fix a stumble can undermine the new instructor's confidence and the learners' sense of who's actually teaching. Mentors generally hold back unless something genuinely incorrect is being taught or a safety issue arises - saving feedback for afterward, applying the same specific, timely feedback principles from L5-M1.",
+      "keyTerms": []
     },
     {
       "sectionId": 5,
@@ -57,7 +66,17 @@
         "Understand how to structure a post-session debrief with a mentee",
         "Recognize the value of the mentee self-assessing before receiving mentor feedback"
       ],
-      "content": "An effective debrief starts by asking the new instructor what they thought went well and what they'd adjust - self-assessment first, mentor feedback second. This builds the new instructor's own evaluative judgment over time, rather than creating dependence on external feedback for every session. The mentor's feedback then fills gaps or confirms what the new instructor already noticed."
+      "content": "An effective debrief starts by asking the new instructor what they thought went well and what they'd adjust - self-assessment first, mentor feedback second. This builds the new instructor's own evaluative judgment over time, rather than creating dependence on external feedback for every session. The mentor's feedback then fills gaps or confirms what the new instructor already noticed.",
+      "keyTerms": [
+        {
+          "term": "debrief",
+          "note": "A structured conversation after a session to review what happened and what to adjust."
+        },
+        {
+          "term": "self-assessment",
+          "note": "The learner's own judgment of what went well and what to change, given before feedback."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -67,7 +86,8 @@
         "Understand general signals that a new instructor is ready for independent delivery",
         "Recognize this module's place leading into the observed delivery assessment"
       ],
-      "content": "Mentorship isn't indefinite - it tapers off as a new instructor demonstrates consistent, independent competence across multiple sessions. Recognizing this point is itself a mentorship skill, distinct from the formal observed delivery assessment that follows in L5-M6, which validates certification-level competency through a single structured observation."
+      "content": "Mentorship isn't indefinite - it tapers off as a new instructor demonstrates consistent, independent competence across multiple sessions. Recognizing this point is itself a mentorship skill, distinct from the formal observed delivery assessment that follows in L5-M6, which validates certification-level competency through a single structured observation.",
+      "keyTerms": []
     }
   ],
   "quiz": {
@@ -77,20 +97,20 @@
         "id": 1,
         "question": "Why is mentorship treated as a distinct skill from teaching ability?",
         "options": [
-          "Mentorship is an ongoing, relational skill distinct from the one-time skill of delivering a session well",
-          "Mentorship is not actually part of the Master Instructor role",
-          "They are identical skills with no meaningful difference"
+          "It covers technical content that new instructors have not yet learned",
+          "It is only needed when an instructor has failed an assessment and must retake it",
+          "It is an ongoing, relational skill, unlike delivering one session well"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "feedback": "Correct. Teaching well and mentoring someone else through their own development are different skills."
       },
       {
         "id": 2,
         "question": "What do new instructors typically struggle with most?",
         "options": [
-          "Instructional execution - managing a room, pacing, unexpected questions - rather than knowledge gaps",
-          "New instructors rarely struggle with anything",
-          "Technical content knowledge, since they haven't learned the material"
+          "Instructional execution, such as pacing",
+          "The technical material, since they have only just learned it",
+          "Understanding the certification path that brought them to L5"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. New instructors typically know the material but need support with instructional execution."
@@ -99,33 +119,33 @@
         "id": 3,
         "question": "What should a mentor generally do during a mentee's live session?",
         "options": [
-          "Leave the room entirely during the session",
-          "Take over whenever the new instructor stumbles",
-          "Hold back unless something genuinely incorrect or unsafe is being taught, saving feedback for afterward"
+          "Step in quickly whenever the mentee stumbles, so that the learners are never left confused",
+          "Hold back unless something incorrect or unsafe is taught, and give feedback afterward",
+          "Stay out of the room so the mentee is never observed at all"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "feedback": "Correct. Interrupting unnecessarily can undermine the new instructor's confidence and authority."
       },
       {
         "id": 4,
         "question": "What should a post-session debrief start with?",
         "options": [
-          "Debriefs are not necessary after a mentee's session",
-          "The mentee's self-assessment, before the mentor adds feedback",
-          "The mentor's complete evaluation, before asking the mentee anything"
+          "The mentee's own view of what went well and what to adjust",
+          "The mentor's full evaluation, so the mentee knows what to fix",
+          "A review of the learners' quiz scores before anything else"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Starting with self-assessment builds the new instructor's own evaluative judgment."
       },
       {
         "id": 5,
         "question": "Is mentorship meant to continue indefinitely?",
         "options": [
-          "Mentorship lasts exactly one session",
-          "No - it tapers off as the new instructor demonstrates consistent, independent competence",
-          "Yes, mentorship never ends for a certified instructor"
+          "Yes, every certified instructor keeps a mentor for their whole career",
+          "No, it ends the moment the observed delivery assessment is passed",
+          "No, it tapers off as the new instructor shows consistent independent competence"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Mentorship support fades as competence and confidence build, rather than continuing indefinitely."
       }
     ]

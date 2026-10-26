@@ -7,7 +7,7 @@
   "nextModule": "L2-M6",
   "previousModule": "L2-M4",
   "prerequisite": "L2-M4 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Specific error code reference table pending SME/engineering input - no existing source found.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -83,7 +83,7 @@
         "id": 1,
         "question": "What is the scope of troubleshooting covered at the L2 level?",
         "options": [
-          "Full technical diagnosis and repair",
+          "Full technical diagnosis and repair of any fault the unit reports",
           "Only software-related issues",
           "Recognizing and responding to issues, not fixing them"
         ],
@@ -95,7 +95,7 @@
         "question": "What information is useful to gather before escalating an issue?",
         "options": [
           "What MoRo was doing, its current status, and any environmental changes",
-          "Nothing - just escalate immediately with no details",
+          "Nothing - just escalate immediately and let the technician ask for details",
           "Only the time of day"
         ],
         "correctAnswer": 0,
@@ -105,7 +105,7 @@
         "id": 3,
         "question": "What might cause MoRo to stop in an area that should be clear?",
         "options": [
-          "Random malfunction with no possible cause",
+          "Random malfunction with no possible cause, so nothing can be done",
           "A possible sensor obstruction worth checking for obvious causes",
           "Always a software bug"
         ],
@@ -116,9 +116,9 @@
         "id": 4,
         "question": "If MoRo becomes unresponsive on the dashboard, what might this indicate?",
         "options": [
-          "A connectivity issue rather than necessarily a hardware fault",
-          "Nothing - it's always normal",
-          "The unit is definitely destroyed"
+          "A connectivity issue, not necessarily a hardware fault",
+          "Nothing - it is always normal for the dashboard to go quiet",
+          "That the unit has definitely been destroyed or has lost power"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Dashboard unresponsiveness often points to connectivity rather than hardware failure."

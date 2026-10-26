@@ -7,7 +7,7 @@
   "nextModule": "L3A Certification Assessment",
   "previousModule": "L3A-M6",
   "prerequisite": "L3A-M6 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). This is the capstone module for L3A - a new module per CDD (does not exist in DiFacto's original slide deck), designed as performance-under-time-pressure assessment, the Technician-track equivalent of ITA's 'Applied' certification tier. Lab/drill logistics pending DiFacto facility confirmation.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -33,7 +33,17 @@
         "Understand the general format of the field drill",
         "Know what's being assessed beyond the final fix"
       ],
-      "content": "The drill presents a realistic fault scenario on an actual or simulated MoRo unit, with a defined time window to diagnose and resolve it. Assessment isn't limited to whether the fix is correct - the approach matters too: did you follow structured diagnostic methodology (from L3A-M5), did you document appropriately, did you make the correct call on whether the issue was within field-serviceable scope or required escalation. Exact drill scenarios and facility requirements are being finalized with DiFacto's operations team."
+      "content": "The drill presents a realistic fault scenario on an actual or simulated MoRo unit, with a defined time window to diagnose and resolve it. Assessment isn't limited to whether the fix is correct - the approach matters too: did you follow structured diagnostic methodology (from L3A-M5), did you document appropriately, did you make the correct call on whether the issue was within field-serviceable scope or required escalation. Exact drill scenarios and facility requirements are being finalized with DiFacto's operations team.",
+      "keyTerms": [
+        {
+          "term": "Field-serviceable",
+          "note": "Within what a technician can safely diagnose and fix on site."
+        },
+        {
+          "term": "Escalation",
+          "note": "Passing a problem to a more qualified person or team when it is beyond routine work."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -63,7 +73,17 @@
         "Understand that safety protocols don't relax under time pressure",
         "Recognize this as part of the assessment criteria, not a separate concern"
       ],
-      "content": "Time pressure is never a justification for skipping safety procedures - lockout/tagout before physical maintenance work, proper E-stop usage during testing, careful handling around powered systems. This is assessed as part of the drill, not treated separately: a technically correct fix achieved by bypassing safety procedure does not pass."
+      "content": "Time pressure is never a justification for skipping safety procedures - lockout/tagout before physical maintenance work, proper E-stop usage during testing, careful handling around powered systems. This is assessed as part of the drill, not treated separately: a technically correct fix achieved by bypassing safety procedure does not pass.",
+      "keyTerms": [
+        {
+          "term": "E-stop (emergency stop)",
+          "note": "A control that immediately stops the unit for safety."
+        },
+        {
+          "term": "Lockout/tagout (LOTO)",
+          "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -73,7 +93,7 @@
         "Understand how this module completes the L3A certification requirement",
         "Recognize what DiFacto Certified IMR Technician status represents"
       ],
-      "content": "Successfully completing this drill, alongside the written and practical components of Modules 1 through 6, completes the requirements for DiFacto Certified IMR Technician status. This certification represents verified competency, not just completed coursework - the field drill exists specifically to make that distinction real."
+      "content": "Successfully completing this drill, alongside the written and practical components of Modules 1 through 6, prepares you for the L3A assessment toward DiFacto Certified IMR Technician status. This certification represents verified competency, not just completed coursework - the field drill exists specifically to make that distinction real."
     }
   ],
   "quiz": {
@@ -83,9 +103,9 @@
         "id": 1,
         "question": "What does this module primarily assess, beyond whether the final fix is correct?",
         "options": [
-          "Whether structured methodology, documentation, and escalation judgment were applied",
-          "How fast the technician can work regardless of approach",
-          "Nothing else matters besides the final fix"
+          "Whether methodology, documentation, and escalation judgment were applied",
+          "How fast the technician finishes the task, regardless of the approach taken",
+          "Nothing else matters besides the final fix working before the timer runs out"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Approach and judgment are assessed alongside the outcome, not just the final result."
@@ -94,7 +114,7 @@
         "id": 2,
         "question": "How does time pressure typically affect diagnostic work if not managed deliberately?",
         "options": [
-          "It always improves diagnostic accuracy",
+          "It always improves diagnostic accuracy by keeping the technician focused",
           "It tends to push toward guessing rather than systematic diagnosis",
           "It has no effect on diagnostic approach"
         ],
@@ -105,7 +125,7 @@
         "id": 3,
         "question": "Is this drill performed with step-by-step guidance?",
         "options": [
-          "Yes, guidance is provided throughout",
+          "Yes, step-by-step guidance is provided throughout the whole drill by an observer",
           "Only the first attempt is unguided",
           "No - it's performed independently, reflecting real field conditions"
         ],
@@ -116,9 +136,9 @@
         "id": 4,
         "question": "Does time pressure justify skipping safety procedures during the drill?",
         "options": [
-          "No - safety procedures are assessed as part of the drill, not relaxed under pressure",
-          "Only lockout/tagout can be skipped",
-          "Yes, if it saves significant time"
+          "No - safety procedures are assessed, not relaxed under pressure",
+          "Only lockout/tagout can be skipped, and only for the shortest tasks",
+          "Yes, if skipping them saves a significant amount of time on the clock"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. A technically correct fix that bypasses safety procedure does not pass."
@@ -127,12 +147,12 @@
         "id": 5,
         "question": "What does completing this module alongside Modules 1-6 achieve?",
         "options": [
-          "Automatic promotion to L4A",
-          "Nothing formal - it's an optional exercise",
-          "Completion of the requirements for DiFacto Certified IMR Technician status"
+          "Automatic promotion to L4A without any further assessment",
+          "Nothing formal - it is an optional exercise that sits outside the track",
+          "Preparation for the L3A assessment toward Technician certification"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. This drill is the capstone requirement completing L3A Technician certification."
+        "feedback": "Correct. Together with Modules 1 to 6, this drill prepares you for the L3A assessment toward Technician certification."
       }
     ]
   }

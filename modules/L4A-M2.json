@@ -7,7 +7,7 @@
   "nextModule": "L4A-M3",
   "previousModule": "L4A-M1",
   "prerequisite": "L4A-M1 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on API concepts from L3B-M5. Grounded in CDD Integration Ecosystem section (MES/WMS API - production order triggering and reporting).",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -15,21 +15,17 @@
       "title": "Connecting MoRo to Production Systems",
       "learningObjectives": [
         "Understand why MES/WMS integration matters at the Systems Engineer level",
-        "Recognize the difference between this and the custom API work covered in L3B-M5"
+        "Recognize how this differs from general-purpose custom API work (taught to Programmers in L3B-M5)"
       ],
-      "content": "L3B-M5 covered general-purpose custom API integration. This module addresses a specific, common case: connecting MoRo to a facility's MES (Manufacturing Execution System) or WMS (Warehouse Management System) - the production and inventory tracking systems that often need to trigger MoRo missions automatically or receive status updates from completed ones.",
+      "content": "Programmers meet general-purpose custom API integration in L3B-M5. This module addresses a specific, common case: connecting MoRo to a facility's MES (Manufacturing Execution System) or WMS (Warehouse Management System) - the production and inventory tracking systems that often need to trigger MoRo missions automatically or receive status updates from completed ones.",
       "keyTerms": [
-        {
-          "term": "WMS (Warehouse Management System)",
-          "note": "Software that tracks inventory and manages warehouse operations, often triggering MoRo missions based on inventory events."
-        },
         {
           "term": "MES (Manufacturing Execution System)",
           "note": "Software that tracks and manages production on the factory floor, often integrated with MoRo for mission triggering and status reporting."
         },
         {
-          "term": "MES/WMS",
-          "note": "Manufacturing Execution System and Warehouse Management System — the production and inventory tracking software MoRo commonly integrates with."
+          "term": "WMS (Warehouse Management System)",
+          "note": "Software that tracks inventory and manages warehouse operations, often triggering MoRo missions based on inventory events."
         }
       ]
     },
@@ -41,7 +37,8 @@
         "Understand the general pattern of event-triggered mission assignment",
         "Recognize common production events that might trigger a MoRo mission"
       ],
-      "content": "A common integration pattern: when the MES records a production run as complete, or the WMS records a new order needing fulfillment, that event can automatically trigger a MoRo mission - moving the finished product, or initiating a pick operation - without requiring a human operator to manually assign the mission each time."
+      "content": "A common integration pattern: when the MES records a production run as complete, or the WMS records a new order needing fulfillment, that event can automatically trigger a MoRo mission - moving the finished product, or initiating a pick operation - without requiring a human operator to manually assign the mission each time.",
+      "keyTerms": []
     },
     {
       "sectionId": 3,
@@ -51,7 +48,13 @@
         "Understand the reverse direction of integration - MoRo reporting into MES/WMS",
         "Recognize why this reporting matters for production visibility"
       ],
-      "content": "Integration works in both directions - just as production events can trigger MoRo, MoRo's mission completion status can report back into the MES or WMS, keeping production records accurate without manual data entry. This closes the loop: the system of record reflects what actually happened on the floor, not just what was planned."
+      "content": "Integration works in both directions - just as production events can trigger MoRo, MoRo's mission completion status can report back into the MES or WMS, keeping production records accurate without manual data entry. This closes the loop: the system of record reflects what actually happened on the floor, not just what was planned.",
+      "keyTerms": [
+        {
+          "term": "system of record",
+          "note": "The system whose data is treated as the authoritative record of what happened, such as an MES for production."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -61,7 +64,13 @@
         "Understand the concept of data mapping between MoRo and MES/WMS",
         "Recognize why consistent data mapping matters"
       ],
-      "content": "MoRo's data fields (mission ID, status, location) and the MES/WMS's fields (order ID, production status, inventory location) don't automatically align - data mapping defines how these correspond. Inconsistent or incorrect mapping is a common source of integration failures that look like a connectivity problem but are actually a data definition mismatch."
+      "content": "MoRo's data fields (mission ID, status, location) and the MES/WMS's fields (order ID, production status, inventory location) don't automatically align - data mapping defines how these correspond. Inconsistent or incorrect mapping is a common source of integration failures that look like a connectivity problem but are actually a data definition mismatch.",
+      "keyTerms": [
+        {
+          "term": "data mapping",
+          "note": "Defining how fields in one system correspond to fields in another, so the same information means the same thing on both sides."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -71,17 +80,19 @@
         "Understand why integration failure handling needs explicit design",
         "Recognize the risk of an integration that fails silently"
       ],
-      "content": "What happens if the MES is temporarily unreachable when MoRo tries to report status? A well-designed integration handles this explicitly - queuing the update for retry, alerting someone, or falling back to a safe default - rather than silently losing the data or, worse, blocking MoRo's physical operation because a reporting call failed."
+      "content": "What happens if the MES is temporarily unreachable when MoRo tries to report status? A well-designed integration handles this explicitly - queuing the update for retry, alerting someone, or falling back to a safe default - rather than silently losing the data or, worse, blocking MoRo's physical operation because a reporting call failed.",
+      "keyTerms": []
     },
     {
       "sectionId": 6,
       "eyebrow": "Level 4A · Module 2 · Section 06",
       "title": "Testing MES/WMS Integration",
       "learningObjectives": [
-        "Apply integration testing principles (from L3B-M5) specifically to MES/WMS connections",
+        "Apply integration testing principles specifically to MES/WMS connections",
         "Recognize the importance of testing both trigger and reporting directions"
       ],
-      "content": "Testing this integration means validating both directions independently - confirming production events correctly trigger missions, and separately confirming mission completion correctly reports back - before relying on the full closed loop in production. Testing only one direction risks missing failures specific to the other."
+      "content": "Testing this integration means validating both directions independently - confirming production events correctly trigger missions, and separately confirming mission completion correctly reports back - before relying on the full closed loop in production. Testing only one direction risks missing failures specific to the other.",
+      "keyTerms": []
     }
   ],
   "quiz": {
@@ -89,44 +100,44 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does this module specifically address, building on L3B-M5's general API coverage?",
+        "question": "Which situation does this module focus on?",
         "options": [
-          "Only MoRo's internal software updates",
-          "Unrelated networking topics",
-          "Connecting MoRo specifically to MES/WMS production and inventory systems"
+          "Updating MoRo's onboard software across an entire fleet from one central console",
+          "Connecting MoRo to production and inventory systems (MES/WMS)",
+          "Planning charging schedules and dock placement for a large fleet of units"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. This module focuses on the common MES/WMS integration case specifically."
+        "correctAnswer": 1,
+        "feedback": "Correct. This module focuses on the common case of connecting MoRo to MES/WMS production and inventory systems."
       },
       {
         "id": 2,
         "question": "What is a common pattern for triggering a MoRo mission from production systems?",
         "options": [
-          "A production event (order placed, run completed) automatically triggers a mission",
-          "Missions can never be triggered automatically",
-          "Only manual operator assignment is possible"
+          "At the start of each shift, an operator reads a printed order list and enters every mission by hand",
+          "The MES waits until MoRo finishes a shift, then sends all missions at once",
+          "A production event, such as a completed run or a new order, triggers a mission automatically"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "feedback": "Correct. Event-triggered mission assignment is a core integration pattern."
       },
       {
         "id": 3,
         "question": "Why does MoRo reporting status back into MES/WMS matter?",
         "options": [
-          "Reporting is only needed for billing purposes",
           "It keeps production records accurate without manual data entry",
-          "It doesn't matter - one-way integration is sufficient"
+          "It allows the MES to override MoRo's safety behavior whenever production is behind",
+          "It reduces the battery drain that comes from planning and re-planning missions"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Two-way integration keeps the system of record accurate to actual floor activity."
       },
       {
         "id": 4,
         "question": "What is data mapping in this context?",
         "options": [
-          "A type of mission route",
-          "Defining how MoRo's data fields correspond to MES/WMS fields",
-          "A physical floor map"
+          "Drawing the facility's floor plan so MoRo can navigate it",
+          "Defining how MoRo's data fields correspond to the fields in the MES or WMS",
+          "Choosing which route each mission takes between two stations"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Data mapping aligns field definitions across the two systems."
@@ -135,9 +146,9 @@
         "id": 5,
         "question": "Why does integration failure handling need explicit design?",
         "options": [
-          "Failures never occur in practice",
-          "Failure handling is automatically provided by all systems",
-          "To avoid silently losing data or blocking physical operation when a reporting call fails"
+          "Because every MES and WMS fails on a fixed daily schedule",
+          "Because MoRo is designed to stop moving whenever any connection to another system drops",
+          "So a failed report does not silently lose data or block MoRo's physical work"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Explicit failure handling prevents silent data loss or operational disruption."

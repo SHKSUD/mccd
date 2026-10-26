@@ -7,7 +7,7 @@
   "nextModule": "L1-M4",
   "previousModule": "L1-M2",
   "prerequisite": "L1-M2 (60%)",
-  "contentStatus": "REVISED per Content Principles (60% pass, technical terminology + explanatory notes). Dashboard/status light specifics still pending SME confirmation.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -131,9 +131,9 @@
         "id": 1,
         "question": "What is the ANT interface (HMI)?",
         "options": [
-          "The software through which operators monitor and control MoRo",
-          "A battery charging accessory",
-          "A physical maintenance tool"
+          "The software operators use to monitor and control MoRo",
+          "A battery charging accessory that attaches to the unit's dock",
+          "A physical maintenance tool kept with the unit's spare parts"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. ANT is MoRo's Human-Machine Interface — the software layer for monitoring and control."
@@ -142,7 +142,7 @@
         "id": 2,
         "question": "What must be confirmed before assigning a mission?",
         "options": [
-          "Nothing — missions can be assigned immediately",
+          "Nothing — missions can be assigned as soon as MoRo is powered on and visible",
           "That MoRo has completed its internal diagnostic and reached ready state",
           "Supervisor sign-off in writing"
         ],
@@ -153,9 +153,9 @@
         "id": 3,
         "question": "Does E-stop behave differently in manual override versus autonomous mode?",
         "options": [
-          "Yes, manual mode uses a separate procedure",
-          "E-stop only functions in autonomous mode",
-          "No — E-stop takes immediate priority identically in both modes"
+          "Yes, manual mode uses a separate procedure that you must follow",
+          "E-stop only functions while MoRo is in autonomous mode",
+          "No — E-stop takes priority identically in both modes"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. E-stop is not mode-dependent."
@@ -176,7 +176,7 @@
         "question": "What is the purpose of MoRo's status indicators?",
         "options": [
           "To communicate operating state at a glance, without checking a screen",
-          "To replace the need for the dashboard entirely",
+          "To replace the dashboard entirely, so that operators never need to open it",
           "To show the time of day"
         ],
         "correctAnswer": 0,

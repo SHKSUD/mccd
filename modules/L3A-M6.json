@@ -7,7 +7,7 @@
   "nextModule": "L3A-M7",
   "previousModule": "L3A-M5",
   "prerequisite": "L3A-M5 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in SOW Bucket 2 'troubleshooting curriculum: decision trees and troubleshooting procedures for L3A technicians.' Specific decision tree content pending DiFacto engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -33,7 +33,17 @@
         "Understand the general format of a troubleshooting decision tree",
         "Recognize how branching works within the structure"
       ],
-      "content": "A decision tree starts with a broad symptom category and branches based on answers to diagnostic questions, narrowing toward a specific likely cause at each step. The key discipline is answering each branch point honestly based on what's actually observed, rather than skipping ahead to a cause that seems likely without confirming the branch conditions."
+      "content": "A decision tree starts with a broad symptom category and branches based on answers to diagnostic questions, narrowing toward a specific likely cause at each step. The key discipline is answering each branch point honestly based on what's actually observed, rather than skipping ahead to a cause that seems likely without confirming the branch conditions.",
+      "keyTerms": [
+        {
+          "term": "Branch point",
+          "note": "A question in a decision tree whose answer decides which path to follow next."
+        },
+        {
+          "term": "Symptom",
+          "note": "What you can observe going wrong, as opposed to its underlying cause."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -53,7 +63,13 @@
         "Understand the general branch logic for mechanical and power-related symptoms",
         "Recognize how this connects to maintenance knowledge from earlier modules"
       ],
-      "content": "Mechanical and power troubleshooting branches on different questions: is the symptom constant or intermittent, does it correlate with battery charge level, has recent maintenance or a recent incident preceded the symptom's appearance. These decision trees draw directly on the preventive and predictive maintenance knowledge built in Modules 2-4."
+      "content": "Mechanical and power troubleshooting branches on different questions: is the symptom constant or intermittent, does it correlate with battery charge level, has recent maintenance or a recent incident preceded the symptom's appearance. These decision trees draw directly on the preventive and predictive maintenance knowledge built in Modules 2-4.",
+      "keyTerms": [
+        {
+          "term": "Intermittent",
+          "note": "Happening on and off rather than all the time."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -63,7 +79,13 @@
         "Understand what to do when following a decision tree doesn't lead to a clear cause",
         "Recognize this as a signal for escalation, not a failure of the technician"
       ],
-      "content": "Decision trees cover common, well-understood fault patterns - they won't cover every possible issue. If following a tree to its end doesn't produce a confident root cause, that's the signal to escalate per the criteria covered in L3A-M5, rather than guessing beyond what the structured process supports."
+      "content": "Decision trees cover common, well-understood fault patterns - they won't cover every possible issue. If following a tree to its end doesn't produce a confident root cause, that's the signal to escalate per the criteria covered in L3A-M5, rather than guessing beyond what the structured process supports.",
+      "keyTerms": [
+        {
+          "term": "Root cause",
+          "note": "The underlying reason a problem happens, as opposed to the symptom you see."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -85,7 +107,7 @@
         "options": [
           "To document completed repairs",
           "To provide a structured, repeatable diagnostic path for common fault categories",
-          "To replace diagnostic judgment entirely"
+          "To replace diagnostic judgment entirely, so that technicians only have to follow the tree"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Decision trees structure diagnosis without replacing the judgment that guides them."
@@ -94,9 +116,9 @@
         "id": 2,
         "question": "What's the key discipline when working through a decision tree?",
         "options": [
-          "Always start from the most complex branch",
-          "Skip ahead to the most likely cause immediately",
-          "Answer each branch point honestly based on what's actually observed"
+          "Always start from the most complex branch, then work back to the simple ones",
+          "Skip ahead to the most likely cause immediately to save time on the fault",
+          "Answer each branch honestly from what you actually observe"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Honest, observed answers at each branch point are what make the tree reliable."
@@ -106,7 +128,7 @@
         "question": "What kind of question typically starts a navigation-related decision tree branch?",
         "options": [
           "Battery charge percentage only",
-          "The time of day the robot was purchased",
+          "The date the unit was originally purchased and who delivered it to the site",
           "Whether the issue is isolated to one map area or occurs everywhere"
         ],
         "correctAnswer": 2,
@@ -116,7 +138,7 @@
         "id": 4,
         "question": "What should happen if following a decision tree doesn't produce a confident root cause?",
         "options": [
-          "Ignore the issue since the tree didn't resolve it",
+          "Ignore the issue, since the tree didn't resolve it in the first pass",
           "Escalate, per the criteria covered in root cause methodology",
           "Keep guessing randomly until something works"
         ],

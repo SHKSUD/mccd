@@ -7,7 +7,7 @@
   "nextModule": "L3A-M1",
   "previousModule": "L2-M5",
   "prerequisite": "L2-M5 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Final module of L2 - completes L1-L2 pilot cohort curriculum.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -99,7 +99,7 @@
         "id": 1,
         "question": "What does conditional logic in a mission allow for?",
         "options": [
-          "Nothing - missions are always linear",
+          "Nothing - missions are always linear and cannot branch into other steps",
           "Different actions depending on whether a specified condition is met",
           "Only faster movement speed"
         ],
@@ -110,9 +110,9 @@
         "id": 2,
         "question": "What does 'cycle time' refer to?",
         "options": [
-          "The number of units in a fleet",
-          "The time for a mission to complete from start to finish",
-          "The battery charging duration"
+          "The number of units that are operating together in a fleet",
+          "The time a mission takes from start to finish",
+          "The battery charging duration between two consecutive missions"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Cycle time measures mission duration, start to finish."
@@ -123,7 +123,7 @@
         "options": [
           "No - that level of optimization belongs to L3B; L2 requires awareness only",
           "Only on weekends",
-          "Yes, this is a core L2 responsibility"
+          "Yes, this is a core L2 responsibility that all operators are formally assessed on"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Detailed route and speed optimization is L3B (Programmer) territory."
@@ -133,7 +133,7 @@
         "question": "Does MoRo require operator action to log operational data?",
         "options": [
           "Data logging doesn't exist",
-          "Yes, data must be manually recorded",
+          "Yes, data must be manually recorded by the operator after each mission",
           "No - it logs data automatically during operation"
         ],
         "correctAnswer": 2,

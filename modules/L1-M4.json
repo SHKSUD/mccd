@@ -7,7 +7,7 @@
   "nextModule": "L1-M5",
   "previousModule": "L1-M3",
   "prerequisite": "L1-M3 (60%)",
-  "contentStatus": "REVISED per Content Principles (60% pass, terminology + notes). Interactive zone confirmed at 2m per DiFacto guidance — treated as current, subject to revision. Alarm pattern reference still pending SME confirmation.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -111,7 +111,7 @@
         "id": 1,
         "question": "What are the two safety standards referenced for MoRo?",
         "options": [
-          "CE Mark and UL Listed",
+          "CE Mark and UL Listed certification",
           "ISO 3691-4 and ANSI B56.5",
           "ISO 9001 and ANSI Z10"
         ],
@@ -120,21 +120,21 @@
       },
       {
         "id": 2,
-        "question": "What is the confirmed distance of MoRo's interactive zone?",
+        "question": "What interactive zone distance does this course teach for MoRo?",
         "options": [
           "10 meters",
           "2 meters",
           "5 meters"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. The interactive zone is currently confirmed at 2 meters, per DiFacto guidance."
+        "feedback": "Correct. This course currently uses 2 meters, per DiFacto guidance; the final figure will be confirmed."
       },
       {
         "id": 3,
         "question": "When should you use emergency stop rather than a routine mission pause?",
         "options": [
           "When there's a genuine safety concern requiring immediate action",
-          "Any time you want MoRo to stop briefly",
+          "Any time you want MoRo to stop for a moment so that you can walk past it",
           "At the end of every shift"
         ],
         "correctAnswer": 0,
@@ -144,8 +144,8 @@
         "id": 4,
         "question": "If MoRo is stationary, is it safe to assume it has finished its task?",
         "options": [
-          "Yes, always",
-          "Only during night shifts",
+          "Yes, always, because MoRo only stops when its task is done",
+          "Only during night shifts, when fewer missions are queued",
           "No — it may be paused rather than finished"
         ],
         "correctAnswer": 2,

@@ -7,7 +7,7 @@
   "nextModule": "L3B-M5",
   "previousModule": "L3B-M3",
   "prerequisite": "L3B-M3 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on handshake concept introduced conceptually in L2-M2. Directly referenced in CDD Integration Ecosystem section (FANUC I/O - request/ready/complete signal handshake). Specific I/O signal configuration pending DiFacto/FANUC engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -22,6 +22,10 @@
         {
           "term": "FANUC",
           "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake."
+        },
+        {
+          "term": "Handshake",
+          "note": "A signal exchange in which two systems confirm they are both ready before either acts."
         }
       ]
     },
@@ -49,7 +53,17 @@
         "Understand the general concept of digital I/O configuration for this integration",
         "Recognize why correct I/O mapping matters for reliable handshake behavior"
       ],
-      "content": "The handshake signals are carried over digital I/O points that must be correctly mapped between MoRo's system and the FANUC controller. Incorrect mapping - a signal wired to the wrong I/O point - produces unreliable or failed handshakes even when both systems are otherwise functioning correctly. Specific I/O mapping procedures are being finalized with DiFacto engineering."
+      "content": "The handshake signals are carried over digital I/O points that must be correctly mapped between MoRo's system and the FANUC controller. Incorrect mapping - a signal wired to the wrong I/O point - produces unreliable or failed handshakes even when both systems are otherwise functioning correctly. Specific I/O mapping procedures are being finalized with DiFacto engineering.",
+      "keyTerms": [
+        {
+          "term": "Digital I/O point",
+          "note": "A physical input or output connection that carries an on/off signal between two systems."
+        },
+        {
+          "term": "I/O mapping",
+          "note": "Matching each handshake signal to the correct input or output point on each side."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -89,31 +103,31 @@
         "id": 1,
         "question": "What does this module cover, building on the handshake concept from L2-M2?",
         "options": [
-          "Actually configuring the FANUC I/O handshake, a signature DiFacto integration capability",
+          "Actually configuring the FANUC I/O handshake between MoRo and the controller",
           "A completely unrelated topic",
-          "Only operator-level recognition of stalled handshakes"
+          "Only operator-level recognition of stalled handshakes, without any configuration"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Programmers configure the handshake itself, going beyond L2's operator-level awareness."
       },
       {
         "id": 2,
-        "question": "What is the confirmed sequence structure for the FANUC I/O handshake?",
+        "question": "What sequence structure does the FANUC I/O handshake follow?",
         "options": [
           "Request/ready/complete",
-          "Open/close/lock",
-          "Start/stop/reset"
+          "Open/close/lock, repeated for each part",
+          "Start/stop/reset, with a pause between steps"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. Request/ready/complete is the confirmed signal sequence per DiFacto's integration framework."
+        "feedback": "Correct. Request/ready/complete is the signal sequence used in DiFacto's integration framework."
       },
       {
         "id": 3,
         "question": "What happens if digital I/O points are incorrectly mapped?",
         "options": [
-          "Nothing - mapping doesn't affect handshake reliability",
-          "Only MoRo's navigation is affected, not the handshake",
-          "The handshake becomes unreliable or fails, even if both systems otherwise function correctly"
+          "Nothing - mapping doesn't affect handshake reliability as long as the cables are good",
+          "Only MoRo's navigation is affected, not the handshake with the controller",
+          "The handshake becomes unreliable or fails, even if both systems work"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Correct I/O mapping is essential for reliable handshake behavior."
@@ -122,7 +136,7 @@
         "id": 4,
         "question": "Why test a handshake sequence through multiple cycles, not just once?",
         "options": [
-          "Multiple tests are only needed for safety compliance, not reliability",
+          "Multiple tests are only needed for safety compliance, not for reliability of the exchange",
           "Intermittent failures on repetition can reveal timing issues a single test would miss",
           "One successful test is always sufficient"
         ],

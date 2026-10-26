@@ -7,7 +7,7 @@
   "nextModule": "L3B-M4",
   "previousModule": "L3B-M2",
   "prerequisite": "L3B-M2 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on zone concepts introduced conceptually in L2-M4 (shared paths, reserved routes). Configuration specifics pending ANT Server documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -43,7 +43,13 @@
         "Understand the general configuration approach for a shared path",
         "Recognize what makes a shared path configuration effective"
       ],
-      "content": "A shared path allows multiple units through with automatic coordination - the configuration work involves defining the path boundaries and confirming the coordination logic handles the facility's actual traffic volume without creating unexpected congestion. Specific configuration steps within ANT will be confirmed against the live system."
+      "content": "A shared path allows multiple units through with automatic coordination - the configuration work involves defining the path boundaries and confirming the coordination logic handles the facility's actual traffic volume without creating unexpected congestion. Specific configuration steps within ANT will be confirmed against the live system.",
+      "keyTerms": [
+        {
+          "term": "Shared path",
+          "note": "A path that lets several units through with automatic coordination."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -53,7 +59,13 @@
         "Understand the general configuration approach for a reserved route",
         "Recognize appropriate use cases for route reservation versus shared paths"
       ],
-      "content": "A reserved route prioritizes or dedicates a path for specific traffic - appropriate when a particular route is time-sensitive or when a bottleneck location genuinely needs single-unit-at-a-time access rather than coordinated sharing. Over-using reserved routes where shared paths would suffice can create unnecessary rigidity in fleet operations."
+      "content": "A reserved route prioritizes or dedicates a path for specific traffic - appropriate when a particular route is time-sensitive or when a bottleneck location genuinely needs single-unit-at-a-time access rather than coordinated sharing. Over-using reserved routes where shared paths would suffice can create unnecessary rigidity in fleet operations.",
+      "keyTerms": [
+        {
+          "term": "Reserved route",
+          "note": "A path prioritized or dedicated to specific traffic."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -63,7 +75,13 @@
         "Understand how to validate zone configuration before full operational reliance",
         "Recognize what deadlock or congestion signs look like during testing"
       ],
-      "content": "Zone configuration should be tested with realistic traffic volume before being relied upon for daily operation - a configuration that looks fine with one or two units may reveal congestion or deadlock tendencies (covered conceptually in L2-M4) only once more units are active. Testing under realistic load is what surfaces these issues before they become operational problems."
+      "content": "Zone configuration should be tested with realistic traffic volume before being relied upon for daily operation - a configuration that looks fine with one or two units may reveal congestion or deadlock tendencies (covered conceptually in L2-M4) only once more units are active. Testing under realistic load is what surfaces these issues before they become operational problems.",
+      "keyTerms": [
+        {
+          "term": "Deadlock",
+          "note": "Units each waiting for another to move, so none can proceed."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -84,7 +102,7 @@
         "question": "What does zone configuration involve, building on the concepts from L2-M4?",
         "options": [
           "Only applies to single-robot deployments",
-          "Nothing active - zones configure themselves automatically",
+          "Nothing active - zones configure themselves automatically once the map is built",
           "Actively defining where traffic should be prioritized, shared, or restricted"
         ],
         "correctAnswer": 2,
@@ -94,9 +112,9 @@
         "id": 2,
         "question": "Does every facility need extensive zone configuration?",
         "options": [
-          "Zone configuration is never necessary",
-          "No - simpler layouts with light fleet traffic may need minimal zoning",
-          "Yes, always required regardless of fleet size"
+          "Zone configuration is never necessary, since the fleet system handles everything",
+          "No - simple layouts with light traffic may need minimal zoning",
+          "Yes, always required, regardless of fleet size or layout complexity"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Zone configuration needs scale with actual traffic complexity, not a fixed requirement."
@@ -105,9 +123,9 @@
         "id": 3,
         "question": "When is a reserved route more appropriate than a shared path?",
         "options": [
-          "When a route is time-sensitive or a bottleneck genuinely needs single-unit access",
-          "Reserved routes are never appropriate",
-          "Reserved routes should always be used instead of shared paths"
+          "When a route is time-sensitive or a bottleneck needs single-unit access",
+          "Reserved routes are never appropriate in a facility with more than one unit",
+          "Reserved routes should always be used instead of shared paths, for every route"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Reserved routes suit specific time-sensitive or bottleneck scenarios, not general use."
@@ -117,7 +135,7 @@
         "question": "Why test zone configuration with realistic traffic volume?",
         "options": [
           "Congestion or deadlock tendencies may only appear under realistic load",
-          "Testing with light traffic is always sufficient",
+          "Testing with light traffic is always sufficient to prove the configuration",
           "Zone configuration doesn't require testing"
         ],
         "correctAnswer": 0,

@@ -7,7 +7,7 @@
   "nextModule": "L3A-M6",
   "previousModule": "L3A-M4",
   "prerequisite": "L3A-M4 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). This module's topics were corrected per CDD gap analysis - the original DiFacto source material had Module 5 topics duplicated from Module 3; content here is written fresh, around the corrected topic area: diagnostic tool interface, fault code tree, root cause methodology, escalation decision. Diagnostic tool interface specifics pending SME confirmation.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -101,9 +101,9 @@
         "id": 1,
         "question": "How does the diagnostic interface differ from the operator-level ANT dashboard?",
         "options": [
-          "There is no difference",
-          "It exposes deeper system state (sensor readings, subsystem health, fault history) for technician-level work",
-          "It only shows the time and date"
+          "There is no difference, since both interfaces show the same data to every user who logs in",
+          "It exposes deeper state: sensor readings, subsystem health, fault history",
+          "It only shows the time and date, plus the unit's serial number"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The diagnostic interface is a technician-level view, distinct from the operator-level dashboard."
@@ -112,9 +112,9 @@
         "id": 2,
         "question": "How should a fault code tree generally be navigated?",
         "options": [
-          "Start with the broad category and narrow systematically to the specific cause",
-          "Guess at a specific code first, then check the category",
-          "Fault codes aren't organized hierarchically"
+          "Start broad by category, then narrow to the specific cause",
+          "Guess at a specific code first, then check which category it belongs to",
+          "Fault codes aren't organized hierarchically, so each must be checked alone"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Fault code trees are navigated from broad category to specific cause, not the reverse."
@@ -125,7 +125,7 @@
         "options": [
           "They are the same thing",
           "A symptom is the observed effect; a root cause is the underlying issue producing it",
-          "A root cause only applies to software issues"
+          "A root cause only applies to software issues, never to mechanical or electrical faults"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Treating a symptom without finding the root cause means the issue tends to recur."
@@ -134,9 +134,9 @@
         "id": 4,
         "question": "Why does diagnostic documentation matter beyond the immediate repair?",
         "options": [
-          "It's only required for warranty claims",
-          "It doesn't matter once the issue is fixed",
-          "It builds pattern history and makes future escalation more efficient"
+          "It's only required when a warranty claim has to be filed",
+          "It doesn't matter once the issue has been fixed and the unit is running",
+          "It builds pattern history for future escalations"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Documentation supports pattern recognition across units and efficient escalation."

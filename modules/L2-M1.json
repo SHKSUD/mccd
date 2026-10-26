@@ -7,7 +7,7 @@
   "nextModule": "L2-M2",
   "previousModule": "L1-M5",
   "prerequisite": "L1-M5 (60%), L1 certification complete",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Mission interface specifics pending SME confirmation.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -89,7 +89,7 @@
         "id": 1,
         "question": "What defines a mission?",
         "options": [
-          "A scheduled maintenance check",
+          "A scheduled maintenance check carried out by a technician at the end of each shift",
           "A software update",
           "A defined task with a clear start, objective, and completion condition"
         ],
@@ -101,8 +101,8 @@
         "question": "What must be confirmed before assigning a new mission?",
         "options": [
           "That MoRo is in ready state and its path is genuinely clear",
-          "Written supervisor approval",
-          "Nothing - missions can be assigned anytime"
+          "Written approval from the supervisor on duty for every mission",
+          "Nothing - missions can be assigned anytime the unit is powered on"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Readiness and a clear path are the standard pre-checks."
@@ -111,7 +111,7 @@
         "id": 3,
         "question": "What does effective monitoring primarily involve?",
         "options": [
-          "Watching the screen without interruption",
+          "Watching the screen without interruption for the whole mission",
           "Knowing what normal progress looks like to notice deviations",
           "Manually controlling MoRo throughout"
         ],
@@ -122,9 +122,9 @@
         "id": 4,
         "question": "Why should new missions be validated under supervision first?",
         "options": [
-          "To confirm expected end-to-end behavior before routine use",
-          "Only required for missions over 10 steps",
-          "It's not necessary"
+          "To confirm end-to-end behavior before routine use",
+          "Only required for missions that contain more than 10 steps",
+          "It is not necessary once the mission has been written down"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Supervised validation is standard practice for any new process."

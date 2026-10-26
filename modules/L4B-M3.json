@@ -7,7 +7,7 @@
   "nextModule": "L4B-M4",
   "previousModule": "L4B-M2",
   "prerequisite": "L4B-M2 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Topic confirmed per CDD as 'most complex payload configuration, requires advanced integration training.' Specific configuration procedures pending DiFacto engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -17,7 +17,13 @@
         "Understand why lift-and-rotate is treated as the most complex payload configuration",
         "Recognize how this builds on payload fundamentals from L2-M2"
       ],
-      "content": "Of the payload configurations introduced in L2-M2 - conveyor, cobot, towing, lifting, lift-and-rotate - lift-and-rotate is explicitly the most complex. It combines vertical lift mechanics with rotational positioning. This module provides the advanced integration training this configuration specifically requires, beyond what general payload awareness covers."
+      "content": "Of the payload configurations introduced in L2-M2 - conveyor, cobot, towing, lifting, lift-and-rotate - lift-and-rotate is explicitly the most complex. It combines vertical lift mechanics with rotational positioning. This module provides the advanced integration training this configuration specifically requires, beyond what general payload awareness covers.",
+      "keyTerms": [
+        {
+          "term": "lift-and-rotate",
+          "note": "The most complex payload configuration: it lifts a load vertically and also rotates it."
+        }
+      ]
     },
     {
       "sectionId": 2,
@@ -27,7 +33,17 @@
         "Understand the general mechanical principles of combined lift-and-rotate operation",
         "Recognize why combining these movements adds complexity beyond either alone"
       ],
-      "content": "Lift-and-rotate configurations must manage load stability through two simultaneous degrees of freedom - vertical position and rotational orientation - rather than one. This compounds the center-of-gravity considerations introduced in L2-M2's safety coverage. A load's stability profile changes continuously as both lift height and rotation angle shift during operation."
+      "content": "Lift-and-rotate configurations must manage load stability through two simultaneous degrees of freedom - vertical position and rotational orientation - rather than one. This compounds the center-of-gravity considerations introduced in L2-M2's safety coverage. A load's stability profile changes continuously as both lift height and rotation angle shift during operation.",
+      "keyTerms": [
+        {
+          "term": "degrees of freedom",
+          "note": "The independent ways a load can move; here, vertical position and rotation."
+        },
+        {
+          "term": "center of gravity",
+          "note": "The point where a load's weight is balanced; it affects how stable the load is."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -37,7 +53,8 @@
         "Understand the general parameters involved in configuring this payload type",
         "Recognize the relationship between configuration and load-specific requirements"
       ],
-      "content": "Configuration parameters for this payload type typically include lift height range, rotation angle limits, and speed/acceleration settings for both movements, all calibrated to the specific load being handled. Specific configuration procedures and safe operating ranges will be confirmed against DiFacto's technical documentation for this payload module."
+      "content": "Configuration parameters for this payload type typically include lift height range, rotation angle limits, and speed/acceleration settings for both movements, all calibrated to the specific load being handled. Specific configuration procedures and safe operating ranges will be confirmed against DiFacto's technical documentation for this payload module.",
+      "keyTerms": []
     },
     {
       "sectionId": 4,
@@ -47,7 +64,13 @@
         "Understand safety considerations unique to lift-and-rotate operation",
         "Recognize how this extends the general loaded-payload safety principles from L2-M2"
       ],
-      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, lift-and-rotate configurations require additional clearance consideration. The swept area during rotation at various lift heights can extend well beyond what a simple loaded footprint would suggest. Cell and workspace design must account for this full range of motion, not just the unit's resting footprint."
+      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, lift-and-rotate configurations require additional clearance consideration. The swept area during rotation at various lift heights can extend well beyond what a simple loaded footprint would suggest. Cell and workspace design must account for this full range of motion, not just the unit's resting footprint.",
+      "keyTerms": [
+        {
+          "term": "swept area",
+          "note": "The full area a load passes through while it rotates, not just its resting footprint."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -57,7 +80,8 @@
         "Understand how lift-and-rotate configurations typically interact with fixed equipment",
         "Recognize handshake timing considerations specific to this payload type"
       ],
-      "content": "Lift-and-rotate operations often involve precise positioning relative to fixed equipment. This requires the handshake timing from L3B-M4 to account for the additional time these combined movements take, compared to a simple point-to-point delivery. Otherwise you risk a premature signal exchange before positioning is actually complete."
+      "content": "Lift-and-rotate operations often involve precise positioning relative to fixed equipment. This requires the handshake timing from L3B-M4 to account for the additional time these combined movements take, compared to a simple point-to-point delivery. Otherwise you risk a premature signal exchange before positioning is actually complete.",
+      "keyTerms": []
     },
     {
       "sectionId": 6,
@@ -67,7 +91,13 @@
         "Apply testing principles specifically to the complexity of this payload type",
         "Understand why extended validation is particularly important here"
       ],
-      "content": "Given the compounded complexity of this configuration, validation should test across the full range of lift heights and rotation angles the application requires - not just a single representative position. Confirm stability and handshake timing hold up across the complete operational envelope, not just the easiest test case."
+      "content": "Given the compounded complexity of this configuration, validation should test across the full range of lift heights and rotation angles the application requires - not just a single representative position. Confirm stability and handshake timing hold up across the complete operational envelope, not just the easiest test case.",
+      "keyTerms": [
+        {
+          "term": "operational envelope",
+          "note": "The complete range of positions and conditions the application will use."
+        }
+      ]
     }
   ],
   "quiz": {
@@ -77,9 +107,9 @@
         "id": 1,
         "question": "Why is lift-and-rotate considered the most complex payload configuration?",
         "options": [
-          "It isn't more complex than other configurations",
-          "It combines vertical lift mechanics with rotational positioning, two simultaneous degrees of freedom",
-          "It's the least commonly used configuration"
+          "It is the only configuration that needs a handshake with any fixed equipment at all",
+          "It combines vertical lift with rotation, two movements to keep stable at once",
+          "It carries heavier loads than any other configuration MoRo supports"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Combining lift and rotation adds complexity beyond either movement alone."
@@ -88,42 +118,42 @@
         "id": 2,
         "question": "How does combined lift-and-rotate affect load stability considerations?",
         "options": [
-          "The stability profile changes continuously as both lift height and rotation angle shift",
-          "Stability is unaffected by combining these movements",
-          "Only rotation affects stability, not lift height"
+          "Stability depends only on the rotation angle, not on how high the load is",
+          "Stability is fixed once the load is secured, whatever the movement",
+          "Stability changes continuously as lift height and rotation angle change"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "feedback": "Correct. Two simultaneous degrees of freedom compound center-of-gravity considerations."
       },
       {
         "id": 3,
         "question": "What clearance consideration is specific to lift-and-rotate configurations?",
         "options": [
-          "No special clearance is needed",
-          "Only floor-level clearance matters",
-          "The swept area during rotation at various lift heights, beyond the resting footprint"
+          "The area swept during rotation, beyond the resting footprint",
+          "Only the clearance at floor level beneath the unit while it drives around",
+          "The width of the aisle at the position where the unit usually rests"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. The full range of motion, not just resting footprint, must be accounted for in workspace design."
       },
       {
         "id": 4,
         "question": "Why does handshake timing need adjustment for this payload type?",
         "options": [
-          "Combined lift-and-rotate movements take more time than a simple delivery, requiring adjusted timing",
-          "This payload type doesn't use handshakes",
-          "Handshake timing is identical regardless of payload type"
+          "This payload type uses faster signals, so timing must be shortened",
+          "Combined movements take longer than a simple delivery, so signals must wait for them",
+          "Handshakes are skipped for lift-and-rotate moves, to avoid delaying the rest of the cycle"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Timing must account for the additional time these combined movements require."
       },
       {
         "id": 5,
         "question": "What should validation testing cover for this configuration?",
         "options": [
-          "A single representative test position is always sufficient",
-          "Testing isn't necessary for this configuration",
-          "The full range of lift heights and rotation angles the application requires"
+          "One representative position, repeated many times in a row",
+          "Only the heaviest load, at the highest lift height and one angle",
+          "The full range of lift heights and rotation angles the application needs"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Full operational envelope testing is needed given the compounded complexity."

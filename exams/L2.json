@@ -1,0 +1,372 @@
+{
+  "levelId": "L2",
+  "title": "Level 2 Exam",
+  "levelName": "IMR Operator",
+  "certification": "DiFacto Certified IMR Operator",
+  "passMark": 80,
+  "practical": "The Level 2 practical assessment (run 3 missions and 2 fault recoveries) is completed in person with an instructor. This written exam is the first part.",
+  "maxAttempts": 2,
+  "questionCount": 30,
+  "questions": [
+    {
+      "id": 1,
+      "sourceModule": "L2-M1",
+      "question": "You have just powered on a unit and want to assign a mission. What should you confirm first?",
+      "options": [
+        "That another unit has finished its own mission and the whole fleet is idle",
+        "That MoRo is in a ready state and its intended path is genuinely clear",
+        "That a supervisor has signed the mission off in writing"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Readiness and a clear path are the standard pre-checks before assigning any mission."
+    },
+    {
+      "id": 2,
+      "sourceModule": "L2-M1",
+      "question": "A mission is running, but its status has stopped updating as you would expect. What does this call for?",
+      "options": [
+        "Checking in, since a stall or non-updating status is a signal to look closer",
+        "Ignoring it, since missions always resolve on their own",
+        "Cancelling the mission immediately and powering the unit off"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Knowing what normal looks like is what lets you notice this kind of deviation."
+    },
+    {
+      "id": 3,
+      "sourceModule": "L2-M1",
+      "question": "A colleague has just modified an existing mission. What should happen before it is treated as routine?",
+      "options": [
+        "It can go straight into routine use because the change was small",
+        "It should be run once under direct supervision first",
+        "It should be validated only after it has failed once in service"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Any new or modified mission should be validated under supervision first."
+    },
+    {
+      "id": 4,
+      "sourceModule": "L2-M1",
+      "question": "Which of these best describes the structure of a mission?",
+      "options": [
+        "A continuous process that runs all shift with no completion condition",
+        "A set of joystick commands recorded by an operator",
+        "A defined start, a defined objective, and a defined end state"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Every mission has a clear start, objective, and end state."
+    },
+    {
+      "id": 5,
+      "sourceModule": "L2-M1",
+      "question": "A mission fails to complete. What is the operator's standard first response?",
+      "options": [
+        "Run a full technical diagnosis before telling anyone else about the failure",
+        "Note what happened, assess whether it is safe, and escalate if unclear",
+        "Reassign the mission repeatedly until it succeeds, without checking anything"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Diagnosis is not required at the operator level; note, assess, and escalate."
+    },
+    {
+      "id": 6,
+      "sourceModule": "L2-M2",
+      "question": "Which of these is a payload configuration MoRo supports?",
+      "options": [
+        "Hydraulic crane arm",
+        "Pneumatic sorting chute",
+        "Lift-and-rotate"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Supported configurations are conveyor, cobot interface, towing, lifting, and lift-and-rotate."
+    },
+    {
+      "id": 7,
+      "sourceModule": "L2-M2",
+      "question": "Two systems exchange signals confirming readiness, completion, and any error state before either one acts. What is this called?",
+      "options": [
+        "A map update",
+        "A mission validation",
+        "A handshake"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. A handshake makes sure neither system acts before the other is genuinely ready."
+    },
+    {
+      "id": 8,
+      "sourceModule": "L2-M2",
+      "question": "During a handoff at a CNC station, MoRo appears to have stopped. What should an operator present confirm before walking away?",
+      "options": [
+        "That MoRo's battery has charged to full before it leaves the station",
+        "That the payload attachment has been removed",
+        "That both systems show a ready or completing state"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Confirm the exchange actually succeeded rather than assuming it did."
+    },
+    {
+      "id": 9,
+      "sourceModule": "L2-M2",
+      "question": "Why does a loaded MoRo need extra clearance compared with an empty one?",
+      "options": [
+        "A loaded unit always travels faster than an empty one, which needs more room to react",
+        "The load shifts its center of gravity, which affects stopping behavior and stability",
+        "The load switches off its interactive zone"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Weight distribution changes how the unit stops and how stable it is."
+    },
+    {
+      "id": 10,
+      "sourceModule": "L2-M2",
+      "question": "A payload attachment looks misaligned. What should you do?",
+      "options": [
+        "Press it firmly into position and continue the mission",
+        "Cancel the mission and re-run it without the attachment",
+        "Not force it into place; note the issue and escalate"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Forcing a misaligned attachment risks damage; escalation is the right response."
+    },
+    {
+      "id": 11,
+      "sourceModule": "L2-M3",
+      "question": "Which battery chemistry do all MoRo variants use?",
+      "options": [
+        "LFP (Lithium Iron Phosphate)",
+        "Lead-acid, as used in older industrial trucks",
+        "Nickel-cadmium"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. LFP is confirmed across the A-250, A-500, and A-1200."
+    },
+    {
+      "id": 12,
+      "sourceModule": "L2-M3",
+      "question": "What runtime and charging figures are confirmed across all MoRo variants?",
+      "options": [
+        "4 hours of runtime, with cable charging overnight",
+        "12 hours of runtime, with charging in about 20 minutes from a standard dock",
+        "8 hours of runtime, with wireless charging in under 1 hour"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Runtime is 8 hours and wireless charging takes under 1 hour."
+    },
+    {
+      "id": 13,
+      "sourceModule": "L2-M3",
+      "question": "A unit is sitting on its dock, but its status indicator does not show it charging. What is the right response?",
+      "options": [
+        "Assume it is charging and leave it until the end of the shift",
+        "Flag it instead of assuming charging is underway",
+        "Replace the battery yourself before the next mission"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. A docked unit that is not visibly charging is worth flagging."
+    },
+    {
+      "id": 14,
+      "sourceModule": "L2-M3",
+      "question": "Which charging habit supports longer battery life?",
+      "options": [
+        "Letting every unit run completely flat before it is sent back to charge",
+        "Charging only once a day, overnight, so the pack is always full at the start",
+        "Opportunistic charging windows during the shift, not full depletion"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Consistent, moderate charging supports longer battery health."
+    },
+    {
+      "id": 15,
+      "sourceModule": "L2-M3",
+      "question": "At the operator level, what is your role in battery health?",
+      "options": [
+        "Awareness and reporting; detailed diagnosis belongs to L3A technicians",
+        "Performing cell-level diagnostics yourself whenever a battery seems to be weak",
+        "Replacing batteries whenever they seem weak"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Detailed battery diagnostics belong to the technician-level curriculum."
+    },
+    {
+      "id": 16,
+      "sourceModule": "L2-M4",
+      "question": "A fleet system distributes missions among several units. Which factors does it use?",
+      "options": [
+        "The color of each unit and the time of day",
+        "Proximity, availability, and current load",
+        "The order in which the units were purchased"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Task assignment is largely automatic, based on proximity, availability, and load."
+    },
+    {
+      "id": 17,
+      "sourceModule": "L2-M4",
+      "question": "Who manages collision avoidance between several MoRo units sharing a floor?",
+      "options": [
+        "The fleet management system, automatically",
+        "The operator, unit by unit",
+        "Each unit independently, with no awareness of the others"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Units are aware of each other's positions and the fleet system coordinates their paths."
+    },
+    {
+      "id": 18,
+      "sourceModule": "L2-M4",
+      "question": "Which description matches a deadlock?",
+      "options": [
+        "Two or more units each waiting for the other to move, with neither able to proceed",
+        "A unit stopping because its battery is low, so it has left the queue to head for the dock",
+        "A mission paused deliberately by an operator"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. A deadlock is a mutual wait between units."
+    },
+    {
+      "id": 19,
+      "sourceModule": "L2-M4",
+      "question": "What is the difference between a shared path and a reserved route?",
+      "options": [
+        "A shared path is for people to walk on and a reserved route is for MoRo units only",
+        "A shared path is used only for charging and a reserved route is used only for maintenance",
+        "Shared paths serve many units; reserved routes prioritize specific traffic"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Zone structure keeps throughput efficient as the fleet grows."
+    },
+    {
+      "id": 20,
+      "sourceModule": "L2-M4",
+      "question": "Two units appear mutually stalled for longer than expected. What should you do?",
+      "options": [
+        "Wait indefinitely, because deadlocks between units always clear by themselves",
+        "Flag it rather than assuming it will always resolve itself",
+        "Push one unit out of the way by hand"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. The fleet system usually resolves deadlocks, but a prolonged stall is worth flagging."
+    },
+    {
+      "id": 21,
+      "sourceModule": "L2-M5",
+      "question": "MoRo keeps stopping in an area that should be clear. What is a reasonable first check?",
+      "options": [
+        "Clean and recalibrate the LiDAR yourself straight away to restore its full accuracy",
+        "Look for something physically blocking a sensor, without adjusting it yourself",
+        "Disable the interactive zone for that area until the cause is found"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Check for obvious causes, but leave sensor work to those trained and authorized."
+    },
+    {
+      "id": 22,
+      "sourceModule": "L2-M5",
+      "question": "A unit stops accepting new missions and is unresponsive on the dashboard. What might this indicate?",
+      "options": [
+        "That its battery chemistry has failed",
+        "A connectivity problem rather than necessarily a hardware fault",
+        "That its map has been deleted"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Dashboard unresponsiveness often points to connectivity."
+    },
+    {
+      "id": 23,
+      "sourceModule": "L2-M5",
+      "question": "Which details are useful to gather before escalating an issue?",
+      "options": [
+        "What MoRo was doing, what its status shows, and any change in the environment",
+        "Only the unit's serial number and the date it was last serviced",
+        "Only the time the shift started and the name of the operator who was on duty at the time"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. This context speeds up the technician's eventual diagnosis."
+    },
+    {
+      "id": 24,
+      "sourceModule": "L2-M5",
+      "question": "A mission has failed. Which detail best narrows the likely cause for whoever picks up the diagnosis?",
+      "options": [
+        "Which operator assigned the mission and at what time of the shift it was assigned",
+        "How many missions ran earlier that day and how long each of them took",
+        "Where in the mission it failed (start, mid-route, destination)"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. Where in the mission it failed significantly narrows the likely causes."
+    },
+    {
+      "id": 25,
+      "sourceModule": "L2-M5",
+      "question": "A brief pause clears by itself and a single retry succeeds. What is the right call?",
+      "options": [
+        "No escalation is needed",
+        "Escalate immediately as a critical fault",
+        "Shut the unit down for the rest of the shift"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Issues that resolve within a normal operational pattern do not need escalation."
+    },
+    {
+      "id": 26,
+      "sourceModule": "L2-M6",
+      "question": "Which description matches conditional logic in a mission?",
+      "options": [
+        "The mission runs the same steps regardless of conditions",
+        "The next action depends on whether a specified condition is met",
+        "The mission repeats forever with no end state"
+      ],
+      "correctAnswer": 1,
+      "feedback": "Correct. Conditional logic lets a mission branch based on conditions."
+    },
+    {
+      "id": 27,
+      "sourceModule": "L2-M6",
+      "question": "What does cycle time measure?",
+      "options": [
+        "How long a mission takes from start to finish",
+        "How much material is moved over the course of a month",
+        "How long a battery takes to charge"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Cycle time is mission duration; throughput is how much gets moved over a period."
+    },
+    {
+      "id": 28,
+      "sourceModule": "L2-M6",
+      "question": "A mission still completes but now takes noticeably longer than usual. What should you do at L2?",
+      "options": [
+        "Ignore it, because it still completes",
+        "Rewrite the route yourself",
+        "Mention it, since it can signal something worth investigating"
+      ],
+      "correctAnswer": 2,
+      "feedback": "Correct. A slowdown is useful information even when the mission succeeds."
+    },
+    {
+      "id": 29,
+      "sourceModule": "L2-M6",
+      "question": "A route looks inefficient to you. What is the right awareness at L2?",
+      "options": [
+        "It may reflect constraints, such as safety zones or other unit traffic, that you cannot see",
+        "It is almost certainly a mistake and should be changed right away by the operator on shift",
+        "Routes are chosen at random"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Routes and speeds are chosen deliberately; detailed optimization belongs to L3B."
+    },
+    {
+      "id": 30,
+      "sourceModule": "L2-M6",
+      "question": "Does MoRo's data logging need operator action?",
+      "options": [
+        "No, it logs mission timing and completion status automatically",
+        "Yes, the operator must record every mission by hand after it completes",
+        "Only when a mission fails"
+      ],
+      "correctAnswer": 0,
+      "feedback": "Correct. Logging happens automatically during operation."
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "nextModule": "L2-M1",
   "previousModule": "L1-M4",
   "prerequisite": "L1-M4 (60%)",
-  "contentStatus": "REVISED per Content Principles (60% pass threshold). Fully conceptual content — no unconfirmed specs involved.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -80,7 +80,7 @@
         "question": "Does MoRo exercise judgment the way a human coworker would?",
         "options": [
           "No — it executes programmed logic based on sensor input, reliably and consistently",
-          "Yes, it can infer intent and make exceptions",
+          "Yes, it can infer your intent and make sensible exceptions whenever you are standing in its way",
           "Only during certain missions"
         ],
         "correctAnswer": 0,
@@ -92,7 +92,7 @@
         "options": [
           "It stops automatically every few minutes regardless of surroundings",
           "It responds to unpredictable or hesitant human movement near its path",
-          "Random malfunction"
+          "A random malfunction that clears itself after a few seconds without any intervention"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Clear, steady movement near MoRo reduces unnecessary slowdowns."
@@ -101,9 +101,9 @@
         "id": 3,
         "question": "If you notice something worth flagging about MoRo, what should you do?",
         "options": [
-          "Ignore it unless it becomes serious",
-          "Try to resolve it yourself before telling anyone",
-          "Escalate it to your supervisor or designated contact early, even if minor"
+          "Ignore it unless it becomes serious enough to stop the unit",
+          "Try to resolve it yourself before telling anyone else",
+          "Tell your supervisor early, even if it seems minor"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Early escalation, even for minor observations, is standard practice."

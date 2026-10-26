@@ -7,7 +7,7 @@
   "nextModule": "L2-M4",
   "previousModule": "L2-M2",
   "prerequisite": "L2-M2 (60%)",
-  "contentStatus": "Built per Content Principles (60% pass, terminology + notes). Specs confirmed per CDD - no SME dependency for this module.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -84,7 +84,7 @@
         "question": "What battery chemistry does MoRo use?",
         "options": [
           "LFP (Lithium Iron Phosphate)",
-          "Nickel-cadmium",
+          "Nickel-cadmium, as used in older cordless tools",
           "Lead-acid"
         ],
         "correctAnswer": 0,
@@ -92,9 +92,9 @@
       },
       {
         "id": 2,
-        "question": "What is MoRo's confirmed runtime and charging time?",
+        "question": "What are MoRo's runtime and charging time?",
         "options": [
-          "12 hours runtime, 30 minutes charging",
+          "12 hours runtime, with a 30 minute fast charge from the dock",
           "4 hours runtime, 2 hours charging",
           "8 hours runtime, under 1 hour wireless charging"
         ],
@@ -105,7 +105,7 @@
         "id": 3,
         "question": "What does wireless charging mean for MoRo?",
         "options": [
-          "It never needs to be charged",
+          "It never needs to be charged because it harvests energy while driving",
           "It docks and charges without a physical plug connection",
           "It charges via solar panels"
         ],
@@ -127,9 +127,9 @@
         "id": 5,
         "question": "What is the appropriate operator-level response to a low-battery indicator with unusual behavior?",
         "options": [
-          "Ignore it entirely",
-          "Treat it as context for what you're observing and report normally",
-          "Immediately disassemble the unit"
+          "Ignore it entirely, since battery indicators rarely matter to operators",
+          "Treat it as context and report what you observe",
+          "Immediately open the unit up and inspect the battery pack yourself"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Low battery is useful context, not an emergency requiring intervention beyond standard reporting."

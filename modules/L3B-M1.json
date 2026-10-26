@@ -7,7 +7,7 @@
   "nextModule": "L3B-M2",
   "previousModule": "L2-M6",
   "prerequisite": "L2-M6 (60%), L2 certification complete",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on conceptual mission mechanics from L2-M1/L2-M6, going deeper into actual programming. Specific ANT programming interface pending SME confirmation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -49,7 +49,13 @@
         "Understand the general process of defining a waypoint",
         "Recognize considerations for reliable waypoint placement"
       ],
-      "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Exact waypoint-setting procedure within ANT will be confirmed against the live system."
+      "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Exact waypoint-setting procedure within ANT will be confirmed against the live system.",
+      "keyTerms": [
+        {
+          "term": "Reachability",
+          "note": "Whether MoRo can actually navigate to a location and stop there precisely."
+        }
+      ]
     },
     {
       "sectionId": 4,
@@ -59,7 +65,13 @@
         "Understand how waypoints are combined into a sequenced mission",
         "Recognize the difference between a simple linear sequence and a more complex structure"
       ],
-      "content": "The simplest mission structure is linear - visit waypoints in a fixed order. More complex missions may involve conditional branching (introduced conceptually in L2-M6) or repeating loops. Programming starts with getting the linear case right and reliable before introducing additional complexity."
+      "content": "The simplest mission structure is linear - visit waypoints in a fixed order. More complex missions may involve conditional branching (introduced conceptually in L2-M6) or repeating loops. Programming starts with getting the linear case right and reliable before introducing additional complexity.",
+      "keyTerms": [
+        {
+          "term": "Conditional branching",
+          "note": "A mission step that takes a different path depending on a condition."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -89,7 +101,7 @@
         "id": 1,
         "question": "How does the Programmer role differ from the Operator role covered at L2?",
         "options": [
-          "Programmers only work with hardware, never software",
+          "Programmers only work with hardware, and never touch any of the software configuration",
           "Programmers build and configure missions, rather than just operating existing ones",
           "There is no difference"
         ],
@@ -100,9 +112,9 @@
         "id": 2,
         "question": "What is a waypoint?",
         "options": [
-          "A specific, defined location on MoRo's map used as a reference point in a mission",
-          "A battery charging setting",
-          "A type of error code"
+          "A defined location on MoRo's map used as a reference in a mission",
+          "A battery charging setting that tells the unit when to return to dock",
+          "A type of error code shown when a planned route cannot be completed"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Waypoints are the basic location-based building blocks of a programmed mission."
@@ -112,7 +124,7 @@
         "question": "What should be considered when placing a waypoint?",
         "options": [
           "Only the distance from the charging dock",
-          "Nothing - any location works equally well",
+          "Nothing - any location works equally well for the mission as long as it is on the map",
           "Reachability and clearance for the intended operation at that point"
         ],
         "correctAnswer": 2,

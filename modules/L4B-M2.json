@@ -7,22 +7,18 @@
   "nextModule": "L4B-M3",
   "previousModule": "L4B-M1",
   "prerequisite": "L4B-M1 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Grounded in CDD's direct reference to PLC integration as example L4B content, and CDD's confirmed observation that most factory floors are PLC-controlled.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
       "eyebrow": "Level 4B · Module 2 · Section 01",
       "title": "Beyond Basic PLC Awareness",
       "learningObjectives": [
-        "Recall PLC concepts introduced in L4A-M1",
+        "Recall what a PLC is and how a handshake lets MoRo exchange signals with one",
         "Understand the deeper integration competency this module builds"
       ],
-      "content": "L4A-M1 introduced PLCs conceptually, as part of the broader automation stack. This module goes further: actually programming and configuring deeper PLC integration for workflows beyond the simpler handshake pattern covered in L3B-M4 and L4B-M1's CNC tending cycle. Most factory floors DiFacto works in are fundamentally PLC-controlled environments, which is why this depth matters.",
+      "content": "Earlier integration work, such as the handshake in L3B-M4, treats the PLC as a partner you exchange signals with. This module goes further: actually programming and configuring deeper PLC integration for workflows beyond the simpler handshake pattern and the CNC tending cycle in L4B-M1. Most factory floors DiFacto works in are fundamentally PLC-controlled environments, which is why this depth matters.",
       "keyTerms": [
-        {
-          "term": "CNC (Computer Numerical Control)",
-          "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
-        },
         {
           "term": "PLC (Programmable Logic Controller)",
           "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo."
@@ -37,7 +33,17 @@
         "Understand general PLC programming concepts relevant to this integration work",
         "Recognize the distinction between reading PLC logic and writing it"
       ],
-      "content": "Advanced PLC integration often requires more than just reading PLC status, which earlier integration modules covered. It means understanding or writing PLC-side logic that specifically accommodates MoRo's behavior - conditional logic blocks, timers, and state machines on the PLC side that coordinate with MoRo's own mission logic."
+      "content": "Advanced PLC integration often requires more than just reading PLC status, which earlier integration modules covered. It means understanding or writing PLC-side logic that specifically accommodates MoRo's behavior - conditional logic blocks, timers, and state machines on the PLC side that coordinate with MoRo's own mission logic.",
+      "keyTerms": [
+        {
+          "term": "mission logic",
+          "note": "The sequence of steps and conditions that tells MoRo what to do during a mission."
+        },
+        {
+          "term": "state machine",
+          "note": "A way of organizing logic as a set of defined states and the conditions that move it from one to the next."
+        }
+      ]
     },
     {
       "sectionId": 3,
@@ -47,7 +53,8 @@
         "Understand workflow patterns beyond simple point-to-point handoffs",
         "Recognize when advanced PLC integration becomes necessary"
       ],
-      "content": "Simple handoffs, covered in earlier integration modules, suffice for straightforward cases. More complex workflows don't - think multiple machines coordinated through shared PLC logic, or conditional routing based on part type or production schedule. These require Advanced Programmers to work directly within the PLC's own logic, not just at the interface boundary."
+      "content": "Simple handoffs, covered in earlier integration modules, suffice for straightforward cases. More complex workflows don't - think multiple machines coordinated through shared PLC logic, or conditional routing based on part type or production schedule. These require Advanced Programmers to work directly within the PLC's own logic, not just at the interface boundary.",
+      "keyTerms": []
     },
     {
       "sectionId": 4,
@@ -57,7 +64,8 @@
         "Understand the added complexity of debugging across two systems with independent logic",
         "Apply structured diagnostic approach to this specific context"
       ],
-      "content": "When an issue spans both MoRo's mission logic and PLC-side logic, debugging gets harder. The first step is determining which system's logic is actually responsible for the unexpected behavior. Is MoRo behaving as programmed but the PLC's response is unexpected? Or is it the other way around? Isolate that before attempting a fix in either system."
+      "content": "When an issue spans both MoRo's mission logic and PLC-side logic, debugging gets harder. The first step is determining which system's logic is actually responsible for the unexpected behavior. Is MoRo behaving as programmed but the PLC's response is unexpected? Or is it the other way around? Isolate that before attempting a fix in either system.",
+      "keyTerms": []
     },
     {
       "sectionId": 5,
@@ -67,7 +75,13 @@
         "Understand why version control matters for PLC logic changes",
         "Recognize risks of uncoordinated changes to integrated logic"
       ],
-      "content": "PLC logic and MoRo's mission logic are interdependent in advanced workflows. That means changes to one side without coordinating with the other risk breaking the integration in ways that aren't immediately obvious. Maintaining clear records of what changed, when, and why - on both sides - is essential for troubleshooting issues that emerge after a change."
+      "content": "PLC logic and MoRo's mission logic are interdependent in advanced workflows. That means changes to one side without coordinating with the other risk breaking the integration in ways that aren't immediately obvious. Maintaining clear records of what changed, when, and why - on both sides - is essential for troubleshooting issues that emerge after a change.",
+      "keyTerms": [
+        {
+          "term": "version control",
+          "note": "Keeping a record of every change to logic, with who changed it and why, so earlier versions can be recovered."
+        }
+      ]
     },
     {
       "sectionId": 6,
@@ -77,7 +91,8 @@
         "Understand the collaborative aspect of advanced PLC integration work",
         "Recognize when facility-side PLC expertise should be consulted"
       ],
-      "content": "Advanced PLC integration often means working alongside a facility's own PLC programming team, not working in isolation. Their knowledge of the broader facility PLC environment complements an Advanced Programmer's MoRo-specific expertise. Effective collaboration here, rather than working around facility teams, tends to produce more maintainable integrated systems."
+      "content": "Advanced PLC integration often means working alongside a facility's own PLC programming team, not working in isolation. Their knowledge of the broader facility PLC environment complements an Advanced Programmer's MoRo-specific expertise. Effective collaboration here, rather than working around facility teams, tends to produce more maintainable integrated systems.",
+      "keyTerms": []
     }
   ],
   "quiz": {
@@ -85,33 +100,33 @@
     "questions": [
       {
         "id": 1,
-        "question": "How does this module go beyond the PLC awareness covered in L4A-M1?",
+        "question": "How does this module go beyond the basic handshake with a PLC?",
         "options": [
-          "It covers actually programming and configuring deeper PLC integration for advanced workflows",
-          "It doesn't - it repeats the same content",
-          "It removes PLC topics entirely"
+          "It repeats the handshake lesson, using a different example machine and a longer worked example",
+          "It hands the PLC work to the facility team so MoRo staff never touch it",
+          "It covers programming and configuring deeper PLC integration for advanced workflows"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. This module builds deeper, hands-on PLC integration competency beyond conceptual awareness."
+        "correctAnswer": 2,
+        "feedback": "Correct. This module covers actually programming and configuring deeper PLC integration for advanced workflows."
       },
       {
         "id": 2,
         "question": "What might advanced PLC integration require beyond reading PLC status?",
         "options": [
-          "Nothing additional is ever required",
-          "Only physical hardware installation",
-          "Understanding or writing PLC-side logic that accommodates MoRo's behavior"
+          "Understanding or writing PLC-side logic for MoRo",
+          "Replacing the facility's PLC with a controller supplied with MoRo",
+          "Fitting a second PLC beside each MoRo unit to read its status"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Advanced integration often requires engaging with PLC-side logic directly."
       },
       {
         "id": 3,
         "question": "What's the first step when debugging an issue spanning both MoRo and PLC logic?",
         "options": [
-          "Immediately rewrite both systems from scratch",
-          "Determine which system's logic is actually responsible for the unexpected behavior",
-          "Assume it's always a MoRo issue"
+          "Rewrite the PLC logic first, since PLC code is the likelier cause of most faults",
+          "Work out which system's logic is actually responsible for the behavior",
+          "Reset both systems to defaults and retest from the beginning"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Isolating which system is responsible narrows the diagnostic path significantly."
@@ -120,22 +135,22 @@
         "id": 4,
         "question": "Why does version control matter for PLC logic changes in this context?",
         "options": [
-          "Version control is only relevant for MoRo's own software",
-          "Uncoordinated changes to one interdependent system can break integration unexpectedly",
-          "It doesn't matter for PLC logic"
+          "It is required for the PLC to keep its warranty with the vendor over time",
+          "It lets MoRo and the PLC share a single copy of one program file",
+          "Uncoordinated changes can break the integration unexpectedly"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. Interdependent logic requires coordinated change tracking across both systems."
       },
       {
         "id": 5,
         "question": "What's the recommended approach to working with a facility's own PLC team?",
         "options": [
-          "Work entirely independently and avoid their involvement",
-          "Facility PLC teams are never relevant to this work",
-          "Collaborate, combining facility PLC expertise with MoRo-specific knowledge"
+          "Collaborate, combining their facility knowledge with MoRo-specific expertise",
+          "Hand them the full integration and stay out of the design work",
+          "Work independently first and involve them only once the cell is live"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Collaboration with facility PLC teams tends to produce more maintainable integrated systems."
       }
     ]

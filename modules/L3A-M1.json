@@ -7,7 +7,7 @@
   "nextModule": "L3A-M2",
   "previousModule": "L2-M6",
   "prerequisite": "L2-M6 (60%), L2 certification complete",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Drafted from CDD role mapping (L3A = Maintenance Technician track) and general industrial maintenance practice. Specific DiFacto procedures pending SME input.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -93,7 +93,7 @@
         "Understand the progression through the remaining L3A modules",
         "Recognize the certification this track leads to"
       ],
-      "content": "This module establishes the foundation; subsequent L3A modules build specific competency in preventive procedures, predictive inspection, battery diagnostics, diagnostic methodology, and troubleshooting - culminating in the field drill capstone. Together, these complete the requirements for DiFacto Certified IMR Technician status."
+      "content": "This module establishes the foundation; subsequent L3A modules build specific competency in preventive procedures, predictive inspection, battery diagnostics, diagnostic methodology, and troubleshooting - culminating in the field drill capstone. Together, these prepare you for the L3A assessment toward DiFacto Certified IMR Technician status."
     }
   ],
   "quiz": {
@@ -103,9 +103,9 @@
         "id": 1,
         "question": "What distinguishes the Technician role from the Operator role?",
         "options": [
-          "There is no meaningful difference",
-          "Technicians only work night shifts",
-          "Technicians maintain MoRo's physical and operational health over time, beyond day-to-day operation"
+          "There is no meaningful difference, since both roles perform the same daily tasks",
+          "Technicians only work night shifts, when most units are idle and easy to reach",
+          "Technicians maintain MoRo's health over time, beyond day-to-day operation"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. The Technician track covers maintenance responsibility beyond operational competence."
@@ -115,8 +115,8 @@
         "question": "What are the three general categories of maintenance work?",
         "options": [
           "Preventive, predictive, and corrective",
-          "Fast, medium, and slow",
-          "Mechanical, electrical, and software only"
+          "Fast, medium, and slow, based on how long each job takes",
+          "Mechanical and electrical only"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. These three categories describe different triggers for maintenance action."
@@ -126,7 +126,7 @@
         "question": "Should a mature maintenance program rely primarily on corrective maintenance?",
         "options": [
           "Maintenance type doesn't matter",
-          "Yes, fixing things after they fail is most efficient",
+          "Yes, fixing things only after they fail is the most efficient use of a technician's time",
           "No - preventive and predictive work should be primary, with corrective as the exception"
         ],
         "correctAnswer": 2,
@@ -136,9 +136,9 @@
         "id": 4,
         "question": "Why does documentation matter for maintenance work?",
         "options": [
-          "Patterns across maintenance history reveal issues a single event wouldn't show",
-          "It's only needed for warranty claims",
-          "It's just a formality with no real value"
+          "Patterns across the history reveal what one event can't show",
+          "It's only needed when a warranty claim has to be submitted to the vendor",
+          "It's a formality that adds paperwork without much practical value"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Documentation builds a pattern history that improves future maintenance decisions."

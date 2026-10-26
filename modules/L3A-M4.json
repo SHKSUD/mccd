@@ -7,7 +7,7 @@
   "nextModule": "L3A-M5",
   "previousModule": "L3A-M3",
   "prerequisite": "L3A-M3 (60%)",
-  "contentStatus": "PROPOSED title/content, pending DiFacto confirmation. Builds on confirmed LFP battery specs from L2-M3 (CDD-sourced). Specific diagnostic thresholds and replacement procedures pending DiFacto engineering documentation.",
+  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
   "sections": [
     {
       "sectionId": 1,
@@ -57,7 +57,21 @@
         "Understand how the diagnostic interface (from L3A-M5) applies specifically to battery health",
         "Know the general type of data available for battery diagnosis"
       ],
-      "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Specific screens and data points for battery diagnostics will be confirmed against DiFacto's technician documentation."
+      "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Specific screens and data points for battery diagnostics will be confirmed against DiFacto's technician documentation.",
+      "keyTerms": [
+        {
+          "term": "Diagnostic interface",
+          "note": "The technician-level screens that show detailed data beyond what operators see."
+        },
+        {
+          "term": "Charge cycle",
+          "note": "One full use of the battery's charge followed by its recharge."
+        },
+        {
+          "term": "Cell-level data",
+          "note": "Readings for the individual cells inside a battery pack, where the system provides them."
+        }
+      ]
     },
     {
       "sectionId": 5,
@@ -77,7 +91,13 @@
         "Understand general safety considerations specific to battery handling",
         "Recognize when battery work falls within Technician scope versus requiring escalation"
       ],
-      "content": "LFP batteries are generally considered safer than many other lithium chemistries, but battery handling still requires care - following proper lockout/tagout before any physical battery work, and recognizing signs (physical damage, unusual heat, swelling) that indicate a situation beyond routine replacement and requiring immediate escalation rather than continued handling."
+      "content": "LFP batteries are generally considered safer than many other lithium chemistries, but battery handling still requires care - following proper lockout/tagout before any physical battery work, and recognizing signs (physical damage, unusual heat, swelling) that indicate a situation beyond routine replacement and requiring immediate escalation rather than continued handling.",
+      "keyTerms": [
+        {
+          "term": "Lockout/tagout (LOTO)",
+          "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it."
+        }
+      ]
     }
   ],
   "quiz": {
@@ -87,7 +107,7 @@
         "id": 1,
         "question": "Is battery capacity degradation over time a sign of a defect?",
         "options": [
-          "Yes, any degradation indicates a faulty battery",
+          "Yes, any amount of degradation indicates that the battery is faulty",
           "No - gradual degradation over charge cycles is normal and expected",
           "Only LFP batteries degrade"
         ],
@@ -99,7 +119,7 @@
         "question": "What pattern of change is more likely to indicate an actual fault versus normal aging?",
         "options": [
           "A sudden change in charging or runtime behavior",
-          "Gradual, consistent decline across metrics",
+          "Gradual, consistent decline across several metrics over many months",
           "There is no meaningful distinction"
         ],
         "correctAnswer": 0,
@@ -109,9 +129,9 @@
         "id": 3,
         "question": "What does the diagnostic interface provide for battery health beyond the operator dashboard?",
         "options": [
-          "Only the current charge percentage",
-          "Nothing additional",
-          "Detailed charge cycle history, temperature behavior, and cell-level data where available"
+          "Only the current charge percentage, shown more precisely than on the dashboard",
+          "Nothing additional beyond what the operator dashboard already shows",
+          "Charge cycle history, temperature behavior, and cell-level data"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. The diagnostic interface exposes deeper battery data for technician-level assessment."
@@ -120,7 +140,7 @@
         "id": 4,
         "question": "What should a replacement decision primarily weigh?",
         "options": [
-          "Replacement should happen on a fixed schedule regardless of condition",
+          "Replacement should happen on a fixed schedule regardless of the battery's condition",
           "Only the battery's age in months",
           "Remaining capacity against the unit's actual operational runtime need"
         ],
@@ -131,9 +151,9 @@
         "id": 5,
         "question": "What should prompt immediate escalation rather than routine battery handling?",
         "options": [
-          "Signs like physical damage, unusual heat, or swelling",
-          "A battery reaching exactly 50% charge",
-          "Normal gradual capacity decline"
+          "Physical damage, unusual heat, or swelling",
+          "A battery reaching exactly 50% charge during a normal shift",
+          "Normal gradual capacity decline across many charge cycles"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Physical damage, unusual heat, or swelling indicate a situation requiring escalation, not routine handling."
