@@ -1347,6 +1347,16 @@
         }
 
         /* ── NAVIGATION: back bar and header link ── */
+        .home-ico { vertical-align: -3px; margin-right: 6px; flex-shrink: 0; }
+        .home-btn { font-weight: 700; color: var(--navy); border: 1.5px solid var(--navy); background: var(--white); letter-spacing: 0; }
+        .home-btn:hover { background: var(--navy); color: var(--white); }
+        .nav-home { display: flex; align-items: center; gap: 0; width: calc(100% - 40px); min-height: 44px; margin: 0 20px 24px; padding: 10px 14px; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--navy); background: var(--white); border: 1.5px solid var(--navy); border-radius: 4px; cursor: pointer; transition: var(--transition); }
+        .nav-home:hover { background: var(--navy); color: var(--white); }
+        .nav-home:focus-visible, .home-btn:focus-visible, .foot-link:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .foot-welcome { display: none; margin: 40px 0 0; }
+        .foot-link { min-height: 44px; padding: 8px 4px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--orange-ink); background: none; border: none; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+        .drawer-welcome svg { margin-right: 0; }
+        @media (max-width: 900px) { .nav-home { display: none; } }
         a.header-left { color: inherit; text-decoration: none; }
         a.header-left:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 4px; border-radius: 6px; }
         .back-bar { display: none; }
@@ -1419,6 +1429,10 @@ body.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary { background: #fff; bo
 body.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary:hover { border-color: var(--y-blue); color: var(--y-blue-d); }
 body.inner-y:not(.home-mode):not(.ob-mode) #continueBtn { border-color: var(--y-blue); color: var(--y-blue-d); }
 body.inner-y:not(.home-mode):not(.ob-mode) #continueBtn:hover { background: var(--y-blue); color: #fff; }
+body.inner-y:not(.home-mode):not(.ob-mode) .home-btn { color: var(--y-blue-d); border: 1px solid #D2D2D7; background: #fff; font-weight: 600; }
+body.inner-y:not(.home-mode):not(.ob-mode) .home-btn:hover { background: var(--y-tint); color: var(--y-blue-d); border-color: var(--y-blue); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-home { color: var(--y-blue-d); border: 1px solid #D2D2D7; border-radius: 999px; font-weight: 600; }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-home:hover { background: var(--y-tint); color: var(--y-blue-d); border-color: var(--y-blue); }
 body.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { min-height: 36px; padding: 8px 16px; font-size: 13px; letter-spacing: 0; line-height: 1.2; }
         body.inner-y:not(.home-mode):not(.ob-mode) .btn:focus-visible, body.inner-y:not(.home-mode):not(.ob-mode) .option-label:focus-within, body.inner-y:not(.home-mode):not(.ob-mode) .nav-item:focus-visible { outline: 3px solid var(--y-blue); outline-offset: 2px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .section-footer { border-top-color: var(--y-line); color: var(--y-mute); }
@@ -1509,19 +1523,22 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         @media (max-width: 600px) { .ex-row { flex-direction: column; align-items: flex-start; } }
         .b-row > *, .b-pair > * { min-width: 0; }
         @media (max-width: 860px) { .b-row, .b-pair { grid-template-columns: minmax(0, 1fr); gap: 40px; } .b-row { gap: 20px; } }
-</style>
+        body.home-b.home-mode:not(.ob-mode) .foot-welcome { display: block; }
+        body.home-b.home-mode:not(.ob-mode) .foot-link { color: #245A96; }
+        body.home-b.home-mode:not(.ob-mode) .foot-welcome + .section-footer { margin-top: 8px !important; }
+    </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <a class="skip-link" href="#mainContent" onclick="skipToMain(event)">Skip to main content</a>
 <header class="header">
-    <a class="header-left" href="./" onclick="goHome(); return false;" aria-label="MoRo IMR Training Academy. Go to your dashboard.">
+    <a class="header-left" href="./" onclick="goHome(); return false;" aria-label="MoRo IMR Training Academy. Go to Home.">
         <img src="./Difactoreallogo.jpg" alt="" style="width: 100px; height: auto;">
         <div class="separator"></div>
         <div>
             <div class="course-name">MoRo IMR Training Academy</div>
-            <div class="course-level" id="headerLevel">Dashboard</div>
+            <div class="course-level" id="headerLevel">Home</div>
         </div>
     </a>
     <div class="header-right">
@@ -1548,8 +1565,8 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
                 <div class="progress-fill" id="progressFill" style="width:0%"></div>
             </div>
         </div>
-        <button class="btn btn-secondary" id="homeBtn" onclick="goHome()" style="display:none; padding:8px 16px; font-size:12px;">
-            &#8592; Dashboard
+        <button class="btn btn-secondary home-btn" id="homeBtn" onclick="goHome()" style="display:none; padding:9px 16px; font-size:13px;">
+            <svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home
         </button>
     </div>
 </header>
@@ -1622,7 +1639,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <section class="c-sec c-end c-reveal" aria-labelledby="cEndH">
             <h2 class="c-h2" id="cEndH">Start with the basics.</h2>
             <div class="c-cta"><button class="c-btn" id="cStart2">Start Level 1</button></div>
-            <button class="c-text" id="cDash">Already started? Open your dashboard</button>
+            <button class="c-text" id="cDash">Already started? Go to Home</button>
         </section>
     </div>
 
@@ -1636,7 +1653,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
                 <p class="ob-hint">Swipe the word, or use the arrow keys.</p>
                 <p class="ob-pathline" id="obPath" aria-live="polite"></p>
                 <button class="ob-go" id="obGo">Start learning</button>
-                <button class="ob-skip" id="obSkip">Already learning? Open your dashboard</button>
+                <button class="ob-skip" id="obSkip">Already learning? Go to Home</button>
             </div>
         </div>
     </section>
@@ -1813,6 +1830,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </div>
     </section>
 
+    <p class="foot-welcome"><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button></p>
     <footer class="section-footer" style="margin-top:48px;">
         <p>&copy; 2026 DiFacto Robotics &amp; Automation &middot; <a href="https://www.difacto.com" target="_blank" rel="noopener">www.difacto.com</a></p>
     </footer>
@@ -1822,13 +1840,14 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- MODULE VIEW                                    -->
 <!-- ═══════════════════════════════════════════════ -->
 <div id="moduleView" style="display:none;">
-    <nav class="back-bar" id="backBar" aria-label="Back to dashboard"><button class="back-link" onclick="goHome()">&#8592; Dashboard</button><span class="back-ctx" id="backCtx"></span></nav>
+    <nav class="back-bar" id="backBar" aria-label="Back to Home"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><span class="back-ctx" id="backCtx"></span></nav>
     <div class="layout">
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
             <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebarNav()" aria-expanded="false" aria-controls="sidebarNav">
                 <span id="sidebarToggleText">Sections</span><span class="sidebar-toggle-chev">&#9662;</span>
             </button>
+            <button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
             <div class="sidebar-module">
                 <div class="module-label" id="sidebarModuleLabel">Loading...</div>
                 <div id="sidebarNav"></div>
@@ -1915,13 +1934,14 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <button class="drawer-close" onclick="closeCourseMenu()" aria-label="Close menu">&times;</button>
     </div>
     <div class="drawer-tools">
-        <button class="drawer-home" onclick="menuGoHome()">&#8592; Dashboard</button>
+        <button class="drawer-home" onclick="menuGoHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
         <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules..." oninput="renderCourseMenu(this.value)" autocomplete="off">
     </div>
     <div class="drawer-body" id="drawerBody"></div>
     <div class="drawer-footer" id="drawerFooter">
-        <button class="drawer-lock" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
+        <button class="drawer-lock drawer-welcome" id="drawerWelcome" onclick="menuWelcome()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>Welcome screen</button>
+        <button class="drawer-lock" id="drawerLockBtn" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
     </div>
 </div>
 
@@ -2104,8 +2124,8 @@ function showHome() {
         document.getElementById('moduleView').style.display = 'none';
         document.getElementById('progressWrap').style.display = 'none';
         document.getElementById('homeBtn').style.display = 'none';
-        document.getElementById('headerLevel').textContent = 'Dashboard';
-        setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'Your dashboard');
+        document.getElementById('headerLevel').textContent = 'Home';
+        setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'Home');
         if (!fromHistory) window.scrollTo(0, 0);
         focusHeading();
     });
@@ -2113,6 +2133,7 @@ function showHome() {
 
 function goHome() {
     if (!okToLeaveExam()) return;
+    try { if (sessionStorage.getItem('moroWelcomeRevisit')) { sessionStorage.removeItem('moroObForce'); sessionStorage.removeItem('moroWelcomeRevisit'); } } catch (e) {}
     showHome();
 }
 
@@ -2162,7 +2183,7 @@ async function loadModule(moduleId) {
             <p class="body-text">Could not load <strong>${moduleId}</strong>. Please check the module ID or try again.</p>
             <p class="body-text" style="color:var(--muted); font-size:13px;">${err.message}</p>
             <div class="btn-row">
-                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to your dashboard</button>
+                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button>
             </div>`;
     }
 }
@@ -2350,7 +2371,7 @@ function renderQuiz() {
                         <button class="btn btn-primary" onclick="showCertificate()">Download Certificate</button>
                         <button class="btn btn-primary" id="examBtn" style="display:none;">Take the exam →</button>
                         <button class="btn btn-secondary" id="continueBtn" style="display:none;" onclick="continueToNextModule()">Continue →</button>
-                        <button class="btn btn-secondary" id="dashBtn" onclick="goHome()">&#8592; Dashboard</button>
+                        <button class="btn btn-secondary" id="dashBtn" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
                     </div>
                 </div>
             </div>
@@ -2844,6 +2865,8 @@ function obSelect(id) { const i = OB_WORDS.findIndex(w => w[0] === id); if (i >=
 function renderOnboarding() {
     const logo = document.getElementById('obMoroLogo'); if (logo) logo.src = MORO_LOGO_B64;
     const roller = document.getElementById('obRoller'); if (!roller) return;
+    let revisit = false; try { revisit = sessionStorage.getItem('moroWelcomeRevisit') === '1'; } catch (e) {}
+    if (revisit && !obPick) { try { obPick = localStorage.getItem(ROLE_KEY) || bRole || null; } catch (e) {} }
     const at = OB_WORDS.findIndex(w => w[0] === obPick); obI = at >= 0 ? at : 0; obPaint();
     if (!roller.dataset.bound) {
         roller.dataset.bound = '1';
@@ -2859,14 +2882,16 @@ function renderOnboarding() {
         document.getElementById('obUp').addEventListener('click', () => obStep(-1));
         document.getElementById('obDown').addEventListener('click', () => obStep(1));
     }
-    document.getElementById('obGo').onclick = () => obFinish(obPick, `${routeFor(obPick)[0].levels[0]}-M1`);
-    document.getElementById('obSkip').onclick = () => obFinish(null);
+    const go = document.getElementById('obGo'), skip = document.getElementById('obSkip');
+    go.textContent = revisit ? 'Go to Home' : 'Start learning'; skip.hidden = revisit;
+    go.onclick = revisit ? () => obFinish(obPick, null) : () => obFinish(obPick, `${routeFor(obPick)[0].levels[0]}-M1`);
+    skip.onclick = () => obFinish(null);
 }
 function obFinish(role, moduleId) {
-    try { localStorage.setItem('moroOnboarded', '1'); if (role) localStorage.setItem(ROLE_KEY, role); sessionStorage.removeItem('moroObForce'); } catch (e) {}
+    try { localStorage.setItem('moroOnboarded', '1'); if (role) localStorage.setItem(ROLE_KEY, role); sessionStorage.removeItem('moroObForce'); sessionStorage.removeItem('moroWelcomeRevisit'); } catch (e) {}
     if (role) bRole = role;
     document.body.classList.remove('ob-mode');
-    if (moduleId) loadModule(moduleId); else { renderHomeB(); window.scrollTo(0, 0); }
+    if (moduleId) loadModule(moduleId); else { showHome(); }
 }
 
 // ---- Option C: landing from the visitor's side ----
@@ -2975,7 +3000,7 @@ async function loadExam(levelId) {
             <div class="section-eyebrow">Level exam</div>
             <div class="section-title" role="heading" aria-level="1">Exam not available</div>
             <p class="body-text">${escapeHtml(err.message)}</p>
-            <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to your dashboard</button></div>`;
+            <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button></div>`;
     }
 }
 
@@ -2985,7 +3010,7 @@ function examHead(ex, sub) {
 function renderExamIntro() {
     const ex = currentExam, lv = ex.levelId, s = examStatus(lv), total = ex.questions.length, needed = Math.ceil(total * ex.passMark / 100);
     const main = document.getElementById('mainContent');
-    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to your dashboard</button>`;
+    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button>`;
     if (s.kind === 'locked') {
         main.innerHTML = `<div class="view active">${examHead(ex)}<div class="assessment-intro"><p class="body-text" style="margin-bottom:0;">Finish all ${builtTitles(lv).length} modules in Level ${lv.slice(1)} to unlock this exam. You have <strong>${s.left} ${s.left === 1 ? 'module' : 'modules'}</strong> left.</p></div><div class="btn-row">${back}</div></div>`;
     } else if (s.kind === 'passed') {
@@ -3039,7 +3064,7 @@ function submitExam() {
     const passed = score >= needed, lv = ex.levelId;
     saveExamAttempt(lv, score, total, passed);
     const s = examStatus(lv), name = loadLearnerName(), pre = name ? `${name}, ` : '';
-    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to your dashboard</button>`;
+    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button>`;
     let body;
     if (passed) {
         document.getElementById('statusLabel').textContent = 'Passed \u2713'; document.getElementById('statusDot').className = 'status-dot done';
@@ -3499,6 +3524,16 @@ function menuGoHome() {
     closeCourseMenu();
     goHome();
 }
+// Re-open the welcome screen at any time. Nothing is reset: progress and role stay as they are.
+function showWelcome() {
+    if (!okToLeaveExam()) return;
+    try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {}
+    showHome();
+}
+function menuWelcome() {
+    closeCourseMenu();
+    showWelcome();
+}
 
 // ---- Mobile section bar (collapses the section list so content comes first) ----
 function toggleSidebarNav(force) {
@@ -3869,8 +3904,8 @@ bindPathwayDrag();
 syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
 if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));
 if (!GATE_ENABLED) {
-    const footer = document.getElementById('drawerFooter');
-    if (footer) footer.style.display = 'none';
+    const lockBtn = document.getElementById('drawerLockBtn');
+    if (lockBtn) lockBtn.style.display = 'none';
 }
 if (!GATE_ENABLED || gateIsUnlocked()) {
     init();
