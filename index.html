@@ -103,7 +103,7 @@
         .progress-fill { height: 100%; background: var(--orange); transition: var(--transition); }
 
         /* ── LAYOUT ── */
-        .layout { display: flex; min-height: calc(100vh - 65px); }
+        .layout { display: flex; min-height: calc(100vh - 65px); min-height: calc(100dvh - 65px); }
 
         /* ── SIDEBAR ── */
         .sidebar {
@@ -114,6 +114,7 @@
             position: sticky;
             top: 65px;
             height: calc(100vh - 65px);
+            height: calc(100dvh - 65px);
             overflow-y: auto;
             flex-shrink: 0;
         }
@@ -463,8 +464,8 @@
         }
         .feedback.show { display: block; }
         .feedback.show.fade-in { opacity: 1; transform: translateY(0); }
-        .feedback.correct { background: rgba(46,125,50,0.08); color: #2E7D32; border-left-color: #2E7D32; }
-        .feedback.incorrect { background: rgba(215,43,43,0.08); color: #D72B2B; border-left-color: #D72B2B; }
+        .feedback.correct { background: rgba(46,125,50,0.08); color: #276F2C; border-left-color: #2E7D32; }
+        .feedback.incorrect { background: rgba(215,43,43,0.08); color: #B3261E; border-left-color: #D72B2B; }
 
         /* ── SCORE ── */
         .score-card {
@@ -498,7 +499,7 @@
             letter-spacing: 0.5px;
         }
         .score-badge.pass { background: rgba(46,125,50,0.1); color: #2A7430; }
-        .score-badge.fail { background: rgba(215,43,43,0.1); color: #D72B2B; }
+        .score-badge.fail { background: rgba(215,43,43,0.1); color: #B3261E; }
 
         /* ── BUTTONS ── */
         .btn-row {
@@ -528,7 +529,7 @@
 
         #continueBtn {
             border-color: var(--orange);
-            color: var(--orange);
+            color: var(--orange-ink);
         }
         #continueBtn:hover {
             background: var(--orange);
@@ -794,23 +795,32 @@
         .lp-step p { font-size: 14px; line-height: 1.65; color: var(--text); }
         .lp-tag { display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); border: 1px solid var(--divider); padding: 2px 6px; border-radius: 3px; vertical-align: middle; }
 
-        /* ── ACCESS GATE ── */
+        /* ── ACCESS GATE (MoRo look: bright, quiet, one blue accent) ── */
         body.gate-locked { overflow: hidden; }
-        #gateOverlay { position: fixed; inset: 0; z-index: 3000; background: var(--navy); display: flex; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
-        .gate-card { background: var(--white); width: min(420px, 100%); border-radius: 6px; padding: 36px 32px 28px; text-align: center; box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
-        .gate-logos { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 22px; }
-        .gate-logos img { height: 38px; width: auto; object-fit: contain; }
-        .gate-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--orange); font-weight: 700; margin-bottom: 8px; }
-        .gate-title { font-family: 'Merriweather', serif; font-size: 22px; color: var(--navy); font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
-        .gate-sub { font-size: 14px; color: var(--muted); margin-bottom: 22px; }
-        #gateInput { width: 100%; text-align: center; letter-spacing: 6px; font-size: 22px; padding: 12px; border: 1px solid var(--divider); border-radius: 4px; font-family: 'Inter', sans-serif; color: var(--navy); }
-        #gateInput::placeholder { letter-spacing: 0; font-size: 14px; }
-        #gateInput:focus { outline: none; border-color: var(--orange); }
-        .gate-remember { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12.5px; color: var(--muted); margin: 14px 0 18px; cursor: pointer; }
-        .gate-btn { width: 100%; min-height: 44px; }
-        .gate-error { min-height: 20px; margin-top: 12px; font-size: 13px; color: #D72B2B; }
+        body.gate-locked > *:not(#gateOverlay) { display: none !important; }   /* nothing of the app is drawn (or animated) behind the code screen */
+        #gateOverlay { position: fixed; inset: 0; z-index: 3000; display: flex; align-items: center; justify-content: center; padding: 24px; overflow-y: auto; background: #FBFBFD; color: #1D1D1F;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; transition: opacity 0.3s ease; }
+        #gateOverlay.leaving { opacity: 0; pointer-events: none; }
+        .gate-card { width: min(420px, 100%); text-align: center; animation: gateIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .gate-logo { display: block; width: 104px; height: auto; margin: 0 auto 34px; }
+        .gate-eyebrow { margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #6E6E73; }
+        .gate-title { font-size: clamp(32px, 6vw, 46px); font-weight: 600; line-height: 1.07; letter-spacing: -0.04em; color: #1D1D1F; text-wrap: balance; }
+        .gate-sub { margin: 14px 0 28px; font-size: 17px; line-height: 1.45; color: #6E6E73; }
+        #gateInput { width: 100%; height: 56px; padding: 0 16px; text-align: center; letter-spacing: 8px; font-family: inherit; font-size: 22px; color: #1D1D1F; background: #fff; border: 1px solid #D2D2D7; border-radius: 16px; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+        #gateInput::placeholder { letter-spacing: 0; font-size: 16px; color: #6E6E73; }
+        #gateInput:focus { outline: none; border-color: #2E6DB4; box-shadow: 0 0 0 4px rgba(46, 109, 180, 0.16); }
+        .gate-remember { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; margin: 10px 0 14px; font-size: 14px; color: #6E6E73; cursor: pointer; }
+        .gate-remember input { width: 18px; height: 18px; accent-color: #2E6DB4; }
+        .gate-btn { width: 100%; min-height: 56px; padding: 15px 28px; font-family: inherit; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; color: #fff; background: #2E6DB4; border: none; border-radius: 999px; cursor: pointer; transition: background 0.15s ease, transform 0.1s ease; }
+        .gate-btn:hover { background: #245A96; }
+        .gate-btn:active { transform: scale(0.985); }
+        .gate-btn:focus-visible { outline: 3px solid #1D1D1F; outline-offset: 3px; }
+        .gate-error { min-height: 24px; margin-top: 14px; font-size: 14px; color: #B3261E; }
+        .gate-foot { margin-top: 30px; font-size: 13px; color: #6E6E73; }
         .gate-card.shake { animation: gateShake 0.35s ease; }
+        @keyframes gateIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
         @keyframes gateShake { 0%, 100% { transform: translateX(0); } 20%, 60% { transform: translateX(-8px); } 40%, 80% { transform: translateX(8px); } }
+        @media (prefers-reduced-motion: reduce) { .gate-card, .gate-card.shake { animation: none; } #gateOverlay, .gate-btn { transition: none; } }
         .drawer-footer { padding: 10px 20px; border-top: 1px solid var(--divider); }
         .drawer-lock { background: none; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 12.5px; font-weight: 600; color: var(--muted); padding: 10px 0; min-height: 44px; }
         .drawer-lock:hover { color: var(--orange); }
@@ -1125,7 +1135,7 @@
             font-family: inherit; font-size: 13.5px; color: var(--text);
         }
         .drawer-item:hover { background: var(--hover); }
-        .drawer-item.current { background: var(--hover); border-left-color: var(--orange); color: var(--orange); font-weight: 600; }
+        .drawer-item.current { background: var(--hover); border-left-color: var(--orange); color: var(--orange-ink); font-weight: 600; }
         .drawer-item-num { font-family: 'Merriweather', serif; font-size: 10px; font-weight: 700; color: var(--muted); width: 20px; flex-shrink: 0; }
         .drawer-item.done .drawer-item-num { color: #2E7D32; }
         .drawer-empty { padding: 32px 20px; text-align: center; color: var(--muted); font-size: 14px; }
@@ -1223,7 +1233,6 @@
             .lp-cta { flex-direction: column; gap: 6px; }
             .lp-cta-main { width: 100%; min-height: 50px; }
             .lp-cta-link { width: 100%; min-height: 44px; }
-            .gate-card { padding: 28px 20px 22px; }
         }
         @media (max-width: 900px) {
             .roadmap { display: none; }
@@ -1297,6 +1306,131 @@
             .pw-body { padding: 0 14px 32px 28px; }
         }
     
+        /* ── TOUCH SCREENS (iPad, phones): 44px targets, 16px inputs so iOS does not zoom on focus ── */
+        @media (pointer: coarse) {
+            .btn, .menu-btn, #homeBtn, .name-chip, .drawer-home, .drawer-lock, .drawer-close, .back-link, .b-link, .bd-lv, .ex-btn, .ob-skip, .drawer-item { min-height: 44px !important; }
+            .drawer-name, .drawer-search { min-height: 44px !important; }
+            input[type="text"], input[type="search"], textarea, select { font-size: 16px !important; }
+            .header-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 6px; }
+            .btn, .b-link, .bd-lv, .ob-go, .ex-btn, .back-link, .name-chip { touch-action: manipulation; }
+        }
+
+        /* ── MOTION AND POLISH: page turns, a route that draws itself, a calm "well done" ── */
+        .header { view-transition-name: site-header; }
+        ::view-transition-group(site-header) { animation: none; }
+        ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.28s; animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1); }
+        ::view-transition-old(root) { animation-name: vtOut; }
+        ::view-transition-new(root) { animation-name: vtIn; }
+        @keyframes vtOut { from { opacity: 1; } to { opacity: 0; transform: translateY(-6px); } }
+        @keyframes vtIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .section-title:focus, #bHello:focus, #obH:focus { outline: none; }
+        h1, h2, .section-title, .b-hello, .b-h2, .gate-title { text-wrap: balance; }
+        .score-num, .pg-num b, .pg-levels b, .b-cont-prog { font-variant-numeric: tabular-nums; }
+        .score-badge .tick { margin-right: 6px; vertical-align: -2px; }
+        .score-card.celebrate .tick path { stroke-dasharray: 24; stroke-dashoffset: 24; animation: tickDraw 0.5s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .level-done { margin-bottom: 14px; padding: 12px 16px; font-size: 14.5px; font-weight: 600; color: #1F6B26; background: rgba(46, 125, 50, 0.08); border-radius: 12px; animation: riseIn 0.5s 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .pg-save { margin-top: 14px; font-size: 12.5px; color: #6E6E73; }
+        #passActions .btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+        #passActions .btn { white-space: nowrap; }
+        @media (max-width: 600px) { #passActions .btn { white-space: normal; flex: 1 1 100%; } }
+        @keyframes tickDraw { to { stroke-dashoffset: 0; } }
+        @keyframes riseIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        @keyframes lineDraw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+        @media (prefers-reduced-motion: no-preference) {
+            .b-step .b-line { transform-origin: top; animation: lineDraw 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+            .b-step:nth-child(2) .b-line { animation-delay: 0.12s; } .b-step:nth-child(3) .b-line { animation-delay: 0.24s; }
+            .b-step:nth-child(4) .b-line { animation-delay: 0.36s; } .b-step:nth-child(5) .b-line { animation-delay: 0.48s; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+            .score-card.celebrate .tick path { stroke-dashoffset: 0; animation: none; } .level-done { animation: none; }
+        }
+
+        /* ── NAVIGATION: back bar and header link ── */
+        a.header-left { color: inherit; text-decoration: none; }
+        a.header-left:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 4px; border-radius: 6px; }
+        .back-bar { display: none; }
+        .back-link { min-height: 44px; padding: 10px 4px; font-family: inherit; font-size: 14px; font-weight: 600; color: var(--orange-ink); background: none; border: none; cursor: pointer; }
+        .back-link:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; border-radius: 6px; }
+        .back-ctx { font-size: 12px; color: var(--muted); text-align: right; }
+        @media (max-width: 900px) { .back-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px; background: var(--white); border-bottom: 1px solid var(--divider); position: sticky; top: var(--header-h, 62px); z-index: 90; } }
+
+        /* ── OPTION Y: inside pages in the MoRo look (opt-in with ?inner=y, back to the current look with ?inner=0) ── */
+body.inner-y:not(.home-mode):not(.ob-mode) { --y-ink: #1D1D1F; --y-mute: #636366; --y-line: #E5E5EA; --y-blue: #2E6DB4; --y-blue-d: #245A96; --y-tint: rgba(46, 109, 180, 0.08);
+    background: #FBFBFD; color: var(--y-ink); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+body.inner-y:not(.home-mode):not(.ob-mode) .header { background: rgba(251, 251, 253, 0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .header img { filter: grayscale(1) opacity(0.7); }
+body.inner-y:not(.home-mode):not(.ob-mode) .course-name { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .course-level, body.inner-y:not(.home-mode):not(.ob-mode) .progress-label { color: var(--y-mute); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .progress-label { text-transform: none; letter-spacing: 0; font-size: 12px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { border-radius: 999px; background: #fff; border: 1px solid #D2D2D7; color: var(--y-ink); font-weight: 600; letter-spacing: 0; }
+body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .progress-bar { height: 3px; border-radius: 3px; background: var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .progress-fill { background: var(--y-blue); border-radius: 3px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .back-bar { background: rgba(251, 251, 253, 0.92); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-bottom: 1px solid var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .back-link { color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .back-ctx { color: var(--y-mute); }
+body.inner-y:not(.home-mode):not(.ob-mode) .sidebar { background: transparent; border-right: 1px solid var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .module-label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 600; color: var(--y-mute); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-item { border-left: none; border-radius: 12px; padding: 11px 12px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-item:hover { background: #F2F2F5; }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-item.active { background: var(--y-tint); color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-item.active .nav-text { color: var(--y-blue-d); font-weight: 600; }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-num { font-family: inherit; font-size: 11px; font-variant-numeric: tabular-nums; color: var(--y-mute); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-item.active .nav-num { color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-dot.visited, body.inner-y:not(.home-mode):not(.ob-mode) .status-dot.active { background: var(--y-blue); border-color: var(--y-blue); }
+body.inner-y:not(.home-mode):not(.ob-mode) .main { max-width: 780px; padding: 64px 56px 96px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .section-eyebrow { text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 600; color: var(--y-blue-d); margin-bottom: 14px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-family: inherit; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.07; color: var(--y-ink); margin-bottom: 14px; text-wrap: balance; }
+body.inner-y:not(.home-mode):not(.ob-mode) .section-meta { font-size: 14px; color: var(--y-mute); border-bottom: none; padding-bottom: 0; margin-bottom: 36px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .h2 { font-family: inherit; font-size: 26px; font-weight: 600; letter-spacing: -0.03em; color: var(--y-ink); margin-top: 52px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .h3 { text-transform: none; letter-spacing: -0.01em; font-size: 17px; font-weight: 600; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .body-text, body.inner-y:not(.home-mode):not(.ob-mode) .content-list li { font-size: 18px; line-height: 1.65; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .content-list li { padding: 12px 0 12px 26px; border-bottom-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .content-list li:before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--y-blue); top: 23px; left: 2px; font-size: 0; }
+        body.inner-y:not(.home-mode):not(.ob-mode) .h2-icon { color: var(--y-blue); }
+body.inner-y:not(.home-mode):not(.ob-mode) .insight { background: var(--y-tint); border: none; border-radius: 20px; padding: 26px 28px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .insight-label { text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .key-term-item { font-size: 16px; }
+body.inner-y:not(.home-mode):not(.ob-mode) th { background: #F5F5F7; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .table-wrap { border-radius: 14px; overflow: hidden; border: 1px solid var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .assessment-intro { background: #fff; border-color: var(--y-line); border-radius: 20px; padding: 28px 30px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .question-block { background: #fff; border: 1px solid var(--y-line); border-radius: 20px; padding: 26px 28px; margin-bottom: 16px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .question-num { text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--y-mute); }
+body.inner-y:not(.home-mode):not(.ob-mode) .question-text { font-family: inherit; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .option { background: #fff; border: 1px solid var(--y-line); border-radius: 14px; margin-bottom: 10px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .option:hover { background: #F5F5F7; }
+body.inner-y:not(.home-mode):not(.ob-mode) .option:has(input:checked) { background: var(--y-tint); border-color: var(--y-blue); }
+body.inner-y:not(.home-mode):not(.ob-mode) .option-label { padding: 14px 16px; border-radius: 14px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .option input[type="radio"] { accent-color: var(--y-blue); }
+body.inner-y:not(.home-mode):not(.ob-mode) .feedback { border-left: none; border-radius: 12px; font-size: 14px; padding: 12px 16px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .feedback.correct { background: rgba(46, 125, 50, 0.09); color: #1F6B26; }
+body.inner-y:not(.home-mode):not(.ob-mode) .feedback.incorrect { background: rgba(179, 38, 30, 0.07); color: #B3261E; }
+body.inner-y:not(.home-mode):not(.ob-mode) .score-card { border-color: var(--y-line); border-radius: 24px; padding: 52px 40px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .score-num { font-family: inherit; font-size: 76px; font-weight: 600; letter-spacing: -0.05em; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .score-badge { border-radius: 999px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .score-badge.pass { background: rgba(46, 125, 50, 0.1); color: #1F6B26; }
+body.inner-y:not(.home-mode):not(.ob-mode) .score-badge.fail { background: rgba(179, 38, 30, 0.08); color: #B3261E; }
+body.inner-y:not(.home-mode):not(.ob-mode) .level-done { border-radius: 14px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .btn { min-height: 44px; padding: 13px 26px; border-radius: 999px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+body.inner-y:not(.home-mode):not(.ob-mode) .btn-primary { background: var(--y-blue); border-color: var(--y-blue); color: #fff; }
+body.inner-y:not(.home-mode):not(.ob-mode) .btn-primary:hover { background: var(--y-blue-d); border-color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary { background: #fff; border-color: #D2D2D7; color: var(--y-ink); }
+body.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary:hover { border-color: var(--y-blue); color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) #continueBtn { border-color: var(--y-blue); color: var(--y-blue-d); }
+body.inner-y:not(.home-mode):not(.ob-mode) #continueBtn:hover { background: var(--y-blue); color: #fff; }
+body.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { min-height: 36px; padding: 8px 16px; font-size: 13px; letter-spacing: 0; line-height: 1.2; }
+        body.inner-y:not(.home-mode):not(.ob-mode) .btn:focus-visible, body.inner-y:not(.home-mode):not(.ob-mode) .option-label:focus-within, body.inner-y:not(.home-mode):not(.ob-mode) .nav-item:focus-visible { outline: 3px solid var(--y-blue); outline-offset: 2px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .section-footer { border-top-color: var(--y-line); color: var(--y-mute); }
+body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-color: var(--y-blue); color: var(--y-blue-d); }
+@media (max-width: 900px) {
+    body.inner-y:not(.home-mode):not(.ob-mode) .main { padding: 36px 20px 72px; }
+    body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-size: clamp(30px, 8vw, 40px); }
+    body.inner-y:not(.home-mode):not(.ob-mode) .body-text, body.inner-y:not(.home-mode):not(.ob-mode) .content-list li { font-size: 17px; }
+    body.inner-y:not(.home-mode):not(.ob-mode) .sticky-actions .btn { border-radius: 22px; line-height: 1.25; }
+    body.inner-y:not(.home-mode):not(.ob-mode) .sticky-actions { background: rgba(251, 251, 253, 0.94); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-top: 1px solid var(--y-line); }
+}
+
         /* ── DASHBOARD LOOK (Option 3: bright, quiet, one blue accent). Scoped to Home B only. ── */
         body.home-b.home-mode:not(.ob-mode) { --cream: #FBFBFD; --navy: #1D1D1F; --orange: #2E6DB4; --orange-ink: #2E6DB4; --divider: #D2D2D7; --text: #1D1D1F; --hover: rgba(46,109,180,0.06);
             background: #FBFBFD; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
@@ -1382,14 +1516,14 @@
 <!-- HEADER -->
 <a class="skip-link" href="#mainContent" onclick="skipToMain(event)">Skip to main content</a>
 <header class="header">
-    <div class="header-left">
-        <img src="./Difactoreallogo.jpg" alt="DiFacto Logo" style="width: 100px; height: auto;">
+    <a class="header-left" href="./" onclick="goHome(); return false;" aria-label="MoRo IMR Training Academy. Go to your dashboard.">
+        <img src="./Difactoreallogo.jpg" alt="" style="width: 100px; height: auto;">
         <div class="separator"></div>
         <div>
             <div class="course-name">MoRo IMR Training Academy</div>
-            <div class="course-level" id="headerLevel">Course overview</div>
+            <div class="course-level" id="headerLevel">Dashboard</div>
         </div>
-    </div>
+    </a>
     <div class="header-right">
         <nav class="header-links" id="headerLinks" aria-label="On this page">
             <a href="#pathPanel" onclick="openPathway(event)">Pathway</a>
@@ -1415,7 +1549,7 @@
             </div>
         </div>
         <button class="btn btn-secondary" id="homeBtn" onclick="goHome()" style="display:none; padding:8px 16px; font-size:12px;">
-            &#8592; All Modules
+            &#8592; Dashboard
         </button>
     </div>
 </header>
@@ -1688,6 +1822,7 @@
 <!-- MODULE VIEW                                    -->
 <!-- ═══════════════════════════════════════════════ -->
 <div id="moduleView" style="display:none;">
+    <nav class="back-bar" id="backBar" aria-label="Back to dashboard"><button class="back-link" onclick="goHome()">&#8592; Dashboard</button><span class="back-ctx" id="backCtx"></span></nav>
     <div class="layout">
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
@@ -1774,13 +1909,13 @@
 </aside>
 
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeCourseMenu()"></div>
-<aside class="drawer" id="courseDrawer" role="dialog" aria-modal="true" aria-label="Course menu" aria-hidden="true">
+<div class="drawer" id="courseDrawer" role="dialog" aria-modal="true" aria-label="Course menu" aria-hidden="true">
     <div class="drawer-header">
-        <div class="drawer-title">All Modules</div>
+        <div class="drawer-title">Modules</div>
         <button class="drawer-close" onclick="closeCourseMenu()" aria-label="Close menu">&times;</button>
     </div>
     <div class="drawer-tools">
-        <button class="drawer-home" onclick="menuGoHome()">&#8592; Course overview</button>
+        <button class="drawer-home" onclick="menuGoHome()">&#8592; Dashboard</button>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
         <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules..." oninput="renderCourseMenu(this.value)" autocomplete="off">
     </div>
@@ -1788,7 +1923,7 @@
     <div class="drawer-footer" id="drawerFooter">
         <button class="drawer-lock" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
     </div>
-</aside>
+</div>
 
 <script>
 // ═══════════════════════════════════════════════════
@@ -1880,13 +2015,12 @@ function init() {
     buildHomeView();
     const params = new URLSearchParams(window.location.search);
     const mid = params.get('module'), eid = params.get('exam');
-    if (eid) {
-        loadExam(eid);
-    } else if (mid) {
-        loadModule(mid);
-    } else {
-        showHome();
-    }
+    navFromHistory = true;
+    try {
+        if (eid) loadExam(eid);
+        else if (mid) loadModule(mid);
+        else showHome();
+    } finally { navFromHistory = false; }
 }
 
 // ═══════════════════════════════════════════════════
@@ -1896,18 +2030,89 @@ function buildHomeView() {
     renderLanding();
 }
 
+function syncHeaderHeight() {
+    const h = document.querySelector('.header'); if (!h) return;
+    const px = h.offsetHeight; if (px > 0) document.documentElement.style.setProperty('--header-h', px + 'px');
+}
+// Leaving an exam half way would throw the answers away: ask first.
+function examHasAnswers() {
+    if (document.getElementById('moduleView').style.display !== 'block' || !document.getElementById('examSubmit')) return 0;
+    return document.querySelectorAll('#mainContent input[type="radio"]:checked').length;
+}
+function okToLeaveExam() {
+    if (navFromHistory) return true;
+    const n = examHasAnswers(); if (!n) return true;
+    try { return window.confirm(`Leave the exam? Your ${n} answer${n === 1 ? '' : 's'} will not be saved.`); } catch (e) { return true; }
+}
+window.addEventListener('beforeunload', e => { if (examHasAnswers()) { e.preventDefault(); e.returnValue = ''; } });
+const calmMotion = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+let routedOnce = false;
+// Page-turn: a short cross-fade between whole screens, using the browser's view transitions where they exist.
+function swapView(update) {
+    const animate = routedOnce && !calmMotion() && typeof document.startViewTransition === 'function';
+    routedOnce = true;
+    if (animate) {
+        try { const t = document.startViewTransition(() => { update(); }); return t.updateCallbackDone || Promise.resolve(); } catch (e) { /* fall back to an instant swap */ }
+    }
+    update();
+    return Promise.resolve();
+}
+// Keyboard and screen-reader users land on the page heading after every page change.
+function focusHeading() {
+    const inModule = document.getElementById('moduleView').style.display === 'block';
+    const el = document.querySelector(inModule ? '#mainContent .section-title' : (document.body.classList.contains('ob-mode') ? '#obH' : '#bHello'));
+    if (!el) return;
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+    try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
+}
+function countUp(el, from, to, ms) {
+    if (calmMotion() || from === to) { el.textContent = to; return; }
+    const t0 = performance.now();
+    const step = now => { const k = Math.min(1, (now - t0) / ms), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); else el.textContent = to; };
+    requestAnimationFrame(step);
+}
+function growBar(bar, fromPct, toPct) {
+    if (calmMotion() || fromPct === toPct) { bar.style.width = toPct + '%'; return; }
+    bar.style.transition = 'none'; bar.style.width = fromPct + '%'; void bar.offsetWidth;
+    requestAnimationFrame(() => { bar.style.transition = 'width 0.9s cubic-bezier(0.2, 0.8, 0.2, 1)'; bar.style.width = toPct + '%'; });
+}
+// A calm "well done": the tick draws itself, the score counts up, and a finished level is acknowledged.
+function celebrate(card, score) {
+    const badge = card.querySelector('.score-badge.pass'); if (!badge) return;
+    if (!badge.querySelector('.tick')) badge.insertAdjacentHTML('afterbegin', '<svg class="tick" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    card.classList.add('celebrate');
+    const num = card.querySelector('.score-num'); if (num) countUp(num, 0, parseInt(score, 10), 700);
+}
+
+let navFromHistory = false;
+const BASE_TITLE = document.title;
+function pushRoute(url) {
+    if (navFromHistory) return;                       // Back, Forward and the first load already have the right URL
+    const cur = window.location.pathname + window.location.search;
+    if (url === cur || (url === window.location.pathname && !window.location.search)) history.replaceState({}, '', url);
+    else history.pushState({}, '', url);
+}
+function setPageTitle(t) { document.title = t ? `${t} \u00B7 MoRo Academy` : BASE_TITLE; }
+
 function showHome() {
-    buildHomeView();
-    document.body.classList.add('home-mode');
-    document.getElementById('homeView').style.display = 'block';
-    document.getElementById('moduleView').style.display = 'none';
-    document.getElementById('progressWrap').style.display = 'none';
-    document.getElementById('homeBtn').style.display = 'none';
-    document.getElementById('headerLevel').textContent = 'Course overview';
-    history.pushState({}, '', window.location.pathname);
+    pushRoute(window.location.pathname);
+    const fromHistory = navFromHistory;
+    return swapView(() => {
+        buildHomeView();
+        document.body.classList.add('home-mode');
+        document.getElementById('homeView').style.display = 'block';
+        document.getElementById('moduleView').style.display = 'none';
+        document.getElementById('progressWrap').style.display = 'none';
+        document.getElementById('homeBtn').style.display = 'none';
+        document.getElementById('headerLevel').textContent = 'Dashboard';
+        setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'Your dashboard');
+        if (!fromHistory) window.scrollTo(0, 0);
+        focusHeading();
+    });
 }
 
 function goHome() {
+    if (!okToLeaveExam()) return;
     showHome();
 }
 
@@ -1915,38 +2120,41 @@ function goHome() {
 // MODULE LOADER
 // ═══════════════════════════════════════════════════
 async function loadModule(moduleId) {
+    if (!okToLeaveExam()) return;
     closePathway(true);
-    document.body.classList.remove('home-mode', 'ob-mode');
-    document.getElementById('homeView').style.display = 'none';
-    document.getElementById('moduleView').style.display = 'block';
-    document.getElementById('progressWrap').style.display = 'block';
-    document.getElementById('homeBtn').style.display = 'block';
-
-    // Show loading
-    document.getElementById('mainContent').innerHTML = `
-        <div class="loading-wrap">
-            <div class="loading-dot"></div>
-            <div class="loading-dot"></div>
-            <div class="loading-dot"></div>
-            <span>Loading module...</span>
-        </div>`;
-    document.getElementById('sidebarNav').innerHTML = '';
-    document.getElementById('sidebarModuleLabel').textContent = 'Loading...';
-
-    // Update URL
-    history.pushState({}, '', `?module=${moduleId}`);
+    pushRoute(`?module=${moduleId}`);
+    setPageTitle(moduleId);
+    await swapView(() => {
+        document.body.classList.remove('home-mode', 'ob-mode');
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('moduleView').style.display = 'block';
+        document.getElementById('progressWrap').style.display = 'block';
+        document.getElementById('homeBtn').style.display = 'block';
+        document.getElementById('mainContent').innerHTML = `
+            <div class="loading-wrap">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <span>Loading module...</span>
+            </div>`;
+        document.getElementById('sidebarNav').innerHTML = '';
+        document.getElementById('sidebarModuleLabel').textContent = 'Loading...';
+    });
 
     try {
         const response = await fetch(`./modules/${moduleId}.json`);
         if (!response.ok) throw new Error(`Module not found: ${moduleId}`);
         const data = await response.json();
         currentModule = data;
+        setPageTitle(`${moduleId} \u00B7 ${data.title}`);
+        const ctx = document.getElementById('backCtx'); if (ctx) ctx.textContent = `${data.levelName || data.level} \u00B7 Module ${data.moduleNumber} of ${builtTitles(data.level).length}`;
         const progress = getModuleProgress(moduleId);
         const resumeIndex = Math.min(progress.lastSection, data.sections.length - 1);
         currentSectionIndex = resumeIndex;
         quizAnswers = {};
         renderModule(data, resumeIndex, progress.visited);
         setResume(moduleId, 'continue');
+        focusHeading();
     } catch (err) {
         document.getElementById('mainContent').innerHTML = `
             <div class="section-eyebrow">Error</div>
@@ -1954,7 +2162,7 @@ async function loadModule(moduleId) {
             <p class="body-text">Could not load <strong>${moduleId}</strong>. Please check the module ID or try again.</p>
             <p class="body-text" style="color:var(--muted); font-size:13px;">${err.message}</p>
             <div class="btn-row">
-                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to All Modules</button>
+                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to your dashboard</button>
             </div>`;
     }
 }
@@ -2027,6 +2235,7 @@ function goSection(index) {
     updateSidebarToggle();
     toggleSidebarNav(false);
     window.scrollTo(0, 0);
+    focusHeading();
 }
 
 function renderSection(index) {
@@ -2141,6 +2350,7 @@ function renderQuiz() {
                         <button class="btn btn-primary" onclick="showCertificate()">Download Certificate</button>
                         <button class="btn btn-primary" id="examBtn" style="display:none;">Take the exam →</button>
                         <button class="btn btn-secondary" id="continueBtn" style="display:none;" onclick="continueToNextModule()">Continue →</button>
+                        <button class="btn btn-secondary" id="dashBtn" onclick="goHome()">&#8592; Dashboard</button>
                     </div>
                 </div>
             </div>
@@ -2193,18 +2403,15 @@ function showGate(onUnlock) {
     overlay.setAttribute('aria-label', 'Enter access code');
     overlay.innerHTML = `
         <div class="gate-card" id="gateCard">
-            <div class="gate-logos">
-                <img src="${DIFACTO_LOGO_B64}" alt="DiFacto Logo">
-                <div class="cert-logo-divider"></div>
-                <img src="${MORO_LOGO_B64}" alt="MoRo Logo">
-            </div>
-            <div class="gate-eyebrow">Private preview</div>
-            <div class="gate-title">MoRo IMR Training Academy</div>
+            <img class="gate-logo" src="${MORO_LOGO_B64}" alt="MoRo - Technology of Tomorrow">
+            <p class="gate-eyebrow">Private preview</p>
+            <h1 class="gate-title">MoRo Academy</h1>
             <p class="gate-sub">Enter the access code to continue.</p>
-            <input type="password" id="gateInput" inputmode="numeric" autocomplete="off" maxlength="12" placeholder="Access code" aria-label="Access code">
+            <input type="password" id="gateInput" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="12" placeholder="Access code" aria-label="Access code">
             <label class="gate-remember"><input type="checkbox" id="gateRemember"> Keep me unlocked on this device for 7 days</label>
-            <button class="btn btn-primary gate-btn" id="gateBtn" onclick="gateSubmit()">Unlock</button>
+            <button class="gate-btn" id="gateBtn" onclick="gateSubmit()">Continue</button>
             <div class="gate-error" id="gateError" role="alert"></div>
+            <p class="gate-foot">MoRo Academy &middot; by DiFacto</p>
         </div>`;
     document.body.appendChild(overlay);
     document.body.classList.add('gate-locked');
@@ -2235,8 +2442,9 @@ function gateSubmit() {
             }
         } catch (e) {}
         const overlay = document.getElementById('gateOverlay');
-        if (overlay) overlay.remove();
+        const calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         document.body.classList.remove('gate-locked');
+        if (overlay && !calm) { overlay.classList.add('leaving'); setTimeout(() => overlay.remove(), 320); } else if (overlay) overlay.remove();
         if (gateOnUnlock) gateOnUnlock();
         return;
     }
@@ -2738,24 +2946,29 @@ function bestAttempt(st) { return st.attempts.reduce((b, a) => (!b || pctOf(a) >
 function shuffled(arr) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
 async function loadExam(levelId) {
+    if (!okToLeaveExam()) return;
     closePathway(true);
-    document.body.classList.remove('home-mode', 'ob-mode');
-    document.getElementById('homeView').style.display = 'none';
-    document.getElementById('moduleView').style.display = 'block';
-    document.getElementById('progressWrap').style.display = 'none';
-    document.getElementById('homeBtn').style.display = 'block';
-    currentModule = null; examRun = null; currentExam = null;
-    document.getElementById('headerLevel').textContent = `${levelId} \u2014 Level exam`;
-    document.getElementById('sidebarModuleLabel').textContent = `${levelId} Exam`;
-    document.getElementById('sidebarNav').innerHTML = '';
-    document.getElementById('statusDot').className = 'status-dot active';
-    document.getElementById('statusLabel').textContent = 'Level exam';
-    history.pushState({}, '', `?exam=${levelId}`);
+    pushRoute(`?exam=${levelId}`);
+    setPageTitle(`Level ${levelId.slice(1)} exam`);
+    await swapView(() => {
+        document.body.classList.remove('home-mode', 'ob-mode');
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('moduleView').style.display = 'block';
+        document.getElementById('progressWrap').style.display = 'none';
+        document.getElementById('homeBtn').style.display = 'block';
+        currentModule = null; examRun = null; currentExam = null;
+        document.getElementById('headerLevel').textContent = `${levelId} \u2014 Level exam`;
+        document.getElementById('sidebarModuleLabel').textContent = `${levelId} Exam`;
+        document.getElementById('sidebarNav').innerHTML = '';
+        document.getElementById('statusDot').className = 'status-dot active';
+        document.getElementById('statusLabel').textContent = 'Level exam';
+    });
     try {
         if (!EXAM_META[levelId]) throw new Error('The exam for this level is not available yet.');
         const r = await fetch(`./exams/${levelId}.json`);
         if (!r.ok) throw new Error(`Exam not found: ${levelId}`);
         currentExam = await r.json();
+        const ctx = document.getElementById('backCtx'); if (ctx) ctx.textContent = `Level ${levelId.slice(1)} exam`;
         renderExamIntro();
     } catch (err) {
         document.getElementById('mainContent').innerHTML = `
@@ -2789,6 +3002,7 @@ function renderExamIntro() {
             <div class="btn-row"><button class="btn btn-primary" id="examStart" onclick="startExam()">Start the exam</button>${back}</div></div>`;
     }
     document.getElementById('mainContent').scrollIntoView && window.scrollTo(0, 0);
+    focusHeading();
 }
 
 function startExam() {
@@ -2805,6 +3019,7 @@ function startExam() {
         <div class="exam-msg" id="examMsg" role="alert"></div>
         <div class="btn-row sticky-actions"><button class="btn btn-primary" id="examSubmit" onclick="submitExam()">Submit exam</button></div></div>`;
     window.scrollTo(0, 0);
+    focusHeading();
 }
 
 function submitExam() {
@@ -2842,6 +3057,8 @@ function submitExam() {
     }
     document.getElementById('mainContent').innerHTML = `<div class="view active">${examHead(ex, `Result`)}${body}</div>`;
     window.scrollTo(0, 0);
+    focusHeading();
+    if (passed) celebrate(document.querySelector('#mainContent .score-card'), score);
 }
 
 function showLevelCertificate(levelId) {
@@ -2896,7 +3113,11 @@ function renderProgress() {
     const ids = allModuleIds(), done = getCompletedModules().filter(id => ids.includes(id));
     const total = ids.length, pct = total ? Math.round(100 * done.length / total) : 0;
     const per = LEVELS.map(l => { const n = builtTitles(l.id).length, k = done.filter(id => id.startsWith(l.id + '-')).length; return `<li class="${n && k === n ? 'full' : ''}"><span>${l.id}</span><b>${k}/${n}</b></li>`; }).join('');
-    box.innerHTML = `<div class="pg"><div class="pg-label">Your progress</div><div class="pg-num"><b>${done.length}</b><span> of ${total} modules</span></div><div class="pg-bar" role="img" aria-label="${pct}% complete"><span style="width:${pct}%"></span></div><ul class="pg-levels" aria-label="Modules completed per level">${per}</ul></div>`;
+    box.innerHTML = `<div class="pg"><div class="pg-label">Your progress</div><div class="pg-num"><b>${done.length}</b><span> of ${total} modules</span></div><div class="pg-bar" role="img" aria-label="${pct}% complete"><span style="width:${pct}%"></span></div><ul class="pg-levels" aria-label="Modules completed per level">${per}</ul><p class="pg-save">Your progress is saved on this device.</p></div>`;
+    let seenN = 0, seenP = 0;
+    try { seenN = parseInt(sessionStorage.getItem('moroSeenCount') || '0', 10) || 0; seenP = parseInt(sessionStorage.getItem('moroSeenPct') || '0', 10) || 0; } catch (e) {}
+    setTimeout(() => { try { sessionStorage.setItem('moroSeenCount', String(done.length)); sessionStorage.setItem('moroSeenPct', String(pct)); } catch (e) {} }, 1000);   // remembered only once the movement has finished, so a quick re-render does not skip it
+    if (!calmMotion()) { const nb = box.querySelector('.pg-num b'), bar = box.querySelector('.pg-bar span'); nb.textContent = seenN; growBar(bar, seenP, pct); countUp(nb, seenN, done.length, 800); }
 }
 function renderCerts() {
     const list = document.getElementById('bCertList'); if (!list) return;
@@ -2912,6 +3133,7 @@ function renderHomeB() {
     if (bRole === undefined) { let s = null; try { s = localStorage.getItem(ROLE_KEY); } catch (e) {} bRole = (s && levelById(s)) ? s : null; }
     const logo = document.getElementById('bMoroLogo'); if (logo) logo.src = MORO_LOGO_B64;
     renderGreetingB(); renderContinueB(); renderProgress(); renderRoles(); renderDeck(); renderRoute(); renderCerts(); renderExams();
+    if (!calmMotion()) document.querySelectorAll('#homeView .b-bar span, #homeView .b-cont-bar span').forEach(s => { const w = parseFloat(s.style.width) || 0; growBar(s, 0, w); });
     const ob = firstVisit(); document.body.classList.toggle('ob-mode', ob); if (ob) renderOnboarding();
 }
 
@@ -3519,7 +3741,7 @@ function submitQuiz() {
             const ok = parseInt(sel.value) === q.correctAnswer;
             fb.classList.add('show', ok ? 'correct' : 'incorrect');
             fb.textContent = ok
-                ? '\u2713 Correct. ' + (q.feedback || '')
+                ? '\u2713 Correct. ' + (q.feedback || '').replace(/^Correct\.\s*/, '')
                 : '\u2717 Incorrect \u2014 review the relevant section and try again. ' + (q.feedback || '');
             if (ok) score++;
         }
@@ -3545,6 +3767,7 @@ function submitQuiz() {
     card.classList.add('show');
 
     if (passed) {
+        celebrate(card, score);
         document.getElementById('passActions').style.display = 'block';
         document.getElementById('progressFill').style.width = '100%';
         document.getElementById('statusDot').className = 'status-dot done';
@@ -3563,6 +3786,11 @@ function submitQuiz() {
             continueBtn.style.display = 'none';
         }
         const lv = currentModule.level, examBtn = document.getElementById('examBtn');
+        const pa = document.getElementById('passActions');
+        if (pa && !document.getElementById('levelDone') && levelComplete(lv)) {
+            const hasExam = !!EXAM_META[lv] && !examState(lv).passed;
+            pa.insertAdjacentHTML('afterbegin', `<div class="level-done" id="levelDone" role="status">Level ${lv.slice(1)} complete.${hasExam ? ' Your exam is unlocked.' : ''}</div>`);
+        }
         if (examBtn && EXAM_META[lv] && currentModule.moduleNumber === builtTitles(lv).length && levelComplete(lv) && !examState(lv).passed) {
             examBtn.textContent = `Take the Level ${lv.slice(1)} exam \u2192`;
             examBtn.onclick = () => loadExam(lv);
@@ -3593,13 +3821,12 @@ function updateProgress(done, total) {
 window.addEventListener('popstate', () => {
     const params = new URLSearchParams(window.location.search);
     const mid = params.get('module'), eid = params.get('exam');
-    if (eid) {
-        loadExam(eid);
-    } else if (mid) {
-        loadModule(mid);
-    } else {
-        showHome();
-    }
+    navFromHistory = true;
+    try {
+        if (eid) loadExam(eid);
+        else if (mid) loadModule(mid);
+        else showHome();
+    } finally { navFromHistory = false; }
 });
 
 // ═══════════════════════════════════════════════════
@@ -3632,6 +3859,15 @@ document.addEventListener('click', function (e) {
 });
 
 bindPathwayDrag();
+(function () {
+    try {
+        const q = new URLSearchParams(window.location.search).get('inner');
+        if (q === 'y') localStorage.setItem('moroInner', 'y'); else if (q === '0') localStorage.removeItem('moroInner');
+        document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') === 'y');
+    } catch (e) { /* storage unavailable: keep the current look */ }
+})();
+syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
+if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));
 if (!GATE_ENABLED) {
     const footer = document.getElementById('drawerFooter');
     if (footer) footer.style.display = 'none';
