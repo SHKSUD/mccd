@@ -1348,7 +1348,7 @@
 
         /* ── NAVIGATION: back bar and header link ── */
         .home-ico { vertical-align: -3px; margin-right: 6px; flex-shrink: 0; }
-        .home-btn { font-weight: 700; color: var(--navy); border: 1.5px solid var(--navy); background: var(--white); letter-spacing: 0; }
+        .home-btn { font-weight: 700; color: var(--navy); border: 1.5px solid var(--navy); background: var(--white); letter-spacing: 0; white-space: nowrap; flex-shrink: 0; }
         .home-btn:hover { background: var(--navy); color: var(--white); }
         .nav-home { display: flex; align-items: center; gap: 0; width: calc(100% - 40px); min-height: 44px; margin: 0 20px 24px; padding: 10px 14px; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--navy); background: var(--white); border: 1.5px solid var(--navy); border-radius: 4px; cursor: pointer; transition: var(--transition); }
         .nav-home:hover { background: var(--navy); color: var(--white); }
@@ -1364,6 +1364,108 @@
         .back-link:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; border-radius: 6px; }
         .back-ctx { font-size: 12px; color: var(--muted); text-align: right; }
         @media (max-width: 900px) { .back-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px; background: var(--white); border-bottom: 1px solid var(--divider); position: sticky; top: var(--header-h, 62px); z-index: 90; } }
+
+        /* ── READING OPTIONS: hide the module list, focus mode, dark reading ── */
+        .read-btn { display: none; align-items: center; justify-content: center; min-width: 44px; padding: 8px 12px; font-size: 14px; font-weight: 700; letter-spacing: 0; line-height: 1; white-space: nowrap; }
+        @media (min-width: 901px) { body:not(.home-mode):not(.ob-mode) #readBtn { display: inline-flex; } }
+        @media (min-width: 901px) and (max-width: 1060px) { body:not(.home-mode):not(.ob-mode) .progress-label { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; } body:not(.home-mode):not(.ob-mode) .course-name { white-space: nowrap; } }
+        @media (min-width: 901px) and (max-width: 1000px) { body:not(.home-mode):not(.ob-mode) .header { padding-left: 18px; padding-right: 18px; } body:not(.home-mode):not(.ob-mode) .header-right { gap: 10px !important; } body:not(.home-mode):not(.ob-mode) .header-left { gap: 12px; } }
+        #readBtnBar { display: inline-flex; margin-left: 10px; min-height: 36px; padding: 6px 12px; }
+        .back-right { display: inline-flex; align-items: center; margin-left: auto; }
+        .read-panel { position: fixed; top: calc(var(--header-h, 62px) + 8px); right: 16px; z-index: 130; width: min(320px, calc(100vw - 24px)); padding: 18px; background: var(--white); border: 1px solid var(--divider); border-radius: 8px; box-shadow: 0 14px 44px rgba(10, 29, 68, 0.2); }
+        .read-panel[hidden] { display: none; }
+        .rp-theme { border: 0; margin: 0 0 8px; padding: 0; }
+        .rp-theme legend { margin-bottom: 8px; padding: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; color: var(--muted); }
+        .rp-seg { display: flex; border: 1px solid var(--divider); border-radius: 8px; overflow: hidden; }
+        .rp-seg label { position: relative; flex: 1; }
+        .rp-seg input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+        .rp-seg span { display: block; min-height: 44px; padding: 12px 8px; text-align: center; font-size: 13px; font-weight: 600; color: var(--text); background: var(--white); }
+        .rp-seg label + label span { border-left: 1px solid var(--divider); }
+        .rp-seg input:checked + span { background: var(--navy); color: #fff; }
+        .rp-seg input:focus-visible + span { outline: 3px solid var(--orange-ink); outline-offset: -3px; }
+        .rp-switch { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; padding: 10px 0; font-size: 14px; font-weight: 600; color: var(--navy); cursor: pointer; }
+        .rp-switch input { flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px; accent-color: var(--orange-ink); }
+        .rp-switch small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; line-height: 1.4; color: var(--muted); }
+        .nav-top { display: flex; gap: 8px; margin: 0 20px 24px; }
+        .nav-top .nav-home { flex: 1; width: auto; margin: 0; }
+        .nav-collapse, .sidebar-expand { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0; color: var(--muted); background: var(--white); border: 1.5px solid var(--divider); border-radius: 4px; cursor: pointer; transition: var(--transition); }
+        .nav-collapse:hover, .sidebar-expand:hover { color: var(--navy); border-color: var(--navy); }
+        .nav-collapse:focus-visible, .sidebar-expand:focus-visible, .focus-btn:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .sidebar-expand { display: none; position: fixed; left: 10px; top: calc(var(--header-h, 62px) + 12px); z-index: 80; }
+        .focus-bar { display: none; position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px; z-index: 140; gap: 8px; }
+        .focus-btn { min-height: 44px; min-width: 44px; padding: 8px 16px; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--navy); background: var(--white); border: 1.5px solid var(--divider); border-radius: 999px; cursor: pointer; opacity: 0.88; transition: var(--transition); }
+        .focus-btn:hover { opacity: 1; border-color: var(--navy); }
+        .focus-progress { display: none; position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 141; background: var(--divider); }
+        .focus-progress span { display: block; height: 100%; width: 0; background: var(--orange); transition: width 0.4s ease; }
+        @media (min-width: 901px) {
+            body:not(.home-mode):not(.ob-mode).sidebar-collapsed .sidebar { display: none; }
+            body:not(.home-mode):not(.ob-mode).sidebar-collapsed .sidebar-expand { display: inline-flex; }
+            body:not(.home-mode):not(.ob-mode).sidebar-collapsed .layout { justify-content: center; }
+            body:not(.home-mode):not(.ob-mode).sidebar-collapsed .main { width: 100%; }
+        }
+        @media (max-width: 900px) { .nav-collapse, .sidebar-expand, .rp-desk { display: none !important; } }
+        body:not(.home-mode):not(.ob-mode).focus-mode .header, body:not(.home-mode):not(.ob-mode).focus-mode .back-bar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar-expand { display: none !important; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .layout { justify-content: center; min-height: 100vh; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .main { width: 100%; padding-top: 72px; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .focus-bar { display: flex; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .focus-progress { display: block; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .read-panel { top: 66px; }
+        @media (pointer: coarse) { .nav-collapse, .sidebar-expand, .focus-btn { min-height: 44px; min-width: 44px; } }
+        @media (prefers-reduced-motion: reduce) { .focus-progress span { transition: none; } }
+        @media (pointer: fine) and (min-width: 901px) { body:not(.home-mode):not(.ob-mode) #readBtn { min-height: 36px; } }
+
+        /* Dark reading theme: the same pages in dark colours. Screens only, so printing and certificates stay light. */
+        @media screen {
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) { --cream: #0F1115; --white: #171A20; --navy: #EEF0F4; --text: #D6D9DF; --muted: #A0A7B4; --divider: #2B303A; --hover: rgba(255, 165, 102, 0.09); --orange: #F29A5A; --orange-ink: #FFA566; color-scheme: dark; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .header, body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .drawer, body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .read-panel { --muted: #A0A7B4; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .header img { filter: invert(1) hue-rotate(180deg); }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .btn-primary { background: #B4540E; border-color: #B4540E; color: #fff; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .btn-primary:hover { background: #9A4609; border-color: #9A4609; color: #fff; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) #continueBtn:hover { background: #B4540E; border-color: #B4540E; color: #fff; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .skip-link { background: #EEF0F4; color: #0F1115; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) th { background: #222733; color: #EEF0F4; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .video-embed { background: #222733; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .name-chip { background: var(--white); color: var(--text); }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .feedback.correct, body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .level-done { background: rgba(76, 175, 80, 0.16); color: #9BE0A1; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .feedback.incorrect { background: rgba(255, 99, 90, 0.16); color: #FFA39B; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .score-badge.pass { background: rgba(76, 175, 80, 0.16); color: #9BE0A1; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .score-badge.fail { background: rgba(255, 99, 90, 0.16); color: #FFA39B; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .option:has(input:checked) { background: rgba(255, 165, 102, 0.12); }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .rp-seg input:checked + span { background: #EEF0F4; color: #0F1115; }
+            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .read-panel { box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55); }
+
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) { --cream: #0F1115; --white: #171A20; --navy: #EEF0F4; --text: #D6D9DF; --muted: #A0A7B4; --divider: #2B303A; --hover: rgba(141, 186, 242, 0.09); --orange: #F29A5A; --orange-ink: #FFA566;
+                  --y-ink: #EEF0F4; --y-mute: #A0A7B4; --y-line: #2B303A; --y-blue: #5B9BE6; --y-blue-d: #8DBAF2; --y-tint: rgba(141, 186, 242, 0.14); background: #0F1115; color-scheme: dark; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .drawer, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-panel { --muted: #A0A7B4; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header { background: rgba(23, 26, 32, 0.88); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header img { filter: grayscale(1) invert(1) opacity(0.85); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #homeBtn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .home-btn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-btn { background: #1F232B; border-color: #2B303A; color: var(--y-ink); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #homeBtn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .home-btn { color: var(--y-blue-d); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .back-bar { background: rgba(23, 26, 32, 0.92); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .nav-item:hover { background: #1F232B; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .nav-home { background: #1F232B; border-color: #2B303A; color: var(--y-blue-d); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) th { background: #1F232B; color: var(--y-ink); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .assessment-intro, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .question-block, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .option { background: #171A20; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .option:hover { background: #1F232B; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .option:has(input:checked) { background: var(--y-tint); border-color: var(--y-blue); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary { background: #1F232B; border-color: #2B303A; color: var(--y-ink); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .btn-secondary:hover { border-color: var(--y-blue); color: var(--y-blue-d); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .btn-primary { background: #2E6DB4; border-color: #2E6DB4; color: #fff; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .btn-primary:hover { background: #245A96; border-color: #245A96; color: #fff; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #continueBtn { background: #1F232B; border-color: var(--y-blue); color: var(--y-blue-d); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #continueBtn:hover { background: #2E6DB4; border-color: #2E6DB4; color: #fff; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .feedback.correct, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .level-done { background: rgba(76, 175, 80, 0.16); color: #9BE0A1; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .feedback.incorrect { background: rgba(255, 99, 90, 0.16); color: #FFA39B; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .score-badge.pass { background: rgba(76, 175, 80, 0.16); color: #9BE0A1; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .score-badge.fail { background: rgba(255, 99, 90, 0.16); color: #FFA39B; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sticky-actions { background: rgba(23, 26, 32, 0.94); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .skip-link { background: #EEF0F4; color: #0F1115; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .name-chip { background: #1F232B; color: var(--y-ink); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .rp-seg input:checked + span { background: #2E6DB4; color: #fff; }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .focus-btn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .nav-collapse, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sidebar-expand { background: #1F232B; border-color: #2B303A; color: var(--y-ink); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .focus-progress span { background: var(--y-blue); }
+            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-panel { box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55); }
+        }
 
         /* ── OPTION Y: inside pages in the MoRo look (opt-in with ?inner=y, back to the current look with ?inner=0) ── */
 body.inner-y:not(.home-mode):not(.ob-mode) { --y-ink: #1D1D1F; --y-mute: #636366; --y-line: #E5E5EA; --y-blue: #2E6DB4; --y-blue-d: #245A96; --y-tint: rgba(46, 109, 180, 0.08);
@@ -1433,7 +1535,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .home-btn { color: var(--y-blue-d); b
 body.inner-y:not(.home-mode):not(.ob-mode) .home-btn:hover { background: var(--y-tint); color: var(--y-blue-d); border-color: var(--y-blue); }
 body.inner-y:not(.home-mode):not(.ob-mode) .nav-home { color: var(--y-blue-d); border: 1px solid #D2D2D7; border-radius: 999px; font-weight: 600; }
 body.inner-y:not(.home-mode):not(.ob-mode) .nav-home:hover { background: var(--y-tint); color: var(--y-blue-d); border-color: var(--y-blue); }
-body.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { min-height: 36px; padding: 8px 16px; font-size: 13px; letter-spacing: 0; line-height: 1.2; }
+body.inner-y:not(.home-mode):not(.ob-mode) .read-btn, body.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.inner-y:not(.home-mode):not(.ob-mode) #homeBtn { min-height: 36px; padding: 8px 16px; font-size: 13px; letter-spacing: 0; line-height: 1.2; }
         body.inner-y:not(.home-mode):not(.ob-mode) .btn:focus-visible, body.inner-y:not(.home-mode):not(.ob-mode) .option-label:focus-within, body.inner-y:not(.home-mode):not(.ob-mode) .nav-item:focus-visible { outline: 3px solid var(--y-blue); outline-offset: 2px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .section-footer { border-top-color: var(--y-line); color: var(--y-mute); }
 body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-color: var(--y-blue); color: var(--y-blue-d); }
@@ -1547,6 +1649,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <a href="#howSection" onclick="jumpTo('howSection', event)">How it works</a>
             <a href="#faqSection" onclick="jumpTo('faqSection', event)">FAQ</a>
         </nav>
+        <button class="btn btn-secondary read-btn" id="readBtn" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button>
         <button class="btn btn-secondary menu-btn" id="menuBtn" onclick="openCourseMenu()" aria-haspopup="dialog" aria-controls="courseDrawer" aria-expanded="false">&#9776; Modules</button>
         <div class="name-chip-wrap" id="learnerNameBox">
             <button class="name-chip" id="nameChip" onclick="toggleNamePopover()" aria-haspopup="dialog" aria-expanded="false" aria-controls="namePop">
@@ -1840,14 +1943,15 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- MODULE VIEW                                    -->
 <!-- ═══════════════════════════════════════════════ -->
 <div id="moduleView" style="display:none;">
-    <nav class="back-bar" id="backBar" aria-label="Back to Home"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><span class="back-ctx" id="backCtx"></span></nav>
+    <nav class="back-bar" id="backBar" aria-label="Back to Home"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><span class="back-right"><span class="back-ctx" id="backCtx"></span><button class="btn btn-secondary read-btn" id="readBtnBar" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button></span></nav>
+    <button class="sidebar-expand" id="sidebarExpand" onclick="setSidebarCollapsed(false)" aria-label="Show the module list" title="Show the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 17l5-5-5-5"/><path d="M6 17l5-5-5-5"/></svg></button>
     <div class="layout">
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
             <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebarNav()" aria-expanded="false" aria-controls="sidebarNav">
                 <span id="sidebarToggleText">Sections</span><span class="sidebar-toggle-chev">&#9662;</span>
             </button>
-            <button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
+            <div class="nav-top"><button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><button class="nav-collapse" id="navCollapse" onclick="setSidebarCollapsed(true)" aria-label="Hide the module list" title="Hide the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></button></div>
             <div class="sidebar-module">
                 <div class="module-label" id="sidebarModuleLabel">Loading...</div>
                 <div id="sidebarNav"></div>
@@ -1944,6 +2048,26 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <button class="drawer-lock" id="drawerLockBtn" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
     </div>
 </div>
+
+
+<div class="read-panel" id="readPanel" role="dialog" aria-label="Reading options" hidden>
+    <fieldset class="rp-theme">
+        <legend>Theme</legend>
+        <div class="rp-seg">
+            <label><input type="radio" name="rpTheme" value="light" onchange="setTheme(this.value)" checked><span>Light</span></label>
+            <label><input type="radio" name="rpTheme" value="dark" onchange="setTheme(this.value)"><span>Dark</span></label>
+            <label><input type="radio" name="rpTheme" value="auto" onchange="setTheme(this.value)"><span>Auto</span></label>
+        </div>
+    </fieldset>
+    <label class="rp-switch rp-desk"><input type="checkbox" id="rpSidebar" onchange="setSidebarCollapsed(this.checked)"><span>Hide the module list</span></label>
+    <label class="rp-switch"><input type="checkbox" id="rpFocus" onchange="setFocusMode(this.checked)"><span>Focus mode<small>Hides the top bar and the module list. Press Escape to bring them back.</small></span></label>
+</div>
+<div class="focus-bar" id="focusBar">
+    <button class="focus-btn" id="focusRead" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button>
+    <button class="focus-btn" id="focusExit" onclick="setFocusMode(false)">Exit focus</button>
+</div>
+<div class="focus-progress" id="focusProgress" aria-hidden="true"><span id="focusProgressFill"></span></div>
+<div class="sr-only" id="readStatus" role="status" aria-live="polite"></div>
 
 <script>
 // ═══════════════════════════════════════════════════
@@ -2065,6 +2189,53 @@ function okToLeaveExam() {
     try { return window.confirm(`Leave the exam? Your ${n} answer${n === 1 ? '' : 's'} will not be saved.`); } catch (e) { return true; }
 }
 window.addEventListener('beforeunload', e => { if (examHasAnswers()) { e.preventDefault(); e.returnValue = ''; } });
+// ── Reading options: theme, hide the module list, focus mode (remembered on this device) ──
+let readTheme = 'light', sideCollapsed = false, focusMode = false, readReturn = null;
+function readGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function readSet(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
+function inReading() { return document.getElementById('moduleView').style.display === 'block'; }
+function darkNow() { return readTheme === 'dark' || (readTheme === 'auto' && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
+function loadReadPrefs() { const t = readGet('moroTheme'); readTheme = ['light', 'dark', 'auto'].includes(t) ? t : 'light'; sideCollapsed = readGet('moroSidebar') === '1'; focusMode = readGet('moroFocus') === '1'; }
+function applyReadPrefs() {
+    const b = document.body, dark = darkNow();
+    b.classList.toggle('read-dark', dark); b.classList.toggle('sidebar-collapsed', sideCollapsed); b.classList.toggle('focus-mode', focusMode);
+    const m = document.querySelector('meta[name="theme-color"]'); if (m) { if (!m.dataset.base) m.dataset.base = m.getAttribute('content'); m.setAttribute('content', dark && inReading() ? '#12151A' : m.dataset.base); }
+    document.querySelectorAll('input[name="rpTheme"]').forEach(r => { r.checked = r.value === readTheme; });
+    const sb = document.getElementById('rpSidebar'), fm = document.getElementById('rpFocus'); if (sb) sb.checked = sideCollapsed; if (fm) fm.checked = focusMode;
+}
+function readSay(t) { const s = document.getElementById('readStatus'); if (s) { s.textContent = ''; setTimeout(() => { s.textContent = t; }, 30); } }
+function setTheme(v) { readTheme = ['light', 'dark', 'auto'].includes(v) ? v : 'light'; readSet('moroTheme', readTheme === 'light' ? null : readTheme); applyReadPrefs(); readSay((readTheme === 'dark' ? 'Dark' : readTheme === 'auto' ? 'Automatic' : 'Light') + ' theme on.'); }
+function setSidebarCollapsed(on) {
+    sideCollapsed = !!on; readSet('moroSidebar', on ? '1' : null); applyReadPrefs(); readSay(on ? 'Module list hidden.' : 'Module list shown.');
+    const t = document.getElementById(on ? 'sidebarExpand' : 'navCollapse'); if (t && !document.getElementById('readPanel').contains(document.activeElement)) { try { t.focus({ preventScroll: true }); } catch (e) {} }
+}
+function setFocusMode(on) {
+    focusMode = !!on; readSet('moroFocus', on ? '1' : null); closeReadPanel(); if (typeof closeCourseMenu === 'function') closeCourseMenu(); applyReadPrefs();
+    readSay(on ? 'Focus mode on. Press Escape to show the menus again.' : 'Focus mode off.');
+    if (on) focusHeading(); else {
+        // give focus back to whichever Aa button is on screen (header on wide screens, Home bar on tablets and phones)
+        for (const id of ['readBtn', 'readBtnBar']) { const b = document.getElementById(id); if (b) { try { b.focus(); } catch (e) {} if (document.activeElement === b) return; } }
+        focusHeading();
+    }
+}
+function closeReadPanel(returnFocus) {
+    const p = document.getElementById('readPanel'); if (!p || p.hidden) return false;
+    p.hidden = true; document.querySelectorAll('[aria-controls="readPanel"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+    if (returnFocus && readReturn) { try { readReturn.focus(); } catch (e) {} }
+    return true;
+}
+function toggleReadPanel(ev) {
+    const p = document.getElementById('readPanel'); if (!p) return;
+    if (!p.hidden) { closeReadPanel(true); return; }
+    readReturn = (ev && ev.currentTarget) || document.getElementById('readBtn'); applyReadPrefs(); p.hidden = false;
+    document.querySelectorAll('[aria-controls="readPanel"]').forEach(b => b.setAttribute('aria-expanded', 'true'));
+    const first = p.querySelector('input[name="rpTheme"]:checked'); if (first) first.focus();
+}
+function overlayOpen() { return document.body.classList.contains('cert-open') || document.getElementById('courseDrawer').classList.contains('open'); }
+function setProgressWidth(pct) {
+    const a = document.getElementById('progressFill'), f = document.getElementById('focusProgressFill');
+    if (a) a.style.width = pct + '%'; if (f) f.style.width = pct + '%';
+}
 const calmMotion = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 let routedOnce = false;
 // Page-turn: a short cross-fade between whole screens, using the browser's view transitions where they exist.
@@ -2125,6 +2296,7 @@ function showHome() {
         document.getElementById('progressWrap').style.display = 'none';
         document.getElementById('homeBtn').style.display = 'none';
         document.getElementById('headerLevel').textContent = 'Home';
+        closeReadPanel(); applyReadPrefs();
         setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'Home');
         if (!fromHistory) window.scrollTo(0, 0);
         focusHeading();
@@ -2160,6 +2332,7 @@ async function loadModule(moduleId) {
             </div>`;
         document.getElementById('sidebarNav').innerHTML = '';
         document.getElementById('sidebarModuleLabel').textContent = 'Loading...';
+        applyReadPrefs();
     });
 
     try {
@@ -2987,6 +3160,7 @@ async function loadExam(levelId) {
         document.getElementById('sidebarNav').innerHTML = '';
         document.getElementById('statusDot').className = 'status-dot active';
         document.getElementById('statusLabel').textContent = 'Level exam';
+        applyReadPrefs();
     });
     try {
         if (!EXAM_META[levelId]) throw new Error('The exam for this level is not available yet.');
@@ -3804,7 +3978,7 @@ function submitQuiz() {
     if (passed) {
         celebrate(card, score);
         document.getElementById('passActions').style.display = 'block';
-        document.getElementById('progressFill').style.width = '100%';
+        setProgressWidth(100);
         document.getElementById('statusDot').className = 'status-dot done';
         document.getElementById('statusLabel').textContent = 'Completed \u2713';
 
@@ -3847,7 +4021,7 @@ function resetQuiz() {
 // ═══════════════════════════════════════════════════
 function updateProgress(done, total) {
     const pct = Math.round((done / total) * 100);
-    document.getElementById('progressFill').style.width = pct + '%';
+    setProgressWidth(pct);
 }
 
 // ═══════════════════════════════════════════════════
@@ -3869,11 +4043,18 @@ window.addEventListener('popstate', () => {
 // ═══════════════════════════════════════════════════
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
+        if (closeReadPanel(true)) return;
+        const busy = overlayOpen();
         closeCertificate();
         closeCourseMenu();
         closeNamePopover();
         closePathway();
+        if (!busy && focusMode && inReading()) setFocusMode(false);
     }
+});
+document.addEventListener('click', function (e) {
+    const p = document.getElementById('readPanel');
+    if (p && !p.hidden && !p.contains(e.target) && !(e.target.closest && e.target.closest('[aria-controls="readPanel"]'))) closeReadPanel();
 });
 document.addEventListener('keydown', function (e) {
     const rb = e.target && e.target.classList && e.target.classList.contains('b-role') ? e.target : null;
@@ -3901,6 +4082,8 @@ bindPathwayDrag();
         document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') === 'y');
     } catch (e) { /* storage unavailable: keep the current look */ }
 })();
+loadReadPrefs(); applyReadPrefs();
+try { const mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', applyReadPrefs); else if (mq.addListener) mq.addListener(applyReadPrefs); } catch (e) {}
 syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
 if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));
 if (!GATE_ENABLED) {
