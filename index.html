@@ -930,12 +930,12 @@
         @media (prefers-reduced-motion: reduce) { .bd-layer { animation-duration: 1ms !important; transition: none !important; } }
 
         /* ── PRE-ONBOARDING (first visit): neutral grey + MoRo blue, separate from the DiFacto look ── */
+        body.ob-mode .header img { filter: none; }
         .ob { display: none; }
         body.ob-mode .ob { display: block; }
         body.ob-mode { background: #FBFBFD; }
         body.ob-mode .b-home, body.ob-mode #howSection, body.ob-mode #faqSection, body.ob-mode #headerLinks, body.ob-mode #learnerNameBox { display: none !important; }
         body.ob-mode .header { background: rgba(251,251,253,0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #D2D2D7; }
-        body.ob-mode .header img { filter: grayscale(1) opacity(0.7); }
         .ob { --ob-ink: #1D1D1F; --ob-mute: #6E6E73; --ob-blue: #2E6DB4; --ob-blue-d: #245A96;
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif; color: var(--ob-ink); -webkit-font-smoothing: antialiased; }
         .ob-inner { display: flex; flex-direction: column; min-height: calc(100svh - 150px); max-width: 780px; margin: 0 auto; padding: 24px 0 56px; }
@@ -967,13 +967,13 @@
         @media (prefers-reduced-motion: reduce) { .ob-go { transition: none; } }
 
         /* ── OPTION C: LANDING FROM THE VISITOR'S SIDE (quiet greys, one MoRo-blue accent) ── */
+        body.home-c .header img { filter: none; }
         .vc { display: none; }
         body.home-c .vc { display: block; }
         body.home-c .va { display: none; }
         body.home-c .lp-section, body.home-c #headerLinks, body.home-c #learnerNameBox, body.home-c .pw-tab, body.home-c .pw-overlay, body.home-c #pathPanel { display: none !important; }
         body.home-c { background: #F5F5F7; }
         body.home-c .header { background: rgba(245,245,247,0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #D2D2D7; }
-        body.home-c .header img { filter: grayscale(1) opacity(0.7); }
         body.home-c #homeView, body.home-c .header { --muted: #6E6E73; }
         .c-home { --c-ink: #1D1D1F; --c-mute: #6E6E73; --c-blue: #2E6DB4; --c-blue-d: #245A96; --c-line: #D2D2D7; max-width: 980px; margin: 0 auto;
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif; color: var(--c-ink); -webkit-font-smoothing: antialiased; }
@@ -1192,7 +1192,7 @@
             .home-title { font-size: 28px; }
             .header { padding: 12px 16px; }
             .header-left { gap: 12px; min-width: 0; }
-            .header-left img { width: 76px !important; }
+            .header-left img { width: 68px !important; }
             .name-chip-wrap { display: none; }
             .drawer-name { display: block; }
             #homeBtn { display: none !important; }
@@ -1476,8 +1476,11 @@
         .ip-progress { display: block; width: 100%; height: 8px; margin: 12px 0 0; accent-color: var(--orange-ink); }
         .ip-progress[hidden] { display: none; }
         .ip-status { margin: 10px 0 0 !important; font-size: 13px !important; color: var(--muted); }
-        .update-toast { position: fixed; left: 50%; bottom: 20px; z-index: 170; display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 18px; font-size: 14px; font-weight: 600; color: #fff; background: rgba(29, 29, 31, 0.95); border-radius: 999px; transform: translateX(-50%); }
+        .update-toast { position: fixed; right: 16px; left: auto; bottom: 16px; z-index: 170; display: flex; align-items: center; gap: 8px; max-width: min(360px, calc(100vw - 32px)); padding: 8px 8px 8px 16px; font-size: 13px; font-weight: 600; color: #fff; background: rgba(29, 29, 31, 0.95); border-radius: 14px; box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22); }
         .update-toast[hidden] { display: none; }
+        .update-toast .ut-x { min-width: 44px; min-height: 44px; padding: 0; font-size: 22px; line-height: 1; color: #fff; background: transparent; }
+        .update-toast .ut-x:focus-visible { outline-color: #fff; }
+        @media (max-width: 900px) { .update-toast { left: 12px; right: 12px; bottom: 84px; max-width: none; } .update-toast span { flex: 1; } }
         .update-toast button { min-height: 40px; padding: 0 16px; font-family: inherit; font-size: 14px; font-weight: 700; color: #1D1D1F; background: #fff; border: 0; border-radius: 999px; cursor: pointer; }
         .update-toast button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
         .offline-pill { position: fixed; left: 12px; bottom: 12px; z-index: 120; max-width: calc(100vw - 24px); padding: 8px 14px; font-size: 13px; font-weight: 600; color: #3D2E00; background: #FFE9A8; border-radius: 999px; }
@@ -1594,7 +1597,10 @@
         @media screen {
             body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) { --cream: #0F1115; --white: #171A20; --navy: #EEF0F4; --text: #D6D9DF; --muted: #A0A7B4; --divider: #2B303A; --hover: rgba(255, 165, 102, 0.09); --orange: #F29A5A; --orange-ink: #FFA566; color-scheme: dark; }
             body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .header, body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .drawer, body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .read-panel { --muted: #A0A7B4; }
-            body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .header img { filter: invert(1) hue-rotate(180deg); }
+        /* DiFacto logo: always in its own red and navy, never greyed or dimmed. Dark reading mode sets it on a light plate (the navy would vanish on dark). */
+        body.home-b.home-mode:not(.ob-mode) .header img { filter: none; }
+        body.inner-y:not(.home-mode):not(.ob-mode) .header img { filter: none; }
+        body.read-dark:not(.home-mode):not(.ob-mode) .header img { filter: none; box-sizing: content-box; padding: 4px 7px; background: #fff; border-radius: 8px; }
             body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .btn-primary { background: #B4540E; border-color: #B4540E; color: #fff; }
             body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) .btn-primary:hover { background: #9A4609; border-color: #9A4609; color: #fff; }
             body.read-dark:not(.inner-y):not(.home-mode):not(.ob-mode) #continueBtn:hover { background: #B4540E; border-color: #B4540E; color: #fff; }
@@ -1614,7 +1620,6 @@
                   --y-ink: #EEF0F4; --y-mute: #A0A7B4; --y-line: #2B303A; --y-blue: #5B9BE6; --y-blue-d: #8DBAF2; --y-tint: rgba(141, 186, 242, 0.14); background: #0F1115; color-scheme: dark; }
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .drawer, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-panel { --muted: #A0A7B4; }
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header { background: rgba(23, 26, 32, 0.88); }
-            body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header img { filter: grayscale(1) invert(1) opacity(0.85); }
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .menu-btn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #homeBtn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .home-btn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-btn { background: #1F232B; border-color: #2B303A; color: var(--y-ink); }
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) #homeBtn, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .home-btn { color: var(--y-blue-d); }
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .back-bar { background: rgba(23, 26, 32, 0.92); }
@@ -1647,7 +1652,6 @@
 body.inner-y:not(.home-mode):not(.ob-mode) { --y-ink: #1D1D1F; --y-mute: #636366; --y-line: #E5E5EA; --y-blue: #2E6DB4; --y-blue-d: #245A96; --y-tint: rgba(46, 109, 180, 0.08);
     background: #FBFBFD; color: var(--y-ink); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 body.inner-y:not(.home-mode):not(.ob-mode) .header { background: rgba(251, 251, 253, 0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--y-line); }
-body.inner-y:not(.home-mode):not(.ob-mode) .header img { filter: grayscale(1) opacity(0.7); }
 body.inner-y:not(.home-mode):not(.ob-mode) .course-name { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--y-ink); }
 body.inner-y:not(.home-mode):not(.ob-mode) .course-level, body.inner-y:not(.home-mode):not(.ob-mode) .progress-label { color: var(--y-mute); }
         body.inner-y:not(.home-mode):not(.ob-mode) .progress-label { text-transform: none; letter-spacing: 0; font-size: 12px; }
@@ -1728,7 +1732,6 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             background: #FBFBFD; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
         body.home-b.home-mode:not(.ob-mode) #homeView, body.home-b.home-mode:not(.ob-mode) .header, body.home-b.home-mode:not(.ob-mode) .drawer { --muted: #6E6E73; }
         body.home-b.home-mode:not(.ob-mode) .header { background: rgba(251,251,253,0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #D2D2D7; }
-        body.home-b.home-mode:not(.ob-mode) .header img { filter: grayscale(1) opacity(0.7); }
         body.home-b.home-mode:not(.ob-mode) .btn-primary { border-radius: 999px; font-weight: 600; }
         body.home-b.home-mode:not(.ob-mode) .btn-primary:hover { background: #245A96; border-color: #245A96; box-shadow: none; }
         body.home-b.home-mode:not(.ob-mode) #howSection, body.home-b.home-mode:not(.ob-mode) #headerLinks a[href="#howSection"] { display: none; }
@@ -1812,7 +1815,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <a class="skip-link" href="#mainContent" onclick="skipToMain(event)">Skip to main content</a>
 <header class="header">
     <a class="header-left" href="./" onclick="goHome(); return false;" aria-label="MoRo IMR Training Academy. Go to Home.">
-        <img src="./Difactoreallogo.jpg" alt="" style="width: 100px; height: auto;">
+        <img src="./difacto-logo.png" alt="" width="360" height="74" style="width: 89px; height: auto;">
         <div class="separator"></div>
         <div>
             <div class="course-name">MoRo IMR Training Academy</div>
@@ -2268,7 +2271,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
     <div class="ip-head"><h2 id="ipTitle">Use offline and install</h2><button type="button" class="ip-close" onclick="closeInstallPanel(true)" aria-label="Close">&times;</button></div>
     <div id="ipBody"></div>
 </div>
-<div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" onclick="applyUpdate()">Refresh</button></div>
+<div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" class="ut-go" onclick="applyUpdate()">Refresh</button><button type="button" class="ut-x" onclick="dismissUpdate()" aria-label="Dismiss this notice">&times;</button></div>
 <div class="offline-pill" id="offlinePill" role="status" hidden>You're offline. Saved modules still work.</div>
 <div class="slide-hint" id="slideHint" aria-hidden="true"></div>
 
@@ -2674,7 +2677,9 @@ async function saveAllOffline() {
     if (failed === 0) { readSet('moroOfflineSavedAt', new Date().toISOString()); st.textContent = 'Saved. You can now read everything without a connection.'; btn.textContent = 'Save again'; }
     else st.textContent = `${items.length - failed} of ${items.length} saved. Check your connection and try again.`;
 }
-function showUpdateToast(reg) { swReg = reg; const t = document.getElementById('updateToast'); if (t) { t.hidden = false; } }
+let updateDismissed = false;
+function showUpdateToast(reg) { swReg = reg; const t = document.getElementById('updateToast'); if (t && !updateDismissed) { t.hidden = false; } }
+function dismissUpdate() { updateDismissed = true; const t = document.getElementById('updateToast'); if (t) t.hidden = true; }
 function applyUpdate() { if (swReg && swReg.waiting) swReg.waiting.postMessage({ type: 'SKIP_WAITING' }); else location.reload(); }
 function syncOfflinePill() { const p = document.getElementById('offlinePill'); if (p) p.hidden = navigator.onLine !== false; }
 function registerServiceWorker() {
