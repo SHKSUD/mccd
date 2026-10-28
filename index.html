@@ -1069,15 +1069,16 @@
         .drawer-overlay.open { opacity: 1; visibility: visible; }
 
         .drawer {
-            position: fixed; top: 0; left: 0;
-            height: 100%; width: min(380px, 90vw);
+            position: fixed; top: 0; right: 0; left: auto;
+            height: 100%; width: min(400px, 92vw);
             background: var(--white);
+            border-left: 1px solid var(--divider);
             z-index: 1001;
             display: flex; flex-direction: column;
-            transform: translateX(-100%);
+            transform: translateX(100%);
             visibility: hidden;
             transition: transform 0.28s cubic-bezier(0.4,0,0.2,1), visibility 0.28s;
-            box-shadow: 8px 0 32px rgba(10,29,68,0.18);
+            box-shadow: -8px 0 32px rgba(10,29,68,0.18);
         }
         .drawer.open { transform: translateX(0); visibility: visible; }
 
@@ -1426,6 +1427,20 @@
         .offline-pill { position: fixed; left: 12px; bottom: 12px; z-index: 120; max-width: calc(100vw - 24px); padding: 8px 14px; font-size: 13px; font-weight: 600; color: #3D2E00; background: #FFE9A8; border-radius: 999px; }
         .offline-pill[hidden] { display: none; }
         .drawer-offline svg { margin-right: 6px; vertical-align: -2px; }
+        /* ── MODULES MENU: opens from the right, the button stays pressed, rows answer your pointer ── */
+        .header .menu-btn[aria-expanded="true"] { background: rgba(46, 109, 180, 0.12); color: #245A96; border-color: #2E6DB4; }
+        body:not(.inner-y):not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"], body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"] { background: var(--y-tint); color: var(--y-blue-d); border-color: var(--y-blue); }
+        @media (hover: hover) {
+            .drawer-item { transition: background 0.15s ease, border-color 0.15s ease; }
+            .drawer-item > span:last-child { transition: transform 0.18s ease; }
+            .drawer-item:hover, .drawer-item:focus-visible { color: var(--navy); border-left-color: var(--orange); }
+            .drawer-item:hover .drawer-item-num, .drawer-item:focus-visible .drawer-item-num { color: var(--orange-ink); }
+            .drawer-item:hover > span:last-child, .drawer-item:focus-visible > span:last-child { transform: translateX(3px); }
+            body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:hover, body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:focus-visible { border-left-color: var(--y-blue); }
+            body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:hover .drawer-item-num, body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:focus-visible .drawer-item-num { color: var(--y-blue-d); }
+        }
+        @media (prefers-reduced-motion: reduce) { .drawer-item > span:last-child { transition: none; transform: none !important; } }
         /* ── GLOSSARY ── */
         .foot-sep { margin: 0 6px; color: var(--muted); }
         .gl-search { position: sticky; top: calc(var(--header-h, 62px) + 6px); z-index: 20; margin: 10px 0 8px; padding: 6px 0 4px; background: var(--cream); }
@@ -1755,7 +1770,6 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <a href="#faqSection" onclick="jumpTo('faqSection', event)">FAQ</a>
         </nav>
         <button class="btn btn-secondary read-btn" id="readBtn" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button>
-        <button class="btn btn-secondary menu-btn" id="menuBtn" onclick="openCourseMenu()" aria-haspopup="dialog" aria-controls="courseDrawer" aria-expanded="false">&#9776; Modules</button>
         <div class="name-chip-wrap" id="learnerNameBox">
             <button class="name-chip" id="nameChip" onclick="toggleNamePopover()" aria-haspopup="dialog" aria-expanded="false" aria-controls="namePop">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
@@ -1776,6 +1790,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <button class="btn btn-secondary home-btn" id="homeBtn" onclick="goHome()" style="display:none; padding:9px 16px; font-size:13px;">
             <svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home
         </button>
+        <button class="btn btn-secondary menu-btn" id="menuBtn" onclick="openCourseMenu()" aria-haspopup="dialog" aria-controls="courseDrawer" aria-expanded="false">&#9776; Modules</button>
     </div>
 </header>
 
@@ -4041,6 +4056,7 @@ function toggleDrawerLevel(e, summary) {
 }
 
 function openCourseMenu(focusLevel) {
+    closeReadPanel(); closeInstallPanel();   // one panel at a time
     ensureGlossary().catch(() => {});   // warm the glossary so searching terms in the menu is instant
     const search = document.getElementById('drawerSearch');
     search.value = '';
