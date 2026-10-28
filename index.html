@@ -6,6 +6,12 @@
     <title>MoRo IMR Training Academy</title>
     <meta name="description" content="A structured certification pathway for Intelligent Mobile Robots: seven role-based levels and 41 modules, from working safely alongside MoRo to training others.">
     <meta name="theme-color" content="#0A1D44">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MoRo Academy">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="icon" type="image/png" href="data:image/png;base64,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">
     <meta property="og:type" content="website">
     <meta property="og:title" content="MoRo IMR Training Academy">
@@ -1347,6 +1353,7 @@
         }
 
         /* ── NAVIGATION: back bar and header link ── */
+        #nameChipText { display: inline-block; max-width: 18ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
         .home-ico { vertical-align: -3px; margin-right: 6px; flex-shrink: 0; }
         .home-btn { font-weight: 700; color: var(--navy); border: 1.5px solid var(--navy); background: var(--white); letter-spacing: 0; white-space: nowrap; flex-shrink: 0; }
         .home-btn:hover { background: var(--navy); color: var(--white); }
@@ -1365,14 +1372,112 @@
         .back-ctx { font-size: 12px; color: var(--muted); text-align: right; }
         @media (max-width: 900px) { .back-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px; background: var(--white); border-bottom: 1px solid var(--divider); position: sticky; top: var(--header-h, 62px); z-index: 90; } }
 
+        /* ── TEXT SIZE, SLIDES ── */
+        @supports (zoom: 1) { body.text-sized:not(.home-mode):not(.ob-mode) #mainContent { zoom: var(--ts, 1); } }
+        body.text-sized:not(.home-mode):not(.ob-mode) #mainContent .btn-row { flex-wrap: wrap; }
+        body.text-sized:not(.home-mode):not(.ob-mode) #mainContent .btn-row .btn { min-width: 0; flex: 1 1 140px; }
+        .rp-label { margin-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; color: var(--muted); }
+        .rp-size { margin: 4px 0 6px; }
+        .rp-size-row { display: flex; align-items: center; gap: 8px; }
+        .rp-step { min-width: 44px; min-height: 44px; padding: 0; font-family: inherit; font-weight: 700; font-size: 14px; color: var(--navy); background: var(--white); border: 1.5px solid var(--divider); border-radius: 8px; cursor: pointer; }
+        .rp-step-big { font-size: 22px; }
+        .rp-step:hover:not(:disabled) { border-color: var(--navy); }
+        .rp-step:disabled { opacity: 0.4; cursor: default; }
+        .rp-step:focus-visible, .rp-reset:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .rp-size-val { flex: 1; text-align: center; font-size: 14px; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
+        .rp-reset { min-height: 44px; padding: 0 12px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--orange-ink); background: none; border: none; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+        .rp-hint { margin: 8px 0 0; font-size: 12px; line-height: 1.4; color: var(--muted); }
+        .rp-touch { display: none; }
+        @media (any-pointer: coarse) { .rp-touch { display: block; } }
+        .slide-ribbon { display: none; gap: 6px; padding: 0 0 14px; }
+        body.slides-on:not(.home-mode):not(.ob-mode) .slide-ribbon:not([hidden]) { display: flex; }
+        .rib-seg { flex: 1; min-height: 28px; padding: 12px 0; background: none; border: 0; cursor: pointer; }
+        .rib-seg i { display: block; height: 4px; border-radius: 2px; background: var(--divider); transition: background 0.2s ease; }
+        .rib-seg.visited i { background: var(--orange); opacity: 0.55; }
+        .rib-seg[aria-current] i { background: var(--orange); opacity: 1; }
+        .rib-seg:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 1px; border-radius: 4px; }
+        body.slides-on:not(.home-mode):not(.ob-mode) #mainContent { touch-action: pan-y pinch-zoom; }
+        body.slides-on:not(.home-mode):not(.ob-mode) .table-wrap { touch-action: pan-x pan-y pinch-zoom; }
+        .slide-hint { position: fixed; left: 50%; bottom: 84px; z-index: 150; max-width: calc(100vw - 32px); padding: 10px 18px; font-size: 14px; font-weight: 600; color: #fff; background: rgba(29, 29, 31, 0.92); border-radius: 999px; opacity: 0; transform: translate(-50%, 8px); pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; }
+        .slide-hint.show { opacity: 1; transform: translate(-50%, 0); }
+        @media (prefers-reduced-motion: reduce) { .slide-hint, .rib-seg i { transition: none; } }
+        /* ── USE OFFLINE AND INSTALL ── */
+        .install-panel { position: fixed; left: 50%; top: 50%; z-index: 160; width: min(440px, calc(100vw - 24px)); max-height: calc(100vh - 32px); overflow-y: auto; padding: 22px; transform: translate(-50%, -50%); background: var(--white); color: var(--text); border: 1px solid var(--divider); border-radius: 14px; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3); }
+        .install-panel[hidden] { display: none; }
+        .ip-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+        .ip-head h2 { margin: 0; font-size: 20px; font-weight: 700; color: var(--navy); }
+        .ip-close { min-width: 44px; min-height: 44px; font-size: 26px; line-height: 1; color: var(--muted); background: none; border: 0; border-radius: 8px; cursor: pointer; }
+        .ip-close:hover { color: var(--navy); }
+        .ip-close:focus-visible, .ip-btn:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .ip-section { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--divider); }
+        .ip-section:first-of-type { border-top: 0; margin-top: 8px; padding-top: 0; }
+        .ip-section h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--navy); }
+        .ip-section p { margin: 0 0 12px; font-size: 14px; line-height: 1.5; }
+        .ip-steps { margin: 0 0 4px; padding-left: 20px; font-size: 14px; line-height: 1.7; }
+        .ip-share-wrap { display: inline-flex; vertical-align: -4px; padding: 2px 6px; border: 1px solid var(--divider); border-radius: 6px; color: var(--orange-ink); }
+        .ip-btn { min-height: 44px; }
+        .ip-progress { display: block; width: 100%; height: 8px; margin: 12px 0 0; accent-color: var(--orange-ink); }
+        .ip-progress[hidden] { display: none; }
+        .ip-status { margin: 10px 0 0 !important; font-size: 13px !important; color: var(--muted); }
+        .update-toast { position: fixed; left: 50%; bottom: 20px; z-index: 170; display: flex; align-items: center; gap: 14px; padding: 10px 10px 10px 18px; font-size: 14px; font-weight: 600; color: #fff; background: rgba(29, 29, 31, 0.95); border-radius: 999px; transform: translateX(-50%); }
+        .update-toast[hidden] { display: none; }
+        .update-toast button { min-height: 40px; padding: 0 16px; font-family: inherit; font-size: 14px; font-weight: 700; color: #1D1D1F; background: #fff; border: 0; border-radius: 999px; cursor: pointer; }
+        .update-toast button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+        .offline-pill { position: fixed; left: 12px; bottom: 12px; z-index: 120; max-width: calc(100vw - 24px); padding: 8px 14px; font-size: 13px; font-weight: 600; color: #3D2E00; background: #FFE9A8; border-radius: 999px; }
+        .offline-pill[hidden] { display: none; }
+        .drawer-offline svg { margin-right: 6px; vertical-align: -2px; }
+        /* ── GLOSSARY ── */
+        .foot-sep { margin: 0 6px; color: var(--muted); }
+        .gl-search { position: sticky; top: calc(var(--header-h, 62px) + 6px); z-index: 20; margin: 10px 0 8px; padding: 6px 0 4px; background: var(--cream); }
+        .gl-search input { width: 100%; min-height: 48px; padding: 12px 16px; font-family: inherit; font-size: 16px; color: var(--text); background: var(--white); border: 1px solid var(--divider); border-radius: 10px; }
+        .gl-search input:focus { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .gl-count { margin: 6px 4px 0; font-size: 13px; color: var(--muted); }
+        .gl-group { margin-top: 26px; scroll-margin-top: calc(var(--header-h, 62px) + 80px); }
+        .gl-letter { margin: 0 0 4px; padding-bottom: 6px; font-size: 22px; font-weight: 700; color: var(--navy); border-bottom: 1px solid var(--divider); }
+        .gl-group dl { margin: 0; }
+        .gl-item { padding: 14px 0; border-bottom: 1px solid var(--divider); border-radius: 6px; }
+        .gl-item dt { font-weight: 700; color: var(--navy); }
+        .gl-item dd { margin: 4px 0 0; line-height: 1.55; color: var(--text); }
+        .gl-used { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+        .gl-chip { min-height: 32px; padding: 6px 12px; font-family: inherit; font-size: 12.5px; font-weight: 600; text-align: left; color: var(--orange-ink); background: var(--white); border: 1px solid var(--divider); border-radius: 999px; cursor: pointer; }
+        .gl-chip:hover { border-color: var(--orange-ink); }
+        .gl-chip:focus-visible, .gl-more summary:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        .gl-more { margin-top: 8px; font-size: 13px; }
+        .gl-more summary { min-height: 32px; padding: 6px 0; cursor: pointer; color: var(--orange-ink); font-weight: 600; }
+        .gl-more p { margin: 6px 0 0; color: var(--text); line-height: 1.5; }
+        .gl-empty { padding: 28px 0; text-align: center; color: var(--muted); }
+        .gl-target { padding-left: 12px; padding-right: 12px; background: rgba(212, 101, 26, 0.1); animation: glFlash 2.6s ease-out forwards; }
+        @keyframes glFlash { 0%, 45% { background: rgba(212, 101, 26, 0.16); } 100% { background: transparent; } }
+        .drawer-terms { padding: 6px 16px 10px; border-bottom: 1px solid var(--divider); }
+        .drawer-terms-title { margin: 6px 0; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--muted); }
+        .drawer-term { display: block; width: 100%; min-height: 44px; padding: 8px 4px; font-family: inherit; text-align: left; background: none; border: 0; border-radius: 6px; cursor: pointer; color: var(--text); }
+        .drawer-term:hover { background: var(--hover); }
+        .drawer-term strong { display: block; font-size: 14px; color: var(--navy); }
+        .drawer-term span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+        .drawer-term:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: -2px; }
+        @media (pointer: coarse) { .gl-chip, .gl-more summary { min-height: 44px; display: inline-flex; align-items: center; } }
+        @media (prefers-reduced-motion: reduce) { .gl-target { animation: none; } }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-letter { font-size: 24px; letter-spacing: -0.02em; color: var(--y-ink); border-bottom-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-item { border-bottom-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-item dt { font-size: 17px; color: var(--y-ink); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-item dd, body.inner-y:not(.home-mode):not(.ob-mode) .gl-more p { color: var(--y-ink); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-chip, body.inner-y:not(.home-mode):not(.ob-mode) .gl-more summary { color: var(--y-blue-d); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-chip { background: var(--white); border-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-chip:hover { border-color: var(--y-blue); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-search { background: transparent; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-search input { border-radius: 14px; border-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-search input:focus { outline-color: var(--y-blue); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .gl-target { background: var(--y-tint); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .drawer-term strong { color: var(--y-ink); }
         /* ── READING OPTIONS: hide the module list, focus mode, dark reading ── */
         .read-btn { display: none; align-items: center; justify-content: center; min-width: 44px; padding: 8px 12px; font-size: 14px; font-weight: 700; letter-spacing: 0; line-height: 1; white-space: nowrap; }
         @media (min-width: 901px) { body:not(.home-mode):not(.ob-mode) #readBtn { display: inline-flex; } }
         @media (min-width: 901px) and (max-width: 1060px) { body:not(.home-mode):not(.ob-mode) .progress-label { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; } body:not(.home-mode):not(.ob-mode) .course-name { white-space: nowrap; } }
-        @media (min-width: 901px) and (max-width: 1000px) { body:not(.home-mode):not(.ob-mode) .header { padding-left: 18px; padding-right: 18px; } body:not(.home-mode):not(.ob-mode) .header-right { gap: 10px !important; } body:not(.home-mode):not(.ob-mode) .header-left { gap: 12px; } }
+        @media (min-width: 901px) and (max-width: 1000px) { body:not(.home-mode):not(.ob-mode) .header { padding-left: 18px; padding-right: 18px; } body:not(.home-mode):not(.ob-mode) .header-right { gap: 10px !important; } body:not(.home-mode):not(.ob-mode) .header-left { gap: 12px; } body:not(.home-mode):not(.ob-mode) .progress-bar { width: 96px; } body:not(.home-mode):not(.ob-mode) #nameChipText { max-width: 12ch; } }
         #readBtnBar { display: inline-flex; margin-left: 10px; min-height: 36px; padding: 6px 12px; }
         .back-right { display: inline-flex; align-items: center; margin-left: auto; }
         .read-panel { position: fixed; top: calc(var(--header-h, 62px) + 8px); right: 16px; z-index: 130; width: min(320px, calc(100vw - 24px)); padding: 18px; background: var(--white); border: 1px solid var(--divider); border-radius: 8px; box-shadow: 0 14px 44px rgba(10, 29, 68, 0.2); }
+        .read-panel { max-height: calc(100vh - var(--header-h, 62px) - 24px); max-height: calc(100dvh - var(--header-h, 62px) - 24px); overflow-y: auto; overscroll-behavior: contain; }
         .read-panel[hidden] { display: none; }
         .rp-theme { border: 0; margin: 0 0 8px; padding: 0; }
         .rp-theme legend { margin-bottom: 8px; padding: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.4px; color: var(--muted); }
@@ -1467,7 +1572,7 @@
             body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .read-panel { box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55); }
         }
 
-        /* ── OPTION Y: inside pages in the MoRo look (opt-in with ?inner=y, back to the current look with ?inner=0) ── */
+        /* ── OPTION Y: inside pages in the MoRo look (the default; ?inner=0 brings back the earlier look) ── */
 body.inner-y:not(.home-mode):not(.ob-mode) { --y-ink: #1D1D1F; --y-mute: #636366; --y-line: #E5E5EA; --y-blue: #2E6DB4; --y-blue-d: #245A96; --y-tint: rgba(46, 109, 180, 0.08);
     background: #FBFBFD; color: var(--y-ink); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 body.inner-y:not(.home-mode):not(.ob-mode) .header { background: rgba(251, 251, 253, 0.88); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--y-line); }
@@ -1933,7 +2038,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </div>
     </section>
 
-    <p class="foot-welcome"><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button></p>
+    <p class="foot-welcome"><button class="foot-link" id="footGlossary" onclick="loadGlossary()">Glossary</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footOffline" onclick="openInstallPanel(event)">Use offline</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button></p>
     <footer class="section-footer" style="margin-top:48px;">
         <p>&copy; 2026 DiFacto Robotics &amp; Automation &middot; <a href="https://www.difacto.com" target="_blank" rel="noopener">www.difacto.com</a></p>
     </footer>
@@ -1963,7 +2068,8 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </aside>
 
         <!-- MAIN -->
-        <main class="main" id="mainContent">
+        <nav class="slide-ribbon" id="slideRibbon" aria-label="Section progress" hidden></nav>
+            <main class="main" id="mainContent">
             <div class="loading-wrap">
                 <div class="loading-dot"></div>
                 <div class="loading-dot"></div>
@@ -2039,11 +2145,13 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
     </div>
     <div class="drawer-tools">
         <button class="drawer-home" onclick="menuGoHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
+        <button class="drawer-home drawer-glossary" id="drawerGlossary" onclick="menuGoGlossary()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
-        <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules..." oninput="renderCourseMenu(this.value)" autocomplete="off">
+        <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules and terms..." oninput="renderCourseMenu(this.value)" autocomplete="off">
     </div>
     <div class="drawer-body" id="drawerBody"></div>
     <div class="drawer-footer" id="drawerFooter">
+        <button class="drawer-lock drawer-offline" id="drawerOffline" onclick="menuOffline(event)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>Use offline</button>
         <button class="drawer-lock drawer-welcome" id="drawerWelcome" onclick="menuWelcome()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>Welcome screen</button>
         <button class="drawer-lock" id="drawerLockBtn" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
     </div>
@@ -2059,6 +2167,23 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <label><input type="radio" name="rpTheme" value="auto" onchange="setTheme(this.value)"><span>Auto</span></label>
         </div>
     </fieldset>
+    <fieldset class="rp-theme rp-touch">
+        <legend>Reading style</legend>
+        <div class="rp-seg">
+            <label><input type="radio" name="rpStyle" value="scroll" onchange="setSlides(false)" checked><span>Scroll</span></label>
+            <label><input type="radio" name="rpStyle" value="slides" onchange="setSlides(true)"><span>Slides</span></label>
+        </div>
+        <p class="rp-hint">Slides: swipe left and right to move between sections.</p>
+    </fieldset>
+    <div class="rp-size" role="group" aria-labelledby="rpSizeLabel">
+        <div class="rp-label" id="rpSizeLabel">Text size</div>
+        <div class="rp-size-row">
+            <button type="button" class="rp-step" id="rpSmaller" onclick="stepTextSize(-1)" aria-label="Smaller text">A</button>
+            <output class="rp-size-val" id="rpSizeVal">100%</output>
+            <button type="button" class="rp-step rp-step-big" id="rpLarger" onclick="stepTextSize(1)" aria-label="Larger text">A</button>
+            <button type="button" class="rp-reset" id="rpSizeReset" onclick="setTextSize(0)">Reset</button>
+        </div>
+    </div>
     <label class="rp-switch rp-desk"><input type="checkbox" id="rpSidebar" onchange="setSidebarCollapsed(this.checked)"><span>Hide the module list</span></label>
     <label class="rp-switch"><input type="checkbox" id="rpFocus" onchange="setFocusMode(this.checked)"><span>Focus mode<small>Hides the top bar and the module list. Press Escape to bring them back.</small></span></label>
 </div>
@@ -2068,6 +2193,13 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 </div>
 <div class="focus-progress" id="focusProgress" aria-hidden="true"><span id="focusProgressFill"></span></div>
 <div class="sr-only" id="readStatus" role="status" aria-live="polite"></div>
+<div class="install-panel" id="installPanel" role="dialog" aria-modal="false" aria-labelledby="ipTitle" hidden>
+    <div class="ip-head"><h2 id="ipTitle">Use offline and install</h2><button type="button" class="ip-close" onclick="closeInstallPanel(true)" aria-label="Close">&times;</button></div>
+    <div id="ipBody"></div>
+</div>
+<div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" onclick="applyUpdate()">Refresh</button></div>
+<div class="offline-pill" id="offlinePill" role="status" hidden>You're offline. Saved modules still work.</div>
+<div class="slide-hint" id="slideHint" aria-hidden="true"></div>
 
 <script>
 // ═══════════════════════════════════════════════════
@@ -2161,7 +2293,8 @@ function init() {
     const mid = params.get('module'), eid = params.get('exam');
     navFromHistory = true;
     try {
-        if (eid) loadExam(eid);
+        if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
+        else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
     } finally { navFromHistory = false; }
@@ -2195,12 +2328,14 @@ function readGet(k) { try { return localStorage.getItem(k); } catch (e) { return
 function readSet(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
 function inReading() { return document.getElementById('moduleView').style.display === 'block'; }
 function darkNow() { return readTheme === 'dark' || (readTheme === 'auto' && !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
-function loadReadPrefs() { const t = readGet('moroTheme'); readTheme = ['light', 'dark', 'auto'].includes(t) ? t : 'light'; sideCollapsed = readGet('moroSidebar') === '1'; focusMode = readGet('moroFocus') === '1'; }
+function loadReadPrefs() { const t = readGet('moroTheme'); readTheme = ['light', 'dark', 'auto'].includes(t) ? t : 'light'; sideCollapsed = readGet('moroSidebar') === '1'; focusMode = readGet('moroFocus') === '1'; slidesOn = readGet('moroSlides') === '1'; loadTextSize(); }
 function applyReadPrefs() {
     const b = document.body, dark = darkNow();
-    b.classList.toggle('read-dark', dark); b.classList.toggle('sidebar-collapsed', sideCollapsed); b.classList.toggle('focus-mode', focusMode);
+    b.classList.toggle('read-dark', dark); b.classList.toggle('sidebar-collapsed', sideCollapsed); b.classList.toggle('focus-mode', focusMode); b.classList.toggle('slides-on', slidesOn); applyTextSize();
     const m = document.querySelector('meta[name="theme-color"]'); if (m) { if (!m.dataset.base) m.dataset.base = m.getAttribute('content'); m.setAttribute('content', dark && inReading() ? '#12151A' : m.dataset.base); }
     document.querySelectorAll('input[name="rpTheme"]').forEach(r => { r.checked = r.value === readTheme; });
+    document.querySelectorAll('input[name="rpStyle"]').forEach(r => { r.checked = (r.value === 'slides') === slidesOn; });
+    updateRibbon();
     const sb = document.getElementById('rpSidebar'), fm = document.getElementById('rpFocus'); if (sb) sb.checked = sideCollapsed; if (fm) fm.checked = focusMode;
 }
 function readSay(t) { const s = document.getElementById('readStatus'); if (s) { s.textContent = ''; setTimeout(() => { s.textContent = t; }, 30); } }
@@ -2236,11 +2371,256 @@ function setProgressWidth(pct) {
     const a = document.getElementById('progressFill'), f = document.getElementById('focusProgressFill');
     if (a) a.style.width = pct + '%'; if (f) f.style.width = pct + '%';
 }
+// ── Text size (reading pane only) ──
+const TEXT_STEPS = [1, 1.12, 1.25, 1.4];
+let textStep = 0;
+function loadTextSize() { const v = parseInt(readGet('moroTextSize'), 10); textStep = v >= 0 && v < TEXT_STEPS.length ? v : 0; }
+function applyTextSize() {
+    const z = TEXT_STEPS[textStep];
+    document.documentElement.style.setProperty('--ts', String(z));
+    document.body.classList.toggle('text-sized', textStep > 0);
+    const val = document.getElementById('rpSizeVal'), sm = document.getElementById('rpSmaller'), lg = document.getElementById('rpLarger');
+    if (val) val.textContent = Math.round(z * 100) + '%';
+    if (sm) sm.disabled = textStep === 0; if (lg) lg.disabled = textStep === TEXT_STEPS.length - 1;
+}
+function setTextSize(step) {
+    textStep = Math.max(0, Math.min(TEXT_STEPS.length - 1, step)); readSet('moroTextSize', textStep ? String(textStep) : null); applyTextSize();
+    readSay('Text size ' + Math.round(TEXT_STEPS[textStep] * 100) + ' percent.');
+}
+function stepTextSize(d) {
+    setTextSize(textStep + d);
+    const a = document.activeElement; if (a && a.disabled) { const other = document.getElementById(d > 0 ? 'rpSmaller' : 'rpLarger'); if (other && !other.disabled) other.focus(); }
+}
+// ── Slides: swipe left and right between sections, the knowledge check and the next module ──
+let slidesOn = false, slideBusy = false, skipVT = false;
+const MID = /^L\d[AB]?-M\d+$/;
+function slidesActive() { return slidesOn && inReading() && !!currentModule; }
+function setSlides(on) {
+    slidesOn = !!on; readSet('moroSlides', on ? '1' : null); applyReadPrefs();
+    readSay(on ? 'Slides on. Swipe left and right to move between sections.' : 'Slides off. Scrolling as usual.');
+}
+function updateRibbon() {
+    const r = document.getElementById('slideRibbon'); if (!r) return;
+    if (!currentModule) { r.hidden = true; r.innerHTML = ''; return; }
+    const n = currentModule.sections.length, idx = currentSectionIndex === 'quiz' ? n : currentSectionIndex, visited = (getModuleProgress(currentModule.moduleId).visited || []);
+    let h = '';
+    for (let i = 0; i <= n; i++) {
+        const label = i < n ? `Section ${i + 1} of ${n + 1}: ${currentModule.sections[i].title}` : `Knowledge check, ${n + 1} of ${n + 1}`;
+        h += `<button type="button" class="rib-seg${visited.includes(i) || i < idx ? ' visited' : ''}"${i === idx ? ' aria-current="step"' : ''} aria-label="${escapeHtml(label)}" onclick="goSection(${i < n ? i : "'quiz'"})"><i></i></button>`;
+    }
+    r.innerHTML = h; r.hidden = false;
+}
+function slidePlan(dir) {
+    const m = currentModule, n = m.sections.length, cur = currentSectionIndex;
+    if (dir > 0) {
+        if (cur !== 'quiz') return { nav: () => goSection(cur < n - 1 ? cur + 1 : 'quiz') };
+        if (!getCompletedModules().includes(m.moduleId)) return { hint: 'Pass the knowledge check to continue.' };
+        const exam = document.getElementById('examBtn');
+        if (exam && exam.style.display !== 'none') return { nav: () => exam.click() };
+        if (m.nextModule && MID.test(m.nextModule)) return { nav: () => loadModule(m.nextModule) };
+        return { hint: 'That was the last module.' };
+    }
+    if (cur === 'quiz') return { nav: () => goSection(n - 1) };
+    if (cur > 0) return { nav: () => goSection(cur - 1) };
+    if (m.previousModule && MID.test(m.previousModule)) return { nav: () => loadModule(m.previousModule) };
+    return { hint: 'This is the first section.' };
+}
+function slideHint(text) {
+    const h = document.getElementById('slideHint'); if (!h) return;
+    h.textContent = text; h.classList.add('show'); readSay(text); clearTimeout(slideHint.t); slideHint.t = setTimeout(() => h.classList.remove('show'), 2400);
+}
+async function slideRun(dir, plan) {
+    const el = document.getElementById('mainContent'); if (!el || slideBusy) return false; slideBusy = true;
+    const W = el.offsetWidth || 600, calm = calmMotion(), anim = (kf, o) => (el.animate ? el.animate(kf, o).finished : Promise.resolve());
+    try {
+        if (!plan.nav) { if (!calm) await anim([{ transform: el.style.transform || 'none' }, { transform: `translateX(${-dir * 26}px)` }, { transform: 'none' }], { duration: 320, easing: 'ease-out' }); slideHint(plan.hint); return false; }
+        if (!calm) await anim([{ transform: el.style.transform || 'none', opacity: el.style.opacity || 1 }, { transform: `translateX(${-dir * W * 0.5}px)`, opacity: 0 }], { duration: 150, easing: 'ease-in', fill: 'forwards' });
+        skipVT = true; await plan.nav();
+        el.getAnimations && el.getAnimations().forEach(a => a.cancel()); el.style.transform = ''; el.style.opacity = '';
+        if (!calm) await anim([{ transform: `translateX(${dir * W * 0.3}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 240, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' });
+        if (currentModule) readSay(currentSectionIndex === 'quiz' ? 'Knowledge check.' : `Section ${currentSectionIndex + 1} of ${currentModule.sections.length}.`);
+        return true;
+    } finally { skipVT = false; el.style.transform = ''; el.style.opacity = ''; el.style.transition = ''; slideBusy = false; }
+}
+function slideStep(dir) { if (!slidesActive() || slideBusy) return false; return slideRun(dir, slidePlan(dir)); }
+function initSlides() {
+    const el = document.getElementById('mainContent'); if (!el || el.dataset.slides) return; el.dataset.slides = '1';
+    let st = null;
+    el.addEventListener('pointerdown', e => {
+        if (!slidesActive() || slideBusy || (e.pointerType !== 'touch' && e.pointerType !== 'pen')) return;
+        if (e.clientX < 28) return;   // the iPad's own swipe-back from the screen edge keeps working
+        if (e.target.closest && e.target.closest('input, textarea, select, button, a, label, summary, .table-wrap, .video-embed')) return;
+        st = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId, lock: null, dx: 0, fwd: slidePlan(1), back: slidePlan(-1) };
+    });
+    el.addEventListener('pointermove', e => {
+        if (!st || e.pointerId !== st.id) return;
+        const dx = e.clientX - st.x, dy = e.clientY - st.y;
+        if (st.lock === null) { if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return; st.lock = Math.abs(dx) > Math.abs(dy) * 1.3 ? 'x' : 'y'; if (st.lock === 'x') { try { el.setPointerCapture(e.pointerId); } catch (_) {} } }
+        if (st.lock !== 'x') return;
+        st.dx = dx; const free = dx < 0 ? !!st.fwd.nav : !!st.back.nav, k = free ? 0.85 : 0.22;
+        el.style.transition = 'none'; el.style.transform = `translateX(${dx * k}px)`; el.style.opacity = String(1 - Math.min(0.3, Math.abs(dx) / (el.offsetWidth || 600)));
+    });
+    const finish = (e, cancelled) => {
+        if (!st || e.pointerId !== st.id) return; const s = st; st = null; if (s.lock !== 'x') return;
+        try { el.releasePointerCapture(e.pointerId); } catch (_) {}
+        const W = el.offsetWidth || 600, v = s.dx / Math.max(1, performance.now() - s.t);
+        const commit = !cancelled && (Math.abs(s.dx) > W * 0.28 || (Math.abs(v) > 0.45 && Math.abs(s.dx) > 40));
+        el.style.transition = '';
+        if (!commit) { if (el.animate && !calmMotion()) el.animate([{ transform: el.style.transform, opacity: el.style.opacity || 1 }, { transform: 'none', opacity: 1 }], { duration: 220, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' }); el.style.transform = ''; el.style.opacity = ''; return; }
+        const dir = s.dx < 0 ? 1 : -1; slideRun(dir, dir > 0 ? s.fwd : s.back);
+    };
+    el.addEventListener('pointerup', e => finish(e, false)); el.addEventListener('pointercancel', e => finish(e, true));
+    document.addEventListener('keydown', e => {
+        if (!slidesActive() || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft')) return;
+        if (/INPUT|TEXTAREA|SELECT/.test((document.activeElement || {}).tagName || '')) return;
+        e.preventDefault(); slideStep(e.key === 'ArrowRight' ? 1 : -1);
+    });
+}
+// ── Glossary: every key term in plain language, searchable, linked to the modules that use it ──
+let glossaryData = null, glossaryLoading = null;
+function ensureGlossary() {
+    if (glossaryData) return Promise.resolve(glossaryData);
+    if (!glossaryLoading) glossaryLoading = fetch('./glossary.json').then(r => { if (!r.ok) throw new Error('glossary'); return r.json(); }).then(d => { glossaryData = d; return d; }).catch(e => { glossaryLoading = null; throw e; });
+    return glossaryLoading;
+}
+function moduleTitleOf(id) { const m = /^(L\d[AB]?)-M(\d+)$/.exec(id); const t = m && (MODULE_TITLES[m[1]] || [])[+m[2] - 1]; return t || id; }
+async function loadGlossary(focusKey) {
+    if (!okToLeaveExam()) return;
+    closePathway(true);
+    pushRoute(focusKey ? `?glossary=${encodeURIComponent(focusKey)}` : '?glossary=1');
+    setPageTitle('Glossary');
+    await swapView(() => {
+        document.body.classList.remove('home-mode', 'ob-mode');
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('moduleView').style.display = 'block';
+        document.getElementById('progressWrap').style.display = 'none';
+        document.getElementById('homeBtn').style.display = 'block';
+        currentModule = null; examRun = null; currentExam = null; updateRibbon();
+        document.getElementById('headerLevel').textContent = 'Glossary';
+        document.getElementById('sidebarModuleLabel').textContent = 'Glossary';
+        document.getElementById('sidebarNav').innerHTML = '';
+        document.getElementById('statusDot').className = 'status-dot active';
+        document.getElementById('statusLabel').textContent = 'Reference';
+        const ctx = document.getElementById('backCtx'); if (ctx) ctx.textContent = 'Glossary';
+        document.getElementById('mainContent').innerHTML = '<div class="loading-wrap"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div><span>Loading glossary...</span></div>';
+        applyReadPrefs();
+    });
+    try { renderGlossary(await ensureGlossary(), focusKey); }
+    catch (e) { showLoadError('the glossary', () => loadGlossary(focusKey)); }
+}
+function renderGlossary(g, focusKey) {
+    const groups = {}; g.terms.forEach(t => { const L = /[a-z]/i.test(t.term[0]) ? t.term[0].toUpperCase() : '#'; (groups[L] = groups[L] || []).push(t); });
+    const letters = Object.keys(groups).sort();
+    document.getElementById('sidebarNav').innerHTML = letters.map(L => `<div class="nav-item" id="gl-nav-${L === '#' ? 'num' : L}" onclick="glossJump('${L}')"><div class="nav-num">${L}</div><div class="nav-text">${groups[L].length} term${groups[L].length === 1 ? '' : 's'}</div></div>`).join('');
+    const item = t => {
+        const used = t.modules.map(m => `<button type="button" class="gl-chip" onclick="loadModule('${m}')">${escapeHtml(m.replace('-M', ' \u00B7 M'))} ${escapeHtml(moduleTitleOf(m))}</button>`).join('');
+        const more = t.others.length ? `<details class="gl-more"><summary>How other modules describe it (${t.others.length})</summary>${t.others.map(o => `<p><strong>${escapeHtml(o.module)}</strong> ${escapeHtml(o.note)}</p>`).join('')}</details>` : '';
+        return `<div class="gl-item" id="g-${t.key}" data-s="${escapeHtml((t.term + ' ' + t.note).toLowerCase())}"><dt>${escapeHtml(t.term)}</dt><dd>${escapeHtml(t.note)}<div class="gl-used"><span>Used in</span>${used}</div>${more}</dd></div>`;
+    };
+    const list = letters.map(L => `<section class="gl-group" id="gl-${L === '#' ? 'num' : L}" aria-labelledby="gl-h-${L === '#' ? 'num' : L}"><h2 class="gl-letter" id="gl-h-${L === '#' ? 'num' : L}">${L}</h2><dl>${groups[L].map(item).join('')}</dl></section>`).join('');
+    document.getElementById('mainContent').innerHTML = `<div class="view active">
+        <div class="section-eyebrow">Reference</div>
+        <div class="section-title" role="heading" aria-level="1">Glossary</div>
+        <p class="body-text">Every key term in the course, in plain language. Open a module from "Used in" to see the term in context.</p>
+        <div class="gl-search" role="search"><label for="glQ" class="sr-only">Search the glossary</label><input type="search" id="glQ" placeholder="Search terms, for example E-stop" oninput="filterGlossary(this.value)" autocomplete="off"><div class="gl-count" id="glCount" role="status" aria-live="polite">${g.terms.length} terms</div></div>
+        <div id="glList">${list}<div class="gl-empty" id="glEmpty" hidden>No term matches your search.</div></div></div>`;
+    focusHeading();
+    if (focusKey && focusKey !== '1') { const el = document.getElementById('g-' + focusKey); if (el) { el.classList.add('gl-target'); setTimeout(() => el.scrollIntoView({ block: 'center' }), 60); } }
+}
+function filterGlossary(q) {
+    q = (q || '').trim().toLowerCase(); let shown = 0;
+    document.querySelectorAll('#glList .gl-item').forEach(el => { const hit = !q || el.dataset.s.includes(q); el.hidden = !hit; if (hit) shown++; });
+    document.querySelectorAll('#glList .gl-group').forEach(g => { g.hidden = !g.querySelector('.gl-item:not([hidden])'); });
+    const total = glossaryData ? glossaryData.terms.length : shown, cnt = document.getElementById('glCount'), em = document.getElementById('glEmpty');
+    if (cnt) cnt.textContent = q ? (shown ? `${shown} of ${total} terms` : 'No terms match') : `${total} terms`;
+    if (em) em.hidden = shown > 0;
+}
+function glossJump(L) { const el = document.getElementById('gl-' + (L === '#' ? 'num' : L)); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
+function menuGoGlossary(key) { closeCourseMenu(); loadGlossary(key); }
+function showLoadError(what, retry) {
+    const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
+    window.__retryLoad = retry;
+    document.getElementById('mainContent').innerHTML = `
+        <div class="section-eyebrow">${offline ? 'Offline' : 'Problem'}</div>
+        <div class="section-title" role="heading" aria-level="1">${offline ? "You're offline" : `We could not load ${what}`}</div>
+        <p class="body-text">${offline ? `${what.charAt(0).toUpperCase() + what.slice(1)} is not saved on this device yet. Connect once and it will be kept for next time, or save everything for offline use from Home.` : 'Please check your connection and try again.'}</p>
+        <div class="btn-row"><button class="btn btn-primary" onclick="window.__retryLoad && window.__retryLoad()">Try again</button><button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button></div>`;
+    focusHeading();
+}
+// ── Use offline: saved copy on this device, install to the home screen, and quiet update prompts ──
+let installEvt = null, swReg = null, installReturn = null;
+function isStandalone() { return !!((window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true); }
+function isAppleTouch() { return /iPad|iPhone|iPod/.test(navigator.userAgent || '') || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); }
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; });
+window.addEventListener('appinstalled', () => { installEvt = null; const p = document.getElementById('installPanel'); if (p && !p.hidden) renderInstallPanel(); });
+function offlineItems() {
+    const items = ['modules-index.json', 'glossary.json'];
+    Object.keys(MODULE_TITLES).forEach(l => (MODULE_TITLES[l] || []).forEach((t, i) => { if (t !== null) items.push(`modules/${l}-M${i + 1}.json`); }));
+    Object.keys(EXAM_META).forEach(l => items.push(`exams/${l}.json`));
+    return items;
+}
+function savedWhen() { const t = readGet('moroOfflineSavedAt'); if (!t) return ''; const d = new Date(t); return isNaN(d) ? '' : d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }); }
+function renderInstallPanel() {
+    const body = document.getElementById('ipBody'); if (!body) return;
+    const when = savedWhen(), items = offlineItems();
+    let install;
+    if (isStandalone()) install = '<p>You are using the installed app. It opens straight from your home screen.</p>';
+    else if (installEvt) install = '<p>Add MoRo Academy to this device so it opens like an app.</p><button type="button" class="btn btn-secondary ip-btn" id="ipInstall" onclick="doInstall()">Install the app</button>';
+    else if (isAppleTouch()) install = '<p>Add MoRo Academy to your Home Screen so it opens like an app:</p><ol class="ip-steps"><li>Tap the Share button <span class="ip-share-wrap">' + `<svg class="ip-share" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 15V3"/><path d="M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>` + '</span> in Safari.</li><li>Choose <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>.</li></ol>';
+    else install = '<p>Open your browser\u2019s menu and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p>';
+    body.innerHTML = `<section class="ip-section"><h3>Read without a connection</h3>
+        <p>Save every module, both exams and the glossary on this device (${items.length} files, under 1 MB). Modules you open are also kept automatically.</p>
+        <button type="button" class="btn btn-primary ip-btn" id="ipSave" onclick="saveAllOffline()">${when ? 'Save again' : 'Save everything'}</button>
+        <progress class="ip-progress" id="ipProgress" max="${items.length}" value="0" hidden aria-label="Saving for offline use"></progress>
+        <p class="ip-status" id="ipStatus" role="status" aria-live="polite">${when ? 'Last saved on ' + when + '.' : 'Nothing saved yet.'}</p></section>
+        <section class="ip-section"><h3>Install on this device</h3>${install}</section>`;
+}
+function openInstallPanel(ev) {
+    const p = document.getElementById('installPanel'); if (!p) return;
+    installReturn = (ev && ev.currentTarget) || null; renderInstallPanel(); p.hidden = false;
+    const f = p.querySelector('#ipSave'); if (f) f.focus();
+}
+function menuOffline(ev) { closeCourseMenu(); openInstallPanel(ev); }
+function closeInstallPanel(back) {
+    const p = document.getElementById('installPanel'); if (!p || p.hidden) return false; p.hidden = true;
+    if (back && installReturn) { try { installReturn.focus(); } catch (e) {} }
+    return true;
+}
+async function doInstall() { if (!installEvt) return; installEvt.prompt(); try { await installEvt.userChoice; } catch (e) {} installEvt = null; renderInstallPanel(); }
+async function saveAllOffline() {
+    const btn = document.getElementById('ipSave'), bar = document.getElementById('ipProgress'), st = document.getElementById('ipStatus'), items = offlineItems();
+    if (!('caches' in window) || !window.caches) { st.textContent = 'This browser cannot keep files for offline use.'; return; }
+    btn.disabled = true; bar.hidden = false; bar.value = 0; st.textContent = `Saving 0 of ${items.length}\u2026`;
+    let done = 0, failed = 0;
+    try {
+        const cache = await caches.open('moro-content-1');
+        for (const u of items) {
+            try { const r = await fetch('./' + u, { cache: 'reload' }); if (!r.ok) throw new Error('bad'); await cache.put('./' + u, r); } catch (e) { failed++; }
+            done++; bar.value = done; st.textContent = `Saving ${done} of ${items.length}\u2026`;
+        }
+    } catch (e) { failed = items.length; }
+    btn.disabled = false; bar.hidden = true;
+    if (failed === 0) { readSet('moroOfflineSavedAt', new Date().toISOString()); st.textContent = 'Saved. You can now read everything without a connection.'; btn.textContent = 'Save again'; }
+    else st.textContent = `${items.length - failed} of ${items.length} saved. Check your connection and try again.`;
+}
+function showUpdateToast(reg) { swReg = reg; const t = document.getElementById('updateToast'); if (t) { t.hidden = false; } }
+function applyUpdate() { if (swReg && swReg.waiting) swReg.waiting.postMessage({ type: 'SKIP_WAITING' }); else location.reload(); }
+function syncOfflinePill() { const p = document.getElementById('offlinePill'); if (p) p.hidden = navigator.onLine !== false; }
+function registerServiceWorker() {
+    window.addEventListener('online', syncOfflinePill); window.addEventListener('offline', syncOfflinePill); syncOfflinePill();
+    if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+    const had = !!navigator.serviceWorker.controller; let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => { if (!had || reloaded) return; reloaded = true; location.reload(); });
+    navigator.serviceWorker.register('sw.js').then(reg => {
+        swReg = reg; if (reg.waiting && navigator.serviceWorker.controller) showUpdateToast(reg);
+        reg.addEventListener('updatefound', () => { const w = reg.installing; if (w) w.addEventListener('statechange', () => { if (w.state === 'installed' && navigator.serviceWorker.controller) showUpdateToast(reg); }); });
+    }).catch(() => {});
+}
 const calmMotion = () => !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 let routedOnce = false;
 // Page-turn: a short cross-fade between whole screens, using the browser's view transitions where they exist.
 function swapView(update) {
-    const animate = routedOnce && !calmMotion() && typeof document.startViewTransition === 'function';
+    const animate = routedOnce && !calmMotion() && !skipVT && typeof document.startViewTransition === 'function';
     routedOnce = true;
     if (animate) {
         try { const t = document.startViewTransition(() => { update(); }); return t.updateCallbackDone || Promise.resolve(); } catch (e) { /* fall back to an instant swap */ }
@@ -2347,17 +2727,18 @@ async function loadModule(moduleId) {
         currentSectionIndex = resumeIndex;
         quizAnswers = {};
         renderModule(data, resumeIndex, progress.visited);
+        updateRibbon();
         setResume(moduleId, 'continue');
         focusHeading();
     } catch (err) {
-        document.getElementById('mainContent').innerHTML = `
-            <div class="section-eyebrow">Error</div>
-            <div class="section-title" role="heading" aria-level="1">Module Not Found</div>
-            <p class="body-text">Could not load <strong>${moduleId}</strong>. Please check the module ID or try again.</p>
-            <p class="body-text" style="color:var(--muted); font-size:13px;">${err.message}</p>
-            <div class="btn-row">
-                <button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button>
-            </div>`;
+        if (/^Module not found/.test(err.message)) {
+            document.getElementById('mainContent').innerHTML = `
+                <div class="section-eyebrow">Not found</div>
+                <div class="section-title" role="heading" aria-level="1">Module not found</div>
+                <p class="body-text">We could not find <strong>${escapeHtml(moduleId)}</strong>. Check the link, or choose a module from the menu.</p>
+                <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button></div>`;
+            focusHeading();
+        } else showLoadError('this module', () => loadModule(moduleId));
     }
 }
 
@@ -2425,6 +2806,7 @@ function goSection(index) {
     const total = currentModule.sections.length + 1;
     const done = index === 'quiz' ? total : index + 1;
     updateProgress(done, total);
+    updateRibbon();
 
     updateSidebarToggle();
     toggleSidebarNav(false);
@@ -3154,7 +3536,7 @@ async function loadExam(levelId) {
         document.getElementById('moduleView').style.display = 'block';
         document.getElementById('progressWrap').style.display = 'none';
         document.getElementById('homeBtn').style.display = 'block';
-        currentModule = null; examRun = null; currentExam = null;
+        currentModule = null; examRun = null; currentExam = null; updateRibbon();
         document.getElementById('headerLevel').textContent = `${levelId} \u2014 Level exam`;
         document.getElementById('sidebarModuleLabel').textContent = `${levelId} Exam`;
         document.getElementById('sidebarNav').innerHTML = '';
@@ -3622,7 +4004,14 @@ function renderCourseMenu(query) {
             <div class="drawer-level-body">${items}</div>
         </details>`;
     });
-    document.getElementById('drawerBody').innerHTML = html || '<div class="drawer-empty">No modules match your search.</div>';
+    let terms = '';
+    if (q.length >= 2) {
+        if (glossaryData) {
+            const hits = glossaryData.terms.filter(t => t.term.toLowerCase().includes(q)).slice(0, 6);
+            if (hits.length) terms = `<div class="drawer-terms" role="group" aria-label="Glossary terms"><div class="drawer-terms-title">Glossary</div>${hits.map(t => `<button class="drawer-term" onclick="menuGoGlossary('${t.key}')"><strong>${escapeHtml(t.term)}</strong><span>${escapeHtml(t.note)}</span></button>`).join('')}</div>`;
+        } else ensureGlossary().then(() => { const s = document.getElementById('drawerSearch'); if (s && s.value.trim().toLowerCase() === q) renderCourseMenu(s.value); }).catch(() => {});
+    }
+    document.getElementById('drawerBody').innerHTML = (terms + html) || '<div class="drawer-empty">No modules or terms match your search.</div>';
 }
 
 // curtain drop: height eases open with one small overshoot, rows drop in one after another
@@ -3652,6 +4041,7 @@ function toggleDrawerLevel(e, summary) {
 }
 
 function openCourseMenu(focusLevel) {
+    ensureGlossary().catch(() => {});   // warm the glossary so searching terms in the menu is instant
     const search = document.getElementById('drawerSearch');
     search.value = '';
     renderCourseMenu('');
@@ -4032,7 +4422,8 @@ window.addEventListener('popstate', () => {
     const mid = params.get('module'), eid = params.get('exam');
     navFromHistory = true;
     try {
-        if (eid) loadExam(eid);
+        if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
+        else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
     } finally { navFromHistory = false; }
@@ -4044,6 +4435,7 @@ window.addEventListener('popstate', () => {
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         if (closeReadPanel(true)) return;
+        if (closeInstallPanel(true)) return;
         const busy = overlayOpen();
         closeCertificate();
         closeCourseMenu();
@@ -4076,13 +4468,16 @@ document.addEventListener('click', function (e) {
 
 bindPathwayDrag();
 (function () {
+    // The inside pages use the bright Option Y look by default. The earlier look stays available for a while:
+    // ?inner=0 (or ?inner=old) switches to it and remembers it; ?inner=y (or ?inner=new) returns to the default.
+    document.body.classList.add('inner-y');
     try {
         const q = new URLSearchParams(window.location.search).get('inner');
-        if (q === 'y') localStorage.setItem('moroInner', 'y'); else if (q === '0') localStorage.removeItem('moroInner');
-        document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') === 'y');
-    } catch (e) { /* storage unavailable: keep the current look */ }
+        if (q === '0' || q === 'old') localStorage.setItem('moroInner', 'old'); else if (q === 'y' || q === 'new') localStorage.removeItem('moroInner');
+        document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') !== 'old');
+    } catch (e) { /* storage unavailable: keep the default look */ }
 })();
-loadReadPrefs(); applyReadPrefs();
+loadReadPrefs(); applyReadPrefs(); initSlides(); registerServiceWorker();
 try { const mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', applyReadPrefs); else if (mq.addListener) mq.addListener(applyReadPrefs); } catch (e) {}
 syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
 if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));

@@ -1,0 +1,1580 @@
+{
+ "version": "2026-10-27",
+ "count": 135,
+ "terms": [
+  {
+   "key": "adult-learning",
+   "term": "Adult learning",
+   "note": "The idea that adults learn best when material is clearly relevant to their own work and experience.",
+   "firstModule": "L5-M1",
+   "modules": [
+    "L5-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "agv",
+   "term": "AGV (Automated Guided Vehicle)",
+   "note": "An older category of automated vehicle that follows a fixed path, typically magnetic tape or a buried wire — requires floor modification and is slow to reconfigure.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L1-M2"
+   ],
+   "others": [
+    {
+     "module": "L1-M2",
+     "note": "An older category of automated vehicle that follows a fixed path, typically magnetic tape or a buried wire, requiring floor modification."
+    }
+   ]
+  },
+  {
+   "key": "ansi-b56-5",
+   "term": "ANSI B56.5",
+   "note": "A North American safety standard specifically for guided industrial vehicles.",
+   "firstModule": "L1-M4",
+   "modules": [
+    "L1-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "ant",
+   "term": "ANT",
+   "note": "MoRo's HMI platform, used for fleet monitoring and mission control.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3",
+    "L2-M1",
+    "L2-M4",
+    "L2-M5",
+    "L2-M6",
+    "L3A-M5",
+    "L3B-M1",
+    "L3B-M3",
+    "L3B-M6"
+   ],
+   "others": [
+    {
+     "module": "L2-M1",
+     "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
+    },
+    {
+     "module": "L3B-M1",
+     "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming — introduced in L1-M3."
+    },
+    {
+     "module": "L3B-M3",
+     "note": "MoRo's Human-Machine Interface (HMI) platform — introduced in L1-M3."
+    }
+   ]
+  },
+  {
+   "key": "ant-server",
+   "term": "ANT Server",
+   "note": "The server-side component of MoRo's ANT platform, used here for guided mapping procedures.",
+   "firstModule": "L3B-M2",
+   "modules": [
+    "L3B-M2",
+    "L5-M4"
+   ],
+   "others": [
+    {
+     "module": "L5-M4",
+     "note": "The ANT software installed on a dedicated laptop or workstation in the lab, used to run and monitor MoRo units."
+    }
+   ]
+  },
+  {
+   "key": "assessment-validity",
+   "term": "Assessment validity",
+   "note": "Whether an assessment actually measures the competency it is intended to measure, rather than a proxy for it.",
+   "firstModule": "L5-M2",
+   "modules": [
+    "L5-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "audible-alarm",
+   "term": "Audible alarm",
+   "note": "A sound-based signal MoRo uses to communicate states requiring faster attention than a visual check allows.",
+   "firstModule": "L1-M4",
+   "modules": [
+    "L1-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "authentication",
+   "term": "Authentication",
+   "note": "Proving that a system or user is who it claims to be before it is allowed access.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "autonomous",
+   "term": "Autonomous",
+   "note": "Operating and making routing decisions independently, without requiring a human operator to direct each action.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "autonomous-mode",
+   "term": "Autonomous mode",
+   "note": "MoRo's default operating state, in which it executes missions independently.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "baseline-map",
+   "term": "Baseline map",
+   "note": "The first complete map of a site, which later missions are built on.",
+   "firstModule": "L3B-M6",
+   "modules": [
+    "L3B-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "branch-point",
+   "term": "Branch point",
+   "note": "A question in a decision tree whose answer decides which path to follow next.",
+   "firstModule": "L3A-M6",
+   "modules": [
+    "L3A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "calibration",
+   "term": "Calibration",
+   "note": "Checking and adjusting a sensor so its readings stay accurate.",
+   "firstModule": "L3A-M2",
+   "modules": [
+    "L3A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "capacity-degradation",
+   "term": "Capacity degradation",
+   "note": "The gradual, expected loss of a battery's maximum charge capacity over repeated use cycles.",
+   "firstModule": "L3A-M4",
+   "modules": [
+    "L3A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "capstone-project",
+   "term": "Capstone project",
+   "note": "A substantial project that shows you can combine everything in the track, assessed on the work itself.",
+   "firstModule": "L4B-M5",
+   "modules": [
+    "L4B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "cell-level-data",
+   "term": "Cell-level data",
+   "note": "Readings for the individual cells inside a battery pack, where the system provides them.",
+   "firstModule": "L3A-M4",
+   "modules": [
+    "L3A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "center-of-gravity",
+   "term": "Center of gravity",
+   "note": "The point where a load's weight is balanced; it affects how stable the load is.",
+   "firstModule": "L4B-M3",
+   "modules": [
+    "L4B-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "centralized-infrastructure",
+   "term": "Centralized infrastructure",
+   "note": "One system monitoring and managing all sites from a single place.",
+   "firstModule": "L4A-M6",
+   "modules": [
+    "L4A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "charge-cycle",
+   "term": "Charge cycle",
+   "note": "One full use of the battery's charge followed by its recharge.",
+   "firstModule": "L3A-M4",
+   "modules": [
+    "L3A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "checking-for-understanding",
+   "term": "Checking for understanding",
+   "note": "Asking learners to show or explain what they have understood, instead of assuming silence means comprehension.",
+   "firstModule": "L5-M1",
+   "modules": [
+    "L5-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "cnc",
+   "term": "CNC (Computer Numerical Control)",
+   "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L2-M2",
+    "L4A-M5",
+    "L4B-M1"
+   ],
+   "others": [
+    {
+     "module": "L4B-M1",
+     "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in a machine tending configuration."
+    }
+   ]
+  },
+  {
+   "key": "co-delivery",
+   "term": "Co-delivery",
+   "note": "Two trainers, such as a MoRo instructor and a FANUC-side trainer, delivering one session together.",
+   "firstModule": "L5-M3",
+   "modules": [
+    "L5-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "conditional-branching",
+   "term": "Conditional branching",
+   "note": "A mission step that takes a different path depending on a condition.",
+   "firstModule": "L3B-M1",
+   "modules": [
+    "L3B-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "conditional-logic",
+   "term": "Conditional logic",
+   "note": "Mission logic where the next action depends on whether a specified condition is met.",
+   "firstModule": "L2-M6",
+   "modules": [
+    "L2-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "congestion-point",
+   "term": "Congestion point",
+   "note": "A place where units regularly queue or slow each other down.",
+   "firstModule": "L4B-M4",
+   "modules": [
+    "L4B-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "control-access",
+   "term": "Control access",
+   "note": "Permission to send commands in, such as assigning missions or triggering actions.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "corrective-feedback",
+   "term": "Corrective feedback",
+   "note": "Specific guidance on what to adjust in the next attempt.",
+   "firstModule": "L5-M1",
+   "modules": [
+    "L5-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "corrective-maintenance",
+   "term": "Corrective maintenance",
+   "note": "Maintenance performed after a failure has already occurred.",
+   "firstModule": "L3A-M1",
+   "modules": [
+    "L3A-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "cycle-time",
+   "term": "Cycle time",
+   "note": "The time it takes for a mission to complete from start to finish.",
+   "firstModule": "L2-M6",
+   "modules": [
+    "L2-M6",
+    "L4B-M1",
+    "L4B-M4"
+   ],
+   "others": [
+    {
+     "module": "L4B-M1",
+     "note": "The time MoRo needs to complete one full tending loop, from delivery to retrieval."
+    },
+    {
+     "module": "L4B-M4",
+     "note": "The time one full task takes from start to finish."
+    }
+   ]
+  },
+  {
+   "key": "data-mapping",
+   "term": "Data mapping",
+   "note": "Defining how fields in one system correspond to fields in another, so the same information means the same thing on both sides.",
+   "firstModule": "L4A-M2",
+   "modules": [
+    "L4A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "deadlock",
+   "term": "Deadlock",
+   "note": "A situation where two or more units are each waiting on the other, with neither able to proceed without intervention.",
+   "firstModule": "L2-M4",
+   "modules": [
+    "L2-M4",
+    "L3B-M3"
+   ],
+   "others": [
+    {
+     "module": "L3B-M3",
+     "note": "Units each waiting for another to move, so none can proceed."
+    }
+   ]
+  },
+  {
+   "key": "debrief",
+   "term": "Debrief",
+   "note": "A structured conversation after a session to review what happened and what to adjust.",
+   "firstModule": "L5-M5",
+   "modules": [
+    "L5-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "decision-tree",
+   "term": "Decision tree",
+   "note": "A structured diagnostic sequence of yes/no or condition-based questions leading systematically toward identifying a root cause.",
+   "firstModule": "L3A-M6",
+   "modules": [
+    "L3A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "degradation",
+   "term": "Degradation",
+   "note": "The gradual loss of performance or condition in a component over time.",
+   "firstModule": "L3A-M3",
+   "modules": [
+    "L3A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "degrees-of-freedom",
+   "term": "Degrees of freedom",
+   "note": "The independent ways a load can move; here, vertical position and rotation.",
+   "firstModule": "L4B-M3",
+   "modules": [
+    "L4B-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "diagnostic-interface",
+   "term": "Diagnostic interface",
+   "note": "The technician-level screens that show detailed data beyond what operators see.",
+   "firstModule": "L3A-M4",
+   "modules": [
+    "L3A-M4",
+    "L3A-M5"
+   ],
+   "others": [
+    {
+     "module": "L3A-M5",
+     "note": "A technician-level view exposing deeper system state (sensor readings, subsystem health, fault history) beyond what the operator-level dashboard shows."
+    }
+   ]
+  },
+  {
+   "key": "digital-i-o-point",
+   "term": "Digital I/O point",
+   "note": "A physical input or output connection that carries an on/off signal between two systems.",
+   "firstModule": "L3B-M4",
+   "modules": [
+    "L3B-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "distributed-infrastructure",
+   "term": "Distributed infrastructure",
+   "note": "Each site largely runs independently, with only reporting shared centrally.",
+   "firstModule": "L4A-M6",
+   "modules": [
+    "L4A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "e-stop",
+   "term": "E-stop (emergency stop)",
+   "note": "An immediate, unconditional halt command that overrides all other operation.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3",
+    "L1-M4",
+    "L3A-M7"
+   ],
+   "others": [
+    {
+     "module": "L1-M4",
+     "note": "An immediate, unconditional halt that takes priority over all other operations."
+    },
+    {
+     "module": "L3A-M7",
+     "note": "A control that immediately stops the unit for safety."
+    }
+   ]
+  },
+  {
+   "key": "en-iso-13849",
+   "term": "EN ISO 13849",
+   "note": "The international standard governing the safety of machinery and control systems, relevant to designing safety-related functions in an automated cell.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "endpoint",
+   "term": "Endpoint",
+   "note": "A specific address a program calls to request data or an action.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "erp",
+   "term": "ERP (Enterprise Resource Planning)",
+   "note": "Business-wide software managing resources and operations at the enterprise level, sitting above MES in the typical automation layering.",
+   "firstModule": "L4A-M1",
+   "modules": [
+    "L4A-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "escalation",
+   "term": "Escalation",
+   "note": "Reporting an issue to the appropriate point of contact rather than resolving it yourself.",
+   "firstModule": "L1-M5",
+   "modules": [
+    "L1-M5",
+    "L3A-M7"
+   ],
+   "others": [
+    {
+     "module": "L3A-M7",
+     "note": "Passing a problem to a more qualified person or team when it is beyond routine work."
+    }
+   ]
+  },
+  {
+   "key": "exception-handling",
+   "term": "Exception handling",
+   "note": "Designing in advance what the cell does when something goes wrong, such as a CNC fault or a rejected part.",
+   "firstModule": "L4B-M1",
+   "modules": [
+    "L4B-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "fanuc",
+   "term": "FANUC",
+   "note": "An industrial robotics manufacturer whose controllers MoRo commonly integrates with via I/O handshake.",
+   "firstModule": "L3B-M4",
+   "modules": [
+    "L3B-M4",
+    "L3B-M6",
+    "L5-M3",
+    "L5-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "fault-code-tree",
+   "term": "Fault code tree",
+   "note": "A hierarchical structure organizing fault codes from broad category down to specific identified cause.",
+   "firstModule": "L3A-M5",
+   "modules": [
+    "L3A-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "field-serviceable",
+   "term": "Field-serviceable",
+   "note": "Within what a technician can safely diagnose and fix on site.",
+   "firstModule": "L3A-M7",
+   "modules": [
+    "L3A-M7"
+   ],
+   "others": []
+  },
+  {
+   "key": "firewall",
+   "term": "Firewall",
+   "note": "A network control that allows or blocks connections between systems based on rules.",
+   "firstModule": "L4A-M3",
+   "modules": [
+    "L4A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "firmware",
+   "term": "Firmware",
+   "note": "The low-level software built into a device that controls how its hardware works.",
+   "firstModule": "L3A-M2",
+   "modules": [
+    "L3A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "fleet-status",
+   "term": "Fleet status",
+   "note": "A real-time view of where each MoRo unit is and what state it's in.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "go-live",
+   "term": "Go-live",
+   "note": "The moment a deployment starts running for real operations.",
+   "firstModule": "L3B-M6",
+   "modules": [
+    "L3B-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "graceful-degradation",
+   "term": "Graceful degradation",
+   "note": "Continuing to operate at reduced capacity when part of the system fails, instead of stopping completely.",
+   "firstModule": "L4A-M5",
+   "modules": [
+    "L4A-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "handshake",
+   "term": "Handshake",
+   "note": "A signal exchange between two coordinating systems confirming readiness, completion, or error state before an action proceeds.",
+   "firstModule": "L2-M2",
+   "modules": [
+    "L2-M2",
+    "L3B-M4",
+    "L4A-M5",
+    "L4B-M1"
+   ],
+   "others": [
+    {
+     "module": "L3B-M4",
+     "note": "A signal exchange in which two systems confirm they are both ready before either acts."
+    },
+    {
+     "module": "L4A-M5",
+     "note": "The agreed exchange of signals (request, ready, complete) that lets MoRo and a fixed machine hand work to each other safely."
+    },
+    {
+     "module": "L4B-M1",
+     "note": "The agreed exchange of signals (request, ready, complete) that confirms MoRo and the machine are both ready before either acts."
+    }
+   ]
+  },
+  {
+   "key": "hmi",
+   "term": "HMI (Human-Machine Interface)",
+   "note": "The software layer through which an operator interacts with and monitors a machine's operations.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "i-o-handshake",
+   "term": "I/O handshake",
+   "note": "An exchange of request, ready, and complete signals between MoRo and another machine, so each acts only when the other is ready.",
+   "firstModule": "L5-M3",
+   "modules": [
+    "L5-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "i-o-mapping",
+   "term": "I/O mapping",
+   "note": "Matching each handshake signal to the correct input or output point on each side.",
+   "firstModule": "L3B-M4",
+   "modules": [
+    "L3B-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "imr",
+   "term": "IMR (Intelligent Mobile Robot)",
+   "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings, rather than a fixed physical path.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L3A-M1",
+    "L3A-M7"
+   ],
+   "others": [
+    {
+     "module": "L3A-M1",
+     "note": "A robot that navigates autonomously using sensor-based awareness — the category MoRo belongs to."
+    },
+    {
+     "module": "L3A-M7",
+     "note": "A robot that navigates autonomously using sensor-based awareness of its surroundings — the category MoRo belongs to."
+    }
+   ]
+  },
+  {
+   "key": "inspection-checklist",
+   "term": "Inspection checklist",
+   "note": "A list of inspection points a technician checks and records at each visit.",
+   "firstModule": "L3A-M3",
+   "modules": [
+    "L3A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "interactive-zone",
+   "term": "Interactive zone",
+   "note": "The sensor-monitored distance (currently 2m) around MoRo within which its behavior automatically adjusts based on proximity.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L1-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "interlock",
+   "term": "Interlock",
+   "note": "A device or arrangement that prevents a machine from operating unless safe conditions are met.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "intermittent",
+   "term": "Intermittent",
+   "note": "Happening on and off rather than all the time.",
+   "firstModule": "L3A-M6",
+   "modules": [
+    "L3A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "internal-diagnostic",
+   "term": "Internal diagnostic",
+   "note": "MoRo's automatic self-check of its systems (battery, navigation, safety) run at startup.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "iso-3691-4",
+   "term": "ISO 3691-4",
+   "note": "An international standard specifying safety requirements for industrial trucks, including AMRs like MoRo.",
+   "firstModule": "L1-M4",
+   "modules": [
+    "L1-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "lfp",
+   "term": "LFP (Lithium Iron Phosphate)",
+   "note": "A lithium battery chemistry known for thermal stability and long cycle life, commonly used in industrial and automotive applications.",
+   "firstModule": "L2-M3",
+   "modules": [
+    "L2-M3",
+    "L3A-M4"
+   ],
+   "others": [
+    {
+     "module": "L3A-M4",
+     "note": "MoRo's battery chemistry, chosen for thermal stability and long cycle life — covered in detail in L2-M3."
+    }
+   ]
+  },
+  {
+   "key": "lidar",
+   "term": "LiDAR",
+   "note": "Light Detection and Ranging — a sensor that uses laser light to measure distance and build a spatial map.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L1-M2",
+    "L3B-M2"
+   ],
+   "others": [
+    {
+     "module": "L1-M2",
+     "note": "Light Detection and Ranging — a sensor that measures distance using reflected laser light."
+    },
+    {
+     "module": "L3B-M2",
+     "note": "A sensor that measures distance by timing reflected laser light, used by MoRo to see its surroundings."
+    }
+   ]
+  },
+  {
+   "key": "lift-and-rotate",
+   "term": "Lift-and-rotate",
+   "note": "The most complex payload configuration: it lifts a load vertically and also rotates it.",
+   "firstModule": "L4B-M3",
+   "modules": [
+    "L4B-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "localization",
+   "term": "Localization",
+   "note": "Determining one's own position within a known or partially known environment.",
+   "firstModule": "L1-M2",
+   "modules": [
+    "L1-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "lockout-tagout",
+   "term": "Lockout/tagout (LOTO)",
+   "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it.",
+   "firstModule": "L3A-M4",
+   "modules": [
+    "L3A-M4",
+    "L3A-M7"
+   ],
+   "others": []
+  },
+  {
+   "key": "loto",
+   "term": "LOTO (lockout/tagout)",
+   "note": "A safety procedure confirming equipment is de-energized and physically secured before maintenance work begins.",
+   "firstModule": "L3A-M1",
+   "modules": [
+    "L3A-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "machine-tending",
+   "term": "Machine tending",
+   "note": "The task of loading raw material into and unloading finished parts from a machine, automated here by MoRo.",
+   "firstModule": "L4B-M1",
+   "modules": [
+    "L4B-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "maintenance-checklist",
+   "term": "Maintenance checklist",
+   "note": "A list of items to inspect at a given point in the schedule, each one confirmed and recorded.",
+   "firstModule": "L3A-M2",
+   "modules": [
+    "L3A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "maintenance-interval",
+   "term": "Maintenance interval",
+   "note": "The time or usage between one scheduled maintenance task and the next.",
+   "firstModule": "L3A-M2",
+   "modules": [
+    "L3A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "manual-override",
+   "term": "Manual override",
+   "note": "Operator-initiated direct control of MoRo, used for specific non-routine situations.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "map-artifact",
+   "term": "Map artifact",
+   "note": "An unexpected or false feature in a map that does not match the real space.",
+   "firstModule": "L3B-M2",
+   "modules": [
+    "L3B-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "mental-model",
+   "term": "Mental model",
+   "note": "A learner's internal picture of how the whole system works.",
+   "firstModule": "L5-M3",
+   "modules": [
+    "L5-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "mentorship",
+   "term": "Mentorship",
+   "note": "An ongoing supportive relationship in which an experienced instructor helps a newer one develop.",
+   "firstModule": "L5-M5",
+   "modules": [
+    "L5-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "mes",
+   "term": "MES (Manufacturing Execution System)",
+   "note": "Software that tracks and manages production on the factory floor, often triggering or receiving data from MoRo missions.",
+   "firstModule": "L4A-M1",
+   "modules": [
+    "L4A-M1",
+    "L4A-M2"
+   ],
+   "others": [
+    {
+     "module": "L4A-M2",
+     "note": "Software that tracks and manages production on the factory floor, often integrated with MoRo for mission triggering and status reporting."
+    }
+   ]
+  },
+  {
+   "key": "mission",
+   "term": "Mission",
+   "note": "A defined task assigned to MoRo — for example, moving a part from one station to another.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L2-M1"
+   ],
+   "others": [
+    {
+     "module": "L2-M1",
+     "note": "A defined task assigned to MoRo, with a clear start, objective, and completion condition."
+    }
+   ]
+  },
+  {
+   "key": "mission-logic",
+   "term": "Mission logic",
+   "note": "The sequence of steps and conditions that tells MoRo what to do during a mission.",
+   "firstModule": "L4B-M2",
+   "modules": [
+    "L4B-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "mission-status",
+   "term": "Mission status",
+   "note": "The current and queued tasks assigned to a unit.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "observed-delivery",
+   "term": "Observed delivery",
+   "note": "A live teaching session watched and assessed by an evaluator.",
+   "firstModule": "L5-M6",
+   "modules": [
+    "L5-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "opc-ua",
+   "term": "OPC-UA (Open Platform Communications Unified Architecture)",
+   "note": "A standardized, vendor-neutral communication protocol widely used in industrial automation to exchange data between different systems.",
+   "firstModule": "L4A-M3",
+   "modules": [
+    "L4A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "operating-hours",
+   "term": "Operating hours",
+   "note": "The total time a unit has actually been running, used to schedule maintenance by usage rather than by calendar.",
+   "firstModule": "L3A-M2",
+   "modules": [
+    "L3A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "operational-envelope",
+   "term": "Operational envelope",
+   "note": "The complete range of positions and conditions the application will use.",
+   "firstModule": "L4B-M3",
+   "modules": [
+    "L4B-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "passing-threshold",
+   "term": "Passing threshold",
+   "note": "The minimum score or standard a candidate must reach to pass.",
+   "firstModule": "L5-M2",
+   "modules": [
+    "L5-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "payback-timeline",
+   "term": "Payback timeline",
+   "note": "How long a deployment takes to earn back its cost.",
+   "firstModule": "L4A-M6",
+   "modules": [
+    "L4A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "payload",
+   "term": "Payload",
+   "note": "The maximum weight a unit is rated to carry safely.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "payload-configuration",
+   "term": "Payload configuration",
+   "note": "The specific attachment or module fitted to MoRo for handling a given type of material transfer.",
+   "firstModule": "L2-M2",
+   "modules": [
+    "L2-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "peer-review",
+   "term": "Peer review",
+   "note": "Evaluation of your work by others who have completed or are completing the same track.",
+   "firstModule": "L4B-M5",
+   "modules": [
+    "L4B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "performance-level",
+   "term": "Performance level",
+   "note": "A measure defined by EN ISO 13849 quantifying how reliably a safety function must perform, scaled to the assessed risk.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "plc",
+   "term": "PLC (Programmable Logic Controller)",
+   "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo in integrated cells.",
+   "firstModule": "L4A-M1",
+   "modules": [
+    "L4A-M1",
+    "L4B-M2"
+   ],
+   "others": [
+    {
+     "module": "L4B-M2",
+     "note": "An industrial computer that controls machinery and processes on a factory floor, commonly coordinating with MoRo."
+    }
+   ]
+  },
+  {
+   "key": "positioning-accuracy",
+   "term": "Positioning accuracy",
+   "note": "How precisely MoRo can determine and maintain its actual physical position, expressed as a margin of error.",
+   "firstModule": "L1-M2",
+   "modules": [
+    "L1-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "predictive-maintenance",
+   "term": "Predictive maintenance",
+   "note": "Maintenance triggered by observed signs of degradation, performed before failure occurs.",
+   "firstModule": "L3A-M1",
+   "modules": [
+    "L3A-M1",
+    "L3A-M3"
+   ],
+   "others": [
+    {
+     "module": "L3A-M3",
+     "note": "Maintenance triggered by actual signs of wear or drift, rather than by the calendar."
+    }
+   ]
+  },
+  {
+   "key": "preventive-maintenance",
+   "term": "Preventive maintenance",
+   "note": "Scheduled maintenance performed regardless of current condition, to prevent future failure.",
+   "firstModule": "L3A-M1",
+   "modules": [
+    "L3A-M1",
+    "L5-M4"
+   ],
+   "others": [
+    {
+     "module": "L5-M4",
+     "note": "Routine checks and servicing done on a schedule to prevent faults, as covered in L3A."
+    }
+   ]
+  },
+  {
+   "key": "procedural-knowledge",
+   "term": "Procedural knowledge",
+   "note": "Knowing how to do something, as opposed to knowing facts about it.",
+   "firstModule": "L5-M1",
+   "modules": [
+    "L5-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "programmed-logic",
+   "term": "Programmed logic",
+   "note": "Predefined rules and responses MoRo follows based on what its sensors detect — not independent judgment.",
+   "firstModule": "L1-M5",
+   "modules": [
+    "L1-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "re-sit",
+   "term": "Re-sit",
+   "note": "Another attempt at an assessment after an unsuccessful one.",
+   "firstModule": "L5-M6",
+   "modules": [
+    "L5-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "reachability",
+   "term": "Reachability",
+   "note": "Whether MoRo can actually navigate to a location and stop there precisely.",
+   "firstModule": "L3B-M1",
+   "modules": [
+    "L3B-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "read-access",
+   "term": "Read access",
+   "note": "Permission to pull data out, such as fleet status, mission history and unit health.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "ready-state",
+   "term": "Ready state",
+   "note": "The confirmed status indicating MoRo has passed its startup diagnostic and can accept mission assignments.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "redundancy",
+   "term": "Redundancy",
+   "note": "Spare capacity, such as an extra unit, so the cell keeps working when one part is unavailable.",
+   "firstModule": "L4A-M5",
+   "modules": [
+    "L4A-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "request-ready-complete-sequence",
+   "term": "Request/ready/complete sequence",
+   "note": "The three-stage signal exchange confirming readiness before, during, and after a MoRo-FANUC interaction.",
+   "firstModule": "L3B-M4",
+   "modules": [
+    "L3B-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "reserved-route",
+   "term": "Reserved route",
+   "note": "A floor route prioritized or dedicated for specific traffic patterns within the fleet.",
+   "firstModule": "L2-M4",
+   "modules": [
+    "L2-M4",
+    "L3B-M3"
+   ],
+   "others": [
+    {
+     "module": "L3B-M3",
+     "note": "A path prioritized or dedicated to specific traffic."
+    }
+   ]
+  },
+  {
+   "key": "rest-api",
+   "term": "REST API",
+   "note": "A standard way for external software to communicate with a system programmatically, used here to extend fleet control and data access beyond the ANT interface.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5",
+    "L4A-M3"
+   ],
+   "others": [
+    {
+     "module": "L4A-M3",
+     "note": "A standard way for external software to communicate with a system programmatically, used here to extend MoRo's integration capability."
+    }
+   ]
+  },
+  {
+   "key": "risk-assessment",
+   "term": "Risk assessment",
+   "note": "A structured review of a hazard's likelihood and severity, used to decide how much protection a safety function needs.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "roi-modeling",
+   "term": "ROI modeling",
+   "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision.",
+   "firstModule": "L4A-M6",
+   "modules": [
+    "L4A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "root-cause",
+   "term": "Root cause",
+   "note": "The underlying issue producing an observed symptom, as distinct from the symptom itself.",
+   "firstModule": "L3A-M5",
+   "modules": [
+    "L3A-M5",
+    "L3A-M6"
+   ],
+   "others": [
+    {
+     "module": "L3A-M6",
+     "note": "The underlying reason a problem happens, as opposed to the symptom you see."
+    }
+   ]
+  },
+  {
+   "key": "rubric",
+   "term": "Rubric",
+   "note": "A structured set of criteria used to score work consistently, here covering design, build, testing, and documentation.",
+   "firstModule": "L4B-M5",
+   "modules": [
+    "L4B-M5",
+    "L5-M2"
+   ],
+   "others": [
+    {
+     "module": "L5-M2",
+     "note": "A set of specific, observable criteria used to judge a practical assessment consistently."
+    }
+   ]
+  },
+  {
+   "key": "safety-plc",
+   "term": "Safety PLC",
+   "note": "A PLC designed specifically to run safety functions, such as monitoring E-stops and interlocks.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "safety-related-control-function",
+   "term": "Safety-related control function",
+   "note": "Any part of a control system specifically responsible for preventing or mitigating hazards, such as E-stop circuits or safety interlocks.",
+   "firstModule": "L4A-M4",
+   "modules": [
+    "L4A-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "scada",
+   "term": "SCADA (Supervisory Control and Data Acquisition)",
+   "note": "A system for monitoring and controlling industrial processes at a facility-wide level.",
+   "firstModule": "L4A-M1",
+   "modules": [
+    "L4A-M1",
+    "L4A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "security-certificate",
+   "term": "Security certificate",
+   "note": "A digital credential that lets two systems verify each other's identity before exchanging data.",
+   "firstModule": "L4A-M3",
+   "modules": [
+    "L4A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "self-assessment",
+   "term": "Self-assessment",
+   "note": "The learner's own judgment of what went well and what to change, given before feedback.",
+   "firstModule": "L5-M5",
+   "modules": [
+    "L5-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "shared-path",
+   "term": "Shared path",
+   "note": "A floor route multiple MoRo units can use, with automatic coordination to avoid conflicts.",
+   "firstModule": "L2-M4",
+   "modules": [
+    "L2-M4",
+    "L3B-M3"
+   ],
+   "others": [
+    {
+     "module": "L3B-M3",
+     "note": "A path that lets several units through with automatic coordination."
+    }
+   ]
+  },
+  {
+   "key": "single-point-of-failure",
+   "term": "Single point of failure",
+   "note": "One component whose failure stops the whole cell.",
+   "firstModule": "L4A-M5",
+   "modules": [
+    "L4A-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "situational-awareness",
+   "term": "Situational awareness",
+   "note": "Ongoing attentiveness to your surroundings and how they may change, particularly around active equipment.",
+   "firstModule": "L1-M4",
+   "modules": [
+    "L1-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "slam",
+   "term": "SLAM (Simultaneous Localization and Mapping)",
+   "note": "The process of determining one's own position while simultaneously mapping the surrounding environment.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1",
+    "L1-M2",
+    "L3B-M2",
+    "L3B-M6"
+   ],
+   "others": [
+    {
+     "module": "L1-M2",
+     "note": "The combined process of determining one's own position while building a map of the environment, performed continuously and together."
+    },
+    {
+     "module": "L3B-M2",
+     "note": "The process of determining position while building a map of the surrounding environment — covered in L1-M2."
+    },
+    {
+     "module": "L3B-M6",
+     "note": "The process of determining position while simultaneously building a map of the surrounding environment."
+    }
+   ]
+  },
+  {
+   "key": "sme",
+   "term": "SME (Subject Matter Expert)",
+   "note": "A person with deep specialized knowledge, consulted or co-authoring content for highly technical modules.",
+   "firstModule": "L4B-M5",
+   "modules": [
+    "L4B-M5"
+   ],
+   "others": []
+  },
+  {
+   "key": "standardization",
+   "term": "Standardization",
+   "note": "Using the same configuration at every site so it is easier to maintain and train for.",
+   "firstModule": "L4A-M6",
+   "modules": [
+    "L4A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "state-machine",
+   "term": "State machine",
+   "note": "A way of organizing logic as a set of defined states and the conditions that move it from one to the next.",
+   "firstModule": "L4B-M2",
+   "modules": [
+    "L4B-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "status-indicator",
+   "term": "Status indicator",
+   "note": "A visual signal (light) on the MoRo unit itself that communicates its current operating state.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "supervisory-control",
+   "term": "Supervisory control",
+   "note": "Overseeing an automated system's operation without directly performing each action yourself.",
+   "firstModule": "L1-M3",
+   "modules": [
+    "L1-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "swept-area",
+   "term": "Swept area",
+   "note": "The full area a load passes through while it rotates, not just its resting footprint.",
+   "firstModule": "L4B-M3",
+   "modules": [
+    "L4B-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "symptom",
+   "term": "Symptom",
+   "note": "What you can observe going wrong, as opposed to its underlying cause.",
+   "firstModule": "L3A-M6",
+   "modules": [
+    "L3A-M6"
+   ],
+   "others": []
+  },
+  {
+   "key": "system-architecture",
+   "term": "System architecture",
+   "note": "The overall design describing how different components of an automated cell connect and communicate.",
+   "firstModule": "L4A-M1",
+   "modules": [
+    "L4A-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "system-of-record",
+   "term": "System of record",
+   "note": "The system whose data is treated as the authoritative record of what happened, such as an MES for production.",
+   "firstModule": "L4A-M2",
+   "modules": [
+    "L4A-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "throughput",
+   "term": "Throughput",
+   "note": "The total amount of material or work moved over a given period.",
+   "firstModule": "L2-M6",
+   "modules": [
+    "L2-M6",
+    "L4A-M5",
+    "L4B-M4"
+   ],
+   "others": [
+    {
+     "module": "L4A-M5",
+     "note": "How much material a cell moves in a given period."
+    },
+    {
+     "module": "L4B-M4",
+     "note": "How much work the fleet completes in a given period."
+    }
+   ]
+  },
+  {
+   "key": "trend",
+   "term": "Trend",
+   "note": "A pattern of readings moving steadily in one direction over time.",
+   "firstModule": "L3A-M3",
+   "modules": [
+    "L3A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "utilization",
+   "term": "Utilization",
+   "note": "The share of time a unit spends doing useful work rather than waiting.",
+   "firstModule": "L4B-M4",
+   "modules": [
+    "L4B-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "variant",
+   "term": "Variant",
+   "note": "One of the three MoRo models (A-250, A-500, A-1200), differing primarily in payload capacity and speed.",
+   "firstModule": "L1-M1",
+   "modules": [
+    "L1-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "version-control",
+   "term": "Version control",
+   "note": "Keeping a record of every change to logic, with who changed it and why, so earlier versions can be recovered.",
+   "firstModule": "L4B-M2",
+   "modules": [
+    "L4B-M2"
+   ],
+   "others": []
+  },
+  {
+   "key": "vibration",
+   "term": "Vibration",
+   "note": "Rapid back-and-forth movement; a change in a drive component's vibration can signal wear.",
+   "firstModule": "L3A-M3",
+   "modules": [
+    "L3A-M3"
+   ],
+   "others": []
+  },
+  {
+   "key": "vlan",
+   "term": "VLAN (Virtual Local Area Network)",
+   "note": "A method of segmenting network traffic, relevant to L3A+ training that covers network configuration.",
+   "firstModule": "L5-M4",
+   "modules": [
+    "L5-M4"
+   ],
+   "others": []
+  },
+  {
+   "key": "waypoint",
+   "term": "Waypoint",
+   "note": "A specific, defined location on MoRo's map used as a reference point within a programmed mission.",
+   "firstModule": "L3B-M1",
+   "modules": [
+    "L3B-M1"
+   ],
+   "others": []
+  },
+  {
+   "key": "wms",
+   "term": "WMS (Warehouse Management System)",
+   "note": "Software that tracks inventory and manages warehouse operations, often integrated with MoRo for triggering and reporting.",
+   "firstModule": "L3B-M5",
+   "modules": [
+    "L3B-M5",
+    "L4A-M2"
+   ],
+   "others": [
+    {
+     "module": "L4A-M2",
+     "note": "Software that tracks inventory and manages warehouse operations, often triggering MoRo missions based on inventory events."
+    }
+   ]
+  }
+ ]
+}
