@@ -1545,6 +1545,19 @@
         body.inner-y:not(.home-mode):not(.ob-mode) .exam-bar i { background: var(--y-blue); }
         @media (prefers-reduced-motion: reduce) { .exam-bar i { transition: none; } }
         #certOverlay:focus { outline: none; }
+        /* ── HEADER LINKS: DiFacto leads to its website, MoRo Academy leads to the Welcome screen ── */
+        .header-left .hdr-link { display: flex; align-items: center; color: inherit; text-decoration: none; border-radius: 6px; }
+        .header-left .hdr-link:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 4px; }
+        body.inner-y .header-left .hdr-link:focus-visible { outline-color: #2E6DB4; }
+        .hdr-link-difacto:hover .hdr-difacto { opacity: 0.85; }
+        .hdr-link-moro:hover .hdr-academy, .hdr-link-moro:hover .course-name-old { text-decoration: underline; text-underline-offset: 3px; }
+        .header-left .hdr-title { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+        body.inner-y.ob-mode .hdr-moro { display: none; }
+        body.inner-y.ob-mode .hdr-academy::before { content: "MoRo "; }
+        body.ob-mode .course-level { display: none; }
+        .b-route-foot { margin-top: 14px; }
+        @media (pointer: coarse) { .header-left .hdr-link { position: relative; } .header-left .hdr-link::after { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; height: 44px; transform: translateY(-50%); } }   /* a 44 px tap area for thumbs, without changing the layout */
+        a.drawer-lock, a.foot-link { text-decoration: none; }
         /* ── MODULES MENU: opens from the right, the button stays pressed, rows answer your pointer ── */
         .header .menu-btn[aria-expanded="true"] { background: rgba(46, 109, 180, 0.12); color: #245A96; border-color: #2E6DB4; }
         body:not(.inner-y):not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
@@ -1797,7 +1810,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         body.home-b.home-mode:not(.ob-mode) #howSection, body.home-b.home-mode:not(.ob-mode) #headerLinks a[href="#howSection"] { display: none; }
         body.home-b.home-mode:not(.ob-mode) .b-home { gap: 72px; }
         body.home-b.home-mode:not(.ob-mode) .b-h2, body.home-b.home-mode:not(.ob-mode) .b-hello, body.home-b.home-mode:not(.ob-mode) .b-cont-title, body.home-b.home-mode:not(.ob-mode) .bd-title, body.home-b.home-mode:not(.ob-mode) #faqSection .lp-h2 { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", system-ui, sans-serif; letter-spacing: -0.03em; }
-        body.home-b.home-mode:not(.ob-mode) .b-hello { font-size: clamp(34px, 5.2vw, 56px); font-weight: 600; line-height: 1.06; letter-spacing: -0.04em; }
+        body.home-b.home-mode:not(.ob-mode) .b-hello { font-size: clamp(26px, 3.4vw, 40px); font-weight: 600; line-height: 1.06; letter-spacing: -0.04em; }
         body.home-b.home-mode:not(.ob-mode) .b-h2, body.home-b.home-mode:not(.ob-mode) #faqSection .lp-h2 { font-size: clamp(26px, 3.6vw, 36px); font-weight: 600; }
         body.home-b.home-mode:not(.ob-mode) .b-lead, body.home-b.home-mode:not(.ob-mode) .b-sub { font-size: 17px; }
         body.home-b.home-mode:not(.ob-mode) .b-mark { width: 76px; padding: 0; background: transparent; border: none; }
@@ -1874,14 +1887,18 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- HEADER -->
 <a class="skip-link" href="#mainContent" onclick="skipToMain(event)">Skip to main content</a>
 <header class="header">
-    <a class="header-left" href="./" onclick="goHome(); return false;" aria-label="MoRo IMR Training Academy. Go to Home.">
-        <img class="hdr-difacto" src="./difacto-logo.png" alt="" width="360" height="74" style="width: 138px; height: auto;">
+    <div class="header-left">
+        <a class="hdr-link hdr-link-difacto" href="https://www.difacto.com/" target="_top" rel="noopener" data-difacto-site onclick="return leaveForDifacto(event)" aria-label="DiFacto website. Leaves the Academy.">
+            <img class="hdr-difacto" src="./difacto-logo.png" alt="" width="360" height="74" style="width: 138px; height: auto;">
+        </a>
         <div class="separator"></div>
-        <div>
-            <div class="course-name"><span class="course-name-old">MoRo IMR Training Academy</span><img class="hdr-moro" alt="" aria-hidden="true" width="113" height="56" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAA4CAYAAADKKRd0AAAZ4UlEQVR42u18a5Rc1XXmt88599azWw8kgdS0MDjEttoB25IlwJ50i4VtvZDtlVRnnHFmxhkbVh44xEQtYZK5VWFw1BIM8YNxRJzMJPHymK7E2OgBJngkYdCDkSB2aJkYW4YsFtiSFpK6u173nrP3/LhVrapStV62gAk6a93Vvbrv69zv7H32/s63D33083sujar8VkW4DNC9gMwH0cVgvlgI3QClAUkAAAQAYIkoAsSKwILIEYRFIAQCSAhCJAQiEQIRACE0NyGn/aSJwtLuLWvf98ncyIguDg46nKIFgahCHrJ6w9NzSbkHRSgNsACs6qdYk+wyUXn8gc3rrr0zNyK6OEinvOe/lWYe/INrXgLwUuMPN23a5708jmkCnuFBzWLgUojME1KXgbiXQPMEmAfQPGVM1iTSUMqAtAFEIMIQdpMHO9vxwcIOidS0BTeu372tOHjtN0730Q/0FQk0yBjeNexnZi0Oy8dBymu5n/YSiDA+HwAOje4gvEmaAYTqFgYQyf03L4oAHKkfz095pQit2PjUxVyuzIFU54NUL0H1gvgyiL4EwvNAuEhEZhIRnXy5CABFWn8pd8+uHQtG88cQBAqFAref27DUG4efXGWS2Y/XJl61AJRwC+bW2dAQJMKbrBmABHQyQMjnaRmWZ3UymmVIZ5w2SRLrg5VjMJuNT4UiVCEOx5RL7BfldgOA9T3ynE1a0DSQmk7k/rcyXq+LQmkGk4jgbOj8zLS51dKrdxcKhd/uD7abnWgDMQjUgtGc5L70bLZWLn9BnBWBKAKptrdWBCgB0ZsQxA6NSACICRZapWZWQdyt2c0WZS4Gca8GzWfgEsBdKgpzWNnp2vNSyvhIKg0QgZyFOAsXMdhG6GSNRKTD8pgziewnVm3Y8/UtQ9c82j4/9mNAFQpkVw0/eWciM/PyqHTcEpHBhXYaEOttS2F1GUAZwMsA/mmq8xZu2ufNOjwxK53qmlOzY71CukcJegCZD6U/SqBuESfoaCVCYBEFfDkXPHv1gtG+MuKASHK5EV0sLLWrN+5eonTilqgy5kDQF2A7CxAbrjXIgw4cKJJd3HNRyPI2pfzZYJ5FRFkRSdKxSEnCj6ytWSJdJUgoil4kphfA7oNkvG62riOEBFIuqlo/M+2Kijt6Z+F2+sN+bDc7IQ65IvoXiBHe82XytBYbOgLoAmxnCyKRFOrJRf+C7a/OmT37GRtWu9jZWdB6jlh+C5S6FCxXEtFlEJkP0DzjJxNesgth6eiU7rTpGTosjzuTTH161Ya9I1uGluzOBc/6xcHB8MYNu4b89PR3h6VjjkhdsMJzArGp7SwstQAm6scrU52Xy43o6vt6Z9mxysUEekh5/mXORkyAmgpGEQGRUkrkL3L37LoGew6EH7l77y8LdD6qlrhDIHOhnQuILfNYkKcAeRzoAzVysjl9A1IcBBeL5FDEzwD8bPWG3RNEqs4U0El5BuoWSgTtwor1M9OvqpaOrd1cHMyvXrT7y14qnQorE46oCcSm6y60cwaRBAVIAYXTgvwM9qrOHlQBikicbQKEdFSdECLcunp49zRl/OujyoQQkW4GkIxHwg4QuYAgpnZvP2cjQaHAhQJxx0hJaQjbMXH2X5XnE2QSDRK2BFLTdCJ9K9uw1eKERRmf2EYHhblE6oKHPY8gni5WIgioqpSsEZYISskkMwsChMWGFdfqMkXI+MJsj4PoM82j4gKIr0MTZoAwPYv0Vudq9/mpbgXAtcLcmg+KCHvJrBKRvKrVntZeIiPMHSbaCyC+lo1rUuuqSjkfVscPKeMpAbgj6IAzflqHpWPPvae05AsumbqEiC7Mia83iARwlST12LoPHBd2a7WXVE1zYxuGVPeafEuhQAwJjUwBIL0JkX1dIwNFygJCm9dc8zdh+fgOL5nVItK+HOX8VJe2tfLfPjR03WMxUr6d0lWDEhdAfO1tUkAkSvxPswvDOinTsCZWxlO2OnHY6MyaIJDTvq8oyl4A8XVoN23a531r3aJ/dmH1814qqxtBjoiI9pKKnb39wTXvOnQAo6fNa+lNGK2+IUA8+thBDgJRRHJnVB5/UZkECUvFS2Z0WB57fPO66/46NzKi0XfA4UJ7Y4JYXDAqB/qK9NDa948L82e8ZFonstNTbCMBRbcAEBQBFC8A9oYFEQCKg4MOIrR53bXfqBw/8vvO1jZGUfU3Nw/96veDIFDF4uAFK5yivbFWyIkEENpyO93XTNQUiPgXcfsgCFoG7YG+PgJyLed0EljN6TssxcEcAyRvVhBZIFz/CYCERBRkqgCEpD/YbiY/Hk2hgIsTRRFA6rFM/ByZOrApdBBhnU2LFXl4w4H5WoCYMnEir4gURBgEBWdrCWdVR8qsvm55qjSClPEJIgSlYi6WnW+8JCKMJ9rAJhDJh+99ZrqNoq+CkG6QCiJSApEDA6QJEKlAUBaIigkGslDqJRLe5RJHvlscpFps0aI6k/v/VkEU/hdbqzhnQxeLi5EiUgkAZZUhe063dBw6hD8VZwVOqgDVBMJRreyD1AsNK26+ppwgP2Gx0iS7IBwBiME/oRmZgoYlAkchlL3kuRvv2bfp5X/Zf1+hQFEuN6LfKPM0NbNVQR50oK9Ih0ZnnzOp3P7xMAo9/mqWumbOF+AAKrjCpGYnFQ4fxiGgGp+f6xh6Nt5jTt+AFEfz0tCkBoGoA927EwAwI+vbo48dZOSAQ6OjNIB86xJY3RKXff7p2boWPQ/SWYgTkTilJDq9axSI0iahtJ+CrZaeYjv+n7etG/jBz2ORQRCoHRhQU33DYi7HoDNz2/9frQAEgagDfUU6neS/kzutg3iQlM4K2w7Ku3bOlVq+T32+dV4q63EUHYar3rB56NrvIxCFMwZSqD/YoXfmB9yZABT3F3S6eZhW3vNMD7vKWxR5c8G2B6DZALoF6CbAA2BAJBBxIHICRARYkXoNxgn9OAiSBCQDocnFXDnVQJmKxCYSAUgpXRPhl0jwjJdI7H3wD65+qQFMrlhUccTY/K3jwOlcQKQ2CY9AIMyOJv3u5P2sSWaMDSs/NsZb9K1j3xxDPi+nA6Xd/d74uV2/5Dz9HgV6pwjPjt9cHSOlXyQtPxTG97f80aIjU13fOtwaksTu3YnxajILj7sN3ByGzCHSvWC+DIp6hN3lROoSgcwxfiqt/RSMn8KkAE0EzLFgmOt1GGBuBJEnPjTR2clj4qAFNqyME+j/EPCVzX+0aMuJaPE0RTNnAqKICKja9ljPJDPG1SpxX1pO5yiRnemFE8fXb127+PbTvUfj//3BSDbbfcXHlOA/sMgSk0gliXTrGISAbQRnoyNK0RMM+drE2PiDOwtL7VSFR+fkTj987zPTa7Y2zzDNZUIvAZcD6IGgF4S5AlxEIjOhVFJpLwZaYkDFWYjwWQU0IkJKaa0TKUAEztrHIltZ++211z192oqqU4AoENZeQrkw/AmL/KpSZMNSpJAGPOdlleYbof0/JeFUHUhqvJDSHpijIzU2Vz62btHxxnNOBjB+v5Xrn/yQ8lJ/rhOpt4uLYMNqbOkdrhGIUsoo7ScBEDiqPe1cdMe2oSWPxPUqeWn2ONTBMicDHIzOTpW9xDSryTPQShkWrnHoyIZd02ZWDh0+XG1OB3IjonFoNFWq1C4iG80io+Y54fkauofZXQGiHoL0guiyc4hJRSReNPZSWc1RWLMuvO3hoWvuO2WkeFoQk4qj6g+3Dl3ztk6Xr9jw1MeNn/o7G54km2RlfMXOLt265r07Og2mhgUuH959m/FTdxMAF1XryjBROFXdSFxxxABgEikNEFxUvWvrmsV/HAdUmATSnDQIiNAQC68efoIc+UlNrkesm89C8+Dp+Rp0ablcmp1Npy5euWFvt4hkQJQs/eQpIYIAEkJRVURqJFRlYktxVkcQSp0JXs0T5OQvdQl/VJlwpJSfSE//0vLhvbOLa5fk+4Pt5nT55dTRJ9HCTfu8/TcttMiDkIcEedAO7FDbhhZ/dcXw7nXGT/XZqNoMJGsvQcyupzmSbrT+YLspDpJdObw772VmBFHlOAsziJShdvvp1F86IVGxtQqDSBKZGXes2LDn4sIQfapOPLjT5okPrX3/OIBxAD/u9P9Vwb60TdmZGnqekJtLgl4mmq9JzWPwpQSaQ5CLIJhB2nham3i+7FSzGGtJHQCjjEexU2AwW4agRbZIRFqYJSoft8nstGDFn+06vu326+79eXK37Mvj9eBEgEKseu8PtisEgSKlv6eM30dRjVv5ZoIw0xRzoF22fvfveOnpQVQesxDRRIraPQsBirShmAgRiIvq30F0w1Jjza1IbeLVKNE185Mrhne9Uhyk/9qw/tMl+yfc64Ei1RbNu1hIz3KssxAxDAdS7OBQJVI/ZiM/MCIRayJVcb7VapaCnqNIZjK7G0npG9lZ7iCCckp72iTSJqqOg110uF6FnDV+uouUgq1MSPNIJSKCiI4qE1YnUnd/6HN79xQ/u2T3mVQdd3S5gOkPtmPilf10xQ3CBx+7Xw1gwO0sLGUMr1zANkK9pK4Rgyhna0TAT5vz41xuRBcHya24+6nrlPK+GFVLDsK6OZoTCBOU8tNZ7aIa2IZHGa5CkJQy/gztJ01UnYAIN1k+EZGYsHTcGj/zJyuG920vDi7anhsRbc7A00y619yC7WPltM4ouG72TA85uZyU1wNxV0CkRwkuYWCWJp9Udxd840GEEZaOgYTBNkQnAL1kVtuwesTVyv+DWH3LJvlHJmmsOkbTbVh+ryL1Ce2nPswuArtIJkc0EbGzZIyvtJb7+oPtixeM7jj75JvgdhaWTkan++8HALj9uBmr7tn3aaXMu1pdqYhSWrmwOqGt/DMAFEdHBSJUzOflAxu/nQHzXyujtI1qrrkORYRZe0klzJGtTvwvAX3NRd6omcUlE7pUVA4XCPPHiNRva+MnbFhhmhTYEolwfRxFX8oFz767mEP0C032Vw8/0cUiM1ibuXC6hwi9AF8hRJ9QSnUJt5a3iTB7qS5lw+qjztr/8si6a16a6t6rhp/6DTLmfhHprrscahkIqS7tKqV/v2Xt4gdaQv5TBTYiooxP4qJXSOgPhYSFUad4pZsU/Zr2k8tdWG3h5OoDT7la6eEtQ0tWNpibxry8YsPeWxKZaV8IJ45ZNNVSiggbP6WY7Qtw9je3DC3ZPVV/lw/vXaSM+TutvbfbWqkJyPj5fnqaDivjv7VtaPFXzTkEidRMz83pG5AFo5BCgbhpDv3XyY+/ft980nSTiJW2PD+2wFpl50+ff3rV/vtvjhZu2uetenmhK+QhDYFbrgh1aHQHbVm7+IHlf/bkYeOnHxGldJ0ooBNen4VJfg/AA8XR/JnRVUQkLgKRmqsTqa+3OCClIcyIywraiQEwKaWt8H3xklbMlu/MD7iF8/Z5OGZ/14VVabuQtZeAsHslrNU+8Ohnr/vRwk37vCseO8jFkRxP9newqA7OuEI9vHbRvpX/bdcNLim7tJfobSlIIgI7KxD+dBDI136xtFu9TDx3oI8OLZjtAbDZdPo2PzttfVg6bk8EUiJxkkslFnrntjULXzxtwhw86xcL7wyXr991ZyIz/Y/D8phrqdEggkBC0vSOrZ9ZfHCy/v8MGRsRuHaOoV62o9uCL5vousirjh3++21rr801aLcT+eD/Xaw8vdfZ1vJ2iLBJZlRUmfi1beuu/UYuGPGLhcFwqv4u3LTP23/zomjZ5574oJ/KfttGtfaqMgGRCNR1v9iVfYprMIrFQTen73C0s7DUCsmvCLdPU+RMMkPsor/Ztmbhi/Vw/JTBSDHfFwVBoFwF90aViVeVNro5NBcW5/lpH1auBuIy8bN7dejmA4BpAxCkNXmpbq828epXOHnRx4NAFPJxvNBIMYRcv/ZToKZ1UIGwTqRUVJ14Ztu6674RV0BPDSAA7L95UZQbGdGPfPb9j9pa9QkvkVbNA00EbPyUAvPK8ybPKObqvKbgLexsC4cqEMXOQsR8CyI0p29AzmSAHDjQR48WrnuVxX1X+yk0K8aJIKQNYvZIaOKVLjpzRkoEgAVg2y1y8pW1ZlLmeFgd/72taxZ/6pFb31aL3X4b40LoaxfcEYiV8UFKPQQIDi04s1WieGAIEdE3SZvY2ZxYOycRBiBLzp/Gpt45IpoZL+w3NiQSUaSVDcthQtFBEMmCM5zD4s4LKeB5iheD28hugEHzAJL9cxc6AIJ8ngCQCys0ZQCuNHmpLuOluoxJpHQHJboo0oqtHStNlO4PAlG5X39A1/tIAGjOgcMS95rmCTOkfU8SEQD83Nkv65GQoh/GKc6Je1Kco4Igc19PjQ1XPO0ATFnlOJV8A7LHTQUIwKY/2G66sN9PjUit4ab9TFeEicpJzJb2EsQ2fMGWJ9YBDkLqepPM3BRVS9xU2Kri7Vqm92bAdxeG6Na2h6JBMggkC+HOPkDUORERzjmrjNQNgU7iWc8fiPWAQoAj8UpHw2qImJ1oL5FUteqlgLyY6ytS8YxHJgCing7LWNpWSyCh38pk0itYnCm9sNeuHN4bIzdeMUKSBjMmgxqCxCxYdGTL2sUP1Omyf8gC12sv+VZnT+SGRKSjypgAcsvK4b1LO60Vxn2Ut7qohpNL2wkE1RsHfztwxu5UhPTdT12mPB8UVScZI5m8J4XnzZ3253c0goLnSekWZTYROe0nwUTXAyRnpCQQoeLoqPynYHtSwP0uqkJaPxSJMEjrmdpLXKk9/3LjJa/UieRVOpG8SvvJBTEgcrL1Ckx/sN30B9uTOwtLLYRuU9rQSaIrESKQmrxny5H6FZ1IXkVKZ+K5qjmvBAk7OLbLQSR113sGg3ZAQCTs+EOxi27ZI0+UViKgH59/3anQ/g5/VS6sgIg++YGN/5QZwAC3ywlPSjHyRQ+FAh9KJT/mpbp7XRS5Ths5CFtxUZWdDdlGVbZhJT6iCp/CQ8vOwlK7Mz9Qy42M6K1rFz8UVSa2+amuTgU+mLxnh0OEpVPka2slMX5yYNXwrvcUi4Ouoeib0gjqEfuyux5foI2/3NZKQnTS5hNESnaeNxAHMMAAoEV2RrUSo5VuUy4KnZfM9npcvTfWqeQRd6xtR8YgUDdt2ucVC4PhijufvEx7/nq2NSaaKvIkIpAiQMU/TxxnIVYh5dxtLqpWSWlCm/m237ftGTSFTkdIaSPK/GV/8D+TOwtL7cKb9nmQ9h0ohRrMz8KbNnnaT96vPD8hcZ42uXyslFK2WikpYOv51djUE+Hlw7t3+snsv4uqZW7OvQRwXiKjbVi5e+ua9w5NfqwgUAHyaA7hl921Z4FJmL9XxnuHDSsdtkQ5+7pEQZxruaj6zNY1SxY25rXGR1y5ftd6LztjbRhvRaZPcsUylfOhBjKq9Q1jmpGj6sMyhv+4pVCXX9RZsOb+3rD+H6clvRl/q73U6qgy3kpsANZLdZuoMlbcOrRk8LyCOLkounH3ct/PbouqpfaXARDTb1Gt8oQG1oMzjz+09h3jk1qUjXsuZzEfJ023KWWm2bDcwiM2Il0ipc5WpyDMMMkMXLX8vS1Di981GZyIEPKg1ennMo7GRrWf6nVR9QRdO8mkqla7q/+9vnIEdhGfDGRM+Luo+gKg7gL4m81amo98ce9FrqpXCckd2k9dGcXbv+g2poaVMkosL9qydtHT513t1iCHVwzv2eanu5dH5bEWUniyY4m0FghcWHsJkOchGAPkUiF6h5/qSttaCewct88LAmGtfeVsVCEIy9lITghsvJRyYeV7W9dec92JCLN5Vf6p3/ASqb+yYZkhohtulwQCxGLiZnccjwAaF8DTxutxNjzJa8QrGQmlTAK2OnEEkB9C5DBAs0D0yyaZmc02gotXQNpXfWwiO93Uxo/+xbZ11/5OLjeiXyMQISs2Pj1fEZ4mohnORi1utQEGAGjtK2U8gFS86W1UA7M7WXVWFyz5mRleVDq+lUT/LgBY2LNaikoYRVxz4eY7rv3ZVGnDsmD7pdyVIWXjoCVhamTJ43TkTxxtu8KkrHTZedH42MueSlPRz0z7YFg6GlHzDrsNXkJElPG0Nh5AsQ7J2RBsrQPFkXCr5xDnJdPahtXntHQtfnf57aVCvj2IOG9uNSaHl23Y80HPSz4szip2tpNrBQAWqddXxJtPUyeNqAisn5nm2Urpe2L9pVtvv+ro+Qqvz7X24iOf23uR8/R3dCpzdVg6HhHBnNQXEREihsScPIkodN7k12ovaSB81EW1921bd+2kePk1Ew833NOy9U/+uuelvkraJGytbOvu8Qyj5LqkgUj5melkKxM7q1Id/Mc17zuUGxnRxVyO6zTb2bXT6UanSn/y+amEs8jlRlSxOOiW3fX4bJPMfN1LZq8PS8cBiIWIPlPdZszlCvxUl3Y2fJUrpY9sveP9321WMLymCvBG1Lds/XevMV7mK14y02drZThb43gHeFB95FNTZB5vcC2A0lqZRAYuqll29s/TEz+5o1gYDIMgUD9vxdN5mksUCgXuDwLT3bX6T0TRkPFTSVstxdoh1Pd9pma1ucSVXkJCBG0SaYAUOKp9x0Vjt2xbN/CDdgnKay7jb1jkquChtHT1/D6BPqW0+iVSGuxsvAG8cExzKAVSGqRMvN10VDsOqM0qsv/9odsXP9P8ofBGbU161GUb9yww5N0qIh/Vnj+LgEnhWJ3lASkNpQ1IabioZgXyJLF8ccvQ4n8AOivBX5dajOYXWRbs6TZd3nIRXkaQd4vIPBGZTnH5wDGQ/hmR/ACg74jih7d+ZvHBE4MBb9jCz3YHmxsR1SDjV96zqwcq8SGycoMQXw2WHgDTAFgIHQHJj4jU46T8zZtvu3pPSy7Zoe7j/wFrw9WUhLA0KAAAAABJRU5ErkJggg=="><span class="hdr-academy">Academy</span></div>
-            <div class="course-level" id="headerLevel">Home</div>
+        <div class="hdr-title">
+            <a class="hdr-link hdr-link-moro" href="./?welcome=1" onclick="showWelcome(); return false;" aria-label="MoRo IMR Training Academy. Go to the welcome page.">
+                <div class="course-name"><span class="course-name-old">MoRo IMR Training Academy</span><img class="hdr-moro" alt="" aria-hidden="true" width="113" height="56" src="data:image/png;base64,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"><span class="hdr-academy">Academy</span></div>
+            </a>
+            <div class="course-level" id="headerLevel">My learning</div>
         </div>
-    </a>
+    </div>
     <div class="header-right">
         <nav class="header-links" id="headerLinks" aria-label="On this page">
             <a href="#pathPanel" onclick="openPathway(event)">Pathway</a>
@@ -1908,7 +1925,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             </div>
         </div>
         <button class="btn btn-secondary home-btn" id="homeBtn" onclick="goHome()" style="display:none; padding:9px 16px; font-size:13px;">
-            <svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home
+            <svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning
         </button>
         <button class="btn btn-secondary menu-btn" id="menuBtn" onclick="openCourseMenu()" aria-haspopup="dialog" aria-controls="courseDrawer" aria-expanded="false">&#9776; Modules</button>
     </div>
@@ -1982,7 +1999,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <section class="c-sec c-end c-reveal" aria-labelledby="cEndH">
             <h2 class="c-h2" id="cEndH">Start with the basics.</h2>
             <div class="c-cta"><button class="c-btn" id="cStart2">Start Level 1</button></div>
-            <button class="c-text" id="cDash">Already started? Go to Home</button>
+            <button class="c-text" id="cDash">Already started? Go to My learning</button>
         </section>
     </div>
 
@@ -1996,7 +2013,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
                 <p class="ob-hint">Swipe the word, or use the arrow keys.</p>
                 <p class="ob-pathline" id="obPath" aria-live="polite"></p>
                 <button class="ob-go" id="obGo">Start learning</button>
-                <button class="ob-skip" id="obSkip">Already learning? Go to Home</button>
+                <button class="ob-skip" id="obSkip">Already learning? Go to My learning</button>
             </div>
         </div>
     </section>
@@ -2004,7 +2021,6 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
     <div class="vb b-home">
         <section class="b-top" aria-labelledby="bHello">
             <div class="b-id">
-                <div class="b-mark"><img id="bMoroLogo" alt="MoRo - Technology of Tomorrow"></div>
                 <div>
                     <h1 class="b-hello" id="bHello">Welcome</h1>
                     <p class="b-lead">Your learning, in one place.</p>
@@ -2021,8 +2037,10 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
                     <p class="b-sub" id="bRouteSub"></p>
                 </div>
                 <button class="b-full" id="bFull" onclick="selectRole(null)" hidden>Show full pathway</button>
+                <button class="b-full" id="bBack" onclick="backToMyRoute()" hidden>Back to my route</button>
             </div>
             <ol class="b-steps" id="bSteps"></ol>
+                <div class="b-route-foot"><button class="b-full" id="bBackEnd" onclick="backToMyRoute()" hidden>Back to my route</button></div>
             <div class="sr-only" id="bStatus" role="status" aria-live="polite"></div>
         </section>
 
@@ -2173,7 +2191,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </div>
     </section>
 
-    <p class="foot-welcome"><button class="foot-link" id="footGlossary" onclick="loadGlossary()">Glossary</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footOffline" onclick="openInstallPanel(event)">Use offline</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button></p>
+    <p class="foot-welcome"><button class="foot-link" id="footGlossary" onclick="loadGlossary()">Glossary</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footOffline" onclick="openInstallPanel(event)">Use offline</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button><span class="foot-sep" aria-hidden="true">&middot;</span><a class="foot-link" href="https://www.difacto.com/" target="_top" rel="noopener" data-difacto-site onclick="return leaveForDifacto(event)">DiFacto website</a></p>
     <footer class="section-footer" style="margin-top:48px;">
         <p>&copy; 2026 DiFacto Robotics &amp; Automation &middot; <a href="https://www.difacto.com" target="_blank" rel="noopener">www.difacto.com</a></p>
     </footer>
@@ -2183,7 +2201,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- MODULE VIEW                                    -->
 <!-- ═══════════════════════════════════════════════ -->
 <div id="moduleView" style="display:none;">
-    <nav class="back-bar" id="backBar" aria-label="Back to Home"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><span class="back-right"><span class="back-ctx" id="backCtx"></span><button class="btn btn-secondary read-btn" id="readBtnBar" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button></span></nav>
+    <nav class="back-bar" id="backBar" aria-label="Back to My learning"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button><span class="back-right"><span class="back-ctx" id="backCtx"></span><button class="btn btn-secondary read-btn" id="readBtnBar" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button></span></nav>
     <button class="sidebar-expand" id="sidebarExpand" onclick="setSidebarCollapsed(false)" aria-label="Show the module list" title="Show the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 17l5-5-5-5"/><path d="M6 17l5-5-5-5"/></svg></button>
     <div class="layout">
         <!-- SIDEBAR -->
@@ -2191,7 +2209,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebarNav()" aria-expanded="false" aria-controls="sidebarNav">
                 <span id="sidebarToggleText">Sections</span><span class="sidebar-toggle-chev">&#9662;</span>
             </button>
-            <div class="nav-top"><button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button><button class="nav-collapse" id="navCollapse" onclick="setSidebarCollapsed(true)" aria-label="Hide the module list" title="Hide the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></button></div>
+            <div class="nav-top"><button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button><button class="nav-collapse" id="navCollapse" onclick="setSidebarCollapsed(true)" aria-label="Hide the module list" title="Hide the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></button></div>
             <div class="sidebar-module">
                 <div class="module-label" id="sidebarModuleLabel">Loading...</div>
                 <div id="sidebarNav"></div>
@@ -2279,7 +2297,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <button class="drawer-close" onclick="closeCourseMenu()" aria-label="Close menu">&times;</button>
     </div>
     <div class="drawer-tools">
-        <div class="drawer-quick"><button class="drawer-home" id="drawerHome" onclick="menuGoHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
+        <div class="drawer-quick"><button class="drawer-home" id="drawerHome" onclick="menuGoHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button>
         <button class="drawer-home drawer-glossary" id="drawerGlossary" onclick="menuGoGlossary()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button></div>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
         <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules and terms..." oninput="renderCourseMenu(this.value)" autocomplete="off">
@@ -2287,6 +2305,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
     <div class="drawer-body" id="drawerBody"></div>
     <div class="drawer-footer" id="drawerFooter">
         <button class="drawer-lock drawer-offline" id="drawerOffline" onclick="menuOffline(event)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg>Use offline</button>
+        <a class="drawer-lock drawer-site" href="https://www.difacto.com/" target="_top" rel="noopener" data-difacto-site onclick="return leaveForDifacto(event)">DiFacto website</a>
         <button class="drawer-lock drawer-welcome" id="drawerWelcome" onclick="menuWelcome()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>Welcome screen</button>
         <button class="drawer-lock" id="drawerLockBtn" onclick="lockSite()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg> Lock this session</button>
     </div>
@@ -2428,6 +2447,7 @@ function init() {
     const mid = params.get('module'), eid = params.get('exam');
     navFromHistory = true;
     try {
+        if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
@@ -2456,7 +2476,10 @@ function okToLeaveExam() {
     const n = examHasAnswers(); if (!n) return true;
     try { return window.confirm(`Leave the exam? Your ${n} answer${n === 1 ? '' : 's'} will not be saved.`); } catch (e) { return true; }
 }
-window.addEventListener('beforeunload', e => { if (examHasAnswers()) { e.preventDefault(); e.returnValue = ''; } });
+const DIFACTO_SITE_URL = 'https://www.difacto.com/';   // the one place to change where the DiFacto logo leads
+let leavingForSite = false;
+function leaveForDifacto(e) { if (!okToLeaveExam()) { if (e && e.preventDefault) e.preventDefault(); return false; } leavingForSite = true; return true; }
+window.addEventListener('beforeunload', e => { if (!leavingForSite && examHasAnswers()) { e.preventDefault(); e.returnValue = ''; } });
 // ── Reading options: theme, hide the module list, focus mode (remembered on this device) ──
 let readTheme = 'light', sideCollapsed = false, focusMode = false, readReturn = null;
 function readGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -2679,7 +2702,7 @@ function showLoadError(what, retry) {
         <div class="section-eyebrow">${offline ? 'Offline' : 'Problem'}</div>
         <div class="section-title" role="heading" aria-level="1">${offline ? "You're offline" : `We could not load ${what}`}</div>
         <p class="body-text">${offline ? `${what.charAt(0).toUpperCase() + what.slice(1)} is not saved on this device yet. Connect once and it will be kept for next time, or save everything for offline use from Home.` : 'Please check your connection and try again.'}</p>
-        <div class="btn-row"><button class="btn btn-primary" onclick="window.__retryLoad && window.__retryLoad()">Try again</button><button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button></div>`;
+        <div class="btn-row"><button class="btn btn-primary" onclick="window.__retryLoad && window.__retryLoad()">Try again</button><button class="btn btn-secondary" onclick="goHome()">&#8592; Back to My learning</button></div>`;
     focusHeading();
 }
 // ── Use offline: saved copy on this device, install to the home screen, and quiet update prompts ──
@@ -2835,9 +2858,9 @@ function showHome() {
         document.getElementById('moduleView').style.display = 'none';
         document.getElementById('progressWrap').style.display = 'none';
         document.getElementById('homeBtn').style.display = 'none';
-        document.getElementById('headerLevel').textContent = 'Home';
+        document.getElementById('headerLevel').textContent = 'My learning';
         closeReadPanel(); applyReadPrefs();
-        setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'Home');
+        setPageTitle(document.body.classList.contains('ob-mode') ? '' : 'My learning');
         if (!fromHistory) window.scrollTo(0, 0);
         focusHeading();
     });
@@ -2896,7 +2919,7 @@ async function loadModule(moduleId) {
                 <div class="section-eyebrow">Not found</div>
                 <div class="section-title" role="heading" aria-level="1">Module not found</div>
                 <p class="body-text">We could not find <strong>${escapeHtml(moduleId)}</strong>. Check the link, or choose a module from the menu.</p>
-                <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button></div>`;
+                <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to My learning</button></div>`;
             focusHeading();
         } else showLoadError('this module', () => loadModule(moduleId));
     }
@@ -3086,7 +3109,7 @@ function renderQuiz() {
                         <button class="btn btn-primary" onclick="showCertificate()">Download Certificate</button>
                         <button class="btn btn-primary" id="examBtn" style="display:none;">Take the exam →</button>
                         <button class="btn btn-secondary" id="continueBtn" style="display:none;" onclick="continueToNextModule()">Continue →</button>
-                        <button class="btn btn-secondary" id="dashBtn" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Home</button>
+                        <button class="btn btn-secondary" id="dashBtn" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button>
                     </div>
                 </div>
             </div>
@@ -3399,6 +3422,8 @@ function renderRoute() {
         ? `${st.count} levels. Choose a role below to see only your route.`
         : `${st.count} ${st.count === 1 ? 'level' : 'levels'}. You will be able to ${lowerFirst(role.outcome)}.`;
     document.getElementById('bFull').hidden = full;
+    const lastRole = (() => { try { return localStorage.getItem('moroRoleLast'); } catch (e) { return null; } })(); const canBack = full && !!lastRole && !!levelById(lastRole);
+    ['bBack', 'bBackEnd'].forEach(i => { const e = document.getElementById(i); if (e) e.hidden = !canBack; });
     let nextId = null;
     for (const s of stops) { if (s.alt) break; const id = s.levels[0]; if (!levelProgress(id).complete) { nextId = id; break; } }
     const rs = getResume();
@@ -3409,8 +3434,10 @@ function renderRoute() {
         lvlNo += 1; return levelStep(s.levels[0], i, nextId, hereLevel, lvlNo);
     }).join('');
 }
+function backToMyRoute() { let r = null; try { r = localStorage.getItem('moroRoleLast'); } catch (e) {} if (r && levelById(r)) { selectRole(r); const h = document.getElementById('bRouteH'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
 function selectRole(id) {
     bRole = id;
+    try { if (id) localStorage.setItem('moroRoleLast', id); } catch (e) {}
     try { if (id) localStorage.setItem(ROLE_KEY, id); else localStorage.removeItem(ROLE_KEY); } catch (e) {}
     document.querySelectorAll('#bRoles .b-role').forEach((b, i) => {
         const on = b.dataset.role === id;
@@ -3598,7 +3625,7 @@ function renderOnboarding() {
         document.getElementById('obDown').addEventListener('click', () => obStep(1));
     }
     const go = document.getElementById('obGo'), skip = document.getElementById('obSkip');
-    go.textContent = revisit ? 'Go to Home' : 'Start learning'; skip.hidden = revisit;
+    go.textContent = revisit ? 'Go to My learning' : 'Start learning'; skip.hidden = revisit;
     go.onclick = revisit ? () => obFinish(obPick, null) : () => obFinish(obPick, `${routeFor(obPick)[0].levels[0]}-M1`);
     skip.onclick = () => obFinish(null);
 }
@@ -3716,7 +3743,7 @@ async function loadExam(levelId) {
             <div class="section-eyebrow">Level exam</div>
             <div class="section-title" role="heading" aria-level="1">Exam not available</div>
             <p class="body-text">${escapeHtml(err.message)}</p>
-            <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to Home</button></div>`;
+            <div class="btn-row"><button class="btn btn-primary" onclick="goHome()">&#8592; Back to My learning</button></div>`;
     }
 }
 
@@ -3726,7 +3753,7 @@ function examHead(ex, sub) {
 function renderExamIntro() {
     const ex = currentExam, lv = ex.levelId, s = examStatus(lv), total = ex.questions.length, needed = Math.ceil(total * ex.passMark / 100);
     const main = document.getElementById('mainContent');
-    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button>`;
+    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to My learning</button>`;
     if (s.kind === 'locked') {
         main.innerHTML = `<div class="view active">${examHead(ex)}<div class="assessment-intro"><p class="body-text" style="margin-bottom:0;">Finish all ${builtTitles(lv).length} modules in Level ${lv.slice(1)} to unlock this exam. You have <strong>${s.left} ${s.left === 1 ? 'module' : 'modules'}</strong> left.</p></div><div class="btn-row">${back}</div></div>`;
     } else if (s.kind === 'passed') {
@@ -3790,7 +3817,7 @@ function submitExam() {
     const passed = score >= needed, lv = ex.levelId;
     saveExamAttempt(lv, score, total, passed);
     const s = examStatus(lv), name = loadLearnerName(), pre = name ? `${name}, ` : '';
-    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to Home</button>`;
+    const back = `<button class="btn btn-secondary" onclick="goHome()">&#8592; Back to My learning</button>`;
     let body;
     if (passed) {
         document.getElementById('statusLabel').textContent = 'Passed \u2713'; document.getElementById('statusDot').className = 'status-dot done';
@@ -3883,7 +3910,6 @@ function renderCerts() {
 
 function renderHomeB() {
     if (bRole === undefined) { let s = null; try { s = localStorage.getItem(ROLE_KEY); } catch (e) {} bRole = (s && levelById(s)) ? s : null; }
-    const logo = document.getElementById('bMoroLogo'); if (logo) logo.src = MORO_LOGO_B64;
     renderGreetingB(); renderContinueB(); renderProgress(); renderRoles(); renderDeck(); renderRoute(); renderCerts(); renderExams();
     if (!calmMotion()) document.querySelectorAll('#homeView .b-bar span, #homeView .b-cont-bar span').forEach(s => { const w = parseFloat(s.style.width) || 0; growBar(s, 0, w); });
     const ob = firstVisit(); document.body.classList.toggle('ob-mode', ob); if (ob) renderOnboarding();
@@ -4618,6 +4644,7 @@ window.addEventListener('popstate', () => {
     const mid = params.get('module'), eid = params.get('exam');
     navFromHistory = true;
     try {
+        if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
@@ -4674,6 +4701,7 @@ bindPathwayDrag();
     } catch (e) { /* storage unavailable: keep the default look */ }
 })();
 loadReadPrefs(); applyReadPrefs(); initSlides(); initHeaderAutoHide(); registerServiceWorker();
+document.querySelectorAll('[data-difacto-site]').forEach(a => { a.href = DIFACTO_SITE_URL; });   // one place to change the DiFacto address
 try { const mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', applyReadPrefs); else if (mq.addListener) mq.addListener(applyReadPrefs); } catch (e) {}
 syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
 if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));
