@@ -1558,6 +1558,65 @@
         .b-route-foot { margin-top: 14px; }
         @media (pointer: coarse) { .header-left .hdr-link { position: relative; } .header-left .hdr-link::after { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; height: 44px; transform: translateY(-50%); } }   /* a 44 px tap area for thumbs, without changing the layout */
         a.drawer-lock, a.foot-link { text-decoration: none; }
+        /* ── LANDING REVISIT: one centred axis, the chosen word leads, the path and button stay in view ── */
+        .ob-inner { min-height: calc(100svh - 120px); padding: 8px 0 24px; }
+        .ob-mark { align-self: center; width: 108px; margin: 0 auto 2px; }
+        .ob-sent { font-size: clamp(40px, min(9.4vw, calc((100svh - 480px) / 3.45)), 86px); }
+        .ob-ln.p, .ob-ln.n { transform: scale(0.56); }
+        .ob-ln.p { transform-origin: 50% 100%; }
+        .ob-ln.n { transform-origin: 50% 0%; }
+        .ob-pathline { margin-top: clamp(12px, 3svh, 30px); min-height: 1.4em; }
+        .ob-go { margin-top: clamp(14px, 2.4svh, 22px); }
+        @media (max-width: 600px) { .ob-pathline { min-height: 2.7em; } }
+        /* ── WELCOME SCREEN, NAVY AND GRADIENT TRIAL (opt-in: ?landing=navy) ── */
+        body.ob-mode.ob-navy { background: #070F2B; }
+        body.ob-mode.ob-navy::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(60% 50% at 14% 8%, rgba(66, 133, 244, 0.46), transparent 62%), radial-gradient(52% 46% at 88% 18%, rgba(155, 114, 255, 0.40), transparent 62%), radial-gradient(70% 56% at 50% 108%, rgba(0, 180, 216, 0.30), transparent 66%); }
+        body.ob-mode.ob-navy .ob { position: relative; z-index: 1; --ob-ink: #F5F7FF; --ob-mute: #A3B4DA; --ob-blue: #9DBCFF; --ob-blue-d: #7FA6F7; }
+        body.ob-mode.ob-navy .header { background: rgba(7, 15, 43, 0.55); border-bottom: 1px solid rgba(255, 255, 255, 0.10); }
+        body.ob-mode.ob-navy .header .course-name, body.ob-mode.ob-navy .header .hdr-academy, body.ob-mode.ob-navy .header .course-name-old { color: #F5F7FF; }
+        body.ob-mode.ob-navy .header .hdr-difacto { box-sizing: content-box; padding: 4px 7px; margin: -4px 0; background: #fff; border-radius: 8px; }
+        body.ob-mode.ob-navy .header .menu-btn { color: #F5F7FF; background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.20); }
+        body.ob-mode.ob-navy .ob-mark img { filter: brightness(0) invert(1) drop-shadow(0 0 18px rgba(138, 180, 255, 0.40)); }
+        body.ob-mode.ob-navy .ob-ln.c { color: transparent; -webkit-text-fill-color: transparent; background: linear-gradient(90deg, #5B9BFF 0%, #A07BFF 52%, #FF86BD 100%); -webkit-background-clip: text; background-clip: text; }
+        body.ob-mode.ob-navy .ob-roller:focus-visible .ob-ln.c { text-decoration-color: #A07BFF; }
+        body.ob-mode.ob-navy .ob-nudge button { color: #C9D6F5; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.24); }
+        body.ob-mode.ob-navy .ob-nudge button:hover { color: #fff; border-color: #9DBCFF; background: rgba(157, 188, 255, 0.14); }
+        body.ob-mode.ob-navy .ob-go { background: linear-gradient(90deg, #2F66E6, #6A4DF0); box-shadow: 0 10px 34px rgba(94, 110, 255, 0.45); }
+        body.ob-mode.ob-navy .ob-go:hover { background: linear-gradient(90deg, #2958CC, #5B3FDC); }
+        body.ob-mode.ob-navy .ob-skip { color: #B4C8FF; }
+        body.ob-mode.ob-navy footer, body.ob-mode.ob-navy footer p, body.ob-mode.ob-navy footer a, body.ob-mode.ob-navy footer .foot-link, body.ob-mode.ob-navy footer .foot-sep { color: #B4C4E6; }
+        body.ob-mode.ob-navy footer a:hover, body.ob-mode.ob-navy footer .foot-link:hover { color: #fff; }
+        /* ── WELCOME ROLLER: one compact line ── */
+        .ob-controls { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 4px; }
+        .ob-nudge { margin-top: 0; gap: 6px; }
+        .ob-nudge .ob-chev { position: relative; width: 30px; height: 30px; font-size: 14px; }
+        .ob-nudge .ob-chev::after { content: ""; position: absolute; inset: -8px; }
+        .ob-hint { margin: 0; max-width: 14em; overflow: hidden; font-size: 13px; white-space: nowrap; transition: max-width 0.35s ease, opacity 0.25s ease, margin 0.35s ease; }
+        .ob-hint.done { max-width: 0; margin-left: -10px; opacity: 0; }
+        .ob-ln.p, .ob-ln.n { cursor: pointer; }
+        .ob-ln.p:hover, .ob-ln.n:hover { color: var(--ob-ink); }
+        @media (prefers-reduced-motion: reduce) { .ob-hint { transition: none; } }
+        /* ── LESSON PROGRESS RAIL: one dot per section, a preview card on hover or focus ── */
+        .sec-rail { position: fixed; right: 28px; top: 50%; z-index: 40; transform: translateY(-50%); }
+        .sec-rail[hidden] { display: none; }
+        body.home-mode .sec-rail, body.ob-mode .sec-rail, body:not(.inner-y) .sec-rail { display: none; }
+        @media (max-width: 1099px), (pointer: coarse) { .sec-rail { display: none !important; } }
+        body.inner-y .sec-rail { --b-ink: #1D1D1F; --b-mute: #636366; --b-line: #C7CCD6; --b-blue: #2E6DB4; --b-bg: #FFFFFF; --b-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
+        body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sec-rail { --b-ink: #EEF0F4; --b-mute: #A0A7B4; --b-line: #3A404B; --b-blue: #5B9BE6; --b-bg: #1B1F27; }
+        .sec-rail ol { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+        .rail-dot { position: relative; display: block; width: 24px; height: 24px; padding: 0; background: none; border: 0; border-radius: 50%; cursor: pointer; }
+        .rail-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--b-line); border-radius: 50%; transition: transform 0.15s ease, background 0.15s ease; }
+        .rail-dot.seen::before { background: var(--b-blue); opacity: 0.5; }
+        .rail-dot.here::before { width: 12px; height: 12px; margin: -6px 0 0 -6px; background: var(--b-blue); opacity: 1; }
+        .rail-dot:hover::before, .rail-dot:focus-visible::before { transform: scale(1.35); }
+        .rail-dot:focus-visible { outline: 3px solid var(--b-blue); outline-offset: 0; }
+        .rail-card { position: absolute; right: 34px; top: 50%; width: 270px; padding: 12px 14px; text-align: left; font-family: var(--b-font); color: var(--b-ink); background: var(--b-bg); border: 1px solid var(--b-line); border-radius: 12px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(6px, -50%); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s; }
+        .rail-dot:hover .rail-card, .rail-dot:focus-visible .rail-card { opacity: 1; visibility: visible; transform: translate(0, -50%); }
+        .rail-card strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.3; }
+        .rail-card > span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; margin-top: 4px; overflow: hidden; font-size: 12.5px; line-height: 1.45; color: var(--b-mute); }
+        .rail-card em { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11.5px; font-style: normal; color: var(--b-mute); }
+        .rail-card em i, .rail-card em b { font-style: normal; font-weight: 600; }
+        @media (prefers-reduced-motion: reduce) { .rail-card, .rail-dot::before { transition: none; } }
         /* ── MODULES MENU: opens from the right, the button stays pressed, rows answer your pointer ── */
         .header .menu-btn[aria-expanded="true"] { background: rgba(46, 109, 180, 0.12); color: #245A96; border-color: #2E6DB4; }
         body:not(.inner-y):not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
@@ -2009,8 +2068,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <div class="ob-stage">
                 <h1 class="sr-only" id="obH">Tell us how you work with MoRo</h1>
                 <div class="ob-sent"><span>I</span><div class="ob-roller" id="obRoller" role="spinbutton" tabindex="0" aria-label="How you work with MoRo" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="work near"><div class="ob-track" id="obTrack"></div></div><span>MoRo.</span></div>
-                <div class="ob-nudge"><button id="obUp" aria-label="Previous role">&#8963;</button><button id="obDown" aria-label="Next role">&#8964;</button></div>
-                <p class="ob-hint">Swipe the word, or use the arrow keys.</p>
+                <div class="ob-controls"><div class="ob-nudge"><button class="ob-chev" id="obUp" aria-label="Previous role">&#8963;</button><button class="ob-chev" id="obDown" aria-label="Next role">&#8964;</button></div><span class="ob-hint" id="obHint">Swipe or tap a word</span></div>
                 <p class="ob-pathline" id="obPath" aria-live="polite"></p>
                 <button class="ob-go" id="obGo">Start learning</button>
                 <button class="ob-skip" id="obSkip">Already learning? Go to My learning</button>
@@ -2353,6 +2411,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 </div>
 <div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" class="ut-go" onclick="applyUpdate()">Refresh</button><button type="button" class="ut-x" onclick="dismissUpdate()" aria-label="Dismiss this notice">&times;</button></div>
 <div class="offline-pill" id="offlinePill" role="status" hidden>You're offline. Saved modules still work.</div>
+<nav class="sec-rail" id="secRail" aria-label="Sections in this lesson" hidden></nav>
 <div class="slide-hint" id="slideHint" aria-hidden="true"></div>
 
 <script>
@@ -2557,7 +2616,22 @@ function setSlides(on) {
     slidesOn = !!on; readSet('moroSlides', on ? '1' : null); applyReadPrefs();
     readSay(on ? 'Slides on. Swipe left and right to move between sections.' : 'Slides off. Scrolling as usual.');
 }
+function railExcerpt(s) { const t = String(s.content || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); const m = t.match(/^.{20,170}?[.!?](\s|$)/); return m ? m[0].trim() : t.slice(0, 120); }
+function updateRail() {
+    const r = document.getElementById('secRail'); if (!r) return;
+    if (!currentModule || !inReading()) { r.hidden = true; r.innerHTML = ''; return; }
+    const m = currentModule, n = m.sections.length, cur = currentSectionIndex === 'quiz' ? n : currentSectionIndex, visited = (getModuleProgress(m.moduleId).visited || []), passed = getCompletedModules().includes(m.moduleId);
+    let h = '<ol>';
+    for (let i = 0; i <= n; i++) {
+        const quiz = i === n, title = quiz ? 'Knowledge check' : m.sections[i].title;
+        const line = quiz ? `${m.quiz.questions.length} questions. ${passed ? 'You have passed this check.' : 'Pass it to complete the module.'}` : railExcerpt(m.sections[i]);
+        const state = i === cur ? 'here' : ((quiz ? passed : visited.includes(i)) ? 'seen' : 'new'), word = i === cur ? 'You are here' : (state === 'seen' ? (quiz ? 'Passed' : 'Read') : 'Not yet');
+        h += `<li><button type="button" class="rail-dot ${state}" aria-label="${escapeHtml(`Section ${i + 1} of ${n + 1}: ${title}. ${word}.`)}"${i === cur ? ' aria-current="step"' : ''} onclick="goSection(${quiz ? "'quiz'" : i})"><span class="rail-card" aria-hidden="true"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(line)}</span><em><b>${i + 1} of ${n + 1}</b><i>${word}</i></em></span></button></li>`;
+    }
+    r.innerHTML = h + '</ol>'; r.hidden = false;
+}
 function updateRibbon() {
+    updateRail();
     const r = document.getElementById('slideRibbon'); if (!r) return;
     if (!currentModule) { r.hidden = true; r.innerHTML = ''; return; }
     const n = currentModule.sections.length, idx = currentSectionIndex === 'quiz' ? n : currentSectionIndex, visited = (getModuleProgress(currentModule.moduleId).visited || []);
@@ -3593,13 +3667,18 @@ function obPaint() {
     obPick = OB_WORDS[obI][0];
     document.getElementById('obPath').innerHTML = 'Your path: <b>' + obNames(obPick).map(escapeHtml).join('</b> \u2192 <b>') + '</b>';
 }
+let obSuppressClick = false;
+function obHintDone() { const h = document.getElementById('obHint'); if (h) h.classList.add('done'); try { sessionStorage.setItem('moroHintDone', '1'); } catch (e) {} }
 function obStep(d) {
     if (obBusy) return;
+    obHintDone();
     const roller = document.getElementById('obRoller'), track = document.getElementById('obTrack'); if (!roller) return;
     const L = roller.offsetHeight / 3, calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     obI = obWrap(obI + d); obPaint();
     if (calm) return;
     obBusy = true;
+    { const inc = track.querySelector('.ob-ln.c'), out = track.querySelector(d > 0 ? '.ob-ln.p' : '.ob-ln.n'), opt = { duration: 380, easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)' };
+      if (inc && inc.animate) inc.animate([{ transform: 'scale(0.56)' }, { transform: 'scale(1)' }], opt); if (out && out.animate) out.animate([{ transform: 'scale(1)' }, { transform: 'scale(0.56)' }], opt); }
     track.style.transition = 'none'; track.style.transform = 'translateY(' + (d > 0 ? L : -L) + 'px)';
     requestAnimationFrame(() => requestAnimationFrame(() => { track.style.transition = 'transform .38s cubic-bezier(.2,.8,.2,1)'; track.style.transform = 'translateY(0)'; setTimeout(() => { obBusy = false; }, 380); }));
 }
@@ -3610,6 +3689,7 @@ function renderOnboarding() {
     let revisit = false; try { revisit = sessionStorage.getItem('moroWelcomeRevisit') === '1'; } catch (e) {}
     if (revisit && !obPick) { try { obPick = localStorage.getItem(ROLE_KEY) || bRole || null; } catch (e) {} }
     const at = OB_WORDS.findIndex(w => w[0] === obPick); obI = at >= 0 ? at : 0; obPaint();
+    try { if (sessionStorage.getItem('moroHintDone') === '1') { const h = document.getElementById('obHint'); if (h) h.classList.add('done'); } } catch (e) {}
     if (!roller.dataset.bound) {
         roller.dataset.bound = '1';
         roller.addEventListener('keydown', e => {
@@ -3617,8 +3697,9 @@ function renderOnboarding() {
             if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); obStep(-1); }
         });
         roller.addEventListener('pointerdown', e => { obDrag = { y: e.clientY }; if (roller.setPointerCapture) roller.setPointerCapture(e.pointerId); });
-        roller.addEventListener('pointermove', e => { if (!obDrag) return; const dy = e.clientY - obDrag.y; if (Math.abs(dy) > 26) { obStep(dy < 0 ? 1 : -1); obDrag.y = e.clientY; } });
-        const end = () => { obDrag = null; };
+        roller.addEventListener('pointermove', e => { if (!obDrag) return; const dy = e.clientY - obDrag.y; if (Math.abs(dy) > 26) { obStep(dy < 0 ? 1 : -1); obDrag.y = e.clientY; obDrag.moved = true; } });
+        const end = () => { obSuppressClick = !!(obDrag && obDrag.moved); obDrag = null; setTimeout(() => { obSuppressClick = false; }, 0); };
+        roller.addEventListener('click', e => { if (obSuppressClick) return; const r = roller.getBoundingClientRect(), y = e.clientY - r.top; if (y < r.height / 3) obStep(-1); else if (y > (r.height * 2) / 3) obStep(1); });   // tap the grey word above or below
         roller.addEventListener('pointerup', end); roller.addEventListener('pointercancel', end);
         roller.addEventListener('wheel', e => { if (Math.abs(e.deltaY) < 8) return; e.preventDefault(); obStep(e.deltaY > 0 ? 1 : -1); }, { passive: false });
         document.getElementById('obUp').addEventListener('click', () => obStep(-1));
@@ -4543,6 +4624,15 @@ function jumpTo(id, e) {
     if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// The message shown under each answer. A wrong answer says what the right one is, then why. The stored explanations all begin with
+// "Correct.", which must never appear on a wrong answer.
+function quizFeedbackText(q, ok) {
+    const why = String(q.feedback || '').replace(/^\s*Correct[.,!]?\s*/i, '').trim();
+    if (ok) return '\u2713 Correct. ' + why;
+    const opt = Array.isArray(q.options) ? q.options[q.correctAnswer] : null;
+    const right = opt ? ' The right answer is \u201C' + String(opt).trim().replace(/[.]+$/, '') + '\u201D.' : '';
+    return '\u2717 Not quite.' + right + (why ? ' ' + why : '');
+}
 function submitQuiz() {
     const data = currentModule;
     const quiz = data.quiz;
@@ -4561,9 +4651,7 @@ function submitQuiz() {
         } else {
             const ok = parseInt(sel.value) === q.correctAnswer;
             fb.classList.add('show', ok ? 'correct' : 'incorrect');
-            fb.textContent = ok
-                ? '\u2713 Correct. ' + (q.feedback || '').replace(/^Correct\.\s*/, '')
-                : '\u2717 Incorrect \u2014 review the relevant section and try again. ' + (q.feedback || '');
+            fb.textContent = quizFeedbackText(q, ok);
             if (ok) score++;
         }
         requestAnimationFrame(() => fb.classList.add('fade-in'));
@@ -4699,6 +4787,9 @@ bindPathwayDrag();
         if (q === '0' || q === 'old') localStorage.setItem('moroInner', 'old'); else if (q === 'y' || q === 'new') localStorage.removeItem('moroInner');
         document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') !== 'old');
     } catch (e) { /* storage unavailable: keep the default look */ }
+})();
+(function () {   // Welcome screen: try the navy and gradient look with ?landing=navy; ?landing=default switches it off
+    try { const q = new URLSearchParams(window.location.search).get('landing'); if (q === 'navy') localStorage.setItem('moroLanding', 'navy'); else if (q === 'default') localStorage.removeItem('moroLanding'); document.body.classList.toggle('ob-navy', localStorage.getItem('moroLanding') === 'navy'); } catch (e) { /* storage unavailable: default look */ }
 })();
 loadReadPrefs(); applyReadPrefs(); initSlides(); initHeaderAutoHide(); registerServiceWorker();
 document.querySelectorAll('[data-difacto-site]').forEach(a => { a.href = DIFACTO_SITE_URL; });   // one place to change the DiFacto address
