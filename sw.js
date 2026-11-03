@@ -2,7 +2,7 @@
    - The page (index.html) is fetched fresh when online, and served from the saved copy when offline or slow.
    - Modules, exams, the glossary and the module index are served instantly from the device and refreshed in the background.
    - Anything from another website (fonts) is left entirely to the browser. */
-const BUILD = 'moro-2026-11-02-7d3e5359';
+const BUILD = 'moro-2026-11-03-ee652f0c';
 const SHELL_CACHE = 'moro-shell-' + BUILD;
 const CONTENT_CACHE = 'moro-content-1';          // same name the page uses for "Save everything for offline use"
 const SHELL = ['./', 'index.html', 'modules-index.json', 'glossary.json', 'manifest.webmanifest', 'difacto-logo.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];

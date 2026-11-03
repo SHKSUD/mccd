@@ -1617,6 +1617,11 @@
         .rail-card em { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11.5px; font-style: normal; color: var(--b-mute); }
         .rail-card em i, .rail-card em b { font-style: normal; font-weight: 600; }
         @media (prefers-reduced-motion: reduce) { .rail-card, .rail-dot::before { transition: none; } }
+        /* ── WELCOME ARROWS AT THE RIGHT EDGE (opt-in trial: ?arrows=edge) ── */
+        body.ob-mode.ob-edge .ob-nudge { position: fixed; right: 24px; top: 50%; z-index: 5; flex-direction: column; gap: 16px; transform: translateY(-50%); }
+        body.ob-mode.ob-edge .ob-controls { gap: 0; }
+        @media (max-width: 600px) { body.ob-mode.ob-edge .ob-nudge { right: 12px; } }
+        @media (min-width: 601px) { body.ob-mode.ob-edge .ob-sent { font-size: clamp(40px, min(9.4vw, calc((100svh - 480px) / 3.45), calc((100vw - 160px) / 8.6)), 86px); } }   /* the sentence never reaches the edge arrows */
         /* ── MODULES MENU: opens from the right, the button stays pressed, rows answer your pointer ── */
         .header .menu-btn[aria-expanded="true"] { background: rgba(46, 109, 180, 0.12); color: #245A96; border-color: #2E6DB4; }
         body:not(.inner-y):not(.home-mode):not(.ob-mode) .header .menu-btn[aria-expanded="true"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
@@ -4790,6 +4795,10 @@ bindPathwayDrag();
 })();
 (function () {   // Welcome screen: try the navy and gradient look with ?landing=navy; ?landing=default switches it off
     try { const q = new URLSearchParams(window.location.search).get('landing'); if (q === 'navy') localStorage.setItem('moroLanding', 'navy'); else if (q === 'default') localStorage.removeItem('moroLanding'); document.body.classList.toggle('ob-navy', localStorage.getItem('moroLanding') === 'navy'); } catch (e) { /* storage unavailable: default look */ }
+})();
+(function () {   // Welcome roller arrows at the right edge: try with ?arrows=edge; ?arrows=default switches it off
+    document.body.classList.add('ob-edge');   // arrows at the right edge are the default; ?arrows=center puts them under the sentence, ?arrows=edge restores the default
+    try { const q = new URLSearchParams(window.location.search).get('arrows'); if (q === 'center') localStorage.setItem('moroArrows', 'center'); else if (q === 'edge' || q === 'default') localStorage.removeItem('moroArrows'); document.body.classList.toggle('ob-edge', localStorage.getItem('moroArrows') !== 'center'); } catch (e) { /* storage unavailable: keep the default */ }
 })();
 loadReadPrefs(); applyReadPrefs(); initSlides(); initHeaderAutoHide(); registerServiceWorker();
 document.querySelectorAll('[data-difacto-site]').forEach(a => { a.href = DIFACTO_SITE_URL; });   // one place to change the DiFacto address
