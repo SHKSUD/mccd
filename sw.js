@@ -2,7 +2,7 @@
    - The page (index.html) is fetched fresh when online, and served from the saved copy when offline or slow.
    - Modules, exams, the glossary and the module index are served instantly from the device and refreshed in the background.
    - Anything from another website (fonts) is left entirely to the browser. */
-const BUILD = 'moro-2026-11-03-ee652f0c';
+const BUILD = 'moro-2026-11-06-a1e9d4c1';
 const SHELL_CACHE = 'moro-shell-' + BUILD;
 const CONTENT_CACHE = 'moro-content-1';          // same name the page uses for "Save everything for offline use"
 const SHELL = ['./', 'index.html', 'modules-index.json', 'glossary.json', 'manifest.webmanifest', 'difacto-logo.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
@@ -40,6 +40,7 @@ async function cacheFirst(req) {
 self.addEventListener('fetch', event => {
   const req = event.request; if (req.method !== 'GET') return;
   const url = new URL(req.url); if (url.origin !== self.location.origin) return;
+  if (/\/videos\//.test(url.pathname)) return;   // videos stream straight from the network (range requests are not cacheable)
   if (req.mode === 'navigate') return void event.respondWith(networkFirst(req));
   if (/\/(modules|exams)\/[^/]+\.json$|\/glossary\.json$|\/modules-index\.json$/.test(url.pathname)) return void event.respondWith(staleWhileRevalidate(req));
   event.respondWith(cacheFirst(req));

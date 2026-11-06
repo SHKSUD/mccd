@@ -53,7 +53,16 @@
           "term": "handshake",
           "note": "A signal exchange between two coordinating systems confirming readiness, completion, or error state before an action proceeds."
         }
-      ]
+      ],
+      "video": {
+        "id": "V003",
+        "src": "videos/V003.mp4",
+        "poster": "videos/V003.jpg",
+        "title": "The handshake in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The handshake, in 30 seconds. When MoRo delivers to a machine, they must coordinate. Their exchange of signals is called a handshake. First, MoRo sends a request. The machine answers: ready. After the handoff, a complete signal closes it. If the signals stop moving forward, it has stalled. Operators should recognise a stalled handshake. On screen at the end: Next: working safely with loaded payloads. MoRo Academy, DiFacto Robotics & Automation.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 4,

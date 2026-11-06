@@ -1601,8 +1601,8 @@
         .sec-rail[hidden] { display: none; }
         body.home-mode .sec-rail, body.ob-mode .sec-rail, body:not(.inner-y) .sec-rail { display: none; }
         @media (max-width: 1099px), (pointer: coarse) { .sec-rail { display: none !important; } }
-        body.inner-y .sec-rail { --b-ink: #1D1D1F; --b-mute: #636366; --b-line: #C7CCD6; --b-blue: #2E6DB4; --b-bg: #FFFFFF; --b-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
-        body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sec-rail { --b-ink: #EEF0F4; --b-mute: #A0A7B4; --b-line: #3A404B; --b-blue: #5B9BE6; --b-bg: #1B1F27; }
+        body.inner-y .sec-rail, body.inner-y .mod-edge { --b-ink: #1D1D1F; --b-mute: #636366; --b-line: #C7CCD6; --b-blue: #2E6DB4; --b-bg: #FFFFFF; --b-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
+        body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sec-rail, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .mod-edge { --b-ink: #EEF0F4; --b-mute: #A0A7B4; --b-line: #3A404B; --b-blue: #5B9BE6; --b-bg: #1B1F27; }
         .sec-rail ol { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
         .rail-dot { position: relative; display: block; width: 24px; height: 24px; padding: 0; background: none; border: 0; border-radius: 50%; cursor: pointer; }
         .rail-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--b-line); border-radius: 50%; transition: transform 0.15s ease, background 0.15s ease; }
@@ -1617,6 +1617,45 @@
         .rail-card em { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11.5px; font-style: normal; color: var(--b-mute); }
         .rail-card em i, .rail-card em b { font-style: normal; font-weight: 600; }
         @media (prefers-reduced-motion: reduce) { .rail-card, .rail-dot::before { transition: none; } }
+        /* ── LESSON VIDEO CARD ── */
+        .vid-card { --v-bg: #FFFFFF; --v-line: #E5E5EA; --v-ink: #1D1D1F; --v-mute: #636366; --v-blue: #245A96; margin: 22px 0 26px; overflow: hidden; color: var(--v-ink); background: var(--v-bg); border: 1px solid var(--v-line); border-radius: 16px; }
+        body.read-dark .vid-card { --v-bg: #1B1F27; --v-line: #3A404B; --v-ink: #EEF0F4; --v-mute: #A0A7B4; --v-blue: #8DB9F2; }
+        .vid-stage { position: relative; aspect-ratio: 16 / 9; background: #0B1738; }
+        .vid-play { position: absolute; inset: 0; display: block; width: 100%; padding: 0; background: #0B1738; border: 0; cursor: pointer; }
+        .vid-play img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .vid-btn { position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center; width: 68px; height: 68px; margin: -34px 0 0 -34px; color: #0B1738; background: rgba(255, 255, 255, 0.95); border-radius: 50%; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
+        .vid-play:hover .vid-btn { transform: scale(1.06); }
+        .vid-play:focus-visible { outline: 3px solid var(--v-blue); outline-offset: -3px; }
+        .vid-ph { position: absolute; right: 12px; top: 12px; padding: 4px 10px; font-size: 11.5px; font-weight: 600; line-height: 1.2; letter-spacing: 0.3px; color: #fff; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 999px; }
+        .vid-dur { position: absolute; right: 12px; bottom: 12px; padding: 3px 9px; font-size: 12px; font-weight: 600; line-height: 1.2; color: #fff; background: rgba(0, 0, 0, 0.65); border-radius: 999px; }
+        .vid-stage video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+        .vid-err { position: absolute; left: 12px; right: 12px; bottom: 12px; margin: 0; padding: 10px 12px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.78); border-radius: 10px; }
+        .vid-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 12px 14px 4px; }
+        .vid-title { margin-right: auto; font-size: 14px; line-height: 1.35; }
+        .vid-chip { display: inline-block; padding: 7px 12px; font-size: 12.5px; font-weight: 600; line-height: 1.3; color: var(--v-blue); text-decoration: none; list-style: none; cursor: pointer; background: transparent; border: 1px solid var(--v-line); border-radius: 999px; }
+        .vid-chip:hover { border-color: var(--v-blue); }
+        .vid-chip:focus-visible { outline: 3px solid var(--v-blue); outline-offset: 2px; }
+        .vid-tr { padding: 4px 14px 0; }
+        .vid-tr summary::-webkit-details-marker { display: none; }
+        .vid-tr p { margin: 10px 0 4px; font-size: 13.5px; line-height: 1.6; color: var(--v-ink); }
+        .vid-note { padding: 8px 14px 14px; font-size: 12px; line-height: 1.45; color: var(--v-mute); }
+        .vid-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        @media (pointer: coarse) { .vid-chip { display: inline-flex; align-items: center; min-height: 44px; } }
+        /* ── MODULE BUTTONS AT THE RIGHT EDGE: previous and next module ── */
+        .mod-edge { position: fixed; top: 0; right: 6px; bottom: 0; z-index: 45; pointer-events: none; }
+        .mod-edge[hidden] { display: none; }
+        body.home-mode .mod-edge, body.ob-mode .mod-edge, body:not(.inner-y) .mod-edge { display: none; }
+        @media (max-width: 600px) { .mod-edge { display: none !important; } }
+        .mod-btn { position: absolute; right: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; width: 46px; min-height: 52px; padding: 4px 0; font-family: var(--b-font); color: var(--b-ink); background: none; border: 0; border-radius: 12px; cursor: pointer; pointer-events: auto; }
+        .mod-btn.prev { top: calc(50% - 178px); }
+        .mod-btn.next { top: calc(50% + 126px); flex-direction: column-reverse; }
+        .mod-chev { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; color: var(--b-ink); background: var(--b-bg); border: 1px solid var(--b-line); border-radius: 50%; transition: background 0.15s ease, border-color 0.15s ease; }
+        .mod-lab { font-size: 10.5px; font-weight: 600; letter-spacing: 0.2px; color: var(--b-mute); white-space: nowrap; }
+        .mod-btn:hover .mod-chev { background: var(--b-tint, rgba(46, 109, 180, 0.10)); border-color: var(--b-blue); }
+        .mod-btn:hover .mod-lab { color: var(--b-blue); }
+        .mod-btn:focus-visible { outline: 3px solid var(--b-blue); outline-offset: 0; }
+        @media (min-width: 601px) and (max-width: 1099px) { body.has-mod-edge #mainContent { padding-right: 52px; } }
+        @media (prefers-reduced-motion: reduce) { .mod-chev { transition: none; } }
         /* ── WELCOME ARROWS AT THE RIGHT EDGE (opt-in trial: ?arrows=edge) ── */
         body.ob-mode.ob-edge .ob-nudge { position: fixed; right: 24px; top: 50%; z-index: 5; flex-direction: column; gap: 16px; transform: translateY(-50%); }
         body.ob-mode.ob-edge .ob-controls { gap: 0; }
@@ -2416,6 +2455,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 </div>
 <div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" class="ut-go" onclick="applyUpdate()">Refresh</button><button type="button" class="ut-x" onclick="dismissUpdate()" aria-label="Dismiss this notice">&times;</button></div>
 <div class="offline-pill" id="offlinePill" role="status" hidden>You're offline. Saved modules still work.</div>
+<nav class="mod-edge" id="modEdge" aria-label="Other modules" hidden></nav>
 <nav class="sec-rail" id="secRail" aria-label="Sections in this lesson" hidden></nav>
 <div class="slide-hint" id="slideHint" aria-hidden="true"></div>
 
@@ -2635,8 +2675,16 @@ function updateRail() {
     }
     r.innerHTML = h + '</ol>'; r.hidden = false;
 }
+function updateModEdge() {
+    const e = document.getElementById('modEdge'); if (!e) return;
+    if (!currentModule || !inReading()) { e.hidden = true; e.innerHTML = ''; document.body.classList.remove('has-mod-edge'); return; }
+    const m = currentModule, short = id => id.replace('-M', '\u00B7M'), pv = MID.test(m.previousModule || '') ? m.previousModule : null, nx = MID.test(m.nextModule || '') ? m.nextModule : null;
+    const chev = d => `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${d}"/></svg>`;
+    const btn = (id, dir) => id ? `<button type="button" class="mod-btn ${dir}" onclick="loadModule('${id}')" aria-label="${dir === 'prev' ? 'Previous' : 'Next'} module: ${escapeHtml(short(id))}, ${escapeHtml(moduleTitleOf(id))}"><span class="mod-lab" aria-hidden="true">${short(id)}</span><span class="mod-chev" aria-hidden="true">${chev(dir === 'prev' ? 'M6 15l6-6 6 6' : 'M6 9l6 6 6-6')}</span></button>` : '';
+    e.innerHTML = btn(pv, 'prev') + btn(nx, 'next'); e.hidden = !(pv || nx); document.body.classList.toggle('has-mod-edge', !!(pv || nx));
+}
 function updateRibbon() {
-    updateRail();
+    updateRail(); updateModEdge();
     const r = document.getElementById('slideRibbon'); if (!r) return;
     if (!currentModule) { r.hidden = true; r.innerHTML = ''; return; }
     const n = currentModule.sections.length, idx = currentSectionIndex === 'quiz' ? n : currentSectionIndex, visited = (getModuleProgress(currentModule.moduleId).visited || []);
@@ -2686,7 +2734,7 @@ function initSlides() {
     el.addEventListener('pointerdown', e => {
         if (!slidesActive() || slideBusy || (e.pointerType !== 'touch' && e.pointerType !== 'pen')) return;
         if (e.clientX < 28) return;   // the iPad's own swipe-back from the screen edge keeps working
-        if (e.target.closest && e.target.closest('input, textarea, select, button, a, label, summary, .table-wrap, .video-embed')) return;
+        if (e.target.closest && e.target.closest('input, textarea, select, button, a, label, summary, .table-wrap, .video-embed, .vid-card')) return;
         st = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId, lock: null, dx: 0, fwd: slidePlan(1), back: slidePlan(-1) };
     });
     el.addEventListener('pointermove', e => {
@@ -3113,17 +3161,17 @@ function renderSection(index) {
 
     // Optional video embed — renders only if a section provides videoUrl (forward-compatible,
     // not used by any current module; no-op when absent).
-    const videoHTML = sec.videoUrl
+    const videoHTML = (sec.video && sec.video.src) ? videoCardHTML(sec.video) : (sec.videoUrl
         ? `<div class="video-embed"><iframe src="${sec.videoUrl}" frameborder="0" allowfullscreen loading="lazy"></iframe></div>`
-        : '';
+        : '');
 
     document.getElementById('mainContent').innerHTML = `
         <div class="view active">
             <div class="eyebrow-row"><div class="section-eyebrow">Section ${index + 1} of ${data.sections.length}</div>${focusBtnHtml()}</div>
             <div class="section-title" role="heading" aria-level="1">${sec.title}</div>
             <div class="section-rule"></div>
-            ${videoHTML}
             ${objectivesHTML}
+            ${videoHTML}
             <p class="body-text">${sec.content}</p>
             ${keyTermsHTML}
             <div class="btn-row sticky-actions">
@@ -3131,6 +3179,31 @@ function renderSection(index) {
                 ${nextBtn}
             </div>
         </div>`;
+}
+
+// ═══════════════════════════════════════════════════
+// LESSON VIDEO CARD: poster first, loads the video only on tap. A section opts in with
+// "video": { id, src, poster, title, duration, transcript, placeholder } in its module JSON.
+// ═══════════════════════════════════════════════════
+function videoCardHTML(v) {
+    const e = escapeHtml, dur = v.duration ? ` (${e(v.duration)})` : '';
+    return `<div class="vid-card" data-vid="${e(v.id || '')}">
+        <div class="vid-stage"><button type="button" class="vid-play" onclick="playVideoCard(this)" aria-label="Play video: ${e(v.title)}${dur}. No spoken audio; captions are on screen.">
+            <img src="${e(v.poster || '')}" alt="" loading="lazy" decoding="async">
+            ${v.placeholder ? '<span class="vid-ph">Placeholder animation</span>' : ''}
+            <span class="vid-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            ${v.duration ? `<span class="vid-dur" aria-hidden="true">${e(v.duration)}</span>` : ''}
+        </button></div>
+        <div class="vid-row"><span class="vid-title"><b>Watch first:</b> ${e(v.title)}</span>
+            <a class="vid-chip" href="${e(v.src)}" target="_blank" rel="noopener">Open in a new window<span class="vid-sr"> (opens a new tab)</span> &#8599;</a></div>
+        ${v.transcript ? `<details class="vid-tr"><summary class="vid-chip">Transcript</summary><p>${e(v.transcript)}</p></details>` : ''}
+        <div class="vid-note">${v.placeholder ? 'Placeholder animation: real footage of MoRo will replace it. ' : ''}Optional. The knowledge check is what counts.</div>
+    </div>`;
+}
+function playVideoCard(btn) {
+    const card = btn.closest('.vid-card'), stage = card.querySelector('.vid-stage'), src = card.querySelector('a.vid-chip').getAttribute('href'), poster = btn.querySelector('img').getAttribute('src'), title = card.querySelector('.vid-title').textContent.replace('Watch first: ', '');
+    stage.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${escapeHtml(poster)}" src="${escapeHtml(src)}" aria-label="${escapeHtml(title)}"></video><p class="vid-err" role="status" hidden>This video could not be loaded. Check your connection, or use \u201COpen in a new window\u201D.</p>`;
+    const el = stage.querySelector('video'); el.addEventListener('error', () => { stage.querySelector('.vid-err').hidden = false; }); try { el.focus(); } catch (e) { /* ignore */ }
 }
 
 // ═══════════════════════════════════════════════════

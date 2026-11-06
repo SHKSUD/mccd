@@ -31,7 +31,16 @@
           "term": "CNC (Computer Numerical Control)",
           "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
         }
-      ]
+      ],
+      "video": {
+        "id": "V001",
+        "src": "videos/V001.mp4",
+        "poster": "videos/V001.jpg",
+        "title": "Meet MoRo in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it always knows where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: working safely around MoRo. MoRo Academy, DiFacto Robotics & Automation.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,
@@ -67,7 +76,16 @@
           "term": "variant",
           "note": "One of the three MoRo models (A-250, A-500, A-1200), differing primarily in payload capacity and speed."
         }
-      ]
+      ],
+      "video": {
+        "id": "V004",
+        "src": "videos/V004.mp4",
+        "poster": "videos/V004.jpg",
+        "title": "Three models, three jobs in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Three models, three jobs. The A-250 carries up to 250 kg, and moves faster. It suits light assembly and small-item transport. The A-500 carries up to 500 kg. It is the most deployed, for machine tending. The A-1200 carries up to 1,200 kg, and moves slower. It suits heavy transfer and forklift replacement.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 4,

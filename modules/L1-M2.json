@@ -23,7 +23,16 @@
           "term": "AGV (Automated Guided Vehicle)",
           "note": "An older category of automated vehicle that follows a fixed path, typically magnetic tape or a buried wire, requiring floor modification."
         }
-      ]
+      ],
+      "video": {
+        "id": "V005",
+        "src": "videos/V005.mp4",
+        "poster": "videos/V005.jpg",
+        "title": "Maps, not tape in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Maps, not tape. How MoRo finds its way. LiDAR measures distance with laser light. It sees walls, machines, pillars and people. SLAM locates MoRo and builds the map at once. So no floor tape or magnets are needed. Glass and mirror-like surfaces can confuse LiDAR. If the layout changes, the map needs updating.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,

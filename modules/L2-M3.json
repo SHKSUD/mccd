@@ -33,7 +33,16 @@
         "State MoRo's confirmed runtime and charging specifications",
         "Understand the wireless charging approach"
       ],
-      "content": "MoRo is rated for 8 hours of runtime and charges wirelessly in under 1 hour, consistent across all three variants. Wireless charging means MoRo docks at a charging station without a physical plug connection - it aligns with the dock and charging begins automatically. This supports opportunistic charging: a unit can top up during natural gaps in its schedule rather than requiring a dedicated, lengthy charging window."
+      "content": "MoRo is rated for 8 hours of runtime and charges wirelessly in under 1 hour, consistent across all three variants. Wireless charging means MoRo docks at a charging station without a physical plug connection - it aligns with the dock and charging begins automatically. This supports opportunistic charging: a unit can top up during natural gaps in its schedule rather than requiring a dedicated, lengthy charging window.",
+      "video": {
+        "id": "V002",
+        "src": "videos/V002.mp4",
+        "poster": "videos/V002.jpg",
+        "title": "Power and charging in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Power and charging, in 30 seconds. All MoRo models use LFP batteries. LFP is stable, long-lasting and fine with partial charges. MoRo is rated for 8 hours of runtime. The same on all three models. It charges wirelessly in under 1 hour. The charging dock must be placed and aligned correctly. On screen at the end: Next: placing and aligning the charging dock. MoRo Academy, DiFacto Robotics & Automation.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
