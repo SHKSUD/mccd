@@ -31,7 +31,16 @@
           "term": "MES (Manufacturing Execution System)",
           "note": "Software that tracks and manages production on the factory floor, often triggering or receiving data from MoRo missions."
         }
-      ]
+      ],
+      "video": {
+        "id": "V012",
+        "src": "videos/V012.mp4",
+        "poster": "videos/V012.jpg",
+        "title": "Where MoRo plugs into the factory in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Where MoRo plugs into the factory. FANUC I/O: a request, ready, complete handshake. OPC-UA: data out to SCADA. MES and WMS APIs: orders in, reports out. A custom REST API: fleet control and third-party apps. Example: the MES sends a production order. MoRo does the move; status goes to SCADA.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,

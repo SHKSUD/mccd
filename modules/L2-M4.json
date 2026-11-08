@@ -23,7 +23,16 @@
           "term": "ANT",
           "note": "MoRo's Human-Machine Interface (HMI) platform, used for fleet monitoring, mission control, and programming."
         }
-      ]
+      ],
+      "video": {
+        "id": "V009",
+        "src": "videos/V009.mp4",
+        "poster": "videos/V009.jpg",
+        "title": "Many robots, one floor in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. Units see each other and avoid collisions automatically. Zones: shared paths and reserved routes. A deadlock is two units waiting on each other. The fleet system detects it and reroutes one unit.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,

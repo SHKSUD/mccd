@@ -31,7 +31,16 @@
           "term": "SLAM (Simultaneous Localization and Mapping)",
           "note": "The process of determining position while simultaneously building a map of the surrounding environment."
         }
-      ]
+      ],
+      "video": {
+        "id": "V011",
+        "src": "videos/V011.mp4",
+        "poster": "videos/V011.jpg",
+        "title": "Commissioning a new site in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Commissioning a new site, in 30 seconds. First, assess the site: layout, clearances, network. Then build the map, ideally in a quiet period. Program the core missions first, and keep them narrow. Validate each machine integration, again and again. Go-live is not the end: hand over to the operators. Document the map version, missions and integrations.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,

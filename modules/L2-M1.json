@@ -39,7 +39,16 @@
           "term": "mission",
           "note": "A defined task assigned to MoRo, with a clear start, objective, and completion condition."
         }
-      ]
+      ],
+      "video": {
+        "id": "V007",
+        "src": "videos/V007.mp4",
+        "poster": "videos/V007.jpg",
+        "title": "A mission in 30 seconds",
+        "duration": "0:30",
+        "transcript": "A mission, in 30 seconds. A mission is one defined task. It has an origin, a destination and a finish condition. Before assigning, check MoRo is ready. And that the path is clear. Then supervise: steady and on time is normal. A stall or pause is your signal. Run any new mission once, under supervision. If it fails: note, assess, escalate if unclear.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

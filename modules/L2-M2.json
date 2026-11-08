@@ -27,7 +27,16 @@
           "term": "CNC (Computer Numerical Control)",
           "note": "Automated machine tools controlled by programmed instructions, commonly loaded and unloaded by MoRo in machine tending applications."
         }
-      ]
+      ],
+      "video": {
+        "id": "V008",
+        "src": "videos/V008.mp4",
+        "poster": "videos/V008.jpg",
+        "title": "Five ways MoRo carries in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Five ways MoRo carries, in 30 seconds. MoRo supports five payload configurations. Conveyor, cobot interface and towing. Lifting, and lift-and-rotate. Each suits a different material handling need. The configuration changes what you check. Before a transfer, confirm the attachment is secure.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,

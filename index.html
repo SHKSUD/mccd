@@ -1617,30 +1617,33 @@
         .rail-card em { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11.5px; font-style: normal; color: var(--b-mute); }
         .rail-card em i, .rail-card em b { font-style: normal; font-weight: 600; }
         @media (prefers-reduced-motion: reduce) { .rail-card, .rail-dot::before { transition: none; } }
-        /* ── LESSON VIDEO CARD ── */
-        .vid-card { --v-bg: #FFFFFF; --v-line: #E5E5EA; --v-ink: #1D1D1F; --v-mute: #636366; --v-blue: #245A96; margin: 22px 0 26px; overflow: hidden; color: var(--v-ink); background: var(--v-bg); border: 1px solid var(--v-line); border-radius: 16px; }
+        /* ── LESSON VIDEO CARD: a slim row; the player opens only when asked ── */
+        .vid-card { --v-bg: #FFFFFF; --v-line: #E5E5EA; --v-ink: #1D1D1F; --v-mute: #636366; --v-blue: #245A96; margin: 14px 0 20px; overflow: hidden; color: var(--v-ink); background: var(--v-bg); border: 1px solid var(--v-line); border-radius: 14px; }
         body.read-dark .vid-card { --v-bg: #1B1F27; --v-line: #3A404B; --v-ink: #EEF0F4; --v-mute: #A0A7B4; --v-blue: #8DB9F2; }
-        .vid-stage { position: relative; aspect-ratio: 16 / 9; background: #0B1738; }
-        .vid-play { position: absolute; inset: 0; display: block; width: 100%; padding: 0; background: #0B1738; border: 0; cursor: pointer; }
-        .vid-play img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .vid-btn { position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center; width: 68px; height: 68px; margin: -34px 0 0 -34px; color: #0B1738; background: rgba(255, 255, 255, 0.95); border-radius: 50%; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
-        .vid-play:hover .vid-btn { transform: scale(1.06); }
-        .vid-play:focus-visible { outline: 3px solid var(--v-blue); outline-offset: -3px; }
-        .vid-ph { position: absolute; right: 12px; top: 12px; padding: 4px 10px; font-size: 11.5px; font-weight: 600; line-height: 1.2; letter-spacing: 0.3px; color: #fff; background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 999px; }
-        .vid-dur { position: absolute; right: 12px; bottom: 12px; padding: 3px 9px; font-size: 12px; font-weight: 600; line-height: 1.2; color: #fff; background: rgba(0, 0, 0, 0.65); border-radius: 999px; }
-        .vid-stage video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
-        .vid-err { position: absolute; left: 12px; right: 12px; bottom: 12px; margin: 0; padding: 10px 12px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.78); border-radius: 10px; }
-        .vid-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 12px 14px 4px; }
-        .vid-title { margin-right: auto; font-size: 14px; line-height: 1.35; }
-        .vid-chip { display: inline-block; padding: 7px 12px; font-size: 12.5px; font-weight: 600; line-height: 1.3; color: var(--v-blue); text-decoration: none; list-style: none; cursor: pointer; background: transparent; border: 1px solid var(--v-line); border-radius: 999px; }
+        .vid-main { display: flex; gap: 14px; align-items: center; padding: 10px 12px; }
+        .vid-thumb { position: relative; flex: 0 0 128px; width: 128px; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; cursor: pointer; background: #0B1738; border: 0; border-radius: 10px; }
+        .vid-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .vid-btn { position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; margin: -17px 0 0 -17px; color: #0B1738; background: rgba(255, 255, 255, 0.95); border-radius: 50%; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
+        .vid-thumb:hover .vid-btn { transform: scale(1.08); }
+        .vid-thumb:focus-visible { outline: 3px solid var(--v-blue); outline-offset: 2px; }
+        .vid-info { flex: 1; min-width: 0; }
+        .vid-title { font-size: 14px; line-height: 1.35; }
+        .vid-title b { font-weight: 600; }
+        .vid-meta { margin: 2px 0 8px; font-size: 12px; line-height: 1.4; color: var(--v-mute); }
+        .vid-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
+        .vid-chip { display: inline-block; padding: 5px 10px; font-size: 12px; font-weight: 600; line-height: 1.3; color: var(--v-blue); text-decoration: none; list-style: none; cursor: pointer; background: transparent; border: 1px solid var(--v-line); border-radius: 999px; }
         .vid-chip:hover { border-color: var(--v-blue); }
         .vid-chip:focus-visible { outline: 3px solid var(--v-blue); outline-offset: 2px; }
-        .vid-tr { padding: 4px 14px 0; }
         .vid-tr summary::-webkit-details-marker { display: none; }
-        .vid-tr p { margin: 10px 0 4px; font-size: 13.5px; line-height: 1.6; color: var(--v-ink); }
-        .vid-note { padding: 8px 14px 14px; font-size: 12px; line-height: 1.45; color: var(--v-mute); }
+        .vid-tr[open] { flex-basis: 100%; }
+        .vid-tr p { margin: 10px 0 2px; font-size: 13px; line-height: 1.6; color: var(--v-ink); }
+        .vid-stage { position: relative; aspect-ratio: 16 / 9; background: #0B1738; }
+        .vid-stage[hidden] { display: none; }
+        .vid-stage video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+        .vid-err { position: absolute; left: 12px; right: 12px; bottom: 12px; margin: 0; padding: 10px 12px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.78); border-radius: 10px; }
         .vid-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-        @media (pointer: coarse) { .vid-chip { display: inline-flex; align-items: center; min-height: 44px; } }
+        @media (max-width: 600px) { .vid-main { gap: 10px; } .vid-thumb { flex-basis: 96px; width: 96px; } }
+        @media (pointer: coarse) { .vid-chip { display: inline-flex; align-items: center; min-height: 44px; } .vid-thumb { min-height: 54px; } }
         /* ── MODULE BUTTONS AT THE RIGHT EDGE: previous and next module ── */
         .mod-edge { position: fixed; top: 0; right: 6px; bottom: 0; z-index: 45; pointer-events: none; }
         .mod-edge[hidden] { display: none; }
@@ -3188,20 +3191,28 @@ function renderSection(index) {
 function videoCardHTML(v) {
     const e = escapeHtml, dur = v.duration ? ` (${e(v.duration)})` : '';
     return `<div class="vid-card" data-vid="${e(v.id || '')}">
-        <div class="vid-stage"><button type="button" class="vid-play" onclick="playVideoCard(this)" aria-label="Play video: ${e(v.title)}${dur}. No spoken audio; captions are on screen.">
-            <img src="${e(v.poster || '')}" alt="" loading="lazy" decoding="async">
-            ${v.placeholder ? '<span class="vid-ph">Placeholder animation</span>' : ''}
-            <span class="vid-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            ${v.duration ? `<span class="vid-dur" aria-hidden="true">${e(v.duration)}</span>` : ''}
-        </button></div>
-        <div class="vid-row"><span class="vid-title"><b>Watch first:</b> ${e(v.title)}</span>
-            <a class="vid-chip" href="${e(v.src)}" target="_blank" rel="noopener">Open in a new window<span class="vid-sr"> (opens a new tab)</span> &#8599;</a></div>
-        ${v.transcript ? `<details class="vid-tr"><summary class="vid-chip">Transcript</summary><p>${e(v.transcript)}</p></details>` : ''}
-        <div class="vid-note">${v.placeholder ? 'Placeholder animation: real footage of MoRo will replace it. ' : ''}Optional. The knowledge check is what counts.</div>
+        <div class="vid-stage" hidden></div>
+        <div class="vid-main">
+            <button type="button" class="vid-thumb vid-play" onclick="playVideoCard(this)" aria-expanded="false" aria-label="Play video: ${e(v.title)}${dur}. No spoken audio; captions are on screen.">
+                <img src="${e(v.poster || '')}" alt="" loading="lazy" decoding="async">
+                <span class="vid-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+            <div class="vid-info">
+                <div class="vid-title"><b>Watch:</b> ${e(v.title)}</div>
+                <div class="vid-meta">${v.duration ? e(v.duration) + ' \u00B7 ' : ''}${v.placeholder ? 'Placeholder animation \u00B7 ' : ''}Optional</div>
+                <div class="vid-actions">
+                    <a class="vid-chip" href="${e(v.src)}" target="_blank" rel="noopener">Open in a new window<span class="vid-sr"> (opens a new tab)</span> &#8599;</a>
+                    ${v.transcript ? `<details class="vid-tr"><summary class="vid-chip">Transcript</summary><p>${e(v.transcript)}</p></details>` : ''}
+                </div>
+            </div>
+        </div>
     </div>`;
 }
 function playVideoCard(btn) {
-    const card = btn.closest('.vid-card'), stage = card.querySelector('.vid-stage'), src = card.querySelector('a.vid-chip').getAttribute('href'), poster = btn.querySelector('img').getAttribute('src'), title = card.querySelector('.vid-title').textContent.replace('Watch first: ', '');
+    const card = btn.closest('.vid-card'), stage = card.querySelector('.vid-stage');
+    if (card.classList.contains('is-open')) { stage.innerHTML = ''; stage.hidden = true; card.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); return; }
+    const src = card.querySelector('a.vid-chip').getAttribute('href'), poster = btn.querySelector('img').getAttribute('src'), title = card.querySelector('.vid-title').textContent.replace('Watch: ', '');
+    stage.hidden = false; card.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true');
     stage.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${escapeHtml(poster)}" src="${escapeHtml(src)}" aria-label="${escapeHtml(title)}"></video><p class="vid-err" role="status" hidden>This video could not be loaded. Check your connection, or use \u201COpen in a new window\u201D.</p>`;
     const el = stage.querySelector('video'); el.addEventListener('error', () => { stage.querySelector('.vid-err').hidden = false; }); try { el.focus(); } catch (e) { /* ignore */ }
 }
