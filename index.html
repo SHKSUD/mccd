@@ -1601,15 +1601,15 @@
         .sec-rail[hidden] { display: none; }
         body.home-mode .sec-rail, body.ob-mode .sec-rail, body:not(.inner-y) .sec-rail { display: none; }
         @media (max-width: 1099px), (pointer: coarse) { .sec-rail { display: none !important; } }
-        body.inner-y .sec-rail, body.inner-y .mod-edge { --b-ink: #1D1D1F; --b-mute: #636366; --b-line: #C7CCD6; --b-blue: #2E6DB4; --b-bg: #FFFFFF; --b-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
-        body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sec-rail, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .mod-edge { --b-ink: #EEF0F4; --b-mute: #A0A7B4; --b-line: #3A404B; --b-blue: #5B9BE6; --b-bg: #1B1F27; }
+        body.inner-y .sec-rail, body.inner-y .mod-edge { --b-ink: #1D1D1F; --b-mute: #636366; --b-line: #C7CCD6; --b-blue: #2E6DB4; --b-bg: #FFFFFF; --r-here: #3A3A3C; --r-seen: #A5ABB6; --r-mid: #6B7280; --b-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; }
+        body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .sec-rail, body.read-dark.inner-y:not(.home-mode):not(.ob-mode) .mod-edge { --b-ink: #EEF0F4; --b-mute: #A0A7B4; --b-line: #3A404B; --b-blue: #5B9BE6; --b-bg: #1B1F27; --r-here: #D6DAE2; --r-seen: #5B6270; --r-mid: #A0A7B4; }
         .sec-rail ol { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
         .rail-dot { position: relative; display: block; width: 24px; height: 24px; padding: 0; background: none; border: 0; border-radius: 50%; cursor: pointer; }
-        .rail-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--b-line); border-radius: 50%; transition: transform 0.15s ease, background 0.15s ease; }
-        .rail-dot.seen::before { background: var(--b-blue); opacity: 0.5; }
-        .rail-dot.here::before { width: 12px; height: 12px; margin: -6px 0 0 -6px; background: var(--b-blue); opacity: 1; }
+        .rail-dot::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; background: var(--b-line); border-radius: 50%; transition: transform 0.15s ease, background 0.15s ease; }
+        .rail-dot.seen::before { background: var(--r-seen); }
+        .rail-dot.here::before { width: 10px; height: 10px; margin: -5px 0 0 -5px; background: var(--r-here); }
         .rail-dot:hover::before, .rail-dot:focus-visible::before { transform: scale(1.35); }
-        .rail-dot:focus-visible { outline: 3px solid var(--b-blue); outline-offset: 0; }
+        .rail-dot:focus-visible { outline: 3px solid var(--r-here); outline-offset: 0; }
         .rail-card { position: absolute; right: 34px; top: 50%; width: 270px; padding: 12px 14px; text-align: left; font-family: var(--b-font); color: var(--b-ink); background: var(--b-bg); border: 1px solid var(--b-line); border-radius: 12px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(6px, -50%); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s; }
         .rail-dot:hover .rail-card, .rail-dot:focus-visible .rail-card { opacity: 1; visibility: visible; transform: translate(0, -50%); }
         .rail-card strong { display: block; font-size: 14px; font-weight: 600; line-height: 1.3; }
@@ -1644,6 +1644,7 @@
         .vid-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         @media (max-width: 600px) { .vid-main { gap: 10px; } .vid-thumb { flex-basis: 96px; width: 96px; } }
         @media (pointer: coarse) { .vid-chip { display: inline-flex; align-items: center; min-height: 44px; } .vid-thumb { min-height: 54px; } }
+        .b-video .vid-card { max-width: 620px; margin: 0 0 8px; }
         /* ── MODULE BUTTONS AT THE RIGHT EDGE: previous and next module ── */
         .mod-edge { position: fixed; top: 0; right: 6px; bottom: 0; z-index: 45; pointer-events: none; }
         .mod-edge[hidden] { display: none; }
@@ -1652,11 +1653,11 @@
         .mod-btn { position: absolute; right: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; width: 46px; min-height: 52px; padding: 4px 0; font-family: var(--b-font); color: var(--b-ink); background: none; border: 0; border-radius: 12px; cursor: pointer; pointer-events: auto; }
         .mod-btn.prev { top: calc(50% - 178px); }
         .mod-btn.next { top: calc(50% + 126px); flex-direction: column-reverse; }
-        .mod-chev { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; color: var(--b-ink); background: var(--b-bg); border: 1px solid var(--b-line); border-radius: 50%; transition: background 0.15s ease, border-color 0.15s ease; }
+        .mod-chev { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: var(--r-mid); background: var(--b-bg); border: 1px solid var(--b-line); border-radius: 50%; transition: background 0.15s ease, border-color 0.15s ease; }
         .mod-lab { font-size: 10.5px; font-weight: 600; letter-spacing: 0.2px; color: var(--b-mute); white-space: nowrap; }
-        .mod-btn:hover .mod-chev { background: var(--b-tint, rgba(46, 109, 180, 0.10)); border-color: var(--b-blue); }
-        .mod-btn:hover .mod-lab { color: var(--b-blue); }
-        .mod-btn:focus-visible { outline: 3px solid var(--b-blue); outline-offset: 0; }
+        .mod-btn:hover .mod-chev { color: var(--r-here); border-color: var(--r-here); }
+        .mod-btn:hover .mod-lab { color: var(--r-here); }
+        .mod-btn:focus-visible { outline: 3px solid var(--r-here); outline-offset: 0; }
         @media (min-width: 601px) and (max-width: 1099px) { body.has-mod-edge #mainContent { padding-right: 52px; } }
         @media (prefers-reduced-motion: reduce) { .mod-chev { transition: none; } }
         /* ── WELCOME ARROWS AT THE RIGHT EDGE (opt-in trial: ?arrows=edge) ── */
@@ -2134,6 +2135,8 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             </div>
             <div class="b-row"><div id="bContinue" class="b-contwrap"></div><div id="bProgress" class="b-pgcard"></div></div>
         </section>
+
+        <section class="b-section b-video" id="bVideo" aria-label="Your path in the Academy"></section>
 
         <section class="b-section" id="bRoute" aria-labelledby="bRouteH">
             <div class="b-route-head">
@@ -2682,7 +2685,7 @@ function updateModEdge() {
     const e = document.getElementById('modEdge'); if (!e) return;
     if (!currentModule || !inReading()) { e.hidden = true; e.innerHTML = ''; document.body.classList.remove('has-mod-edge'); return; }
     const m = currentModule, short = id => id.replace('-M', '\u00B7M'), pv = MID.test(m.previousModule || '') ? m.previousModule : null, nx = MID.test(m.nextModule || '') ? m.nextModule : null;
-    const chev = d => `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${d}"/></svg>`;
+    const chev = d => `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${d}"/></svg>`;
     const btn = (id, dir) => id ? `<button type="button" class="mod-btn ${dir}" onclick="loadModule('${id}')" aria-label="${dir === 'prev' ? 'Previous' : 'Next'} module: ${escapeHtml(short(id))}, ${escapeHtml(moduleTitleOf(id))}"><span class="mod-lab" aria-hidden="true">${short(id)}</span><span class="mod-chev" aria-hidden="true">${chev(dir === 'prev' ? 'M6 15l6-6 6 6' : 'M6 9l6 6 6-6')}</span></button>` : '';
     e.innerHTML = btn(pv, 'prev') + btn(nx, 'next'); e.hidden = !(pv || nx); document.body.classList.toggle('has-mod-edge', !!(pv || nx));
 }
@@ -3188,6 +3191,7 @@ function renderSection(index) {
 // LESSON VIDEO CARD: poster first, loads the video only on tap. A section opts in with
 // "video": { id, src, poster, title, duration, transcript, placeholder } in its module JSON.
 // ═══════════════════════════════════════════════════
+const HOME_VIDEO = { id: 'V013', src: 'videos/V013.mp4', poster: 'videos/V013.jpg', title: 'Your path in the Academy in 30 seconds', duration: '0:30', placeholder: true, transcript: 'Your path in the MoRo Academy. Seven levels, from awareness to master instructor. L1 Awareness: anyone on the floor. L2 Operator, then L3A Technician or L3B Programmer. L4A Systems Engineer or L4B Advanced Programmer. L5 Master Instructor trains others. From L2 up, you also show it in practice.' };
 function videoCardHTML(v) {
     const e = escapeHtml, dur = v.duration ? ` (${e(v.duration)})` : '';
     return `<div class="vid-card" data-vid="${e(v.id || '')}">
@@ -4081,6 +4085,7 @@ function renderCerts() {
 function renderHomeB() {
     if (bRole === undefined) { let s = null; try { s = localStorage.getItem(ROLE_KEY); } catch (e) {} bRole = (s && levelById(s)) ? s : null; }
     renderGreetingB(); renderContinueB(); renderProgress(); renderRoles(); renderDeck(); renderRoute(); renderCerts(); renderExams();
+    const hv = document.getElementById('bVideo'); if (hv && !hv.firstChild) hv.innerHTML = videoCardHTML(HOME_VIDEO);
     if (!calmMotion()) document.querySelectorAll('#homeView .b-bar span, #homeView .b-cont-bar span').forEach(s => { const w = parseFloat(s.style.width) || 0; growBar(s, 0, w); });
     const ob = firstVisit(); document.body.classList.toggle('ob-mode', ob); if (ob) renderOnboarding();
 }
@@ -4877,8 +4882,9 @@ bindPathwayDrag();
         document.body.classList.toggle('inner-y', localStorage.getItem('moroInner') !== 'old');
     } catch (e) { /* storage unavailable: keep the default look */ }
 })();
-(function () {   // Welcome screen: try the navy and gradient look with ?landing=navy; ?landing=default switches it off
-    try { const q = new URLSearchParams(window.location.search).get('landing'); if (q === 'navy') localStorage.setItem('moroLanding', 'navy'); else if (q === 'default') localStorage.removeItem('moroLanding'); document.body.classList.toggle('ob-navy', localStorage.getItem('moroLanding') === 'navy'); } catch (e) { /* storage unavailable: default look */ }
+(function () {   // Welcome screen: navy and gradient is the default; ?landing=light switches to the white look, ?landing=navy switches back
+    document.body.classList.add('ob-navy');
+    try { const q = new URLSearchParams(window.location.search).get('landing'); if (q === 'light' || q === 'default') localStorage.setItem('moroLanding', 'light'); else if (q === 'navy') localStorage.removeItem('moroLanding'); document.body.classList.toggle('ob-navy', localStorage.getItem('moroLanding') !== 'light'); } catch (e) { /* storage unavailable: keep the navy default */ }
 })();
 (function () {   // Welcome roller arrows at the right edge: try with ?arrows=edge; ?arrows=default switches it off
     document.body.classList.add('ob-edge');   // arrows at the right edge are the default; ?arrows=center puts them under the sentence, ?arrows=edge restores the default
