@@ -39,7 +39,16 @@
           "term": "conditional logic",
           "note": "Mission logic where the next action depends on whether a specified condition is met."
         }
-      ]
+      ],
+      "video": {
+        "id": "V019",
+        "src": "videos/V019.mp4",
+        "poster": "videos/V019.jpg",
+        "title": "Conditions and loops in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Conditions and loops, in 30 seconds. A mission can include conditional logic. If a condition is met, take one path; otherwise, another. It can also repeat: a loop. A loop continues until a defined end state. One mission definition can cover more situations.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

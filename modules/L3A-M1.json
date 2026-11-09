@@ -47,7 +47,16 @@
           "term": "corrective maintenance",
           "note": "Maintenance performed after a failure has already occurred."
         }
-      ]
+      ],
+      "video": {
+        "id": "V020",
+        "src": "videos/V020.mp4",
+        "poster": "videos/V020.jpg",
+        "title": "Three kinds of maintenance in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Three kinds of maintenance, in 30 seconds. Preventive: scheduled work, whatever the condition. Predictive: triggered by signs of degradation. Corrective: fixing something after it has failed. A mature program relies on preventive and predictive. Corrective is the exception.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

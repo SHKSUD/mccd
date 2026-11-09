@@ -33,7 +33,16 @@
         "Understand a basic diagnostic workflow appropriate for operator level",
         "Know what information to gather before escalating"
       ],
-      "content": "When something goes wrong, a simple structured approach helps: what was MoRo doing right before the issue appeared, what does its current status show, and has anything changed in the environment (new obstruction, relocated equipment)? Gathering these details before escalating makes the technician's diagnosis faster once it's handed off."
+      "content": "When something goes wrong, a simple structured approach helps: what was MoRo doing right before the issue appeared, what does its current status show, and has anything changed in the environment (new obstruction, relocated equipment)? Gathering these details before escalating makes the technician's diagnosis faster once it's handed off.",
+      "video": {
+        "id": "V010",
+        "src": "videos/V010.mp4",
+        "poster": "videos/V010.jpg",
+        "title": "When something goes wrong in 30 seconds",
+        "duration": "0:30",
+        "transcript": "When something goes wrong, in 30 seconds. At L2 you recognise, categorise and escalate. You do not attempt the fix. Ask: what was MoRo doing just before? What does its status show now? Has anything changed around it? Share those details when you escalate.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

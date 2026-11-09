@@ -31,7 +31,16 @@
           "term": "supervisory control",
           "note": "Overseeing an automated system's operation without directly performing each action yourself."
         }
-      ]
+      ],
+      "video": {
+        "id": "V014",
+        "src": "videos/V014.mp4",
+        "poster": "videos/V014.jpg",
+        "title": "Meet the control interface in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The control interface, in 30 seconds. MoRo is managed through software: the HMI. On MoRo, it is called ANT. You do not need a technical background. Most of the time, you supervise. You observe and confirm actions. You step in only when needed.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,
@@ -71,7 +80,16 @@
           "term": "ready state",
           "note": "The confirmed status indicating MoRo has passed its startup diagnostic and can accept mission assignments."
         }
-      ]
+      ],
+      "video": {
+        "id": "V015",
+        "src": "videos/V015.mp4",
+        "poster": "videos/V015.jpg",
+        "title": "The startup sequence in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready confirmation. Only then assign a mission. Assigning early often interrupts the start.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 4,
@@ -95,7 +113,16 @@
           "term": "E-stop (emergency stop)",
           "note": "An immediate, unconditional halt command that overrides all other operation."
         }
-      ]
+      ],
+      "video": {
+        "id": "V016",
+        "src": "videos/V016.mp4",
+        "poster": "videos/V016.jpg",
+        "title": "Manual override and E-stop in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup, clearing a path, post-maintenance tests. Override never switches off the safety systems. E-stop works the same in both modes. It takes priority and halts everything.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 5,

@@ -27,7 +27,16 @@
           "term": "ANSI B56.5",
           "note": "A North American safety standard specifically for guided industrial vehicles."
         }
-      ]
+      ],
+      "video": {
+        "id": "V006",
+        "src": "videos/V006.mp4",
+        "poster": "videos/V006.jpg",
+        "title": "The standards behind MoRo’s safety in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The standards behind MoRo’s safety. MoRo’s safety is engineered to recognised standards. Not ad-hoc caution. ISO 3691-4: safety requirements for industrial trucks. ANSI B56.5: safety for guided industrial vehicles. You need not memorise them. Behaviour around people follows requirements, not promises.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,
@@ -85,7 +94,16 @@
         "Know the appropriate response to unexpected MoRo behavior",
         "Understand that reporting unusual behavior is standard practice, not overreaction"
       ],
-      "content": "If MoRo behaves unexpectedly — moving somewhere unanticipated, stopping without apparent cause, or deviating from learned patterns — use E-stop if there's any immediate concern, then report it. Diagnosis is not the operator's responsibility at this level. Early reporting, even for something that turns out to be minor, is the expected behavior this module builds toward."
+      "content": "If MoRo behaves unexpectedly — moving somewhere unanticipated, stopping without apparent cause, or deviating from learned patterns — use E-stop if there's any immediate concern, then report it. Diagnosis is not the operator's responsibility at this level. Early reporting, even for something that turns out to be minor, is the expected behavior this module builds toward.",
+      "video": {
+        "id": "V017",
+        "src": "videos/V017.mp4",
+        "poster": "videos/V017.jpg",
+        "title": "If MoRo does something unexpected in 30 seconds",
+        "duration": "0:30",
+        "transcript": "If MoRo does something unexpected. It moves somewhere new, or stops for no clear reason. If there is any immediate concern, press E-stop. Then report it. Diagnosing is not the operator’s job at this level. Report early, even if it turns out minor.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 6,

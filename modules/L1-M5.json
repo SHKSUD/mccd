@@ -17,7 +17,16 @@
         "Understand the basic ground rules of sharing floor space with MoRo",
         "Recognize that coexistence is a shared responsibility, not just MoRo's"
       ],
-      "content": "By now you understand what MoRo is, how it navigates, how to operate it, and how its safety systems work. This module covers the everyday habits of sharing a workspace with MoRo without friction. The ground rules: give MoRo room to complete its path, don't assume its route stays fixed day to day, and treat it with the same predictable attention you'd give any moving industrial equipment."
+      "content": "By now you understand what MoRo is, how it navigates, how to operate it, and how its safety systems work. This module covers the everyday habits of sharing a workspace with MoRo without friction. The ground rules: give MoRo room to complete its path, don't assume its route stays fixed day to day, and treat it with the same predictable attention you'd give any moving industrial equipment.",
+      "video": {
+        "id": "V018",
+        "src": "videos/V018.mp4",
+        "poster": "videos/V018.jpg",
+        "title": "Working alongside MoRo in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at its edge can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,
