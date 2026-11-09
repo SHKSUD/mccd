@@ -1633,7 +1633,7 @@
         @media (prefers-reduced-motion: reduce) { .rail-card, .rail-dot::before { transition: none; } }
         /* ── LESSON VIDEO CARD: a slim row; the player opens only when asked ── */
         .vid-card { --v-bg: #FFFFFF; --v-line: #E5E5EA; --v-ink: #1D1D1F; --v-mute: #636366; --v-blue: #245A96; margin: 14px 0 20px; overflow: hidden; color: var(--v-ink); background: var(--v-bg); border: 1px solid var(--v-line); border-radius: 14px; }
-        body.read-dark .vid-card { --v-bg: #1B1F27; --v-line: #3A404B; --v-ink: #EEF0F4; --v-mute: #A0A7B4; --v-blue: #8DB9F2; }
+        body.read-dark:not(.home-mode):not(.ob-mode) .vid-card { --v-bg: #1B1F27; --v-line: #3A404B; --v-ink: #EEF0F4; --v-mute: #A0A7B4; --v-blue: #8DB9F2; }
         .vid-main { display: flex; gap: 14px; align-items: center; padding: 10px 12px; }
         .vid-thumb { position: relative; flex: 0 0 128px; width: 128px; aspect-ratio: 16 / 9; padding: 0; overflow: hidden; cursor: pointer; background: #0B1738; border: 0; border-radius: 10px; }
         .vid-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -1654,6 +1654,8 @@
         .vid-stage { position: relative; aspect-ratio: 16 / 9; background: #0B1738; }
         .vid-stage[hidden] { display: none; }
         .vid-stage video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+        .vid-hint { position: absolute; top: 10px; right: 10px; z-index: 2; padding: 4px 10px; font-size: 12px; font-weight: 600; color: #fff; background: rgba(0, 0, 0, 0.6); border-radius: 999px; pointer-events: none; transition: opacity 0.6s ease; }
+        .vid-hint.off { opacity: 0; }
         .vid-err { position: absolute; left: 12px; right: 12px; bottom: 12px; margin: 0; padding: 10px 12px; font-size: 13px; color: #fff; background: rgba(0, 0, 0, 0.78); border-radius: 10px; }
         .vid-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         @media (max-width: 600px) { .vid-main { gap: 10px; } .vid-thumb { flex-basis: 96px; width: 96px; } }
@@ -1762,12 +1764,14 @@
         .rp-switch { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; padding: 10px 0; font-size: 14px; font-weight: 600; color: var(--navy); cursor: pointer; }
         .rp-switch input { flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px; accent-color: var(--orange-ink); }
         .rp-switch small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; line-height: 1.4; color: var(--muted); }
-        .nav-top { display: flex; gap: 8px; margin: 0 20px 24px; }
-        .nav-top .nav-home { flex: 1; width: auto; margin: 0; }
+        .nav-top { display: flex; align-items: center; margin: 0 20px 24px 72px; }   /* room on the left for the fixed list toggle, same row as the My learning pill */
+        .nav-top .nav-home { flex: 1; width: auto; height: 44px; min-height: 44px; margin: 0; padding-top: 0; padding-bottom: 0; }
         .nav-collapse, .sidebar-expand { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0; color: var(--muted); background: var(--white); border: 1.5px solid var(--divider); border-radius: 4px; cursor: pointer; transition: var(--transition); }
         .nav-collapse:hover, .sidebar-expand:hover { color: var(--navy); border-color: var(--navy); }
         .nav-collapse:focus-visible, .sidebar-expand:focus-visible, .focus-btn:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
-        .sidebar-expand { display: none; position: fixed; left: 10px; top: calc(var(--header-h, 62px) + 12px); z-index: 80; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .vid-card { display: none !important; }   /* Focus mode is for text only */
+        .nav-collapse, .sidebar-expand { position: fixed; left: 20px; top: calc(var(--header-h, 62px) + 32px); z-index: 80; transition: var(--transition), top 0.25s ease; }   /* ONE spot for hide and show: it never moves, and it sits on the same row as My learning */
+        .sidebar-expand { display: none; }   /* the same spot the hide box has in the sidebar: 32px under the header, 20px from the edge */
         .focus-bar { display: none; position: fixed; top: max(12px, env(safe-area-inset-top)); right: 12px; z-index: 140; gap: 8px; }
         .focus-btn { min-height: 44px; min-width: 44px; padding: 8px 16px; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--navy); background: var(--white); border: 1.5px solid var(--divider); border-radius: 999px; cursor: pointer; opacity: 0.88; transition: var(--transition); }
         .focus-btn:hover { opacity: 1; border-color: var(--navy); }
@@ -1776,11 +1780,12 @@
         @media (min-width: 901px) {
             body:not(.home-mode):not(.ob-mode).sidebar-collapsed .sidebar { display: none; }
             body:not(.home-mode):not(.ob-mode).sidebar-collapsed .sidebar-expand { display: inline-flex; }
+            body:not(.home-mode):not(.ob-mode).sidebar-collapsed .nav-collapse { display: none; }
             body:not(.home-mode):not(.ob-mode).sidebar-collapsed .layout { justify-content: center; }
             body:not(.home-mode):not(.ob-mode).sidebar-collapsed .main { width: 100%; }
         }
         @media (max-width: 900px) { .nav-collapse, .sidebar-expand, .rp-desk { display: none !important; } }
-        body:not(.home-mode):not(.ob-mode).focus-mode .header, body:not(.home-mode):not(.ob-mode).focus-mode .back-bar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar-expand { display: none !important; }
+        body:not(.home-mode):not(.ob-mode).focus-mode .header, body:not(.home-mode):not(.ob-mode).focus-mode .back-bar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar, body:not(.home-mode):not(.ob-mode).focus-mode .sidebar-expand, body:not(.home-mode):not(.ob-mode).focus-mode .nav-collapse { display: none !important; }
         body:not(.home-mode):not(.ob-mode).focus-mode .layout { justify-content: center; min-height: 100vh; }
         body:not(.home-mode):not(.ob-mode).focus-mode .main { width: 100%; padding-top: 72px; }
         body:not(.home-mode):not(.ob-mode).focus-mode .focus-bar { display: flex; }
@@ -1861,6 +1866,8 @@ body.inner-y:not(.home-mode):not(.ob-mode) .back-bar { background: rgba(251, 251
 body.inner-y:not(.home-mode):not(.ob-mode) .back-link { color: var(--y-blue-d); }
 body.inner-y:not(.home-mode):not(.ob-mode) .back-ctx { color: var(--y-mute); }
 body.inner-y:not(.home-mode):not(.ob-mode) .sidebar { background: transparent; border-right: 1px solid var(--y-line); }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-collapse, body.inner-y:not(.home-mode):not(.ob-mode) .sidebar-expand { color: var(--y-mute); border-color: var(--y-line); border-radius: 12px; }
+body.inner-y:not(.home-mode):not(.ob-mode) .nav-collapse:hover, body.inner-y:not(.home-mode):not(.ob-mode) .sidebar-expand:hover { color: var(--y-ink); border-color: var(--y-mute); }
 body.inner-y:not(.home-mode):not(.ob-mode) .module-label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 600; color: var(--y-mute); }
 body.inner-y:not(.home-mode):not(.ob-mode) .nav-item { border-left: none; border-radius: 12px; padding: 11px 12px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .nav-item:hover { background: #F2F2F5; }
@@ -1871,7 +1878,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .nav-item.active .nav-num { color: va
 body.inner-y:not(.home-mode):not(.ob-mode) .nav-dot.visited, body.inner-y:not(.home-mode):not(.ob-mode) .status-dot.active { background: var(--y-blue); border-color: var(--y-blue); }
 body.inner-y:not(.home-mode):not(.ob-mode) .main { max-width: 780px; padding: 64px 56px 96px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .section-eyebrow { text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 600; color: var(--y-blue-d); margin-bottom: 14px; }
-body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-family: inherit; font-size: clamp(32px, 4vw, 48px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.07; color: var(--y-ink); margin-bottom: 14px; text-wrap: balance; }
+body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-family: inherit; font-size: clamp(28px, 3vw, 36px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; color: var(--y-ink); margin-bottom: 14px; text-wrap: balance; }
 body.inner-y:not(.home-mode):not(.ob-mode) .section-meta { font-size: 14px; color: var(--y-mute); border-bottom: none; padding-bottom: 0; margin-bottom: 36px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .h2 { font-family: inherit; font-size: 26px; font-weight: 600; letter-spacing: -0.03em; color: var(--y-ink); margin-top: 52px; }
 body.inner-y:not(.home-mode):not(.ob-mode) .h3 { text-transform: none; letter-spacing: -0.01em; font-size: 17px; font-weight: 600; color: var(--y-ink); }
@@ -1919,7 +1926,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .section-footer { border-top-color: v
 body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-color: var(--y-blue); color: var(--y-blue-d); }
 @media (max-width: 900px) {
     body.inner-y:not(.home-mode):not(.ob-mode) .main { padding: 36px 20px 72px; }
-    body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-size: clamp(30px, 8vw, 40px); }
+    body.inner-y:not(.home-mode):not(.ob-mode) .section-title { font-size: clamp(26px, 7vw, 30px); }
     body.inner-y:not(.home-mode):not(.ob-mode) .body-text, body.inner-y:not(.home-mode):not(.ob-mode) .content-list li { font-size: 17px; }
     body.inner-y:not(.home-mode):not(.ob-mode) .sticky-actions .btn { border-radius: 22px; line-height: 1.25; }
     body.inner-y:not(.home-mode):not(.ob-mode) .sticky-actions { background: rgba(251, 251, 253, 0.94); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border-top: 1px solid var(--y-line); }
@@ -2328,6 +2335,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- ═══════════════════════════════════════════════ -->
 <div id="moduleView" style="display:none;">
     <nav class="back-bar" id="backBar" aria-label="Back to My learning"><button class="back-link" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button><span class="back-right"><span class="back-ctx" id="backCtx"></span><button class="btn btn-secondary read-btn" id="readBtnBar" onclick="toggleReadPanel(event)" aria-haspopup="dialog" aria-expanded="false" aria-controls="readPanel" aria-label="Reading options" title="Reading options">Aa</button></span></nav>
+    <button class="nav-collapse" id="navCollapse" onclick="setSidebarCollapsed(true)" aria-label="Hide the module list" title="Hide the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></button>
     <button class="sidebar-expand" id="sidebarExpand" onclick="setSidebarCollapsed(false)" aria-label="Show the module list" title="Show the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 17l5-5-5-5"/><path d="M6 17l5-5-5-5"/></svg></button>
     <div class="layout">
         <!-- SIDEBAR -->
@@ -2335,7 +2343,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebarNav()" aria-expanded="false" aria-controls="sidebarNav">
                 <span id="sidebarToggleText">Sections</span><span class="sidebar-toggle-chev">&#9662;</span>
             </button>
-            <div class="nav-top"><button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button><button class="nav-collapse" id="navCollapse" onclick="setSidebarCollapsed(true)" aria-label="Hide the module list" title="Hide the module list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 17l-5-5 5-5"/><path d="M18 17l-5-5 5-5"/></svg></button></div>
+            <div class="nav-top"><button class="nav-home" id="navHome" onclick="goHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button></div>
             <div class="sidebar-module">
                 <div class="module-label" id="sidebarModuleLabel">Loading...</div>
                 <div id="sidebarNav"></div>
@@ -2631,6 +2639,7 @@ function setSidebarCollapsed(on) {
     const t = document.getElementById(on ? 'sidebarExpand' : 'navCollapse'); if (t && !document.getElementById('readPanel').contains(document.activeElement)) { try { t.focus({ preventScroll: true }); } catch (e) {} }
 }
 function setFocusMode(on) {
+    if (on) document.querySelectorAll('.vid-card video').forEach(v => { try { v.pause(); } catch (e) { /* ignore */ } });   // text only: stop any playing video
     focusMode = !!on; readSet('moroFocus', on ? '1' : null); closeReadPanel(); if (typeof closeCourseMenu === 'function') closeCourseMenu(); applyReadPrefs();
     readSay(on ? 'Focus mode on. Press Escape to show the menus again.' : 'Focus mode off.');
     if (on) focusHeading(); else {
@@ -3209,14 +3218,14 @@ function renderSection(index) {
 // LESSON VIDEO CARD: poster first, loads the video only on tap. A section opts in with
 // "video": { id, src, poster, title, duration, transcript, placeholder } in its module JSON.
 // ═══════════════════════════════════════════════════
-const HOME_VIDEO = { id: 'V013', src: 'videos/V013.mp4', poster: 'videos/V013.jpg', title: 'Your path in the Academy in 30 seconds', duration: '0:30', placeholder: true, transcript: 'Your path in the MoRo Academy. Seven levels, from awareness to master instructor. L1 Awareness: anyone on the floor. L2 Operator, then L3A Technician or L3B Programmer. L4A Systems Engineer or L4B Advanced Programmer. L5 Master Instructor trains others. From L2 up, you also show it in practice.' };
+const HOME_VIDEO = { id: 'V013', eager: true, src: 'videos/V013.mp4', poster: 'videos/V013.jpg', title: 'Your path in the Academy in 30 seconds', duration: '0:30', placeholder: true, transcript: 'Your path in the MoRo Academy. Seven levels, from awareness to master instructor. L1 Awareness: anyone on the floor. L2 Operator, then L3A Technician or L3B Programmer. L4A Systems Engineer or L4B Advanced Programmer. L5 Master Instructor trains others. From L2 up, you also show it in practice.' };
 function videoCardHTML(v) {
     const e = escapeHtml, dur = v.duration ? ` (${e(v.duration)})` : '';
     return `<div class="vid-card" data-vid="${e(v.id || '')}">
         <div class="vid-stage" hidden></div>
         <div class="vid-main">
             <button type="button" class="vid-thumb vid-play" onclick="playVideoCard(this)" aria-expanded="false" aria-label="Play video: ${e(v.title)}${dur}. No spoken audio; captions are on screen.">
-                <img src="${e(v.poster || '')}" alt="" loading="lazy" decoding="async">
+                <img src="${e(v.poster || '')}" alt="" loading="${v.eager ? 'eager' : 'lazy'}" decoding="${v.eager ? 'sync' : 'async'}">
                 <span class="vid-btn" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
             </button>
             <div class="vid-info">
@@ -3230,13 +3239,26 @@ function videoCardHTML(v) {
         </div>
     </div>`;
 }
+function toggleVideoFullscreen(el) {
+    const d = document;
+    if (d.fullscreenElement || d.webkitFullscreenElement) { (d.exitFullscreen || d.webkitExitFullscreen).call(d); return; }
+    if (el.requestFullscreen) el.requestFullscreen(); else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen(); else if (el.webkitEnterFullscreen) el.webkitEnterFullscreen();
+}
+function showFullscreenHint(stage) {   // a faint one-time tip, only where there is a keyboard
+    let seen = false; try { seen = sessionStorage.getItem('moroVidHint') === '1'; } catch (e) { /* ignore */ }
+    const touch = !!window.matchMedia && window.matchMedia('(pointer: coarse)').matches;   // phones and tablets have the player's own full-screen button
+    if (seen || touch) return;
+    try { sessionStorage.setItem('moroVidHint', '1'); } catch (e) { /* ignore */ }
+    const h = document.createElement('span'); h.className = 'vid-hint'; h.setAttribute('aria-hidden', 'true'); h.textContent = 'Press F for full screen'; stage.appendChild(h);
+    setTimeout(() => { h.classList.add('off'); setTimeout(() => h.remove(), 700); }, 5000);
+}
 function playVideoCard(btn) {
     const card = btn.closest('.vid-card'), stage = card.querySelector('.vid-stage');
     if (card.classList.contains('is-open')) { stage.innerHTML = ''; stage.hidden = true; card.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); return; }
     const src = card.querySelector('a.vid-chip').getAttribute('href'), poster = btn.querySelector('img').getAttribute('src'), title = card.querySelector('.vid-title').textContent.replace('Watch: ', '');
     stage.hidden = false; card.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true');
-    stage.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${escapeHtml(poster)}" src="${escapeHtml(src)}" aria-label="${escapeHtml(title)}"></video><p class="vid-err" role="status" hidden>This video could not be loaded. Check your connection, or use \u201COpen in a new window\u201D.</p>`;
-    const el = stage.querySelector('video'); el.addEventListener('error', () => { stage.querySelector('.vid-err').hidden = false; }); try { el.focus(); } catch (e) { /* ignore */ }
+    stage.innerHTML = `<video controls autoplay playsinline tabindex="0" aria-keyshortcuts="F" preload="metadata" poster="${escapeHtml(poster)}" src="${escapeHtml(src)}" aria-label="${escapeHtml(title)}"></video><p class="vid-err" role="status" hidden>This video could not be loaded. Check your connection, or use \u201COpen in a new window\u201D.</p>`;
+    const el = stage.querySelector('video'); el.addEventListener('error', () => { stage.querySelector('.vid-err').hidden = false; }); el.addEventListener('keydown', e => { if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); toggleVideoFullscreen(el); } }); showFullscreenHint(stage); try { el.focus(); } catch (e) { /* ignore */ }
 }
 
 // ═══════════════════════════════════════════════════
