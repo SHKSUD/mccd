@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+/* Paint navy from the first frame on a Welcome visit, and keep the not-yet-built home page hidden, so nothing old flashes before the real page appears. */
+(function () {
+    var d = document.documentElement;
+    try {
+        var q = new URLSearchParams(location.search), ls = localStorage, ss = sessionStorage, deep = q.get('module') || q.get('exam') || q.get('glossary'), v = (q.get('home') || ls.getItem('moroHomeVariant') || 'B').toUpperCase();
+        var forced = q.get('welcome') || q.get('onboarding') === '1' || ss.getItem('moroObForce') === '1';
+        var fresh = !ls.getItem('moroOnboarded') && !ls.getItem('moroRole') && !ls.getItem('moroLearnerName') && q.get('onboarding') !== '0' && ss.getItem('moroObForce') !== '0';
+        if (!deep && v === 'B' && (forced || fresh) && ls.getItem('moroLanding') !== 'light') d.classList.add('pre-ob');
+    } catch (e) { /* storage unavailable: no early paint */ }
+    setTimeout(function () { d.classList.remove('pre-ob'); var h = document.getElementById('homeView'); if (h) h.removeAttribute('data-pending'); }, 4000);   // safety: never stay hidden
+})();
+</script>
+<link rel="preload" as="image" href="difacto-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoRo IMR Training Academy</title>
@@ -1645,6 +1659,10 @@
         @media (max-width: 600px) { .vid-main { gap: 10px; } .vid-thumb { flex-basis: 96px; width: 96px; } }
         @media (pointer: coarse) { .vid-chip { display: inline-flex; align-items: center; min-height: 44px; } .vid-thumb { min-height: 54px; } }
         .b-video .vid-card { max-width: 620px; margin: 0 0 8px; }
+        /* ── NO FLASH ON LOAD: the static home markup stays hidden until the page is built; Welcome visits paint navy from the first frame ── */
+        #homeView[data-pending] { visibility: hidden; }
+        html.pre-ob, html.pre-ob body { background: #070F2B; }
+        html.pre-ob .header, html.pre-ob #homeView, html.pre-ob .skip-link { visibility: hidden; }
         /* ── MODULE BUTTONS AT THE RIGHT EDGE: previous and next module ── */
         .mod-edge { position: fixed; top: 0; right: 6px; bottom: 0; z-index: 45; pointer-events: none; }
         .mod-edge[hidden] { display: none; }
@@ -2041,7 +2059,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 <!-- ═══════════════════════════════════════════════ -->
 <!-- HOME VIEW                                      -->
 <!-- ═══════════════════════════════════════════════ -->
-<main id="homeView">
+<main id="homeView" data-pending>
     <div class="vc c-home" id="cHome">
         <section class="c-hero c-reveal" aria-labelledby="cH1">
             <div class="c-hero-text">
@@ -3462,6 +3480,7 @@ function renderLanding() {
     if (v === 'B') renderHomeB(); else if (v === 'C') renderHomeC(); else { document.body.classList.remove('ob-mode'); renderHomeA(); }
     selectStep(0);
     initLandingReveal();
+    document.documentElement.classList.remove('pre-ob'); const hv0 = document.getElementById('homeView'); if (hv0) hv0.removeAttribute('data-pending');   // the real page is built: show it
 }
 
 // ---- Option B ----
