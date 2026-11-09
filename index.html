@@ -3331,8 +3331,9 @@ function renderQuiz() {
 // ---- Access gate (preview passcode) ----
 // NOTE: this is a courtesy lock for a private preview, not real security. The check runs in the browser,
 // and module files remain reachable by direct URL. Real protection arrives with Firebase sign-in.
-// To turn the lock off: set GATE_ENABLED to false. To change the code: replace GATE_HASH.
-const GATE_ENABLED = true;
+// 1.2: the lock is OFF (not needed in this version). To bring it back later, set GATE_ENABLED to true. Until then, add ?gate=on to the address to try it.
+// To change the code: replace GATE_HASH.
+const GATE_ENABLED = new URLSearchParams(window.location.search).get('gate') === 'on';   // later: const GATE_ENABLED = true;
 const GATE_SALT = 'moro-academy-preview';
 const GATE_HASH = '7a6a0a99a5f19';
 let gateUnlockedInMemory = false;
