@@ -25,7 +25,11 @@
         "title": "Working alongside MoRo in 30 seconds",
         "duration": "0:30",
         "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at its edge can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
-        "placeholder": true
+        "placeholder": true,
+        "card": {
+          "title": "Working alongside MoRo card",
+          "src": "cards/working-alongside-moro.pdf"
+        }
       }
     },
     {

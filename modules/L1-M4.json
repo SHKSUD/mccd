@@ -102,7 +102,11 @@
         "title": "If MoRo does something unexpected in 30 seconds",
         "duration": "0:30",
         "transcript": "If MoRo does something unexpected. It moves somewhere new, or stops for no clear reason. If there is any immediate concern, press E-stop. Then report it. Diagnosing is not the operator’s job at this level. Report early, even if it turns out minor.",
-        "placeholder": true
+        "placeholder": true,
+        "card": {
+          "title": "E-stop card",
+          "src": "cards/e-stop-and-unexpected-behaviour.pdf"
+        }
       }
     },
     {

@@ -6,7 +6,7 @@
 (function () {
     var d = document.documentElement;
     try {
-        var q = new URLSearchParams(location.search), ls = localStorage, ss = sessionStorage, deep = q.get('module') || q.get('exam') || q.get('glossary'), v = (q.get('home') || ls.getItem('moroHomeVariant') || 'B').toUpperCase();
+        var q = new URLSearchParams(location.search), ls = localStorage, ss = sessionStorage, deep = q.get('module') || q.get('exam') || q.get('glossary') || q.get('videos'), v = (q.get('home') || ls.getItem('moroHomeVariant') || 'B').toUpperCase();
         var forced = q.get('welcome') || q.get('onboarding') === '1' || ss.getItem('moroObForce') === '1';
         var fresh = !ls.getItem('moroOnboarded') && !ls.getItem('moroRole') && !ls.getItem('moroLearnerName') && q.get('onboarding') !== '0' && ss.getItem('moroObForce') !== '0';
         if (!deep && v === 'B' && (forced || fresh) && ls.getItem('moroLanding') !== 'light') d.classList.add('pre-ob');
@@ -1665,6 +1665,24 @@
         #homeView[data-pending] { visibility: hidden; }
         html.pre-ob, html.pre-ob body { background: #070F2B; }
         html.pre-ob .header, html.pre-ob #homeView, html.pre-ob .skip-link { visibility: hidden; }
+        /* ── LEARNING OBJECTIVES FADE IN: each line 0.12 s after the last, once per section; off for reduced motion and in Focus mode ── */
+        @media (prefers-reduced-motion: no-preference) {
+            #mainContent .view .content-list > li { animation: moroObjIn 0.35s ease-out both; }
+            #mainContent .view .content-list > li:nth-child(2) { animation-delay: 0.12s; }
+            @keyframes moroObjIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        }
+        body.focus-mode #mainContent .view .content-list > li { animation: none; }
+        /* ── TIME, OUTCOME AND NEEDS; VIDEO LIBRARY ── */
+        .sec-time { font-weight: 500; color: var(--y-mute, var(--muted)); }
+        .b-card-outcome { margin: 8px 0 0; font-size: 14px; line-height: 1.45; }
+        .b-card-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+        .b-card-chips span { padding: 3px 10px; font-size: 12px; font-weight: 600; line-height: 1.4; background: rgba(120, 130, 150, 0.16); border-radius: 999px; }
+        .b-card-chips .need { background: rgba(46, 109, 180, 0.16); }
+        .b-mini-need { display: block; margin-top: 2px; font-size: 11.5px; color: var(--muted); }
+        .bd-time { margin: -2px 0 10px; font-size: 12.5px; color: var(--muted); }
+        .b-vidlink { margin: 4px 0 0; }
+        .vl-level { margin: 28px 0 8px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+        .vl-item .vid-card { margin: 0 0 12px; }
         /* ── MODULE BUTTONS AT THE RIGHT EDGE: previous and next module ── */
         .mod-edge { position: fixed; top: 0; right: 6px; bottom: 0; z-index: 45; pointer-events: none; }
         .mod-edge[hidden] { display: none; }
@@ -2324,7 +2342,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </div>
     </section>
 
-    <p class="foot-welcome"><button class="foot-link" id="footGlossary" onclick="loadGlossary()">Glossary</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footOffline" onclick="openInstallPanel(event)">Use offline</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button><span class="foot-sep" aria-hidden="true">&middot;</span><a class="foot-link" href="https://www.difacto.com/" target="_top" rel="noopener" data-difacto-site onclick="return leaveForDifacto(event)">DiFacto website</a></p>
+    <p class="foot-welcome"><button class="foot-link" id="footGlossary" onclick="loadGlossary()">Glossary</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footVideos" onclick="loadVideos()">Videos</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footOffline" onclick="openInstallPanel(event)">Use offline</button><span class="foot-sep" aria-hidden="true">&middot;</span><button class="foot-link" id="footWelcome" onclick="showWelcome()">Welcome screen</button><span class="foot-sep" aria-hidden="true">&middot;</span><a class="foot-link" id="footFeedback" href="#" hidden onclick="return sendFeedback(event)">Tell us what you are stuck on</a><span class="foot-sep" id="footFeedbackSep" aria-hidden="true" hidden>&middot;</span><a class="foot-link" href="https://www.difacto.com/" target="_top" rel="noopener" data-difacto-site onclick="return leaveForDifacto(event)">DiFacto website</a></p>
     <footer class="section-footer" style="margin-top:48px;">
         <p>&copy; 2026 DiFacto Robotics &amp; Automation &middot; <a href="https://www.difacto.com" target="_blank" rel="noopener">www.difacto.com</a></p>
     </footer>
@@ -2432,7 +2450,8 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
     </div>
     <div class="drawer-tools">
         <div class="drawer-quick"><button class="drawer-home" id="drawerHome" onclick="menuGoHome()"><svg class="home-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>My learning</button>
-        <button class="drawer-home drawer-glossary" id="drawerGlossary" onclick="menuGoGlossary()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button></div>
+        <button class="drawer-home drawer-glossary" id="drawerGlossary" onclick="menuGoGlossary()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button>
+        <button class="drawer-home drawer-videos" id="drawerVideos" onclick="menuGoVideos()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg>Videos</button></div>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
         <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules and terms..." oninput="renderCourseMenu(this.value)" autocomplete="off">
     </div>
@@ -2585,6 +2604,7 @@ function init() {
     try {
         if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
+        else if (params.get('videos')) loadVideos();
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
@@ -2855,6 +2875,68 @@ function filterGlossary(q) {
 }
 function glossJump(L) { const el = document.getElementById('gl-' + (L === '#' ? 'num' : L)); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
 function menuGoGlossary(key) { closeCourseMenu(); loadGlossary(key); }
+
+// ═══════════════════════════════════════════════════
+// VIDEO LIBRARY: every video, grouped by level, each linked to its lesson (videos-index.json is built from the lessons)
+// ═══════════════════════════════════════════════════
+let videosData = null, videosLoading = null;
+function ensureVideos() {
+    if (videosData) return Promise.resolve(videosData);
+    if (!videosLoading) videosLoading = fetch('./videos-index.json').then(r => { if (!r.ok) throw new Error('videos'); return r.json(); }).then(d => (videosData = d)).catch(e => { videosLoading = null; throw e; });
+    return videosLoading;
+}
+function openLessonAt(moduleId, section) { Promise.resolve(loadModule(moduleId)).then(() => { if (section > 0) goSection(section); }); }
+async function loadVideos() {
+    if (!okToLeaveExam()) return;
+    closePathway(true);
+    pushRoute('?videos=1');
+    setPageTitle('Videos');
+    await swapView(() => {
+        document.body.classList.remove('home-mode', 'ob-mode');
+        if (document.body.classList.contains('focus-mode')) setFocusMode(false);
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('moduleView').style.display = 'block';
+        document.getElementById('progressWrap').style.display = 'none';
+        document.getElementById('homeBtn').style.display = 'block';
+        currentModule = null; examRun = null; currentExam = null; updateRibbon();
+        document.getElementById('headerLevel').textContent = 'Videos';
+        document.getElementById('sidebarModuleLabel').textContent = 'Videos';
+        document.getElementById('sidebarNav').innerHTML = '';
+        document.getElementById('statusDot').className = 'status-dot active';
+        document.getElementById('statusLabel').textContent = 'Reference';
+        const ctx = document.getElementById('backCtx'); if (ctx) ctx.textContent = 'Videos';
+        document.getElementById('mainContent').innerHTML = '<div class="loading-wrap"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div><span>Loading videos...</span></div>';
+        applyReadPrefs();
+    });
+    try { renderVideos(await ensureVideos()); }
+    catch (e) { showLoadError('the video library', () => loadVideos()); }
+}
+function vlLevelName(k) { if (k === 'Start') return 'Start here'; const l = levelById(k); return l ? `Level ${k.slice(1)} \u00B7 ${l.name}` : k; }
+function renderVideos(data) {
+    const groups = {}; data.videos.forEach(v => { (groups[v.level] = groups[v.level] || []).push(v); });
+    const keys = ['Start', ...LEVELS.map(l => l.id)].filter(k => groups[k]);
+    document.getElementById('sidebarNav').innerHTML = keys.map(k => `<div class="nav-item" id="vl-nav-${k}" onclick="vlJump('${k}')"><div class="nav-num">${k === 'Start' ? '\u25B6' : k}</div><div class="nav-text">${groups[k].length} video${groups[k].length === 1 ? '' : 's'}</div></div>`).join('');
+    const item = v => { const ctx = v.module ? `${v.module.replace('-M', ' \u00B7 M')} \u00B7 ${v.sectionTitle}` : ''; return `<div class="vl-item" data-s="${escapeHtml((v.title + ' ' + ctx + ' ' + (v.transcript || '')).toLowerCase())}">${videoCardHTML({ ...v, ctx, lesson: v.module ? { id: v.module, section: v.section } : null })}</div>`; };
+    const list = keys.map(k => `<section class="vl-group" id="vl-${k}" aria-labelledby="vl-h-${k}"><h2 class="vl-level" id="vl-h-${k}">${escapeHtml(vlLevelName(k))}</h2>${groups[k].map(item).join('')}</section>`).join('');
+    document.getElementById('mainContent').innerHTML = `<div class="view active">
+        <div class="eyebrow-row"><div class="section-eyebrow">Reference</div></div>
+        <div class="section-title" role="heading" aria-level="1">Videos</div>
+        <p class="body-text">Short animated explainers, about 30 seconds each, with captions on screen. They are placeholders: real footage of MoRo will replace them. Each one links to its lesson.</p>
+        <div class="gl-search" role="search"><label for="vlQ" class="sr-only">Search the videos</label><input type="search" id="vlQ" placeholder="Search videos, for example E-stop" oninput="filterVideos(this.value)" autocomplete="off"><div class="gl-count" id="vlCount" aria-live="polite">${data.videos.length} videos</div></div>
+        <div id="vlList">${list}<div class="gl-empty" id="vlEmpty" hidden>No video matches your search.</div></div></div>`;
+    focusHeading();
+}
+function filterVideos(q) {
+    q = (q || '').trim().toLowerCase(); let shown = 0;
+    document.querySelectorAll('#vlList .vl-item').forEach(el => { const hit = !q || el.dataset.s.includes(q); el.hidden = !hit; if (hit) shown++; });
+    document.querySelectorAll('#vlList .vl-group').forEach(g => { g.hidden = !g.querySelector('.vl-item:not([hidden])'); });
+    const total = videosData ? videosData.videos.length : shown, cnt = document.getElementById('vlCount'), em = document.getElementById('vlEmpty');
+    if (cnt) cnt.textContent = q ? (shown ? `${shown} of ${total} videos` : 'No videos match') : `${total} videos`;
+    if (em) em.hidden = shown > 0;
+}
+function vlJump(k) { const el = document.getElementById('vl-' + k); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
+function menuGoVideos() { closeCourseMenu(); loadVideos(); }
+function sendFeedback(ev) { if (ev) ev.preventDefault(); if (!FEEDBACK_EMAIL) return false; window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent('MoRo Academy: what I am stuck on') + '&body=' + encodeURIComponent('What I am stuck on:\n\n'); return false; }
 function showLoadError(what, retry) {
     const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
     window.__retryLoad = retry;
@@ -3157,6 +3239,10 @@ function goSection(index) {
     focusHeading();
 }
 
+function readMinutes(sec) {   // about 200 words a minute, at least 1
+    const t = [sec.title, ...(sec.learningObjectives || []), sec.content, ...(sec.keyTerms || []).map(k => k.term + ' ' + k.note)].join(' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ');
+    return Math.max(1, Math.round(((t.match(/\S+/g) || []).length) / 200));
+}
 function renderSection(index) {
     const data = currentModule;
     const sec = data.sections[index];
@@ -3200,7 +3286,7 @@ function renderSection(index) {
 
     document.getElementById('mainContent').innerHTML = `
         <div class="view active">
-            <div class="eyebrow-row"><div class="section-eyebrow">Section ${index + 1} of ${data.sections.length}</div>${focusBtnHtml()}</div>
+            <div class="eyebrow-row"><div class="section-eyebrow">Section ${index + 1} of ${data.sections.length}<span class="sec-time"> \u00B7 about ${readMinutes(sec)} min read</span></div>${focusBtnHtml()}</div>
             <div class="section-title" role="heading" aria-level="1">${sec.title}</div>
             <div class="section-rule"></div>
             ${objectivesHTML}
@@ -3230,9 +3316,11 @@ function videoCardHTML(v) {
             </button>
             <div class="vid-info">
                 <div class="vid-title"><b>Watch:</b> ${e(v.title)}</div>
-                <div class="vid-meta">${v.duration ? e(v.duration) + ' \u00B7 ' : ''}${v.placeholder ? 'Placeholder animation \u00B7 ' : ''}Optional</div>
+                <div class="vid-meta">${v.ctx ? e(v.ctx) + ' \u00B7 ' : ''}${v.duration ? e(v.duration) + ' \u00B7 ' : ''}${v.placeholder ? 'Placeholder animation \u00B7 ' : ''}Optional</div>
                 <div class="vid-actions">
                     <a class="vid-chip" href="${e(v.src)}" target="_blank" rel="noopener">Open in a new window<span class="vid-sr"> (opens a new tab)</span> &#8599;</a>
+                    ${v.card ? `<a class="vid-chip" href="${e(v.card.src)}" target="_blank" rel="noopener">${e(v.card.title || 'Quick card')} (PDF)<span class="vid-sr"> (opens a new tab)</span></a>` : ''}
+                    ${v.lesson ? `<button type="button" class="vid-chip" onclick="openLessonAt('${e(v.lesson.id)}', ${+v.lesson.section || 0})">Open the lesson</button>` : ''}
                     ${v.transcript ? `<details class="vid-tr"><summary class="vid-chip">Transcript</summary><p>${e(v.transcript)}</p></details>` : ''}
                 </div>
             </div>
@@ -3509,6 +3597,8 @@ function renderLanding() {
 // ---- Option B ----
 const ROLE_KEY = 'moroRole';
 let bRole;                                    // undefined = not loaded yet, null = full pathway, else a level id
+const LEVEL_NEEDS = { L1: 'Online; a MoRo demo is optional', L2: 'Needs a MoRo unit for the practical', L3A: 'Needs a MoRo unit and tools', L3B: 'Needs ANT Server access', L4A: 'Needs a MoRo unit with MES and PLC', L4B: 'Needs a full MoRo cell', L5: 'Needs a full training lab' };   // from the Curriculum Design Document, delivery model
+const FEEDBACK_EMAIL = '';   // set an address here to show a "Tell us what you are stuck on" link in the footer (hidden while empty)
 function levelById(id) { return LEVELS.find(l => l.id === id); }
 function lowerFirst(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
 function levelProgress(id) { const n = builtTitles(id).length, done = countCompletedInLevel(id); return { n, done, complete: n > 0 && done >= n }; }
@@ -3602,6 +3692,8 @@ function levelStep(id, i, nextId, hereLevel, num) {
             <div class="b-card-main">
                 <div class="b-card-top"><span class="b-badge">${id}</span><h3 class="b-card-title">Level ${id.slice(1)} &middot; ${escapeHtml(l.name)}</h3>${stepChip(id, nextId, hereLevel)}</div>
                 <p class="b-card-meta">${escapeHtml(l.role)} &middot; ${p.n} modules</p>
+                <p class="b-card-outcome"><strong>After this level:</strong> ${escapeHtml(l.outcome)}</p>
+                <div class="b-card-chips"><span class="need">${escapeHtml(LEVEL_NEEDS[id] || '')}</span></div>
                 <div class="b-prog"><div class="b-bar"><span style="width:${pct}%"></span></div><span>${p.done} of ${p.n} modules</span></div>
             </div>
             <div class="b-card-actions"><button class="btn btn-primary" onclick="loadModule('${cta.moduleId}')">${cta.text}</button></div>
@@ -3614,7 +3706,7 @@ function altStep(s, i, nextId, hereLevel) {
         const minis = ids.map(id => {
             const l = levelById(id), p = levelProgress(id), cta = levelCta(l);
             return `<div class="b-mini" style="--lvl:${l.color}" data-level="${id}"><span class="b-badge">${id}</span>
-                <div><strong>Level ${id.slice(1)} &middot; ${escapeHtml(l.name)}</strong><small>${p.n} modules &middot; ${p.done} of ${p.n} done</small>${stepChip(id, nextId, hereLevel)}</div>
+                <div><strong>Level ${id.slice(1)} &middot; ${escapeHtml(l.name)}</strong><small>${p.n} modules &middot; ${p.done} of ${p.n} done</small><small class="b-mini-need">${escapeHtml(LEVEL_NEEDS[id] || '')}</small>${stepChip(id, nextId, hereLevel)}</div>
                 <button class="btn btn-primary b-btn-sm" onclick="loadModule('${cta.moduleId}')">${cta.text.replace(/ Level \w+$/, '')}</button></div>`;
         }).join('');
         return `<div class="b-track" style="--lane:${first.color}"><div class="b-track-head">${escapeHtml(first.track)}</div>${minis}</div>`;
@@ -3669,19 +3761,20 @@ function deckWrap(i) { const n = deckIds().length; return (i + n) % n; }
 function deckLoad(id) {
     if (DECK.cache[id]) return Promise.resolve(DECK.cache[id]);
     return fetch(`./modules/${id}.json`).then(r => r.ok ? r.json() : null).then(d => {
-        const o = { objectives: d ? d.sections.slice(0, 3).map(s => (s.learningObjectives || [])[0]).filter(Boolean) : [] };
+        const o = { objectives: d ? d.sections.slice(0, 3).map(s => (s.learningObjectives || [])[0]).filter(Boolean) : [], n: d ? d.sections.length : 0, min: d ? d.sections.reduce((a, s) => a + readMinutes(s), 0) : 0 };
         if (d) DECK.cache[id] = o;
         return o;
     }).catch(() => ({ objectives: [] }));
 }
+function deckTime(o) { return o && o.n ? `${o.n} sections \u00B7 about ${o.min} min reading` : ''; }
 function deckBullets(o) { return o.objectives.map(x => `<li>${escapeHtml(x)}</li>`).join('') || '<li>Overview not available.</li>'; }
 function deckCard(id) {
     const lv = id.split('-')[0], level = levelById(lv), n = builtTitles(lv).length, num = parseInt(id.split('-M')[1], 10);
     const done = getCompletedModules().includes(id), rs = getResume();
     const chip = done ? '<span class="b-chip ok">Complete</span>' : (rs && rs.id === id ? '<span class="b-chip here">You are here</span>' : '');
     const cached = DECK.cache[id];
-    if (!cached) deckLoad(id).then(o => { document.querySelectorAll(`.bd-card[data-id="${id}"] .bd-learn`).forEach(el => { el.innerHTML = deckBullets(o); }); });
-    return `<div class="bd-card" data-id="${id}" style="--lvl:${level.color}"><div class="bd-top"><span class="b-badge">${lv}</span><span class="bd-pos">Module ${num} of ${n}</span>${chip}</div><h3 class="bd-title">${escapeHtml(resolveModuleTitle(id))}</h3><ul class="bd-learn">${cached ? deckBullets(cached) : '<li>Loading overview\u2026</li>'}</ul></div>`;
+    if (!cached) deckLoad(id).then(o => { document.querySelectorAll(`.bd-card[data-id="${id}"] .bd-learn`).forEach(el => { el.innerHTML = deckBullets(o); }); document.querySelectorAll(`.bd-card[data-id="${id}"] .bd-time`).forEach(el => { el.textContent = deckTime(o); }); });
+    return `<div class="bd-card" data-id="${id}" style="--lvl:${level.color}"><div class="bd-top"><span class="b-badge">${lv}</span><span class="bd-pos">Module ${num} of ${n}</span>${chip}</div><h3 class="bd-title">${escapeHtml(resolveModuleTitle(id))}</h3><div class="bd-time">${deckTime(cached)}</div><ul class="bd-learn">${cached ? deckBullets(cached) : '<li>Loading overview\u2026</li>'}</ul></div>`;
 }
 function deckPaint() {
     const v = document.getElementById('bDeckView'); if (!v || DECK.settle) return;
@@ -4127,7 +4220,7 @@ function renderCerts() {
 function renderHomeB() {
     if (bRole === undefined) { let s = null; try { s = localStorage.getItem(ROLE_KEY); } catch (e) {} bRole = (s && levelById(s)) ? s : null; }
     renderGreetingB(); renderContinueB(); renderProgress(); renderRoles(); renderDeck(); renderRoute(); renderCerts(); renderExams();
-    const hv = document.getElementById('bVideo'); if (hv && !hv.firstChild) hv.innerHTML = videoCardHTML(HOME_VIDEO);
+    const hv = document.getElementById('bVideo'); if (hv && !hv.firstChild) hv.innerHTML = videoCardHTML(HOME_VIDEO) + '<p class="b-vidlink"><button type="button" class="foot-link" onclick="loadVideos()">See all videos</button></p>';
     if (!calmMotion()) document.querySelectorAll('#homeView .b-bar span, #homeView .b-cont-bar span').forEach(s => { const w = parseFloat(s.style.width) || 0; growBar(s, 0, w); });
     const ob = firstVisit(); document.body.classList.toggle('ob-mode', ob); if (ob) renderOnboarding();
 }
@@ -4456,8 +4549,8 @@ function toggleDrawerLevel(e, summary) {
 
 function openCourseMenu(focusLevel) {
     closeReadPanel(); closeInstallPanel();   // one panel at a time
-    { const b = document.body, here = b.classList.contains('home-mode') && !b.classList.contains('ob-mode') ? 'home' : (document.getElementById('glList') ? 'glossary' : '');
-      [['drawerHome', 'home'], ['drawerGlossary', 'glossary']].forEach(([id, k]) => { const el = document.getElementById(id); if (!el) return; el.classList.toggle('is-here', here === k); if (here === k) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current'); }); }
+    { const b = document.body, here = b.classList.contains('home-mode') && !b.classList.contains('ob-mode') ? 'home' : (document.getElementById('glList') ? 'glossary' : (document.getElementById('vlList') ? 'videos' : ''));
+      [['drawerHome', 'home'], ['drawerGlossary', 'glossary'], ['drawerVideos', 'videos']].forEach(([id, k]) => { const el = document.getElementById(id); if (!el) return; el.classList.toggle('is-here', here === k); if (here === k) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current'); }); }
     ensureGlossary().catch(() => {});   // warm the glossary so searching terms in the menu is instant
     const search = document.getElementById('drawerSearch');
     search.value = '';
@@ -4870,6 +4963,7 @@ window.addEventListener('popstate', () => {
     try {
         if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
+        else if (params.get('videos')) loadVideos();
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
@@ -4933,7 +5027,8 @@ bindPathwayDrag();
     try { const q = new URLSearchParams(window.location.search).get('arrows'); if (q === 'center') localStorage.setItem('moroArrows', 'center'); else if (q === 'edge' || q === 'default') localStorage.removeItem('moroArrows'); document.body.classList.toggle('ob-edge', localStorage.getItem('moroArrows') !== 'center'); } catch (e) { /* storage unavailable: keep the default */ }
 })();
 loadReadPrefs(); applyReadPrefs(); initSlides(); initHeaderAutoHide(); registerServiceWorker();
-document.querySelectorAll('[data-difacto-site]').forEach(a => { a.href = DIFACTO_SITE_URL; });   // one place to change the DiFacto address
+document.querySelectorAll('[data-difacto-site]').forEach(a => { a.href = DIFACTO_SITE_URL; });
+if (FEEDBACK_EMAIL) { ['footFeedback', 'footFeedbackSep'].forEach(i => { const e = document.getElementById(i); if (e) e.hidden = false; }); }   // one place to change the DiFacto address
 try { const mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', applyReadPrefs); else if (mq.addListener) mq.addListener(applyReadPrefs); } catch (e) {}
 syncHeaderHeight(); window.addEventListener('resize', syncHeaderHeight);
 if (window.ResizeObserver && document.querySelector('.header')) new ResizeObserver(syncHeaderHeight).observe(document.querySelector('.header'));

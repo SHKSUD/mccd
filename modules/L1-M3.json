@@ -88,7 +88,11 @@
         "title": "The startup sequence in 30 seconds",
         "duration": "0:30",
         "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready confirmation. Only then assign a mission. Assigning early often interrupts the start.",
-        "placeholder": true
+        "placeholder": true,
+        "card": {
+          "title": "Startup checklist",
+          "src": "cards/startup-sequence.pdf"
+        }
       }
     },
     {
@@ -121,7 +125,11 @@
         "title": "Manual override and E-stop in 30 seconds",
         "duration": "0:30",
         "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup, clearing a path, post-maintenance tests. Override never switches off the safety systems. E-stop works the same in both modes. It takes priority and halts everything.",
-        "placeholder": true
+        "placeholder": true,
+        "card": {
+          "title": "E-stop card",
+          "src": "cards/e-stop-and-unexpected-behaviour.pdf"
+        }
       }
     },
     {
