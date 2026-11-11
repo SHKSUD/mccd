@@ -33,7 +33,16 @@
         "Understand what preparation improves map quality",
         "Recognize environmental factors that affect mapping"
       ],
-      "content": "Before starting a mapping pass, the space should be in a representative state - typical equipment positions, no unusual temporary obstructions that won't normally be present during operation. Mapping during representative conditions produces a map that reflects actual operational reality, rather than an idealized or atypical snapshot of the space."
+      "content": "Before starting a mapping pass, the space should be in a representative state - typical equipment positions, no unusual temporary obstructions that won't normally be present during operation. Mapping during representative conditions produces a map that reflects actual operational reality, rather than an idealized or atypical snapshot of the space.",
+      "video": {
+        "id": "V023",
+        "src": "videos/V023.mp4",
+        "poster": "videos/V023.jpg",
+        "title": "A good mapping pass in 30 seconds",
+        "duration": "0:30",
+        "transcript": "A good mapping pass, in 30 seconds. Map the space as it normally is. Typical equipment positions, no unusual obstructions. Guide MoRo through the space methodically. Cover every area it will need to navigate. Go at a deliberate pace, not a rushed one. LiDAR then builds an accurate picture as it goes.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

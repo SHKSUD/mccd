@@ -97,7 +97,16 @@
           "term": "Lockout/tagout (LOTO)",
           "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it."
         }
-      ]
+      ],
+      "video": {
+        "id": "V027",
+        "src": "videos/V027.mp4",
+        "poster": "videos/V027.jpg",
+        "title": "Handling a battery safely in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Handling a battery safely. LFP is generally safer than many lithium chemistries. It still needs care. Lockout and tagout before any physical battery work. Watch for damage, unusual heat or swelling. Those go beyond routine replacement. Escalate immediately; do not keep handling.",
+        "placeholder": true
+      }
     }
   ],
   "quiz": {

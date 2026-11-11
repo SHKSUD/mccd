@@ -71,7 +71,16 @@
           "term": "root cause",
           "note": "The underlying issue producing an observed symptom, as distinct from the symptom itself."
         }
-      ]
+      ],
+      "video": {
+        "id": "V022",
+        "src": "videos/V022.mp4",
+        "poster": "videos/V022.jpg",
+        "title": "Symptom or root cause in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Symptom or root cause? A symptom: MoRo stops repeatedly in one area. A root cause: a sensor, a map or a mechanical issue. Treat only the symptom, and it comes back. First, confirm the symptom is reproducible. Then isolate which subsystem is implicated. Narrow it down with the fault tree and the interface.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 5,

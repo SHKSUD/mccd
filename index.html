@@ -1665,10 +1665,10 @@
         #homeView[data-pending] { visibility: hidden; }
         html.pre-ob, html.pre-ob body { background: #070F2B; }
         html.pre-ob .header, html.pre-ob #homeView, html.pre-ob .skip-link { visibility: hidden; }
-        /* ── LEARNING OBJECTIVES FADE IN: each line 0.12 s after the last, once per section; off for reduced motion and in Focus mode ── */
+        /* ── LEARNING OBJECTIVES FADE IN, SLOWLY so the eye goes there first: 1.05 s per line, the second 0.36 s after the first, once per section; off for reduced motion and in Focus mode ── */
         @media (prefers-reduced-motion: no-preference) {
-            #mainContent .view .content-list > li { animation: moroObjIn 0.35s ease-out both; }
-            #mainContent .view .content-list > li:nth-child(2) { animation-delay: 0.12s; }
+            #mainContent .view .content-list > li { animation: moroObjIn 1.05s ease-out both; }
+            #mainContent .view .content-list > li:nth-child(2) { animation-delay: 0.36s; }
             @keyframes moroObjIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
         }
         body.focus-mode #mainContent .view .content-list > li { animation: none; }

@@ -43,7 +43,16 @@
           "term": "handshake",
           "note": "The agreed exchange of signals (request, ready, complete) that confirms MoRo and the machine are both ready before either acts."
         }
-      ]
+      ],
+      "video": {
+        "id": "V021",
+        "src": "videos/V021.mp4",
+        "poster": "videos/V021.jpg",
+        "title": "The machine tending cycle in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The machine tending cycle, in 30 seconds. MoRo delivers raw material to the CNC machine. A handshake confirms the machine is ready. The CNC completes its machining operation. MoRo retrieves the finished part. Then it delivers the next raw material. The cycle repeats, so every handshake matters.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

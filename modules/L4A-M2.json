@@ -38,7 +38,16 @@
         "Recognize common production events that might trigger a MoRo mission"
       ],
       "content": "A common integration pattern: when the MES records a production run as complete, or the WMS records a new order needing fulfillment, that event can automatically trigger a MoRo mission - moving the finished product, or initiating a pick operation - without requiring a human operator to manually assign the mission each time.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V026",
+        "src": "videos/V026.mp4",
+        "poster": "videos/V026.jpg",
+        "title": "From production event to mission in 30 seconds",
+        "duration": "0:30",
+        "transcript": "From production event to mission. The MES records a production run as complete. That event can trigger a MoRo mission automatically. Or the WMS records a new order to fulfil. That can start a pick operation. No operator has to assign each mission by hand.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

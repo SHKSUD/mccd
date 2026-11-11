@@ -73,7 +73,16 @@
         "Understand the testing approach for a newly configured handshake",
         "Recognize the importance of testing under realistic, repeated conditions"
       ],
-      "content": "A handshake configuration should be tested through multiple complete cycles, not just once - a sequence that works correctly on a single test but fails intermittently on repetition indicates a timing or configuration issue that a single successful test would miss. This connects directly to the validation approach covered in the commissioning capstone (L3B-M6)."
+      "content": "A handshake configuration should be tested through multiple complete cycles, not just once - a sequence that works correctly on a single test but fails intermittently on repetition indicates a timing or configuration issue that a single successful test would miss. This connects directly to the validation approach covered in the commissioning capstone (L3B-M6).",
+      "video": {
+        "id": "V028",
+        "src": "videos/V028.mp4",
+        "poster": "videos/V028.jpg",
+        "title": "Testing a handshake in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Testing a handshake, in 30 seconds. Signals must reach the right I/O points. A signal on the wrong point breaks the handshake. Even when both systems work fine. Test through many complete cycles, not just one. An intermittent failure points to timing or setup. One good test would have missed it.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 5,

@@ -33,7 +33,16 @@
         "Understand how to assess a facility for zone configuration needs",
         "Recognize factors that suggest a dedicated zone is needed"
       ],
-      "content": "Zone configuration starts with understanding the facility's actual traffic patterns - areas with high fleet density, narrow passages where simultaneous multi-unit traffic would be problematic, or routes tied to time-sensitive operations that benefit from priority. Not every facility needs extensive zone configuration; simpler layouts with light fleet traffic may work fine with minimal zoning."
+      "content": "Zone configuration starts with understanding the facility's actual traffic patterns - areas with high fleet density, narrow passages where simultaneous multi-unit traffic would be problematic, or routes tied to time-sensitive operations that benefit from priority. Not every facility needs extensive zone configuration; simpler layouts with light fleet traffic may work fine with minimal zoning.",
+      "video": {
+        "id": "V024",
+        "src": "videos/V024.mp4",
+        "poster": "videos/V024.jpg",
+        "title": "Do you need a zone in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Do you need a zone? In 30 seconds. Start with the facility’s real traffic patterns. Where is fleet density high? Where are passages too narrow for two units? Which routes are time-sensitive and need priority? Not every facility needs extensive zoning. Light traffic may need only minimal zones.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,

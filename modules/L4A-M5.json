@@ -38,7 +38,16 @@
           "term": "redundancy",
           "note": "Spare capacity, such as an extra unit, so the cell keeps working when one part is unavailable."
         }
-      ]
+      ],
+      "video": {
+        "id": "V025",
+        "src": "videos/V025.mp4",
+        "poster": "videos/V025.jpg",
+        "title": "How many robots in 30 seconds",
+        "duration": "0:30",
+        "transcript": "How many robots? In 30 seconds. Fleet size depends on three things. Throughput: how much moves, and how fast. Space: more units need more room. Redundancy: can the cell lose a unit? Oversize, and capital is wasted. Undersize, and throughput bottlenecks. Model real demand; do not guess.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
