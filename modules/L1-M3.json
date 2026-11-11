@@ -14,7 +14,7 @@
       "eyebrow": "Level 1 · Module 3 · Section 01",
       "title": "Meeting the Human-Machine Interface",
       "learningObjectives": [
-        "Understand what the ANT interface is and who uses it",
+        "Understand what the ANT interface is, and that you do not need a technical background to use it",
         "Recognize the difference between monitoring MoRo and actively controlling it"
       ],
       "content": "Every MoRo unit is managed through a Human-Machine Interface (HMI) — software that lets an operator see and direct what the machine is doing, rather than controlling it through physical switches alone. MoRo's HMI is called ANT. You don't need a technical background to use it. Most day-to-day interaction is supervisory: you observe operations, confirm actions, and intervene only when needed — not continuous hands-on control.",
@@ -50,7 +50,7 @@
         "Identify the main categories of information on the dashboard",
         "Know where to find MoRo's current status versus its assigned tasks"
       ],
-      "content": "The ANT dashboard organizes information around three operational questions: MoRo's current location and state (fleet status), what it's currently assigned to do (mission status), and configuration options (system settings). The exact menu structure and terminology within ANT will be confirmed against the live system before this section is finalized — the operational logic described here holds regardless of the final interface layout.",
+      "content": "The ANT dashboard answers three things: where MoRo is and what state it is in (fleet status), what it is assigned to do right now (mission status), and what the configuration options are (system settings). The exact menu structure and terminology within ANT will be confirmed against the live system before this section is finalized — the operational logic described here holds regardless of the final interface layout.",
       "keyTerms": [
         {
           "term": "fleet status",
@@ -67,10 +67,10 @@
       "eyebrow": "Level 1 · Module 3 · Section 03",
       "title": "Startup Sequence",
       "learningObjectives": [
-        "List the sequence of checks before powering on MoRo",
-        "Understand why a system-ready confirmation matters before assigning work"
+        "List the startup sequence: visual check, power on, wait for the ready state, then assign a mission",
+        "Understand why the ready state matters before assigning work"
       ],
-      "content": "Startup follows a defined sequence, not a single action. Before power-on, conduct a visual check to confirm the intended path is clear and sensors are unobstructed. On power-on, MoRo runs an internal diagnostic — verifying battery charge, navigation calibration, and safety system function — before reporting a ready state. Operators must wait for this ready confirmation before assigning a mission; assigning work before diagnostics complete is a common, avoidable cause of interrupted starts.",
+      "content": "Startup follows a defined sequence, not a single action. Before power-on, conduct a visual check to confirm the intended path is clear and sensors are unobstructed. On power-on, MoRo runs an internal diagnostic — verifying battery charge, navigation calibration, and safety system function — before reporting a ready state. Operators must wait until MoRo reports the ready state before assigning a mission; assigning work before diagnostics complete is a common, avoidable cause of interrupted starts.",
       "keyTerms": [
         {
           "term": "internal diagnostic",
@@ -87,7 +87,7 @@
         "poster": "videos/V015.jpg",
         "title": "The startup sequence in 30 seconds",
         "duration": "0:30",
-        "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready confirmation. Only then assign a mission. Assigning early often interrupts the start.",
+        "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready state. Only then assign a mission. Assigning early: a common cause of interrupted starts.",
         "placeholder": true,
         "card": {
           "title": "Startup checklist",
@@ -124,7 +124,7 @@
         "poster": "videos/V016.jpg",
         "title": "Manual override and E-stop in 30 seconds",
         "duration": "0:30",
-        "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup, clearing a path, post-maintenance tests. Override never switches off the safety systems. E-stop works the same in both modes. It takes priority and halts everything.",
+        "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup repositioning, a blocked path, post-maintenance tests. Manual override does not disable safety systems. E-stop works the same in both modes. It takes immediate priority and halts all operation.",
         "placeholder": true,
         "card": {
           "title": "E-stop card",
@@ -148,7 +148,7 @@
       "title": "Status Indicators",
       "learningObjectives": [
         "Recognize what MoRo's status indicators communicate at a glance",
-        "Distinguish between routine status signals and signals requiring attention"
+        "Know the three general kinds of status signal: normal operation, waiting or paused, and attention-needed"
       ],
       "content": "Beyond the dashboard, MoRo communicates status directly through visual indicators — useful for floor-level awareness without checking a screen. These fall into general categories: normal operation, waiting/paused, and attention-needed. The confirmed color-and-pattern reference will be added once verified against current MoRo hardware documentation.",
       "keyTerms": [
@@ -164,58 +164,58 @@
     "questions": [
       {
         "id": 1,
-        "question": "What is the ANT interface (HMI)?",
+        "question": "How will you usually work with MoRo through ANT?",
         "options": [
-          "The software operators use to monitor and control MoRo",
-          "A battery charging accessory that attaches to the unit's dock",
-          "A physical maintenance tool kept with the unit's spare parts"
+          "Steer it by hand the whole time",
+          "Watch operations, confirm actions, and step in only when needed",
+          "Use it only after something goes wrong"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. ANT is MoRo's Human-Machine Interface — the software layer for monitoring and control."
+        "correctAnswer": 1,
+        "feedback": "Correct. Most day-to-day interaction is supervisory: you observe operations, confirm actions, and intervene only when needed."
       },
       {
         "id": 2,
-        "question": "What must be confirmed before assigning a mission?",
+        "question": "Which order is correct for starting MoRo?",
         "options": [
-          "Nothing — missions can be assigned as soon as MoRo is powered on and visible",
-          "That MoRo has completed its internal diagnostic and reached ready state",
-          "Supervisor sign-off in writing"
+          "Power on, assign a mission, then do the visual check",
+          "Power on, do the visual check, then assign a mission while the diagnostic runs",
+          "Visual check, power on, wait for the ready state, then assign a mission"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. A ready state confirmation, following the internal diagnostic, is required before mission assignment."
+        "correctAnswer": 2,
+        "feedback": "Correct. Check the path and sensors first, power on, wait for the ready state, and only then assign a mission. Assigning before diagnostics complete is a common, avoidable cause of interrupted starts."
       },
       {
         "id": 3,
-        "question": "Does E-stop behave differently in manual override versus autonomous mode?",
+        "question": "MoRo is in manual override and someone triggers the E-stop. What happens?",
         "options": [
-          "Yes, manual mode uses a separate procedure that you must follow",
-          "E-stop only functions while MoRo is in autonomous mode",
-          "No — E-stop takes priority identically in both modes"
+          "MoRo finishes its current move, then stops",
+          "All operation halts immediately, the same as in autonomous mode",
+          "Nothing, because E-stop works only in autonomous mode"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. E-stop is not mode-dependent."
+        "correctAnswer": 1,
+        "feedback": "Correct. E-stop works the same in manual and autonomous modes: it takes immediate priority and halts all operation regardless of current state."
       },
       {
         "id": 4,
-        "question": "What happens when a mission is paused rather than cancelled?",
+        "question": "A mission is paused, not cancelled. What happens?",
         "options": [
-          "It restarts from the beginning",
-          "MoRo returns to its charging dock automatically",
-          "MoRo holds position safely and resumes from the same point"
+          "MoRo holds position safely and resumes from the same point once cleared",
+          "It starts again from the beginning",
+          "MoRo returns to its charging dock automatically"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Pausing preserves mission state; cancelling does not."
+        "correctAnswer": 0,
+        "feedback": "Correct. Pausing a mission is not the same as cancelling it: MoRo holds position safely and resumes from the same point once cleared."
       },
       {
         "id": 5,
-        "question": "What is the purpose of MoRo's status indicators?",
+        "question": "You are on the floor with no screen nearby. How can you tell at a glance what state a MoRo is in?",
         "options": [
-          "To communicate operating state at a glance, without checking a screen",
-          "To replace the dashboard entirely, so that operators never need to open it",
-          "To show the time of day"
+          "What it is carrying",
+          "How fast it is moving",
+          "The status indicator on the unit"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Status indicators provide floor-level visibility independent of the dashboard."
+        "correctAnswer": 2,
+        "feedback": "Correct. Status indicators on the unit show its operating state at a glance, useful for floor-level awareness without checking a screen."
       }
     ]
   }

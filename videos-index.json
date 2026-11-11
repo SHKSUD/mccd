@@ -81,7 +81,7 @@
    "duration": "0:30",
    "src": "videos/V015.mp4",
    "poster": "videos/V015.jpg",
-   "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready confirmation. Only then assign a mission. Assigning early often interrupts the start.",
+   "transcript": "The startup sequence, in 30 seconds. First, a visual check: path clear, sensors unobstructed. Then power on: MoRo runs its own diagnostic. It checks battery, navigation and safety systems. Wait for the ready state. Only then assign a mission. Assigning early: a common cause of interrupted starts.",
    "placeholder": true,
    "card": {
     "title": "Startup checklist",
@@ -99,7 +99,7 @@
    "duration": "0:30",
    "src": "videos/V016.mp4",
    "poster": "videos/V016.jpg",
-   "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup, clearing a path, post-maintenance tests. Override never switches off the safety systems. E-stop works the same in both modes. It takes priority and halts everything.",
+   "transcript": "Manual override and E-stop, in 30 seconds. MoRo works autonomously by default. Override: setup repositioning, a blocked path, post-maintenance tests. Manual override does not disable safety systems. E-stop works the same in both modes. It takes immediate priority and halts all operation.",
    "placeholder": true,
    "card": {
     "title": "E-stop card",
@@ -117,7 +117,7 @@
    "duration": "0:30",
    "src": "videos/V006.mp4",
    "poster": "videos/V006.jpg",
-   "transcript": "The standards behind MoRo’s safety. MoRo’s safety is engineered to recognised standards. Not ad-hoc caution. ISO 3691-4: safety requirements for industrial trucks. ANSI B56.5: safety for guided industrial vehicles. You need not memorise them. Behaviour around people follows requirements, not promises.",
+   "transcript": "The standards behind MoRo’s safety. MoRo’s safety is engineered to recognized standards. Not ad-hoc caution. ISO 3691-4: safety requirements for industrial trucks. ANSI B56.5: safety for guided industrial vehicles. You need not memorize them. Behavior around people follows requirements, not promises.",
    "placeholder": true
   },
   {
@@ -195,7 +195,7 @@
    "duration": "0:30",
    "src": "videos/V003.mp4",
    "poster": "videos/V003.jpg",
-   "transcript": "The handshake, in 30 seconds. When MoRo delivers to a machine, they must coordinate. Their exchange of signals is called a handshake. First, MoRo sends a request. The machine answers: ready. After the handoff, a complete signal closes it. If the signals stop moving forward, it has stalled. Operators should recognise a stalled handshake. On screen at the end: Next: working safely with loaded payloads. MoRo Academy, DiFacto Robotics & Automation.",
+   "transcript": "The handshake, in 30 seconds. When MoRo delivers to a machine, they must coordinate. Their exchange of signals is called a handshake. Signals confirm both sides are ready. Then that the handoff is complete. And they report any error state. If the exchange pauses and does not progress: stalled. Recognize a stalled handshake and flag it.",
    "placeholder": true,
    "card": {
     "title": "Handshake card",
@@ -241,7 +241,7 @@
    "duration": "0:30",
    "src": "videos/V010.mp4",
    "poster": "videos/V010.jpg",
-   "transcript": "When something goes wrong, in 30 seconds. At L2 you recognise, categorise and escalate. You do not attempt the fix. Ask: what was MoRo doing just before? What does its status show now? Has anything changed around it? Share those details when you escalate.",
+   "transcript": "When something goes wrong, in 30 seconds. At L2 you recognize, categorize and escalate. You do not attempt the fix. Ask: what was MoRo doing just before? What does its status show now? Has anything changed around it? Share those details when you escalate.",
    "placeholder": true
   },
   {
