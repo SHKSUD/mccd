@@ -3083,21 +3083,17 @@ function submitInAppFeedback() {
         localStorage.setItem(key, JSON.stringify(list));
     } catch (e) {}
 
-    // Also trigger mailto so it delivers directly to the designated emails
-    if (FEEDBACK_EMAIL) {
-        const subject = `[Feedback: ${entry.rating}] ${entry.moduleId} - ${entry.section}`;
-        const body = `MoRo Academy Curriculum Review\n` +
-                     `===================================\n` +
-                     `Module: ${entry.moduleId} (${entry.moduleTitle})\n` +
-                     `Section: ${entry.section}\n` +
-                     `Rating: ${entry.rating}\n` +
-                     `Reviewer: ${entry.reviewer}\n` +
-                     `URL: ${window.location.href}\n\n` +
-                     `Comments / Suggestions:\n` +
-                     `${entry.notes}\n\n`;
-        const mailUrl = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        const a = document.createElement('a'); a.href = mailUrl; a.style.display = 'none'; document.body.appendChild(a); a.click(); setTimeout(() => a.remove(), 1000);
-    }
+    // Post directly to Google Sheet Webhook (Silent, 100% free background sync)
+    const webhookUrl = 'https://script.google.com/macros/s/AKfycbxma7HhQLvtRx1Md3WKArJi-XPHS-VkHqlo_1YaDbKNrWp4jAjTVBLRl3q3FTRBFHuC/exec';
+    try {
+        fetch(webhookUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(entry)
+        }).catch(() => {});
+    } catch (e) {}
+
     document.getElementById('fbFormBody').hidden = true;
     document.getElementById('fbSuccessBody').hidden = false;
 }
