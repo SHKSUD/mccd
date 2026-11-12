@@ -558,6 +558,36 @@
         }
         .btn-secondary:hover { border-color: var(--navy); }
 
+        .btn-feedback {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted);
+            background: transparent;
+            border: 1px dashed var(--divider);
+            padding: 8px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            margin-top: 14px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-feedback:hover {
+            color: var(--navy);
+            border-color: var(--navy);
+            background: var(--white);
+        }
+        .btn-feedback svg {
+            flex-shrink: 0;
+            color: var(--orange-ink);
+        }
+        .btn-feedback:focus-visible {
+            outline: 2px solid var(--orange-ink);
+            outline-offset: 2px;
+        }
+
         .btn:disabled { opacity: 0.4; cursor: not-allowed; }
         .btn:disabled:hover { transform: none; box-shadow: none; }
 
@@ -2938,6 +2968,35 @@ function filterVideos(q) {
 function vlJump(k) { const el = document.getElementById('vl-' + k); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
 function menuGoVideos() { closeCourseMenu(); loadVideos(); }
 function sendFeedback(ev) { if (ev) ev.preventDefault(); if (!FEEDBACK_EMAIL) return false; window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent('MoRo Academy: what I am stuck on') + '&body=' + encodeURIComponent('What I am stuck on:\n\n'); return false; }
+function sendModuleFeedback(ev, secTitle) {
+    if (ev) ev.preventDefault();
+    if (!FEEDBACK_EMAIL || !currentModule) return false;
+    const m = currentModule;
+    const sec = secTitle || (currentSectionIndex === 'quiz' ? 'Knowledge Check' : (m.sections && m.sections[currentSectionIndex] ? ('Section ' + (currentSectionIndex + 1) + ': ' + m.sections[currentSectionIndex].title) : ''));
+    const subject = `[MoRo Academy Feedback] ${m.moduleId}: ${m.title}`;
+    const body = `MoRo Academy Curriculum Feedback\n` +
+                 `-----------------------------------\n` +
+                 `Module: ${m.moduleId} (${m.title})\n` +
+                 `Level: ${m.level || ''}\n` +
+                 (sec ? `Section/Topic: ${sec}\n` : '') +
+                 `Page Link: ${window.location.href}\n\n` +
+                 `Your feedback / suggestions:\n` +
+                 `1. Clarity & technical depth:\n` +
+                 `2. Corrections or changes:\n` +
+                 `3. Other notes:\n\n`;
+    window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    return false;
+}
+function moduleFeedbackBtn(secTitle) {
+    if (!FEEDBACK_EMAIL) return '';
+    const safeTitle = (secTitle || '').replace(/'/g, "\\'");
+    return `<div style="margin-top:16px; display:flex; justify-content:flex-start;">
+        <button type="button" class="btn-feedback" onclick="sendModuleFeedback(event, '${safeTitle}')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Feedback on this ${secTitle === 'Knowledge Check' ? 'assessment' : 'lesson'}
+        </button>
+    </div>`;
+}
 function showLoadError(what, retry) {
     const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
     window.__retryLoad = retry;
@@ -3298,6 +3357,7 @@ function renderSection(index) {
                 ${prevBtn}
                 ${nextBtn}
             </div>
+            ${moduleFeedbackBtn(sec.title)}
         </div>`;
 }
 
@@ -3417,6 +3477,8 @@ function renderQuiz() {
                     </div>
                 </div>
             </div>
+
+            ${moduleFeedbackBtn('Knowledge Check')}
 
             <div class="section-footer">
                 <p>MoRo IMR Training Academy — ${data.level}, Module ${data.moduleNumber}: ${data.title}</p>
@@ -3607,7 +3669,7 @@ function renderLanding() {
 const ROLE_KEY = 'moroRole';
 let bRole;                                    // undefined = not loaded yet, null = full pathway, else a level id
 const LEVEL_NEEDS = { L1: 'Online; a MoRo demo is optional', L2: 'Needs a MoRo unit for the practical', L3A: 'Needs a MoRo unit and tools', L3B: 'Needs ANT Server access', L4A: 'Needs a MoRo unit with MES and PLC', L4B: 'Needs a full MoRo cell', L5: 'Needs a full training lab' };   // from the Curriculum Design Document, delivery model
-const FEEDBACK_EMAIL = '';   // set an address here to show a "Tell us what you are stuck on" link in the footer (hidden while empty)
+const FEEDBACK_EMAIL = 'joinconverse@gmail.com, sunil.mandal@difacto.com';   // set an address here to show a "Tell us what you are stuck on" link in the footer (hidden while empty)
 function levelById(id) { return LEVELS.find(l => l.id === id); }
 function lowerFirst(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
 function levelProgress(id) { const n = builtTitles(id).length, done = countCompletedInLevel(id); return { n, done, complete: n > 0 && done >= n }; }
