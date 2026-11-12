@@ -1672,7 +1672,6 @@
             @keyframes moroObjIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
         }
         body.focus-mode #mainContent .view .content-list > li { animation: none; }
-        html.vid-demo #footVideos, html.vid-demo #footVideos + .foot-sep, html.vid-demo #drawerVideos { display: none !important; }   /* demo mode: no library entry points */
         /* ── TIME, OUTCOME AND NEEDS; VIDEO LIBRARY ── */
         .sec-time { font-weight: 500; color: var(--y-mute, var(--muted)); }
         .b-card-outcome { margin: 8px 0 0; font-size: 14px; line-height: 1.45; }
@@ -1718,8 +1717,20 @@
             body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:hover .drawer-item-num, body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item:focus-visible .drawer-item-num { color: var(--y-blue-d); }
         }
         @media (prefers-reduced-motion: reduce) { .drawer-item > span:last-child { transition: none; transform: none !important; } }
-        /* ── GLOSSARY ── */
+        /* ── GLOSSARY & VIDEO REPOSITORY TABS ── */
         .foot-sep { margin: 0 6px; color: var(--muted); }
+        .ref-tabs { display: inline-flex; gap: 6px; margin: 4px 0 18px; padding: 4px; background: rgba(10, 29, 68, 0.06); border: 1px solid var(--divider); border-radius: 999px; }
+        .ref-tab { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 7px 16px; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 999px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease; }
+        .ref-tab:hover { color: var(--navy); }
+        .ref-tab.is-active { color: var(--navy); background: var(--white); border-color: var(--divider); box-shadow: 0 2px 6px rgba(10, 29, 68, 0.08); }
+        .ref-tab svg { flex-shrink: 0; color: var(--orange-ink); }
+        .ref-tab:focus-visible { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tabs { background: var(--y-fill, #F5F5F7); border-color: var(--y-line); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tab { color: var(--y-mute); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tab:hover { color: var(--y-ink); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tab.is-active { color: var(--y-blue-d); background: var(--white); border-color: var(--y-blue); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tab svg { color: var(--y-blue); }
+        body.inner-y:not(.home-mode):not(.ob-mode) .ref-tab:focus-visible { outline-color: var(--y-blue); }
         .gl-search { position: sticky; top: calc(var(--header-h, 62px) + 6px); z-index: 20; margin: 10px 0 8px; padding: 6px 0 4px; background: var(--cream); }
         .gl-search input { width: 100%; min-height: 48px; padding: 12px 16px; font-family: inherit; font-size: 16px; color: var(--text); background: var(--white); border: 1px solid var(--divider); border-radius: 10px; }
         .gl-search input:focus { outline: 3px solid var(--orange-ink); outline-offset: 2px; }
@@ -2454,7 +2465,7 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         <button class="drawer-home drawer-glossary" id="drawerGlossary" onclick="menuGoGlossary()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button>
         <button class="drawer-home drawer-videos" id="drawerVideos" onclick="menuGoVideos()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg>Videos</button></div>
         <input type="text" id="drawerNameInput" class="drawer-name" placeholder="Enter your name" maxlength="40" oninput="saveLearnerName(this.value)" autocomplete="off">
-        <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules and terms..." oninput="renderCourseMenu(this.value)" autocomplete="off">
+        <input type="search" id="drawerSearch" class="drawer-search" placeholder="Search modules, terms and videos..." oninput="renderCourseMenu(this.value)" autocomplete="off">
     </div>
     <div class="drawer-body" id="drawerBody"></div>
     <div class="drawer-footer" id="drawerFooter">
@@ -2605,7 +2616,7 @@ function init() {
     try {
         if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
-        else if (params.get('videos')) loadVideos();
+        else if (params.get('videos')) loadVideos(params.get('videos') === '1' ? null : params.get('videos'));
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
@@ -2847,6 +2858,13 @@ async function loadGlossary(focusKey) {
     try { renderGlossary(await ensureGlossary(), focusKey); }
     catch (e) { showLoadError('the glossary', () => loadGlossary(focusKey)); }
 }
+function refTabsHtml(active) {
+    const g = active === 'glossary', v = active === 'videos';
+    return `<div class="ref-tabs" role="navigation" aria-label="Reference sections">
+        <button type="button" class="ref-tab${g ? ' is-active' : ''}"${g ? ' aria-current="page"' : ''} onclick="loadGlossary()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5V21.5"/><path d="M9 8h7"/></svg>Glossary</button>
+        <button type="button" class="ref-tab${v ? ' is-active' : ''}"${v ? ' aria-current="page"' : ''} onclick="loadVideos()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg>Videos</button>
+    </div>`;
+}
 function renderGlossary(g, focusKey) {
     const groups = {}; g.terms.forEach(t => { const L = /[a-z]/i.test(t.term[0]) ? t.term[0].toUpperCase() : '#'; (groups[L] = groups[L] || []).push(t); });
     const letters = Object.keys(groups).sort();
@@ -2859,6 +2877,7 @@ function renderGlossary(g, focusKey) {
     const list = letters.map(L => `<section class="gl-group" id="gl-${L === '#' ? 'num' : L}" aria-labelledby="gl-h-${L === '#' ? 'num' : L}"><h2 class="gl-letter" id="gl-h-${L === '#' ? 'num' : L}">${L}</h2><dl>${groups[L].map(item).join('')}</dl></section>`).join('');
     document.getElementById('mainContent').innerHTML = `<div class="view active">
         <div class="eyebrow-row"><div class="section-eyebrow">Reference</div>${focusBtnHtml()}</div>
+        ${refTabsHtml('glossary')}
         <div class="section-title" role="heading" aria-level="1">Glossary</div>
         <p class="body-text">Every key term in the course, in plain language. Open a module from "Used in" to see the term in context.</p>
         <div class="gl-search" role="search"><label for="glQ" class="sr-only">Search the glossary</label><input type="search" id="glQ" placeholder="Search terms, for example E-stop" oninput="filterGlossary(this.value)" autocomplete="off"><div class="gl-count" id="glCount" role="status" aria-live="polite">${g.terms.length} terms</div></div>
@@ -2883,14 +2902,14 @@ function menuGoGlossary(key) { closeCourseMenu(); loadGlossary(key); }
 let videosData = null, videosLoading = null;
 function ensureVideos() {
     if (videosData) return Promise.resolve(videosData);
-    if (!videosLoading) videosLoading = fetch('./videos-index.json').then(r => { if (!r.ok) throw new Error('videos'); return r.json(); }).then(d => (videosData = { videos: d.videos.filter(v => videoVisible(v.id)) })).catch(e => { videosLoading = null; throw e; });
+    if (!videosLoading) videosLoading = fetch('./videos-index.json').then(r => { if (!r.ok) throw new Error('videos'); return r.json(); }).then(d => (videosData = { videos: d.videos })).catch(e => { videosLoading = null; throw e; });
     return videosLoading;
 }
 function openLessonAt(moduleId, section) { Promise.resolve(loadModule(moduleId)).then(() => { if (section > 0) goSection(section); }); }
-async function loadVideos() {
+async function loadVideos(focusId) {
     if (!okToLeaveExam()) return;
     closePathway(true);
-    pushRoute('?videos=1');
+    pushRoute(focusId ? `?videos=${encodeURIComponent(focusId)}` : '?videos=1');
     setPageTitle('Videos');
     await swapView(() => {
         document.body.classList.remove('home-mode', 'ob-mode');
@@ -2909,23 +2928,25 @@ async function loadVideos() {
         document.getElementById('mainContent').innerHTML = '<div class="loading-wrap"><div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div><span>Loading videos...</span></div>';
         applyReadPrefs();
     });
-    try { renderVideos(await ensureVideos()); }
-    catch (e) { showLoadError('the video library', () => loadVideos()); }
+    try { renderVideos(await ensureVideos(), focusId); }
+    catch (e) { showLoadError('the video library', () => loadVideos(focusId)); }
 }
 function vlLevelName(k) { if (k === 'Start') return 'Start here'; const l = levelById(k); return l ? `Level ${k.slice(1)} \u00B7 ${l.name}` : k; }
-function renderVideos(data) {
+function renderVideos(data, focusId) {
     const groups = {}; data.videos.forEach(v => { (groups[v.level] = groups[v.level] || []).push(v); });
     const keys = ['Start', ...LEVELS.map(l => l.id)].filter(k => groups[k]);
     document.getElementById('sidebarNav').innerHTML = keys.map(k => `<div class="nav-item" id="vl-nav-${k}" onclick="vlJump('${k}')"><div class="nav-num">${k === 'Start' ? '\u25B6' : k}</div><div class="nav-text">${groups[k].length} video${groups[k].length === 1 ? '' : 's'}</div></div>`).join('');
-    const item = v => { const ctx = v.module ? `${v.module.replace('-M', ' \u00B7 M')} \u00B7 ${v.sectionTitle}` : ''; return `<div class="vl-item" data-s="${escapeHtml((v.title + ' ' + ctx + ' ' + (v.transcript || '')).toLowerCase())}">${videoCardHTML({ ...v, ctx, lesson: v.module ? { id: v.module, section: v.section } : null })}</div>`; };
+    const item = v => { const ctx = v.module ? `${v.module.replace('-M', ' \u00B7 M')} \u00B7 ${v.sectionTitle}` : ''; return `<div class="vl-item" id="v-${escapeHtml(v.id)}" data-s="${escapeHtml((v.title + ' ' + ctx + ' ' + (v.transcript || '')).toLowerCase())}">${videoCardHTML({ ...v, ctx, lesson: v.module ? { id: v.module, section: v.section } : null })}</div>`; };
     const list = keys.map(k => `<section class="vl-group" id="vl-${k}" aria-labelledby="vl-h-${k}"><h2 class="vl-level" id="vl-h-${k}">${escapeHtml(vlLevelName(k))}</h2>${groups[k].map(item).join('')}</section>`).join('');
     document.getElementById('mainContent').innerHTML = `<div class="view active">
         <div class="eyebrow-row"><div class="section-eyebrow">Reference</div></div>
+        ${refTabsHtml('videos')}
         <div class="section-title" role="heading" aria-level="1">Videos</div>
         <p class="body-text">Short animated explainers, about 30 seconds each, with captions on screen. They are placeholders: real footage of MoRo will replace them. Each one links to its lesson.</p>
         <div class="gl-search" role="search"><label for="vlQ" class="sr-only">Search the videos</label><input type="search" id="vlQ" placeholder="Search videos, for example E-stop" oninput="filterVideos(this.value)" autocomplete="off"><div class="gl-count" id="vlCount" aria-live="polite">${data.videos.length} videos</div></div>
         <div id="vlList">${list}<div class="gl-empty" id="vlEmpty" hidden>No video matches your search.</div></div></div>`;
     focusHeading();
+    if (focusId && focusId !== '1') { const el = document.getElementById('v-' + focusId); if (el) { el.classList.add('gl-target'); setTimeout(() => el.scrollIntoView({ block: 'center' }), 60); } }
 }
 function filterVideos(q) {
     q = (q || '').trim().toLowerCase(); let shown = 0;
@@ -2936,7 +2957,7 @@ function filterVideos(q) {
     if (em) em.hidden = shown > 0;
 }
 function vlJump(k) { const el = document.getElementById('vl-' + k); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
-function menuGoVideos() { closeCourseMenu(); loadVideos(); }
+function menuGoVideos(id) { closeCourseMenu(); loadVideos(id); }
 function sendFeedback(ev) { if (ev) ev.preventDefault(); if (!FEEDBACK_EMAIL) return false; window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent('MoRo Academy: what I am stuck on') + '&body=' + encodeURIComponent('What I am stuck on:\n\n'); return false; }
 function showLoadError(what, retry) {
     const offline = (typeof navigator !== 'undefined' && navigator.onLine === false);
@@ -2955,7 +2976,7 @@ function isAppleTouch() { return /iPad|iPhone|iPod/.test(navigator.userAgent || 
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; });
 window.addEventListener('appinstalled', () => { installEvt = null; const p = document.getElementById('installPanel'); if (p && !p.hidden) renderInstallPanel(); });
 function offlineItems() {
-    const items = ['modules-index.json', 'glossary.json'];
+    const items = ['modules-index.json', 'glossary.json', 'videos-index.json'];
     Object.keys(MODULE_TITLES).forEach(l => (MODULE_TITLES[l] || []).forEach((t, i) => { if (t !== null) items.push(`modules/${l}-M${i + 1}.json`); }));
     Object.keys(EXAM_META).forEach(l => items.push(`exams/${l}.json`));
     return items;
@@ -4520,14 +4541,18 @@ function renderCourseMenu(query) {
             <div class="drawer-level-body">${items}</div>
         </details>`;
     });
-    let terms = '';
+    let terms = '', vids = '';
     if (q.length >= 2) {
         if (glossaryData) {
             const hits = glossaryData.terms.filter(t => t.term.toLowerCase().includes(q)).slice(0, 6);
             if (hits.length) terms = `<div class="drawer-terms" role="group" aria-label="Glossary terms"><div class="drawer-terms-title">Glossary</div>${hits.map(t => `<button class="drawer-term" onclick="menuGoGlossary('${t.key}')"><strong>${escapeHtml(t.term)}</strong><span>${escapeHtml(t.note)}</span></button>`).join('')}</div>`;
         } else ensureGlossary().then(() => { const s = document.getElementById('drawerSearch'); if (s && s.value.trim().toLowerCase() === q) renderCourseMenu(s.value); }).catch(() => {});
+        if (videosData) {
+            const vhits = videosData.videos.filter(v => (v.title + ' ' + (v.sectionTitle || '') + ' ' + (v.transcript || '')).toLowerCase().includes(q)).slice(0, 4);
+            if (vhits.length) vids = `<div class="drawer-terms" role="group" aria-label="Videos"><div class="drawer-terms-title">Videos</div>${vhits.map(v => `<button class="drawer-term" onclick="menuGoVideos('${escapeHtml(v.id)}')"><strong>\u25B6 ${escapeHtml(v.title)}</strong><span>${escapeHtml(v.module ? v.module.replace('-M', ' \u00B7 M') + ' \u00B7 ' + v.sectionTitle : 'Start here')}</span></button>`).join('')}</div>`;
+        } else ensureVideos().then(() => { const s = document.getElementById('drawerSearch'); if (s && s.value.trim().toLowerCase() === q) renderCourseMenu(s.value); }).catch(() => {});
     }
-    document.getElementById('drawerBody').innerHTML = (terms + html) || '<div class="drawer-empty">No modules or terms match your search.</div>';
+    document.getElementById('drawerBody').innerHTML = (terms + vids + html) || '<div class="drawer-empty">No modules, terms or videos match your search.</div>';
 }
 
 // curtain drop: height eases open with one small overshoot, rows drop in one after another
@@ -4560,7 +4585,8 @@ function openCourseMenu(focusLevel) {
     closeReadPanel(); closeInstallPanel();   // one panel at a time
     { const b = document.body, here = b.classList.contains('home-mode') && !b.classList.contains('ob-mode') ? 'home' : (document.getElementById('glList') ? 'glossary' : (document.getElementById('vlList') ? 'videos' : ''));
       [['drawerHome', 'home'], ['drawerGlossary', 'glossary'], ['drawerVideos', 'videos']].forEach(([id, k]) => { const el = document.getElementById(id); if (!el) return; el.classList.toggle('is-here', here === k); if (here === k) el.setAttribute('aria-current', 'page'); else el.removeAttribute('aria-current'); }); }
-    ensureGlossary().catch(() => {});   // warm the glossary so searching terms in the menu is instant
+    ensureGlossary().catch(() => {});   // warm the glossary and videos so searching in the menu is instant
+    ensureVideos().catch(() => {});
     const search = document.getElementById('drawerSearch');
     search.value = '';
     renderCourseMenu('');
@@ -4972,7 +4998,7 @@ window.addEventListener('popstate', () => {
     try {
         if (params.get('welcome')) { try { sessionStorage.setItem('moroObForce', '1'); sessionStorage.setItem('moroWelcomeRevisit', '1'); } catch (e) {} }
         if (params.get('glossary')) loadGlossary(params.get('glossary') === '1' ? null : params.get('glossary'));
-        else if (params.get('videos')) loadVideos();
+        else if (params.get('videos')) loadVideos(params.get('videos') === '1' ? null : params.get('videos'));
         else if (eid) loadExam(eid);
         else if (mid) loadModule(mid);
         else showHome();
