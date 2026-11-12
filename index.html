@@ -3329,7 +3329,7 @@ function renderSection(index) {
 // ═══ WHICH VIDEOS THE VISITOR SEES ═══
 // 'demo' shows only DEMO_VIDEOS (for the client preview). Every video file stays in the repository and in the build.
 // To show all videos: set VIDEO_MODE to 'all', or open the site with ?vid=all (this browser tab only). ?vid=demo goes back.
-const VIDEO_MODE = 'demo', DEMO_VIDEOS = ['V001', 'V007'];
+const VIDEO_MODE = 'all', DEMO_VIDEOS = ['V001', 'V007'];
 (function () { try { const q = new URLSearchParams(location.search).get('vid'); if (q === 'all') sessionStorage.setItem('moroAllVideos', '1'); else if (q === 'demo') sessionStorage.removeItem('moroAllVideos'); } catch (e) {} })();
 function videosAll() { if (VIDEO_MODE === 'all') return true; try { return sessionStorage.getItem('moroAllVideos') === '1' || localStorage.getItem('moroAllVideos') === '1'; } catch (e) { return false; } }
 function videoVisible(id) { return videosAll() || DEMO_VIDEOS.includes(id); }
