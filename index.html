@@ -558,6 +558,28 @@
         }
         .btn-secondary:hover { border-color: var(--navy); }
 
+        /* ── IN-APP FEEDBACK MODAL (100% free, zero external setup) ── */
+        .fb-modal-overlay { position: fixed; inset: 0; z-index: 4000; background: rgba(10, 29, 68, 0.45); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .fb-modal-overlay[hidden] { display: none; }
+        .fb-modal { width: min(520px, 100%); background: var(--white); border: 1px solid var(--divider); border-radius: 16px; box-shadow: 0 20px 50px rgba(10, 29, 68, 0.22); padding: 26px 28px; color: var(--navy); }
+        .fb-modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+        .fb-modal-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--orange-ink); }
+        .fb-modal-title { font-family: 'Merriweather', serif; font-size: 19px; font-weight: 700; color: var(--navy); line-height: 1.3; margin-top: 2px; }
+        .fb-modal-close { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; font-size: 22px; color: var(--muted); background: none; border: 0; border-radius: 50%; cursor: pointer; }
+        .fb-modal-close:hover { color: var(--navy); background: rgba(0,0,0,0.06); }
+        .fb-meta-bar { font-size: 12.5px; color: var(--muted); padding: 8px 12px; background: rgba(10, 29, 68, 0.04); border-radius: 8px; margin-bottom: 16px; }
+        .fb-group { margin-bottom: 16px; }
+        .fb-group label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+        .fb-rating-row { display: flex; gap: 8px; }
+        .fb-rating-btn { flex: 1; min-height: 42px; padding: 8px 10px; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--navy); background: var(--white); border: 1.5px solid var(--divider); border-radius: 8px; cursor: pointer; transition: var(--transition); }
+        .fb-rating-btn.selected { color: #fff; background: var(--orange-ink); border-color: var(--orange-ink); }
+        .fb-textarea { width: 100%; min-height: 96px; padding: 10px 12px; font-family: inherit; font-size: 14px; color: var(--text); background: var(--white); border: 1.5px solid var(--divider); border-radius: 8px; resize: vertical; }
+        .fb-textarea:focus { outline: none; border-color: var(--orange-ink); box-shadow: 0 0 0 3px rgba(212,101,26,0.18); }
+        .fb-input { width: 100%; min-height: 42px; padding: 8px 12px; font-family: inherit; font-size: 14px; color: var(--text); background: var(--white); border: 1.5px solid var(--divider); border-radius: 8px; }
+        .fb-input:focus { outline: none; border-color: var(--orange-ink); }
+        .fb-foot-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+        .fb-success-box { text-align: center; padding: 24px 10px; }
+        .fb-success-icon { width: 48px; height: 48px; border-radius: 50%; background: #E8F5E9; color: #2E7D32; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 12px; }
         .btn-feedback {
             display: inline-flex;
             align-items: center;
@@ -2537,6 +2559,48 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
 </div>
 <div class="update-toast" id="updateToast" role="status" hidden><span>A new version is ready.</span><button type="button" class="ut-go" onclick="applyUpdate()">Refresh</button><button type="button" class="ut-x" onclick="dismissUpdate()" aria-label="Dismiss this notice">&times;</button></div>
 <div class="offline-pill" id="offlinePill" role="status" hidden>You're offline. Saved modules still work.</div>
+
+<!-- IN-APP FEEDBACK MODAL (100% Free, zero setup) -->
+<div class="fb-modal-overlay" id="fbModalOverlay" hidden onclick="if(event.target===this)closeFeedbackModal()">
+    <div class="fb-modal" role="dialog" aria-modal="true" aria-labelledby="fbModalTitle">
+        <div class="fb-modal-head">
+            <div>
+                <div class="fb-modal-eyebrow">Curriculum Feedback</div>
+                <h3 class="fb-modal-title" id="fbModalTitle">Lesson Review</h3>
+            </div>
+            <button type="button" class="fb-modal-close" onclick="closeFeedbackModal()" aria-label="Close feedback modal">&times;</button>
+        </div>
+        <div class="fb-meta-bar" id="fbMetaBar"></div>
+        <div id="fbFormBody">
+            <div class="fb-group">
+                <label>How is the content?</label>
+                <div class="fb-rating-row" id="fbRatingRow">
+                    <button type="button" class="fb-rating-btn selected" data-val="Clear & Accurate" onclick="selectFbRating(this)">👍 Clear</button>
+                    <button type="button" class="fb-rating-btn" data-val="Needs Minor Edits" onclick="selectFbRating(this)">✋ Needs Edits</button>
+                    <button type="button" class="fb-rating-btn" data-val="Issue / Error" onclick="selectFbRating(this)">❌ Has Issues</button>
+                </div>
+            </div>
+            <div class="fb-group">
+                <label for="fbNotes">What would you change, add, or clarify?</label>
+                <textarea id="fbNotes" class="fb-textarea" placeholder="e.g. Safety distance in Section 2 should mention 500mm clearance; or Quiz Q1 options need clarification..."></textarea>
+            </div>
+            <div class="fb-group">
+                <label for="fbReviewerName">Your name or role (optional)</label>
+                <input type="text" id="fbReviewerName" class="fb-input" placeholder="e.g. John / Plant Safety Lead">
+            </div>
+            <div class="fb-foot-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeFeedbackModal()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="submitInAppFeedback()">Send Feedback</button>
+            </div>
+        </div>
+        <div id="fbSuccessBody" class="fb-success-box" hidden>
+            <div class="fb-success-icon">✓</div>
+            <h4 style="font-size:17px; font-weight:700; color:var(--navy); margin-bottom:6px;">Thank You!</h4>
+            <p style="font-size:13.5px; color:var(--muted); margin-bottom:18px;">Your feedback has been saved and will be reviewed by the team.</p>
+            <button type="button" class="btn btn-primary" onclick="closeFeedbackModal()">Back to lesson</button>
+        </div>
+    </div>
+</div>
 <nav class="mod-edge" id="modEdge" aria-label="Other modules" hidden></nav>
 <nav class="sec-rail" id="secRail" aria-label="Sections in this lesson" hidden></nav>
 <div class="slide-hint" id="slideHint" aria-hidden="true"></div>
@@ -2968,30 +3032,79 @@ function filterVideos(q) {
 function vlJump(k) { const el = document.getElementById('vl-' + k); if (el) { el.scrollIntoView({ block: 'start' }); const h = el.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); } } }
 function menuGoVideos() { closeCourseMenu(); loadVideos(); }
 function sendFeedback(ev) { if (ev) ev.preventDefault(); if (!FEEDBACK_EMAIL) return false; window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent('MoRo Academy: what I am stuck on') + '&body=' + encodeURIComponent('What I am stuck on:\n\n'); return false; }
-function sendModuleFeedback(ev, secTitle) {
-    if (ev) ev.preventDefault();
-    if (!FEEDBACK_EMAIL || !currentModule) return false;
+let activeFbSection = '';
+let activeFbRating = 'Clear & Accurate';
+function openFeedbackModal(secTitle) {
+    if (!currentModule) return;
     const m = currentModule;
-    const sec = secTitle || (currentSectionIndex === 'quiz' ? 'Knowledge Check' : (m.sections && m.sections[currentSectionIndex] ? ('Section ' + (currentSectionIndex + 1) + ': ' + m.sections[currentSectionIndex].title) : ''));
-    const subject = `[MoRo Academy Feedback] ${m.moduleId}: ${m.title}`;
-    const body = `MoRo Academy Curriculum Feedback\n` +
-                 `-----------------------------------\n` +
-                 `Module: ${m.moduleId} (${m.title})\n` +
-                 `Level: ${m.level || ''}\n` +
-                 (sec ? `Section/Topic: ${sec}\n` : '') +
-                 `Page Link: ${window.location.href}\n\n` +
-                 `Your feedback / suggestions:\n` +
-                 `1. Clarity & technical depth:\n` +
-                 `2. Corrections or changes:\n` +
-                 `3. Other notes:\n\n`;
-    window.location.href = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    return false;
+    activeFbSection = secTitle || (currentSectionIndex === 'quiz' ? 'Knowledge Check' : (m.sections && m.sections[currentSectionIndex] ? ('Section ' + (currentSectionIndex + 1) + ': ' + m.sections[currentSectionIndex].title) : ''));
+    activeFbRating = 'Clear & Accurate';
+    document.querySelectorAll('#fbRatingRow .fb-rating-btn').forEach((b, i) => b.classList.toggle('selected', i === 0));
+    document.getElementById('fbModalTitle').textContent = `${m.moduleId} · ${m.title}`;
+    document.getElementById('fbMetaBar').textContent = activeFbSection ? `Topic: ${activeFbSection}` : `Level: ${m.level || ''}`;
+    document.getElementById('fbNotes').value = '';
+    const storedName = loadLearnerName();
+    const nameIn = document.getElementById('fbReviewerName');
+    if (nameIn) nameIn.value = storedName || '';
+    document.getElementById('fbFormBody').hidden = false;
+    document.getElementById('fbSuccessBody').hidden = true;
+    const ov = document.getElementById('fbModalOverlay');
+    if (ov) { ov.hidden = false; document.body.style.overflow = 'hidden'; }
+    setTimeout(() => { const ta = document.getElementById('fbNotes'); if (ta) ta.focus(); }, 100);
+}
+function closeFeedbackModal() {
+    const ov = document.getElementById('fbModalOverlay');
+    if (ov) { ov.hidden = true; document.body.style.overflow = ''; }
+}
+function selectFbRating(btn) {
+    document.querySelectorAll('#fbRatingRow .fb-rating-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    activeFbRating = btn.dataset.val || 'Clear & Accurate';
+}
+function submitInAppFeedback() {
+    if (!currentModule) return;
+    const m = currentModule;
+    const notes = (document.getElementById('fbNotes').value || '').trim();
+    const reviewer = (document.getElementById('fbReviewerName').value || '').trim();
+    const entry = {
+        date: new Date().toISOString(),
+        moduleId: m.moduleId,
+        moduleTitle: m.title,
+        level: m.level || '',
+        section: activeFbSection,
+        rating: activeFbRating,
+        notes: notes || '(No specific comments)',
+        reviewer: reviewer || 'Anonymous'
+    };
+    try {
+        const key = 'moroCurriculumFeedback';
+        const list = JSON.parse(localStorage.getItem(key) || '[]');
+        list.push(entry);
+        localStorage.setItem(key, JSON.stringify(list));
+    } catch (e) {}
+
+    // Also trigger mailto so it delivers directly to the designated emails
+    if (FEEDBACK_EMAIL) {
+        const subject = `[Feedback: ${entry.rating}] ${entry.moduleId} - ${entry.section}`;
+        const body = `MoRo Academy Curriculum Review\n` +
+                     `===================================\n` +
+                     `Module: ${entry.moduleId} (${entry.moduleTitle})\n` +
+                     `Section: ${entry.section}\n` +
+                     `Rating: ${entry.rating}\n` +
+                     `Reviewer: ${entry.reviewer}\n` +
+                     `URL: ${window.location.href}\n\n` +
+                     `Comments / Suggestions:\n` +
+                     `${entry.notes}\n\n`;
+        const mailUrl = 'mailto:' + FEEDBACK_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        const a = document.createElement('a'); a.href = mailUrl; a.style.display = 'none'; document.body.appendChild(a); a.click(); setTimeout(() => a.remove(), 1000);
+    }
+    document.getElementById('fbFormBody').hidden = true;
+    document.getElementById('fbSuccessBody').hidden = false;
 }
 function moduleFeedbackBtn(secTitle) {
-    if (!FEEDBACK_EMAIL) return '';
     const safeTitle = (secTitle || '').replace(/'/g, "\\'");
     return `<div style="margin-top:16px; display:flex; justify-content:flex-start;">
-        <button type="button" class="btn-feedback" onclick="sendModuleFeedback(event, '${safeTitle}')">
+        <button type="button" class="btn-feedback" onclick="openFeedbackModal('${safeTitle}')">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             Feedback on this ${secTitle === 'Knowledge Check' ? 'assessment' : 'lesson'}
         </button>
