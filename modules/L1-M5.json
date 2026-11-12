@@ -24,7 +24,7 @@
         "poster": "videos/V018.jpg",
         "title": "Working alongside MoRo in 30 seconds",
         "duration": "0:30",
-        "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at its edge can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
+        "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at the edge of its path can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
         "placeholder": true,
         "card": {
           "title": "Working alongside MoRo card",
@@ -90,14 +90,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "Does MoRo exercise judgment the way a human coworker would?",
+        "question": "You are in MoRo's way and in a hurry. What should you expect?",
         "options": [
-          "No — it executes programmed logic based on sensor input, reliably and consistently",
-          "Yes, it can infer your intent and make sensible exceptions whenever you are standing in its way",
-          "Only during certain missions"
+          "It will understand you are in a hurry and give way like a coworker",
+          "It responds only to what its sensors detect, and will not work out your intent or make an exception",
+          "It waits for you to wave it on"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. MoRo's value is consistent, programmed execution — not human-like judgment."
+        "correctAnswer": 1,
+        "feedback": "Correct. MoRo responds to what its sensors detect, not what you intend."
       },
       {
         "id": 2,
@@ -108,18 +108,18 @@
           "A random malfunction that clears itself after a few seconds without any intervention"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Clear, steady movement near MoRo reduces unnecessary slowdowns."
+        "feedback": "Correct. MoRo responds to what its sensors detect, not what you intend. Hesitant or erratic movement can make it slow or pause."
       },
       {
         "id": 3,
-        "question": "If you notice something worth flagging about MoRo, what should you do?",
+        "question": "Which of these is acceptable around a paused MoRo?",
         "options": [
-          "Ignore it unless it becomes serious enough to stop the unit",
-          "Try to resolve it yourself before telling anyone else",
-          "Tell your supervisor early, even if it seems minor"
+          "Wave a hand at its sensors to see if it reacts",
+          "Rest your toolbox on it for a moment",
+          "Leave it alone and stay aware of it"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Early escalation, even for minor observations, is standard practice."
+        "feedback": "Correct. Do not rest items on MoRo or test its sensors out of curiosity. Leave it alone and stay aware of it."
       }
     ]
   }

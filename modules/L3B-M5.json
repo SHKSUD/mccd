@@ -15,7 +15,7 @@
       "title": "Why Custom Integration Matters",
       "learningObjectives": [
         "Understand why REST API access exists beyond the standard ANT interface",
-        "Recognize who typically needs custom integration capability"
+        "Recognize which kinds of facilities and systems typically need custom integration"
       ],
       "content": "Most MoRo deployments operate entirely through the ANT interface. But some facilities need MoRo's fleet behavior tied into systems ANT doesn't natively cover - a custom dashboard, a third-party WMS without a pre-built connector, or automated reporting into an existing facility system. MoRo's REST API exists for exactly this: programmatic access to fleet control and status beyond what the standard interface provides.",
       "keyTerms": [
@@ -41,17 +41,26 @@
       "keyTerms": [
         {
           "term": "Read access",
-          "note": "Permission to pull data out, such as fleet status, mission history and unit health."
+          "note": "A kind of API access for pulling data out, such as fleet status, mission history and unit health."
         },
         {
           "term": "Control access",
-          "note": "Permission to send commands in, such as assigning missions or triggering actions."
+          "note": "A kind of API access for sending commands in, such as assigning missions or triggering actions."
         },
         {
           "term": "Endpoint",
           "note": "A specific address a program calls to request data or an action."
         }
-      ]
+      ],
+      "video": {
+        "id": "V034",
+        "src": "videos/V034.mp4",
+        "poster": "videos/V034.jpg",
+        "title": "Read and control: the MoRo API in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The MoRo API, in 30 seconds. Read access pulls data out. Fleet status, mission history, unit health. Control access pushes commands in. It can assign missions and trigger actions. A request can move physical equipment. So only authorized systems should have control access.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -77,7 +86,7 @@
         "Understand typical use cases for custom API integration",
         "Recognize when API integration is the right tool versus when it's unnecessary complexity"
       ],
-      "content": "Common patterns include pulling fleet status into a facility-wide dashboard, triggering missions automatically from an external system event (an order placed, a production run completed), or logging MoRo data into an existing analytics platform. Not every facility needs this - if ANT and standard integrations (covered in earlier modules) already meet operational needs, custom API work adds complexity without corresponding value. This module is for situations where a genuine integration gap exists."
+      "content": "Common patterns include pulling fleet status into a facility-wide dashboard, triggering missions automatically from an external system event (an order placed, a production run completed), or logging MoRo data into an existing analytics platform. Not every facility needs this - if ANT and standard integrations (such as the FANUC I/O handshake in L3B-M4) already meet operational needs, custom API work adds complexity without corresponding value. This module is for situations where a genuine integration gap exists."
     },
     {
       "sectionId": 5,
@@ -116,47 +125,47 @@
       },
       {
         "id": 2,
-        "question": "What are the two broad categories of API functionality?",
+        "question": "Which of these is a control-access action?",
         "options": [
-          "Fast access for live data and slow access for historical reports",
-          "Public access for customers and private access for DiFacto staff",
-          "Read access (data out) and control access (commands in)"
+          "Pulling mission history",
+          "Assigning a mission",
+          "Reading unit health"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Read access and control access are the two fundamental categories."
+        "correctAnswer": 1,
+        "feedback": "Correct. Control access sends commands in, such as assigning missions or triggering actions."
       },
       {
         "id": 3,
-        "question": "Why does API access control matter particularly for MoRo?",
+        "question": "An integration only pulls fleet status into a dashboard. What access should it have?",
         "options": [
-          "Because control-access requests can move physical equipment",
-          "It doesn't matter for this system, since the API only reads data",
-          "Only for data privacy reasons"
+          "Read and control access, in case control is needed later",
+          "Read access only, scoped as narrowly as the integration requires",
+          "Control access"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Physical-world control capability raises the stakes of unauthorized or careless access."
+        "correctAnswer": 1,
+        "feedback": "Correct. Access should be scoped as narrowly as the integration actually requires."
       },
       {
         "id": 4,
-        "question": "Should every facility pursue custom API integration?",
+        "question": "ANT and standard integrations already meet a facility's operational needs. What does custom API work add?",
         "options": [
-          "Only facilities with more than 10 units, since smaller ones gain too little",
-          "No - only where a real gap exists beyond standard tools",
-          "Yes, it is always beneficial, because every facility has gaps"
+          "A required backup for ANT",
+          "Complexity without corresponding value",
+          "A replacement for standard integrations"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Custom integration adds complexity and is only worthwhile when a real gap exists."
+        "feedback": "Correct. If ANT and standard integrations already meet operational needs, custom API work adds complexity without corresponding value."
       },
       {
         "id": 5,
-        "question": "Why does control-access integration testing carry more risk than read-access testing?",
+        "question": "How should a control-access integration be tested first?",
         "options": [
-          "There is no difference in risk",
-          "Read-access testing is always more complex",
-          "Control-access testing can trigger real physical actions if something behaves unexpectedly"
+          "In production, at full volume",
+          "The same way as a read-only integration",
+          "In a supervised, low-stakes setting"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Control-access testing requires added caution since it can move physical equipment."
+        "feedback": "Correct. Test any control-access integration in a supervised, low-stakes setting first. It can trigger real physical actions if something behaves unexpectedly."
       }
     ]
   }

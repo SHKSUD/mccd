@@ -34,7 +34,7 @@
       "eyebrow": "Level 4B · Module 4 · Section 02",
       "title": "Identifying Optimization Opportunities",
       "learningObjectives": [
-        "Understand how to identify where optimization effort is worthwhile",
+        "Know that logged mission data reveals where genuine inefficiency exists",
         "Recognize the role of data logging (from L2-M6) in this process"
       ],
       "content": "Optimization starts with data - the logging introduced conceptually in L2-M6 becomes the actual working material here. Analyzing mission timing, route patterns, and congestion points across a fleet's operational history reveals where genuine inefficiency exists, rather than optimizing based on intuition about where problems might be.",
@@ -81,7 +81,16 @@
         "Recognize the risk of assuming improvement without measurement"
       ],
       "content": "Any optimization change should be measured against the same metrics used to identify the original opportunity - confirming throughput or cycle time genuinely improved, not just assuming it did because the change seemed logical. Before-and-after comparison using consistent data is what separates genuine optimization from well-intentioned guessing.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V040",
+        "src": "videos/V040.mp4",
+        "poster": "videos/V040.jpg",
+        "title": "Measuring the impact in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Measuring optimization impact. Measure against the same metrics you started with. Throughput or cycle time, before and after. Use consistent data for both. Do not assume it improved because it seemed logical. Real comparison beats well-intentioned guessing.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 6,
@@ -100,24 +109,24 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does this module add beyond the performance awareness from L2-M6?",
+        "question": "Which task is active optimization as this module means it?",
         "options": [
-          "Active optimization of an operational fleet",
-          "A new set of fleet settings that raise MoRo's maximum driving speed",
-          "A formal exam on cycle time and throughput measurements"
+          "Tuning routes, timing, and task distribution to get more throughput from the same fleet",
+          "Adding units to raise throughput",
+          "Reviewing what cycle time and throughput mean"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. This module moves from awareness to active, hands-on optimization."
       },
       {
         "id": 2,
-        "question": "What should optimization efforts be based on?",
+        "question": "Operators say one route feels slow. What should you do first?",
         "options": [
-          "The operators' impressions of which routes feel slowest",
-          "The route lengths shown on the facility's original floor plan and layout drawings used at design time",
-          "Data on mission timing, route patterns, and congestion across operating history"
+          "Move the waypoints on that route",
+          "Check logged mission timing, route patterns, and congestion points",
+          "Reassign its tasks to other units"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "feedback": "Correct. Data-driven analysis reveals genuine inefficiency, rather than guessing."
       },
       {
@@ -133,13 +142,13 @@
       },
       {
         "id": 4,
-        "question": "What is the goal of task distribution optimization across a fleet?",
+        "question": "Logs show two units consistently overloaded while others sit idle. What is the aim?",
         "options": [
-          "Balanced utilization across the fleet",
-          "Giving every unit exactly the same route length each day",
-          "Concentrating tasks on fewer units so the rest can charge"
+          "Leave the default assignment unchanged",
+          "Tune distribution logic toward balanced utilization",
+          "Shorten the overloaded units' routes only"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Balanced utilization across available units is the goal of this optimization."
       },
       {

@@ -37,7 +37,16 @@
           "term": "Operating hours",
           "note": "The total time a unit has actually been running, used to schedule maintenance by usage rather than by calendar."
         }
-      ]
+      ],
+      "video": {
+        "id": "V029",
+        "src": "videos/V029.mp4",
+        "poster": "videos/V029.jpg",
+        "title": "Time and usage in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Setting maintenance intervals, in 30 seconds. Intervals are set from time elapsed and actual usage. Usage means operating hours and cycles completed. A heavily used unit may need attention sooner. Both count together, not either one alone. Specific intervals: to be confirmed against DiFacto documentation.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -45,7 +54,7 @@
       "title": "Mechanical Component Checks",
       "learningObjectives": [
         "Understand the general categories of mechanical inspection",
-        "Recognize common wear patterns worth checking for"
+        "Know which mechanical components are checked for wear"
       ],
       "content": "Mechanical preventive checks generally cover wheel condition and wear, structural fasteners (confirming nothing has loosened from vibration over time), and drive component function. Specific inspection procedures and acceptable wear tolerances will be confirmed against DiFacto's technical documentation."
     },
@@ -61,7 +70,7 @@
       "keyTerms": [
         {
           "term": "Calibration",
-          "note": "Checking and adjusting a sensor so its readings stay accurate."
+          "note": "Verifying that a sensor's readings are still accurate."
         },
         {
           "term": "Firmware",
@@ -75,7 +84,7 @@
       "title": "Performing and Recording a Maintenance Visit",
       "learningObjectives": [
         "Understand the general workflow of a preventive maintenance visit",
-        "Know what documentation a completed visit should produce"
+        "Know that a completed visit should produce a documented record"
       ],
       "content": "A preventive maintenance visit follows a checklist appropriate to the schedule point (e.g., an early-life check covers different items than a check at much higher operating hours), with each item confirmed and any deviation noted - not just checked off without genuine inspection. The visit concludes with a documented record, consistent with the documentation practice covered in Module 1.",
       "keyTerms": [
@@ -101,46 +110,46 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why is preventive maintenance generally more economical than waiting for failure?",
+        "question": "According to the lesson, where does the extra cost of waiting for failure come from?",
         "options": [
-          "It isn't - corrective maintenance is always cheaper because nothing is spent until a failure",
-          "Unplanned downtime and cascaded failures tend to cost more than scheduled prevention",
-          "Preventive maintenance has no cost at all"
+          "The price of replacement parts rising over time",
+          "Unplanned downtime and, often, a costlier repair once a failure has cascaded",
+          "Scheduled visits taking longer after a failure"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Preventing failure is generally less costly than unplanned downtime and cascaded damage."
+        "feedback": "Correct. Unplanned downtime and cascaded failures tend to cost more than scheduled prevention."
       },
       {
         "id": 2,
-        "question": "What are maintenance intervals typically based on?",
+        "question": "Two units are on the same calendar schedule. One has far more operating hours. What follows?",
         "options": [
-          "A combination of elapsed time and actual usage (hours, cycles)",
-          "Calendar time only, regardless of how much the unit is actually used",
-          "Random scheduling"
+          "Both are due on the same date",
+          "Neither needs attention until a fault appears",
+          "The heavily used unit may need attention sooner"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Usage-based scheduling accounts for units that work harder needing attention sooner."
+        "correctAnswer": 2,
+        "feedback": "Correct. Intervals combine elapsed time and actual usage, so units that work harder may need attention sooner."
       },
       {
         "id": 3,
         "question": "Why do sensors benefit from periodic cleaning and calibration checks?",
         "options": [
-          "Small obstructions or drift erode navigation accuracy",
-          "They don't need maintenance because they have no moving parts to wear",
-          "Only to keep the housing looking clean for visiting customers"
+          "Sensors fail suddenly, and cleaning prevents that",
+          "Even minor obstruction or drift affects navigation accuracy over time",
+          "Cleaning is needed only after a navigation fault is reported"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Sensor performance can degrade gradually, affecting navigation if not checked."
       },
       {
         "id": 4,
-        "question": "What should happen during a preventive maintenance checklist item - just checking it off, or genuine inspection?",
+        "question": "A checklist item looks the same as last visit and time is short. What does the lesson require?",
         "options": [
-          "Checking it off is sufficient regardless of actual condition",
-          "Genuine inspection, with any deviation noted",
-          "Checklists are optional"
+          "Mark it confirmed from memory",
+          "Skip it and note it for the next visit",
+          "Inspect it and note any deviation"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "feedback": "Correct. A checklist only has value if items are genuinely inspected, not just marked complete."
       },
       {

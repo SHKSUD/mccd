@@ -17,7 +17,7 @@
         "Recall MoRo's core identity from Module 1",
         "Understand why navigation is the technology worth examining next"
       ],
-      "content": "Module 1 established what MoRo is: an autonomous mobile robot that navigates without fixed paths or floor markers. That claim raises an obvious question — how does it actually know where it is? This module answers that directly, covering the sensor technology and the localization process that together let MoRo move through a factory it was never explicitly programmed with a map of in advance.",
+      "content": "Module 1 established what MoRo is: an autonomous mobile robot that navigates without fixed paths or floor markers. That claim raises an obvious question — how does it actually know where it is? This module answers that directly, covering the sensor technology and the localization process that together let MoRo move through a factory without floor tape or magnets, using a LiDAR map of the space.",
       "keyTerms": [
         {
           "term": "AGV (Automated Guided Vehicle)",
@@ -42,7 +42,7 @@
         "Define LiDAR and explain its basic operating principle",
         "Understand what LiDAR can and cannot reliably detect"
       ],
-      "content": "LiDAR (Light Detection and Ranging) is a sensor that emits laser light and measures the time it takes to return after reflecting off a surface, calculating distance from that measurement. MoRo uses this continuously to detect walls, machines, pillars, and people around it. LiDAR has known physical limitations: it detects solid, reflective surfaces reliably, but struggles with transparent materials (glass) and highly reflective or mirror-like surfaces, since these don't reflect the laser predictably back to the sensor. Very fine or low-profile objects at floor level are also harder to detect reliably than larger obstacles. Precise range and detection specifications for MoRo's LiDAR configuration are being confirmed against current hardware documentation and will be added once verified.",
+      "content": "LiDAR (Light Detection and Ranging) is a sensor that emits laser light and measures the time it takes to return after reflecting off a surface, calculating distance from that measurement. MoRo uses this continuously to detect walls, machines, pillars, and people around it. LiDAR has known physical limitations: it detects solid surfaces reliably, but struggles with transparent materials (glass) and very shiny or mirror-like surfaces, since these don't reflect the laser predictably back to the sensor. Very fine or low-profile objects at floor level are also harder to detect reliably than larger obstacles. Precise range and detection specifications for MoRo's LiDAR configuration are being confirmed against current hardware documentation and will be added once verified.",
       "keyTerms": [
         {
           "term": "LiDAR",
@@ -73,12 +73,12 @@
     {
       "sectionId": 4,
       "eyebrow": "Level 1 · Module 2 · Section 04",
-      "title": "Navigation Accuracy",
+      "title": "Positioning Accuracy",
       "learningObjectives": [
-        "Know MoRo's confirmed navigation accuracy by variant",
+        "Know MoRo's positioning accuracy by variant (about 10 mm for the A-250 and A-500, 20 mm for the A-1200)",
         "Understand that accuracy differs across the product line"
       ],
-      "content": "Navigation accuracy is not identical across all three MoRo variants. The A-250 and A-500 are rated at ±10mm positioning accuracy; the A-1200 is rated at ±20mm — the larger variant's accuracy is intentionally wider, reflecting its different operating profile. This distinction matters operationally: don't assume the same precision applies uniformly across every unit on the floor without checking which variant you're working with.",
+      "content": "Positioning accuracy is not identical across all three MoRo variants. The A-250 and A-500 are rated at ±10mm positioning accuracy; the A-1200 is rated at ±20mm — the larger variant's accuracy is intentionally wider, reflecting its different operating profile. This distinction matters operationally: don't assume the same precision applies uniformly across every unit on the floor without checking which variant you're working with.",
       "keyTerms": [
         {
           "term": "positioning accuracy",
@@ -92,7 +92,7 @@
       "title": "Map Creation and Updates",
       "learningObjectives": [
         "Understand the general process of building an initial map",
-        "Know that maps require periodic updates as the factory changes"
+        "Know that maps need updating when the factory layout changes"
       ],
       "content": "Before MoRo operates independently in a space, an initial mapping pass is required — the unit is guided through the area to build its baseline map using LiDAR and SLAM. Once established, this map isn't permanent: if the factory layout changes (equipment relocated, new obstacles introduced), the map needs updating to reflect reality. The specific update cadence and process will be confirmed against DiFacto's operational guidance and added here once verified."
     },
@@ -104,7 +104,7 @@
         "Understand the practical implication of sensor-based navigation for floor personnel",
         "Recognize what to be mindful of given LiDAR's known limitations"
       ],
-      "content": "Because MoRo's navigation depends on LiDAR detecting solid, reflective surfaces, be mindful of what it may not reliably register — transparent barriers, highly reflective surfaces, and very low-profile floor obstructions. This isn't a flaw to be anxious about; it's simply how the sensing technology works, and it's the same reasoning behind the interactive zone and safety behaviors covered in Module 4. Understanding the technology builds appropriate trust — not blind trust, not undue suspicion."
+      "content": "Because MoRo's navigation depends on LiDAR detecting solid surfaces, be mindful of what it may not reliably register — transparent barriers, highly reflective surfaces, and very low-profile floor obstructions. This isn't a flaw to be anxious about; it's simply how the sensing technology works. Understanding the technology builds appropriate trust — not blind trust, not undue suspicion."
     }
   ],
   "quiz": {
@@ -123,14 +123,14 @@
       },
       {
         "id": 2,
-        "question": "What does SLAM stand for?",
+        "question": "What two things does SLAM do at the same time?",
         "options": [
-          "Structured Layout and Movement Planning",
-          "Simultaneous Localization and Mapping",
-          "Sensor Localization and Mapping"
+          "Works out MoRo's position and builds a map of its surroundings",
+          "Plans the route and charges the battery",
+          "Detects people and sounds the alarm"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. SLAM combines localization and mapping, performed simultaneously."
+        "correctAnswer": 0,
+        "feedback": "Correct. SLAM is Simultaneous Localization and Mapping: working out where MoRo is and what is around it, both at once."
       },
       {
         "id": 3,
@@ -145,25 +145,25 @@
       },
       {
         "id": 4,
-        "question": "What is MoRo's navigation accuracy for the A-1200 variant?",
+        "question": "Two different MoRo variants work on your floor. What should you assume about their positioning accuracy?",
         "options": [
-          "±50mm",
-          "±10mm, same as all variants",
-          "±20mm"
+          "It is identical on every unit",
+          "It may differ, so check which variant you are working with",
+          "The largest variant is the most precise"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. The A-1200 is rated at ±20mm, wider than the ±10mm rating for A-250/A-500."
+        "correctAnswer": 1,
+        "feedback": "Correct. Positioning accuracy is not identical across variants, so do not assume every unit is equally precise."
       },
       {
         "id": 5,
-        "question": "Does MoRo's map of a space stay fixed permanently once created?",
+        "question": "A new rack is installed in an aisle MoRo uses. What does this mean for MoRo's map?",
         "options": [
-          "Only if the robot is restarted and its software has been updated",
-          "No — it requires updates as the factory layout changes",
-          "Yes, it never needs updating"
+          "Nothing, because the map is permanent",
+          "It needs updating to match the new layout",
+          "The map updates only when MoRo is restarted"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Maps need periodic updates to stay accurate as the environment changes."
+        "feedback": "Correct. The map is not permanent. If the layout changes, it needs updating."
       }
     ]
   }

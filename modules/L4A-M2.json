@@ -15,7 +15,7 @@
       "title": "Connecting MoRo to Production Systems",
       "learningObjectives": [
         "Understand why MES/WMS integration matters at the Systems Engineer level",
-        "Recognize how this differs from general-purpose custom API work (taught to Programmers in L3B-M5)"
+        "Recognize this as a specific, common integration case (general custom API work is taught to Programmers in L3B-M5)"
       ],
       "content": "Programmers meet general-purpose custom API integration in L3B-M5. This module addresses a specific, common case: connecting MoRo to a facility's MES (Manufacturing Execution System) or WMS (Warehouse Management System) - the production and inventory tracking systems that often need to trigger MoRo missions automatically or receive status updates from completed ones.",
       "keyTerms": [
@@ -45,7 +45,7 @@
         "poster": "videos/V026.jpg",
         "title": "From production event to mission in 30 seconds",
         "duration": "0:30",
-        "transcript": "From production event to mission. The MES records a production run as complete. That event can trigger a MoRo mission automatically. Or the WMS records a new order to fulfil. That can start a pick operation. No operator has to assign each mission by hand.",
+        "transcript": "From production event to mission. The MES records a production run as complete. That event can trigger a MoRo mission automatically. Or the WMS records a new order to fulfill. That can start a pick operation. No operator has to assign each mission by hand.",
         "placeholder": true
       }
     },
@@ -97,7 +97,7 @@
       "eyebrow": "Level 4A · Module 2 · Section 06",
       "title": "Testing MES/WMS Integration",
       "learningObjectives": [
-        "Apply integration testing principles specifically to MES/WMS connections",
+        "Know that MES/WMS integration testing covers both directions: triggering and reporting",
         "Recognize the importance of testing both trigger and reporting directions"
       ],
       "content": "Testing this integration means validating both directions independently - confirming production events correctly trigger missions, and separately confirming mission completion correctly reports back - before relying on the full closed loop in production. Testing only one direction risks missing failures specific to the other.",
@@ -109,14 +109,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "Which situation does this module focus on?",
+        "question": "You have confirmed that MES events trigger MoRo missions correctly. What does the lesson say must still be done before relying on the closed loop in production?",
         "options": [
-          "Updating MoRo's onboard software across an entire fleet from one central console",
-          "Connecting MoRo to production and inventory systems (MES/WMS)",
-          "Planning charging schedules and dock placement for a large fleet of units"
+          "Separately confirm that mission completion reports back correctly",
+          "Nothing; if triggering works, reporting uses the same connection",
+          "Test both directions together only, in production"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. This module focuses on the common case of connecting MoRo to MES/WMS production and inventory systems."
+        "correctAnswer": 0,
+        "feedback": "Correct. The trigger direction and the reporting direction both need testing, not just one."
       },
       {
         "id": 2,
@@ -134,7 +134,7 @@
         "question": "Why does MoRo reporting status back into MES/WMS matter?",
         "options": [
           "It keeps production records accurate without manual data entry",
-          "It allows the MES to override MoRo's safety behavior whenever production is behind",
+          "It lets production planners see which operator is working each shift",
           "It reduces the battery drain that comes from planning and re-planning missions"
         ],
         "correctAnswer": 0,
@@ -155,12 +155,12 @@
         "id": 5,
         "question": "Why does integration failure handling need explicit design?",
         "options": [
-          "Because every MES and WMS fails on a fixed daily schedule",
-          "Because MoRo is designed to stop moving whenever any connection to another system drops",
+          "Because MES and WMS outages are too rare to plan for",
+          "Because missions should always pause until every status report is delivered",
           "So a failed report does not silently lose data or block MoRo's physical work"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Explicit failure handling prevents silent data loss or operational disruption."
+        "feedback": "Correct. A well-designed integration handles failures explicitly (queue and retry, alert someone, or fall back to a safe default) rather than silently losing data or blocking MoRo's physical operation."
       }
     ]
   }

@@ -17,7 +17,7 @@
         "Recall SLAM fundamentals from L1-M2",
         "Understand the Programmer's active role in the mapping process"
       ],
-      "content": "L1-M2 explained SLAM conceptually - localization and mapping happening together. As a Programmer, you actively perform this process: guiding MoRo through a new space to build its initial map, a core task covered extensively in the capstone commissioning module (L3B-M6). This module covers the process itself in depth.",
+      "content": "L1-M2 explained SLAM conceptually - localization and mapping happening together. As a Programmer, you actively perform this process: guiding MoRo through a new space to build its initial map, a core task that comes together in the capstone commissioning module (L3B-M6). This module covers the principles behind it.",
       "keyTerms": [
         {
           "term": "SLAM (Simultaneous Localization and Mapping)",
@@ -49,7 +49,7 @@
       "eyebrow": "Level 3B · Module 2 · Section 03",
       "title": "Performing the Mapping Pass",
       "learningObjectives": [
-        "Understand the general process of guiding MoRo through a mapping pass",
+        "Know that mapping guides MoRo through the space methodically, covering every area, at a deliberate pace",
         "Recognize pacing and coverage considerations"
       ],
       "content": "During mapping, MoRo is guided through the space methodically, ensuring full coverage of areas it will need to navigate operationally. Moving at a deliberate pace, rather than rushing, allows LiDAR to build an accurate picture as it goes. Specific guided-mapping procedure within ANT Server will be confirmed against DiFacto's documentation.",
@@ -85,7 +85,7 @@
       "eyebrow": "Level 3B · Module 2 · Section 05",
       "title": "Updating an Existing Map",
       "learningObjectives": [
-        "Understand when and how an existing map needs updating",
+        "Know when an existing map needs updating",
         "Recognize the difference between a full remapping and a partial update"
       ],
       "content": "When a facility layout changes - new equipment, relocated obstacles - the existing map needs updating rather than necessarily starting over completely. Depending on the scope of change, this might mean a full remapping pass or a more targeted update covering just the changed area. Specific update procedures will be confirmed against DiFacto's operational guidance."
@@ -106,36 +106,36 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why should a space be in a representative state before mapping?",
+        "question": "On mapping day, pallets are stacked in an aisle that is normally clear. What does the lesson say about mapping now?",
         "options": [
-          "Representative state only matters for safety certification, not for the quality of the map",
-          "It doesn't matter what state the space is in",
-          "So the resulting map reflects actual operational reality, not an atypical snapshot"
+          "The pallets make no difference to the map",
+          "The space is not in a representative state, so the map would be an atypical snapshot",
+          "Mapping faster avoids the problem"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "feedback": "Correct. Mapping during typical conditions produces a map that matches real operational use."
       },
       {
         "id": 2,
-        "question": "What pacing is recommended during a mapping pass?",
+        "question": "Why does the lesson recommend a deliberate pace during a mapping pass?",
         "options": [
-          "Pacing doesn't affect map quality as long as the whole space is covered",
-          "A deliberate, methodical pace for accurate LiDAR coverage",
-          "As fast as possible, to keep the space free of other traffic"
+          "It makes full coverage unnecessary",
+          "It replaces the map review afterward",
+          "It lets LiDAR build an accurate picture as MoRo goes"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Deliberate pacing supports accurate map-building as MoRo moves through the space."
+        "correctAnswer": 2,
+        "feedback": "Correct. A deliberate pace supports an accurate picture as MoRo moves through the space."
       },
       {
         "id": 3,
-        "question": "Why review a map before putting it into operational use?",
+        "question": "Which finding in a map review is a reason to hold the map back from operational use?",
         "options": [
-          "Only to check that the file size is within the storage limit of the unit",
-          "Review isn't necessary",
-          "To catch gaps or artifacts before they cause operational problems"
+          "The mapping pass took longer than planned",
+          "An area looks inconsistent with the actual space",
+          "The map was built in typical conditions"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Catching mapping issues before operational use is easier than discovering them later."
+        "correctAnswer": 1,
+        "feedback": "Correct. Reviewing a map catches gaps or artifacts before they cause operational problems."
       },
       {
         "id": 4,
@@ -150,11 +150,11 @@
       },
       {
         "id": 5,
-        "question": "What might a larger facility require regarding maps?",
+        "question": "What does the lesson say about maps in larger facilities?",
         "options": [
-          "No mapping is needed for larger facilities",
-          "Potentially separate maps for different floors or distinct operational zones",
-          "Always exactly one map regardless of facility size"
+          "One continuous map is always required",
+          "Separate maps may be needed for different floors or distinct operational zones",
+          "Each mission needs its own map"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Larger or more complex facilities may require multi-zone or multi-floor map management."

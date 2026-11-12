@@ -30,7 +30,7 @@
         "poster": "videos/V009.jpg",
         "title": "Many robots, one floor in 30 seconds",
         "duration": "0:30",
-        "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. Units see each other and avoid collisions automatically. Zones: shared paths and reserved routes. A deadlock is two units waiting on each other. The fleet system detects it and reroutes one unit.",
+        "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. The fleet system coordinates units to avoid collisions. Zones: shared paths and reserved routes. A deadlock is two or more units waiting on each other. Designed to resolve it, typically by rerouting one unit.",
         "placeholder": true
       }
     },
@@ -50,7 +50,7 @@
       "title": "Task Assignment Across a Fleet",
       "learningObjectives": [
         "Understand the general principle of how work gets distributed across units",
-        "Recognize the operator's role in fleet-level task assignment"
+        "Know that fleet-level task assignment is largely automatic"
       ],
       "content": "With multiple units available, the fleet system distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. The exact fleet-wide dashboard view and assignment interface will be confirmed against DiFacto's ANT documentation."
     },
@@ -70,7 +70,7 @@
         },
         {
           "term": "reserved route",
-          "note": "A floor route prioritized or dedicated for specific traffic patterns within the fleet."
+          "note": "A floor route prioritized for specific traffic patterns for specific traffic patterns within the fleet."
         }
       ]
     },
@@ -86,7 +86,7 @@
       "keyTerms": [
         {
           "term": "deadlock",
-          "note": "A situation where two or more units are each waiting on the other, with neither able to proceed without intervention."
+          "note": "A situation where two or more units are each waiting on the other, with neither able to proceed."
         }
       ]
     },
@@ -106,14 +106,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why might multiple MoRo units be deployed together?",
+        "question": "A site runs several units. One is down for maintenance and coverage continues. Which reason for running a fleet does this show?",
         "options": [
-          "It's never done - one unit per facility",
-          "For throughput and redundancy",
-          "Only for backup purposes"
+          "Throughput",
+          "Redundancy",
+          "Deadlock"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Multiple units support both higher throughput and redundant coverage."
+        "feedback": "Correct. Multiple units support both higher throughput and redundant coverage; this is redundancy."
       },
       {
         "id": 2,
@@ -131,8 +131,8 @@
         "question": "What is a deadlock in a multi-robot context?",
         "options": [
           "A situation where units are each waiting on the other, with neither proceeding",
-          "A charging dock that has locked, which prevents any unit from charging overnight",
-          "A software update failure"
+          "A unit stopping because its battery is low",
+          "A mission paused deliberately by an operator"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. A deadlock is a mutual-wait situation between units, typically resolved automatically."
@@ -141,11 +141,11 @@
         "id": 4,
         "question": "What's the difference between a shared path and a reserved route?",
         "options": [
-          "Reserved routes are only for maintenance work and are blocked for all missions",
-          "There is no difference; the two names describe exactly the same route setting",
-          "Shared paths serve many units; reserved routes are kept for specific traffic"
+          "Shared paths can be used by multiple units, coordinated automatically; reserved routes are prioritized for specific traffic patterns",
+          "Shared paths are for people; reserved routes are for MoRo units",
+          "Reserved routes are closed to all units"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Shared paths coordinate multiple units; reserved routes prioritize specific traffic patterns."
       },
       {

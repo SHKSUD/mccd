@@ -158,7 +158,7 @@
   {
    "key": "calibration",
    "term": "Calibration",
-   "note": "Checking and adjusting a sensor so its readings stay accurate.",
+   "note": "Verifying that a sensor's readings are still accurate.",
    "firstModule": "L3A-M2",
    "modules": [
     "L3A-M2"
@@ -296,7 +296,7 @@
   {
    "key": "control-access",
    "term": "Control access",
-   "note": "Permission to send commands in, such as assigning missions or triggering actions.",
+   "note": "A kind of API access for sending commands in, such as assigning missions or triggering actions.",
    "firstModule": "L3B-M5",
    "modules": [
     "L3B-M5"
@@ -336,7 +336,7 @@
    "others": [
     {
      "module": "L4B-M1",
-     "note": "The time MoRo needs to complete one full tending loop, from delivery to retrieval."
+     "note": "The time MoRo needs for its own part of one tending loop, from delivery to retrieval. It is compared with the CNC's processing time."
     },
     {
      "module": "L4B-M4",
@@ -357,7 +357,7 @@
   {
    "key": "deadlock",
    "term": "Deadlock",
-   "note": "A situation where two or more units are each waiting on the other, with neither able to proceed without intervention.",
+   "note": "A situation where two or more units are each waiting on the other, with neither able to proceed.",
    "firstModule": "L2-M4",
    "modules": [
     "L2-M4",
@@ -624,7 +624,7 @@
     },
     {
      "module": "L4A-M5",
-     "note": "The agreed exchange of signals (request, ready, complete) that lets MoRo and a fixed machine hand work to each other safely."
+     "note": "The agreed exchange of signals (request, ready, complete) that lets MoRo and a fixed machine hand work to each other."
     },
     {
      "module": "L4B-M1",
@@ -804,7 +804,7 @@
   {
    "key": "lockout-tagout",
    "term": "Lockout/tagout (LOTO)",
-   "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it.",
+   "note": "A safety procedure confirming equipment is de-energized and physically secured before maintenance work begins.",
    "firstModule": "L3A-M4",
    "modules": [
     "L3A-M4",
@@ -920,7 +920,7 @@
    "others": [
     {
      "module": "L2-M1",
-     "note": "A defined task assigned to MoRo, with a clear start, objective, and completion condition."
+     "note": "A defined task assigned to MoRo, with a clear origin, destination, and completion condition."
     }
    ]
   },
@@ -1145,7 +1145,7 @@
   {
    "key": "read-access",
    "term": "Read access",
-   "note": "Permission to pull data out, such as fleet status, mission history and unit health.",
+   "note": "A kind of API access for pulling data out, such as fleet status, mission history and unit health.",
    "firstModule": "L3B-M5",
    "modules": [
     "L3B-M5"
@@ -1175,7 +1175,7 @@
   {
    "key": "request-ready-complete-sequence",
    "term": "Request/ready/complete sequence",
-   "note": "The three-stage signal exchange confirming readiness before, during, and after a MoRo-FANUC interaction.",
+   "note": "The three-stage signal exchange between MoRo and the FANUC controller: request, ready, and complete.",
    "firstModule": "L3B-M4",
    "modules": [
     "L3B-M4"
@@ -1185,7 +1185,7 @@
   {
    "key": "reserved-route",
    "term": "Reserved route",
-   "note": "A floor route prioritized or dedicated for specific traffic patterns within the fleet.",
+   "note": "A floor route prioritized for specific traffic patterns for specific traffic patterns within the fleet.",
    "firstModule": "L2-M4",
    "modules": [
     "L2-M4",
@@ -1210,7 +1210,7 @@
    "others": [
     {
      "module": "L4A-M3",
-     "note": "A standard way for external software to communicate with a system programmatically, used here to extend MoRo's integration capability."
+     "note": "A standard way for external software to communicate with a system programmatically."
     }
    ]
   },
@@ -1227,7 +1227,7 @@
   {
    "key": "roi-modeling",
    "term": "ROI modeling",
-   "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision.",
+   "note": "Economic analysis of deployment cost against expected returns (throughput, reduced labor dependency) to justify and validate a scaling decision.",
    "firstModule": "L4A-M6",
    "modules": [
     "L4A-M6"
@@ -1310,7 +1310,7 @@
   {
    "key": "self-assessment",
    "term": "Self-assessment",
-   "note": "The learner's own judgment of what went well and what to change, given before feedback.",
+   "note": "The new instructor's own judgment of what went well and what to change, given before feedback.",
    "firstModule": "L5-M5",
    "modules": [
     "L5-M5"
@@ -1336,7 +1336,7 @@
   {
    "key": "single-point-of-failure",
    "term": "Single point of failure",
-   "note": "One component whose failure stops the whole cell.",
+   "note": "A design where the whole cell works only if every unit is available at the same time.",
    "firstModule": "L4A-M5",
    "modules": [
     "L4A-M5"
@@ -1432,7 +1432,7 @@
   {
    "key": "swept-area",
    "term": "Swept area",
-   "note": "The full area a load passes through while it rotates, not just its resting footprint.",
+   "note": "The full area a load passes through while it rotates at various lift heights, not just its simple loaded footprint.",
    "firstModule": "L4B-M3",
    "modules": [
     "L4B-M3"
@@ -1523,7 +1523,7 @@
   {
    "key": "version-control",
    "term": "Version control",
-   "note": "Keeping a record of every change to logic, with who changed it and why, so earlier versions can be recovered.",
+   "note": "Keeping clear records of what changed, when, and why, on both the PLC side and the MoRo side.",
    "firstModule": "L4B-M2",
    "modules": [
     "L4B-M2"

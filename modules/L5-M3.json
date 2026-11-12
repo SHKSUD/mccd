@@ -37,7 +37,7 @@
         "Understand the general scope of FANUC-side knowledge relevant to MoRo instructors",
         "Recognize this is integration-focused training, not full FANUC certification"
       ],
-      "content": "This module isn't a substitute for standalone FANUC certification. It covers the FANUC-side knowledge specifically relevant to training others on MoRo-FANUC integration points: the I/O handshake sequence from the FANUC controller's perspective, common FANUC-side configuration that affects integration behavior, and how to explain the combined system to a learner who may be new to one side or the other. Detailed curriculum content is being co-developed with FANUC-side training materials.",
+      "content": "This module isn't a substitute for standalone FANUC certification. It will cover the FANUC-side knowledge specifically relevant to training others on MoRo-FANUC integration points: the I/O handshake sequence from the FANUC controller's perspective, common FANUC-side configuration that affects integration behavior, and how to explain the combined system to a learner who may be new to one side or the other. Detailed curriculum content is being co-developed with FANUC-side training materials.",
       "keyTerms": []
     },
     {
@@ -62,10 +62,19 @@
       "title": "Common Points of Learner Confusion",
       "learningObjectives": [
         "Recognize typical areas where learners struggle with integrated systems",
-        "Apply instructional strategies to address these proactively"
+        "Know that anticipating this confusion and addressing it early helps"
       ],
       "content": "Learners new to integrated systems often struggle most with handshake timing. They need to understand that MoRo and FANUC are each waiting on signals from the other, not acting independently. Anticipating this confusion and addressing it early, with the handshake concept already introduced in L3B-M4, gives Master Instructors a known point to reinforce rather than leaving it as an implicit assumption.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V044",
+        "src": "videos/V044.mp4",
+        "poster": "videos/V044.jpg",
+        "title": "Handshake timing in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Teaching an integrated system. Learners often struggle most with handshake timing. MoRo and FANUC each wait for the other’s signal. They do not act independently. Address the confusion early. Build on the handshake from L3B-M4.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 5,
@@ -73,9 +82,9 @@
       "title": "Co-Delivery Considerations",
       "learningObjectives": [
         "Understand what co-delivery with a FANUC-side trainer might involve",
-        "Recognize when co-delivery is valuable versus when a single instructor suffices"
+        "Recognize that co-delivery by two instructors may be more effective for advanced troubleshooting"
       ],
-      "content": "For more complex integration training, co-delivery alongside a FANUC-side trainer may be more effective than one instructor covering both sides alone - particularly for advanced troubleshooting scenarios. This module covers how to plan and coordinate that kind of session. The specific protocol for co-delivery logistics is being finalized as DiFacto's instructor network develops.",
+      "content": "For more complex integration training, co-delivery alongside a FANUC-side trainer may be more effective than one instructor covering both sides alone - particularly for advanced troubleshooting scenarios. This module will cover how to plan and coordinate that kind of session. The specific protocol for co-delivery logistics is being finalized as DiFacto's instructor network develops.",
       "keyTerms": [
         {
           "term": "co-delivery",
@@ -88,7 +97,7 @@
       "eyebrow": "Level 5 · Module 3 · Section 06",
       "title": "Certification Implications",
       "learningObjectives": [
-        "Understand how this module factors into overall Master Instructor certification",
+        "Know what completing this module signals about a Master Instructor",
         "Recognize the value this adds to DiFacto's instructor network"
       ],
       "content": "Completing this module as part of the broader L5 Master Instructor track signals an instructor capable of training on a common real-world deployment pattern - MoRo integrated with FANUC systems, rather than MoRo in isolation. This supports DiFacto's role as an integrator of both systems.",
@@ -100,25 +109,25 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why does FANUC co-training matter for DiFacto's Master Instructors?",
+        "question": "Why does DiFacto want Master Instructors who can train on the FANUC integration points?",
         "options": [
-          "FANUC training is a legal requirement before anyone may teach MoRo",
-          "MoRo cannot run any mission unless a FANUC controller is connected",
-          "Many deployments pair MoRo with FANUC controllers"
+          "Many DiFacto deployments have MoRo working alongside FANUC systems",
+          "L5 certification includes FANUC's own certification",
+          "MoRo-only training is delivered by FANUC-side trainers"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Real deployments often combine both systems, making dual-system instructor capability valuable."
       },
       {
         "id": 2,
-        "question": "Is this module a substitute for standalone FANUC certification?",
+        "question": "Which of these is in the scope of this module?",
         "options": [
-          "No, it covers only the FANUC-side knowledge needed for MoRo integration training",
-          "Yes, it gives the same qualification in a shorter format",
-          "Yes, but only for instructors who already hold a MoRo certification from DiFacto"
+          "FANUC-side knowledge relevant to MoRo-FANUC integration points",
+          "Preparation for standalone FANUC certification",
+          "General FANUC robot programming beyond the integration points"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. This module is integration-focused, not a substitute for full FANUC certification."
+        "feedback": "Correct. This module is integration-focused and is not a substitute for standalone FANUC certification."
       },
       {
         "id": 3,
@@ -133,14 +142,14 @@
       },
       {
         "id": 4,
-        "question": "What is a common point of learner confusion with integrated systems?",
+        "question": "A learner says, \"MoRo finishes its part, then the FANUC robot just does its own thing.\" What does this show?",
         "options": [
-          "Choosing which payload configuration suits a given part geometry",
-          "Reading the serial number printed on each FANUC controller",
-          "Handshake timing: each system waits on signals from the other"
+          "They see the two systems as acting independently, not waiting on each other's signals",
+          "They need standalone FANUC certification before continuing",
+          "They should be taught the two systems as separate topics first"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Handshake timing between the two systems is a frequent source of learner confusion."
+        "correctAnswer": 0,
+        "feedback": "Correct. Handshake timing, where each system waits on signals from the other, is a frequent source of learner confusion."
       },
       {
         "id": 5,

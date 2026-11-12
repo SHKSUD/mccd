@@ -17,7 +17,7 @@
         "Understand how this module synthesizes the full L3B skill set",
         "Recognize commissioning as the real-world task L3B-certified programmers perform most often"
       ],
-      "content": "Every module in L3B built toward a single real-world capability: bringing a new MoRo deployment online at a facility that has never run it before. This module is that task in full - map building, mission programming, and machine integration, combined into one end-to-end process. It's the most common task a certified Programmer actually performs, which is why it serves as the track's capstone.",
+      "content": "The modules in L3B built toward a single real-world capability: bringing a new MoRo deployment online at a facility that has never run it before. This module is that task in full - map building, mission programming, and machine integration, combined into one end-to-end process. It brings the track's skills together, which is why it serves as the track's capstone.",
       "keyTerms": [
         {
           "term": "FANUC",
@@ -38,7 +38,7 @@
         "poster": "videos/V011.jpg",
         "title": "Commissioning a new site in 30 seconds",
         "duration": "0:30",
-        "transcript": "Commissioning a new site, in 30 seconds. First, assess the site: layout, clearances, network. Then build the map, ideally in a quiet period. Program the core missions first, and keep them narrow. Validate each machine integration, again and again. Go-live is not the end: hand over to the operators. Document the map version, missions and integrations.",
+        "transcript": "Commissioning a new site, in 30 seconds. First, assess the site: layout, clearances, network, safety. Then build the map, ideally in a quiet period. Program the core missions first, starting narrow. Validate each integration, repeatedly and under realistic variation. Go-live is not the end: hand over to the operators. Document the map version, missions and integrations.",
         "placeholder": true
       }
     },
@@ -84,7 +84,7 @@
       "title": "Integrating With Existing Machines",
       "learningObjectives": [
         "Apply machine integration principles (from L3B-M4) in a commissioning context",
-        "Understand validation steps before go-live for each integration point"
+        "Know that each integration point is validated individually before go-live"
       ],
       "content": "Where MoRo interfaces with existing equipment (per L3B-M4's FANUC I/O handshake coverage), each integration point needs individual validation before go-live - confirming the handshake sequence works reliably, not just once under ideal conditions, but repeatedly and under realistic operational variation.",
       "keyTerms": [
@@ -100,7 +100,7 @@
       "title": "Go-Live and Handoff",
       "learningObjectives": [
         "Understand the transition from commissioning to live operation",
-        "Know what documentation and training the operating site needs at handoff"
+        "Know that operators must understand the live configuration and that commissioning decisions must be documented"
       ],
       "content": "Commissioning isn't complete at technical go-live - it includes ensuring the site's operators (L1-L2 certified) understand the specific mission set and configuration now live at their facility, and that documentation of the commissioning decisions (map version, mission logic, integration points) exists for future reference. A commissioning that works technically but leaves the operating team unprepared hasn't actually succeeded."
     }
@@ -110,46 +110,46 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why does this module serve as the L3B capstone?",
+        "question": "Which order does the lesson give for commissioning?",
         "options": [
-          "It's simply the last module numerically, so it ends the track by default",
-          "It brings mapping, programming, and integration together in a real Programmer task",
-          "It covers unrelated advanced topics that are normally taught at the Systems Engineer level"
+          "Program missions, build the map, assess the site, go live",
+          "Assess the site, build the map, program the core missions, validate each integration, go live and hand off",
+          "Build the map, go live, then assess the site"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Commissioning combines the full L3B skill set into the task Programmers perform most often."
+        "feedback": "Correct. Commissioning combines mapping, mission programming and machine integration into one end-to-end process."
       },
       {
         "id": 2,
-        "question": "What should be assessed before mapping begins at a new site?",
+        "question": "A site has tight clearances and heavy machine density. What does the lesson say?",
         "options": [
-          "Only the facility's operating hours and the number of staff on each shift",
-          "Nothing - mapping can start immediately on the first day of the visit",
-          "Floor layout, machine positions, network, and safety considerations"
+          "It needs a different commissioning approach than an open floor plan",
+          "The approach is the same for every site",
+          "The assessment can follow mapping"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Pre-commissioning assessment shapes the entire approach that follows."
+        "correctAnswer": 0,
+        "feedback": "Correct. The pre-commissioning assessment shapes the entire approach that follows."
       },
       {
         "id": 3,
-        "question": "Why is timing (e.g., mapping during lower-activity periods) a consideration?",
+        "question": "What risk does the lesson give for mapping when the site is busy?",
         "options": [
-          "To reduce transient obstacles becoming permanently embedded in the baseline map",
-          "Mapping can only occur at night, because regulations prohibit mapping during working shifts",
-          "It isn't a real consideration"
+          "Transient obstacles such as parked equipment become embedded in the baseline map",
+          "The map cannot be reviewed afterward",
+          "Missions must be programmed before mapping"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Mapping timing affects whether temporary clutter gets baked into the permanent map."
       },
       {
         "id": 4,
-        "question": "What's the recommended approach to the initial mission set?",
+        "question": "Which phase does the lesson call the most vulnerable in a new deployment, and how is risk reduced?",
         "options": [
-          "Start with core, highest-value use cases, then expand once proven reliable",
-          "Skip mission programming and rely on manual control only",
-          "Program every conceivable mission immediately"
+          "The mapping pass; map faster",
+          "The first weeks of live operation; start with a narrow, validated mission set",
+          "Handoff; skip documentation until later"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Starting narrow and validated reduces risk during the most vulnerable early operational period."
       },
       {

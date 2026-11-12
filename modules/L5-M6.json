@@ -34,7 +34,16 @@
         "Recognize what's being evaluated during the observation"
       ],
       "content": "An observed delivery assessment means an experienced evaluator - senior faculty, working alongside DiFacto - watches the candidate actually teach a real or representative session. What's being evaluated isn't just technical accuracy, but the pedagogical skills built throughout L5: structuring the session, checking for understanding, giving effective feedback, and managing the training environment.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V047",
+        "src": "videos/V047.mp4",
+        "poster": "videos/V047.jpg",
+        "title": "Observed delivery in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Observed delivery, in 30 seconds. An experienced evaluator watches you teach. Senior faculty, working alongside DiFacto. A real or representative session. Not just technical accuracy: teaching skills. Structure, checking understanding, feedback, environment. An unsuccessful attempt is feedback, not final.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -82,7 +91,7 @@
         "Understand what DiFacto Master IMR Instructor certification enables",
         "Recognize the ongoing role within DiFacto's training ecosystem"
       ],
-      "content": "Successfully completing observed delivery, alongside the preceding L5 modules, confers DiFacto Master IMR Instructor certification - jointly issued by DiFacto and senior faculty, keeping quality consistent across the instructor network. This certification enables training and certifying other MoRo users independently, making the certified instructor part of DiFacto's scaling mechanism for reaching customers and partners DiFacto's own team can't be present at every site to train directly.",
+      "content": "Successfully completing the curriculum exam and the observed delivery, alongside the preceding L5 modules, confers DiFacto Master IMR Instructor certification - jointly issued by DiFacto and senior faculty, keeping quality consistent across the instructor network. This certification enables training and certifying other MoRo users independently, making the certified instructor part of DiFacto's scaling mechanism for reaching customers and partners DiFacto's own team can't be present at every site to train directly.",
       "keyTerms": []
     }
   ],
@@ -91,7 +100,7 @@
     "questions": [
       {
         "id": 1,
-        "question": "How is L5 certification validated, per the curriculum's assessment framework?",
+        "question": "What does L5 certification combine?",
         "options": [
           "Observed live delivery alone, with no written component",
           "A written exam alone, taken after the final module",
@@ -102,32 +111,32 @@
       },
       {
         "id": 2,
-        "question": "What does an observed delivery assessment evaluate?",
+        "question": "During an observed delivery the candidate's content is technically accurate throughout. Is that enough to meet the bar?",
         "options": [
-          "Technical accuracy of the content, since teaching skill is judged in earlier modules",
-          "How closely the session follows the written script that the candidate prepared and submitted in advance",
-          "Technical accuracy and teaching skills like structure, understanding checks, and feedback"
+          "No. Teaching skills such as session structure, checking for understanding, and feedback are also evaluated",
+          "Yes. Teaching skills were already checked in the module quizzes",
+          "Yes, as long as the session finishes within the planned time"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Observed delivery evaluates the full range of teaching skills built throughout L5."
+        "correctAnswer": 0,
+        "feedback": "Correct. Observed delivery evaluates technical accuracy and teaching skills: structuring the session, checking understanding, giving feedback, and managing the training environment."
       },
       {
         "id": 3,
-        "question": "Why is practice delivery recommended before the formal observed assessment?",
+        "question": "What is the main risk of making the observed assessment your first live delivery of the session?",
         "options": [
-          "It lets you apply feedback to your own technique before the real thing",
-          "Practice sessions are counted toward the final result automatically",
-          "Evaluators expect candidates to repeat the same session at least twice before assessment"
+          "You have had no chance to get feedback and adjust your technique",
+          "The evaluator cannot score a session delivered for the first time",
+          "The session content cannot be changed after the assessment"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. Practicing beforehand reduces the risk of treating the formal assessment as the first attempt."
+        "feedback": "Correct. Practice delivery in a low-stakes setting lets you apply feedback to your own technique before the formal assessment."
       },
       {
         "id": 4,
         "question": "What happens if an observed delivery doesn't meet the certification bar?",
         "options": [
           "The candidate must repeat every L5 module before another attempt",
-          "It is developmental feedback, in line with the re-sit policy",
+          "The candidate gets feedback on specific areas to develop, then makes another attempt",
           "The result is final, and the candidate cannot attempt it again"
         ],
         "correctAnswer": 1,
@@ -137,11 +146,11 @@
         "id": 5,
         "question": "What does DiFacto Master IMR Instructor certification enable?",
         "options": [
-          "Teaching Level 1 content only, under another instructor's supervision for a full year",
-          "Personal recognition, with no change to what the holder may teach",
-          "Training and certifying other MoRo users, extending DiFacto's training reach"
+          "Training and certifying other MoRo users independently",
+          "Training other MoRo users, with DiFacto staff carrying out each certification",
+          "Training and certifying, but only in sessions co-delivered with senior faculty"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Certified Master Instructors become part of DiFacto's scaling mechanism for training delivery."
       }
     ]

@@ -14,7 +14,7 @@
       "eyebrow": "Level 1 · Module 4 · Section 01",
       "title": "Governing Safety Standards",
       "learningObjectives": [
-        "Name the two safety standards MoRo is designed to meet",
+        "Name the two safety standards MoRo's safety systems are engineered against",
         "Understand why standards-based compliance matters, not just built-in caution"
       ],
       "content": "MoRo's safety systems are engineered against recognized industrial standards, not ad-hoc caution. Two apply directly at this level: ISO 3691-4, governing safety requirements for industrial trucks, and ANSI B56.5, the safety standard for guided industrial vehicles. You're not expected to memorize the standards themselves — what matters is that MoRo's behavior around people is engineered against requirements designed to prevent workplace incidents, not manufacturer promises.",
@@ -43,7 +43,7 @@
       "eyebrow": "Level 1 · Module 4 · Section 02",
       "title": "The Interactive Zone",
       "learningObjectives": [
-        "Know the confirmed distance defining MoRo's interactive zone",
+        "Know the interactive zone distance used in this course (currently 2 meters)",
         "Understand how MoRo's behavior changes within this zone"
       ],
       "content": "MoRo maintains an interactive zone of 2 meters around itself, detected continuously through onboard sensors. Within this zone, MoRo's behavior shifts automatically — reducing speed or stopping, depending on proximity — without requiring a human to intervene. This figure reflects DiFacto's current guidance and may be revised as the specification is finalized; it is accurate as of this module's current version, not a permanent fixed value.",
@@ -131,14 +131,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "What are the two safety standards referenced for MoRo?",
+        "question": "Why does it matter that MoRo is engineered against safety standards?",
         "options": [
-          "CE Mark and UL Listed certification",
-          "ISO 3691-4 and ANSI B56.5",
-          "ISO 9001 and ANSI Z10"
+          "Its behavior around people follows requirements written to prevent workplace incidents, not just the maker's promises",
+          "Workers no longer need to stay aware around it",
+          "It means MoRo never needs an E-stop"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. ISO 3691-4 covers industrial truck safety; ANSI B56.5 covers guided industrial vehicles."
+        "correctAnswer": 0,
+        "feedback": "Correct. MoRo's behavior around people is engineered against requirements designed to prevent workplace incidents, not manufacturer promises."
       },
       {
         "id": 2,
@@ -153,25 +153,25 @@
       },
       {
         "id": 3,
-        "question": "When should you use emergency stop rather than a routine mission pause?",
+        "question": "Which situation calls for E-stop?",
         "options": [
-          "When there's a genuine safety concern requiring immediate action",
-          "Any time you want MoRo to stop for a moment so that you can walk past it",
-          "At the end of every shift"
+          "You want MoRo to wait while you walk past",
+          "A person is in immediate danger from a moving MoRo",
+          "You want to hold a mission for a few minutes"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. E-stop is reserved for genuine concerns, not routine pausing."
+        "correctAnswer": 1,
+        "feedback": "Correct. E-stop is for genuine safety concerns, where waiting for MoRo's own sensors to react is not an option. It is not routine control."
       },
       {
         "id": 4,
-        "question": "If MoRo is stationary, is it safe to assume it has finished its task?",
+        "question": "You see a MoRo standing still in an aisle. What should you assume?",
         "options": [
-          "Yes, always, because MoRo only stops when its task is done",
-          "Only during night shifts, when fewer missions are queued",
-          "No — it may be paused rather than finished"
+          "Its mission is finished, so it is safe to push aside",
+          "It may be paused, not finished",
+          "It is switched off"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. A stationary MoRo may simply be paused — situational awareness still applies."
+        "correctAnswer": 1,
+        "feedback": "Correct. A stationary MoRo may be paused, not finished, so it can start moving again."
       },
       {
         "id": 5,

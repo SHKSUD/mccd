@@ -38,7 +38,7 @@
         "poster": "videos/V001.jpg",
         "title": "Meet MoRo in 30 seconds",
         "duration": "0:30",
-        "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it always knows where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: working safely around MoRo. MoRo Academy, DiFacto Robotics & Automation.",
+        "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it can work out where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: what MoRo is in more detail. MoRo Academy, DiFacto Robotics & Automation.",
         "placeholder": true
       }
     },
@@ -116,10 +116,10 @@
       "eyebrow": "Level 1 · Module 1 · Section 05",
       "title": "Safety Overview",
       "learningObjectives": [
-        "Know MoRo's confirmed interactive zone distance",
+        "Know the interactive zone distance used in this course (currently 2 meters)",
         "Understand the basic safe-behavior rules around an active MoRo unit"
       ],
-      "content": "MoRo maintains a 2-meter interactive zone, monitored continuously by onboard sensors. Within this zone, MoRo's behavior adjusts automatically based on proximity — slowing or stopping as needed — without requiring human intervention. If you're in MoRo's path, it will detect you and stop; wait for it to clear or move aside, and never attempt to push or manually reposition it. If MoRo stops unexpectedly, don't touch it — it may resume moving — instead, alert the operator or supervisor. If you hear an alarm, move clear and notify the operator. This 2-meter figure reflects DiFacto's current guidance and may be revised as the specification is finalized.",
+      "content": "MoRo maintains a 2-meter interactive zone, monitored continuously by onboard sensors. Within this zone, MoRo's behavior adjusts automatically based on proximity — slowing or stopping as needed — without requiring human intervention. If you're in MoRo's path, it is designed to detect you and stop; wait for it to clear or move aside, and never attempt to push or manually reposition it. If MoRo stops unexpectedly, don't touch it — it may resume moving — instead, alert the operator or supervisor. If you hear an alarm, move clear and notify the operator. This 2-meter figure reflects DiFacto's current guidance and may be revised as the specification is finalized.",
       "keyTerms": [
         {
           "term": "interactive zone",
@@ -135,7 +135,7 @@
         "Understand how MoRo changes the nature of floor work",
         "Recognize the shift from manual labor to supervision"
       ],
-      "content": "The practical shift MoRo introduces is straightforward: tasks that took several minutes of manual walking and handling now complete in a fraction of the time, consistently, without fatigue. Your role shifts from performing the transport itself to supervising it — watching for exceptions, confirming handoffs, and stepping in when something needs human judgment. This module covered what MoRo is and why it matters. The next module covers how it navigates in more depth; the modules after that cover actually operating it."
+      "content": "The practical shift MoRo introduces is straightforward: tasks that took several minutes of manual walking and handling now complete in a fraction of the time, consistently, without fatigue. Your role shifts from performing the transport itself to supervising it — watching for exceptions, confirming handoffs, and stepping in when something needs human judgment. This module covered what MoRo is and why it matters. The next module covers how it navigates in more depth; the modules after that cover operating it, safety, and working alongside it."
     }
   ],
   "quiz": {
@@ -165,36 +165,36 @@
       },
       {
         "id": 3,
-        "question": "Which MoRo variant is rated for a 500kg payload?",
+        "question": "A site needs to move loads of about 800 kg. Which variant is rated for that?",
         "options": [
-          "A-1200",
+          "A-250",
           "A-500",
-          "A-250"
+          "A-1200"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. The A-500 is rated for 500kg and is the most commonly deployed variant."
+        "correctAnswer": 2,
+        "feedback": "Correct. The A-1200 carries 1,200 kg; the A-250 carries 250 kg and the A-500 carries 500 kg."
       },
       {
         "id": 4,
-        "question": "What interactive zone distance does this course teach for MoRo?",
+        "question": "What does MoRo do when a person is inside its interactive zone?",
         "options": [
-          "2 meters",
-          "10 meters",
-          "5 meters"
+          "Slows or stops automatically, as needed",
+          "Keeps the same speed unless someone uses E-stop",
+          "Switches off until it is restarted"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. This course currently uses 2 meters, per DiFacto guidance; the final figure will be confirmed."
+        "feedback": "Correct. Within the interactive zone, MoRo's behavior adjusts automatically with proximity, slowing or stopping as needed."
       },
       {
         "id": 5,
-        "question": "If MoRo stops unexpectedly in front of you, what should you do?",
+        "question": "MoRo stops in the aisle for no clear reason. Why should you not touch it?",
         "options": [
-          "Alert the operator or supervisor and wait",
-          "Touch its sensors and bumper to check what is wrong with it",
-          "Push it out of the way"
+          "It is always powered off when stopped",
+          "It may resume moving",
+          "Touching it cancels its mission"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Don't attempt to move or touch a stopped unit — alert the operator."
+        "correctAnswer": 1,
+        "feedback": "Correct. A stopped MoRo may resume moving. Alert the operator or supervisor."
       }
     ]
   }

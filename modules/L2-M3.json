@@ -40,7 +40,7 @@
         "poster": "videos/V002.jpg",
         "title": "Power and charging in 30 seconds",
         "duration": "0:30",
-        "transcript": "Power and charging, in 30 seconds. All MoRo models use LFP batteries. LFP is stable, long-lasting and fine with partial charges. MoRo is rated for 8 hours of runtime. The same on all three models. It charges wirelessly in under 1 hour. The charging dock must be placed and aligned correctly. On screen at the end: Next: placing and aligning the charging dock. MoRo Academy, DiFacto Robotics & Automation.",
+        "transcript": "Power and charging, in 30 seconds. All MoRo models use LFP batteries. LFP is stable, long-lasting and fine with partial charges. MoRo is rated for 8 hours of runtime. The same on all three models. It charges wirelessly in under 1 hour. Charging needs MoRo to align correctly with the dock. On screen at the end: Next: charging dock alignment. MoRo Academy, DiFacto Robotics & Automation.",
         "placeholder": true
       }
     },
@@ -50,7 +50,7 @@
       "title": "Charging Dock Placement and Alignment",
       "learningObjectives": [
         "Understand the general requirement for successful wireless charging",
-        "Recognize signs of a failed or incomplete docking"
+        "Know that charging depends on MoRo aligning correctly with the dock, and that a failed or incomplete docking is worth noticing"
       ],
       "content": "Wireless charging requires MoRo to align correctly with the charging dock - the alignment tolerance and exact docking procedure will be confirmed against DiFacto's facility guidance. Operationally, if a unit appears docked but isn't visibly charging (per its status indicator), that's worth flagging rather than assuming charging is underway."
     },
@@ -90,14 +90,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "What battery chemistry does MoRo use?",
+        "question": "Why does LFP suit a robot that charges in short windows through a shift?",
         "options": [
-          "LFP (Lithium Iron Phosphate)",
-          "Nickel-cadmium, as used in older cordless tools",
-          "Lead-acid"
+          "It must be run to full depletion before each charge",
+          "It tolerates frequent partial charging well",
+          "It can only be charged on a single overnight cycle"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. All MoRo variants use LFP batteries, confirmed across the product line."
+        "correctAnswer": 1,
+        "feedback": "Correct. LFP is stable and long-lasting, and it tolerates partial charges well."
       },
       {
         "id": 2,
@@ -112,14 +112,14 @@
       },
       {
         "id": 3,
-        "question": "What does wireless charging mean for MoRo?",
+        "question": "MoRo arrives at its charging station. What has to happen for charging to begin?",
         "options": [
-          "It never needs to be charged because it harvests energy while driving",
-          "It docks and charges without a physical plug connection",
-          "It charges via solar panels"
+          "An operator connects a plug",
+          "MoRo aligns with the dock, and charging then begins automatically",
+          "The operator waits for a dedicated overnight charging window"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. MoRo aligns with the dock and charges automatically, no plug required."
+        "feedback": "Correct. MoRo aligns with the dock and charges automatically, with no plug required."
       },
       {
         "id": 4,
@@ -134,14 +134,14 @@
       },
       {
         "id": 5,
-        "question": "What is the appropriate operator-level response to a low-battery indicator with unusual behavior?",
+        "question": "A unit is behaving unusually and shows a low-battery indicator. What do you do?",
         "options": [
-          "Ignore it entirely, since battery indicators rarely matter to operators",
-          "Treat it as context and report what you observe",
-          "Immediately open the unit up and inspect the battery pack yourself"
+          "Do nothing; the low battery explains it, so no report is needed",
+          "Treat it as an emergency",
+          "Treat the low battery as context and report what you observe in the normal way"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Low battery is useful context, not an emergency requiring intervention beyond standard reporting."
+        "correctAnswer": 2,
+        "feedback": "Correct. Low battery is useful context, not an emergency requiring intervention beyond normal reporting."
       }
     ]
   }

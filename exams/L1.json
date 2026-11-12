@@ -23,25 +23,25 @@
     {
       "id": 2,
       "sourceModule": "L1-M1",
-      "question": "Which MoRo variant has a 500 kg payload rating, typically used for machine tending and part transfer?",
+      "question": "Which MoRo variant typically suits heavy material transfer and forklift replacement?",
       "options": [
         "A-250",
         "A-500",
         "A-1200"
       ],
-      "correctAnswer": 1,
-      "feedback": "Correct. The A-500 carries 500 kg and is typically used for machine tending and part transfer."
+      "correctAnswer": 2,
+      "feedback": "Correct. The A-1200, with a 1,200 kg rating, suits heavy payloads and forklift-replacement applications."
     },
     {
       "id": 3,
       "sourceModule": "L1-M1",
-      "question": "Which of these is a limit of what MoRo can do?",
+      "question": "Which of these still needs a person?",
       "options": [
-        "Handle a genuinely unplanned situation without human input",
-        "Avoid an obstacle that appears in its path, using its sensors",
-        "Return to charge itself when needed"
+        "Avoiding an obstacle that appears in its path",
+        "Dealing with a genuinely unplanned situation",
+        "Returning to charge itself when it needs to"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "feedback": "Correct. MoRo follows programmed logic; unplanned situations still need human judgment."
     },
     {
@@ -95,14 +95,14 @@
     {
       "id": 8,
       "sourceModule": "L1-M2",
-      "question": "Which MoRo variant is rated for ±20mm positioning accuracy?",
+      "question": "Which of these may MoRo's LiDAR not detect reliably?",
       "options": [
-        "The A-250, the lightest of the three variants",
-        "The A-1200",
-        "The A-500, the mid-range variant"
+        "A large solid machine standing in the aisle",
+        "A solid wall running along the aisle",
+        "A very low-profile object on the floor"
       ],
-      "correctAnswer": 1,
-      "feedback": "Correct. The A-250 and A-500 are rated at ±10mm; the A-1200 is rated at ±20mm."
+      "correctAnswer": 2,
+      "feedback": "Correct. Transparent barriers, very shiny surfaces and very low-profile floor obstructions are among the things LiDAR may not reliably register."
     },
     {
       "id": 9,
@@ -138,16 +138,16 @@
         "Only the interactive zone is disabled during override"
       ],
       "correctAnswer": 0,
-      "feedback": "Correct. Manual override never bypasses safety systems."
+      "feedback": "Correct. Manual override does not disable safety systems."
     },
     {
       "id": 12,
       "sourceModule": "L1-M3",
-      "question": "What is the difference between pausing a mission and cancelling it?",
+      "question": "What does pausing a mission do?",
       "options": [
-        "Pausing holds position and resumes from the same point; cancelling does not",
-        "There is no difference between them",
-        "Pausing sends MoRo straight back to its charger"
+        "MoRo holds position safely and resumes from the same point",
+        "It sends MoRo straight back to its charger and ends the mission",
+        "It cancels the mission and starts over from the beginning"
       ],
       "correctAnswer": 0,
       "feedback": "Correct. A paused mission keeps its state and resumes where it stopped."
@@ -155,26 +155,26 @@
     {
       "id": 13,
       "sourceModule": "L1-M4",
-      "question": "Which two safety standards is MoRo's safety engineered against, at this level?",
+      "question": "If MoRo behaves unexpectedly and you have an immediate concern, what should you do?",
       "options": [
-        "ISO 9001 and ANSI Z10, the quality and safety management standards",
-        "IEC 61131 and ISO 14001",
-        "ISO 3691-4 and ANSI B56.5"
+        "Walk up and push it aside",
+        "Use E-stop, then report it",
+        "Wait to see what it does next"
       ],
-      "correctAnswer": 2,
-      "feedback": "Correct. ISO 3691-4 covers industrial trucks; ANSI B56.5 covers guided industrial vehicles."
+      "correctAnswer": 1,
+      "feedback": "Correct. If there is any immediate concern, use E-stop, then report it."
     },
     {
       "id": 14,
       "sourceModule": "L1-M4",
-      "question": "What is MoRo's current interactive zone distance, per DiFacto's guidance?",
+      "question": "You hear an alarm from a MoRo nearby. What should you do?",
       "options": [
-        "5 meters",
-        "2 meters",
-        "10 meters"
+        "Ignore it as long as MoRo keeps moving normally",
+        "Walk up to the unit and check what is wrong",
+        "Move clear and notify the operator"
       ],
-      "correctAnswer": 1,
-      "feedback": "Correct. The interactive zone is currently 2 meters, and may be revised as the specification is finalized."
+      "correctAnswer": 2,
+      "feedback": "Correct. If you hear an alarm, move clear and notify the operator."
     },
     {
       "id": 15,
@@ -217,12 +217,12 @@
       "sourceModule": "L1-M5",
       "question": "A situation arises that calls for a judgment call or an exception. Who is responsible for making it?",
       "options": [
-        "MoRo, because it is autonomous",
-        "The nearest MoRo unit in the fleet, through the fleet system",
-        "A human, because MoRo only executes programmed logic"
+        "MoRo",
+        "The nearest MoRo unit, through the fleet system",
+        "A human"
       ],
       "correctAnswer": 2,
-      "feedback": "Correct. Judgment calls remain a human responsibility."
+      "feedback": "Correct. Judgment calls remain a human responsibility; MoRo only executes programmed logic."
     },
     {
       "id": 19,

@@ -17,7 +17,7 @@
         "Recall the handshake concept introduced in L2-M2",
         "Understand the Programmer's role in configuring FANUC integration"
       ],
-      "content": "L2-M2 introduced the handshake concept at an operator level - recognizing when a signal exchange has stalled. As a Programmer, you configure the handshake itself, specifically for FANUC robotic systems MoRo commonly integrates with. This is one of DiFacto's signature integration capabilities, reflecting the company's position as an integrator of both systems.",
+      "content": "L2-M2 introduced the handshake concept at an operator level - recognizing when a signal exchange has stalled. As a Programmer, you configure the handshake itself, specifically for FANUC robotic systems MoRo commonly integrates with. This integration reflects DiFacto's position as an integrator of both systems.",
       "keyTerms": [
         {
           "term": "FANUC",
@@ -41,7 +41,7 @@
       "keyTerms": [
         {
           "term": "request/ready/complete sequence",
-          "note": "The three-stage signal exchange confirming readiness before, during, and after a MoRo-FANUC interaction."
+          "note": "The three-stage signal exchange between MoRo and the FANUC controller: request, ready, and complete."
         }
       ]
     },
@@ -80,7 +80,7 @@
         "poster": "videos/V028.jpg",
         "title": "Testing a handshake in 30 seconds",
         "duration": "0:30",
-        "transcript": "Testing a handshake, in 30 seconds. Signals must reach the right I/O points. A signal on the wrong point breaks the handshake. Even when both systems work fine. Test through many complete cycles, not just one. An intermittent failure points to timing or setup. One good test would have missed it.",
+        "transcript": "Testing a handshake, in 30 seconds. Signals must reach the right I/O points. A wrong I/O point can make it unreliable or fail. Even when both systems work fine. Test through many complete cycles, not just one. An intermittent failure points to timing or setup. One good test would have missed it.",
         "placeholder": true
       }
     },
@@ -110,31 +110,31 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does this module cover, building on the handshake concept from L2-M2?",
+        "question": "In the request/ready/complete sequence, what does the \"ready\" signal confirm?",
         "options": [
-          "Actually configuring the FANUC I/O handshake between MoRo and the controller",
-          "A completely unrelated topic",
-          "Only operator-level recognition of stalled handshakes, without any configuration"
+          "MoRo has arrived",
+          "The FANUC controller can proceed",
+          "The interaction has finished"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Programmers configure the handshake itself, going beyond L2's operator-level awareness."
+        "correctAnswer": 1,
+        "feedback": "Correct. The FANUC controller signals ready, confirming it can proceed."
       },
       {
         "id": 2,
-        "question": "What sequence structure does the FANUC I/O handshake follow?",
+        "question": "What is the purpose of the request/ready/complete sequence?",
         "options": [
-          "Request/ready/complete",
-          "Open/close/lock, repeated for each part",
-          "Start/stop/reset, with a pause between steps"
+          "It prevents either system from acting before the other is prepared",
+          "It makes I/O mapping unnecessary",
+          "It removes the need for repeated testing"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. Request/ready/complete is the signal sequence used in DiFacto's integration framework."
+        "feedback": "Correct. The sequence prevents either system from acting before the other is genuinely prepared."
       },
       {
         "id": 3,
         "question": "What happens if digital I/O points are incorrectly mapped?",
         "options": [
-          "Nothing - mapping doesn't affect handshake reliability as long as the cables are good",
+          "Only the speed of the handshake changes, not its reliability",
           "Only MoRo's navigation is affected, not the handshake with the controller",
           "The handshake becomes unreliable or fails, even if both systems work"
         ],
@@ -143,22 +143,22 @@
       },
       {
         "id": 4,
-        "question": "Why test a handshake sequence through multiple cycles, not just once?",
+        "question": "A newly configured handshake completes one full cycle correctly. What does that show?",
         "options": [
-          "Multiple tests are only needed for safety compliance, not for reliability of the exchange",
-          "Intermittent failures on repetition can reveal timing issues a single test would miss",
-          "One successful test is always sufficient"
+          "The configuration is proven",
+          "Not enough: an intermittent failure on repetition would point to a timing or configuration issue that one test misses",
+          "Wiring causes are ruled out"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Repeated testing surfaces intermittent issues that a single test cycle wouldn't catch."
       },
       {
         "id": 5,
-        "question": "What's the first step when troubleshooting a stalled handshake?",
+        "question": "MoRo has arrived, but the exchange has stalled. What do you establish first?",
         "options": [
-          "Immediately replace hardware components",
-          "Identify which side of the exchange failed to signal",
-          "Restart the entire facility network"
+          "Whether the wiring must be replaced",
+          "Which stage failed: request not sent, ready not returned, or complete not registering",
+          "Whether the timing configuration should be changed"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Isolating which stage of the sequence failed narrows the investigation significantly."

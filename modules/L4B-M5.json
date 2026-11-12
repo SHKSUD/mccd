@@ -17,13 +17,22 @@
         "Understand why L4B's final assessment takes a capstone project format rather than a standard written/practical test",
         "Recognize how this differs from assessment structures earlier in the curriculum"
       ],
-      "content": "Earlier levels pair a written test with a practical assessment, apart from Level 1, which is a knowledge check. L4B's capstone is different by design, borrowed from engineering degree practice: a real, substantial project demonstrating integrated competency across everything the Advanced Programming track has covered, evaluated by peer review rather than a standard pass/fail quiz. Competency is demonstrated through actual work, not exam answers.",
+      "content": "Earlier levels pair a written test with a practical assessment, apart from Level 1, which is a knowledge check. L4B's capstone is different by design, borrowed from engineering degree practice: a real, substantial project demonstrating integrated competency across everything the Advanced Programming track has covered, evaluated by peer review rather than a standard quiz. Competency is demonstrated through actual work, not exam answers.",
       "keyTerms": [
         {
           "term": "capstone project",
           "note": "A substantial project that shows you can combine everything in the track, assessed on the work itself."
         }
-      ]
+      ],
+      "video": {
+        "id": "V041",
+        "src": "videos/V041.mp4",
+        "poster": "videos/V041.jpg",
+        "title": "The capstone project in 30 seconds",
+        "duration": "0:30",
+        "transcript": "The capstone project, in 30 seconds. A real, substantial project, not a quiz. It brings together the whole L4B track. Skills shown through actual work. Reviewed by peers against a structured rubric. Design, build, testing and documentation. Working but poorly documented does not meet the bar.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 2,
@@ -105,7 +114,7 @@
         "options": [
           "A longer written exam taken in a single sitting replaces the practical",
           "A peer-reviewed capstone project replaces the standard test",
-          "An observed live delivery replaces the written test, as at Level 5"
+          "A longer knowledge check replaces the practical assessment"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The capstone model is deliberately different, borrowed from engineering degree practice."
@@ -123,13 +132,13 @@
       },
       {
         "id": 3,
-        "question": "Is documentation part of what's being assessed, or just the working solution?",
+        "question": "A submission works but has thin documentation and little test evidence. How does it fare?",
         "options": [
-          "Yes, documentation quality is assessed alongside the working solution",
-          "No, only whether the integrated system works is scored by the reviewers",
-          "Only when reviewers cannot get the solution to run on their own"
+          "It passes, because the system works",
+          "It does not meet the bar, because the rubric covers design, build, testing, and documentation",
+          "It passes if reviewers can run it"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. A working system without adequate documentation is not considered complete work."
       },
       {
@@ -137,11 +146,11 @@
         "question": "Who evaluates the capstone project?",
         "options": [
           "A single instructor, with no input from other candidates on the track",
-          "Peers who have completed or are completing the same track",
+          "Others who have completed or are completing the track, not solely an instructor; the exact panel is still to be confirmed",
           "An automated test suite that scores the working system on its own"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Peer review reflects how real engineering work is typically reviewed in practice."
+        "feedback": "Correct. Peer review means evaluation by others who have completed or are completing the same track, not solely by an instructor."
       },
       {
         "id": 5,

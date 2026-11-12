@@ -54,7 +54,7 @@
       "eyebrow": "Level 3A · Module 4 · Section 04",
       "title": "Using the Diagnostic Interface for Battery Data",
       "learningObjectives": [
-        "Understand how the diagnostic interface (from L3A-M5) applies specifically to battery health",
+        "Understand how the technician-level diagnostic interface applies specifically to battery health",
         "Know the general type of data available for battery diagnosis"
       ],
       "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Specific screens and data points for battery diagnostics will be confirmed against DiFacto's technician documentation.",
@@ -95,7 +95,7 @@
       "keyTerms": [
         {
           "term": "Lockout/tagout (LOTO)",
-          "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it."
+          "note": "A safety procedure confirming equipment is de-energized and physically secured before maintenance work begins."
         }
       ],
       "video": {
@@ -114,22 +114,22 @@
     "questions": [
       {
         "id": 1,
-        "question": "Is battery capacity degradation over time a sign of a defect?",
+        "question": "A battery's capacity has fallen slowly over many charge cycles. What should the Technician ask?",
         "options": [
-          "Yes, any amount of degradation indicates that the battery is faulty",
-          "No - gradual degradation over charge cycles is normal and expected",
-          "Only LFP batteries degrade"
+          "Which defect caused it",
+          "Whether the rate is as expected, and whether remaining capacity still meets operational needs",
+          "Whether the battery was ever at rated capacity"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Gradual capacity loss is a normal, expected characteristic of rechargeable batteries."
+        "feedback": "Correct. Gradual capacity loss is normal. The practical questions are whether it is progressing at the expected rate and whether remaining capacity still meets operational needs."
       },
       {
         "id": 2,
         "question": "What pattern of change is more likely to indicate an actual fault versus normal aging?",
         "options": [
           "A sudden change in charging or runtime behavior",
-          "Gradual, consistent decline across several metrics over many months",
-          "There is no meaningful distinction"
+          "Gradual, consistent decline across several metrics",
+          "A battery below its original rated capacity"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Sudden changes are more indicative of an actual issue than gradual, expected aging."
@@ -140,7 +140,7 @@
         "options": [
           "Only the current charge percentage, shown more precisely than on the dashboard",
           "Nothing additional beyond what the operator dashboard already shows",
-          "Charge cycle history, temperature behavior, and cell-level data"
+          "Charge cycle history, temperature behavior, and cell-level data where available"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. The diagnostic interface exposes deeper battery data for technician-level assessment."
@@ -158,14 +158,14 @@
       },
       {
         "id": 5,
-        "question": "What should prompt immediate escalation rather than routine battery handling?",
+        "question": "During battery work you notice swelling. What does the lesson tell you to do?",
         "options": [
-          "Physical damage, unusual heat, or swelling",
-          "A battery reaching exactly 50% charge during a normal shift",
-          "Normal gradual capacity decline across many charge cycles"
+          "Finish the job, then report it",
+          "Record it and monitor the trend",
+          "Stop handling the battery and escalate immediately"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Physical damage, unusual heat, or swelling indicate a situation requiring escalation, not routine handling."
+        "correctAnswer": 2,
+        "feedback": "Correct. Physical damage, unusual heat, or swelling is beyond routine replacement: stop handling the battery and escalate immediately."
       }
     ]
   }

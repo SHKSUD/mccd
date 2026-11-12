@@ -43,7 +43,16 @@
           "term": "center of gravity",
           "note": "The point where a load's weight is balanced; it affects how stable the load is."
         }
-      ]
+      ],
+      "video": {
+        "id": "V039",
+        "src": "videos/V039.mp4",
+        "poster": "videos/V039.jpg",
+        "title": "Lift and rotate in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Lift and rotate, in 30 seconds. The load has two degrees of freedom. Vertical position: how high it is lifted. Rotational orientation: how far it turns. Stability depends on both together. It changes continuously as height and angle shift. This adds to the center-of-gravity considerations.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -64,11 +73,11 @@
         "Understand safety considerations unique to lift-and-rotate operation",
         "Recognize how this extends the general loaded-payload safety principles from L2-M2"
       ],
-      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, lift-and-rotate configurations require additional clearance consideration. The swept area during rotation at various lift heights can extend well beyond what a simple loaded footprint would suggest. Cell and workspace design must account for this full range of motion, not just the unit's resting footprint.",
+      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, lift-and-rotate configurations require additional clearance consideration. The swept area during rotation at various lift heights can extend well beyond what a simple loaded footprint would suggest. Cell and workspace design must account for this full range of motion, not just the simple loaded footprint.",
       "keyTerms": [
         {
           "term": "swept area",
-          "note": "The full area a load passes through while it rotates, not just its resting footprint."
+          "note": "The full area a load passes through while it rotates at various lift heights, not just its simple loaded footprint."
         }
       ]
     },
@@ -89,7 +98,7 @@
       "title": "Testing and Validating This Configuration",
       "learningObjectives": [
         "Apply testing principles specifically to the complexity of this payload type",
-        "Understand why extended validation is particularly important here"
+        "Know that validation should cover the full range of lift heights and rotation angles"
       ],
       "content": "Given the compounded complexity of this configuration, validation should test across the full range of lift heights and rotation angles the application requires - not just a single representative position. Confirm stability and handshake timing hold up across the complete operational envelope, not just the easiest test case.",
       "keyTerms": [
@@ -138,20 +147,20 @@
       },
       {
         "id": 4,
-        "question": "Why does handshake timing need adjustment for this payload type?",
+        "question": "A lift-and-rotate handshake reuses the timing of a simple point-to-point delivery. What risk does the lesson name?",
         "options": [
-          "This payload type uses faster signals, so timing must be shortened",
-          "Combined movements take longer than a simple delivery, so signals must wait for them",
-          "Handshakes are skipped for lift-and-rotate moves, to avoid delaying the rest of the cycle"
+          "A premature signal exchange before positioning is complete",
+          "A longer cycle because the signals arrive late",
+          "Reduced lift height range"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Timing must account for the additional time these combined movements require."
+        "correctAnswer": 0,
+        "feedback": "Correct. Handshake timing must allow for the additional time the combined movements take. Otherwise you risk a premature signal exchange before positioning is actually complete."
       },
       {
         "id": 5,
         "question": "What should validation testing cover for this configuration?",
         "options": [
-          "One representative position, repeated many times in a row",
+          "A single representative position",
           "Only the heaviest load, at the highest lift height and one angle",
           "The full range of lift heights and rotation angles the application needs"
         ],

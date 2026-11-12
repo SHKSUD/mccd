@@ -38,7 +38,7 @@
         "poster": "videos/V012.jpg",
         "title": "Where MoRo plugs into the factory in 30 seconds",
         "duration": "0:30",
-        "transcript": "Where MoRo plugs into the factory. FANUC I/O: a request, ready, complete handshake. OPC-UA: data out to SCADA. MES and WMS APIs: orders in, reports out. A custom REST API: fleet control and third-party apps. Example: the MES sends a production order. MoRo does the move; status goes to SCADA.",
+        "transcript": "Where MoRo plugs into the factory. Fixed machines: a request, ready, complete handshake. OPC-UA: data out to SCADA. MES and WMS APIs: orders in, reports out. A custom REST API: bespoke, application-specific needs. Example: the MES sends a production order. MoRo does the move; status goes to SCADA.",
         "placeholder": true
       }
     },
@@ -80,7 +80,7 @@
       "title": "Design Principles for Reliable Integration",
       "learningObjectives": [
         "Understand general principles that support reliable system integration",
-        "Recognize common pitfalls in integration design"
+        "Recognize tight coupling as a common integration pitfall"
       ],
       "content": "Reliable integration design favors clear failure modes (if one component fails, the rest of the system should degrade predictably, not catastrophically) and loose coupling where possible (components that depend on each other minimally are easier to maintain and troubleshoot independently). A tightly interconnected system where every component depends on every other is harder to diagnose when something goes wrong.",
       "keyTerms": []
@@ -120,7 +120,7 @@
           "It covers only operating MoRo units that are already installed"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. The Systems Engineer track addresses integration and design, building on the Technician foundation."
+        "feedback": "Correct. The Systems Engineer track addresses design and integration: how MoRo fits into a larger cell."
       },
       {
         "id": 2,
@@ -146,20 +146,20 @@
       },
       {
         "id": 4,
-        "question": "What does 'loose coupling' mean in integration design?",
+        "question": "In a cell design, the MES, the PLC, and MoRo each stop working whenever any one of the others is unreachable. Which design principle from this lesson does that break?",
         "options": [
-          "Cables between components are left slack so they can be moved",
-          "Components are connected through one shared controller that everything relies on",
-          "Components depend on each other as little as possible, so each is easier to maintain"
+          "Loose coupling: components should depend on each other as little as possible",
+          "Layering: MoRo should sit at the enterprise level",
+          "Documentation: the rationale was not written down"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Loose coupling supports easier troubleshooting and maintenance across components."
+        "correctAnswer": 0,
+        "feedback": "Correct. Loose coupling means components depend on each other as little as possible, which makes them easier to maintain and troubleshoot."
       },
       {
         "id": 5,
         "question": "Why does architecture documentation matter for long-term maintainability?",
         "options": [
-          "Integrated systems often outlive the engineer who built them",
+          "Integrated systems often stay in service after the original engineer is no longer involved",
           "It proves to operators and auditors that the cell has passed its safety check",
           "It lets the cell run for long periods without anyone monitoring its status"
         ],

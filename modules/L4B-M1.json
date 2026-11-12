@@ -35,7 +35,7 @@
       "title": "The Machine Tending Cycle",
       "learningObjectives": [
         "Understand the general cycle of a CNC machine tending operation",
-        "Recognize the handshake points within this cycle"
+        "Recognize where the handshake sits within this cycle"
       ],
       "content": "A typical machine tending cycle works like this: MoRo delivers raw material to the CNC machine. The handshake sequence, covered in L3B-M4, confirms readiness. The CNC completes its machining operation. Then MoRo retrieves the finished part and delivers the next raw material. This cycle repeats continuously during production, which makes reliability at each handshake point operationally critical.",
       "keyTerms": [
@@ -50,7 +50,7 @@
         "poster": "videos/V021.jpg",
         "title": "The machine tending cycle in 30 seconds",
         "duration": "0:30",
-        "transcript": "The machine tending cycle, in 30 seconds. MoRo delivers raw material to the CNC machine. A handshake confirms the machine is ready. The CNC completes its machining operation. MoRo retrieves the finished part. Then it delivers the next raw material. The cycle repeats, so every handshake matters.",
+        "transcript": "The machine tending cycle, in 30 seconds. MoRo delivers raw material to the CNC machine. A handshake confirms the machine is ready. The CNC completes its machining operation. MoRo retrieves the finished part. Then it delivers the next raw material. The cycle repeats, so handshake reliability matters.",
         "placeholder": true
       }
     },
@@ -60,7 +60,7 @@
       "title": "Payload Considerations for Machine Tending",
       "learningObjectives": [
         "Understand payload configuration choices specific to machine tending",
-        "Recognize how part geometry affects configuration decisions"
+        "Know that the parts geometry, weight and loading orientation drive payload configuration"
       ],
       "content": "Machine tending payload configuration depends heavily on the parts being handled - their geometry, weight, and whether they require specific orientation for loading. Building on the payload concepts from L2-M2, Advanced Programmers select and configure the appropriate payload approach for the specific CNC application - gripper-style handling, tray-based transfer, or another method.",
       "keyTerms": []
@@ -77,7 +77,7 @@
       "keyTerms": [
         {
           "term": "cycle time",
-          "note": "The time MoRo needs to complete one full tending loop, from delivery to retrieval."
+          "note": "The time MoRo needs for its own part of one tending loop, from delivery to retrieval. It is compared with the CNC's processing time."
         }
       ]
     },
@@ -87,7 +87,7 @@
       "title": "Handling Exceptions in a Continuous Cycle",
       "learningObjectives": [
         "Understand common exception scenarios in machine tending",
-        "Recognize appropriate exception handling design"
+        "Know that good exception handling pauses cleanly and alerts appropriately"
       ],
       "content": "A continuous tending cycle needs explicit handling for exceptions - a part that fails quality inspection, a CNC fault mid-cycle, a material shortage. Well-designed exception handling keeps these scenarios from cascading into larger production disruptions. It pauses cleanly and alerts appropriately, rather than leaving the cell in an ambiguous state.",
       "keyTerms": [
@@ -102,7 +102,7 @@
       "eyebrow": "Level 4B · Module 1 · Section 06",
       "title": "Validating a Machine Tending Integration",
       "learningObjectives": [
-        "Apply testing principles specifically to a continuous-cycle machine tending setup",
+        "Know that a continuous-cycle setup needs an extended continuous test period",
         "Understand what extended validation looks like for this use case"
       ],
       "content": "Given how central this use case is, validation should extend beyond a handful of test cycles. Run an extended continuous test period instead - one that surfaces issues only visible after many repetitions. This is similar in principle to the repeated-cycle testing emphasized for handshake configuration in L3B-M4, but applied to the full tending cycle over a longer duration.",
@@ -114,36 +114,36 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why does this module treat CNC integration in particular depth?",
+        "question": "According to the lesson, what drives payload configuration for machine tending?",
         "options": [
-          "By DiFacto's account, CNC machine tending is MoRo's most common use case",
-          "CNC machines are the only equipment MoRo can be connected to",
-          "It is the simplest integration MoRo supports, so it works best as a first lesson"
+          "The parts' geometry, weight, and required loading orientation",
+          "The number of units in the fleet",
+          "The length of the CNC's machining program"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. CNC machine tending represents MoRo's most frequent real-world application."
+        "feedback": "Correct. Payload configuration depends heavily on the parts being handled: their geometry, weight, and whether they need a specific orientation for loading."
       },
       {
         "id": 2,
-        "question": "What does a typical machine tending cycle involve?",
+        "question": "The CNC has finished machining. What does MoRo do next in the typical cycle?",
         "options": [
-          "Delivering material, waiting for the operator to restart MoRo, then leaving",
-          "Retrieving finished parts only, with material loaded by hand each time",
-          "Deliver material, handshake, CNC processes, MoRo retrieves the part"
+          "Delivers the next raw material, then retrieves the finished part",
+          "Retrieves the finished part, then delivers the next raw material",
+          "Leaves the cell until an operator restarts the mission"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. The cycle repeats continuously through delivery, handshake, processing, and retrieval."
+        "correctAnswer": 1,
+        "feedback": "Correct. In the typical cycle MoRo retrieves the finished part and then delivers the next raw material."
       },
       {
         "id": 3,
-        "question": "What happens if MoRo's cycle time is slower than the CNC's processing time?",
+        "question": "MoRo's cycle is much faster than the CNC's processing time. What results?",
         "options": [
-          "The CNC slows itself down to match MoRo's pace automatically",
-          "MoRo becomes the bottleneck, so the CNC waits on it between parts",
-          "MoRo skips the handshake to catch up, which is safe if done rarely"
+          "MoRo sits idle waiting",
+          "MoRo becomes the bottleneck",
+          "The CNC shortens its machining operation"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. Mismatched cycle timing between MoRo and the CNC directly affects overall throughput."
+        "correctAnswer": 0,
+        "feedback": "Correct. If MoRo's cycle is much faster than the CNC's processing time, MoRo sits idle waiting. If it is slower, MoRo becomes the bottleneck."
       },
       {
         "id": 4,

@@ -41,7 +41,7 @@
       "keyTerms": [
         {
           "term": "REST API",
-          "note": "A standard way for external software to communicate with a system programmatically, used here to extend MoRo's integration capability."
+          "note": "A standard way for external software to communicate with a system programmatically."
         }
       ]
     },
@@ -78,7 +78,7 @@
       "title": "Troubleshooting OPC-UA Connectivity",
       "learningObjectives": [
         "Understand common categories of OPC-UA connection issues",
-        "Apply structured troubleshooting methodology to this specific connection type"
+        "Know the three common issue types: certificates, network or firewall, and permissions"
       ],
       "content": "Common OPC-UA connectivity issues include certificate mismatches, network/firewall restrictions blocking the connection, or permission configuration preventing a client from reading certain data points. As with other diagnostic work in this curriculum, isolating which category applies - is it a connection-level or a permission-level failure - narrows the troubleshooting path significantly.",
       "keyTerms": [
@@ -97,7 +97,16 @@
         "Recognize this as a design choice, not a universal rule"
       ],
       "content": "OPC-UA suits integration with established industrial systems (SCADA, many PLC platforms) that natively expect it. Custom REST API integration suits more bespoke application needs - a custom dashboard, an unusual reporting requirement. Systems Engineers choose based on what the receiving system actually expects, not a fixed preference for one approach over the other.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V035",
+        "src": "videos/V035.mp4",
+        "poster": "videos/V035.jpg",
+        "title": "OPC-UA or a custom API in 30 seconds",
+        "duration": "0:30",
+        "transcript": "OPC-UA or a custom API? OPC-UA suits established industrial systems. Such as SCADA and many PLC platforms. They natively expect it. A custom REST API suits bespoke needs. A custom dashboard, an unusual report. Choose by what the receiving system expects.",
+        "placeholder": true
+      }
     }
   ],
   "quiz": {
@@ -107,9 +116,9 @@
         "id": 1,
         "question": "Why is OPC-UA widely used in industrial automation?",
         "options": [
-          "A vendor-neutral standard that lets different brands exchange data",
-          "It is built into every MoRo unit and cannot be used by other equipment on the floor",
-          "It is required by regulation for any machine that connects to a factory network"
+          "Because it is a vendor-neutral standard that lets different brands of equipment exchange data",
+          "Because it is built into every MoRo unit and cannot be used by other equipment on the floor",
+          "Because it is required by regulation for any machine that connects to a factory network"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. OPC-UA's standardization avoids needing custom connections for every vendor pairing."
@@ -127,14 +136,14 @@
       },
       {
         "id": 3,
-        "question": "Is security configuration optional when setting up OPC-UA connectivity?",
+        "question": "A SCADA client and MoRo sit on the same internal plant network. To save time, an integrator proposes skipping certificates and access permissions. What does the lesson say?",
         "options": [
-          "Yes, because OPC-UA encrypts everything by default without any setup",
-          "Only when the connection stays inside the facility's own network",
-          "No - an unsecured connection exposes operational data"
+          "Acceptable, because the traffic stays inside the facility",
+          "Not acceptable; security configuration is never optional",
+          "Acceptable until the cell goes into production"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Security configuration is never optional for OPC-UA connectivity."
+        "correctAnswer": 1,
+        "feedback": "Correct. Security configuration is never optional for OPC-UA connectivity: an improperly secured connection exposes operational data broadly."
       },
       {
         "id": 4,
@@ -149,14 +158,14 @@
       },
       {
         "id": 5,
-        "question": "How should a Systems Engineer decide between OPC-UA and custom REST API integration?",
+        "question": "A SCADA client connects to MoRo's OPC-UA data and reads status, but cannot read mission state. Which issue category does the lesson point to?",
         "options": [
-          "By what the receiving system actually expects, not by a fixed preference",
-          "Always use OPC-UA, because it is the newer of the two options and is more widely supported",
-          "Choose whichever one the MoRo unit was shipped with"
+          "A network or firewall restriction blocking the connection",
+          "Permission configuration preventing the client from reading certain data points",
+          "OPC-UA being the wrong choice for SCADA"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. The decision depends on what the target system natively expects, not a fixed preference."
+        "correctAnswer": 1,
+        "feedback": "Correct. The client connects but cannot read some data, which points to permission configuration rather than a connection-level failure."
       }
     ]
   }

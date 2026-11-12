@@ -71,14 +71,14 @@
     {
       "id": 6,
       "sourceModule": "L2-M2",
-      "question": "Which of these is a payload configuration MoRo supports?",
+      "question": "Two units have different payload configurations fitted. What does that change for you?",
       "options": [
-        "Hydraulic crane arm",
-        "Pneumatic sorting chute",
-        "Lift-and-rotate"
+        "Only who you escalate to when something is wrong",
+        "Nothing at all, because the checks are the same for every configuration",
+        "What you check and how you interact with each unit"
       ],
       "correctAnswer": 2,
-      "feedback": "Correct. Supported configurations are conveyor, cobot interface, towing, lifting, and lift-and-rotate."
+      "feedback": "Correct. The payload configuration changes what you check and how you interact with the unit."
     },
     {
       "id": 7,
@@ -126,7 +126,7 @@
         "Not force it into place; note the issue and escalate"
       ],
       "correctAnswer": 2,
-      "feedback": "Correct. Forcing a misaligned attachment risks damage; escalation is the right response."
+      "feedback": "Correct. Do not force it; note the issue and escalate."
     },
     {
       "id": 11,
@@ -193,9 +193,9 @@
       "sourceModule": "L2-M4",
       "question": "A fleet system distributes missions among several units. Which factors does it use?",
       "options": [
-        "The color of each unit and the time of day",
+        "How long each unit has been in service",
         "Proximity, availability, and current load",
-        "The order in which the units were purchased"
+        "Which operator happens to be closest to the unit"
       ],
       "correctAnswer": 1,
       "feedback": "Correct. Task assignment is largely automatic, based on proximity, availability, and load."
@@ -234,7 +234,7 @@
         "Shared paths serve many units; reserved routes prioritize specific traffic"
       ],
       "correctAnswer": 2,
-      "feedback": "Correct. Zone structure keeps throughput efficient as the fleet grows."
+      "feedback": "Correct. Shared paths coordinate multiple units; reserved routes prioritize specific traffic patterns."
     },
     {
       "id": 20,
@@ -270,7 +270,7 @@
         "That its map has been deleted"
       ],
       "correctAnswer": 1,
-      "feedback": "Correct. Dashboard unresponsiveness often points to connectivity."
+      "feedback": "Correct. This may indicate a connectivity issue rather than a hardware fault."
     },
     {
       "id": 23,
@@ -299,14 +299,14 @@
     {
       "id": 25,
       "sourceModule": "L2-M5",
-      "question": "A brief pause clears by itself and a single retry succeeds. What is the right call?",
+      "question": "MoRo pauses briefly at the same spot three times in one shift, and each pause clears by itself. What is the right call?",
       "options": [
-        "No escalation is needed",
-        "Escalate immediately as a critical fault",
+        "Escalate with what you observed, because it recurs",
+        "No escalation, because each pause cleared by itself",
         "Shut the unit down for the rest of the shift"
       ],
       "correctAnswer": 0,
-      "feedback": "Correct. Issues that resolve within a normal operational pattern do not need escalation."
+      "feedback": "Correct. A pause that clears once is normal, but one that keeps recurring is worth escalating with what you observed."
     },
     {
       "id": 26,

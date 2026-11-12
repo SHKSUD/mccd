@@ -39,14 +39,23 @@
           "term": "waypoint",
           "note": "A specific, defined location on MoRo's map used as a reference point within a programmed mission."
         }
-      ]
+      ],
+      "video": {
+        "id": "V033",
+        "src": "videos/V033.mp4",
+        "poster": "videos/V033.jpg",
+        "title": "A programmed mission in 30 seconds",
+        "duration": "0:30",
+        "transcript": "A programmed mission, in 30 seconds. It is built from waypoints on the map. Waypoints are specific locations. Connected by a defined sequence. Conditional logic adds more complex behavior. You define the structure yourself, explicitly.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
       "eyebrow": "Level 3B · Module 1 · Section 03",
       "title": "Setting Waypoints",
       "learningObjectives": [
-        "Understand the general process of defining a waypoint",
+        "Describe what a waypoint must satisfy: reachability and clearance",
         "Recognize considerations for reliable waypoint placement"
       ],
       "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Exact waypoint-setting procedure within ANT will be confirmed against the live system.",
@@ -78,7 +87,7 @@
       "eyebrow": "Level 3B · Module 1 · Section 05",
       "title": "Testing a Programmed Mission",
       "learningObjectives": [
-        "Apply the mission validation principle from L2-M1 to newly programmed missions",
+        "Know that a newly programmed mission is tested and refined iteratively before routine use",
         "Understand what additional scrutiny a newly programmed mission needs compared to a pre-existing one"
       ],
       "content": "Testing a newly programmed mission carries more uncertainty than testing a minor modification to an existing one, since nothing about the mission's behavior has been validated yet. Programmers should expect to iterate - testing, identifying issues, adjusting waypoints or sequencing, and retesting - before a new mission is considered reliable enough for routine operational use."
@@ -99,14 +108,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "How does the Programmer role differ from the Operator role covered at L2?",
+        "question": "Which task belongs to the Programmer role and not to the Operator role covered at L2?",
         "options": [
-          "Programmers only work with hardware, and never touch any of the software configuration",
-          "Programmers build and configure missions, rather than just operating existing ones",
-          "There is no difference"
+          "Assigning an existing mission to a unit",
+          "Monitoring a mission that is running",
+          "Defining a new mission"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. The Programmer track is a creation/configuration role, building on L2's operational foundation."
+        "correctAnswer": 2,
+        "feedback": "Correct. The Programmer track is a creation and configuration role, building on L2's operational foundation."
       },
       {
         "id": 2,
@@ -121,36 +130,36 @@
       },
       {
         "id": 3,
-        "question": "What should be considered when placing a waypoint?",
+        "question": "MoRo can navigate to a planned waypoint and stop there precisely, but there is not enough space for the operation intended at that point. Which consideration fails?",
         "options": [
-          "Only the distance from the charging dock",
-          "Nothing - any location works equally well for the mission as long as it is on the map",
-          "Reachability and clearance for the intended operation at that point"
+          "Reachability",
+          "Clearance",
+          "Sequencing"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Reliable waypoint placement accounts for whether MoRo can actually navigate to and operate at that location."
+        "correctAnswer": 1,
+        "feedback": "Correct. Reliable waypoint placement considers reachability (can MoRo navigate to and stop precisely there) and clearance (is there enough space for the operation intended at that point)."
       },
       {
         "id": 4,
-        "question": "What structure should mission programming start with before adding complexity?",
+        "question": "A new mission will need one conditional branch. What does the lesson say to do first?",
         "options": [
-          "Complex branching logic immediately",
-          "A simple, reliable linear sequence",
-          "Programming should start with the most complex case"
+          "Build the branch first",
+          "Get the linear sequence right and reliable, then add the branch",
+          "Build both together and test once"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Getting the simple linear case right first is the recommended starting point."
       },
       {
         "id": 5,
-        "question": "Why does a newly programmed mission need more testing scrutiny than a minor modification?",
+        "question": "What should a programmer expect before a new mission is considered reliable enough for routine operational use?",
         "options": [
-          "Nothing about a new mission's behavior has been validated yet",
-          "New missions are always simpler and need less testing",
-          "It doesn't - both need the same level of testing"
+          "One successful run",
+          "Iteration: test, identify issues, adjust waypoints or sequencing, retest",
+          "A documentation review without running the mission"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. A newly programmed mission carries more uncertainty, requiring more thorough validation."
+        "correctAnswer": 1,
+        "feedback": "Correct. A newly programmed mission has not been validated yet, so it is tested, adjusted and retested before routine use."
       }
     ]
   }

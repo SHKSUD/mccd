@@ -40,7 +40,7 @@
         "poster": "videos/V024.jpg",
         "title": "Do you need a zone in 30 seconds",
         "duration": "0:30",
-        "transcript": "Do you need a zone? In 30 seconds. Start with the facility’s real traffic patterns. Where is fleet density high? Where are passages too narrow for two units? Which routes are time-sensitive and need priority? Not every facility needs extensive zoning. Light traffic may need only minimal zones.",
+        "transcript": "Do you need a zone? In 30 seconds. Start with the facility’s real traffic patterns. Where is fleet density high? Where would several units in a narrow passage be a problem? Which routes are time-sensitive and need priority? Not every facility needs extensive zoning. Light traffic may need only minimal zones.",
         "placeholder": true
       }
     },
@@ -82,7 +82,7 @@
       "title": "Testing Zone Configuration",
       "learningObjectives": [
         "Understand how to validate zone configuration before full operational reliance",
-        "Recognize what deadlock or congestion signs look like during testing"
+        "Know that congestion or deadlock tendencies may only appear once more units are active"
       ],
       "content": "Zone configuration should be tested with realistic traffic volume before being relied upon for daily operation - a configuration that looks fine with one or two units may reveal congestion or deadlock tendencies (covered conceptually in L2-M4) only once more units are active. Testing under realistic load is what surfaces these issues before they become operational problems.",
       "keyTerms": [
@@ -108,57 +108,57 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does zone configuration involve, building on the concepts from L2-M4?",
+        "question": "What should zone decisions be based on?",
         "options": [
-          "Only applies to single-robot deployments",
-          "Nothing active - zones configure themselves automatically once the map is built",
-          "Actively defining where traffic should be prioritized, shared, or restricted"
+          "The facility's actual operational traffic patterns",
+          "The same layout used at the previous site",
+          "The order in which units joined the fleet"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Programmers actively configure zone behavior based on facility traffic patterns."
+        "correctAnswer": 0,
+        "feedback": "Correct. Programmers configure zone behavior based on the facility's actual traffic patterns."
       },
       {
         "id": 2,
-        "question": "Does every facility need extensive zone configuration?",
+        "question": "Which facility is most likely to work with minimal zoning?",
         "options": [
-          "Zone configuration is never necessary, since the fleet system handles everything",
-          "No - simple layouts with light traffic may need minimal zoning",
-          "Yes, always required, regardless of fleet size or layout complexity"
+          "Narrow passages and high fleet density",
+          "A simpler layout with light fleet traffic",
+          "Routes tied to time-sensitive operations"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Zone configuration needs scale with actual traffic complexity, not a fixed requirement."
       },
       {
         "id": 3,
-        "question": "When is a reserved route more appropriate than a shared path?",
+        "question": "A path carries steady traffic from several units, is not time-sensitive, and is not a bottleneck. Which choice fits the lesson?",
         "options": [
-          "When a route is time-sensitive or a bottleneck needs single-unit access",
-          "Reserved routes are never appropriate in a facility with more than one unit",
-          "Reserved routes should always be used instead of shared paths, for every route"
+          "A reserved route, to be safe",
+          "A shared path, because reserved routes suit time-sensitive routes and bottlenecks",
+          "Reserve every route on that side of the facility"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Reserved routes suit specific time-sensitive or bottleneck scenarios, not general use."
       },
       {
         "id": 4,
-        "question": "Why test zone configuration with realistic traffic volume?",
+        "question": "A zone configuration ran without problems in a test with two units. What can you conclude?",
         "options": [
-          "Congestion or deadlock tendencies may only appear under realistic load",
-          "Testing with light traffic is always sufficient to prove the configuration",
-          "Zone configuration doesn't require testing"
+          "It is ready for daily operation",
+          "It is not yet proven; congestion or deadlock tendencies may appear only with more units active",
+          "Deadlock cannot occur"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Issues that don't appear with one or two units may surface under realistic fleet volume."
       },
       {
         "id": 5,
-        "question": "Should zone configuration be treated as a one-time setup?",
+        "question": "Which is a sign that zone configuration needs revisiting?",
         "options": [
-          "Zone configuration is irrelevant after initial deployment",
-          "Yes, once configured it never needs revisiting",
-          "No - it often needs adjustment as fleet size or layout changes"
+          "Growing deadlock frequency",
+          "A unit completing its mission",
+          "No change in fleet size"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "feedback": "Correct. Growing congestion or deadlock frequency signals a need to revisit zone configuration."
       }
     ]

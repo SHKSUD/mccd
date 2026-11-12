@@ -37,7 +37,7 @@
       "keyTerms": [
         {
           "term": "mission",
-          "note": "A defined task assigned to MoRo, with a clear start, objective, and completion condition."
+          "note": "A defined task assigned to MoRo, with a clear origin, destination, and completion condition."
         }
       ],
       "video": {
@@ -46,7 +46,7 @@
         "poster": "videos/V007.jpg",
         "title": "A mission in 30 seconds",
         "duration": "0:30",
-        "transcript": "A mission, in 30 seconds. A mission is one defined task. It has an origin, a destination and a finish condition. Before assigning, check MoRo is ready. And that the path is clear. Then supervise: steady and on time is normal. A stall or pause is your signal. Run any new mission once, under supervision. If it fails: note, assess, escalate if unclear.",
+        "transcript": "A mission, in 30 seconds. A mission is one defined task. It has a clear origin, destination and completion condition. Before assigning, check MoRo is ready. And that the path is clear. Then supervise: steady and on time is normal. An unexpected pause is your signal. Run any new or modified mission once, under supervision. If it fails: note, assess, escalate if unclear.",
         "placeholder": true
       }
     },
@@ -55,7 +55,7 @@
       "eyebrow": "Level 2 - Module 1 - Section 03",
       "title": "Assigning and Starting a Mission",
       "learningObjectives": [
-        "Understand the sequence for assigning a mission",
+        "Know what to confirm before assigning a mission",
         "Know the pre-checks required before assignment"
       ],
       "content": "Before assigning a mission, confirm MoRo is in ready state (covered in L1-M3) and that the intended path is genuinely clear. Once assigned, MoRo executes independently - your role shifts from direct action to supervision. The specific screens and steps for mission assignment within ANT will be confirmed against the live system."
@@ -75,7 +75,7 @@
       "eyebrow": "Level 2 - Module 1 - Section 05",
       "title": "Validating New or Modified Missions",
       "learningObjectives": [
-        "Understand why new missions require validation before routine use",
+        "Understand why new or modified missions require validation before routine use",
         "Know the general principle of supervised first-run testing"
       ],
       "content": "Any new or modified mission should be validated before being treated as routine - run it once under direct supervision, ideally during a lower-activity period, and confirm it behaves end-to-end as expected. This is standard practice for any new automated process, not something specific to MoRo."
@@ -96,24 +96,24 @@
     "questions": [
       {
         "id": 1,
-        "question": "What defines a mission?",
+        "question": "Which of these is a mission?",
         "options": [
-          "A scheduled maintenance check carried out by a technician at the end of each shift",
-          "A software update",
-          "A defined task with a clear start, objective, and completion condition"
+          "MoRo waits with no task assigned",
+          "MoRo is assigned to move from point A to point B, and the task ends when a set condition is met",
+          "An operator watches MoRo's status during a shift"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. A mission is the basic structured unit of work MoRo executes."
+        "correctAnswer": 1,
+        "feedback": "Correct. A mission is a defined task with a clear origin, destination, and completion condition."
       },
       {
         "id": 2,
-        "question": "What must be confirmed before assigning a new mission?",
+        "question": "What must you confirm before assigning any mission?",
         "options": [
-          "That MoRo is in ready state and its path is genuinely clear",
-          "Written approval from the supervisor on duty for every mission",
-          "Nothing - missions can be assigned anytime the unit is powered on"
+          "The mission has already been run once that shift",
+          "That MoRo is in the ready state and its intended path is genuinely clear",
+          "Only that MoRo is in the ready state"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Readiness and a clear path are the standard pre-checks."
       },
       {
@@ -129,25 +129,25 @@
       },
       {
         "id": 4,
-        "question": "Why should new missions be validated under supervision first?",
+        "question": "How should a new or modified mission be validated?",
         "options": [
-          "To confirm end-to-end behavior before routine use",
-          "Only required for missions that contain more than 10 steps",
-          "It is not necessary once the mission has been written down"
+          "Let it run unattended and check later whether it failed",
+          "Validate it only if it fails in routine use",
+          "Run it once under direct supervision and confirm it behaves as expected end to end"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Supervised validation is standard practice for any new process."
+        "correctAnswer": 2,
+        "feedback": "Correct. A new or modified mission gets a supervised first run to confirm end-to-end behavior before routine use."
       },
       {
         "id": 5,
-        "question": "What's the appropriate first response to a failed mission?",
+        "question": "A mission fails and you cannot tell why. What do you do?",
         "options": [
-          "Diagnose the exact technical cause yourself",
-          "Ignore it and reassign immediately",
-          "Note what happened, assess safety, and escalate if unclear"
+          "Retry first, and note it only if it fails again",
+          "Note what happened, assess whether it is safe to reassign or retry, and escalate because the cause is not clear",
+          "Work out the technical cause before telling anyone"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Operator-level response doesn't require diagnosis - note, assess, escalate."
+        "correctAnswer": 1,
+        "feedback": "Correct. The operator-level response does not require diagnosis: note, assess, and escalate if the cause is unclear."
       }
     ]
   }

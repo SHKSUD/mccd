@@ -76,7 +76,7 @@
         },
         {
           "term": "handshake",
-          "note": "The agreed exchange of signals (request, ready, complete) that lets MoRo and a fixed machine hand work to each other safely."
+          "note": "The agreed exchange of signals (request, ready, complete) that lets MoRo and a fixed machine hand work to each other."
         }
       ]
     },
@@ -92,7 +92,7 @@
       "keyTerms": [
         {
           "term": "single point of failure",
-          "note": "One component whose failure stops the whole cell."
+          "note": "A design where the whole cell works only if every unit is available at the same time."
         },
         {
           "term": "graceful degradation",
@@ -105,7 +105,7 @@
       "eyebrow": "Level 4A · Module 5 · Section 06",
       "title": "Validating a Multi-Robot Cell Design",
       "learningObjectives": [
-        "Understand how to validate a cell design before full deployment",
+        "Know to validate a cell design in steps, starting with fewer units, before full deployment",
         "Recognize the value of phased rollout for multi-unit deployments"
       ],
       "content": "Validating a multi-robot cell design benefits from a phased approach. Start with fewer units than the final target. Confirm coordination behaves as expected. Then scale up incrementally, rather than deploying the full fleet size at once. This mirrors the broader principle of validating incrementally, consistent with testing practices covered throughout this curriculum.",
@@ -117,14 +117,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does this module address, building on L2-M4's fleet concepts?",
+        "question": "A cell layout has one narrow aisle that every unit must use in both directions. Which spatial design task from this lesson applies?",
         "options": [
-          "A deeper look at operating one MoRo unit from the dashboard during a normal shift, with its alerts",
-          "The design side: how an engineer architects a cell with several units and fixed equipment",
-          "Instructions for repairing a unit that has left the fleet"
+          "Decide where shared paths and reserved routes make sense, and check clearance so the aisle does not become a chronic congestion point",
+          "Add units until the aisle is always occupied",
+          "Have each unit rebuild its map before entering the aisle"
         ],
-        "correctAnswer": 1,
-        "feedback": "Correct. This module covers the design side of multi-robot cells, building on L2-M4's operational foundation."
+        "correctAnswer": 0,
+        "feedback": "Correct. Spatial design means deciding where shared paths and reserved routes make sense and checking clearance for multiple units."
       },
       {
         "id": 2,
@@ -157,7 +157,7 @@
           "The cell keeps working at reduced capacity when one unit is unavailable"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Graceful degradation avoids single points of failure that would collapse the whole cell's function."
+        "feedback": "Correct. A cell designed for graceful degradation avoids single points of failure, so one unit going offline does not collapse the cell's throughput."
       },
       {
         "id": 5,

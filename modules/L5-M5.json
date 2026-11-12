@@ -74,9 +74,18 @@
         },
         {
           "term": "self-assessment",
-          "note": "The learner's own judgment of what went well and what to change, given before feedback."
+          "note": "The new instructor's own judgment of what went well and what to change, given before feedback."
         }
-      ]
+      ],
+      "video": {
+        "id": "V046",
+        "src": "videos/V046.mp4",
+        "poster": "videos/V046.jpg",
+        "title": "Debriefing after a session in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Debriefing after a session. Start with the new instructor’s own view. What went well? What would they adjust? Mentor feedback comes second. It fills gaps or confirms what they noticed. This builds their own evaluative judgment. Not dependence on feedback for every session.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 6,
@@ -106,25 +115,25 @@
       },
       {
         "id": 2,
-        "question": "What do new instructors typically struggle with most?",
+        "question": "A newly certified instructor knows the technical material but loses the room when asked an unexpected question. What kind of gap is this, and what does it need?",
         "options": [
-          "Instructional execution, such as pacing",
-          "The technical material, since they have only just learned it",
-          "Understanding the certification path that brought them to L5"
+          "A knowledge gap; reteach the technical module",
+          "A confidence and experience gap; support with instruction, not reteaching content",
+          "An assessment gap; repeat their certification"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. New instructors typically know the material but need support with instructional execution."
+        "correctAnswer": 1,
+        "feedback": "Correct. New instructors often know the material but need support with the instructional side."
       },
       {
         "id": 3,
-        "question": "What should a mentor generally do during a mentee's live session?",
+        "question": "While you observe, the mentee explains a step awkwardly, but the content is correct and nothing unsafe is happening. What should you do?",
         "options": [
-          "Step in quickly whenever the mentee stumbles, so that the learners are never left confused",
-          "Hold back unless something incorrect or unsafe is taught, and give feedback afterward",
-          "Stay out of the room so the mentee is never observed at all"
+          "Step in and re-explain so learners are not confused",
+          "Hold back and raise it in the debrief",
+          "Signal the mentee to hand the section over to you"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Interrupting unnecessarily can undermine the new instructor's confidence and authority."
+        "feedback": "Correct. Mentors generally hold back unless something incorrect is being taught or a safety issue arises. Interrupting unnecessarily can undermine the new instructor's confidence and authority."
       },
       {
         "id": 4,

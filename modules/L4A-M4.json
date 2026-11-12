@@ -63,7 +63,16 @@
           "term": "risk assessment",
           "note": "A structured review of a hazard's likelihood and severity, used to decide how much protection a safety function needs."
         }
-      ]
+      ],
+      "video": {
+        "id": "V036",
+        "src": "videos/V036.mp4",
+        "poster": "videos/V036.jpg",
+        "title": "Performance levels in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Performance levels, in 30 seconds. EN ISO 13849 defines performance levels. They set how reliably a safety function must perform. The level comes from a risk assessment of the hazard. Higher risk needs a higher performance level. That means more robust, often redundant, design. MoRo cell levels: to be confirmed with DiFacto.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 4,
@@ -109,14 +118,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "What standard governs the safety design work covered in this module?",
+        "question": "What must safety design documentation show, according to this lesson?",
         "options": [
-          "ANSI B56.5, the standard for guided industrial vehicles used in factories",
-          "ISO 9001, the standard for quality management systems in manufacturing",
-          "EN ISO 13849 (safety of machinery and controls)"
+          "The risk assessment performed, the performance level targeted, and how the design meets it",
+          "That each component passed its own functional test",
+          "The purchase and installation dates of the safety PLC"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. EN ISO 13849 is the governing standard for machinery and control system safety design."
+        "correctAnswer": 0,
+        "feedback": "Correct. Documentation of the risk assessment, the targeted performance level and how the design meets it is the evidence base for compliance under EN ISO 13849."
       },
       {
         "id": 2,
@@ -142,25 +151,25 @@
       },
       {
         "id": 4,
-        "question": "Why does integrating MoRo's safety behavior with a cell's safety PLC require careful design?",
+        "question": "In a new cell, MoRo's E-stop works and the fixed equipment's E-stop works when each is tested alone. What does the lesson say is still unconfirmed?",
         "options": [
-          "Because MoRo's E-stop only works when it is wired to a MoRo-branded controller",
-          "Because the cell's safety PLC always overrides MoRo's own safety systems",
-          "To confirm the combined system meets its required performance level, not just each part"
+          "Nothing; each component functions, so the cell is compliant",
+          "That the combined system meets its required performance level, for example that a cell-wide E-stop also halts MoRo",
+          "Only that the documentation has been filed"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Combined safety systems need deliberate design validation, not just functional connection."
+        "correctAnswer": 1,
+        "feedback": "Correct. Confirm that the combined system meets its required performance level, not just that each component works on its own."
       },
       {
         "id": 5,
         "question": "When should a dedicated functional safety specialist be involved?",
         "options": [
-          "For novel or high-risk cell configurations",
-          "Only after an incident has already happened in the cell",
-          "Never, because this module covers everything a safety design needs"
+          "For novel or high-risk cell configurations, for formal risk assessment and performance level verification",
+          "Only when a customer or auditor asks for it",
+          "Only when the cell uses a safety PLC from another vendor"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. This module builds working literacy, but complex cases warrant specialist involvement."
+        "feedback": "Correct. This module builds working literacy, but novel or high-risk cell configurations warrant specialist involvement."
       }
     ]
   }

@@ -25,7 +25,7 @@
    "duration": "0:30",
    "src": "videos/V001.mp4",
    "poster": "videos/V001.jpg",
-   "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it always knows where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: working safely around MoRo. MoRo Academy, DiFacto Robotics & Automation.",
+   "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it can work out where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: what MoRo is in more detail. MoRo Academy, DiFacto Robotics & Automation.",
    "placeholder": true
   },
   {
@@ -149,7 +149,7 @@
    "duration": "0:30",
    "src": "videos/V018.mp4",
    "poster": "videos/V018.jpg",
-   "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at its edge can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
+   "transcript": "Working alongside MoRo, in 30 seconds. Give MoRo room to finish its path. Do not assume its route stays the same each day. Move with clear, steady intent. Hesitating at the edge of its path can make it slow or pause. Do not squeeze past it, or rest items on it. Treat it like any moving industrial equipment.",
    "placeholder": true,
    "card": {
     "title": "Working alongside MoRo card",
@@ -167,7 +167,7 @@
    "duration": "0:30",
    "src": "videos/V007.mp4",
    "poster": "videos/V007.jpg",
-   "transcript": "A mission, in 30 seconds. A mission is one defined task. It has an origin, a destination and a finish condition. Before assigning, check MoRo is ready. And that the path is clear. Then supervise: steady and on time is normal. A stall or pause is your signal. Run any new mission once, under supervision. If it fails: note, assess, escalate if unclear.",
+   "transcript": "A mission, in 30 seconds. A mission is one defined task. It has a clear origin, destination and completion condition. Before assigning, check MoRo is ready. And that the path is clear. Then supervise: steady and on time is normal. An unexpected pause is your signal. Run any new or modified mission once, under supervision. If it fails: note, assess, escalate if unclear.",
    "placeholder": true
   },
   {
@@ -181,7 +181,7 @@
    "duration": "0:30",
    "src": "videos/V008.mp4",
    "poster": "videos/V008.jpg",
-   "transcript": "Five ways MoRo carries, in 30 seconds. MoRo supports five payload configurations. Conveyor, cobot interface and towing. Lifting, and lift-and-rotate. Each suits a different material handling need. The configuration changes what you check. Before a transfer, confirm the attachment is secure.",
+   "transcript": "Five ways MoRo carries, in 30 seconds. MoRo supports five payload configurations. Conveyor, cobot interface and towing. Lifting, and lift-and-rotate. Each suits a different material handling need. The configuration changes what you check. Before a transfer: secure and correctly configured.",
    "placeholder": true
   },
   {
@@ -213,7 +213,7 @@
    "duration": "0:30",
    "src": "videos/V002.mp4",
    "poster": "videos/V002.jpg",
-   "transcript": "Power and charging, in 30 seconds. All MoRo models use LFP batteries. LFP is stable, long-lasting and fine with partial charges. MoRo is rated for 8 hours of runtime. The same on all three models. It charges wirelessly in under 1 hour. The charging dock must be placed and aligned correctly. On screen at the end: Next: placing and aligning the charging dock. MoRo Academy, DiFacto Robotics & Automation.",
+   "transcript": "Power and charging, in 30 seconds. All MoRo models use LFP batteries. LFP is stable, long-lasting and fine with partial charges. MoRo is rated for 8 hours of runtime. The same on all three models. It charges wirelessly in under 1 hour. Charging needs MoRo to align correctly with the dock. On screen at the end: Next: charging dock alignment. MoRo Academy, DiFacto Robotics & Automation.",
    "placeholder": true
   },
   {
@@ -227,7 +227,7 @@
    "duration": "0:30",
    "src": "videos/V009.mp4",
    "poster": "videos/V009.jpg",
-   "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. Units see each other and avoid collisions automatically. Zones: shared paths and reserved routes. A deadlock is two units waiting on each other. The fleet system detects it and reroutes one unit.",
+   "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. The fleet system coordinates units to avoid collisions. Zones: shared paths and reserved routes. A deadlock is two or more units waiting on each other. Designed to resolve it, typically by rerouting one unit.",
    "placeholder": true
   },
   {
@@ -241,7 +241,7 @@
    "duration": "0:30",
    "src": "videos/V010.mp4",
    "poster": "videos/V010.jpg",
-   "transcript": "When something goes wrong, in 30 seconds. At L2 you recognize, categorize and escalate. You do not attempt the fix. Ask: what was MoRo doing just before? What does its status show now? Has anything changed around it? Share those details when you escalate.",
+   "transcript": "When something goes wrong, in 30 seconds. At L2 you recognize, categorize and know when to escalate. You do not attempt the fix. Ask: what was MoRo doing just before? What does its status show now? Has anything changed around it? Share those details when you escalate.",
    "placeholder": true
   },
   {
@@ -269,7 +269,35 @@
    "duration": "0:30",
    "src": "videos/V020.mp4",
    "poster": "videos/V020.jpg",
-   "transcript": "Three kinds of maintenance, in 30 seconds. Preventive: scheduled work, whatever the condition. Predictive: triggered by signs of degradation. Corrective: fixing something after it has failed. A mature program relies on preventive and predictive. Corrective is the exception.",
+   "transcript": "Three kinds of maintenance, in 30 seconds. Preventive: scheduled work, whatever the condition. Predictive: triggered by signs of degradation. Corrective: fixing something after it has failed. A mature program relies primarily on preventive and predictive. Corrective is the exception.",
+   "placeholder": true
+  },
+  {
+   "id": "V029",
+   "title": "Time and usage in 30 seconds",
+   "level": "L3A",
+   "module": "L3A-M2",
+   "moduleTitle": "Preventive Maintenance Procedures",
+   "section": 1,
+   "sectionTitle": "Building a Maintenance Schedule",
+   "duration": "0:30",
+   "src": "videos/V029.mp4",
+   "poster": "videos/V029.jpg",
+   "transcript": "Setting maintenance intervals, in 30 seconds. Intervals are set from time elapsed and actual usage. Usage means operating hours and cycles completed. A heavily used unit may need attention sooner. Both count together, not either one alone. Specific intervals: to be confirmed against DiFacto documentation.",
+   "placeholder": true
+  },
+  {
+   "id": "V030",
+   "title": "Predictive or preventive in 30 seconds",
+   "level": "L3A",
+   "module": "L3A-M3",
+   "moduleTitle": "Predictive Maintenance & Inspection Checklists",
+   "section": 0,
+   "sectionTitle": "Predictive Versus Preventive",
+   "duration": "0:30",
+   "src": "videos/V030.mp4",
+   "poster": "videos/V030.jpg",
+   "transcript": "Predictive or preventive? Preventive maintenance follows a set schedule. It runs regardless of condition. Predictive acts on actual signs of degradation. A component wearing faster than typical. A metric drifting from its normal range. That takes closer, ongoing observation.",
    "placeholder": true
   },
   {
@@ -297,7 +325,49 @@
    "duration": "0:30",
    "src": "videos/V022.mp4",
    "poster": "videos/V022.jpg",
-   "transcript": "Symptom or root cause? A symptom: MoRo stops repeatedly in one area. A root cause: a sensor, a map or a mechanical issue. Treat only the symptom, and it comes back. First, confirm the symptom is reproducible. Then isolate which subsystem is implicated. Narrow it down with the fault tree and the interface.",
+   "transcript": "Symptom or root cause? A symptom: MoRo stops repeatedly in one area. A root cause: a specific sensor, map or mechanical issue. Treat only the symptom, and it comes back. First, confirm the symptom is reproducible. Then isolate which subsystem is implicated. Narrow it down with the fault code tree and the interface.",
+   "placeholder": true
+  },
+  {
+   "id": "V031",
+   "title": "How a decision tree works in 30 seconds",
+   "level": "L3A",
+   "module": "L3A-M6",
+   "moduleTitle": "Troubleshooting Decision Trees",
+   "section": 1,
+   "sectionTitle": "How a Decision Tree Is Structured",
+   "duration": "0:30",
+   "src": "videos/V031.mp4",
+   "poster": "videos/V031.jpg",
+   "transcript": "A decision tree, in 30 seconds. It starts with a broad symptom category. Each question branches the path. Each answer narrows toward a likely cause. Answer each branch honestly, from what you observe. Do not skip ahead to a cause that seems likely.",
+   "placeholder": true
+  },
+  {
+   "id": "V032",
+   "title": "Safety under pressure in 30 seconds",
+   "level": "L3A",
+   "module": "L3A-M7",
+   "moduleTitle": "Maintenance Simulation & Field Drill",
+   "section": 4,
+   "sectionTitle": "Safety Under Pressure",
+   "duration": "0:30",
+   "src": "videos/V032.mp4",
+   "poster": "videos/V032.jpg",
+   "transcript": "Safety under pressure. Time pressure never justifies skipping safety. Lockout and tagout before physical maintenance work. Proper E-stop use during testing. Careful handling around powered systems. A correct fix that bypasses safety does not pass.",
+   "placeholder": true
+  },
+  {
+   "id": "V033",
+   "title": "A programmed mission in 30 seconds",
+   "level": "L3B",
+   "module": "L3B-M1",
+   "moduleTitle": "Mission Programming Fundamentals",
+   "section": 1,
+   "sectionTitle": "Mission Programming Concepts",
+   "duration": "0:30",
+   "src": "videos/V033.mp4",
+   "poster": "videos/V033.jpg",
+   "transcript": "A programmed mission, in 30 seconds. It is built from waypoints on the map. Waypoints are specific locations. Connected by a defined sequence. Conditional logic adds more complex behavior. You define the structure yourself, explicitly.",
    "placeholder": true
   },
   {
@@ -325,7 +395,7 @@
    "duration": "0:30",
    "src": "videos/V024.mp4",
    "poster": "videos/V024.jpg",
-   "transcript": "Do you need a zone? In 30 seconds. Start with the facility’s real traffic patterns. Where is fleet density high? Where are passages too narrow for two units? Which routes are time-sensitive and need priority? Not every facility needs extensive zoning. Light traffic may need only minimal zones.",
+   "transcript": "Do you need a zone? In 30 seconds. Start with the facility’s real traffic patterns. Where is fleet density high? Where would several units in a narrow passage be a problem? Which routes are time-sensitive and need priority? Not every facility needs extensive zoning. Light traffic may need only minimal zones.",
    "placeholder": true
   },
   {
@@ -339,7 +409,21 @@
    "duration": "0:30",
    "src": "videos/V028.mp4",
    "poster": "videos/V028.jpg",
-   "transcript": "Testing a handshake, in 30 seconds. Signals must reach the right I/O points. A signal on the wrong point breaks the handshake. Even when both systems work fine. Test through many complete cycles, not just one. An intermittent failure points to timing or setup. One good test would have missed it.",
+   "transcript": "Testing a handshake, in 30 seconds. Signals must reach the right I/O points. A wrong I/O point can make it unreliable or fail. Even when both systems work fine. Test through many complete cycles, not just one. An intermittent failure points to timing or setup. One good test would have missed it.",
+   "placeholder": true
+  },
+  {
+   "id": "V034",
+   "title": "Read and control: the MoRo API in 30 seconds",
+   "level": "L3B",
+   "module": "L3B-M5",
+   "moduleTitle": "API & Custom Integration",
+   "section": 1,
+   "sectionTitle": "What the API Exposes",
+   "duration": "0:30",
+   "src": "videos/V034.mp4",
+   "poster": "videos/V034.jpg",
+   "transcript": "The MoRo API, in 30 seconds. Read access pulls data out. Fleet status, mission history, unit health. Control access pushes commands in. It can assign missions and trigger actions. A request can move physical equipment. So only authorized systems should have control access.",
    "placeholder": true
   },
   {
@@ -353,7 +437,7 @@
    "duration": "0:30",
    "src": "videos/V011.mp4",
    "poster": "videos/V011.jpg",
-   "transcript": "Commissioning a new site, in 30 seconds. First, assess the site: layout, clearances, network. Then build the map, ideally in a quiet period. Program the core missions first, and keep them narrow. Validate each machine integration, again and again. Go-live is not the end: hand over to the operators. Document the map version, missions and integrations.",
+   "transcript": "Commissioning a new site, in 30 seconds. First, assess the site: layout, clearances, network, safety. Then build the map, ideally in a quiet period. Program the core missions first, starting narrow. Validate each integration, repeatedly and under realistic variation. Go-live is not the end: hand over to the operators. Document the map version, missions and integrations.",
    "placeholder": true
   },
   {
@@ -367,7 +451,7 @@
    "duration": "0:30",
    "src": "videos/V012.mp4",
    "poster": "videos/V012.jpg",
-   "transcript": "Where MoRo plugs into the factory. FANUC I/O: a request, ready, complete handshake. OPC-UA: data out to SCADA. MES and WMS APIs: orders in, reports out. A custom REST API: fleet control and third-party apps. Example: the MES sends a production order. MoRo does the move; status goes to SCADA.",
+   "transcript": "Where MoRo plugs into the factory. Fixed machines: a request, ready, complete handshake. OPC-UA: data out to SCADA. MES and WMS APIs: orders in, reports out. A custom REST API: bespoke, application-specific needs. Example: the MES sends a production order. MoRo does the move; status goes to SCADA.",
    "placeholder": true
   },
   {
@@ -381,7 +465,35 @@
    "duration": "0:30",
    "src": "videos/V026.mp4",
    "poster": "videos/V026.jpg",
-   "transcript": "From production event to mission. The MES records a production run as complete. That event can trigger a MoRo mission automatically. Or the WMS records a new order to fulfil. That can start a pick operation. No operator has to assign each mission by hand.",
+   "transcript": "From production event to mission. The MES records a production run as complete. That event can trigger a MoRo mission automatically. Or the WMS records a new order to fulfill. That can start a pick operation. No operator has to assign each mission by hand.",
+   "placeholder": true
+  },
+  {
+   "id": "V035",
+   "title": "OPC-UA or a custom API in 30 seconds",
+   "level": "L4A",
+   "module": "L4A-M3",
+   "moduleTitle": "OPC-UA & SCADA Connectivity",
+   "section": 5,
+   "sectionTitle": "When OPC-UA Versus Custom API Makes Sense",
+   "duration": "0:30",
+   "src": "videos/V035.mp4",
+   "poster": "videos/V035.jpg",
+   "transcript": "OPC-UA or a custom API? OPC-UA suits established industrial systems. Such as SCADA and many PLC platforms. They natively expect it. A custom REST API suits bespoke needs. A custom dashboard, an unusual report. Choose by what the receiving system expects.",
+   "placeholder": true
+  },
+  {
+   "id": "V036",
+   "title": "Performance levels in 30 seconds",
+   "level": "L4A",
+   "module": "L4A-M4",
+   "moduleTitle": "Safety PLC Design (EN ISO 13849)",
+   "section": 2,
+   "sectionTitle": "Performance Levels and Risk Assessment",
+   "duration": "0:30",
+   "src": "videos/V036.mp4",
+   "poster": "videos/V036.jpg",
+   "transcript": "Performance levels, in 30 seconds. EN ISO 13849 defines performance levels. They set how reliably a safety function must perform. The level comes from a risk assessment of the hazard. Higher risk needs a higher performance level. That means more robust, often redundant, design. MoRo cell levels: to be confirmed with DiFacto.",
    "placeholder": true
   },
   {
@@ -399,6 +511,20 @@
    "placeholder": true
   },
   {
+   "id": "V037",
+   "title": "Standardize or customize in 30 seconds",
+   "level": "L4A",
+   "module": "L4A-M6",
+   "moduleTitle": "System Architecture & Scalability",
+   "section": 3,
+   "sectionTitle": "Standardization Versus Customization",
+   "duration": "0:30",
+   "src": "videos/V037.mp4",
+   "poster": "videos/V037.jpg",
+   "transcript": "Standardize or customize? In 30 seconds. Fully standardized: identical everywhere. Easier to maintain and train for. But it may not fit every site. Full customization fits each site better. But sites diverge: a long-term maintenance burden. Standardize where it serves; adapt where it is worth it.",
+   "placeholder": true
+  },
+  {
    "id": "V021",
    "title": "The machine tending cycle in 30 seconds",
    "level": "L4B",
@@ -409,7 +535,147 @@
    "duration": "0:30",
    "src": "videos/V021.mp4",
    "poster": "videos/V021.jpg",
-   "transcript": "The machine tending cycle, in 30 seconds. MoRo delivers raw material to the CNC machine. A handshake confirms the machine is ready. The CNC completes its machining operation. MoRo retrieves the finished part. Then it delivers the next raw material. The cycle repeats, so every handshake matters.",
+   "transcript": "The machine tending cycle, in 30 seconds. MoRo delivers raw material to the CNC machine. A handshake confirms the machine is ready. The CNC completes its machining operation. MoRo retrieves the finished part. Then it delivers the next raw material. The cycle repeats, so handshake reliability matters.",
+   "placeholder": true
+  },
+  {
+   "id": "V038",
+   "title": "Complex workflows in 30 seconds",
+   "level": "L4B",
+   "module": "L4B-M2",
+   "moduleTitle": "PLC Integration for Advanced Workflows",
+   "section": 2,
+   "sectionTitle": "Complex Workflow Patterns",
+   "duration": "0:30",
+   "src": "videos/V038.mp4",
+   "poster": "videos/V038.jpg",
+   "transcript": "Complex workflows, in 30 seconds. Simple handoffs suffice for straightforward cases. Complex ones coordinate multiple machines. Through shared PLC logic. Or route by part type or production schedule. That means working inside the PLC logic itself.",
+   "placeholder": true
+  },
+  {
+   "id": "V039",
+   "title": "Lift and rotate in 30 seconds",
+   "level": "L4B",
+   "module": "L4B-M3",
+   "moduleTitle": "Lift & Rotate Complex Configurations",
+   "section": 1,
+   "sectionTitle": "Mechanics of Combined Lift and Rotation",
+   "duration": "0:30",
+   "src": "videos/V039.mp4",
+   "poster": "videos/V039.jpg",
+   "transcript": "Lift and rotate, in 30 seconds. The load has two degrees of freedom. Vertical position: how high it is lifted. Rotational orientation: how far it turns. Stability depends on both together. It changes continuously as height and angle shift. This adds to the center-of-gravity considerations.",
+   "placeholder": true
+  },
+  {
+   "id": "V040",
+   "title": "Measuring the impact in 30 seconds",
+   "level": "L4B",
+   "module": "L4B-M4",
+   "moduleTitle": "Advanced Fleet Optimization",
+   "section": 4,
+   "sectionTitle": "Measuring Optimization Impact",
+   "duration": "0:30",
+   "src": "videos/V040.mp4",
+   "poster": "videos/V040.jpg",
+   "transcript": "Measuring optimization impact. Measure against the same metrics you started with. Throughput or cycle time, before and after. Use consistent data for both. Do not assume it improved because it seemed logical. Real comparison beats well-intentioned guessing.",
+   "placeholder": true
+  },
+  {
+   "id": "V041",
+   "title": "The capstone project in 30 seconds",
+   "level": "L4B",
+   "module": "L4B-M5",
+   "moduleTitle": "Capstone Project (Peer Reviewed)",
+   "section": 0,
+   "sectionTitle": "The Capstone Model",
+   "duration": "0:30",
+   "src": "videos/V041.mp4",
+   "poster": "videos/V041.jpg",
+   "transcript": "The capstone project, in 30 seconds. A real, substantial project, not a quiz. It brings together the whole L4B track. Skills shown through actual work. Reviewed by peers against a structured rubric. Design, build, testing and documentation. Working but poorly documented does not meet the bar.",
+   "placeholder": true
+  },
+  {
+   "id": "V042",
+   "title": "How adults learn in 30 seconds",
+   "level": "L5",
+   "module": "L5-M1",
+   "moduleTitle": "Instructor Pedagogy Fundamentals",
+   "section": 1,
+   "sectionTitle": "How Adults Learn Technical Skills",
+   "duration": "0:30",
+   "src": "videos/V042.mp4",
+   "poster": "videos/V042.jpg",
+   "transcript": "How adults learn technical skills. Adults engage best with practical relevance. Why does this matter for my actual job? That question beats abstract theory for its own sake. This curriculum uses real-world, role-specific content. Know why the approach works, not just the pattern. Then you can teach it well.",
+   "placeholder": true
+  },
+  {
+   "id": "V043",
+   "title": "A valid assessment in 30 seconds",
+   "level": "L5",
+   "module": "L5-M2",
+   "moduleTitle": "Assessment & Evaluation Design",
+   "section": 1,
+   "sectionTitle": "What Makes an Assessment Valid",
+   "duration": "0:30",
+   "src": "videos/V043.mp4",
+   "poster": "videos/V043.jpg",
+   "transcript": "What makes an assessment valid? It measures the competency it claims to measure. Failure mode: testing recall when you need skill. Or the reverse: testing skill when recall is the goal. Written alone cannot validate hands-on skill. Practical alone does not confirm understanding. So this curriculum pairs both, from L2 up.",
+   "placeholder": true
+  },
+  {
+   "id": "V044",
+   "title": "Handshake timing in 30 seconds",
+   "level": "L5",
+   "module": "L5-M3",
+   "moduleTitle": "FANUC Co-Training Module",
+   "section": 3,
+   "sectionTitle": "Common Points of Learner Confusion",
+   "duration": "0:30",
+   "src": "videos/V044.mp4",
+   "poster": "videos/V044.jpg",
+   "transcript": "Teaching an integrated system. Learners often struggle most with handshake timing. MoRo and FANUC each wait for the other’s signal. They do not act independently. Address the confusion early. Build on the handshake from L3B-M4.",
+   "placeholder": true
+  },
+  {
+   "id": "V045",
+   "title": "Minimum lab requirements in 30 seconds",
+   "level": "L5",
+   "module": "L5-M4",
+   "moduleTitle": "Lab Infrastructure & Setup",
+   "section": 1,
+   "sectionTitle": "Minimum Lab Requirements by Level",
+   "duration": "0:30",
+   "src": "videos/V045.mp4",
+   "poster": "videos/V045.jpg",
+   "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: a MoRo unit. The A-500 is proposed as the primary training unit, to be confirmed. ANT Server and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
+   "placeholder": true
+  },
+  {
+   "id": "V046",
+   "title": "Debriefing after a session in 30 seconds",
+   "level": "L5",
+   "module": "L5-M5",
+   "moduleTitle": "Mentorship & Coaching for New Instructors",
+   "section": 4,
+   "sectionTitle": "Debriefing After a Session",
+   "duration": "0:30",
+   "src": "videos/V046.mp4",
+   "poster": "videos/V046.jpg",
+   "transcript": "Debriefing after a session. Start with the new instructor’s own view. What went well? What would they adjust? Mentor feedback comes second. It fills gaps or confirms what they noticed. This builds their own evaluative judgment. Not dependence on feedback for every session.",
+   "placeholder": true
+  },
+  {
+   "id": "V047",
+   "title": "Observed delivery in 30 seconds",
+   "level": "L5",
+   "module": "L5-M6",
+   "moduleTitle": "Observed Delivery & Certification",
+   "section": 1,
+   "sectionTitle": "What Observed Delivery Involves",
+   "duration": "0:30",
+   "src": "videos/V047.mp4",
+   "poster": "videos/V047.jpg",
+   "transcript": "Observed delivery, in 30 seconds. An experienced evaluator watches you teach. Senior faculty, working alongside DiFacto. A real or representative session. Not just technical accuracy: teaching skills. Structure, checking understanding, feedback, environment. An unsuccessful attempt is feedback, not final.",
    "placeholder": true
   }
  ]

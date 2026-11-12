@@ -43,7 +43,16 @@
           "term": "Symptom",
           "note": "What you can observe going wrong, as opposed to its underlying cause."
         }
-      ]
+      ],
+      "video": {
+        "id": "V031",
+        "src": "videos/V031.mp4",
+        "poster": "videos/V031.jpg",
+        "title": "How a decision tree works in 30 seconds",
+        "duration": "0:30",
+        "transcript": "A decision tree, in 30 seconds. It starts with a broad symptom category. Each question branches the path. Each answer narrows toward a likely cause. Answer each branch honestly, from what you observe. Do not skip ahead to a cause that seems likely.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -114,36 +123,36 @@
       },
       {
         "id": 2,
-        "question": "What's the key discipline when working through a decision tree?",
+        "question": "Midway through a tree you strongly suspect the cause, but the next branch asks about a condition you haven't checked. What do you do?",
         "options": [
-          "Always start from the most complex branch, then work back to the simple ones",
-          "Skip ahead to the most likely cause immediately to save time on the fault",
-          "Answer each branch honestly from what you actually observe"
+          "Go straight to the suspected cause",
+          "Restart from the top of a different tree",
+          "Check the condition and answer from what you observe"
         ],
         "correctAnswer": 2,
         "feedback": "Correct. Honest, observed answers at each branch point are what make the tree reliable."
       },
       {
         "id": 3,
-        "question": "What kind of question typically starts a navigation-related decision tree branch?",
+        "question": "Which branch question does the lesson give for navigation troubleshooting?",
         "options": [
-          "Battery charge percentage only",
-          "The date the unit was originally purchased and who delivered it to the site",
-          "Whether the issue is isolated to one map area or occurs everywhere"
+          "Does it correlate with battery charge level?",
+          "Is the symptom constant or intermittent?",
+          "Is the issue isolated to one map area or everywhere?"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Isolating whether an issue is localized or widespread is a typical early branch point."
+        "feedback": "Correct. Isolating whether an issue is localized or widespread is one of the branch questions for navigation troubleshooting."
       },
       {
         "id": 4,
-        "question": "What should happen if following a decision tree doesn't produce a confident root cause?",
+        "question": "You reach the end of a tree without a confident root cause. What next?",
         "options": [
-          "Ignore the issue, since the tree didn't resolve it in the first pass",
-          "Escalate, per the criteria covered in root cause methodology",
-          "Keep guessing randomly until something works"
+          "Apply the most likely fix and observe",
+          "Escalate, per the escalation criteria in L3A-M5",
+          "Work the tree again until an answer changes"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. An inconclusive decision tree result is a signal to escalate, not a technician failure."
+        "feedback": "Correct. An inconclusive tree result is a signal to escalate, not a technician failure."
       },
       {
         "id": 5,

@@ -31,7 +31,7 @@
       "title": "Complex Mission Patterns",
       "learningObjectives": [
         "Understand the concept of missions with conditional logic",
-        "Recognize how loops and branches differ from simple linear missions"
+        "Understand how conditional logic and repeating patterns differ from simple point-to-point missions"
       ],
       "content": "Beyond simple point-to-point tasks, missions can include conditional logic (if a condition is met, take one path; otherwise, another) and repeating patterns (a loop that continues until a defined end state). These patterns let a single mission definition handle situations that would otherwise require many separate simple missions. Exact configuration of conditional logic within ANT will be confirmed against the live system.",
       "keyTerms": [
@@ -106,14 +106,14 @@
     "questions": [
       {
         "id": 1,
-        "question": "What does conditional logic in a mission allow for?",
+        "question": "Which mission uses a loop?",
         "options": [
-          "Nothing - missions are always linear and cannot branch into other steps",
-          "Different actions depending on whether a specified condition is met",
-          "Only faster movement speed"
+          "One that takes one path if a condition is met and otherwise another",
+          "One that repeats a pattern until a defined end state",
+          "One simple point-to-point task"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Conditional logic lets a mission branch based on conditions, rather than following one fixed path."
+        "feedback": "Correct. A loop repeats a pattern until a defined end state."
       },
       {
         "id": 2,
@@ -128,36 +128,36 @@
       },
       {
         "id": 3,
-        "question": "At L2, are you expected to actively optimize routes and speeds yourself?",
+        "question": "Where does detailed route and speed optimization belong?",
         "options": [
-          "No - that level of optimization belongs to L3B; L2 requires awareness only",
-          "Only on weekends",
-          "Yes, this is a core L2 responsibility that all operators are formally assessed on"
+          "L2 operators, during the shift",
+          "L3B (Programmer)",
+          "L3A (Technician)"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. Detailed route and speed optimization is L3B (Programmer) territory."
       },
       {
         "id": 4,
-        "question": "Does MoRo require operator action to log operational data?",
+        "question": "At L2, what do you need to do with MoRo's operational data?",
         "options": [
-          "Data logging doesn't exist",
-          "Yes, data must be manually recorded by the operator after each mission",
-          "No - it logs data automatically during operation"
+          "Record mission timing by hand after each mission",
+          "Nothing directly; be aware it is logged automatically",
+          "Access and interpret it each shift"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "feedback": "Correct. MoRo logs mission timing and status automatically, without operator input."
       },
       {
         "id": 5,
-        "question": "What comes after completing L1-L2 in the curriculum?",
+        "question": "Which of these is a change in cycle time?",
         "options": [
-          "The curriculum ends here",
-          "Automatic certification with no further levels",
-          "It branches into specialist tracks: L3A for technicians, L3B for programmers"
+          "Less material is moved over the shift",
+          "A unit takes longer than usual to charge",
+          "The same mission now takes noticeably longer from start to finish"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. L1-L2 is the operational foundation before branching into role-specific specialist tracks."
+        "feedback": "Correct. Cycle time is how long a mission takes from start to finish."
       }
     ]
   }

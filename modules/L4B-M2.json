@@ -14,7 +14,7 @@
       "eyebrow": "Level 4B · Module 2 · Section 01",
       "title": "Beyond Basic PLC Awareness",
       "learningObjectives": [
-        "Recall what a PLC is and how a handshake lets MoRo exchange signals with one",
+        "Recall what a PLC is",
         "Understand the deeper integration competency this module builds"
       ],
       "content": "Earlier integration work, such as the handshake in L3B-M4, treats the PLC as a partner you exchange signals with. This module goes further: actually programming and configuring deeper PLC integration for workflows beyond the simpler handshake pattern and the CNC tending cycle in L4B-M1. Most factory floors DiFacto works in are fundamentally PLC-controlled environments, which is why this depth matters.",
@@ -31,7 +31,7 @@
       "title": "PLC Programming Concepts Relevant to MoRo Integration",
       "learningObjectives": [
         "Understand general PLC programming concepts relevant to this integration work",
-        "Recognize the distinction between reading PLC logic and writing it"
+        "Recognize the distinction between reading PLC status and understanding or writing PLC-side logic"
       ],
       "content": "Advanced PLC integration often requires more than just reading PLC status, which earlier integration modules covered. It means understanding or writing PLC-side logic that specifically accommodates MoRo's behavior - conditional logic blocks, timers, and state machines on the PLC side that coordinate with MoRo's own mission logic.",
       "keyTerms": [
@@ -54,7 +54,16 @@
         "Recognize when advanced PLC integration becomes necessary"
       ],
       "content": "Simple handoffs, covered in earlier integration modules, suffice for straightforward cases. More complex workflows don't - think multiple machines coordinated through shared PLC logic, or conditional routing based on part type or production schedule. These require Advanced Programmers to work directly within the PLC's own logic, not just at the interface boundary.",
-      "keyTerms": []
+      "keyTerms": [],
+      "video": {
+        "id": "V038",
+        "src": "videos/V038.mp4",
+        "poster": "videos/V038.jpg",
+        "title": "Complex workflows in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Complex workflows, in 30 seconds. Simple handoffs suffice for straightforward cases. Complex ones coordinate multiple machines. Through shared PLC logic. Or route by part type or production schedule. That means working inside the PLC logic itself.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 4,
@@ -62,7 +71,7 @@
       "title": "Debugging Combined MoRo-PLC Logic",
       "learningObjectives": [
         "Understand the added complexity of debugging across two systems with independent logic",
-        "Apply structured diagnostic approach to this specific context"
+        "Know the first step when debugging an issue that spans MoRo and PLC logic"
       ],
       "content": "When an issue spans both MoRo's mission logic and PLC-side logic, debugging gets harder. The first step is determining which system's logic is actually responsible for the unexpected behavior. Is MoRo behaving as programmed but the PLC's response is unexpected? Or is it the other way around? Isolate that before attempting a fix in either system.",
       "keyTerms": []
@@ -79,7 +88,7 @@
       "keyTerms": [
         {
           "term": "version control",
-          "note": "Keeping a record of every change to logic, with who changed it and why, so earlier versions can be recovered."
+          "note": "Keeping clear records of what changed, when, and why, on both the PLC side and the MoRo side."
         }
       ]
     },
@@ -100,22 +109,22 @@
     "questions": [
       {
         "id": 1,
-        "question": "How does this module go beyond the basic handshake with a PLC?",
+        "question": "Which workflow needs advanced PLC integration rather than a simple handoff?",
         "options": [
-          "It repeats the handshake lesson, using a different example machine and a longer worked example",
-          "It hands the PLC work to the facility team so MoRo staff never touch it",
-          "It covers programming and configuring deeper PLC integration for advanced workflows"
+          "Several machines coordinated through shared PLC logic",
+          "One straightforward point-to-point handoff",
+          "Any workflow where the PLC is from a different vendor"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. This module covers actually programming and configuring deeper PLC integration for advanced workflows."
+        "correctAnswer": 0,
+        "feedback": "Correct. Simple handoffs suffice for straightforward cases. Complex workflows, such as several machines coordinated through shared PLC logic, need work inside the PLC's own logic."
       },
       {
         "id": 2,
-        "question": "What might advanced PLC integration require beyond reading PLC status?",
+        "question": "Which is an example of PLC-side logic written to accommodate MoRo?",
         "options": [
-          "Understanding or writing PLC-side logic for MoRo",
-          "Replacing the facility's PLC with a controller supplied with MoRo",
-          "Fitting a second PLC beside each MoRo unit to read its status"
+          "Conditional blocks, timers, and state machines that coordinate with MoRo's mission logic",
+          "MoRo's own mission steps and conditions",
+          "A record of what changed, when, and why"
         ],
         "correctAnswer": 0,
         "feedback": "Correct. Advanced integration often requires engaging with PLC-side logic directly."

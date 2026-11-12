@@ -78,7 +78,7 @@
         "poster": "videos/V022.jpg",
         "title": "Symptom or root cause in 30 seconds",
         "duration": "0:30",
-        "transcript": "Symptom or root cause? A symptom: MoRo stops repeatedly in one area. A root cause: a sensor, a map or a mechanical issue. Treat only the symptom, and it comes back. First, confirm the symptom is reproducible. Then isolate which subsystem is implicated. Narrow it down with the fault tree and the interface.",
+        "transcript": "Symptom or root cause? A symptom: MoRo stops repeatedly in one area. A root cause: a specific sensor, map or mechanical issue. Treat only the symptom, and it comes back. First, confirm the symptom is reproducible. Then isolate which subsystem is implicated. Narrow it down with the fault code tree and the interface.",
         "placeholder": true
       }
     },
@@ -108,33 +108,33 @@
     "questions": [
       {
         "id": 1,
-        "question": "How does the diagnostic interface differ from the operator-level ANT dashboard?",
+        "question": "Which information would you expect in the diagnostic interface but not on the operator-level dashboard?",
         "options": [
-          "There is no difference, since both interfaces show the same data to every user who logs in",
-          "It exposes deeper state: sensor readings, subsystem health, fault history",
-          "It only shows the time and date, plus the unit's serial number"
+          "Mission information",
+          "Fault history and subsystem health",
+          "Unit status"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. The diagnostic interface is a technician-level view, distinct from the operator-level dashboard."
       },
       {
         "id": 2,
-        "question": "How should a fault code tree generally be navigated?",
+        "question": "You have a symptom and a suspected specific code. What do you do first?",
         "options": [
-          "Start broad by category, then narrow to the specific cause",
-          "Guess at a specific code first, then check which category it belongs to",
-          "Fault codes aren't organized hierarchically, so each must be checked alone"
+          "Act on the suspected code",
+          "Check every code in order",
+          "Confirm the general category, then narrow"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "feedback": "Correct. Fault code trees are navigated from broad category to specific cause, not the reverse."
       },
       {
         "id": 3,
-        "question": "What is the difference between a symptom and a root cause?",
+        "question": "MoRo stops repeatedly in one area. Each time, the technician gets it moving again and does nothing more. What has been treated?",
         "options": [
-          "They are the same thing",
-          "A symptom is the observed effect; a root cause is the underlying issue producing it",
-          "A root cause only applies to software issues, never to mechanical or electrical faults"
+          "The root cause",
+          "The symptom only, so the issue recurs",
+          "The subsystem"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Treating a symptom without finding the root cause means the issue tends to recur."
@@ -145,21 +145,21 @@
         "options": [
           "It's only required when a warranty claim has to be filed",
           "It doesn't matter once the issue has been fixed and the unit is running",
-          "It builds pattern history for future escalations"
+          "It builds a pattern history across units and makes escalation efficient"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Documentation supports pattern recognition across units and efficient escalation."
+        "feedback": "Correct. The record helps identify issues recurring across units, and lets engineering start from your record when you escalate."
       },
       {
         "id": 5,
-        "question": "Is escalating a diagnosis to DiFacto engineering a sign of inadequate technician skill?",
+        "question": "Which situation meets the lesson's escalation criteria?",
         "options": [
-          "No - appropriate escalation with complete documentation reflects good diagnostic judgment",
-          "Yes, a skilled technician should never need to escalate",
-          "Only if it happens more than once"
+          "The diagnosis is taking longer than expected",
+          "The root cause cannot be confidently isolated after structured diagnosis",
+          "The symptom was reported by an operator"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Escalation is a normal, appropriate part of the diagnostic process in the right circumstances."
+        "correctAnswer": 1,
+        "feedback": "Correct. If you cannot confidently isolate a root cause after structured diagnosis, escalate. Appropriate escalation reflects good diagnostic judgment."
       }
     ]
   }
