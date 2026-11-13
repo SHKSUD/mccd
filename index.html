@@ -640,24 +640,25 @@
         @media (max-width: 1099px) {
             .fb-fab {
                 position: fixed;
-                right: 16px;
-                bottom: 84px;
+                right: 14px;
+                top: calc(var(--header-h, 62px) + 10px);
                 z-index: 45;
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
-                padding: 9px 14px;
+                padding: 8px 13px;
                 font-family: inherit;
-                font-size: 12.5px;
+                font-size: 12px;
                 font-weight: 600;
                 color: #F5F7FF;
                 background: linear-gradient(90deg, #1E3A8A, #4F46E5);
                 border: 1px solid rgba(157, 188, 255, 0.35);
                 border-radius: 999px;
-                box-shadow: 0 6px 20px rgba(7, 15, 43, 0.32);
+                box-shadow: 0 6px 20px rgba(7, 15, 43, 0.28);
                 cursor: pointer;
-                transition: transform 0.15s ease, box-shadow 0.15s ease;
+                transition: top 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
             }
+            body.header-hidden .fb-fab { top: 14px; }
             .fb-fab:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(7, 15, 43, 0.42); }
             .fb-fab[hidden], body.home-mode .fb-fab, body.ob-mode .fb-fab, body:not(.inner-y) .fb-fab { display: none; }
         }
