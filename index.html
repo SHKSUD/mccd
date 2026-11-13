@@ -634,6 +634,32 @@
             outline: 2px solid var(--orange-ink);
             outline-offset: 2px;
         }
+        .fb-btn-send:disabled { opacity: 0.65; cursor: wait; transform: none; }
+        .fb-fab { display: none; }
+        @media (max-width: 1099px) {
+            .fb-fab {
+                position: fixed;
+                right: 16px;
+                bottom: 18px;
+                z-index: 45;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 9px 14px;
+                font-family: inherit;
+                font-size: 12.5px;
+                font-weight: 600;
+                color: #F5F7FF;
+                background: linear-gradient(90deg, #1E3A8A, #4F46E5);
+                border: 1px solid rgba(157, 188, 255, 0.35);
+                border-radius: 999px;
+                box-shadow: 0 6px 20px rgba(7, 15, 43, 0.32);
+                cursor: pointer;
+                transition: transform 0.15s ease, box-shadow 0.15s ease;
+            }
+            .fb-fab:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(7, 15, 43, 0.42); }
+            .fb-fab[hidden], body.home-mode .fb-fab, body.ob-mode .fb-fab, body:not(.inner-y) .fb-fab { display: none; }
+        }
 
         .btn:disabled { opacity: 0.4; cursor: not-allowed; }
         .btn:disabled:hover { transform: none; box-shadow: none; }
@@ -2618,15 +2644,15 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
             </div>
             <div class="fb-group">
                 <label for="fbNotes">What would you change, add, or clarify?</label>
-                <textarea id="fbNotes" class="fb-textarea" placeholder="e.g. Safety distance in Section 2 should mention 500mm clearance; or navigation button placement..."></textarea>
+                <textarea id="fbNotes" class="fb-textarea" oninput="saveFbDraft()" placeholder="e.g. Safety distance in Section 2 should mention 500mm clearance; or navigation button placement..."></textarea>
             </div>
             <div class="fb-group">
                 <label for="fbReviewerName">Your name or role (optional)</label>
-                <input type="text" id="fbReviewerName" class="fb-input" placeholder="e.g. John / Plant Safety Lead">
+                <input type="text" id="fbReviewerName" class="fb-input" oninput="saveFbDraft()" placeholder="e.g. John / Plant Safety Lead">
             </div>
             <div class="fb-foot-actions">
                 <button type="button" class="fb-btn-cancel" onclick="closeFeedbackModal()">Cancel</button>
-                <button type="button" class="fb-btn-send" onclick="submitInAppFeedback()">Send Feedback</button>
+                <button type="button" class="fb-btn-send" id="fbSendBtn" onclick="submitInAppFeedback()">Send Feedback</button>
             </div>
         </div>
         <div id="fbSuccessBody" class="fb-success-box" hidden>
@@ -2637,6 +2663,10 @@ body.inner-y:not(.home-mode):not(.ob-mode) .drawer-item.current { border-left-co
         </div>
     </div>
 </div>
+<button type="button" class="fb-fab" id="fbFab" onclick="openFeedbackModal()" aria-label="Give feedback on this section" hidden>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Feedback
+</button>
 <nav class="mod-edge" id="modEdge" aria-label="Other modules" hidden></nav>
 <nav class="sec-rail" id="secRail" aria-label="Sections in this lesson" hidden></nav>
 <div class="slide-hint" id="slideHint" aria-hidden="true"></div>
@@ -2869,6 +2899,8 @@ function updateModEdge() {
 }
 function updateRibbon() {
     updateRail(); updateModEdge();
+    const fab = document.getElementById('fbFab');
+    if (fab) fab.hidden = !(currentModule && inReading());
     const r = document.getElementById('slideRibbon'); if (!r) return;
     if (!currentModule) { r.hidden = true; r.innerHTML = ''; return; }
     const n = currentModule.sections.length, idx = currentSectionIndex === 'quiz' ? n : currentSectionIndex, visited = (getModuleProgress(currentModule.moduleId).visited || []);
@@ -3083,13 +3115,62 @@ function openFeedbackModal(secTitle) {
     const storedName = loadLearnerName();
     const nameIn = document.getElementById('fbReviewerName');
     if (nameIn) nameIn.value = storedName || '';
+    const sendBtn = document.getElementById('fbSendBtn');
+    if (sendBtn) { sendBtn.disabled = false; sendBtn.textContent = 'Send Feedback'; }
+    fbSubmitting = false;
+
+    // Restore any saved draft for this module + section
+    try {
+        const drafts = JSON.parse(localStorage.getItem('moroFbDrafts') || '{}');
+        const draft = drafts[fbDraftKey()];
+        if (draft) {
+            if (typeof draft.notes === 'string') document.getElementById('fbNotes').value = draft.notes;
+            if (nameIn && draft.reviewer) nameIn.value = draft.reviewer;
+            if (draft.rating) {
+                activeFbRating = draft.rating;
+                document.querySelectorAll('#fbRatingRow .fb-rating-btn').forEach(b => b.classList.toggle('selected', b.dataset.val === draft.rating));
+            }
+            if (Array.isArray(draft.ux)) {
+                document.querySelectorAll('#fbUxRow .fb-ux-chip').forEach(c => c.classList.toggle('selected', draft.ux.includes(c.dataset.val)));
+            }
+        }
+    } catch (e) {}
+
     document.getElementById('fbFormBody').hidden = false;
     document.getElementById('fbSuccessBody').hidden = true;
     const ov = document.getElementById('fbModalOverlay');
     if (ov) { ov.hidden = false; document.body.style.overflow = 'hidden'; }
     setTimeout(() => { const ta = document.getElementById('fbNotes'); if (ta) ta.focus(); }, 100);
 }
+let fbSubmitting = false;
+function fbDraftKey() {
+    return (currentModule ? currentModule.moduleId : 'global') + '::' + (activeFbSection || 'module');
+}
+function saveFbDraft() {
+    const form = document.getElementById('fbFormBody');
+    if (!currentModule || (form && form.hidden)) return;
+    try {
+        const notes = (document.getElementById('fbNotes').value || '');
+        const reviewer = (document.getElementById('fbReviewerName').value || '').trim();
+        const ux = Array.from(document.querySelectorAll('#fbUxRow .fb-ux-chip.selected')).map(c => c.dataset.val).filter(Boolean);
+        const drafts = JSON.parse(localStorage.getItem('moroFbDrafts') || '{}');
+        if (notes.trim() || ux.length || activeFbRating !== 'Clear & Accurate') {
+            drafts[fbDraftKey()] = { notes, reviewer, rating: activeFbRating, ux };
+        } else {
+            delete drafts[fbDraftKey()];
+        }
+        localStorage.setItem('moroFbDrafts', JSON.stringify(drafts));
+    } catch (e) {}
+}
+function clearFbDraft() {
+    try {
+        const drafts = JSON.parse(localStorage.getItem('moroFbDrafts') || '{}');
+        delete drafts[fbDraftKey()];
+        localStorage.setItem('moroFbDrafts', JSON.stringify(drafts));
+    } catch (e) {}
+}
 function closeFeedbackModal() {
+    saveFbDraft();
     const ov = document.getElementById('fbModalOverlay');
     if (ov) { ov.hidden = true; document.body.style.overflow = ''; }
 }
@@ -3097,12 +3178,18 @@ function selectFbRating(btn) {
     document.querySelectorAll('#fbRatingRow .fb-rating-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     activeFbRating = btn.dataset.val || 'Clear & Accurate';
+    saveFbDraft();
 }
 function toggleFbUx(btn) {
     btn.classList.toggle('selected');
+    saveFbDraft();
 }
 function submitInAppFeedback() {
-    if (!currentModule) return;
+    if (!currentModule || fbSubmitting) return;
+    fbSubmitting = true;
+    const sendBtn = document.getElementById('fbSendBtn');
+    if (sendBtn) { sendBtn.disabled = true; sendBtn.textContent = 'Sending...'; }
+
     const m = currentModule;
     const notes = (document.getElementById('fbNotes').value || '').trim();
     const reviewer = (document.getElementById('fbReviewerName').value || '').trim();
@@ -3130,17 +3217,23 @@ function submitInAppFeedback() {
 
     // Post directly to Google Sheet Webhook (Silent, 100% free background sync)
     const webhookUrl = 'https://script.google.com/macros/s/AKfycbxma7HhQLvtRx1Md3WKArJi-XPHS-VkHqlo_1YaDbKNrWp4jAjTVBLRl3q3FTRBFHuC/exec';
+    const done = () => {
+        fbSubmitting = false;
+        if (sendBtn) { sendBtn.disabled = false; sendBtn.textContent = 'Send Feedback'; }
+        clearFbDraft();
+        document.getElementById('fbFormBody').hidden = true;
+        document.getElementById('fbSuccessBody').hidden = false;
+    };
     try {
         fetch(webhookUrl, {
             method: 'POST',
             mode: 'no-cors',
             headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify(entry)
-        }).catch(() => {});
-    } catch (e) {}
-
-    document.getElementById('fbFormBody').hidden = true;
-    document.getElementById('fbSuccessBody').hidden = false;
+        }).then(done, done);
+    } catch (e) {
+        done();
+    }
 }
 function moduleFeedbackBtn(secTitle) {
     const safeTitle = (secTitle || '').replace(/'/g, "\\'");
@@ -5200,6 +5293,8 @@ window.addEventListener('popstate', () => {
 // ═══════════════════════════════════════════════════
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
+        const fbOv = document.getElementById('fbModalOverlay');
+        if (fbOv && !fbOv.hidden) { closeFeedbackModal(); return; }
         if (closeReadPanel(true)) return;
         if (closeInstallPanel(true)) return;
         const busy = overlayOpen();
