@@ -117,7 +117,7 @@
         "Recognize that MoRo uses audible alarms to communicate specific states",
         "Understand that different alarm patterns carry different meanings"
       ],
-      "content": "In addition to visual status indicators (covered in Module 3), MoRo uses audible alarms for situations requiring faster attention than a screen check allows. Different patterns correspond to different states — routine notifications are distinguishable from urgent ones. The specific alarm-to-meaning reference will be added once confirmed against current MoRo hardware documentation.",
+      "content": "In addition to visual status indicators (covered in Module 3), MoRo uses audible alarms for situations requiring faster attention than a screen check allows. Different patterns correspond to different states — routine notifications are distinguishable from urgent ones. Refer to your site's MoRo hardware manual for the complete alarm-to-meaning reference table.",
       "keyTerms": [
         {
           "term": "audible alarm",
@@ -149,7 +149,7 @@
           "5 meters"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. This course currently uses 2 meters, per DiFacto guidance; the final figure will be confirmed."
+        "feedback": "Correct. This course uses 2 meters per DiFacto guidance; always verify your site's configured safety zones."
       },
       {
         "id": 3,

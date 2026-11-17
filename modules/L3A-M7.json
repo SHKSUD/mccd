@@ -81,9 +81,18 @@
         },
         {
           "term": "Lockout/tagout (LOTO)",
-          "note": "A safety procedure that locks and tags a power source so equipment cannot start while someone works on it."
+          "note": "A safety procedure confirming equipment is de-energized and physically secured before maintenance work begins."
         }
-      ]
+      ],
+      "video": {
+        "id": "V032",
+        "src": "videos/V032.mp4",
+        "poster": "videos/V032.jpg",
+        "title": "Safety under pressure in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Safety under pressure. Time pressure never justifies skipping safety. Lockout and tagout before physical maintenance work. Proper E-stop use during testing. Careful handling around powered systems. A correct fix that bypasses safety does not pass.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 6,
@@ -112,35 +121,35 @@
       },
       {
         "id": 2,
-        "question": "How does time pressure typically affect diagnostic work if not managed deliberately?",
+        "question": "Under the clock, a likely-looking cause comes to mind. What does the lesson say to do?",
         "options": [
-          "It always improves diagnostic accuracy by keeping the technician focused",
-          "It tends to push toward guessing rather than systematic diagnosis",
-          "It has no effect on diagnostic approach"
+          "Act on it, since speed is assessed",
+          "Confirm the category first, then narrow systematically",
+          "Escalate at once"
         ],
         "correctAnswer": 1,
         "feedback": "Correct. Time pressure can push toward shortcuts; maintaining structured methodology under pressure is the skill being tested."
       },
       {
         "id": 3,
-        "question": "Is this drill performed with step-by-step guidance?",
+        "question": "During the drill you conclude the fault is outside field-serviceable scope. What is the correct call?",
         "options": [
-          "Yes, step-by-step guidance is provided throughout the whole drill by an observer",
-          "Only the first attempt is unguided",
-          "No - it's performed independently, reflecting real field conditions"
+          "Keep attempting until time runs out",
+          "Escalate, per the L3A-M5 criteria",
+          "Ask for step-by-step guidance"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. Independent performance is central to what this module assesses."
+        "correctAnswer": 1,
+        "feedback": "Correct. Recognizing when an issue is outside field-serviceable scope, and escalating it, is part of what is assessed."
       },
       {
         "id": 4,
-        "question": "Does time pressure justify skipping safety procedures during the drill?",
+        "question": "A technician reaches a correct fix but skipped lockout/tagout before physical work. What is the result?",
         "options": [
-          "No - safety procedures are assessed, not relaxed under pressure",
-          "Only lockout/tagout can be skipped, and only for the shortest tasks",
-          "Yes, if skipping them saves a significant amount of time on the clock"
+          "Pass, since the fix is correct",
+          "Does not pass",
+          "Pass if finished within the time window"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. A technically correct fix that bypasses safety procedure does not pass."
       },
       {

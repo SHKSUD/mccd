@@ -7,7 +7,7 @@
   "nextModule": "L5-M5",
   "previousModule": "L5-M3",
   "prerequisite": "L5-M3 (60%)",
-  "contentStatus": "Draft for DiFacto review. Title and content to be confirmed.",
+  "contentStatus": "Draft for DiFacto review.",
   "sections": [
     {
       "sectionId": 1,
@@ -49,7 +49,7 @@
         "poster": "videos/V045.jpg",
         "title": "Minimum lab requirements in 30 seconds",
         "duration": "0:30",
-        "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: a MoRo unit. The A-500 is proposed as the primary training unit, to be confirmed. ANT Server and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
+        "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: a MoRo unit. Use the A-500 or your facility's designated DiFacto training unit. ANT Server and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
         "placeholder": true
       }
     },

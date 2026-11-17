@@ -15,7 +15,7 @@
       "title": "From Single Cell to Enterprise Scale",
       "learningObjectives": [
         "Understand the shift in thinking from single-cell to multi-plant deployment",
-        "Recognize why this module sits at the top of the Systems Engineer track"
+        "Know that this module covers the enterprise-scale thinking that completes the track"
       ],
       "content": "Earlier L4A modules addressed designing and integrating a MoRo cell within one facility. This module addresses what changes when that thinking scales to multiple plants, larger fleets, and enterprise-level infrastructure decisions - the kind of conversation a Systems Engineer has with leadership when a single successful deployment becomes a multi-site rollout.",
       "keyTerms": []
@@ -65,7 +65,16 @@
           "term": "standardization",
           "note": "Using the same configuration at every site so it is easier to maintain and train for."
         }
-      ]
+      ],
+      "video": {
+        "id": "V037",
+        "src": "videos/V037.mp4",
+        "poster": "videos/V037.jpg",
+        "title": "Standardize or customize in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Standardize or customize? In 30 seconds. Fully standardized: identical everywhere. Easier to maintain and train for. But it may not fit every site. Full customization fits each site better. But sites diverge: a long-term maintenance burden. Standardize where it serves; adapt where it is worth it.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 5,
@@ -79,7 +88,7 @@
       "keyTerms": [
         {
           "term": "ROI modeling",
-          "note": "Economic analysis of deployment cost against expected returns (throughput, labor reduction) to justify and validate a scaling decision."
+          "note": "Economic analysis of deployment cost against expected returns (throughput, reduced labor dependency) to justify and validate a scaling decision."
         },
         {
           "term": "payback timeline",
@@ -92,7 +101,7 @@
       "eyebrow": "Level 4A · Module 6 · Section 06",
       "title": "Completing the Systems Engineer Track",
       "learningObjectives": [
-        "Understand how this module completes L4A certification",
+        "Understand how this module completes the L4A curriculum",
         "Recognize the path forward into L4B or L5"
       ],
       "content": "This module completes the L4A Systems Engineer curriculum, building on cell-level design and integration (earlier modules) with the enterprise-scale thinking needed for larger rollouts. From here, certified Systems Engineers may progress toward L4B (Advanced Programming) for deeper technical implementation work, or toward L5 (Master Instructor) if their path moves toward training other MoRo users.",
@@ -104,36 +113,36 @@
     "questions": [
       {
         "id": 1,
-        "question": "What shift in thinking does this module address compared to earlier L4A modules?",
+        "question": "A rollout team proposes an identical configuration at every site. According to the lesson, what is the drawback?",
         "options": [
-          "Moving from integration work to purely operating units on the floor",
-          "Moving from enterprise systems back to single-unit programming",
-          "From one cell to multi-plant, enterprise-scale rollouts"
+          "It may not fit every site's specific layout or workflow",
+          "It is harder to maintain and train for",
+          "It makes sites diverge over time"
         ],
-        "correctAnswer": 2,
-        "feedback": "Correct. This module addresses what changes when deployment scales beyond a single facility."
+        "correctAnswer": 0,
+        "feedback": "Correct. Full standardization is easier to maintain and train for, but may not fit every site."
       },
       {
         "id": 2,
-        "question": "Does an architecture pattern that works for one cell automatically scale to ten plants?",
+        "question": "A network topology worked cleanly in one cell. Leadership wants it copied to ten plants. What does the lesson say a multi-site architecture must account for?",
         "options": [
-          "No, it must balance consistency with genuine site-specific differences",
-          "Yes, because a pattern that has worked once is effectively a standard for every other site",
-          "Yes, as long as the same MoRo model is used at every plant"
+          "An identical configuration everywhere, with no exceptions",
+          "Consistency across sites, while still allowing site-specific variation where it is actually necessary",
+          "A separate bespoke design for each site"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "feedback": "Correct. What works at single-cell scale doesn't automatically transfer to enterprise scale."
       },
       {
         "id": 3,
-        "question": "What is a key trade-off between centralized and distributed infrastructure?",
+        "question": "Which describes distributed infrastructure, as this lesson defines it?",
         "options": [
-          "They differ only in which brand of server hardware they require",
-          "They differ in reliability, latency, and administrative overhead",
-          "Centralized setups cannot report data, while distributed ones can"
+          "One system monitors and manages all sites from a single place",
+          "Each site runs largely independently, with centralized reporting only",
+          "Each site uses a different robot model"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Each approach carries different trade-offs depending on context."
+        "feedback": "Correct. In a distributed setup each site is largely independent, with centralized reporting only. Each approach has trade-offs in reliability, latency, and administrative overhead."
       },
       {
         "id": 4,

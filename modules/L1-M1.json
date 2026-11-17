@@ -183,7 +183,7 @@
           "5 meters"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. This course currently uses 2 meters, per DiFacto guidance; the final figure will be confirmed."
+        "feedback": "Correct. This course uses 2 meters per DiFacto guidance; always verify your site's configured safety zones."
       },
       {
         "id": 5,
