@@ -641,7 +641,7 @@
             .fb-fab {
                 position: fixed;
                 right: 14px;
-                top: calc(var(--header-h, 62px) + 10px);
+                top: calc(var(--header-h, 57px) + 54px);
                 z-index: 45;
                 display: inline-flex;
                 align-items: center;
@@ -658,7 +658,7 @@
                 cursor: pointer;
                 transition: top 0.25s ease, transform 0.15s ease, box-shadow 0.15s ease;
             }
-            body.header-hidden .fb-fab { top: 14px; }
+            body.header-hidden .fb-fab { top: 58px; }
             .fb-fab:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(7, 15, 43, 0.42); }
             .fb-fab[hidden], body.home-mode .fb-fab, body.ob-mode .fb-fab, body:not(.inner-y) .fb-fab { display: none; }
         }
@@ -3243,7 +3243,8 @@ function submitInAppFeedback() {
         fetch(webhookUrl, {
             method: 'POST',
             mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain' },
+            keepalive: true,
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify(entry)
         }).then(done, done);
     } catch (e) {
