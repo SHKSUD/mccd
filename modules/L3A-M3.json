@@ -57,7 +57,7 @@
         "Understand the purpose of a structured inspection checklist",
         "Recognize how to use a checklist as a tool for comparison over time, not just a one-time pass/fail"
       ],
-      "content": "An inspection checklist's real value comes from consistency over time - recording actual values (not just pass/fail) where possible, so this inspection can be compared against the last one. A checklist that only records 'OK' or 'not OK' misses the gradual trends that predictive maintenance depends on noticing. Specific checklist items for MoRo's inspection points will be confirmed against DiFacto documentation.",
+      "content": "An inspection checklist's real value comes from consistency over time - recording actual values (not just pass/fail) where possible, so this inspection can be compared against the last one. A checklist that only records 'OK' or 'not OK' misses the gradual trends that predictive maintenance depends on noticing. Use your facility's DiFacto preventive inspection checklist for the exact items verified at each inspection point.",
       "keyTerms": [
         {
           "term": "Inspection checklist",

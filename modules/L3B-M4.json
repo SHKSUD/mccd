@@ -37,7 +37,7 @@
         "Understand the general structure of the FANUC I/O handshake",
         "Recognize the purpose of each signal in the sequence"
       ],
-      "content": "The FANUC I/O handshake follows a request/ready/complete signal sequence: MoRo signals a request (it has arrived and is ready to interact), the FANUC controller signals ready (confirming it can proceed), and a complete signal closes out the exchange once the interaction finishes. This sequence prevents either system from acting before the other is genuinely prepared. Exact signal timing and configuration will be confirmed against DiFacto/FANUC joint documentation.",
+      "content": "The FANUC I/O handshake follows a request/ready/complete signal sequence: MoRo signals a request (it has arrived and is ready to interact), the FANUC controller signals ready (confirming it can proceed), and a complete signal closes out the exchange once the interaction finishes. This sequence prevents either system from acting before the other is genuinely prepared. Refer to the DiFacto/FANUC cell integration specification for exact signal timing and debounce parameters.",
       "keyTerms": [
         {
           "term": "request/ready/complete sequence",
@@ -53,7 +53,7 @@
         "Understand the general concept of digital I/O configuration for this integration",
         "Recognize why correct I/O mapping matters for reliable handshake behavior"
       ],
-      "content": "The handshake signals are carried over digital I/O points that must be correctly mapped between MoRo's system and the FANUC controller. Incorrect mapping - a signal wired to the wrong I/O point - produces unreliable or failed handshakes even when both systems are otherwise functioning correctly. Specific I/O mapping procedures are being finalized with DiFacto engineering.",
+      "content": "The handshake signals are carried over digital I/O points that must be correctly mapped between MoRo's system and the FANUC controller. Incorrect mapping - a signal wired to the wrong I/O point - produces unreliable or failed handshakes even when both systems are otherwise functioning correctly. Follow your site's electrical integration schematic and DiFacto I/O mapping table when assigning digital I/O points.",
       "keyTerms": [
         {
           "term": "Digital I/O point",

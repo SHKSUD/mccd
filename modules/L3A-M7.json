@@ -33,7 +33,7 @@
         "Understand the general format of the field drill",
         "Know what's being assessed beyond the final fix"
       ],
-      "content": "The drill presents a realistic fault scenario on an actual or simulated MoRo unit, with a defined time window to diagnose and resolve it. Assessment isn't limited to whether the fix is correct - the approach matters too: did you follow structured diagnostic methodology (from L3A-M5), did you document appropriately, did you make the correct call on whether the issue was within field-serviceable scope or required escalation. Exact drill scenarios and facility requirements are being finalized with DiFacto's operations team.",
+      "content": "The drill presents a realistic fault scenario on an actual or simulated MoRo unit, with a defined time window to diagnose and resolve it. Assessment isn't limited to whether the fix is correct - the approach matters too: did you follow structured diagnostic methodology (from L3A-M5), did you document appropriately, did you make the correct call on whether the issue was within field-serviceable scope or required escalation. Drill scenarios and facility setup requirements are configured by your site's training lead in line with DiFacto's operations checklist.",
       "keyTerms": [
         {
           "term": "Field-serviceable",

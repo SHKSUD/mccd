@@ -86,7 +86,7 @@
         "Understand how safety procedures during maintenance differ from operational safety",
         "Recognize lockout/tagout as a foundational maintenance safety practice"
       ],
-      "content": "Maintenance work often requires MoRo to be powered down or placed in a state where it won't move unexpectedly while being worked on - lockout/tagout (LOTO) procedures exist specifically for this. Unlike operational safety (staying clear of an active unit), maintenance safety is about confirming a unit is genuinely de-energized and locked out before physical work begins. Specific LOTO procedures for MoRo will be confirmed against DiFacto's safety documentation.",
+      "content": "Maintenance work often requires MoRo to be powered down or placed in a state where it won't move unexpectedly while being worked on - lockout/tagout (LOTO) procedures exist specifically for this. Unlike operational safety (staying clear of an active unit), maintenance safety is about confirming a unit is genuinely de-energized and locked out before physical work begins. Follow your site's DiFacto LOTO safety SOP for the exact lockout/tagout sequence required before servicing MoRo.",
       "keyTerms": [
         {
           "term": "LOTO (lockout/tagout)",

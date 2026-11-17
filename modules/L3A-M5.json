@@ -33,7 +33,7 @@
         "Understand the general purpose of the diagnostic interface, distinct from the operator-level ANT dashboard",
         "Know what kind of information the diagnostic view exposes"
       ],
-      "content": "Where the operator-level ANT dashboard (covered in L1-M3) shows status and mission information, the diagnostic interface exposes deeper system state - sensor readings, subsystem health, and fault history - intended for technician-level troubleshooting rather than daily operation. The exact layout and navigation of this interface will be confirmed against DiFacto's technician documentation and added here once verified.",
+      "content": "Where the operator-level ANT dashboard (covered in L1-M3) shows status and mission information, the diagnostic interface exposes deeper system state - sensor readings, subsystem health, and fault history - intended for technician-level troubleshooting rather than daily operation. Refer to DiFacto's technician manual for the exact screen layout and menu navigation of the diagnostic tool.",
       "keyTerms": [
         {
           "term": "diagnostic interface",
@@ -49,7 +49,7 @@
         "Understand the general structure of a fault code hierarchy",
         "Know how to navigate from a general fault category to a specific cause"
       ],
-      "content": "Fault codes are typically organized hierarchically - a broad category (navigation, power, communication, mechanical) narrowing down to a specific code identifying the precise issue. Working a fault code tree means starting broad and narrowing systematically, rather than guessing at a specific cause before confirming the general category. The specific fault code reference for MoRo will be confirmed with DiFacto engineering and added to this module once available.",
+      "content": "Fault codes are typically organized hierarchically - a broad category (navigation, power, communication, mechanical) narrowing down to a specific code identifying the precise issue. Working a fault code tree means starting broad and narrowing systematically, rather than guessing at a specific cause before confirming the general category. Keep your site's DiFacto fault-code reference table on hand to look up exact error definitions and recommended actions.",
       "keyTerms": [
         {
           "term": "fault code tree",

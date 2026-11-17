@@ -52,7 +52,7 @@
         "Understand the general configuration approach for a shared path",
         "Recognize what makes a shared path configuration effective"
       ],
-      "content": "A shared path allows multiple units through with automatic coordination - the configuration work involves defining the path boundaries and confirming the coordination logic handles the facility's actual traffic volume without creating unexpected congestion. Specific configuration steps within ANT will be confirmed against the live system.",
+      "content": "A shared path allows multiple units through with automatic coordination - the configuration work involves defining the path boundaries and confirming the coordination logic handles the facility's actual traffic volume without creating unexpected congestion. Refer to your site's ANT zone-configuration guide for the exact parameter settings on shared corridors.",
       "keyTerms": [
         {
           "term": "Shared path",

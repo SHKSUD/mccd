@@ -52,7 +52,7 @@
         "Understand the general process of guiding MoRo through a mapping pass",
         "Recognize pacing and coverage considerations"
       ],
-      "content": "During mapping, MoRo is guided through the space methodically, ensuring full coverage of areas it will need to navigate operationally. Moving at a deliberate pace, rather than rushing, allows LiDAR to build an accurate picture as it goes. Specific guided-mapping procedure within ANT Server will be confirmed against DiFacto's documentation.",
+      "content": "During mapping, MoRo is guided through the space methodically, ensuring full coverage of areas it will need to navigate operationally. Moving at a deliberate pace, rather than rushing, allows LiDAR to build an accurate picture as it goes. Follow DiFacto's ANT Server mapping guide for the step-by-step guided-mapping workflow.",
       "keyTerms": [
         {
           "term": "ANT Server",
@@ -88,7 +88,7 @@
         "Understand when and how an existing map needs updating",
         "Recognize the difference between a full remapping and a partial update"
       ],
-      "content": "When a facility layout changes - new equipment, relocated obstacles - the existing map needs updating rather than necessarily starting over completely. Depending on the scope of change, this might mean a full remapping pass or a more targeted update covering just the changed area. Specific update procedures will be confirmed against DiFacto's operational guidance."
+      "content": "When a facility layout changes - new equipment, relocated obstacles - the existing map needs updating rather than necessarily starting over completely. Depending on the scope of change, this might mean a full remapping pass or a more targeted update covering just the changed area. Follow your facility's DiFacto map-management SOP when merging or re-recording updated floor areas."
     },
     {
       "sectionId": 6,

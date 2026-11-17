@@ -37,7 +37,7 @@
         "Understand the general categories of functionality available via the API",
         "Recognize the distinction between read access and control access"
       ],
-      "content": "At a conceptual level, MoRo's API exposes two broad categories: read access (fleet status, mission history, unit health - pulling data out) and control access (assigning missions, triggering actions - pushing commands in). Specific endpoint documentation, authentication requirements, and rate limits are being finalized with DiFacto's engineering team and will be added to this module once confirmed.",
+      "content": "At a conceptual level, MoRo's API exposes two broad categories: read access (fleet status, mission history, unit health - pulling data out) and control access (assigning missions, triggering actions - pushing commands in). Refer to your site's DiFacto ANT API specification for exact endpoint schemas, authentication tokens, and rate limits.",
       "keyTerms": [
         {
           "term": "Read access",

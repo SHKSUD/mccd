@@ -49,7 +49,7 @@
         "Understand the general process of defining a waypoint",
         "Recognize considerations for reliable waypoint placement"
       ],
-      "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Exact waypoint-setting procedure within ANT will be confirmed against the live system.",
+      "content": "Setting a waypoint means marking a specific location on MoRo's map as a reference point a mission can use - a pickup station, a drop point, a staging area. Reliable waypoint placement considers factors like reachability (can MoRo actually navigate to and stop precisely at this location) and clearance (is there enough space for the operation intended at that point). Follow your facility's ANT Server programming guide for the exact waypoint-creation workflow on your deployed version.",
       "keyTerms": [
         {
           "term": "Reachability",

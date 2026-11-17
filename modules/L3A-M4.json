@@ -57,7 +57,7 @@
         "Understand how the diagnostic interface (from L3A-M5) applies specifically to battery health",
         "Know the general type of data available for battery diagnosis"
       ],
-      "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Specific screens and data points for battery diagnostics will be confirmed against DiFacto's technician documentation.",
+      "content": "The diagnostic interface exposes battery-specific data beyond what the operator-level dashboard shows - detailed charge cycle history, temperature behavior during charging, and cell-level data where available. Refer to DiFacto's technician diagnostic guide for the exact battery health screens and telemetry parameters.",
       "keyTerms": [
         {
           "term": "Diagnostic interface",
@@ -81,7 +81,7 @@
         "Understand the general criteria for recommending battery replacement",
         "Recognize this as a judgment call informed by data, not a fixed rule alone"
       ],
-      "content": "Replacement decisions generally weigh remaining capacity against operational need - a battery that's degraded but still comfortably covers a unit's actual daily runtime requirement may not need replacement yet, even if it's below its original rated capacity. Specific replacement thresholds will be confirmed against DiFacto's guidance, but the underlying principle is assessing fitness for actual use, not just comparing against original spec."
+      "content": "Replacement decisions generally weigh remaining capacity against operational need - a battery that's degraded but still comfortably covers a unit's actual daily runtime requirement may not need replacement yet, even if it's below its original rated capacity. While exact replacement thresholds are defined in DiFacto's battery service spec, the underlying principle is assessing fitness for actual use, not just comparing against original spec."
     },
     {
       "sectionId": 6,

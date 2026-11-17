@@ -27,7 +27,7 @@
         "Understand the general principle behind maintenance scheduling intervals",
         "Recognize that schedules are typically based on usage, not just calendar time"
       ],
-      "content": "Preventive maintenance intervals are generally set based on a combination of time elapsed and actual usage (operating hours, cycles completed) - a heavily used unit may need attention sooner than a lightly used one on the same calendar schedule. Specific interval recommendations for MoRo components will be confirmed against DiFacto's maintenance documentation and added here.",
+      "content": "Preventive maintenance intervals are generally set based on a combination of time elapsed and actual usage (operating hours, cycles completed) - a heavily used unit may need attention sooner than a lightly used one on the same calendar schedule. Refer to your unit's DiFacto Maintenance Manual for the recommended service intervals for each MoRo component.",
       "keyTerms": [
         {
           "term": "Maintenance interval",
@@ -47,7 +47,7 @@
         "Understand the general categories of mechanical inspection",
         "Recognize common wear patterns worth checking for"
       ],
-      "content": "Mechanical preventive checks generally cover wheel condition and wear, structural fasteners (confirming nothing has loosened from vibration over time), and drive component function. Specific inspection procedures and acceptable wear tolerances will be confirmed against DiFacto's technical documentation."
+      "content": "Mechanical preventive checks generally cover wheel condition and wear, structural fasteners (confirming nothing has loosened from vibration over time), and drive component function. Consult DiFacto's technical maintenance specification for exact inspection steps and acceptable wear tolerances."
     },
     {
       "sectionId": 4,
