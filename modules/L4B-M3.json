@@ -53,7 +53,7 @@
         "Understand the general parameters involved in configuring this payload type",
         "Recognize the relationship between configuration and load-specific requirements"
       ],
-      "content": "Configuration parameters for this payload type typically include lift height range, rotation angle limits, and speed/acceleration settings for both movements, all calibrated to the specific load being handled. Specific configuration procedures and safe operating ranges will be confirmed against DiFacto's technical documentation for this payload module.",
+      "content": "Configuration parameters for this payload type typically include lift height range, rotation angle limits, and speed/acceleration settings for both movements, all calibrated to the specific load being handled. Follow DiFacto's payload technical documentation for the exact configuration workflow and safe operating ranges for this module.",
       "keyTerms": []
     },
     {

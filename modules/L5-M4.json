@@ -28,7 +28,7 @@
         "Understand the proposed minimum lab specification for L2 and above",
         "Recognize how lab requirements scale with the level being taught"
       ],
-      "content": "Delivering L2 and above requires, at minimum: a MoRo unit (the A-500 is proposed as the primary training unit, to be confirmed with DiFacto), ANT Server installation, Wi-Fi configured for fleet communication, adequate clear floor space for mission demonstration, a payload fixture, and safety barriers or pedestrian markings. L3A and above add further requirements - maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated) for integration modules.",
+      "content": "Delivering L2 and above requires, at minimum: a MoRo training unit (such as the A-500 or your facility's designated DiFacto model), ANT Server installation, Wi-Fi configured for fleet communication, adequate clear floor space for mission demonstration, a payload fixture, and safety barriers or pedestrian markings. L3A and above add further requirements - maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated) for integration modules.",
       "keyTerms": [
         {
           "term": "ANT Server",

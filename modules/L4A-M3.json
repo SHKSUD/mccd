@@ -53,7 +53,7 @@
         "Understand the general setup process for OPC-UA connectivity",
         "Recognize security considerations specific to this protocol"
       ],
-      "content": "Setting up OPC-UA connectivity involves configuring MoRo's system as an OPC-UA server (or connecting to one) that SCADA clients can query, with appropriate security certificates and access permissions configured. Specific configuration steps will be confirmed against DiFacto's technical documentation, but security configuration is never optional - an improperly secured OPC-UA connection exposes operational data broadly.",
+      "content": "Setting up OPC-UA connectivity involves configuring MoRo's system as an OPC-UA server (or connecting to one) that SCADA clients can query, with appropriate security certificates and access permissions configured. While exact configuration steps are detailed in DiFacto's OPC-UA technical documentation, security configuration is never optional - an improperly secured OPC-UA connection exposes operational data broadly.",
       "keyTerms": [
         {
           "term": "security certificate",

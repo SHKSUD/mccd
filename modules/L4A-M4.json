@@ -53,7 +53,7 @@
         "Understand the general concept of performance level under EN ISO 13849",
         "Recognize that safety design requirements scale with assessed risk"
       ],
-      "content": "EN ISO 13849 defines performance levels that quantify how reliably a safety function must perform, based on a risk assessment of the hazard it addresses. Higher-risk scenarios require higher performance levels, meaning more robust (often redundant) safety design. Specific performance level requirements for MoRo-integrated cells will be confirmed against DiFacto's engineering and compliance documentation.",
+      "content": "EN ISO 13849 defines performance levels that quantify how reliably a safety function must perform, based on a risk assessment of the hazard it addresses. Higher-risk scenarios require higher performance levels, meaning more robust (often redundant) safety design. Refer to DiFacto's engineering and compliance documentation for the required performance level (PL) targets on your MoRo-integrated cell.",
       "keyTerms": [
         {
           "term": "performance level",

@@ -75,7 +75,7 @@
         "Understand what co-delivery with a FANUC-side trainer might involve",
         "Recognize when co-delivery is valuable versus when a single instructor suffices"
       ],
-      "content": "For more complex integration training, co-delivery alongside a FANUC-side trainer may be more effective than one instructor covering both sides alone - particularly for advanced troubleshooting scenarios. This module covers how to plan and coordinate that kind of session. The specific protocol for co-delivery logistics is being finalized as DiFacto's instructor network develops.",
+      "content": "For more complex integration training, co-delivery alongside a FANUC-side trainer may be more effective than one instructor covering both sides alone - particularly for advanced troubleshooting scenarios. This module covers how to plan and coordinate that kind of session. Co-delivery logistics and scheduling are coordinated between the DiFacto training lead and the partner FANUC instructor.",
       "keyTerms": [
         {
           "term": "co-delivery",
