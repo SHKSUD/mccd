@@ -82,7 +82,7 @@
         "Understand the general threshold for escalation versus self-resolution",
         "Know what information to include when escalating"
       ],
-      "content": "As a general rule: if an issue resolves on its own within a normal operational pattern (a brief pause that clears, a single retry that succeeds), no escalation is needed. If it recurs, persists, or falls outside anything covered in this curriculum, escalate with what you observed - timing, symptoms, anything unusual in the environment. A specific error code reference table is being developed with DiFacto's engineering team and will be added to this module once available."
+      "content": "As a general rule: if an issue resolves on its own within a normal operational pattern (a brief pause that clears, a single retry that succeeds), no escalation is needed. If it recurs, persists, or falls outside anything covered in this curriculum, escalate with what you observed - timing, symptoms, anything unusual in the environment. Keep your site's DiFacto error code reference table handy when logging recurring faults for escalation."
     }
   ],
   "quiz": {

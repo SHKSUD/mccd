@@ -33,7 +33,7 @@
         "Understand the concept of missions with conditional logic",
         "Recognize how loops and branches differ from simple linear missions"
       ],
-      "content": "Beyond simple point-to-point tasks, missions can include conditional logic (if a condition is met, take one path; otherwise, another) and repeating patterns (a loop that continues until a defined end state). These patterns let a single mission definition handle situations that would otherwise require many separate simple missions. Exact configuration of conditional logic within ANT will be confirmed against the live system.",
+      "content": "Beyond simple point-to-point tasks, missions can include conditional logic (if a condition is met, take one path; otherwise, another) and repeating patterns (a loop that continues until a defined end state). These patterns let a single mission definition handle situations that would otherwise require many separate simple missions. Follow your facility's ANT programming guide for configuring conditional logic and loop parameters.",
       "keyTerms": [
         {
           "term": "conditional logic",

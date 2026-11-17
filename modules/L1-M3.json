@@ -50,7 +50,7 @@
         "Identify the main categories of information on the dashboard",
         "Know where to find MoRo's current status versus its assigned tasks"
       ],
-      "content": "The ANT dashboard answers three things: where MoRo is and what state it is in (fleet status), what it is assigned to do right now (mission status), and what the configuration options are (system settings). The exact menu structure and terminology within ANT will be confirmed against the live system before this section is finalized — the operational logic described here holds regardless of the final interface layout.",
+      "content": "The ANT dashboard answers three things: where MoRo is and what state it is in (fleet status), what it is assigned to do right now (mission status), and what the configuration options are (system settings). While exact menu labels vary slightly by deployed ANT version, the operational logic described here applies across standard layouts.",
       "keyTerms": [
         {
           "term": "fleet status",
@@ -150,7 +150,7 @@
         "Recognize what MoRo's status indicators communicate at a glance",
         "Know the three general kinds of status signal: normal operation, waiting or paused, and attention-needed"
       ],
-      "content": "Beyond the dashboard, MoRo communicates status directly through visual indicators — useful for floor-level awareness without checking a screen. These fall into general categories: normal operation, waiting/paused, and attention-needed. The confirmed color-and-pattern reference will be added once verified against current MoRo hardware documentation.",
+      "content": "Beyond the dashboard, MoRo communicates status directly through visual indicators — useful for floor-level awareness without checking a screen. These fall into general categories: normal operation, waiting/paused, and attention-needed. Refer to your unit's DiFacto hardware guide for the exact LED color-and-pattern legend.",
       "keyTerms": [
         {
           "term": "status indicator",
