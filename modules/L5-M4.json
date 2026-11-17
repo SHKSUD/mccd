@@ -42,7 +42,16 @@
           "term": "VLAN (Virtual Local Area Network)",
           "note": "A method of segmenting network traffic, relevant to L3A+ training that covers network configuration."
         }
-      ]
+      ],
+      "video": {
+        "id": "V045",
+        "src": "videos/V045.mp4",
+        "poster": "videos/V045.jpg",
+        "title": "Minimum lab requirements in 30 seconds",
+        "duration": "0:30",
+        "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: a MoRo unit. The A-500 is proposed as the primary training unit, to be confirmed. ANT Server and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -99,25 +108,25 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why is lab infrastructure knowledge part of Master Instructor competency?",
+        "question": "Why does L5 teach lab setup, not only teaching skill?",
         "options": [
-          "Labs are always set up by the vendor, so instructors only need to observe",
           "An instructor who can set up and validate a lab helps DiFacto scale training",
-          "Infrastructure knowledge is needed only for Level 1 awareness sessions in the lab"
+          "Lab setup replaces the observed delivery for some candidates",
+          "Lab setup is assessed in place of preventive maintenance knowledge"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "feedback": "Correct. Infrastructure capability extends an instructor's value beyond just teaching in a pre-built space."
       },
       {
         "id": 2,
-        "question": "Which of these is part of the minimum lab requirements for delivering L2 and above?",
+        "question": "Which item is added at L3A and above, and is not part of the L2 minimum?",
         "options": [
-          "A payload fixture, plus safety barriers or pedestrian markings",
-          "A second MoRo unit set aside for every learner in the training group",
-          "A dedicated server room with its own backup power supply"
+          "A payload fixture",
+          "Spare sensor units",
+          "Wi-Fi configured for fleet communication"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. The minimum lab specification includes a payload fixture and safety barriers or pedestrian markings."
+        "correctAnswer": 1,
+        "feedback": "Correct. L3A and above add maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated)."
       },
       {
         "id": 3,
@@ -132,14 +141,14 @@
       },
       {
         "id": 4,
-        "question": "Why does lab equipment need preventive maintenance attention, connecting to L3A principles?",
+        "question": "Why might a training unit need more preventive maintenance attention than a production unit?",
         "options": [
-          "Lab equipment often sees heavier, more varied use than production equipment",
-          "Training units are usually older than production units, so they wear out sooner",
-          "Lab equipment is not covered by the manufacturer's maintenance guidance"
+          "Many learners repeat the same procedures on it, so use is heavier and more varied",
+          "Training units follow a separate maintenance guide from production units",
+          "Training units run for longer hours each day than production units"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. Repeated practice use across multiple learners creates significant wear requiring attention."
+        "feedback": "Correct. Lab equipment often sees heavier and more varied use than a typical production deployment."
       },
       {
         "id": 5,

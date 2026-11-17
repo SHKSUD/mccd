@@ -15,7 +15,7 @@
       "title": "Why Master Instructors Need Assessment Design Skill",
       "learningObjectives": [
         "Understand why this skill matters beyond simply administering existing assessments",
-        "Recognize the role of a Master Instructor in evaluating other instructors"
+        "Recognize that a Master Instructor judges whether assessments measure what they are meant to measure"
       ],
       "content": "A Master Instructor doesn't just deliver existing assessments - they evaluate whether assessments are actually measuring what they're meant to measure, and may need to adapt or create assessment components for new content or new instructor candidates. This module builds that evaluative skill directly.",
       "keyTerms": []
@@ -34,7 +34,16 @@
           "term": "assessment validity",
           "note": "Whether an assessment actually measures the competency it is intended to measure, rather than a proxy for it."
         }
-      ]
+      ],
+      "video": {
+        "id": "V043",
+        "src": "videos/V043.mp4",
+        "poster": "videos/V043.jpg",
+        "title": "A valid assessment in 30 seconds",
+        "duration": "0:30",
+        "transcript": "What makes an assessment valid? It measures the competency it claims to measure. Failure mode: testing recall when you need skill. Or the reverse: testing skill when recall is the goal. Written alone cannot validate hands-on skill. Practical alone does not confirm understanding. So this curriculum pairs both, from L2 up.",
+        "placeholder": true
+      }
     },
     {
       "sectionId": 3,
@@ -129,25 +138,25 @@
       },
       {
         "id": 4,
-        "question": "What is the purpose of a rubric in practical assessment?",
+        "question": "Two qualified instructors watch the same candidate and reach different results. Which change addresses this most directly?",
         "options": [
-          "To let each evaluator rate the overall impression in their own terms",
-          "To score observable criteria consistently",
-          "To list the questions candidates will be asked in the written test"
+          "Raise the passing threshold",
+          "Break the assessment into specific, observable criteria",
+          "Add a written test before the practical"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Rubrics support consistent evaluation regardless of which instructor conducts it."
+        "feedback": "Correct. A rubric of specific, observable criteria supports consistent evaluation regardless of which instructor conducts it."
       },
       {
         "id": 5,
-        "question": "What might an unusually high failure rate on one specific question indicate?",
+        "question": "One question in a module check fails far more often than the others. What should you check first?",
         "options": [
-          "The wording may be unclear rather than the content being hard",
-          "The module covering it is too short to be worth keeping",
-          "The question is definitely too easy for the level it sits in"
+          "Whether the pass mark for the check should be lowered",
+          "Whether its wording is clear and still matches what the module teaches",
+          "Whether the question should be removed so results are comparable"
         ],
-        "correctAnswer": 0,
-        "feedback": "Correct. Unusual failure patterns are a signal worth investigating for assessment quality issues."
+        "correctAnswer": 1,
+        "feedback": "Correct. A high failure rate on one question may mean unclear wording, not hard content. It is a signal worth investigating for assessment quality issues."
       }
     ]
   }
