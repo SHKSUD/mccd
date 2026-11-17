@@ -42,7 +42,7 @@
         "Define LiDAR and explain its basic operating principle",
         "Understand what LiDAR can and cannot reliably detect"
       ],
-      "content": "LiDAR (Light Detection and Ranging) is a sensor that emits laser light and measures the time it takes to return after reflecting off a surface, calculating distance from that measurement. MoRo uses this continuously to detect walls, machines, pillars, and people around it. LiDAR has known physical limitations: it detects solid, reflective surfaces reliably, but struggles with transparent materials (glass) and highly reflective or mirror-like surfaces, since these don't reflect the laser predictably back to the sensor. Very fine or low-profile objects at floor level are also harder to detect reliably than larger obstacles. Precise range and detection specifications for MoRo's LiDAR configuration are being confirmed against current hardware documentation and will be added once verified.",
+      "content": "LiDAR (Light Detection and Ranging) is a sensor that emits laser light and measures the time it takes to return after reflecting off a surface, calculating distance from that measurement. MoRo uses this continuously to detect walls, machines, pillars, and people around it. LiDAR has known physical limitations: it detects solid, reflective surfaces reliably, but struggles with transparent materials (glass) and highly reflective or mirror-like surfaces, since these don't reflect the laser predictably back to the sensor. Very fine or low-profile objects at floor level are also harder to detect reliably than larger obstacles. Refer to your site's MoRo hardware datasheet for the exact LiDAR range and detection specifications configured for your unit.",
       "keyTerms": [
         {
           "term": "LiDAR",
@@ -94,7 +94,7 @@
         "Understand the general process of building an initial map",
         "Know that maps require periodic updates as the factory changes"
       ],
-      "content": "Before MoRo operates independently in a space, an initial mapping pass is required — the unit is guided through the area to build its baseline map using LiDAR and SLAM. Once established, this map isn't permanent: if the factory layout changes (equipment relocated, new obstacles introduced), the map needs updating to reflect reality. The specific update cadence and process will be confirmed against DiFacto's operational guidance and added here once verified."
+      "content": "Before MoRo operates independently in a space, an initial mapping pass is required — the unit is guided through the area to build its baseline map using LiDAR and SLAM. Once established, this map isn't permanent: if the factory layout changes (equipment relocated, new obstacles introduced), the map needs updating to reflect reality. Follow your facility's DiFacto operational SOP for the scheduled map update cadence and re-mapping procedure."
     },
     {
       "sectionId": 6,

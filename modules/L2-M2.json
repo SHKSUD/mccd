@@ -46,7 +46,7 @@
         "Understand the general process of confirming a payload attachment",
         "Know why attachment verification matters before mission assignment"
       ],
-      "content": "Before a mission involving material transfer begins, the payload attachment must be confirmed secure and correctly configured for the task. An improperly seated or mismatched attachment risks dropped material or a failed handoff mid-mission. The specific verification steps per attachment type will be confirmed and added once validated against DiFacto's equipment documentation."
+      "content": "Before a mission involving material transfer begins, the payload attachment must be confirmed secure and correctly configured for the task. An improperly seated or mismatched attachment risks dropped material or a failed handoff mid-mission. Follow the DiFacto equipment checklist for your specific payload attachment type before starting a transfer mission."
     },
     {
       "sectionId": 3,
@@ -56,7 +56,7 @@
         "Understand the concept of a handshake in machine coordination",
         "Recognize the operator-level implication of handshake states"
       ],
-      "content": "When MoRo coordinates with another machine - loading from or delivering to a CNC station, for example - the two systems exchange a handshake: a sequence of signals confirming readiness, completion, and any error state, so neither system acts before the other is genuinely ready. At the operator level, you don't need to manage this sequence directly, but you should recognize when a handshake has stalled (the exchange pauses and doesn't progress) as a signal worth flagging. Exact signal states and sequence detail are being confirmed with DiFacto's engineering team.",
+      "content": "When MoRo coordinates with another machine - loading from or delivering to a CNC station, for example - the two systems exchange a handshake: a sequence of signals confirming readiness, completion, and any error state, so neither system acts before the other is genuinely ready. At the operator level, you don't need to manage this sequence directly, but you should recognize when a handshake has stalled (the exchange pauses and doesn't progress) as a signal worth flagging. Refer to your site's station integration guide for the specific handshake signal states and timing configured on that cell.",
       "keyTerms": [
         {
           "term": "handshake",

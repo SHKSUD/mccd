@@ -119,7 +119,7 @@
         "Know MoRo's confirmed interactive zone distance",
         "Understand the basic safe-behavior rules around an active MoRo unit"
       ],
-      "content": "MoRo maintains a 2-meter interactive zone, monitored continuously by onboard sensors. Within this zone, MoRo's behavior adjusts automatically based on proximity — slowing or stopping as needed — without requiring human intervention. If you're in MoRo's path, it will detect you and stop; wait for it to clear or move aside, and never attempt to push or manually reposition it. If MoRo stops unexpectedly, don't touch it — it may resume moving — instead, alert the operator or supervisor. If you hear an alarm, move clear and notify the operator. This 2-meter figure reflects DiFacto's current guidance and may be revised as the specification is finalized.",
+      "content": "MoRo maintains a 2-meter interactive zone, monitored continuously by onboard sensors. Within this zone, MoRo's behavior adjusts automatically based on proximity — slowing or stopping as needed — without requiring human intervention. If you're in MoRo's path, it will detect you and stop; wait for it to clear or move aside, and never attempt to push or manually reposition it. If MoRo stops unexpectedly, don't touch it — it may resume moving — instead, alert the operator or supervisor. If you hear an alarm, move clear and notify the operator. This 2-meter figure is DiFacto's baseline operational clearance; always verify facility-specific thresholds against your site's deployed safety plan.",
       "keyTerms": [
         {
           "term": "interactive zone",

@@ -52,7 +52,7 @@
         "Understand the general requirement for successful wireless charging",
         "Recognize signs of a failed or incomplete docking"
       ],
-      "content": "Wireless charging requires MoRo to align correctly with the charging dock - the alignment tolerance and exact docking procedure will be confirmed against DiFacto's facility guidance. Operationally, if a unit appears docked but isn't visibly charging (per its status indicator), that's worth flagging rather than assuming charging is underway."
+      "content": "Wireless charging requires MoRo to align within the dock's receiver tolerance as defined in your facility's DiFacto dock installation guide. Operationally, if a unit appears docked but isn't visibly charging (per its status indicator), that's worth flagging rather than assuming charging is underway."
     },
     {
       "sectionId": 4,

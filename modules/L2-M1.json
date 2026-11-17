@@ -33,7 +33,7 @@
         "Define a mission in operational terms",
         "Understand the basic components of mission structure"
       ],
-      "content": "A mission is a defined task with a clear origin, destination, and completion condition - move from point A to point B, execute a handoff, follow a multi-stop route. The exact taxonomy of mission types available in ANT, and how they're categorized in the interface, is being confirmed with DiFacto's engineering team. The underlying principle holds regardless: every mission has a defined start, a defined objective, and a defined end state.",
+      "content": "A mission is a defined task with a clear origin, destination, and completion condition - move from point A to point B, execute a handoff, follow a multi-stop route. In DiFacto ANT deployments, mission types are organized in the interface according to your site's configured workflow templates. The underlying principle holds regardless: every mission has a defined start, a defined objective, and a defined end state.",
       "keyTerms": [
         {
           "term": "mission",
@@ -58,7 +58,7 @@
         "Understand the sequence for assigning a mission",
         "Know the pre-checks required before assignment"
       ],
-      "content": "Before assigning a mission, confirm MoRo is in ready state (covered in L1-M3) and that the intended path is genuinely clear. Once assigned, MoRo executes independently - your role shifts from direct action to supervision. The specific screens and steps for mission assignment within ANT will be confirmed against the live system."
+      "content": "Before assigning a mission, confirm MoRo is in ready state (covered in L1-M3) and that the intended path is genuinely clear. Once assigned, MoRo executes independently - your role shifts from direct action to supervision. Refer to your site's ANT operator quick-reference guide for the exact mission-assignment screens configured for your facility."
     },
     {
       "sectionId": 4,

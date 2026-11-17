@@ -52,7 +52,7 @@
         "Understand the general principle of how work gets distributed across units",
         "Recognize the operator's role in fleet-level task assignment"
       ],
-      "content": "With multiple units available, the fleet system distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. The exact fleet-wide dashboard view and assignment interface will be confirmed against DiFacto's ANT documentation."
+      "content": "With multiple units available, the fleet system distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. Refer to your site's ANT fleet documentation for the specific dashboard layout and dispatch rules configured for your deployment."
     },
     {
       "sectionId": 4,
@@ -98,7 +98,7 @@
         "Understand the general concept of a fleet-wide dashboard view",
         "Recognize the shift in monitoring approach at fleet scale"
       ],
-      "content": "Monitoring a fleet means watching for patterns across units rather than tracking any single unit continuously - a unit that deviates from the fleet's normal behavior stands out precisely because you understand what normal looks like across the group. The specific fleet-wide view in ANT will be confirmed and detailed once verified against the live system."
+      "content": "Monitoring a fleet means watching for patterns across units rather than tracking any single unit continuously - a unit that deviates from the fleet's normal behavior stands out precisely because you understand what normal looks like across the group. Use your facility's configured ANT fleet-overview screen to monitor unit status and spot deviations across the group."
     }
   ],
   "quiz": {

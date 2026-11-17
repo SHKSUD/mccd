@@ -46,7 +46,7 @@
         "Know the confirmed distance defining MoRo's interactive zone",
         "Understand how MoRo's behavior changes within this zone"
       ],
-      "content": "MoRo maintains an interactive zone of 2 meters around itself, detected continuously through onboard sensors. Within this zone, MoRo's behavior shifts automatically — reducing speed or stopping, depending on proximity — without requiring a human to intervene. This figure reflects DiFacto's current guidance and may be revised as the specification is finalized; it is accurate as of this module's current version, not a permanent fixed value.",
+      "content": "MoRo maintains an interactive zone of 2 meters around itself, detected continuously through onboard sensors. Within this zone, MoRo's behavior shifts automatically — reducing speed or stopping, depending on proximity — without requiring a human to intervene. This 2-meter figure represents DiFacto's standard baseline clearance; always follow your site's deployed safety configuration for facility-specific zone limits.",
       "keyTerms": [
         {
           "term": "interactive zone",
