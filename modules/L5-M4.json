@@ -28,7 +28,7 @@
         "Understand the proposed minimum lab specification for L2 and above",
         "Recognize how lab requirements scale with the level being taught"
       ],
-      "content": "Delivering L2 and above requires, at minimum: a MoRo training unit (such as the A-500 or your facility's designated DiFacto model), ANT Server installation, Wi-Fi configured for fleet communication, adequate clear floor space for mission demonstration, a payload fixture, and safety barriers or pedestrian markings. L3A and above add further requirements - maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated) for integration modules.",
+      "content": "Delivering L2 and above requires, at minimum: a MoRo lab unit (such as the A-250-MMT), Fleet Manager and ANT Server installation, Wi-Fi configured for fleet communication, adequate clear floor space for mission demonstration, a payload fixture, and safety barriers or pedestrian markings. L3A and above add further requirements - maintenance tools, spare sensor units, network switching for VLAN training, and FANUC controller access (even simulated) for integration modules.",
       "keyTerms": [
         {
           "term": "ANT Server",
@@ -49,7 +49,7 @@
         "poster": "videos/V045.jpg",
         "title": "Minimum lab requirements in 30 seconds",
         "duration": "0:30",
-        "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: a MoRo unit. Use the A-500 or your facility's designated DiFacto training unit. ANT Server and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
+        "transcript": "Minimum lab requirements, in 30 seconds. For L2 and above: use the A-250-MMT lab unit. Fleet Manager, ANT Server, and Wi-Fi for fleet communication. Clear floor space and a payload fixture. Safety barriers or pedestrian markings. L3A and above add tools, spares, VLAN switching and FANUC access.",
         "placeholder": true
       }
     },

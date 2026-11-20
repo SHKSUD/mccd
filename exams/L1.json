@@ -27,7 +27,7 @@
       "options": [
         "A-250",
         "A-500",
-        "A-1200"
+        "A-1000"
       ],
       "correctAnswer": 1,
       "feedback": "Correct. The A-500 carries 500 kg and is typically used for machine tending and part transfer."
@@ -95,14 +95,14 @@
     {
       "id": 8,
       "sourceModule": "L1-M2",
-      "question": "Which MoRo variant is rated for ±20mm positioning accuracy?",
+      "question": "What is MoRo's rated positioning accuracy across its variants?",
       "options": [
-        "The A-250, the lightest of the three variants",
-        "The A-1200",
-        "The A-500, the mid-range variant"
+        "±1 cm",
+        "±10 cm",
+        "±50 cm"
       ],
-      "correctAnswer": 1,
-      "feedback": "Correct. The A-250 and A-500 are rated at ±10mm; the A-1200 is rated at ±20mm."
+      "correctAnswer": 0,
+      "feedback": "Correct. MoRo is rated at ±1 cm positioning accuracy."
     },
     {
       "id": 9,
@@ -218,7 +218,7 @@
       "question": "A situation arises that calls for a judgment call or an exception. Who is responsible for making it?",
       "options": [
         "MoRo, because it is autonomous",
-        "The nearest MoRo unit in the fleet, through the fleet system",
+        "The nearest MoRo unit in the fleet, through Fleet Manager",
         "A human, because MoRo only executes programmed logic"
       ],
       "correctAnswer": 2,

@@ -17,7 +17,7 @@
         "Identify MoRo's battery chemistry",
         "Understand why this chemistry was chosen"
       ],
-      "content": "All MoRo variants use LFP (Lithium Iron Phosphate) batteries, confirmed across the A-250, A-500, and A-1200. LFP chemistry is chosen for industrial applications because it's thermally stable, has a long cycle life, and tolerates frequent partial charging well - all relevant for a robot that charges opportunistically throughout a shift rather than on a single overnight cycle.",
+      "content": "All MoRo variants use LFP (Lithium Iron Phosphate) batteries, confirmed across the A-250, A-500, and A-1000. LFP chemistry is chosen for industrial applications because it's thermally stable, has a long cycle life, and tolerates frequent partial charging well - all relevant for a robot that charges opportunistically throughout a shift rather than on a single overnight cycle.",
       "keyTerms": [
         {
           "term": "LFP (Lithium Iron Phosphate)",

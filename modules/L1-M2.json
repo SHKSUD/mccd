@@ -75,10 +75,10 @@
       "eyebrow": "Level 1 · Module 2 · Section 04",
       "title": "Positioning Accuracy",
       "learningObjectives": [
-        "Know MoRo's positioning accuracy by variant (about 10 mm for the A-250 and A-500, 20 mm for the A-1200)",
-        "Understand that accuracy differs across the product line"
+        "Know MoRo's rated positioning accuracy (±1 cm across the product line)",
+        "Understand what ±1 cm positioning accuracy means for docking and material transfer"
       ],
-      "content": "Positioning accuracy is not identical across all three MoRo variants. The A-250 and A-500 are rated at ±10mm positioning accuracy; the A-1200 is rated at ±20mm — the larger variant's accuracy is intentionally wider, reflecting its different operating profile. This distinction matters operationally: don't assume the same precision applies uniformly across every unit on the floor without checking which variant you're working with.",
+      "content": "MoRo is rated at ±1 cm positioning accuracy across the A-250, A-500, and A-1000 variants. This consistent positioning tolerance lets you plan docking and handoff clearances around ±1 cm across the fleet, while still verifying exact station tolerances against your deployment specification.",
       "keyTerms": [
         {
           "term": "positioning accuracy",

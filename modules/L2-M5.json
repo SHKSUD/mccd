@@ -62,7 +62,7 @@
         "Recognize general symptoms of a connectivity-related issue",
         "Understand the appropriate operator response"
       ],
-      "content": "MoRo depends on network connectivity to communicate with the fleet system and ANT server. A unit that becomes unresponsive on the dashboard, or that stops accepting new mission assignments, may indicate a connectivity issue rather than a hardware fault. Note when this started and escalate - connectivity troubleshooting generally falls outside operator-level response."
+      "content": "MoRo depends on network connectivity to communicate with Fleet Manager and ANT Server. A unit that becomes unresponsive on the dashboard, or that stops accepting new mission assignments, may indicate a connectivity issue rather than a hardware fault. Note when this started and escalate - connectivity troubleshooting generally falls outside operator-level response."
     },
     {
       "sectionId": 5,

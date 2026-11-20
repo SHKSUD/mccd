@@ -17,7 +17,7 @@
         "Understand the range of payload configurations MoRo supports",
         "Recognize that payload type affects operational procedure"
       ],
-      "content": "MoRo isn't a single fixed tool - it supports multiple payload configurations (conveyor, cobot interface, towing, lifting, and lift-and-rotate), each suited to different material handling needs. The configuration in use directly affects what you need to check and how you interact with a unit during operation.",
+      "content": "MoRo isn't a single fixed tool - it supports multiple payload configurations including CERT top modules (such as MMT and Lifter) and conveyor attachments, each suited to different material handling needs. The configuration in use directly affects what you need to check and how you interact with a unit during operation.",
       "keyTerms": [
         {
           "term": "payload configuration",
@@ -32,9 +32,9 @@
         "id": "V008",
         "src": "videos/V008.mp4",
         "poster": "videos/V008.jpg",
-        "title": "Five ways MoRo carries in 30 seconds",
+        "title": "How MoRo carries loads in 30 seconds",
         "duration": "0:30",
-        "transcript": "Five ways MoRo carries, in 30 seconds. MoRo supports five payload configurations. Conveyor, cobot interface and towing. Lifting, and lift-and-rotate. Each suits a different material handling need. The configuration changes what you check. Before a transfer: secure and correctly configured.",
+        "transcript": "How MoRo carries loads, in 30 seconds. MoRo supports confirmed payload configurations including CERT top modules (MMT and Lifter) and conveyor attachments. Each suits a different material handling need. The configuration changes what you check. Before a transfer: confirm the top module is secure and correctly configured.",
         "placeholder": true
       }
     },
@@ -85,7 +85,7 @@
         "Understand how a loaded payload changes MoRo's operating behavior",
         "Know the additional awareness required around a loaded unit"
       ],
-      "content": "A loaded MoRo behaves differently from an empty one - weight distribution shifts its center of gravity, which affects stopping behavior and stability, particularly with the lift or lift-and-rotate configurations. Give loaded units additional clearance, and never attempt to adjust or steady a load manually while MoRo is in motion."
+      "content": "A loaded MoRo behaves differently from an empty one - weight distribution shifts its center of gravity, which affects stopping behavior and stability, particularly when operating with an elevated Lifter top module or heavy MMT load. Give loaded units additional clearance, and never attempt to adjust or steady a load manually while MoRo is in motion."
     },
     {
       "sectionId": 5,

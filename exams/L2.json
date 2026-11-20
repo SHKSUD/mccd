@@ -75,10 +75,10 @@
       "options": [
         "Hydraulic crane arm",
         "Pneumatic sorting chute",
-        "Lift-and-rotate"
+        "CERT Lifter / MMT top module"
       ],
       "correctAnswer": 2,
-      "feedback": "Correct. Supported configurations are conveyor, cobot interface, towing, lifting, and lift-and-rotate."
+      "feedback": "Correct. Confirmed payload configurations include CERT top modules (MMT and Lifter) and conveyor attachments."
     },
     {
       "id": 7,
@@ -138,7 +138,7 @@
         "Nickel-cadmium"
       ],
       "correctAnswer": 0,
-      "feedback": "Correct. LFP is confirmed across the A-250, A-500, and A-1200."
+      "feedback": "Correct. LFP is confirmed across the A-250, A-500, and A-1000."
     },
     {
       "id": 12,
@@ -191,7 +191,7 @@
     {
       "id": 16,
       "sourceModule": "L2-M4",
-      "question": "A fleet system distributes missions among several units. Which factors does it use?",
+      "question": "Fleet Manager distributes missions among several units. Which factors does it use?",
       "options": [
         "The color of each unit and the time of day",
         "Proximity, availability, and current load",
@@ -205,12 +205,12 @@
       "sourceModule": "L2-M4",
       "question": "Who manages collision avoidance between several MoRo units sharing a floor?",
       "options": [
-        "The fleet management system, automatically",
+        "Fleet Manager, automatically",
         "The operator, unit by unit",
         "Each unit independently, with no awareness of the others"
       ],
       "correctAnswer": 0,
-      "feedback": "Correct. Units are aware of each other's positions and the fleet system coordinates their paths."
+      "feedback": "Correct. Units are aware of each other's positions and Fleet Manager coordinates their paths."
     },
     {
       "id": 18,
@@ -246,7 +246,7 @@
         "Push one unit out of the way by hand"
       ],
       "correctAnswer": 1,
-      "feedback": "Correct. The fleet system usually resolves deadlocks, but a prolonged stall is worth flagging."
+      "feedback": "Correct. Fleet Manager usually resolves deadlocks, but a prolonged stall is worth flagging."
     },
     {
       "id": 21,

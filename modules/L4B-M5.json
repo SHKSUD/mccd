@@ -42,7 +42,7 @@
         "Understand the general scope of a capstone project",
         "Recognize how it draws on the full L4B module sequence"
       ],
-      "content": "The capstone project synthesizes the preceding L4B modules - CNC machine tending integration, PLC integration, complex payload configuration (lift and rotate), and fleet optimization - into a single substantial project brief, rather than testing each skill in isolation. The specific project brief is assigned by the program lead in alignment with DiFacto's deployment standards, reflecting real integration scenarios the role actually encounters.",
+      "content": "The capstone project synthesizes the preceding L4B modules - CNC machine tending integration, PLC integration, CERT top module integration (MMT and Lifter), and fleet optimization - into a single substantial project brief, rather than testing each skill in isolation. The specific project brief is assigned by the program lead in alignment with DiFacto's deployment standards, reflecting real integration scenarios the role actually encounters.",
       "keyTerms": [
         {
           "term": "SME (Subject Matter Expert)",

@@ -1,6 +1,6 @@
 {
   "moduleId": "L4B-M3",
-  "title": "Lift & Rotate Complex Configurations",
+  "title": "CERT Top Module Integration (MMT & Lifter)",
   "level": "L4B",
   "moduleNumber": 3,
   "duration": "10 hrs",
@@ -12,72 +12,68 @@
     {
       "sectionId": 1,
       "eyebrow": "Level 4B · Module 3 · Section 01",
-      "title": "The Most Complex Payload Configuration",
+      "title": "CERT Top Module Architecture (MMT & Lifter)",
       "learningObjectives": [
-        "Understand why lift-and-rotate is treated as the most complex payload configuration",
+        "Understand why CERT top modules (MMT and Lifter) require dedicated integration engineering",
         "Recognize how this builds on payload fundamentals from L2-M2"
       ],
-      "content": "Of the payload configurations introduced in L2-M2 - conveyor, cobot, towing, lifting, lift-and-rotate - lift-and-rotate is explicitly the most complex. It combines vertical lift mechanics with rotational positioning. This module provides the advanced integration training this configuration specifically requires, beyond what general payload awareness covers.",
+      "content": "Of the confirmed payload configurations introduced in L2-M2, DiFacto's CERT top modules - specifically the Material Movement Trolley (MMT) and Lifter modules - introduce active mechanical actuation on top of the mobile base. This module provides the advanced integration training these top modules require, beyond general operator payload awareness.",
       "keyTerms": [
         {
-          "term": "lift-and-rotate",
-          "note": "The most complex payload configuration: it lifts a load vertically and also rotates it."
+          "term": "CERT top module",
+          "note": "DiFacto's confirmed active payload interfaces, including MMT (Material Movement Trolley) and Lifter modules."
         }
       ]
     },
     {
       "sectionId": 2,
       "eyebrow": "Level 4B · Module 3 · Section 02",
-      "title": "Mechanics of Combined Lift and Rotation",
+      "title": "Mechanics of MMT & Lifter Stability",
       "learningObjectives": [
-        "Understand the general mechanical principles of combined lift-and-rotate operation",
-        "Recognize why combining these movements adds complexity beyond either alone"
+        "Understand the mechanical stability factors of MMT and Lifter actuation",
+        "Recognize how load height and trolley engagement alter center of gravity"
       ],
-      "content": "Lift-and-rotate configurations must manage load stability through two simultaneous degrees of freedom - vertical position and rotational orientation - rather than one. This compounds the center-of-gravity considerations introduced in L2-M2's safety coverage. A load's stability profile changes continuously as both lift height and rotation angle shift during operation.",
+      "content": "CERT Lifter and MMT configurations must manage load stability as vertical lift height changes or as heavy trolleys engage and disengage. This compounds the center-of-gravity considerations introduced in L2-M2's safety coverage. A unit's stability profile shifts whenever lift height changes or an MMT latch transfers load weight.",
       "keyTerms": [
         {
-          "term": "degrees of freedom",
-          "note": "The independent ways a load can move; here, vertical position and rotation."
-        },
-        {
           "term": "center of gravity",
-          "note": "The point where a load's weight is balanced; it affects how stable the load is."
+          "note": "The point where a load's weight is balanced; it shifts during Lifter elevation and MMT trolley transfers."
         }
       ],
       "video": {
         "id": "V039",
         "src": "videos/V039.mp4",
         "poster": "videos/V039.jpg",
-        "title": "Lift and rotate in 30 seconds",
+        "title": "CERT top module stability in 30 seconds",
         "duration": "0:30",
-        "transcript": "Lift and rotate, in 30 seconds. The load has two degrees of freedom. Vertical position: how high it is lifted. Rotational orientation: how far it turns. Stability depends on both together. It changes continuously as height and angle shift. This adds to the center-of-gravity considerations.",
+        "transcript": "CERT top module stability, in 30 seconds. Active top modules like MMT and Lifter change how weight sits on the robot. As a Lifter raises or an MMT latches a trolley, the center of gravity shifts. Account for load height, latch state, and deceleration limits together.",
         "placeholder": true
       }
     },
     {
       "sectionId": 3,
       "eyebrow": "Level 4B · Module 3 · Section 03",
-      "title": "Configuring Lift and Rotation Parameters",
+      "title": "Configuring MMT & Lifter Parameters",
       "learningObjectives": [
-        "Understand the general parameters involved in configuring this payload type",
-        "Recognize the relationship between configuration and load-specific requirements"
+        "Understand the key parameters involved in configuring CERT top modules",
+        "Recognize the relationship between configuration limits and load-specific requirements"
       ],
-      "content": "Configuration parameters for this payload type typically include lift height range, rotation angle limits, and speed/acceleration settings for both movements, all calibrated to the specific load being handled. Follow DiFacto's payload technical documentation for the exact configuration workflow and safe operating ranges for this module.",
+      "content": "Configuration parameters for CERT top modules typically include Lifter stroke height limits, speed and acceleration caps when raised, and MMT latch-confirmation timeouts, all calibrated to the specific load being handled. Follow DiFacto's payload technical documentation for the exact configuration workflow and safe operating ranges for each CERT module.",
       "keyTerms": []
     },
     {
       "sectionId": 4,
       "eyebrow": "Level 4B · Module 3 · Section 04",
-      "title": "Safety Considerations Specific to This Configuration",
+      "title": "Safety Clearances for Active Top Modules",
       "learningObjectives": [
-        "Understand safety considerations unique to lift-and-rotate operation",
+        "Understand safety considerations unique to MMT and Lifter actuation",
         "Recognize how this extends the general loaded-payload safety principles from L2-M2"
       ],
-      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, lift-and-rotate configurations require additional clearance consideration. The swept area during rotation at various lift heights can extend well beyond what a simple loaded footprint would suggest. Cell and workspace design must account for this full range of motion, not just the simple loaded footprint.",
+      "content": "Beyond the general loaded-payload safety principles covered in L2-M2, MMT and Lifter configurations require additional vertical and dock-entry clearance checks. Overhanging trolleys or raised lift platforms can extend beyond the base robot footprint and alter sensor visibility. Cell and workspace design must account for the full actuated envelope, not just the unloaded base footprint.",
       "keyTerms": [
         {
-          "term": "swept area",
-          "note": "The full area a load passes through while it rotates at various lift heights, not just its simple loaded footprint."
+          "term": "actuated envelope",
+          "note": "The full 3D space occupied by the robot and its CERT top module across all lift heights and trolley states."
         }
       ]
     },
@@ -86,25 +82,25 @@
       "eyebrow": "Level 4B · Module 3 · Section 05",
       "title": "Integration With Fixed Equipment",
       "learningObjectives": [
-        "Understand how lift-and-rotate configurations typically interact with fixed equipment",
-        "Recognize handshake timing considerations specific to this payload type"
+        "Understand how MMT and Lifter modules coordinate with fixed stations",
+        "Recognize handshake timing and latch-verification requirements"
       ],
-      "content": "Lift-and-rotate operations often involve precise positioning relative to fixed equipment. This requires the handshake timing from L3B-M4 to account for the additional time these combined movements take, compared to a simple point-to-point delivery. Otherwise you risk a premature signal exchange before positioning is actually complete.",
+      "content": "MMT docking and Lifter transfers require precise positioning and confirmed mechanical engagement at fixed stations. Handshake timing from L3B-M4 must wait for verified limit-switch or sensor confirmation that lift positioning or MMT latching is complete before signaling ready. Otherwise you risk a premature signal exchange or a dropped transfer.",
       "keyTerms": []
     },
     {
       "sectionId": 6,
       "eyebrow": "Level 4B · Module 3 · Section 06",
-      "title": "Testing and Validating This Configuration",
+      "title": "Testing and Validating CERT Top Modules",
       "learningObjectives": [
-        "Apply testing principles specifically to the complexity of this payload type",
-        "Know that validation should cover the full range of lift heights and rotation angles"
+        "Apply testing principles specifically to MMT and Lifter integration",
+        "Know that validation must cover the full range of payload weights and lift positions"
       ],
-      "content": "Given the compounded complexity of this configuration, validation should test across the full range of lift heights and rotation angles the application requires - not just a single representative position. Confirm stability and handshake timing hold up across the complete operational envelope, not just the easiest test case.",
+      "content": "Validation for CERT top modules should test across the full operational envelope - from empty to maximum rated payload, across all required Lifter heights and MMT docking stations - not just a single unloaded test pass. Confirm mechanical stability, latch sensing, and handshake timing hold up consistently.",
       "keyTerms": [
         {
           "term": "operational envelope",
-          "note": "The complete range of positions and conditions the application will use."
+          "note": "The complete range of payload weights, lift heights, and docking conditions the application will use."
         }
       ]
     }
@@ -114,58 +110,58 @@
     "questions": [
       {
         "id": 1,
-        "question": "Why is lift-and-rotate considered the most complex payload configuration?",
+        "question": "Why do CERT top modules (MMT and Lifter) require dedicated integration engineering?",
         "options": [
-          "It is the only configuration that needs a handshake with any fixed equipment at all",
-          "It combines vertical lift with rotation, two movements to keep stable at once",
-          "It carries heavier loads than any other configuration MoRo supports"
+          "They are the only modules that ever use Fleet Manager",
+          "They add active mechanical actuation and shifting load profiles on top of the mobile base",
+          "They carry heavier loads than the mobile base is rated for"
         ],
         "correctAnswer": 1,
-        "feedback": "Correct. Combining lift and rotation adds complexity beyond either movement alone."
+        "feedback": "Correct. Active top modules introduce vertical actuation, latching, and shifting load stability."
       },
       {
         "id": 2,
-        "question": "How does combined lift-and-rotate affect load stability considerations?",
+        "question": "How do Lifter elevation and MMT trolley transfers affect load stability?",
         "options": [
-          "Stability depends only on the rotation angle, not on how high the load is",
-          "Stability is fixed once the load is secured, whatever the movement",
-          "Stability changes continuously as lift height and rotation angle change"
+          "Stability depends only on floor smoothness, not lift height",
+          "Stability is fixed once the robot leaves the dock",
+          "Stability shifts as lift height changes or a trolley latches and transfers weight"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Two simultaneous degrees of freedom compound center-of-gravity considerations."
+        "feedback": "Correct. Lift height and trolley engagement alter the center of gravity during operation."
       },
       {
         "id": 3,
-        "question": "What clearance consideration is specific to lift-and-rotate configurations?",
+        "question": "What clearance consideration is specific to MMT and Lifter configurations?",
         "options": [
-          "The area swept during rotation, beyond the resting footprint",
-          "Only the clearance at floor level beneath the unit while it drives around",
-          "The width of the aisle at the position where the unit usually rests"
+          "The full actuated envelope, including overhanging trolleys and raised lift heights",
+          "Only the floor-level clearance beneath the unloaded base",
+          "Only the charging dock width"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. The full range of motion, not just resting footprint, must be accounted for in workspace design."
+        "feedback": "Correct. Workspace design must account for the full actuated envelope, not just the unloaded base footprint."
       },
       {
         "id": 4,
-        "question": "A lift-and-rotate handshake reuses the timing of a simple point-to-point delivery. What risk does the lesson name?",
+        "question": "A Lifter handshake reuses a fixed short delay instead of waiting for verified position confirmation. What risk does the lesson name?",
         "options": [
-          "A premature signal exchange before positioning is complete",
-          "A longer cycle because the signals arrive late",
-          "Reduced lift height range"
+          "A premature signal exchange before lifting or latching is actually complete",
+          "A longer cycle because signals arrive too late",
+          "Reduced battery charging speed"
         ],
         "correctAnswer": 0,
-        "feedback": "Correct. Handshake timing must allow for the additional time the combined movements take. Otherwise you risk a premature signal exchange before positioning is actually complete."
+        "feedback": "Correct. Handshakes must wait for verified confirmation that lift positioning or MMT latching is complete."
       },
       {
         "id": 5,
-        "question": "What should validation testing cover for this configuration?",
+        "question": "What should validation testing cover for a CERT top module integration?",
         "options": [
-          "A single representative position",
-          "Only the heaviest load, at the highest lift height and one angle",
-          "The full range of lift heights and rotation angles the application needs"
+          "A single unloaded test run",
+          "Only the lowest lift height at one station",
+          "The full operational envelope across rated payload weights, lift heights, and docking stations"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Full operational envelope testing is needed given the compounded complexity."
+        "feedback": "Correct. Full operational envelope testing ensures stability, sensing, and handshake timing hold up across real conditions."
       }
     ]
   }

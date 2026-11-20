@@ -30,7 +30,7 @@
         "poster": "videos/V009.jpg",
         "title": "Many robots, one floor in 30 seconds",
         "duration": "0:30",
-        "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. The fleet system coordinates units to avoid collisions. Zones: shared paths and reserved routes. A deadlock is two or more units waiting on each other. Designed to resolve it, typically by rerouting one unit.",
+        "transcript": "Many robots, one floor, in 30 seconds. More units move more material: throughput. Or keep work going if one is down: redundancy. Fleet Manager coordinates units to avoid collisions. Zones: shared paths and reserved routes. A deadlock is two or more units waiting on each other. Designed to resolve it, typically by rerouting one unit.",
         "placeholder": true
       }
     },
@@ -42,7 +42,7 @@
         "Understand the general principle of multi-robot collision avoidance",
         "Recognize that this is handled automatically, not by the operator"
       ],
-      "content": "When multiple MoRo units share a floor, each is aware of the others' positions and coordinates paths to avoid collisions - this is handled by the fleet management system automatically, not something an operator manages manually. Your role is awareness that this coordination is happening, not active involvement in it."
+      "content": "When multiple MoRo units share a floor, each is aware of the others' positions and coordinates paths to avoid collisions - this is handled by Fleet Manager automatically, not something an operator manages manually. Your role is awareness that this coordination is happening, not active involvement in it."
     },
     {
       "sectionId": 3,
@@ -52,7 +52,7 @@
         "Understand the general principle of how work gets distributed across units",
         "Know that fleet-level task assignment is largely automatic"
       ],
-      "content": "With multiple units available, the fleet system distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. Refer to your site's ANT fleet documentation for the specific dashboard layout and dispatch rules configured for your deployment."
+      "content": "With multiple units available, Fleet Manager distributes missions based on factors like proximity, availability, and current load - again, largely automatic rather than something the operator manually assigns unit-by-unit. Refer to your site's ANT fleet documentation for the specific dashboard layout and dispatch rules configured for your deployment."
     },
     {
       "sectionId": 4,
@@ -82,7 +82,7 @@
         "Understand what a deadlock is in a multi-robot context",
         "Know that the system is designed to resolve deadlocks automatically"
       ],
-      "content": "A deadlock occurs when two or more units reach a situation where each is waiting on the other to move first, with neither able to proceed. The fleet system is designed to detect and resolve this automatically - typically by directing one unit to reroute. If you observe units that appear mutually stalled for longer than expected, that's worth flagging rather than assuming it will always self-resolve.",
+      "content": "A deadlock occurs when two or more units reach a situation where each is waiting on the other to move first, with neither able to proceed. Fleet Manager is designed to detect and resolve this automatically - typically by directing one unit to reroute. If you observe units that appear mutually stalled for longer than expected, that's worth flagging rather than assuming it will always self-resolve.",
       "keyTerms": [
         {
           "term": "deadlock",
@@ -121,10 +121,10 @@
         "options": [
           "Each unit independently, with no coordination",
           "The operator, manually",
-          "The fleet management system, automatically"
+          "Fleet Manager, automatically"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. Collision avoidance across units is handled automatically by the fleet system."
+        "feedback": "Correct. Collision avoidance across units is handled automatically by Fleet Manager."
       },
       {
         "id": 3,

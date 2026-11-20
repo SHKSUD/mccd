@@ -38,7 +38,7 @@
         "poster": "videos/V001.jpg",
         "title": "Meet MoRo in 30 seconds",
         "duration": "0:30",
-        "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it always knows where it is. Three models: A-250, A-500 and A-1200. Same navigation. Different payloads: 250, 500 and 1,200 kg. On screen at the end: Next: working safely around MoRo. MoRo Academy, DiFacto Robotics & Automation.",
+        "transcript": "Meet MoRo. MoRo is an autonomous mobile robot. It moves loads around your floor, on its own. No tape and no magnets on the floor. It maps the room with LiDAR, so it always knows where it is. Three models: A-250, A-500 and A-1000. Same navigation. Different payloads: 250, 500 and 1,000 kg. On screen at the end: Next: working safely around MoRo. MoRo Academy, DiFacto Robotics & Automation.",
         "placeholder": true
       }
     },
@@ -70,11 +70,11 @@
         "Identify the three MoRo variants and their typical applications",
         "Understand that operating principles are consistent across all three"
       ],
-      "content": "DiFacto produces three MoRo variants, differentiated by payload capacity and typical use case. The A-250 (250kg payload, faster movement) suits light assembly and small-item transport. The A-500 (500kg payload, the most commonly deployed variant) suits machine tending and general part transfer — for example, loading and unloading CNC machines. The A-1200 (1200kg payload, slower movement) suits heavy material transfer and forklift-replacement applications. Regardless of variant, the operating principles taught in this curriculum are the same — skills learned on one model transfer directly to the others.",
+      "content": "DiFacto produces three MoRo variants, differentiated by payload capacity and typical use case. The A-250 (250kg payload, faster movement) suits light assembly and small-item transport. The A-500 (500kg payload, the most commonly deployed variant) suits machine tending and general part transfer — for example, loading and unloading CNC machines. The A-1000 (1000kg payload, slower movement) suits heavy material transfer and forklift-replacement applications. Regardless of variant, the operating principles taught in this curriculum are the same — skills learned on one model transfer directly to the others.",
       "keyTerms": [
         {
           "term": "variant",
-          "note": "One of the three MoRo models (A-250, A-500, A-1200), differing primarily in payload capacity and speed."
+          "note": "One of the three MoRo models (A-250, A-500, A-1000), differing primarily in payload capacity and speed."
         }
       ],
       "video": {
@@ -83,7 +83,7 @@
         "poster": "videos/V004.jpg",
         "title": "Three models, three jobs in 30 seconds",
         "duration": "0:30",
-        "transcript": "Three models, three jobs. The A-250 carries up to 250 kg, and moves faster. It suits light assembly and small-item transport. The A-500 carries up to 500 kg. It is the most deployed, for machine tending. The A-1200 carries up to 1,200 kg, and moves slower. It suits heavy transfer and forklift replacement.",
+        "transcript": "Three models, three jobs. The A-250 carries up to 250 kg, and moves faster. It suits light assembly and small-item transport. The A-500 carries up to 500 kg. It is the most deployed, for machine tending. The A-1000 carries up to 1,000 kg, and moves slower. It suits heavy transfer and forklift replacement.",
         "placeholder": true
       }
     },
@@ -169,10 +169,10 @@
         "options": [
           "A-250",
           "A-500",
-          "A-1200"
+          "A-1000"
         ],
         "correctAnswer": 2,
-        "feedback": "Correct. The A-1200 carries 1,200 kg; the A-250 carries 250 kg and the A-500 carries 500 kg."
+        "feedback": "Correct. The A-1000 carries 1,000 kg; the A-250 carries 250 kg and the A-500 carries 500 kg."
       },
       {
         "id": 4,
